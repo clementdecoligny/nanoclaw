@@ -298,6 +298,7 @@ export async function runContainerAgent(
   input: ContainerInput,
   onProcess: (proc: ChildProcess, containerName: string) => void,
   onOutput?: (output: ContainerOutput) => Promise<void>,
+  onToolUse?: (toolName: string) => void,
 ): Promise<ContainerOutput> {
   const startTime = Date.now();
 
@@ -378,6 +379,14 @@ export async function runContainerAgent(
           );
         } else {
           stdout += chunk;
+        }
+      }
+
+      // Parse tool use events
+      if (onToolUse) {
+        const toolMatches = chunk.matchAll(/^NANOCLAW_TOOL:(\w+)$/gm);
+        for (const match of toolMatches) {
+          onToolUse(match[1]);
         }
       }
 

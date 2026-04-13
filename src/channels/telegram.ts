@@ -8,6 +8,7 @@ import { ASSISTANT_NAME, TRIGGER_PATTERN } from '../config.js';
 import { readEnvFile } from '../env.js';
 import { resolveGroupFolderPath } from '../group-folder.js';
 import { logger } from '../logger.js';
+import { transcribeAudio } from '../transcription.js';
 import { registerChannel, ChannelOpts } from './registry.js';
 import {
   Channel,
@@ -51,6 +52,7 @@ export class TelegramChannel implements Channel {
   private bot: Bot | null = null;
   private opts: TelegramChannelOpts;
   private botToken: string;
+  private statusMessages = new Map<string, number>(); // jid → message_id
 
   constructor(botToken: string, opts: TelegramChannelOpts) {
     this.botToken = botToken;
@@ -309,10 +311,59 @@ export class TelegramChannel implements Channel {
       });
     });
     this.bot.on('message:voice', (ctx) => {
-      storeMedia(ctx, '[Voice message]', {
-        fileId: ctx.message.voice?.file_id,
-        filename: `voice_${ctx.message.message_id}`,
-      });
+      const fileId = ctx.message.voice?.file_id;
+      const chatJid = `tg:${ctx.chat.id}`;
+      const group = this.opts.registeredGroups()[chatJid];
+      if (!group) return;
+
+      const timestamp = new Date(ctx.message.date * 1000).toISOString();
+      const senderName =
+        ctx.from?.first_name ||
+        ctx.from?.username ||
+        ctx.from?.id?.toString() ||
+        'Unknown';
+      const isGroup =
+        ctx.chat.type === 'group' || ctx.chat.type === 'supergroup';
+      this.opts.onChatMetadata(chatJid, timestamp, undefined, 'telegram', isGroup);
+
+      const deliver = (content: string) => {
+        this.opts.onMessage(chatJid, {
+          id: ctx.message.message_id.toString(),
+          chat_jid: chatJid,
+          sender: ctx.from?.id?.toString() || '',
+          sender_name: senderName,
+          content,
+          timestamp,
+          is_from_me: false,
+        });
+      };
+
+      if (fileId) {
+        const filename = `voice_${ctx.message.message_id}`;
+        this.downloadFile(fileId, group.folder, filename).then(
+          async (filePath) => {
+            if (filePath) {
+              // filePath is container-relative; resolve to host path for transcription
+              const hostPath = filePath.replace(
+                '/workspace/group',
+                resolveGroupFolderPath(group.folder),
+              );
+              const transcript = await transcribeAudio(hostPath);
+              if (transcript) {
+                // Echo transcript back into the Telegram chat so the user can review it
+                await ctx.reply(`▶️ *You said:* "${transcript}"`, { parse_mode: 'Markdown' });
+                deliver(`[Voice: ${transcript}]`);
+              } else {
+                deliver(`[Voice message] (${filePath})`);
+              }
+            } else {
+              deliver('[Voice message]');
+            }
+          },
+        );
+      } else {
+        deliver('[Voice message]');
+      }
     });
     this.bot.on('message:audio', (ctx) => {
       const name =
@@ -421,6 +472,31 @@ export class TelegramChannel implements Channel {
       await this.bot.api.sendChatAction(numericId, 'typing');
     } catch (err) {
       logger.debug({ jid, err }, 'Failed to send Telegram typing indicator');
+    }
+  }
+
+  async sendStatus(jid: string, text: string | null): Promise<void> {
+    if (!this.bot) return;
+    const chatId = jid.replace(/^tg:/, '');
+    const existing = this.statusMessages.get(jid);
+    try {
+      if (text === null) {
+        // Clear status message
+        if (existing) {
+          await this.bot.api.deleteMessage(chatId, existing);
+          this.statusMessages.delete(jid);
+        }
+      } else if (existing) {
+        // Update existing status message
+        await this.bot.api.editMessageText(chatId, existing, text);
+      } else {
+        // Send new status message
+        const msg = await this.bot.api.sendMessage(chatId, text);
+        this.statusMessages.set(jid, msg.message_id);
+      }
+    } catch (err) {
+      logger.debug({ jid, err }, 'Failed to send/update Telegram status message');
+      this.statusMessages.delete(jid);
     }
   }
 }

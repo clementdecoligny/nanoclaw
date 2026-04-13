@@ -280,8 +280,22 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
   };
 
   await channel.setTyping?.(chatJid, true);
+  await channel.sendStatus?.(chatJid, '⏳ Thinking...');
   let hadError = false;
   let outputSentToUser = false;
+
+  const toolLabels: Record<string, string> = {
+    Read: '📖 Reading...',
+    Write: '✍️ Writing...',
+    Edit: '✏️ Editing...',
+    Bash: '⚙️ Running...',
+    Glob: '🔍 Searching files...',
+    Grep: '🔍 Searching...',
+    WebSearch: '🌐 Searching the web...',
+    WebFetch: '🌐 Fetching...',
+    Agent: '🤖 Thinking deeply...',
+    TodoWrite: '📋 Planning...',
+  };
 
   const output = await runAgent(group, prompt, chatJid, async (result) => {
     // Streaming output callback — called for each agent result
@@ -294,6 +308,7 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
       const text = raw.replace(/<internal>[\s\S]*?<\/internal>/g, '').trim();
       logger.info({ group: group.name }, `Agent output: ${raw.length} chars`);
       if (text) {
+        await channel.sendStatus?.(chatJid, null);
         await channel.sendMessage(chatJid, text);
         outputSentToUser = true;
       }
@@ -308,8 +323,12 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
     if (result.status === 'error') {
       hadError = true;
     }
+  }, (toolName) => {
+    const label = toolLabels[toolName] ?? '⚙️ Working...';
+    channel.sendStatus?.(chatJid, label);
   });
 
+  await channel.sendStatus?.(chatJid, null);
   await channel.setTyping?.(chatJid, false);
   if (idleTimer) clearTimeout(idleTimer);
 
@@ -341,6 +360,7 @@ async function runAgent(
   prompt: string,
   chatJid: string,
   onOutput?: (output: ContainerOutput) => Promise<void>,
+  onToolUse?: (toolName: string) => void,
 ): Promise<'success' | 'error'> {
   const isMain = group.isMain === true;
   const sessionId = sessions[group.folder];
@@ -396,6 +416,7 @@ async function runAgent(
       (proc, containerName) =>
         queue.registerProcess(chatJid, proc, containerName, group.folder),
       wrappedOnOutput,
+      onToolUse,
     );
 
     if (output.newSessionId) {

@@ -501,6 +501,20 @@ async function runQuery(
 
     if (message.type === 'assistant' && 'uuid' in message) {
       lastAssistantUuid = (message as { uuid: string }).uuid;
+      // Emit tool use events to stdout so the host can show status messages
+      const content = (message as { message?: { content?: unknown[] } }).message?.content;
+      if (Array.isArray(content)) {
+        for (const block of content) {
+          if (
+            block &&
+            typeof block === 'object' &&
+            (block as { type?: string }).type === 'tool_use' &&
+            (block as { name?: string }).name
+          ) {
+            process.stdout.write(`NANOCLAW_TOOL:${(block as { name: string }).name}\n`);
+          }
+        }
+      }
     }
 
     if (message.type === 'system' && message.subtype === 'init') {
