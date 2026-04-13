@@ -8,7 +8,9 @@ const execFileAsync = promisify(execFile);
 const PYTHON = path.join(process.cwd(), '.venv/whisper/bin/python');
 const SCRIPT = path.join(process.cwd(), 'scripts/transcribe.py');
 
-export async function transcribeAudio(filePath: string): Promise<string | null> {
+export async function transcribeAudio(
+  filePath: string,
+): Promise<string | null> {
   try {
     const { stdout } = await execFileAsync(PYTHON, [SCRIPT, filePath], {
       timeout: 60_000,

@@ -92,7 +92,10 @@ export class TelegramChannel implements Channel {
       const fileUrl = `https://api.telegram.org/file/bot${this.botToken}/${file.file_path}`;
       const resp = await fetch(fileUrl);
       if (!resp.ok) {
-        logger.warn({ fileId, status: resp.status }, 'Telegram file download failed');
+        logger.warn(
+          { fileId, status: resp.status },
+          'Telegram file download failed',
+        );
         return null;
       }
 
@@ -324,7 +327,13 @@ export class TelegramChannel implements Channel {
         'Unknown';
       const isGroup =
         ctx.chat.type === 'group' || ctx.chat.type === 'supergroup';
-      this.opts.onChatMetadata(chatJid, timestamp, undefined, 'telegram', isGroup);
+      this.opts.onChatMetadata(
+        chatJid,
+        timestamp,
+        undefined,
+        'telegram',
+        isGroup,
+      );
 
       const deliver = (content: string) => {
         this.opts.onMessage(chatJid, {
@@ -351,7 +360,9 @@ export class TelegramChannel implements Channel {
               const transcript = await transcribeAudio(hostPath);
               if (transcript) {
                 // Echo transcript back into the Telegram chat so the user can review it
-                await ctx.reply(`▶️ *You said:* "${transcript}"`, { parse_mode: 'Markdown' });
+                await ctx.reply(`▶️ *You said:* "${transcript}"`, {
+                  parse_mode: 'Markdown',
+                });
                 deliver(`[Voice: ${transcript}]`);
               } else {
                 deliver(`[Voice message] (${filePath})`);
@@ -495,7 +506,10 @@ export class TelegramChannel implements Channel {
         this.statusMessages.set(jid, msg.message_id);
       }
     } catch (err) {
-      logger.debug({ jid, err }, 'Failed to send/update Telegram status message');
+      logger.debug(
+        { jid, err },
+        'Failed to send/update Telegram status message',
+      );
       this.statusMessages.delete(jid);
     }
   }
