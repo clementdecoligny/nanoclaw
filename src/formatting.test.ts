@@ -586,6 +586,42 @@ describe('parseSignalStyles — snake_case guard', () => {
   });
 });
 
+describe('parseTextStyles — tables', () => {
+  it('wraps a standard markdown table in a code block', () => {
+    const input = '| Day | Dinner |\n|-----|--------|\n| Mon | Chicken |\n| Tue | Pasta |';
+    const result = parseTextStyles(input, 'telegram');
+    expect(result).toBe('```\n| Day | Dinner |\n|-----|--------|\n| Mon | Chicken |\n| Tue | Pasta |\n```');
+  });
+
+  it('leaves a single pipe-starting line alone (not a table)', () => {
+    const input = '| just one line';
+    const result = parseTextStyles(input, 'telegram');
+    expect(result).toBe('| just one line');
+  });
+
+  it('wraps table but leaves surrounding text intact', () => {
+    const input = 'Here is the plan:\n\n| Day | Meal |\n|-----|------|\n| Mon | Rice |\n\nEnjoy!';
+    const result = parseTextStyles(input, 'telegram');
+    expect(result).toContain('Here is the plan:');
+    expect(result).toContain('```\n| Day | Meal |');
+    expect(result).toContain('| Mon | Rice |\n```');
+    expect(result).toContain('Enjoy!');
+  });
+
+  it('applies table wrapping on whatsapp and slack too', () => {
+    const input = '| A | B |\n|---|---|\n| 1 | 2 |';
+    for (const ch of ['whatsapp', 'slack'] as const) {
+      expect(parseTextStyles(input, ch)).toContain('```');
+    }
+  });
+
+  it('does not double-wrap already code-blocked content', () => {
+    const input = '```\n| A | B |\n|---|---|\n```';
+    // splitProtectedRegions protects it first; transformSegment never sees the table
+    expect(parseTextStyles(input, 'telegram')).toBe(input);
+  });
+});
+
 describe('formatOutbound — channel-aware', () => {
   it('applies parseTextStyles when channel is provided', () => {
     expect(formatOutbound('**bold**', 'whatsapp')).toBe('*bold*');

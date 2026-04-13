@@ -304,9 +304,52 @@ function splitProtectedRegions(text: string): Segment[] {
   return segments.length > 0 ? segments : [{ content: text, protected: false }];
 }
 
+/**
+ * Convert Markdown table blocks to monospace code blocks.
+ *
+ * Telegram (and WhatsApp/Slack) have no native table rendering. Wrapping the
+ * table in a code block makes it display in a fixed-width font so pipe-separated
+ * columns stay visually aligned.
+ *
+ * A "table" is two or more consecutive lines that start with `|`. The separator
+ * row (`|---|---|`) counts, so a minimum real table is header + separator = 2 lines.
+ * Single `|`-starting lines that aren't part of a table are left untouched.
+ */
+function convertTablesToCodeBlocks(text: string): string {
+  const lines = text.split('\n');
+  const out: string[] = [];
+  let tableLines: string[] = [];
+
+  const flushTable = () => {
+    if (tableLines.length >= 2) {
+      out.push('```', ...tableLines, '```');
+    } else {
+      out.push(...tableLines);
+    }
+    tableLines = [];
+  };
+
+  for (const line of lines) {
+    if (/^[ \t]*\|/.test(line)) {
+      tableLines.push(line);
+    } else {
+      flushTable();
+      out.push(line);
+    }
+  }
+  flushTable();
+
+  return out.join('\n');
+}
+
 /** Apply marker-substitution transformations to a non-code segment. */
 function transformSegment(text: string, channel: ChannelType): string {
   let t = text;
+
+  // 0. Tables: wrap in monospace code block before any marker substitution so
+  //    bold/italic markers inside table cells aren't converted to channel syntax
+  //    (they'd render literally inside the code block anyway).
+  t = convertTablesToCodeBlocks(t);
 
   // Order matters: italic before bold.
   // The italic regex won't match **bold** (it requires the char after the opening *
