@@ -144,28 +144,52 @@ function buildVolumeMounts(
   );
   fs.mkdirSync(groupSessionsDir, { recursive: true });
   const settingsFile = path.join(groupSessionsDir, 'settings.json');
-  if (!fs.existsSync(settingsFile)) {
-    fs.writeFileSync(
-      settingsFile,
-      JSON.stringify(
-        {
-          env: {
-            // Enable agent swarms (subagent orchestration)
-            // https://code.claude.com/docs/en/agent-teams#orchestrate-teams-of-claude-code-sessions
-            CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: '1',
-            // Load CLAUDE.md from additional mounted directories
-            // https://code.claude.com/docs/en/memory#load-memory-from-additional-directories
-            CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD: '1',
-            // Enable Claude's memory feature (persists user preferences between sessions)
-            // https://code.claude.com/docs/en/memory#manage-auto-memory
-            CLAUDE_CODE_DISABLE_AUTO_MEMORY: '0',
-          },
-        },
-        null,
-        2,
-      ) + '\n',
-    );
+
+  // Read extra env vars from data/env/env to inject into the agent's Bash env.
+  // Claude Code only passes vars in settings.json `env` to Bash tool execution;
+  // docker -e flags reach the container process but not the tool sub-shell.
+  const SKIP_SETTINGS_KEYS = new Set(['TZ', 'ONECLI_URL', 'TELEGRAM_BOT_TOKEN']);
+  const extraEnv: Record<string, string> = {};
+  try {
+    const envFilePath = path.join(DATA_DIR, 'env', 'env');
+    const envFileContent = fs.readFileSync(envFilePath, 'utf-8');
+    for (const line of envFileContent.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const eqIdx = trimmed.indexOf('=');
+      if (eqIdx === -1) continue;
+      const key = trimmed.slice(0, eqIdx).trim();
+      if (SKIP_SETTINGS_KEYS.has(key)) continue;
+      const value = trimmed.slice(eqIdx + 1).trim();
+      if (value) extraEnv[key] = value;
+    }
+  } catch {
+    // data/env/env not present — no extra env vars
   }
+
+  // Always write (or overwrite) settings.json so extra env vars stay current.
+  fs.writeFileSync(
+    settingsFile,
+    JSON.stringify(
+      {
+        env: {
+          // Enable agent swarms (subagent orchestration)
+          // https://code.claude.com/docs/en/agent-teams#orchestrate-teams-of-claude-code-sessions
+          CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: '1',
+          // Load CLAUDE.md from additional mounted directories
+          // https://code.claude.com/docs/en/memory#load-memory-from-additional-directories
+          CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD: '1',
+          // Enable Claude's memory feature (persists user preferences between sessions)
+          // https://code.claude.com/docs/en/memory#manage-auto-memory
+          CLAUDE_CODE_DISABLE_AUTO_MEMORY: '0',
+          // Extra vars from data/env/env (gitignored) — injected so Bash tools can use them
+          ...extraEnv,
+        },
+      },
+      null,
+      2,
+    ) + '\n',
+  );
 
   // Sync skills from container/skills/ into each group's .claude/skills/
   const skillsSrc = path.join(process.cwd(), 'container', 'skills');
