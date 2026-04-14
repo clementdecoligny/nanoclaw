@@ -19,6 +19,30 @@ const SHOPPING_PATH = path.join(GROUP_PATH, 'inventory/shopping-list.md');
 
 const NOT_ON_CONTINENTE_MARKER = '## Non trouvé chez Continente';
 
+/**
+ * Parse the "Non trouvé chez Continente" section and return lowercase aliases
+ * of items that are definitively not available online.
+ */
+export function parseNotOnContinenteAliases(): Set<string> {
+  const raw = fs.readFileSync(PREFERRED_PATH, 'utf-8');
+  const cutoff = raw.indexOf(NOT_ON_CONTINENTE_MARKER);
+  if (cutoff === -1) return new Set();
+
+  const section = raw.slice(cutoff);
+  const aliases = new Set<string>();
+
+  // Match any table row in the "not on Continente" section: | Item name | ... |
+  const rowRe = /^\|\s*([^|]+?)\s*\|/gm;
+  let m: RegExpExecArray | null;
+  while ((m = rowRe.exec(section)) !== null) {
+    const alias = m[1].trim();
+    if (!alias || alias === 'Notre nom' || /^-+$/.test(alias) || alias === 'Item') continue;
+    aliases.add(normalize(alias));
+  }
+
+  return aliases;
+}
+
 // ---------------------------------------------------------------------------
 // Parse preferred-products.md
 // ---------------------------------------------------------------------------
@@ -44,6 +68,22 @@ export function parsePreferredProducts(): PreferredProduct[] {
   const rowRe =
     /^\|\s*([^|]+?)\s*\|\s*([A-Z0-9][^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|/gm;
 
+  // Also catch 2-column rows like "| Item | Non vu |" that mark unavailable items
+  const shortRowRe = /^\|\s*([^|]+?)\s*\|\s*(Non vu|N\/A|Não encontrado|-|—)\s*\|/gim;
+  let sm: RegExpExecArray | null;
+  while ((sm = shortRowRe.exec(relevant)) !== null) {
+    const alias = sm[1].trim();
+    if (alias === 'Notre nom' || /^-+$/.test(alias)) continue;
+    products.push({
+      aliases: [alias.toLowerCase()],
+      continenteName: '',
+      usualQty: 1,
+      notes: '',
+      cachedPid: null,
+      notOnContinente: true,
+    });
+  }
+
   let m: RegExpExecArray | null;
   while ((m = rowRe.exec(relevant)) !== null) {
     const alias = m[1].trim();
@@ -65,6 +105,21 @@ export function parsePreferredProducts(): PreferredProduct[] {
     // Look for cached PID in a comment: <!-- pid:6664918 -->
     const fullRow = m[0];
     const pidMatch = /<!--\s*pid:(\d+)\s*-->/.exec(fullRow);
+
+    // Skip rows where the Continente name is a placeholder meaning "not found"
+    const notFoundPlaceholders = ['non vu', 'n/a', 'na', 'not found', '-', '—', 'não encontrado'];
+    if (notFoundPlaceholders.includes(continenteName.toLowerCase())) {
+      // Treat as not_on_continente — store with a sentinel so matchItems can identify it
+      products.push({
+        aliases: [alias.toLowerCase()],
+        continenteName: '',
+        usualQty,
+        notes: m[5].trim(),
+        cachedPid: null,
+        notOnContinente: true,
+      });
+      continue;
+    }
 
     products.push({
       aliases: [alias.toLowerCase()],
@@ -141,22 +196,44 @@ export function matchItems(
   shoppingItems: ShoppingItem[],
   products: PreferredProduct[],
 ): MatchResult[] {
+  const notOnContinenteAliases = parseNotOnContinenteAliases();
+
   return shoppingItems.map((item) => {
-    const normItem = normalize(item.name);
+    // Check if this item is explicitly listed as not available on Continente
+    const normItemName = normalize(item.name);
+    if (notOnContinenteAliases.has(normItemName)) {
+      return { status: 'not_on_continente', item };
+    }
+    // Also check partial matches against the not-on-continente list
+    for (const alias of notOnContinenteAliases) {
+      if (alias === normItemName || alias.includes(normItemName) || normItemName.includes(alias)) {
+        return { status: 'not_on_continente', item };
+      }
+    }
+
+    const normItem = normItemName;
     const itemWords = new Set(normItem.split(' ').filter((w) => w.length > 2));
 
     for (const product of products) {
       for (const alias of product.aliases) {
         const normAlias = normalize(alias);
 
-        if (normAlias === normItem) return { status: 'matched', item, product };
+        if (normAlias === normItem)
+          return product.notOnContinente
+            ? { status: 'not_on_continente', item }
+            : { status: 'matched', item, product };
         if (normAlias.includes(normItem) || normItem.includes(normAlias))
-          return { status: 'matched', item, product };
+          return product.notOnContinente
+            ? { status: 'not_on_continente', item }
+            : { status: 'matched', item, product };
 
         const aliasWords = normAlias.split(' ').filter((w) => w.length > 2);
         const overlap = aliasWords.filter((w) => itemWords.has(w)).length;
         const coverage = overlap / Math.max(aliasWords.length, itemWords.size, 1);
-        if (coverage >= 0.5) return { status: 'matched', item, product };
+        if (coverage >= 0.5)
+          return product.notOnContinente
+            ? { status: 'not_on_continente', item }
+            : { status: 'matched', item, product };
       }
     }
 

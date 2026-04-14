@@ -30,6 +30,7 @@ export interface PreferredProduct {
   usualQty: number;
   notes: string;
   cachedPid: string | null; // cached after first successful search
+  notOnContinente?: boolean; // true when continenteName is a placeholder meaning "not found"
 }
 
 export interface ShoppingItem {

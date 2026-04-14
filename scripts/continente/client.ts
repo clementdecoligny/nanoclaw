@@ -65,57 +65,58 @@ export async function searchProduct(query: string, limit = 5): Promise<Continent
 /**
  * Extract products from the Continente search results HTML page.
  *
- * Demandware product tiles contain:
- *   data-pid="6664918"
- *
- * Product URLs contain the PID at the end:
- *   /produto/ovos-de-ar-livre-classe-m-l-matinados-matinados-6664918.html
- *
- * Names appear in the product link text.
+ * Demandware product tiles contain a data-product-tile-impression attribute
+ * with JSON: {"name":"...","id":"4949515","price":1.99,...}
  */
 function parseProductsFromSearchHtml(html: string, limit: number): ContinenteProduct[] {
   const results: ContinenteProduct[] = [];
   const seen = new Set<string>();
 
-  // Extract (pid, name, price) from product tile data attributes and links
-  // Pattern: data-pid="DIGITS" somewhere near href="/produto/...DIGITS.html"
-  const productUrlRe = /href="(\/produto\/([^"]+?)\.html)"/g;
+  // Extract JSON from data-product-tile-impression attributes
+  // The JSON is HTML-entity-encoded (&quot; instead of ")
+  const impressionRe = /data-product-tile-impression='([^']+)'/g;
   let m: RegExpExecArray | null;
 
-  while ((m = productUrlRe.exec(html)) !== null && results.length < limit) {
-    const relUrl = m[1];
-    // PID is the last numeric segment in the URL, preceded by a dash
-    const pidMatch = /-(\d{5,})\.html$/.exec(relUrl);
-    if (!pidMatch) continue;
-
-    const pid = pidMatch[1];
-    if (seen.has(pid)) continue;
-    seen.add(pid);
-
-    // Name: reconstruct from URL slug (last resort) or find in nearby HTML
-    // Slug has format: product-name-brandname-PID
-    const slugParts = relUrl
-      .replace(/^\/produto\//, '')
-      .replace(/-\d+\.html$/, '')
-      .split('-');
-    // Remove trailing brand (last word if it matches) — heuristic only
-    const nameFromSlug = slugParts.join(' ').toUpperCase();
-
-    // Try to find the price near this URL in the HTML
-    // Price pattern in Demandware: "decimalPrice":"4.59"
-    const priceSearchStart = Math.max(0, m.index - 2000);
-    const priceSearchEnd = Math.min(html.length, m.index + 2000);
-    const nearby = html.slice(priceSearchStart, priceSearchEnd);
-    const priceMatch = /"decimalPrice":"([\d.]+)"/.exec(nearby);
-    const price = priceMatch ? parseFloat(priceMatch[1]) : 0;
-
-    results.push({
-      pid,
-      name: nameFromSlug,
-      price,
-      available: true,
-      url: `${SHOP_BASE}${relUrl}`,
-    });
+  while ((m = impressionRe.exec(html)) !== null && results.length < limit) {
+    try {
+      // Decode HTML entities in the JSON
+      const raw = m[1]
+        .replace(/&quot;/g, '"')
+        .replace(/&amp;/g, '&')
+        .replace(/&#39;/g, "'");
+      const data = JSON.parse(raw) as { name?: string; id?: string; price?: number };
+      const pid = data.id;
+      // Decode any remaining HTML entities in the name
+      const name = data.name
+        ? data.name
+            .replace(/&amp;/g, '&')
+            .replace(/&eacute;/g, 'é')
+            .replace(/&ecirc;/g, 'ê')
+            .replace(/&ocirc;/g, 'ô')
+            .replace(/&iacute;/g, 'í')
+            .replace(/&oacute;/g, 'ó')
+            .replace(/&uacute;/g, 'ú')
+            .replace(/&atilde;/g, 'ã')
+            .replace(/&otilde;/g, 'õ')
+            .replace(/&ccedil;/g, 'ç')
+            .replace(/&aacute;/g, 'á')
+            .replace(/&agrave;/g, 'à')
+            .replace(/&ucirc;/g, 'û')
+            .replace(/&icirc;/g, 'î')
+            .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
+        : undefined;
+      if (!pid || !name || seen.has(pid)) continue;
+      seen.add(pid);
+      results.push({
+        pid,
+        name,
+        price: data.price ?? 0,
+        available: true,
+        url: `${SHOP_BASE}/produto/${name.toLowerCase().replace(/\s+/g, '-')}-${pid}.html`,
+      });
+    } catch {
+      // Malformed JSON — skip
+    }
   }
 
   return results;
