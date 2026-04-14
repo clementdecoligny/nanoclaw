@@ -252,6 +252,29 @@ async function buildContainerArgs(
   // Pass host timezone so container's local time matches the user's
   args.push('-e', `TZ=${TIMEZONE}`);
 
+  // Forward extra env vars from data/env/env into the container.
+  // This file (gitignored) holds runtime credentials and config that agents
+  // need but that should never be committed — e.g. CONTINENTE_EMAIL.
+  // Excluded from forwarding: keys already injected above (TZ) and any
+  // OneCLI/Telegram infrastructure keys that are not needed inside the agent.
+  const SKIP_KEYS = new Set(['TZ', 'ONECLI_URL', 'TELEGRAM_BOT_TOKEN']);
+  try {
+    const envFilePath = path.join(DATA_DIR, 'env', 'env');
+    const envFileContent = fs.readFileSync(envFilePath, 'utf-8');
+    for (const line of envFileContent.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const eqIdx = trimmed.indexOf('=');
+      if (eqIdx === -1) continue;
+      const key = trimmed.slice(0, eqIdx).trim();
+      if (SKIP_KEYS.has(key)) continue;
+      const value = trimmed.slice(eqIdx + 1).trim();
+      if (value) args.push('-e', `${key}=${value}`);
+    }
+  } catch {
+    // data/env/env not present — no extra env vars to forward
+  }
+
   // OneCLI gateway handles credential injection — containers never see real secrets.
   // The gateway intercepts HTTPS traffic and injects API keys or OAuth tokens.
   const onecliApplied = await onecli.applyContainerConfig(args, {
