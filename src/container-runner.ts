@@ -294,10 +294,10 @@ function buildMounts(
     mounts.push({ hostPath: fragmentsDir, containerPath: '/workspace/agent/.claude-fragments', readonly: true });
   }
 
-  // Global memory directory — always read-only.
+  // Global memory directory — read-write so executive (Alain) and pepa can both write to it.
   const globalDir = path.join(GROUPS_DIR, 'global');
   if (fs.existsSync(globalDir)) {
-    mounts.push({ hostPath: globalDir, containerPath: '/workspace/global', readonly: true });
+    mounts.push({ hostPath: globalDir, containerPath: '/workspace/global', readonly: false });
   }
 
   // Shared CLAUDE.md — read-only, imported by the composed entry point via
@@ -450,6 +450,13 @@ async function buildContainerArgs(
   // Provider-contributed env vars (e.g. XDG_DATA_HOME, OPENCODE_*, NO_PROXY).
   if (providerContribution.env) {
     for (const [key, value] of Object.entries(providerContribution.env)) {
+      args.push('-e', `${key}=${value}`);
+    }
+  }
+
+  // Per-agent env vars from container.json — scoped to this agent only.
+  if (containerConfig.env) {
+    for (const [key, value] of Object.entries(containerConfig.env)) {
       args.push('-e', `${key}=${value}`);
     }
   }

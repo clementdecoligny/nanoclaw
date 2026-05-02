@@ -116,9 +116,7 @@ async function sendPairingConfirmation(token: string, platformId: string): Promi
   }
 }
 
-function createVoiceTranscriptionInterceptor(
-  hostOnInbound: ChannelSetup['onInbound'],
-): ChannelSetup['onInbound'] {
+function createVoiceTranscriptionInterceptor(hostOnInbound: ChannelSetup['onInbound']): ChannelSetup['onInbound'] {
   return async (platformId, threadId, message) => {
     try {
       if (message.kind === 'chat-sdk' && message.content && typeof message.content === 'object') {
@@ -231,8 +229,11 @@ function createPairingInterceptor(
   };
 }
 
-/** Shared factory for any Telegram bot — creates adapter, bridge, and interceptor chain. */
-function createTelegramChannelAdapter(token: string): ChannelAdapter {
+/** Shared factory for any Telegram bot — creates adapter, bridge, and interceptor chain.
+ * channelName must match the registered channel name (e.g. 'telegram', 'telegram_finance',
+ * 'telegram_alain') so the registry stores each bot under its own key instead of all
+ * three overwriting each other at 'telegram'. */
+function createTelegramChannelAdapter(token: string, channelName: string = 'telegram'): ChannelAdapter {
   const telegramAdapter = createTelegramAdapter({ botToken: token, mode: 'polling' });
   const bridge = createChatSdkBridge({
     adapter: telegramAdapter,
@@ -244,10 +245,25 @@ function createTelegramChannelAdapter(token: string): ChannelAdapter {
     maxTextLength: 4000,
   });
   const botUsernamePromise = fetchBotUsername(token);
+  // For secondary bots ('telegram_finance', 'telegram_alain'), remap platform IDs so
+  // each bot's messages are scoped to its own channel type in the router and delivery.
+  // The bridge always produces 'telegram:X' IDs (from the inner adapter); we rewrite
+  // them to '<channelName>:X' on inbound, and reverse that on delivery so the bridge
+  // still receives the 'telegram:X' format it expects internally.
+  const reIn = (id: string | null): string | null =>
+    channelName === 'telegram' || !id ? id : id.replace(/^telegram:/, `${channelName}:`);
+  const reOut = (id: string | null): string | null =>
+    channelName === 'telegram' || !id ? id : id.replace(new RegExp(`^${channelName}:`), 'telegram:');
+
   const wrapped: ChannelAdapter = {
     ...bridge,
+    name: channelName,
+    channelType: channelName,
+    async deliver(platformId: string, threadId: string | null, message) {
+      return bridge.deliver(reOut(platformId)!, reOut(threadId), message);
+    },
     resolveChannelName: async (platformId: string) => {
-      const chatId = platformId.split(':').slice(1).join(':');
+      const chatId = (reOut(platformId) ?? platformId).split(':').slice(1).join(':');
       if (!chatId) return null;
       try {
         const res = await fetch(`https://api.telegram.org/bot${token}/getChat`, {
@@ -262,11 +278,15 @@ function createTelegramChannelAdapter(token: string): ChannelAdapter {
       }
     },
     async setup(hostConfig: ChannelSetup) {
+      // Remap inbound platformIds from 'telegram:X' to '<channelName>:X' before
+      // the host router sees them, so messages are scoped to the right channel.
+      const patchedOnInbound: ChannelSetup['onInbound'] = (platformId, threadId, message) =>
+        hostConfig.onInbound(reIn(platformId)!, reIn(threadId), message);
       const intercepted: ChannelSetup = {
         ...hostConfig,
         onInbound: createPairingInterceptor(
           botUsernamePromise,
-          createVoiceTranscriptionInterceptor(hostConfig.onInbound),
+          createVoiceTranscriptionInterceptor(patchedOnInbound),
           token,
         ),
       };
@@ -280,7 +300,7 @@ registerChannelAdapter('telegram', {
   factory: () => {
     const env = readEnvFile(['TELEGRAM_BOT_TOKEN']);
     if (!env.TELEGRAM_BOT_TOKEN) return null;
-    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN);
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN, 'telegram');
   },
 });
 
@@ -289,7 +309,7 @@ registerChannelAdapter('telegram_finance', {
   factory: () => {
     const env = readEnvFile(['TELEGRAM_BOT_TOKEN_FINANCE']);
     if (!env.TELEGRAM_BOT_TOKEN_FINANCE) return null;
-    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_FINANCE);
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_FINANCE, 'telegram_finance');
   },
 });
 
@@ -298,6 +318,6 @@ registerChannelAdapter('telegram_alain', {
   factory: () => {
     const env = readEnvFile(['TELEGRAM_BOT_TOKEN_ALAIN']);
     if (!env.TELEGRAM_BOT_TOKEN_ALAIN) return null;
-    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_ALAIN);
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_ALAIN, 'telegram_alain');
   },
 });

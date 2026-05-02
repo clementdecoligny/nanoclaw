@@ -47,6 +47,13 @@ export interface ContainerConfig {
   agentGroupId?: string;
   /** Max messages per prompt. Falls back to code default if unset. */
   maxMessagesPerPrompt?: number;
+  /**
+   * Plain env vars injected into the container at spawn time. Scoped to this
+   * agent only. Use for credentials that scripts need as process env vars
+   * (e.g. CONTINENTE_EMAIL) and cannot be injected via the OneCLI HTTP proxy.
+   * Values are stored in plaintext in container.json — which is gitignored.
+   */
+  env?: Record<string, string>;
 }
 
 function emptyConfig(): ContainerConfig {
