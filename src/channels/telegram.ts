@@ -3,14 +3,20 @@
  * interceptor wrapped around onInbound to verify chat ownership before
  * registration. See telegram-pairing.ts for the why.
  */
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+
 import { createTelegramAdapter } from '@chat-adapter/telegram';
 
 import { readEnvFile } from '../env.js';
 import { log } from '../log.js';
+import { transcribeAudio } from '../transcription.js';
 import { createMessagingGroup, getMessagingGroupByPlatform, updateMessagingGroup } from '../db/messaging-groups.js';
 import { grantRole, hasAnyOwner } from '../modules/permissions/db/user-roles.js';
 import { upsertUser } from '../modules/permissions/db/users.js';
 import { createChatSdkBridge, type ReplyContext } from './chat-sdk-bridge.js';
+import { parseTextStyles, stripInternalTags } from '../text-styles.js';
 import { sanitizeTelegramLegacyMarkdown } from './telegram-markdown-sanitize.js';
 import { registerChannelAdapter } from './channel-registry.js';
 import type { ChannelAdapter, ChannelSetup, InboundMessage } from './adapter.js';
@@ -110,6 +116,36 @@ async function sendPairingConfirmation(token: string, platformId: string): Promi
   }
 }
 
+function createVoiceTranscriptionInterceptor(
+  hostOnInbound: ChannelSetup['onInbound'],
+): ChannelSetup['onInbound'] {
+  return async (platformId, threadId, message) => {
+    try {
+      if (message.kind === 'chat-sdk' && message.content && typeof message.content === 'object') {
+        const content = message.content as Record<string, unknown>;
+        const attachments = content.attachments as Array<{ type?: string; data?: string }> | undefined;
+        const voiceAtt = attachments?.find((a) => a.type === 'audio' || a.type === 'voice');
+        if (voiceAtt?.data) {
+          const tmpPath = path.join(os.tmpdir(), `voice-${Date.now()}.ogg`);
+          try {
+            fs.writeFileSync(tmpPath, Buffer.from(voiceAtt.data, 'base64'));
+            const transcript = await transcribeAudio(tmpPath);
+            if (transcript) {
+              const existingText = (content.text as string) || '';
+              content.text = `[Voice message transcript]: ${transcript}${existingText ? '\n\n' + existingText : ''}`;
+            }
+          } finally {
+            fs.rmSync(tmpPath, { force: true });
+          }
+        }
+      }
+    } catch (err) {
+      log.warn('Voice transcription interceptor error', { err });
+    }
+    hostOnInbound(platformId, threadId, message);
+  };
+}
+
 function createPairingInterceptor(
   botUsernamePromise: Promise<string | null>,
   hostOnInbound: ChannelSetup['onInbound'],
@@ -195,51 +231,73 @@ function createPairingInterceptor(
   };
 }
 
+/** Shared factory for any Telegram bot — creates adapter, bridge, and interceptor chain. */
+function createTelegramChannelAdapter(token: string): ChannelAdapter {
+  const telegramAdapter = createTelegramAdapter({ botToken: token, mode: 'polling' });
+  const bridge = createChatSdkBridge({
+    adapter: telegramAdapter,
+    concurrency: 'concurrent',
+    extractReplyContext,
+    supportsThreads: false,
+    transformOutboundText: (text) =>
+      sanitizeTelegramLegacyMarkdown(parseTextStyles(stripInternalTags(text), 'telegram')),
+    maxTextLength: 4000,
+  });
+  const botUsernamePromise = fetchBotUsername(token);
+  const wrapped: ChannelAdapter = {
+    ...bridge,
+    resolveChannelName: async (platformId: string) => {
+      const chatId = platformId.split(':').slice(1).join(':');
+      if (!chatId) return null;
+      try {
+        const res = await fetch(`https://api.telegram.org/bot${token}/getChat`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ chat_id: chatId }),
+        });
+        const data = (await res.json()) as { ok?: boolean; result?: { title?: string } };
+        return data.ok ? (data.result?.title ?? null) : null;
+      } catch {
+        return null;
+      }
+    },
+    async setup(hostConfig: ChannelSetup) {
+      const intercepted: ChannelSetup = {
+        ...hostConfig,
+        onInbound: createPairingInterceptor(
+          botUsernamePromise,
+          createVoiceTranscriptionInterceptor(hostConfig.onInbound),
+          token,
+        ),
+      };
+      return withRetry(() => bridge.setup(intercepted), 'bridge.setup');
+    },
+  };
+  return wrapped;
+}
+
 registerChannelAdapter('telegram', {
   factory: () => {
     const env = readEnvFile(['TELEGRAM_BOT_TOKEN']);
     if (!env.TELEGRAM_BOT_TOKEN) return null;
-    const token = env.TELEGRAM_BOT_TOKEN;
-    const telegramAdapter = createTelegramAdapter({
-      botToken: token,
-      mode: 'polling',
-    });
-    const bridge = createChatSdkBridge({
-      adapter: telegramAdapter,
-      concurrency: 'concurrent',
-      extractReplyContext,
-      supportsThreads: false,
-      transformOutboundText: sanitizeTelegramLegacyMarkdown,
-      maxTextLength: 4000,
-    });
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN);
+  },
+});
 
-    const botUsernamePromise = fetchBotUsername(token);
+// Finance bot (Edmond) — separate channel type so messages scope to finance groups.
+registerChannelAdapter('telegram_finance', {
+  factory: () => {
+    const env = readEnvFile(['TELEGRAM_BOT_TOKEN_FINANCE']);
+    if (!env.TELEGRAM_BOT_TOKEN_FINANCE) return null;
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_FINANCE);
+  },
+});
 
-    const wrapped: ChannelAdapter = {
-      ...bridge,
-      resolveChannelName: async (platformId: string) => {
-        const chatId = platformId.split(':').slice(1).join(':');
-        if (!chatId) return null;
-        try {
-          const res = await fetch(`https://api.telegram.org/bot${token}/getChat`, {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ chat_id: chatId }),
-          });
-          const data = (await res.json()) as { ok?: boolean; result?: { title?: string } };
-          return data.ok ? (data.result?.title ?? null) : null;
-        } catch {
-          return null;
-        }
-      },
-      async setup(hostConfig: ChannelSetup) {
-        const intercepted: ChannelSetup = {
-          ...hostConfig,
-          onInbound: createPairingInterceptor(botUsernamePromise, hostConfig.onInbound, token),
-        };
-        return withRetry(() => bridge.setup(intercepted), 'bridge.setup');
-      },
-    };
-    return wrapped;
+// Alain bot — reserved, not yet active.
+registerChannelAdapter('telegram_alain', {
+  factory: () => {
+    const env = readEnvFile(['TELEGRAM_BOT_TOKEN_ALAIN']);
+    if (!env.TELEGRAM_BOT_TOKEN_ALAIN) return null;
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_ALAIN);
   },
 });

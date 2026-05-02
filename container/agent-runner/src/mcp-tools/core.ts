@@ -259,4 +259,52 @@ export const addReaction: McpToolDefinition = {
   },
 };
 
-registerTools([sendMessage, sendFile, editMessage, addReaction]);
+export const sendDocument: McpToolDefinition = {
+  tool: {
+    name: 'send_document',
+    description:
+      'Send a generated file (PDF, CSV, etc.) to the user. The file must already exist on disk. Use send_file for general file delivery; this alias matches the interface expected by agents that reference send_document explicitly.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        to: { type: 'string', description: 'Destination name. Optional if you have only one destination.' },
+        file_path: { type: 'string', description: 'Absolute path to the file inside the container (e.g. /tmp/receipt.pdf)' },
+        filename: { type: 'string', description: 'Optional display filename. Defaults to the basename of file_path.' },
+        caption: { type: 'string', description: 'Optional caption displayed alongside the file.' },
+      },
+      required: ['file_path'],
+    },
+  },
+  async handler(args) {
+    const filePath = args.file_path as string;
+    if (!filePath) return err('file_path is required');
+
+    const routing = resolveRouting(args.to as string | undefined);
+    if ('error' in routing) return err(routing.error);
+
+    const resolvedPath = path.isAbsolute(filePath) ? filePath : path.resolve('/workspace/agent', filePath);
+    if (!fs.existsSync(resolvedPath)) return err(`File not found: ${filePath}`);
+
+    const id = generateId();
+    const filename = (args.filename as string) || path.basename(resolvedPath);
+    const caption = (args.caption as string) || '';
+
+    const outboxDir = path.join('/workspace/outbox', id);
+    fs.mkdirSync(outboxDir, { recursive: true });
+    fs.copyFileSync(resolvedPath, path.join(outboxDir, filename));
+
+    writeMessageOut({
+      id,
+      kind: 'chat',
+      platform_id: routing.platform_id,
+      channel_type: routing.channel_type,
+      thread_id: routing.thread_id,
+      content: JSON.stringify({ text: caption, files: [filename] }),
+    });
+
+    log(`send_document: ${id} → ${routing.resolvedName} (${filename})`);
+    return ok(`Document sent to ${routing.resolvedName} (id: ${id}, filename: ${filename})`);
+  },
+};
+
+registerTools([sendMessage, sendFile, editMessage, addReaction, sendDocument]);

@@ -56,6 +56,16 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
        fi \
     && rm -rf /var/lib/apt/lists/*
 
+# ---- WeasyPrint virtualenv ---------------------------------------------------
+# Finance agent (Edmond) generates PDF salary receipts via WeasyPrint.
+# Kept in a separate layer so Chromium rebuild doesn't bust this cache.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python3-venv \
+    && rm -rf /var/lib/apt/lists/* \
+    && python3 -m venv /opt/wpenv \
+    && /opt/wpenv/bin/pip install --no-cache-dir weasyprint openpyxl \
+    && rm -rf /root/.cache/pip
+
 # Chromium path for agent-browser / Playwright consumers
 ENV AGENT_BROWSER_EXECUTABLE_PATH=/usr/bin/chromium
 ENV PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium

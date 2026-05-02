@@ -36,6 +36,7 @@ import { isSafeAttachmentName } from '../attachment-safety.js';
 import { ASSISTANT_HAS_OWN_NUMBER, ASSISTANT_NAME, DATA_DIR } from '../config.js';
 import { readEnvFile } from '../env.js';
 import { log } from '../log.js';
+import { stripInternalTags } from '../text-styles.js';
 import { registerChannelAdapter } from './channel-registry.js';
 import { normalizeOptions, type NormalizedOption } from './ask-question.js';
 import type { ChannelAdapter, ChannelSetup, ConversationInfo, InboundMessage, OutboundMessage } from './adapter.js';
@@ -663,7 +664,8 @@ registerChannelAdapter('whatsapp', {
         }
 
         // Normal message (with optional file attachments)
-        const text = (content.markdown as string) || (content.text as string);
+        const rawText = (content.markdown as string) || (content.text as string);
+        const text = rawText ? stripInternalTags(rawText) : rawText;
         const hasFiles = message.files && message.files.length > 0;
 
         if (!text && !hasFiles) return;

@@ -5,6 +5,7 @@
  */
 import { ChildProcess, execSync, spawn } from 'child_process';
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 
 import { OneCLI } from '@onecli-sh/sdk';
@@ -318,6 +319,13 @@ function buildMounts(
   const skillsSrc = path.join(projectRoot, 'container', 'skills');
   if (fs.existsSync(skillsSrc)) {
     mounts.push({ hostPath: skillsSrc, containerPath: '/app/skills', readonly: true });
+  }
+
+  // Gmail MCP credentials — mount if present so the Gmail MCP server can
+  // find its OAuth tokens. Write access is required for token refresh.
+  const gmailMcpDir = path.join(os.homedir(), '.gmail-mcp');
+  if (fs.existsSync(gmailMcpDir)) {
+    mounts.push({ hostPath: gmailMcpDir, containerPath: '/home/node/.gmail-mcp', readonly: false });
   }
 
   // Additional mounts from container config

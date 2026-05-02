@@ -4,6 +4,7 @@
  */
 import { createSlackAdapter } from '@chat-adapter/slack';
 
+import { parseTextStyles, stripInternalTags } from '../text-styles.js';
 import { readEnvFile } from '../env.js';
 import { createChatSdkBridge } from './chat-sdk-bridge.js';
 import { registerChannelAdapter } from './channel-registry.js';
@@ -16,7 +17,12 @@ registerChannelAdapter('slack', {
       botToken: env.SLACK_BOT_TOKEN,
       signingSecret: env.SLACK_SIGNING_SECRET,
     });
-    const bridge = createChatSdkBridge({ adapter: slackAdapter, concurrency: 'concurrent', supportsThreads: true });
+    const bridge = createChatSdkBridge({
+      adapter: slackAdapter,
+      concurrency: 'concurrent',
+      supportsThreads: true,
+      transformOutboundText: (text) => parseTextStyles(stripInternalTags(text), 'slack'),
+    });
     bridge.resolveChannelName = async (platformId: string) => {
       try {
         const info = await slackAdapter.fetchThread(platformId);
