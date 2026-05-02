@@ -153,6 +153,14 @@ Four types of skills. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full taxono
 | `/update-nanoclaw` | Bring upstream updates into a customized install |
 | `/init-onecli` | Install OneCLI Agent Vault and migrate `.env` credentials |
 
+## Product Documentation
+
+Product docs live in `product-docs/` and are published via Netlify (MkDocs Material). One page per agent: what it does, what problems it solves, its workflows, its current limitations.
+
+**Rule: every feature implementation must include a `product-docs/` update in the same commit.** When a workflow changes, is added, or moves from "limitation" to "active," update the relevant agent page. No exceptions. The docs are the user-facing truth; the code is the implementation.
+
+Sensitive data rule: no personal identifiers in docs (no real names, NIFs, addresses, email addresses, salary amounts). Refer to roles only.
+
 ## Contributing
 
 Before creating a PR, adding a skill, or preparing any contribution, you MUST read [CONTRIBUTING.md](CONTRIBUTING.md). It covers accepted change types, the four skill types and their guidelines, `SKILL.md` format rules, and the pre-submission checklist.

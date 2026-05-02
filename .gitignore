@@ -40,3 +40,4 @@ groups/*
 
 agents-sdk-docs
 scripts/setup-v2-groups.ts
+site/

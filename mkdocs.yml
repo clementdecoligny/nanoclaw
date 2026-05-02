@@ -1,0 +1,42 @@
+site_name: NanoClaw
+site_description: Personal AI assistant system — what each agent does and how to use it
+docs_dir: product-docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+
+nav:
+  - Overview: index.md
+  - Agents:
+    - Pepa — Meal Planner: agents/pepa.md
+    - Alain — Executive Assistant: agents/alain.md
+    - Edmond — Finance: agents/edmond.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
