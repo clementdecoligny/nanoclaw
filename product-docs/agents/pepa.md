@@ -4,11 +4,11 @@ Pepa is your family meal planning agent.
 
 ## What problems it solves
 
-- You don't have to think about what's for dinner each night
+- You don't have to think about what's for lunch or dinner each day — one short message at 11am tells you everything
 - Grocery shopping is driven by the actual meal plan, not guesswork
-- Batch cooking sessions are planned to minimize time in the kitchen across the week
+- Batch cooking sessions are anchored to the vegetable basket delivery and planned around Branca's weekly cooking slot
+- The freezer always holds a reserve of ready meals so you're never stuck without options
 - Recipes are stored and retrieved accurately — no hallucinated ingredients or missing steps
-- Your cleaning assistant's cooking tasks are produced as clear Portuguese instruction cards
 
 ## How to trigger it
 
@@ -16,44 +16,77 @@ Message **PepaLisboaBot** on Telegram — either in a private DM or by @mentioni
 
 ---
 
+## How it works
+
+### Planning algorithm
+
+When Pepa fills a meal slot, she applies a fixed priority order:
+
+1. **Expiring ingredients** — something about to go bad drives the meal
+2. **Batch cooking anchor** — on the vegetable basket day, one meal is a batch session
+3. **Freezer reserve check** — the freezer always holds ≥ 2 ready meals; batch output goes there first if below threshold
+4. **Fresh cooking** — cook something new if ingredients are available
+5. **Freezer draw-down** — pull from the freezer, respecting the 3-day variety window and no red meat/pork at dinner
+6. **Leftover carry-forward** — use yesterday's surplus before opening new ingredients
+
+### Constraints enforced automatically
+
+- **No red meat or pork at dinner** — every evening, without exception (sleep quality)
+- **No same dish within 3 days**
+- **One new recipe per week** — Pepa proposes it at the Monday check-in; you confirm or redirect
+- **Branca cooks once per week** — her batch session is pre-planned at the Monday check-in, anchored to the basket day
+
+---
+
 ## Workflows
 
-### Weekly meal planning
+### Daily 11am message
 
-**Trigger:** Tell Pepa you want to plan the week, or send your availability ("this week we're home every evening except Thursday").
+Every day at 11am, Pepa sends a short message covering:
 
-**What Pepa needs from you:**
-- Which evenings you're home for dinner
-- Any meals already planned (dinner out, guests, etc.)
-- Any constraints for the week (diet, what's already in the fridge)
+- Today's lunch and dinner
+- Any prep needed for either
+- Anything to defrost or buy locally before the meal
+- What to do with leftovers if there are any
 
-**What you get back:**
-- A 7-day rolling plan covering dinners every day and lunches on weekends
-- Each meal linked to a specific recipe from the library
-- Batch cooking chains highlighted — meals that reuse the same base component
-- A cooking schedule fitted to your available time windows
-- Instruction cards for your cleaning assistant (in Portuguese) for any delegated prep
-- A grocery list: only what the plan needs minus what's already in stock
+Nothing else. Short and actionable.
 
-**How it works internally:**
-Pepa reads the recipe library index (one file with all recipes and their metadata), selects 5–7 meals that batch well together, cross-checks against the pantry, and builds the shopping list from the delta. She never plans from the fridge first — recipes drive the plan, inventory is a constraint.
+---
+
+### Monday check-in
+
+Every Monday morning, Pepa sends a check-in asking four things in one message:
+
+1. When does the vegetable basket arrive this week?
+2. Which day is Branca cooking this week?
+3. Freezer audit — here's what I have, anything to correct?
+4. New recipe proposal — keep it or swap?
+
+Reply in one message. Pepa builds the week's skeleton from your answers.
+
+---
+
+### Vegetable basket arrival
+
+Forward a photo or text list of the basket contents. Pepa:
+- Updates the pantry
+- Flags what's expiring soonest
+- Proposes a batch cooking session anchored to that day
+- Replans the week's meals around what arrived
 
 ---
 
 ### Grocery basket preparation (Continente)
 
-**Trigger:** "Prepare the Continente basket" or "add the shopping list to the cart."
+**Trigger:** Pepa proposes when the list is substantial or 2 weeks have passed. You can also ask any time.
 
 **Two-step flow — Pepa never skips the review:**
 
-1. **Prepare** — Pepa matches each item on the shopping list to exact Continente products using a preferred-products database built from past orders. She outputs a full basket for your review:
-    - Items ready to add (matched to a known product)
-    - Items needing your input (ambiguous match or multiple options)
-    - Items not available on Continente (buy elsewhere)
+1. **Prepare** — Pepa matches each item on the shopping list to exact Continente products using a preferred-products database. She outputs a full basket for your review: items ready to add, items needing your input, items not on Continente.
 
-2. **Execute** — After you say "ok" (or make any corrections), Pepa adds everything to your Continente cart. You open continente.pt to complete checkout — Pepa never pays.
+2. **Execute** — After you say "ok" (or make corrections), Pepa adds everything to your Continente cart. You open continente.pt to complete checkout — Pepa never pays.
 
-**What you get back:** A filled cart on Continente.pt, ready for checkout.
+**Grocery has two streams:** Continente (max every 2 weeks) and local quick buys (surfaced in the daily message when something is needed before the next delivery).
 
 ---
 
@@ -61,17 +94,13 @@ Pepa reads the recipe library index (one file with all recipes and their metadat
 
 **Trigger:** "The delivery arrived" or "a entrega chegou."
 
-**What happens:**
-Pepa fetches the actual delivered order from Continente (quantities may differ from what was ordered), updates the pantry with everything received, logs the delivery, and removes fulfilled items from the shopping list. She flags any discrepancies.
+Pepa fetches the actual delivered order from Continente, updates the pantry, logs the delivery, removes fulfilled items from the shopping list, and flags any discrepancies.
 
 ---
 
 ### Ad-hoc "what should we eat tonight?"
 
-**Trigger:** Any message asking what to cook now.
-
-**What happens:**
-Pepa checks what's already prepped (batch cooking log) — assembly-only meals come first. Then picks 2–3 options from the recipe library that match current stock, ranked by effort (lowest first). Always a named recipe, never a generic suggestion.
+Pepa checks the freezer first (assembly-only meals take priority), then picks 2–3 options from the recipe library matching current stock, ranked by effort. Always a named recipe, never a generic suggestion. Applies the dinner protein rule if it's evening.
 
 ---
 
@@ -79,16 +108,26 @@ Pepa checks what's already prepped (batch cooking log) — assembly-only meals c
 
 **Trigger:** "Save this recipe" or paste/send a recipe.
 
-**What happens:**
-Pepa stores it in the recipe library with full metadata: ingredients with exact quantities, step-by-step instructions, effort level, batch-friendliness, family suitability. Future planning sessions can use it immediately.
+Pepa stores it in the recipe library with full metadata: meal type, protein type, effort level, batch eligibility, typical yield, and tags. Future planning sessions and Monday new-recipe proposals can use it immediately.
 
-**Rule:** Pepa always reads the recipe file before giving ingredients or instructions. She never summarizes from memory.
+**Rule:** Pepa always reads the recipe file before giving ingredients or instructions. She never summarizes from memory — every ingredient and step is reproduced exactly as written.
+
+---
+
+## Inventory model
+
+Pepa tracks the freezer and pantry with three mechanisms:
+
+- **Plan-derived** — when a meal is planned and the day passes, ingredients are marked consumed; batch output is added to the freezer
+- **User overrides** — tell Pepa mid-week if you deviate ("ordered pizza instead", "Branca made soup today") and she updates immediately
+- **Monday audit** — the weekly check-in includes a freezer review to resync any drift
 
 ---
 
 ## Current limitations
 
-- **No automatic availability detection** — Pepa asks you at the start of each planning session what the week looks like. She cannot pull this from a calendar yet.
+- **No automatic availability detection** — Pepa asks you every Monday what the week looks like. She cannot pull this from a calendar yet.
 - **No automated checkout** — Pepa fills the Continente basket but you complete the purchase yourself.
-- **No nutritional tracking** — meal plans don't include macro counts or nutritional breakdowns beyond basic per-recipe notes.
-- **No proactive restocking** — Pepa alerts on low stock when you update inventory, but doesn't monitor in the background.
+- **Rotation window not yet calibrated** — the minimum rest period before a recipe repeats in the weekly plan is TBD; it will be set once the recipe library is large enough to measure against.
+- **No nutritional tracking** — meal plans don't include macro counts. A nutrition interface exists for Clément's cycling nutrition but requires manual updates.
+- **No proactive restocking monitoring** — Pepa alerts on low stock when you update inventory, but doesn't monitor in the background.
