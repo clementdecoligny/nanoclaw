@@ -277,6 +277,15 @@ function createTelegramChannelAdapter(token: string, channelName: string = 'tele
         return null;
       }
     },
+    async setTyping(platformId: string, _threadId: string | null): Promise<void> {
+      const chatId = (reOut(platformId) ?? platformId).split(':').slice(1).join(':');
+      if (!chatId) return;
+      await fetch(`https://api.telegram.org/bot${token}/sendChatAction`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, action: 'typing' }),
+      }).catch(() => {});
+    },
     async setup(hostConfig: ChannelSetup) {
       // Remap inbound platformIds from 'telegram:X' to '<channelName>:X' before
       // the host router sees them, so messages are scoped to the right channel.
