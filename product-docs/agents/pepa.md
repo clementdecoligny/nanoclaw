@@ -7,8 +7,9 @@ Pepa is your family meal planning agent.
 - You don't have to think about what's for lunch or dinner each day — one short message at 11am tells you everything
 - Grocery shopping is driven by the actual meal plan, not guesswork
 - Batch cooking sessions are anchored to the vegetable basket delivery and planned around Branca's weekly cooking slot
-- The freezer always holds a reserve of ready meals so you're never stuck without options
+- The freezer always holds a reserve of high-effort components so you're never stuck without options
 - Recipes are stored and retrieved accurately — no hallucinated ingredients or missing steps
+- Pepa coaches the batch cooking session: explains what to make, in what order, and why each component unlocks variety throughout the week
 
 ## How to trigger it
 
@@ -23,18 +24,24 @@ Message **PepaLisboaBot** on Telegram — either in a private DM or by @mentioni
 When Pepa fills a meal slot, she applies a fixed priority order:
 
 1. **Expiring ingredients** — something about to go bad drives the meal
-2. **Batch cooking anchor** — on the vegetable basket day, one meal is a batch session
-3. **Freezer reserve check** — the freezer always holds ≥ 2 ready meals; batch output goes there first if below threshold
+2. **Batch cooking anchor** — on the vegetable basket day (or the day after), one session is a batch cooking session
+3. **Freezer reserve check** — the freezer always holds ≥ 2 Tupperware of high-effort components; batch output fills the reserve first if below threshold
 4. **Fresh cooking** — cook something new if ingredients are available
-5. **Freezer draw-down** — pull from the freezer, respecting the 3-day variety window and no red meat/pork at dinner
+5. **Freezer draw-down** — assemble a named dish from frozen components, respecting the 3-day variety window and the dinner protein rule
 6. **Leftover carry-forward** — use yesterday's surplus before opening new ingredients
+
+### Batch cooking model
+
+Pepa uses **component batching**: instead of batching full dishes, the session produces the time-consuming building blocks — cooked legumes, slow proteins, grain bases, roasted vegetables, sauces. These are assembled into different named dishes throughout the week, giving more variety from a single 2-hour session.
+
+For every component in the session plan, Pepa explains why it's being batched: which meals it unlocks, what variety it creates, what effort it saves.
 
 ### Constraints enforced automatically
 
 - **No red meat or pork at dinner** — every evening, without exception (sleep quality)
-- **No same dish within 3 days**
-- **One new recipe per week** — Pepa proposes it at the Monday check-in; you confirm or redirect
-- **Branca cooks once per week** — her batch session is pre-planned at the Monday check-in, anchored to the basket day
+- **No same assembly within 3 days** — variety is at the dish level, not the ingredient level; the same chickpeas can appear in three different assemblies
+- **One new recipe per week** — Pepa proposes it at the Monday check-in, prioritizing recipes with strong batch fit; you confirm or redirect
+- **Branca cooks once per week** — her batch session is pre-planned at the Monday check-in, anchored to the basket day; Clément and Lola are the backup if she's unavailable
 
 ---
 
@@ -55,12 +62,13 @@ Nothing else. Short and actionable.
 
 ### Monday check-in
 
-Every Monday morning, Pepa sends a check-in asking four things in one message:
+Every Monday morning, Pepa sends a check-in asking five things in one message:
 
 1. When does the vegetable basket arrive this week?
-2. Which day is Branca cooking this week?
+2. Which day is Branca cooking this week? (or: which day will you and Lola cook if Branca is unavailable?)
 3. Freezer audit — here's what I have, anything to correct?
 4. New recipe proposal — keep it or swap?
+5. Preliminary batch plan — here's what I propose to batch and why, confirm or redirect?
 
 Reply in one message. Pepa builds the week's skeleton from your answers.
 
@@ -71,8 +79,21 @@ Reply in one message. Pepa builds the week's skeleton from your answers.
 Forward a photo or text list of the basket contents. Pepa:
 - Updates the pantry
 - Flags what's expiring soonest
-- Proposes a batch cooking session anchored to that day
+- Refines the batch plan based on actual basket contents
+- Proposes a new batch-optimized recipe if a good fit exists for what arrived (searches Mediterranean/European sources, saves to library before proposing)
 - Replans the week's meals around what arrived
+
+---
+
+### Batch cooking session
+
+Pepa produces a structured session plan covering:
+- Which components to make, with a timed sequence (longest cook time first)
+- Why each component is worth making: which assemblies it enables, what variety it creates
+- Technique notes inline — full explanation the first time a technique appears, a short reminder on repeat
+- Quantities scaled to the week's planned meals plus reserve refill if needed
+
+Session cap: **2 hours, 3–4 outputs**.
 
 ---
 
@@ -100,7 +121,7 @@ Pepa fetches the actual delivered order from Continente, updates the pantry, log
 
 ### Ad-hoc "what should we eat tonight?"
 
-Pepa checks the freezer first (assembly-only meals take priority), then picks 2–3 options from the recipe library matching current stock, ranked by effort. Always a named recipe, never a generic suggestion. Applies the dinner protein rule if it's evening.
+Pepa checks the freezer first (lowest finishing time takes priority), then picks 2–3 named assemblies or recipes from the library matching current stock, ranked by effort. Always a named dish, never a generic suggestion. Applies the dinner protein rule if it's evening.
 
 ---
 
@@ -108,9 +129,9 @@ Pepa checks the freezer first (assembly-only meals take priority), then picks 2�
 
 **Trigger:** "Save this recipe" or paste/send a recipe.
 
-Pepa stores it in the recipe library with full metadata: meal type, protein type, effort level, batch eligibility, typical yield, and tags. Future planning sessions and Monday new-recipe proposals can use it immediately.
+Pepa stores it in the recipe library with full metadata: meal type, protein type, effort level, batch fit (none / components / full dish), batch components, freeze quality, freeze duration, finishing time, and tags. Future planning sessions and Monday new-recipe proposals can use it immediately.
 
-**Rule:** Pepa always reads the recipe file before giving ingredients or instructions. She never summarizes from memory — every ingredient and step is reproduced exactly as written.
+**Rule:** Pepa always reads the recipe file before giving ingredients or instructions. She never summarizes from memory — every ingredient and step is reproduced exactly as written. For new recipes proposed from web search, the file is saved before any instructions are given.
 
 ---
 
@@ -121,6 +142,8 @@ Pepa tracks the freezer and pantry with three mechanisms:
 - **Plan-derived** — when a meal is planned and the day passes, ingredients are marked consumed; batch output is added to the freezer
 - **User overrides** — tell Pepa mid-week if you deviate ("ordered pizza instead", "Branca made soup today") and she updates immediately
 - **Monday audit** — the weekly check-in includes a freezer review to resync any drift
+
+The freezer is tracked per container: item, quantity, frozen date, expiry date, and finishing time. Expiry is flagged only when Pepa is about to plan a meal using that component.
 
 ---
 
