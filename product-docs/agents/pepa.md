@@ -137,13 +137,23 @@ Pepa stores it in the recipe library with full metadata: meal type, protein type
 
 ## Inventory model
 
-Pepa tracks the freezer and pantry with three mechanisms:
+Pepa tracks the pantry, fridge, and freezer at three levels of precision:
 
-- **Plan-derived** — when a meal is planned and the day passes, ingredients are marked consumed; batch output is added to the freezer
-- **User overrides** — tell Pepa mid-week if you deviate ("ordered pizza instead", "Branca made soup today") and she updates immediately
-- **Monday audit** — the weekly check-in includes a freezer review to resync any drift
+- **Exact quantities** — dry goods and freezer components (pasta, lentils, chickpeas, etc.): decremented automatically as planned meals pass. Optimistic: Pepa assumes the meal happened unless you report otherwise.
+- **Coarse quantities** — fresh produce from the vegetable basket: tracked by item count as confirmed when the basket arrives, decremented recipe by recipe.
+- **Presence / threshold** — household staples (dairy, canned goods, condiments): trigger a Continente restock when they drop below a defined level.
 
 The freezer is tracked per container: item, quantity, frozen date, expiry date, and finishing time. Expiry is flagged only when Pepa is about to plan a meal using that component.
+
+Pantry drift is corrected through delivery syncs and user-reported deviations — no manual pantry audit at Monday check-in (freezer only).
+
+### Grocery streams
+
+**Continente** (biweekly) handles dry goods, canned items, dairy, fresh fish, and fresh poultry. Pepa proposes an order when the list is large enough to justify the delivery fee, or when a staple is about to run out. Two days before proposing, she spot-checks yogurt, rice, and pasta — items consumed daily outside the meal plan.
+
+**Local** handles everything fresh: vegetables, fruit, root vegetables, eggs, herbs, and bread. Pepa only flags a local buy for fresh produce if the item is needed before the next basket delivery — to avoid accumulation and waste.
+
+Olive oil and honey are never purchased — they come from the family's countryside house.
 
 ---
 
@@ -153,4 +163,4 @@ The freezer is tracked per container: item, quantity, frozen date, expiry date, 
 - **No automated checkout** — Pepa fills the Continente basket but you complete the purchase yourself.
 - **Rotation window not yet calibrated** — the minimum rest period before a recipe repeats in the weekly plan is TBD; it will be set once the recipe library is large enough to measure against.
 - **No nutritional tracking** — meal plans don't include macro counts. A nutrition interface exists for Clément's cycling nutrition but requires manual updates.
-- **No proactive restocking monitoring** — Pepa alerts on low stock when you update inventory, but doesn't monitor in the background.
+- **No proactive restocking monitoring** — Pepa tracks thresholds within the planning cycle but does not run background checks between interactions.
