@@ -1,5 +1,18 @@
 {
   "sandbox": {
     "enabled": false
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/clem/.claude/hooks/compact-reminder.sh"
+          }
+        ]
+      }
+    ]
   }
 }
