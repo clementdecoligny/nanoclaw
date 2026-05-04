@@ -54,6 +54,13 @@ export const ABSOLUTE_CEILING_MS = 30 * 60 * 1000;
 // Stuck tolerance window applied per 'processing' claim — "did we see any
 // signs of life since this message was claimed?"
 export const CLAIM_STUCK_MS = 60 * 1000;
+// Grace window for a freshly-spawned container with no heartbeat yet. Claims
+// older than this window predate the current container and are orphaned leftovers
+// from a previous killed run. Skip them — the container's startup cleanup
+// (DELETE FROM processing_ack WHERE status='processing') will clear them once
+// it has a chance to run. Without this, the first sweep after spawn kills the
+// container before cleanup can execute, creating an unbreakable deadlock.
+export const ORPHAN_CLAIM_GRACE_MS = 2 * 60 * 1000;
 const MAX_TRIES = 5;
 const BACKOFF_BASE_MS = 5000;
 
@@ -99,6 +106,11 @@ export function decideStuckAction(args: {
     const claimAge = now - claimedAt;
     if (claimAge <= tolerance) continue;
     if (heartbeatMtimeMs > claimedAt) continue;
+    // No heartbeat + very old claim: this claim predates the current container
+    // spawn. It is an orphaned row from a previous killed run — the container's
+    // own startup cleanup will delete it. Firing claim-stuck here would kill the
+    // new container before that cleanup runs, creating a permanent deadlock.
+    if (heartbeatMtimeMs === 0 && claimAge > ORPHAN_CLAIM_GRACE_MS) continue;
     return { action: 'kill-claim', messageId: claim.message_id, claimAgeMs: claimAge, toleranceMs: tolerance };
   }
 

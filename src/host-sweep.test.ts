@@ -5,7 +5,7 @@
  */
 import { describe, expect, it } from 'vitest';
 
-import { ABSOLUTE_CEILING_MS, CLAIM_STUCK_MS, decideStuckAction } from './host-sweep.js';
+import { ABSOLUTE_CEILING_MS, CLAIM_STUCK_MS, ORPHAN_CLAIM_GRACE_MS, decideStuckAction } from './host-sweep.js';
 
 const BASE = Date.parse('2026-04-20T12:00:00.000Z');
 
@@ -53,11 +53,41 @@ describe('decideStuckAction', () => {
     expect(res.action).toBe('ok');
   });
 
-  it('kills on claim-stuck when heartbeat is absent AND a claim has aged past tolerance', () => {
+  it('kills on claim-stuck when heartbeat is absent AND a fresh claim has aged past tolerance', () => {
     // Hanging fresh container: spawned, picked up a message (claim recorded
-    // in processing_ack), but never wrote a heartbeat. Falls through the
-    // skipped ceiling check into claim-stuck — which correctly fires.
-    const claimedAgeMs = CLAIM_STUCK_MS + 5_000;
+    // in processing_ack), but never wrote a heartbeat. The claim is recent
+    // enough that it must have been made by THIS container — fires claim-stuck.
+    const claimedAgeMs = CLAIM_STUCK_MS + 5_000; // 65s — within orphan grace window
+    const res = decideStuckAction({
+      now: BASE,
+      heartbeatMtimeMs: 0,
+      containerState: null,
+      claims: [claim('msg-1', claimedAgeMs)],
+    });
+    expect(res.action).toBe('kill-claim');
+  });
+
+  it('skips orphaned claims from a previous killed run when a new container has no heartbeat', () => {
+    // Deadlock scenario: previous container was killed (e.g. absolute ceiling),
+    // leaving a stale processing_ack entry. A new container spawned but hasn't
+    // written a heartbeat yet. The claim is MUCH older than ORPHAN_CLAIM_GRACE_MS,
+    // so it can't have been made by this container — skip it so the new container
+    // has a chance to run its startup cleanup (DELETE FROM processing_ack).
+    const claimedAgeMs = ORPHAN_CLAIM_GRACE_MS + 30 * 60 * 1000; // grace + 30 min
+    const res = decideStuckAction({
+      now: BASE,
+      heartbeatMtimeMs: 0,
+      containerState: null,
+      claims: [claim('msg-orphan', claimedAgeMs)],
+    });
+    expect(res.action).toBe('ok');
+  });
+
+  it('still kills a claim within the orphan grace window even with no heartbeat', () => {
+    // The grace window only protects claims that are clearly from a previous run
+    // (older than ORPHAN_CLAIM_GRACE_MS). A claim within the grace window could
+    // be from this container and should still be caught if it exceeds CLAIM_STUCK_MS.
+    const claimedAgeMs = ORPHAN_CLAIM_GRACE_MS - 10_000; // just inside grace window
     const res = decideStuckAction({
       now: BASE,
       heartbeatMtimeMs: 0,
