@@ -68,6 +68,7 @@ Data is stored in the group directory, accessible inside the container at `/work
 
 ### Clément & Lola — Daily Cooking
 - **Cook every day** — lunch and dinner. Default. Branca's presence or absence has no bearing on this.
+- **Lola** : au bureau lundi et mercredi — ne déjeune pas à la maison ces jours-là. Planifier le déjeuner pour Clément seul ces jours.
 - **Do not fall back to the freezer** simply because Branca is not cooking. The freezer supplements emergencies — it does not replace daily fresh cooking.
 - **Prioritize fresh recipes** for Clément and Lola's slots.
 
@@ -78,8 +79,7 @@ Data is stored in the group directory, accessible inside the container at `/work
 - **Baby meals**: [TO FILL]
 
 ### Kids' Weekday Meals
-- **M lunch**: [TO FILL]
-- **G lunch**: [TO FILL]
+- **M, G et Inés** : à l'école/crèche du lundi au vendredi — jamais à la maison le midi en semaine. Ne pas planifier de déjeuner pour eux en semaine.
 
 ---
 
