@@ -258,7 +258,9 @@ export function createChatSdkBridge(config: ChatSdkBridgeConfig): ChannelAdapter
       // getMessagingGroupWithAgentCount (~1 DB read) for unwired channels,
       // so forwarding every one is cheap enough to not need a bridge-side
       // flood gate.
-      chat.onNewMessage(/./, async (thread, message) => {
+      // /[\s\S]*/ matches empty strings too, so media-only messages (photo/
+      // document with no caption → text="") are not silently dropped.
+      chat.onNewMessage(/[\s\S]*/, async (thread, message) => {
         const channelId = adapter.channelIdFromThreadId(thread.id);
         await setupConfig.onInbound(channelId, thread.id, await messageToInbound(message, false, true));
       });
