@@ -12,7 +12,7 @@ import type Database from 'better-sqlite3';
 import { getRunningSessions, getActiveSessions, createPendingQuestion } from './db/sessions.js';
 import { getAgentGroup } from './db/agent-groups.js';
 import { getDb, hasTable } from './db/connection.js';
-import { getMessagingGroupByPlatform } from './db/messaging-groups.js';
+import { getMessagingGroup, getMessagingGroupByPlatform, getPrimaryDeliveryChannel } from './db/messaging-groups.js';
 import {
   getDueOutboundMessages,
   getDeliveredIds,
@@ -254,6 +254,36 @@ async function deliverMessage(
   if (msg.kind === 'system') {
     await handleSystemAction(content, session, inDb);
     return;
+  }
+
+  // Heartbeat rerouting: messages from a heartbeat session carry
+  // channel_type='heartbeat' in their routing. Substitute the agent's primary
+  // real channel so the message reaches the user. Skips the permission check —
+  // heartbeat delivery is host-initiated and always trusted.
+  if (session.messaging_group_id) {
+    const originMg = getMessagingGroup(session.messaging_group_id);
+    if (originMg?.channel_type === 'heartbeat') {
+      const realMg = getPrimaryDeliveryChannel(session.agent_group_id);
+      if (!realMg) {
+        log.warn('Heartbeat session has no real channel — dropping message', {
+          sessionId: session.id,
+          msgId: msg.id,
+        });
+        return;
+      }
+      const files =
+        Array.isArray(content.files) && content.files.length > 0
+          ? readOutboxFiles(session.agent_group_id, session.id, msg.id, content.files as string[])
+          : undefined;
+      return await deliveryAdapter.deliver(
+        realMg.channel_type,
+        realMg.platform_id,
+        null,
+        msg.kind,
+        msg.content,
+        files,
+      );
+    }
   }
 
   // Agent-to-agent — route to target session via the agent-to-agent module.
