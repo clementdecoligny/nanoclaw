@@ -263,26 +263,24 @@ async function deliverMessage(
   if (session.messaging_group_id) {
     const originMg = getMessagingGroup(session.messaging_group_id);
     if (originMg?.channel_type === 'heartbeat') {
-      const realMg = getPrimaryDeliveryChannel(session.agent_group_id);
-      if (!realMg) {
-        log.warn('Heartbeat session has no real channel — dropping message', {
-          sessionId: session.id,
-          msgId: msg.id,
-        });
-        return;
+      // If the agent explicitly addressed a real channel, honour that destination
+      // and fall through to normal delivery. Only reroute when the message has no
+      // explicit destination (i.e. the agent replied to its heartbeat origin).
+      if (!msg.channel_type || msg.channel_type === 'heartbeat') {
+        const realMg = getPrimaryDeliveryChannel(session.agent_group_id);
+        if (!realMg) {
+          log.warn('Heartbeat session has no real channel — dropping message', {
+            sessionId: session.id,
+            msgId: msg.id,
+          });
+          return;
+        }
+        const files =
+          Array.isArray(content.files) && content.files.length > 0
+            ? readOutboxFiles(session.agent_group_id, session.id, msg.id, content.files as string[])
+            : undefined;
+        return await deliveryAdapter.deliver(realMg.channel_type, realMg.platform_id, null, msg.kind, msg.content, files);
       }
-      const files =
-        Array.isArray(content.files) && content.files.length > 0
-          ? readOutboxFiles(session.agent_group_id, session.id, msg.id, content.files as string[])
-          : undefined;
-      return await deliveryAdapter.deliver(
-        realMg.channel_type,
-        realMg.platform_id,
-        null,
-        msg.kind,
-        msg.content,
-        files,
-      );
     }
   }
 
