@@ -423,8 +423,13 @@ function dispatchResultText(text: string, routing: RoutingContext): void {
   // Single-destination shortcut: the agent wrote plain text — send to
   // the session's originating channel (from session_routing) if available,
   // otherwise fall back to the single destination.
+  //
+  // Heartbeat sessions are excluded: plain text from a heartbeat turn is
+  // treated as scratchpad. Only explicit <message to="..."> blocks are
+  // delivered during heartbeat turns — this enforces silent_if_nothing
+  // without relying on prompt instructions alone.
   if (sent === 0 && scratchpad) {
-    if (routing.channelType && routing.platformId) {
+    if (routing.channelType && routing.platformId && routing.channelType !== 'heartbeat') {
       // Reply to the channel/thread the message came from
       writeMessageOut({
         id: generateId(),
@@ -437,10 +442,12 @@ function dispatchResultText(text: string, routing: RoutingContext): void {
       });
       return;
     }
-    const all = getAllDestinations();
-    if (all.length === 1) {
-      sendToDestination(all[0], scratchpad, routing);
-      return;
+    if (routing.channelType !== 'heartbeat') {
+      const all = getAllDestinations();
+      if (all.length === 1) {
+        sendToDestination(all[0], scratchpad, routing);
+        return;
+      }
     }
   }
 
