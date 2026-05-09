@@ -11,14 +11,14 @@ store/
 data/
 logs/
 
-# Groups - per-installation state, not tracked
-groups/*
-
-# Composer-managed CLAUDE.md artifacts (regenerated every spawn) and
-# per-group memory (CLAUDE.local.md) must never be committed.
-**/CLAUDE.local.md
-**/.claude-shared.md
-**/.claude-fragments/
+# Groups - track knowledge/memory, exclude ephemeral runtime files
+groups/*/logs/
+groups/*/.claude-fragments/
+groups/*/.claude-shared.md
+groups/*/.heartbeat-bootstrapped
+groups/*/HEARTBEAT.md
+groups/*/attachments/
+*Zone.Identifier
 
 # Secrets
 *.keys.json

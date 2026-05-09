@@ -1,0 +1,23 @@
+{
+  "mcpServers": {},
+  "packages": {
+    "apt": [],
+    "npm": []
+  },
+  "additionalMounts": [
+    {
+      "hostPath": "groups/finance/finance",
+      "containerPath": "finance",
+      "readonly": true
+    },
+    {
+      "hostPath": "/home/clem/finance-data/bank-exports",
+      "containerPath": "bank-exports",
+      "readonly": false
+    }
+  ],
+  "skills": "all",
+  "groupName": "Edmond",
+  "assistantName": "Edmond",
+  "agentGroupId": "ag-1777719573240-ynm5lh"
+}

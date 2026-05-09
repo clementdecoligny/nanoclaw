@@ -1,0 +1,11 @@
+{
+  "employee": "Branca Manuel Gaspar",
+  "hourly_rate": 5.75,
+  "months": [
+    {"year": 2026, "month": 1, "hours": 75.0, "base_salary": 431.25},
+    {"year": 2026, "month": 2, "hours": 87.0, "base_salary": 500.25},
+    {"year": 2026, "month": 3, "hours": 91.95, "base_salary": 528.71},
+    {"year": 2026, "month": 4, "hours": 96.0, "base_salary": 552.00}
+  ],
+  "notes": "Subsídio de férias/natal = 1/12 da média de todos os meses desde o início. SS pago separadamente no site da SS (não incluído no MBWay)."
+}

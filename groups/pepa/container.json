@@ -1,0 +1,22 @@
+{
+  "mcpServers": {},
+  "packages": {
+    "apt": [],
+    "npm": []
+  },
+  "additionalMounts": [
+    {
+      "hostPath": "scripts/continente",
+      "containerPath": "continente",
+      "readonly": true
+    }
+  ],
+  "skills": "all",
+  "groupName": "Pepa",
+  "assistantName": "Pepa",
+  "agentGroupId": "ag-1777719573229-tnlcij",
+  "env": {
+    "CONTINENTE_EMAIL": "darocalola@gmail.com",
+    "CONTINENTE_PASSWORD": "Lolita77!"
+  }
+}

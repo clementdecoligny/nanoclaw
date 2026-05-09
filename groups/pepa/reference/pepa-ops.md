@@ -31,23 +31,44 @@ Assembly recipes use the `assembly` tag and list: component list with quantities
 
 ## Batch Planning — Detailed Format
 
-### Two-Stage Process
+### One-Shot Process (triggered by basket arrival)
 
-**Stage 1 — Monday preliminary plan:** Propose:
-- Which components to batch, with explicit rationale per component ("les lentilles serviront pour le déjeuner mardi et le dîner vendredi — deux assemblages différents, une seule cuisson de 45 min")
-- Quantities scaled to portions needed + reserve if applicable
-- Timed session sequence: "14h00 — mettre les pois chiches. 14h10 — préparer les légumes. 14h40 — enfourner les légumes. 15h00 — lentilles prêtes, portionner et refroidir..."
+No Monday preliminary batch plan. The batch plan is built once, from the basket, in one pass.
 
-**Stage 2 — Basket arrival refinement:** Update to maximize usage of actual basket contents. Surface what's expiring soonest.
+**Step 1 — Basket anchor**: list basket vegetables. For each, identify which recipes use it across ≥2 different meal slots. Discard vegetables that only fit one meal — those go to a side or a fresh add, not as batch anchors.
+
+**Step 2 — Meal map first**: commit to 8 named meal slots (4 days × lunch + dinner). Every slot is a named assembly (e.g. "Salade tiède lentilles + poulet effiloché + légumes rôtis"). This is the contract — batch session is derived from it.
+
+**Step 3 — Derive components**: from the 8 meal slots, extract shared components:
+- Which protein appears in ≥2 dinners? → batch that protein (poultry or fish — no red meat/pork at dinner)
+- Which legume appears in ≥2 lunches? → batch that legume
+- Which vegetable base or sauce appears in ≥2 slots? → batch that
+- Soup is always included
+
+**Step 4 — Scale quantities**: count portions per component across the meal map. Add 20% overflow for the freezer reserve. State quantities explicitly ("600g poulet cru → ~480g effiloché cuit → 3 dîners × 2 portions + 1 portion congél").
+
+**Step 5 — Session sequence**: order by cook time, longest first. State start times explicitly:
+> 16h00 — Pois chiches dans l'eau (trempage 1h si nécessaire) / mettre à cuire
+> 16h10 — Préparer le poulet, enfourner à 180°C
+> 16h30 — Lancer la soupe
+> 17h00 — Poulet sorti, effilocher
+> 17h15 — Légumes rôtis au four
+> 17h45 — Tout portionner et refroidir
+
+**Step 6 — Meal map format**: present as a table for confirmation:
+
+| Jour | Déjeuner | Dîner |
+|------|----------|-------|
+| Vendredi | Salade lentilles + poulet + feta | Poulet effiloché + riz + courgette rôtie |
+| Samedi | Pois chiches + légumes rôtis + tahini | Merlu + purée + salade |
+| ... | ... | ... |
 
 ### Coaching Role
 
 For each component in the plan:
-1. **Explain the why**: which meals it unlocks, what variety or effort saving it creates. Never just "make chickpeas" — say what they'll become.
-2. **Embed technique notes inline**:
-   - First time a technique appears: full explanation
-   - Repeat appearances: one-line reminder only ("Refroidir avant de congeler.")
-3. **Teach progressively**: one new batch technique per session.
+1. **Explicit meal traceability**: state exactly which slots it covers ("ce poulet → dîner ven + dîner sam + déj dim → 3 repas, une seule cuisson de 45 min")
+2. **Embed technique notes inline**: first appearance = full note; repeat = one-line reminder
+3. **Teach progressively**: one new batch technique per session
 
 ### New Recipe Proposals Flow
 
@@ -56,7 +77,21 @@ When basket arrives and a new batch-optimized recipe fits:
 2. Search a reliable source (ottolenghi.co.uk, theguardian.com/food, European/Mediterranean sources)
 3. **Save the full recipe to `/workspace/agent/recipes/` with complete metadata BEFORE proposing**
 4. Propose: name, why it's a great batch fit, which basket ingredients it uses, which meals it unlocks
-5. On confirmation, include in batch plan and week's meal plan
+5. On confirmation, include in batch plan and 4-day meal map
+
+### Component Inventory Format
+
+`/workspace/agent/plan/components.md` — updated immediately after each batch session, decremented at 6am each day as yesterday's meals pass:
+
+| Component | Quantity | Location | Cooked | Fridge deadline | Meals planned |
+|-----------|----------|----------|--------|-----------------|---------------|
+| Poulet effiloché | 480g | frigo | 2026-05-08 | 2026-05-12 | Dîner ven, Dîner sam, Déj dim |
+| Pois chiches cuits | 600g | frigo | 2026-05-08 | 2026-05-13 | Déj ven, Déj sam |
+| Soupe légumes | 8 portions | frigo | 2026-05-08 | 2026-05-12 | Tous les repas ven→lun |
+| Légumes rôtis | 400g | frigo | 2026-05-08 | 2026-05-12 | Dîner ven, Déj sam |
+| Poulet effiloché (overflow) | 160g | congél | 2026-05-08 | 2026-11-08 | Reserve |
+
+**Decrement rule**: at 6am, mark yesterday's consumed components as used. If a meal didn't happen (user reported deviation), do NOT decrement — carry forward.
 
 ### Freezer Tracking Format
 
@@ -199,10 +234,10 @@ Only for the one pre-planned session confirmed at Monday check-in. Never assign 
 ## Interaction Patterns — Detailed
 
 **Monday check-in reply received:**
-Extract basket day, batch day (Branca or Clément+Lola), freezer corrections, new recipe decision, batch plan decision. Build week skeleton. Update `current.md`. Confirm: "Compris — panier jeudi, batch mercredi avec Branca, recette nouvelle : [X]. Je t'envoie le plan du jour à 11h."
+Extract basket day, Branca day (or Clément+Lola batch day), weekly constraints. Confirm in one line: "Compris — panier jeudi, batch jeudi avec Branca. Je t'envoie le plan dès que le panier arrive."
 
 **Basket photo or contents list received:**
-Parse contents. Update pantry.md. Flag expiry priorities. Refine batch plan based on actual basket. If a new batch-optimized recipe fits, run search → save → propose flow. Send refined batch plan for confirmation. Update plan for rest of week.
+Run the full one-shot planning flow (see Batch Planning section). Send one message: basket acknowledgment + 4-day meal map table + batch session plan with component traceability + confirmation request. On confirmation: write `plan/current.md`, write `plan/components.md` template (quantities to be filled after batch session), generate Branca's delegation card.
 
 **Deviation from plan reported:**
 ("on a commandé une pizza", "pas cuisiné ce soir", "Branca a fait la soupe")
