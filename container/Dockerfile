@@ -118,8 +118,11 @@ RUN --mount=type=cache,target=/root/.cache/pnpm \
 RUN --mount=type=cache,target=/root/.cache/pnpm \
     pnpm install -g "agent-browser@${AGENT_BROWSER_VERSION}"
 
-RUN --mount=type=cache,target=/root/.cache/pnpm \
-    pnpm install -g "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}"
+# Install claude-code via npm (not pnpm) — pnpm v11 hard-links store files
+# making them immutable, so the claude-code postinstall can't replace the
+# placeholder with the native binary. npm copies files, so the write succeeds.
+# Binary lands at /usr/local/bin/claude (npm's global prefix).
+RUN npm install -g "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}"
 
 # ---- Entrypoint --------------------------------------------------------------
 COPY entrypoint.sh /app/entrypoint.sh
