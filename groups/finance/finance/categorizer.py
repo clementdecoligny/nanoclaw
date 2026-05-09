@@ -241,13 +241,16 @@ def main():
         for r in claude_results:
             idx = r["index"]
             if 0 <= idx < len(transactions):
+                conf = r.get("confidence", "medium")  # high | medium | low
                 transactions[idx]["category"] = r.get("category", "UNCLASSIFIED")
                 transactions[idx]["sub_category"] = r.get("sub_category", "")
-                transactions[idx]["confidence"] = "claude"
-                new_learned[transactions[idx]["description"]] = {
-                    "category": transactions[idx]["category"],
-                    "sub_category": transactions[idx]["sub_category"],
-                }
+                transactions[idx]["confidence"] = conf
+                # Only persist high-confidence classifications to the lookup
+                if conf == "high" and transactions[idx]["category"] != "UNCLASSIFIED":
+                    new_learned[transactions[idx]["description"]] = {
+                        "category": transactions[idx]["category"],
+                        "sub_category": transactions[idx]["sub_category"],
+                    }
         if new_learned:
             save_learned(args.history, new_learned)
         unknown_indices = [i for i in unknown_indices if transactions[i].get("confidence") != "claude"]

@@ -15,8 +15,9 @@ from openpyxl.styles import Font, PatternFill, Alignment
 
 HEADER_FILL = PatternFill(start_color="1F4E79", end_color="1F4E79", fill_type="solid")
 HEADER_FONT = Font(color="FFFFFF", bold=True)
-CAT_FILL = PatternFill(start_color="D9E1F2", end_color="D9E1F2", fill_type="solid")
-UNCLASSIFIED_FILL = PatternFill(start_color="FFE0CC", end_color="FFE0CC", fill_type="solid")
+CAT_FILL = PatternFill(start_color="D9E1F2", end_color="D9E1F2", fill_type="solid")      # exact/high — blue tint
+MEDIUM_FILL = PatternFill(start_color="FFF2CC", end_color="FFF2CC", fill_type="solid")    # medium confidence — yellow
+UNCLASSIFIED_FILL = PatternFill(start_color="FFE0CC", end_color="FFE0CC", fill_type="solid")  # low/UNCLASSIFIED — orange
 
 # Matches historical file format exactly
 HEADERS = ["Date", "Description", "Valor", "CATEGORY", "SUB-CATEGORY"]
@@ -53,9 +54,15 @@ def write_xlsx(transactions, output_path):
         ])
 
         row_idx = ws.max_row
-        if t.get("category", "UNCLASSIFIED") in ("UNCLASSIFIED", ""):
+        cat = t.get("category", "UNCLASSIFIED")
+        conf = t.get("confidence", "")
+        if cat in ("UNCLASSIFIED", "") or conf in ("forced", "low"):
+            fill = UNCLASSIFIED_FILL
             for col_idx in range(1, len(HEADERS) + 1):
-                ws.cell(row=row_idx, column=col_idx).fill = UNCLASSIFIED_FILL
+                ws.cell(row=row_idx, column=col_idx).fill = fill
+        elif conf == "medium":
+            for col_idx in range(1, len(HEADERS) + 1):
+                ws.cell(row=row_idx, column=col_idx).fill = MEDIUM_FILL
         else:
             for col_idx in cat_col_indices:
                 ws.cell(row=row_idx, column=col_idx).fill = CAT_FILL

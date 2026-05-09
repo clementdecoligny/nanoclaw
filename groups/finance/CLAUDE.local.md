@@ -125,18 +125,27 @@ Wait for Clément's answer. Apply it, persist to `learned_categories.json`, then
 
 If `unknown_count > 0`, use `claude_prompt` to classify each unknown row yourself.
 
+**For each row, assign a category AND a confidence level:**
+
+| Confidence | When to use |
+|-----------|-------------|
+| `high` | Named merchant or service you can clearly identify (e.g. "CONTINENTE", "UBER EATS", "EDP COMERCIAL") |
+| `medium` | Interpretable but not obvious — you can make a reasonable guess but the description is ambiguous (e.g. "PAGAMENTO SERVICOS", "TRANSFERENCIA A. SILVA") |
+| `low` → use `UNCLASSIFIED` | Opaque reference codes, payment IDs, generic strings with no meaning (e.g. "REF 123456789", "MB WAY 9351", "PAGAMENTO MB") |
+
 **Classification rules:**
 - Use the taxonomy below
 - Credits (positive `amount`) that don't fit a spending category → `INCOME`
 - Transfers between own accounts, MB WAY received, salary deposits → `INCOME`
-- Genuinely ambiguous → `UNCLASSIFIED`, flag in chat
-- Inter-account transfers → `UNCLASSIFIED`, flag in chat
+- Low-confidence / opaque → `UNCLASSIFIED` (do NOT guess)
+- Inter-account transfers → `UNCLASSIFIED`, flag in summary
 
 Write classifications to `/tmp/personal-claude.json`:
 ```json
 [
-  {"index": 3, "category": "GROCERIES", "sub_category": "SUPER"},
-  {"index": 7, "category": "INCOME", "sub_category": "OTHER"}
+  {"index": 3, "category": "GROCERIES", "sub_category": "SUPER", "confidence": "high"},
+  {"index": 5, "category": "HOUSE", "sub_category": "MISC", "confidence": "medium"},
+  {"index": 7, "category": "UNCLASSIFIED", "sub_category": "", "confidence": "low"}
 ]
 ```
 
@@ -173,13 +182,25 @@ mcp__nanoclaw__send_document(file_path="...", caption="Compte personnel — avri
 mcp__nanoclaw__send_document(file_path="...", caption="Compte commun — avril 2026")
 ```
 
-Then send a summary:
+Then send a confidence summary — compute the counts from both files combined:
 ```
 *Catégorisation terminée — avril 2026*
-• Compte personnel : X transactions (Y exactes, Z par IA)
-• Compte commun : X transactions (Y exactes, Z par IA)
+
+• ✅ Exactes (historique) : X transactions
+• 🟡 Incertaines (à vérifier) : Y transactions
+• 🟠 Non classifiées : Z transactions
+
+_Les lignes jaunes sont des estimations raisonnables mais à confirmer.
+Les lignes oranges n'ont pas pu être classifiées — à corriger avant d'enregistrer._
 
 Tu peux corriger des erreurs avant de confirmer. Réponds *ok* pour enregistrer.
+```
+
+If there are medium-confidence rows, list them explicitly after the summary:
+```
+*Lignes incertaines — compte personnel :*
+• 12 avril — PAGAMENTO SERVICOS — €45,00 → HOUSE/MISC _(incertain)_
+• 18 avril — TRANSFERENCIA A SILVA — €200,00 → INCOME/OTHER _(incertain)_
 ```
 
 ### Step 7 — Handle corrections before confirmation
