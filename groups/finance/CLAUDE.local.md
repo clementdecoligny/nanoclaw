@@ -44,9 +44,9 @@ Use `mcp__nanoclaw__send_document` to send files (receipts, exports, reports) di
 
 The finance scripts are at `/workspace/extra/finance/`. Available Python scripts:
 - `salary.py` — Branca salary breakdown
-- `excel_parser.py` — parse ActivoBank Excel files
-- `categorizer.py` — auto-categorize transactions
-- `aggregator.py` — monthly totals and trend data
+- `excel_parser.py` — parse ActivoBank Excel files into JSON
+- `categorizer.py` — hybrid exact-match + Claude categorization
+- `excel_writer.py` — write categorized JSON back to .xlsx
 
 Python interpreter: `/opt/wpenv/bin/python3`
 
@@ -54,62 +54,139 @@ Python interpreter: `/opt/wpenv/bin/python3`
 
 ## Workload 1: Monthly Expense Tracking
 
+### Monthly Schedule
+
+On the 1st of each month, send this message to prompt the user:
+> "Nouveau mois qui commence ! Pense à m'envoyer les deux relevés d'ActivoBank (compte perso et compte commun) afin que je puisse classer les dépenses du [mois précédent]."
+
+Schedule this as a recurring task (day 1 of each month) using `mcp__nanoclaw__schedule_message` on your first run if not already set up.
+
 ### Receiving Bank Exports
 
-The user will upload an ActivoBank Excel file (or drop it in `/workspace/extra/bank-exports/`). There are two accounts:
+The user will upload two ActivoBank Excel files — one for each account. Columns: `Data Lanç. | Data Valor | Descrição | Valor | Saldo`.
+
 - **Personal account** — Clément's individual account
 - **Joint account** — shared family account
 
-When you receive a file, determine which account it is from (ask if unclear), then parse it:
+If you can't determine which is which from the filename, ask.
 
+**Step 1 — Parse both files:**
 ```bash
 /opt/wpenv/bin/python3 /workspace/extra/finance/excel_parser.py \
-  <file_path> --account personal --json > /tmp/transactions.json
+  <personal_file> --account personal --output /tmp/personal.json
+
+/opt/wpenv/bin/python3 /workspace/extra/finance/excel_parser.py \
+  <joint_file> --account joint --output /tmp/joint.json
 ```
 
-### Auto-Categorization
+**Step 2 — Categorize (exact-match pass):**
 
-After parsing, categorize each transaction:
+Historical data is at `/workspace/extra/historical/` (18+ months of labeled .xlsx files).
 
 ```bash
 /opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
-  /tmp/transactions.json \
-  --history /workspace/agent/finance/historical/ \
-  --output /workspace/agent/finance/current-month.json
+  /tmp/personal.json \
+  --history /workspace/extra/historical/ \
+  --output /tmp/personal-cat.json
+
+/opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
+  /tmp/joint.json \
+  --history /workspace/extra/historical/ \
+  --output /tmp/joint-cat.json
 ```
 
-For transactions the categorizer flags as uncertain (confidence < 90%), ask the user:
-> "É 'LOJA XYZ €47,30' → Supermercado ou Casa?"
+The categorizer outputs a JSON object with:
+- `transactions` — all rows with `category`, `sub_category`, `confidence` fields
+- `exact_count` — rows matched from history (no Claude needed)
+- `unknown_count` — rows that need Claude classification
+- `claude_prompt` — taxonomy + few-shot examples + rows to classify (only if unknown_count > 0)
+- `unknown_indices` — list of transaction indices needing classification
 
-Save confirmed categorizations back so the model improves over time.
+**Step 3 — Classify unknowns with Claude (if any):**
 
-### Monthly Summary
+If `unknown_count > 0`, read `claude_prompt` from the categorizer output. Use it to classify the unknown rows yourself. The `claude_prompt` contains:
+- `taxonomy` — the full category/sub-category tree
+- `examples` — sample historical categorizations for context
+- `rows` — list of `{index, description, amount}` to classify
 
-After categorization, produce a summary:
+For each row, assign the best-fit `category` and `sub_category` from the taxonomy. If genuinely ambiguous, use `UNCLASSIFIED`.
 
+Write your classifications to `/tmp/personal-claude.json` (or joint) as:
+```json
+[
+  {"index": 3, "category": "GROCERIES", "sub_category": "SUPER"},
+  {"index": 7, "category": "UNCLASSIFIED", "sub_category": ""}
+]
+```
+
+Then apply them back and persist to the lookup:
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/aggregator.py \
-  /workspace/agent/finance/current-month.json \
-  --compare-history /workspace/agent/finance/historical/ \
-  --output /workspace/agent/finance/summary-YYYY-MM.json
+/opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
+  /tmp/personal.json \
+  --history /workspace/extra/historical/ \
+  --output /tmp/personal-cat.json \
+  --apply-claude /tmp/personal-claude.json
 ```
 
-Send the user a formatted summary with:
-- Total expenses by category (personal vs. joint)
-- Top 5 largest single expenses
-- Month-over-month change per category
-- Any anomalies (categories significantly above rolling average)
+**Step 4 — Write categorized Excel files:**
+```bash
+/opt/wpenv/bin/python3 /workspace/extra/finance/excel_writer.py \
+  /tmp/personal-cat.json \
+  --account personal \
+  --output /tmp/personal-categorized.xlsx
 
-### Storage
+/opt/wpenv/bin/python3 /workspace/extra/finance/excel_writer.py \
+  /tmp/joint-cat.json \
+  --account joint \
+  --output /tmp/joint-categorized.xlsx
+```
 
-Save processed data to:
-- `/workspace/agent/finance/historical/YYYY-MM-personal.json` — personal account
-- `/workspace/agent/finance/historical/YYYY-MM-joint.json` — joint account
-- `/workspace/agent/finance/summary-YYYY-MM.json` — monthly summary
+**Step 5 — Send files back:**
+```
+mcp__nanoclaw__send_document(file_path="/tmp/personal-categorized.xlsx", caption="Conta pessoal — categorizada")
+mcp__nanoclaw__send_document(file_path="/tmp/joint-categorized.xlsx", caption="Conta conjunta — categorizada")
+```
+
+Then send a brief summary message:
+```
+*Categorization terminee*
+• Conte perso: X transactions (Y exactes, Z classifiees par Claude)
+• Conte commun: X transactions (Y exactes, Z classifiees par Claude)
+```
+
+### Category / Sub-category Taxonomy
+
+```
+BABYSITTING → BABYSITTING
+EAT OUT → BACKERY | PADARIA | QUIOSQUE | RESTAURANT | UBER EATS
+EDUCATION → ESCOLA
+EMPREGADA → EMPREGADA | SEGURANCA SOCIAL
+GROCERIES → SUPER | SUPER ONLINE
+HEALTH → COUCHES | HOSPITAL | MEDIS | MEDIS REIMBURSMENT | PHARMACY
+HOLIDAY → ALPS JULY 2026 | HOTELS | MISC | TRANSPORT
+HOUSE → DONA AJUDA | EDP | EPAL AGUA | FURNITURE | MISC | NOS | NOS INTERNET | SPOTIFY
+KIDS → BABYSITTING | LEISURE | MISC | PISCINA | ROPA | ROPA VINTED
+MOBILITY → BOLT | COOLTRA | PUBLIC TRANSPORT | TRANSPORT | UBER
+RENT → RENT
+VOITURE → ESSENCE | MECHANIC | VIA VERDE
+CASH → CASH
+LEISURE → (infer sub-category)
+FURNITURE → FURNITURE
+GIFT → GIFT
+MISC → MISC
+UNCLASSIFIED → UNCLASSIFIED
+```
 
 ---
 
 ## Workload 2: Branca Salary Management
+
+### Monthly Schedule
+
+On the day before last day of each month, send this message to prompt the user:
+> "Demain c'est le dernier jour du mois, c'est l'heure de payer Branca. Sais-tu combien d'heure elle a fait au total ce mois-ci ?"
+
+Schedule this as a recurring task (day before last day of each month) using `mcp__nanoclaw__schedule_message` on your first run if not already set up.
 
 ### Employer and Employee
 
@@ -244,8 +321,8 @@ Pontuação: ★★★★☆ — preço abaixo da média, bom yield, zona de alt
 Store persistent data in:
 - `/workspace/agent/finance/` — processed financial data, summaries
 - `/workspace/agent/conversations/` — conversation history
-- `/workspace/agent/finance/categories.json` — learned categorization patterns
 - `/workspace/agent/finance/goals.md` — financial goals and assumptions
+- `/workspace/extra/historical/learned_categories.json` — auto-updated by categorizer when Claude classifies new merchants
 
 When you learn something new (income, savings target, property preferences), update `goals.md`.
 

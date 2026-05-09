@@ -20,20 +20,21 @@ Message **DantesLisboaBot** on Telegram.
 
 ### Monthly expense tracking
 
-**Trigger:** Drop an ActivoBank Excel export into the chat (personal account or joint account).
+**Trigger:** On the 1st of each month, Edmond sends a reminder asking for the two ActivoBank exports (personal account + joint account). You upload both Excel files.
 
 **What happens:**
-1. Edmond parses the export, identifies which account it's from, and auto-categorizes every transaction using learned patterns from previous months
-2. For transactions with low confidence (under 90%), Edmond asks you to confirm the category: "LOJA XYZ €47.30 — Supermarket or Home?"
-3. After categorization, Edmond produces a monthly summary
+1. Edmond parses both exports and runs exact-match categorization against 18+ months of labeled historical data — known merchants are categorized instantly with no Claude call
+2. For new or unknown merchants, Edmond classifies them directly using the full category/sub-category taxonomy and the historical examples as context
+3. New classifications are saved back to the lookup so they become exact matches next month
 
 **What you get back:**
-- Total expenses by category (personal vs. joint)
-- Top 5 largest single expenses
-- Month-over-month change per category
-- Anomalies: categories significantly above their rolling average
+- Two Excel files — one per account — with `CATEGORY` and `SUB-CATEGORY` columns added for every transaction row
+- Unclassified rows are highlighted in the file for easy review
+- A brief summary: how many transactions were exact matches vs. newly classified
 
-**Storage:** Processed data and summaries are saved to Edmond's workspace for historical comparison.
+**Categories:** BABYSITTING · EAT OUT · EDUCATION · EMPREGADA · GROCERIES · HEALTH · HOLIDAY · HOUSE · KIDS · LEISURE · MOBILITY · RENT · VOITURE · CASH · FURNITURE · GIFT · MISC · UNCLASSIFIED
+
+**Storage:** Learned classifications are persisted to the historical lookup, improving accuracy month over month.
 
 ---
 
@@ -79,7 +80,8 @@ Scenario comparisons across investment vehicles (pension funds, ETFs, government
 
 ## Current limitations
 
-- **No automated bank export import** — you drop the file into the chat manually each month.
+- **Manual file upload** — Edmond asks for the files on the 1st of each month, but you still upload them manually via Telegram.
+- **No analytics yet** — categorized data is returned as Excel files; monthly summaries and trend analysis are a planned follow-on feature.
 - **Investment analysis deferred** — requires at least 3 months of tracked expense data to calculate a reliable savings rate.
 - **Social security payments not automated** — Edmond calculates the amounts and shows them on the receipt, but you pay them directly on the social security website.
 - **No real estate monitoring** — listing alert scanning is a planned future phase, not yet implemented.

@@ -14,6 +14,11 @@
       "hostPath": "/home/clem/finance-data/bank-exports",
       "containerPath": "bank-exports",
       "readonly": false
+    },
+    {
+      "hostPath": "/home/clem/finance-data/historical",
+      "containerPath": "historical",
+      "readonly": false
     }
   ],
   "skills": "all",
