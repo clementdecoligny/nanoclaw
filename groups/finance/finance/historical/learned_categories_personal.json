@@ -1,0 +1,90 @@
+{
+  "COMPRA 3883 Ibis Styles Rastatt Ba  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 3883 AEROPUERTO SEVILLA SEVI CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 3883 Ratsstuebl Rastatt DE   CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF P/ MARIA DOLORES DAROCA GUERRERO": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "COMPRA 3883 PARK INN FRANKFURT AIRP CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "JUROS DEPOSITO A PRAZO": {
+    "category": "INCOME",
+    "sub_category": "OTHER"
+  },
+  "IMPOSTO IRS/IRC DEPOSITO PRAZO       3446885107": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 3883 SSP S.A. - AEROPUERTO D CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "STRIPE": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL": {
+    "category": "LEISURE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 3883 NUCLEO MUSEOLOGICO POVO CONTACTLESS": {
+    "category": "LEISURE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 3883 LUFTHANSA RETAIL INMOT  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "TRF. P/O  DTB TECH   DATA HUB, UNIPES Expense N": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "TRF. P/O  DTB TECH   DATA HUB, UNIPES Expense n": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 3883 CP CP": {
+    "category": "MOBILITY",
+    "sub_category": "PUBLIC TRANSPORT"
+  },
+  "COMPRA 3883 APPLE.COM BILL ITUNES.COM IE": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "MEDIS-PAG SERVICOS 26111B1008075908": {
+    "category": "HEALTH",
+    "sub_category": "MEDIS REIMBURSMENT"
+  },
+  "COMPRA 3883 CP COMBOIOS DE PORTU LI CONTACTLESS": {
+    "category": "MOBILITY",
+    "sub_category": "PUBLIC TRANSPORT"
+  },
+  "COMPRA 3883 RODIZIO DE PIZZAS TLF 2 CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 PEDROGOPAO LDA PRAIA DO CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "TRANSFERENCIA - VENCIMENTO": {
+    "category": "INCOME",
+    "sub_category": "SALARY"
+  },
+  "MR OU MME ROUAULT COLIGNY MICHEL": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  }
+}

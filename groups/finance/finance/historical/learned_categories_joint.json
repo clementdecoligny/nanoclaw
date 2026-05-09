@@ -1,0 +1,334 @@
+{
+  "TRF MB WAY P/ BRANCA MANUEL GASPAR": {
+    "category": "EMPREGADA",
+    "sub_category": "EMPREGADA"
+  },
+  "TRF DE MARIA DOLORES DAROCA GUERRERO": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "TRF DE Abril": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "PAG BXVAL- 8551 VIAVERDE": {
+    "category": "VOITURE",
+    "sub_category": "VIA VERDE"
+  },
+  "DD EPAL           84000361013    PT37100921": {
+    "category": "HOUSE",
+    "sub_category": "EPAL AGUA"
+  },
+  "DD EDP COMERCIAL- 16010010706561 PT34100781": {
+    "category": "HOUSE",
+    "sub_category": "EDP"
+  },
+  "TRF P/ Ana Filomena Macedo": {
+    "category": "RENT",
+    "sub_category": "RENT"
+  },
+  "COMPRA 8778 WWW.CONTINENTE.PT SENHORA DA HORA": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER ONLINE"
+  },
+  "TRF DE Error comun Claude AI": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "COMPRA 8551 PETROPRIX MORON MORON D CONTACTLESS": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8778 HOTEL LAS BOVEDAS BADAJ CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 8778 EST SERVICO PETROLEOS EXTREMADURA B": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8551 REFUGE DU PRESSET CHAMBERY": {
+    "category": "HOLIDAY",
+    "sub_category": "MISC"
+  },
+  "CRED. 8778 Vinted Vilnius LT": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "TRF MB WAY P/ MAFALDA VILARINHO G VALADAS ROXO": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "COMPRA 8551 CONTINENTE BOM DIA LISB CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 BOL QUEIJAS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8778 COOLTRA BARCELONA ES": {
+    "category": "MOBILITY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 8778 BOLT.EUO2604082222 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 COOLTRA BARCELONA ES": {
+    "category": "MOBILITY",
+    "sub_category": "TRANSPORT"
+  },
+  "TRF DE Cuna octagonal - leti": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "COMPRA 8778 ARENA ATLANTICO LISBOA  CONTACTLESS": {
+    "category": "LEISURE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 SEGURANCA SOCIAL 1049-002 LISBOA": {
+    "category": "EMPREGADA",
+    "sub_category": "SEGURANCA SOCIAL"
+  },
+  "LEV ATM 8551 BKINT LISBOA        Leitaria Holan": {
+    "category": "CASH",
+    "sub_category": "CASH"
+  },
+  "CRED. 8551 WWW.TICKET TICKETSWAP AMSTERDAM NL": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "QUIOSQUE"
+  },
+  "COMPRA 8551 BOLT.EUO2604101956 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 BOLT.EUO2604102234 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 WWW.PHARMEESTORE.COMVILA DO CONDE": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8778 CTT - CORREIOS LISBOA": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 FAMILIAMART LISBOA PT   CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 ARCE BOUTIQUE DOCE LISB CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 8778 CONTINENTE LISBOA       CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "TRF MB WAY P/ MARIA LUCIA VELASCO ARBOLI": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "COMPRA 8778 MD CLINICA LISBOA PT    CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "TRF MB WAY P/ RITA PENHA DE MATOS ORTIZ DE MONT": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "DD NOS Comunicaco 05953608588    PT20100839": {
+    "category": "HOUSE",
+    "sub_category": "NOS INTERNET"
+  },
+  "TRF. P/O  REEMBOLSOS   IRS            AT - REEM": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8778 Vinted Vilnius LT": {
+    "category": "KIDS",
+    "sub_category": "ROPA VINTED"
+  },
+  "COMPRA 8778 BERTRAND CAFE CHIADO LI CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 BOLT.EUO2604182159 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 MUSA PRAIA COLARES PT   CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "QUIOSQUE"
+  },
+  "COMPRA 8778 Spotify P41965D230 Stockholm SE": {
+    "category": "HOUSE",
+    "sub_category": "SPOTIFY"
+  },
+  "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 WELLS SAUDE CHIADO LISB CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 MERCEARIA D ASSAFORA CO CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 CONT BOM DIA COLARES SI CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 CASA DA GALE COLARES PT CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 MUSA PRAIA COLARES PT   CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 ATL?TICO CLUBE DE PORTU CONTACTLESS": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 UBR PENDING.UBER.COM AMSTERDAM NL": {
+    "category": "MOBILITY",
+    "sub_category": "UBER"
+  },
+  "COMPRA 8778 NANNARELLA LISBOA PT    CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF DE CLEMENT YVES MICHEL ROUAULT COLIGNY": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "COMPRA 8551 FARM JARDIM REAL LISBOA CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "TRF MB WAY P/ INES DE SOUSA FERREIRA JORGE": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "PAGSERV LUSIADAS S.A.          54393/945549451": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 MENIMERCADO YETI LISBOA CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8778 AL HORNO COLARES PT     CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 BOLT.EUO2604242208 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 R. S AVENTUREIRAS TORNA CONTACTLESS": {
+    "category": "KIDS",
+    "sub_category": "LEISURE"
+  },
+  "COMPRA 8551 TREEGO SOURDOUGH LDA 80 CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 8551 MA SARAIVA CARVALHO LIS CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 MINIMERCADO INTERNET LI CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 AMA PIZZERIA. PRAIA DAS CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 MAISON DORON BEAUFORT": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 8551 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "CUSTO DE SERVICO INTERNACIONAL": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "IMPOSTO DO SELO": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 MINIPRECO LISBOA PT     CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 RAFA MINIMER FRUT LISBO CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 BOLT.EU O 2604290830 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 EST SERVICO DST BADAJOZ-CAYA BADAJO": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8551 EST SERVICO BALLENOIL BARBATE II -": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "dd cnn": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "dd cnn 00001297344": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "dd cnn 00001297247": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "dd cnn 00001396672": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "DD CNN            00001297344    PT40102031": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "DD CNN            00001297247    PT40102031": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "DD CNN            00001396672    PT40102031": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  }
+}

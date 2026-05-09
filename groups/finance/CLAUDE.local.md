@@ -42,7 +42,7 @@ Use `mcp__nanoclaw__send_document` to send files (receipts, exports, reports) di
 
 **Never compute numbers directly.** For any calculation — salary, totals, aggregations, projections — run the appropriate Python script and read back the result.
 
-The finance scripts are at `/workspace/extra/finance/`. Available Python scripts:
+The finance scripts are at `/workspace/agent/finance/`. Available Python scripts:
 - `salary.py` — Branca salary breakdown
 - `excel_parser.py` — parse ActivoBank Excel files into JSON
 - `categorizer.py` — hybrid exact-match + Claude categorization
@@ -83,10 +83,10 @@ The user uploads two ActivoBank `.xlsx` files. Columns: `Data Lanç. | Data Valo
 ### Step 1 — Parse
 
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/excel_parser.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/excel_parser.py \
   <file_path> --output /tmp/personal.json
 
-/opt/wpenv/bin/python3 /workspace/extra/finance/excel_parser.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/excel_parser.py \
   <file_path> --output /tmp/joint.json
 ```
 
@@ -94,10 +94,10 @@ The parser auto-detects the account from the account number. The output JSON con
 
 ### Step 2 — Categorize
 
-Historical data is at `/workspace/extra/historical/`. Derive `--year` and `--month` from the `Data Valor` range in the parsed output (the month that appears most frequently).
+Historical xlsx reference files are at `/workspace/extra/historical/` (taxonomy only). Learned patterns accumulate in `/workspace/agent/finance/historical/learned_categories_personal.json` and `learned_categories_joint.json`. Derive `--year` and `--month` from the `Data Valor` range in the parsed output (the month that appears most frequently).
 
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/categorizer.py \
   /tmp/personal.json \
   --history /workspace/extra/historical/ \
   --year YYYY --month MM \
@@ -151,7 +151,7 @@ Write classifications to `/tmp/personal-claude.json`:
 
 Apply and persist:
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/categorizer.py \
   /tmp/personal.json \
   --history /workspace/extra/historical/ \
   --year YYYY --month MM \
@@ -164,11 +164,11 @@ Apply and persist:
 Output filenames: `YYYY-MM-personnel-categorise.xlsx` / `YYYY-MM-commun-categorise.xlsx`
 
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/excel_writer.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/excel_writer.py \
   /tmp/personal-cat.json \
   --output /tmp/2026-05-personnel-categorise.xlsx
 
-/opt/wpenv/bin/python3 /workspace/extra/finance/excel_writer.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/excel_writer.py \
   /tmp/joint-cat.json \
   --output /tmp/2026-05-commun-categorise.xlsx
 ```
@@ -219,6 +219,8 @@ After confirmation, save the categorized files to `/workspace/extra/historical/`
 cp /tmp/2026-05-personnel-categorise.xlsx /workspace/extra/historical/2026-05-personnel.xlsx
 cp /tmp/2026-05-commun-categorise.xlsx /workspace/extra/historical/2026-05-commun.xlsx
 ```
+
+Also save the processed JSON transactions to `/workspace/agent/finance/historical/YYYY-MM-personal.json` and `YYYY-MM-joint.json`.
 
 This makes this month's data available as training data for next month's exact-match lookup.
 
@@ -279,14 +281,14 @@ When the user provides the hours worked this month (or when triggered by the mon
 3. Run salary.py with the hours and the list of prior months' base salaries:
 
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/salary.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/salary.py \
   <hours_worked> --year YYYY --month MM \
   --history <base_jan>,<base_feb>,...
 ```
 
 Example (April 2026, with January/February/March history):
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/salary.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/salary.py \
   96 --year 2026 --month 4 \
   --history 431.25,500.25,528.71 --json
 ```
@@ -319,7 +321,7 @@ If no history files exist (first month), omit `--history`.
 After calculating, generate a PDF receipt passing the same history:
 
 ```bash
-/opt/wpenv/bin/python3 /workspace/extra/finance/receipt.py \
+/opt/wpenv/bin/python3 /workspace/agent/finance/receipt.py \
   <hours_worked> --year YYYY --month MM \
   --history <base_jan>,<base_feb>,... \
   --output /workspace/agent/salary/YYYY-MM-recibo.pdf
@@ -391,7 +393,8 @@ Store persistent data in:
 - `/workspace/agent/finance/` — processed financial data, summaries
 - `/workspace/agent/conversations/` — conversation history
 - `/workspace/agent/finance/goals.md` — financial goals and assumptions
-- `/workspace/extra/historical/learned_categories.json` — auto-updated by categorizer when Claude classifies new merchants
+- `/workspace/agent/finance/historical/learned_categories_personal.json` — learned personal account merchant patterns
+- `/workspace/agent/finance/historical/learned_categories_joint.json` — learned joint account merchant patterns
 
 When you learn something new (income, savings target, property preferences), update `goals.md`.
 

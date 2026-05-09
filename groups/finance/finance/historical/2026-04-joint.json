@@ -1,0 +1,2297 @@
+{
+  "transactions": [
+    {
+      "value_date": "2026-04-01",
+      "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+      "amount": -649.84,
+      "balance": 70.93,
+      "account": "joint",
+      "category": "EMPREGADA",
+      "sub_category": "EMPREGADA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "DD CNN            00001297344    PT40102031",
+      "amount": -27.0,
+      "balance": 43.93,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "DD CNN            00001297247    PT40102031",
+      "amount": -28.8,
+      "balance": 15.13,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "TRF DE MARIA DOLORES DAROCA GUERRERO",
+      "amount": 1000.0,
+      "balance": 1015.13,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -240.0,
+      "balance": 775.13,
+      "account": "joint",
+      "category": "UNCLASSIFIED",
+      "sub_category": "UNCLASSIFIED",
+      "confidence": "unclassified"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "TRF DE Abril",
+      "amount": 1840.0,
+      "balance": 2615.13,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "TRF MB WAY P/ CAROLINA CAMPELO DIAS AMARAL",
+      "amount": -10.0,
+      "balance": 2605.13,
+      "account": "joint",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "DD CNN            00001396672    PT40102031",
+      "amount": -38.0,
+      "balance": 2567.13,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -9.35,
+      "balance": 2557.78,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-02",
+      "description": "DD EPAL           84000361013    PT37100921",
+      "amount": -22.07,
+      "balance": 2535.71,
+      "account": "joint",
+      "category": "HOUSE",
+      "sub_category": "EPAL AGUA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-02",
+      "description": "DD EDP COMERCIAL- 16010010706561 PT34100781",
+      "amount": -211.2,
+      "balance": 2324.51,
+      "account": "joint",
+      "category": "HOUSE",
+      "sub_category": "EDP",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-03",
+      "description": "TRF P/ Ana Filomena Macedo",
+      "amount": -1228.67,
+      "balance": 1095.84,
+      "account": "joint",
+      "category": "RENT",
+      "sub_category": "RENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-04",
+      "description": "TRF DE MARIA DOLORES DAROCA GUERRERO",
+      "amount": 660.0,
+      "balance": 1755.84,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-05",
+      "description": "TRF P/ SAS SALLETAZ",
+      "amount": -20.0,
+      "balance": 1735.84,
+      "account": "joint",
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-06",
+      "description": "COMPRA 8778 WWW.CONTINENTE.PT SENHORA DA HORA",
+      "amount": -145.68,
+      "balance": 1590.16,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER ONLINE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-06",
+      "description": "TRF DE Error comun Claude AI",
+      "amount": 22.5,
+      "balance": 1612.66,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-07",
+      "description": "COMPRA 8551 Lagardere Fil. 224 Fran CONTACTLESS",
+      "amount": -13.95,
+      "balance": 1598.71,
+      "account": "joint",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-07",
+      "description": "COMPRA 8551 PETROPRIX MORON MORON D CONTACTLESS",
+      "amount": -63.36,
+      "balance": 1535.35,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "ESSENCE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-07",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -22.3,
+      "balance": 1513.05,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-08",
+      "description": "COMPRA 8778 HOTEL LAS BOVEDAS BADAJ CONTACTLESS",
+      "amount": -6.5,
+      "balance": 1506.55,
+      "account": "joint",
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-08",
+      "description": "COMPRA 8778 EST SERVICO PETROLEOS EXTREMADURA B",
+      "amount": -43.82,
+      "balance": 1462.73,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "ESSENCE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-08",
+      "description": "COMPRA 8551 EQUAL FOOD, LDA. LISBOA PT",
+      "amount": -54.0,
+      "balance": 1408.73,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-08",
+      "description": "COMPRA 8551 REFUGE DU PRESSET CHAMBERY",
+      "amount": -20.0,
+      "balance": 1388.73,
+      "account": "joint",
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-08",
+      "description": "CRED. 8778 Vinted Vilnius LT",
+      "amount": 8.75,
+      "balance": 1365.48,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-09",
+      "description": "TRF MB WAY P/ MAFALDA VILARINHO G VALADAS ROXO",
+      "amount": -32.0,
+      "balance": 1356.73,
+      "account": "joint",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-09",
+      "description": "COMPRA 8551 CONTINENTE BOM DIA LISB CONTACTLESS",
+      "amount": -12.75,
+      "balance": 1352.73,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-09",
+      "description": "COMPRA 8551 BOL QUEIJAS",
+      "amount": -16.11,
+      "balance": 1336.62,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 8778 COOLTRA BARCELONA ES",
+      "amount": -7.25,
+      "balance": 1329.37,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 8778 BOLT.EUO2604082222 Tallinn EE",
+      "amount": -5.99,
+      "balance": 1323.38,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+      "amount": -6.09,
+      "balance": 1317.29,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "TRF MB WAY P/ MAFALDA VILARINHO G VALADAS ROXO",
+      "amount": -5.0,
+      "balance": 1312.29,
+      "account": "joint",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "TRF DE Cuna octagonal - leti",
+      "amount": 50.0,
+      "balance": 1362.29,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 8778 ARENA ATLANTICO LISBOA  CONTACTLESS",
+      "amount": -10.0,
+      "balance": 1352.29,
+      "account": "joint",
+      "category": "LEISURE",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-13",
+      "description": "COMPRA 8551 SEGURANCA SOCIAL 1049-002 LISBOA",
+      "amount": -80.71,
+      "balance": 1271.58,
+      "account": "joint",
+      "category": "EMPREGADA",
+      "sub_category": "SEGURANCA SOCIAL",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-13",
+      "description": "LEV ATM 8551 BKINT LISBOA        Leitaria Holan",
+      "amount": -10.0,
+      "balance": 1261.58,
+      "account": "joint",
+      "category": "CASH",
+      "sub_category": "CASH",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-13",
+      "description": "CRED. 8551 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+      "amount": 140.4,
+      "balance": 1401.98,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-14",
+      "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+      "amount": -16.3,
+      "balance": 1385.68,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-14",
+      "description": "COMPRA 8551 BOLT.EUO2604101956 Tallinn EE",
+      "amount": -4.5,
+      "balance": 1381.18,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-14",
+      "description": "COMPRA 8551 BOLT.EUO2604102234 Tallinn EE",
+      "amount": -10.76,
+      "balance": 1370.42,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-15",
+      "description": "COMPRA 8551 TGTG 2kfqv6zhhf590 Copenhagen DK",
+      "amount": -3.29,
+      "balance": 1367.13,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-15",
+      "description": "COMPRA 8551 WWW.PHARMEESTORE.COMVILA DO CONDE",
+      "amount": -74.4,
+      "balance": 1292.73,
+      "account": "joint",
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-15",
+      "description": "COMPRA 8778 CTT - CORREIOS LISBOA",
+      "amount": -2.65,
+      "balance": 1290.08,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-15",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -21.35,
+      "balance": 1268.73,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-16",
+      "description": "COMPRA 8551 FAMILIAMART LISBOA PT   CONTACTLESS",
+      "amount": -12.02,
+      "balance": 1256.71,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-16",
+      "description": "COMPRA 8551 ARCE BOUTIQUE DOCE LISB CONTACTLESS",
+      "amount": -3.05,
+      "balance": 1253.66,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-16",
+      "description": "COMPRA 8551 JOAO BARBOSA NUTRIHESANTO TIRSO",
+      "amount": -35.0,
+      "balance": 1218.66,
+      "account": "joint",
+      "category": "HEALTH",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-16",
+      "description": "COMPRA 8778 CONTINENTE LISBOA       CONTACTLESS",
+      "amount": -24.16,
+      "balance": 1194.5,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-17",
+      "description": "TRF MB WAY P/ MARIA LUCIA VELASCO ARBOLI",
+      "amount": -15.66,
+      "balance": 1178.84,
+      "account": "joint",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-17",
+      "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+      "amount": -4.51,
+      "balance": 1174.33,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-17",
+      "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+      "amount": -2.61,
+      "balance": 1171.72,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-17",
+      "description": "LEV ATM 8551 BKINT LISBOA        Leitaria Holan",
+      "amount": -30.0,
+      "balance": 1141.72,
+      "account": "joint",
+      "category": "CASH",
+      "sub_category": "CASH",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-17",
+      "description": "COMPRA 8778 MD CLINICA LISBOA PT    CONTACTLESS",
+      "amount": -35.0,
+      "balance": 1106.72,
+      "account": "joint",
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "TRF MB WAY P/ ASSOCIACAO B FREGUESIA ENCARNACAO",
+      "amount": -35.0,
+      "balance": 1071.72,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "TRF MB WAY P/ PAULO COSTA DOMINGOS",
+      "amount": -10.0,
+      "balance": 1061.72,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "low"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "COMPRA 8551 VEDETA POSITIVA LISBOA",
+      "amount": -5.4,
+      "balance": 1056.32,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "COMPRA 8551 LUGAR PROTAGONISTA LISBOA",
+      "amount": -5.6,
+      "balance": 1050.72,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "TRF MB WAY P/ RITA PENHA DE MATOS ORTIZ DE MONT",
+      "amount": -27.0,
+      "balance": 1023.72,
+      "account": "joint",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "DD NOS Comunicaco 05953608588    PT20100839",
+      "amount": -40.92,
+      "balance": 982.8,
+      "account": "joint",
+      "category": "HOUSE",
+      "sub_category": "NOS INTERNET",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "TRF. P/O  REEMBOLSOS   IRS            AT - REEM",
+      "amount": 15655.93,
+      "balance": 16638.73,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -17.19,
+      "balance": 16621.54,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 BERTRAND CAFE CHIADO LI CONTACTLESS",
+      "amount": -7.5,
+      "balance": 16614.04,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -5.87,
+      "balance": 16608.17,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -10.07,
+      "balance": 16598.1,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -7.44,
+      "balance": 16590.66,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 BOLT.EUO2604182159 Tallinn EE",
+      "amount": -3.85,
+      "balance": 16586.81,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 MUSA PRAIA COLARES PT   CONTACTLESS",
+      "amount": -3.2,
+      "balance": 16583.61,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+      "amount": -8.7,
+      "balance": 16574.91,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+      "amount": -4.9,
+      "balance": 16570.01,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+      "amount": -3.7,
+      "balance": 16566.31,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 Spotify P41965D230 Stockholm SE",
+      "amount": -11.99,
+      "balance": 16554.32,
+      "account": "joint",
+      "category": "HOUSE",
+      "sub_category": "SPOTIFY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+      "amount": -9.0,
+      "balance": 16545.32,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+      "amount": -3.5,
+      "balance": 16541.82,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+      "amount": -3.5,
+      "balance": 16538.32,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 TGTG jzc1ssajvcwg0 Copenhagen DK",
+      "amount": -3.29,
+      "balance": 16535.03,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS",
+      "amount": -2.28,
+      "balance": 16532.75,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 WELLS SAUDE CHIADO LISB CONTACTLESS",
+      "amount": -5.97,
+      "balance": 16526.78,
+      "account": "joint",
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 MERCEARIA D ASSAFORA CO CONTACTLESS",
+      "amount": -3.08,
+      "balance": 16523.7,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 CONT BOM DIA COLARES SI CONTACTLESS",
+      "amount": -3.88,
+      "balance": 16519.82,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 CASA DA GALE COLARES PT CONTACTLESS",
+      "amount": -5.8,
+      "balance": 16514.02,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 MUSA PRAIA COLARES PT   CONTACTLESS",
+      "amount": -7.3,
+      "balance": 16506.72,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-21",
+      "description": "COMPRA 8551 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+      "amount": -9.0,
+      "balance": 16497.72,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-22",
+      "description": "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS",
+      "amount": -11.58,
+      "balance": 16486.14,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-22",
+      "description": "COMPRA 8551 UBR PENDING.UBER.COM AMSTERDAM NL",
+      "amount": -9.99,
+      "balance": 16476.15,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "UBER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-22",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -4.0,
+      "balance": 16472.15,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-22",
+      "description": "CRED. 8778 Vinted Vilnius LT",
+      "amount": 7.44,
+      "balance": 16479.59,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-23",
+      "description": "COMPRA 8778 NANNARELLA LISBOA PT    CONTACTLESS",
+      "amount": -3.4,
+      "balance": 16476.19,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-23",
+      "description": "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS",
+      "amount": -3.79,
+      "balance": 16472.4,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-23",
+      "description": "TRF DE CLEMENT YVES MICHEL ROUAULT COLIGNY",
+      "amount": 20.37,
+      "balance": 16492.77,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "DD EDP COMERCIAL- 16010010706561 PT34100781",
+      "amount": -5.29,
+      "balance": 16487.48,
+      "account": "joint",
+      "category": "HOUSE",
+      "sub_category": "EDP",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "COMPRA 8778 PQ EST ALCANTARA RIO LI CONTACTLESS",
+      "amount": -1.4,
+      "balance": 16486.08,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "COMPRA 8778 ARMAN AMAN LISBOA PT    CONTACTLESS",
+      "amount": -2.0,
+      "balance": 16484.08,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "COMPRA 8551 FARM JARDIM REAL LISBOA CONTACTLESS",
+      "amount": -19.35,
+      "balance": 16464.73,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "TRF MB WAY P/ INES DE SOUSA FERREIRA JORGE",
+      "amount": -13.2,
+      "balance": 16451.53,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "TRF MB WAY P/ INES DE SOUSA FERREIRA JORGE",
+      "amount": 13.2,
+      "balance": 16464.73,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "TRF MB WAY P/ MARIANA M LOPES",
+      "amount": -13.2,
+      "balance": 16451.53,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -20.3,
+      "balance": 16431.23,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -15.89,
+      "balance": 16415.34,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-27",
+      "description": "PAGSERV LUSIADAS S.A.          54393/945549451",
+      "amount": -34.1,
+      "balance": 16381.24,
+      "account": "joint",
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-27",
+      "description": "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+      "amount": -12.5,
+      "balance": 16368.74,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-27",
+      "description": "TRF MB WAY P/ RITA PENHA DE MATOS ORTIZ DE MONT",
+      "amount": -20.0,
+      "balance": 16348.74,
+      "account": "joint",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-27",
+      "description": "TRF MB WAY P/ ASSOCIACAO B FREGUESIA ENCARNACAO",
+      "amount": -35.0,
+      "balance": 16313.74,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-27",
+      "description": "TRF MB WAY P/ MARTA MAGALHAES MARQUES DE AGUIAR",
+      "amount": -20.0,
+      "balance": 16293.74,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-27",
+      "description": "CRED. 8778 Vinted Vilnius LT",
+      "amount": 9.8,
+      "balance": 16303.54,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 MENIMERCADO YETI LISBOA CONTACTLESS",
+      "amount": -5.0,
+      "balance": 16298.54,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 Glovo GLOVO PRIME Lisbon ES",
+      "amount": -4.99,
+      "balance": 16293.55,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER ONLINE",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+      "amount": -1.5,
+      "balance": 16292.05,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+      "amount": -3.5,
+      "balance": 16288.55,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+      "amount": -29.5,
+      "balance": 16259.05,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 AL HORNO COLARES PT     CONTACTLESS",
+      "amount": -2.5,
+      "balance": 16256.55,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 MUSA PRAIA COLARES PT   CONTACTLESS",
+      "amount": -3.2,
+      "balance": 16253.35,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+      "amount": -1.9,
+      "balance": 16251.45,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -6.65,
+      "balance": 16244.8,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -9.8,
+      "balance": 16235.0,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -15.05,
+      "balance": 16219.95,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 BOLT.EUO2604242208 Tallinn EE",
+      "amount": -11.15,
+      "balance": 16208.8,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 R. S AVENTUREIRAS TORNA CONTACTLESS",
+      "amount": -8.0,
+      "balance": 16200.8,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "LEISURE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 VASCO PINTO LDA VILA MA CONTACTLESS",
+      "amount": -7.72,
+      "balance": 16193.08,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "low"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 TREEGO SOURDOUGH LDA 80 CONTACTLESS",
+      "amount": -5.0,
+      "balance": 16188.08,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS",
+      "amount": -4.8,
+      "balance": 16183.28,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 MA SARAIVA CARVALHO LIS CONTACTLESS",
+      "amount": -10.01,
+      "balance": 16173.27,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 MINIMERCADO INTERNET LI CONTACTLESS",
+      "amount": -3.95,
+      "balance": 16169.32,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+      "amount": -11.5,
+      "balance": 16157.82,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 MERCEARIA D ASSAFORA CO CONTACTLESS",
+      "amount": -5.79,
+      "balance": 16152.03,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+      "amount": -3.5,
+      "balance": 16148.53,
+      "account": "joint",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 MAISON DORON BEAUFORT",
+      "amount": -84.5,
+      "balance": 16064.03,
+      "account": "joint",
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 8551 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO",
+      "amount": -22.14,
+      "balance": 16041.89,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "CUSTO DE SERVICO INTERNACIONAL",
+      "amount": -0.85,
+      "balance": 16041.04,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "IMPOSTO DO SELO",
+      "amount": -0.03,
+      "balance": 16041.01,
+      "account": "joint",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-29",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -9.8,
+      "balance": 16031.21,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-29",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -11.38,
+      "balance": 16019.83,
+      "account": "joint",
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-29",
+      "description": "COMPRA 8551 MINIPRECO LISBOA PT     CONTACTLESS",
+      "amount": -3.14,
+      "balance": 16016.69,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-29",
+      "description": "COMPRA 8551 RAFA MINIMER FRUT LISBO CONTACTLESS",
+      "amount": -2.87,
+      "balance": 16013.82,
+      "account": "joint",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-29",
+      "description": "CRED. 8778 Vinted Vilnius LT",
+      "amount": 6.65,
+      "balance": 16020.47,
+      "account": "joint",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-30",
+      "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+      "amount": -675.84,
+      "balance": 15344.63,
+      "account": "joint",
+      "category": "EMPREGADA",
+      "sub_category": "EMPREGADA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-30",
+      "description": "COMPRA 8551 BOLT.EU O 2604290830 Tallinn EE",
+      "amount": -11.08,
+      "balance": 15333.55,
+      "account": "joint",
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-30",
+      "description": "COMPRA 8551 EST SERVICO DST BADAJOZ-CAYA BADAJO",
+      "amount": -101.75,
+      "balance": 15231.8,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "ESSENCE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-30",
+      "description": "COMPRA 8551 EST SERVICO BALLENOIL BARBATE II -",
+      "amount": -40.83,
+      "balance": 15190.97,
+      "account": "joint",
+      "category": "VOITURE",
+      "sub_category": "ESSENCE",
+      "confidence": "high"
+    }
+  ],
+  "unknown_count": 137,
+  "exact_count": 0,
+  "conflict_count": 0,
+  "claude_prompt": {
+    "taxonomy": {
+      "BABYSITTING": [
+        "BABYSITTING"
+      ],
+      "EAT OUT": [
+        "BACKERY",
+        "PADARIA",
+        "QUIOSQUE",
+        "RESTAURANT",
+        "UBER EATS"
+      ],
+      "EDUCATION": [
+        "ESCOLA"
+      ],
+      "EMPREGADA": [
+        "EMPREGADA",
+        "SEGURANCA SOCIAL"
+      ],
+      "GROCERIES": [
+        "SUPER",
+        "SUPER ONLINE"
+      ],
+      "HEALTH": [
+        "COUCHES",
+        "HOSPITAL",
+        "MEDIS",
+        "MEDIS REIMBURSMENT",
+        "PHARMACY"
+      ],
+      "HOLIDAY": [
+        "ALPS JULY 2026",
+        "HOTELS",
+        "MISC",
+        "TRANSPORT"
+      ],
+      "HOUSE": [
+        "DONA AJUDA",
+        "EDP",
+        "EPAL AGUA",
+        "FURNITURE",
+        "MISC",
+        "NOS",
+        "NOS INTERNET",
+        "SPOTIFY"
+      ],
+      "KIDS": [
+        "BABYSITTING",
+        "LEISURE",
+        "MISC",
+        "PISCINA",
+        "ROPA",
+        "ROPA VINTED"
+      ],
+      "MOBILITY": [
+        "BOLT",
+        "COOLTRA",
+        "PUBLIC TRANSPORT",
+        "TRANSPORT",
+        "UBER"
+      ],
+      "RENT": [
+        "RENT"
+      ],
+      "VOITURE": [
+        "ESSENCE",
+        "MECHANIC",
+        "VIA VERDE"
+      ],
+      "CASH": [
+        "CASH"
+      ],
+      "LEISURE": [],
+      "FURNITURE": [
+        "FURNITURE"
+      ],
+      "GIFT": [
+        "GIFT"
+      ],
+      "INCOME": [
+        "SALARY",
+        "TRANSFER",
+        "REIMBURSEMENT",
+        "OTHER"
+      ],
+      "MISC": [
+        "MISC"
+      ],
+      "UNCLASSIFIED": [
+        "UNCLASSIFIED"
+      ]
+    },
+    "examples": [],
+    "rows": [
+      {
+        "index": 0,
+        "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+        "amount": -649.84
+      },
+      {
+        "index": 1,
+        "description": "DD CNN            00001297344    PT40102031",
+        "amount": -27.0
+      },
+      {
+        "index": 2,
+        "description": "DD CNN            00001297247    PT40102031",
+        "amount": -28.8
+      },
+      {
+        "index": 3,
+        "description": "TRF DE MARIA DOLORES DAROCA GUERRERO",
+        "amount": 1000.0
+      },
+      {
+        "index": 4,
+        "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+        "amount": -240.0
+      },
+      {
+        "index": 5,
+        "description": "TRF DE Abril",
+        "amount": 1840.0
+      },
+      {
+        "index": 6,
+        "description": "TRF MB WAY P/ CAROLINA CAMPELO DIAS AMARAL",
+        "amount": -10.0
+      },
+      {
+        "index": 7,
+        "description": "DD CNN            00001396672    PT40102031",
+        "amount": -38.0
+      },
+      {
+        "index": 8,
+        "description": "PAG BXVAL- 8551 VIAVERDE",
+        "amount": -9.35
+      },
+      {
+        "index": 9,
+        "description": "DD EPAL           84000361013    PT37100921",
+        "amount": -22.07
+      },
+      {
+        "index": 10,
+        "description": "DD EDP COMERCIAL- 16010010706561 PT34100781",
+        "amount": -211.2
+      },
+      {
+        "index": 11,
+        "description": "TRF P/ Ana Filomena Macedo",
+        "amount": -1228.67
+      },
+      {
+        "index": 12,
+        "description": "TRF DE MARIA DOLORES DAROCA GUERRERO",
+        "amount": 660.0
+      },
+      {
+        "index": 13,
+        "description": "TRF P/ SAS SALLETAZ",
+        "amount": -20.0
+      },
+      {
+        "index": 14,
+        "description": "COMPRA 8778 WWW.CONTINENTE.PT SENHORA DA HORA",
+        "amount": -145.68
+      },
+      {
+        "index": 15,
+        "description": "TRF DE Error comun Claude AI",
+        "amount": 22.5
+      },
+      {
+        "index": 16,
+        "description": "COMPRA 8551 Lagardere Fil. 224 Fran CONTACTLESS",
+        "amount": -13.95
+      },
+      {
+        "index": 17,
+        "description": "COMPRA 8551 PETROPRIX MORON MORON D CONTACTLESS",
+        "amount": -63.36
+      },
+      {
+        "index": 18,
+        "description": "PAG BXVAL- 8551 VIAVERDE",
+        "amount": -22.3
+      },
+      {
+        "index": 19,
+        "description": "COMPRA 8778 HOTEL LAS BOVEDAS BADAJ CONTACTLESS",
+        "amount": -6.5
+      },
+      {
+        "index": 20,
+        "description": "COMPRA 8778 EST SERVICO PETROLEOS EXTREMADURA B",
+        "amount": -43.82
+      },
+      {
+        "index": 21,
+        "description": "COMPRA 8551 EQUAL FOOD, LDA. LISBOA PT",
+        "amount": -54.0
+      },
+      {
+        "index": 22,
+        "description": "COMPRA 8551 REFUGE DU PRESSET CHAMBERY",
+        "amount": -20.0
+      },
+      {
+        "index": 23,
+        "description": "CRED. 8778 Vinted Vilnius LT",
+        "amount": 8.75
+      },
+      {
+        "index": 24,
+        "description": "TRF MB WAY P/ MAFALDA VILARINHO G VALADAS ROXO",
+        "amount": -32.0
+      },
+      {
+        "index": 25,
+        "description": "COMPRA 8551 CONTINENTE BOM DIA LISB CONTACTLESS",
+        "amount": -12.75
+      },
+      {
+        "index": 26,
+        "description": "COMPRA 8551 BOL QUEIJAS",
+        "amount": -16.11
+      },
+      {
+        "index": 27,
+        "description": "COMPRA 8778 COOLTRA BARCELONA ES",
+        "amount": -7.25
+      },
+      {
+        "index": 28,
+        "description": "COMPRA 8778 BOLT.EUO2604082222 Tallinn EE",
+        "amount": -5.99
+      },
+      {
+        "index": 29,
+        "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+        "amount": -6.09
+      },
+      {
+        "index": 30,
+        "description": "TRF MB WAY P/ MAFALDA VILARINHO G VALADAS ROXO",
+        "amount": -5.0
+      },
+      {
+        "index": 31,
+        "description": "TRF DE Cuna octagonal - leti",
+        "amount": 50.0
+      },
+      {
+        "index": 32,
+        "description": "COMPRA 8778 ARENA ATLANTICO LISBOA  CONTACTLESS",
+        "amount": -10.0
+      },
+      {
+        "index": 33,
+        "description": "COMPRA 8551 SEGURANCA SOCIAL 1049-002 LISBOA",
+        "amount": -80.71
+      },
+      {
+        "index": 34,
+        "description": "LEV ATM 8551 BKINT LISBOA        Leitaria Holan",
+        "amount": -10.0
+      },
+      {
+        "index": 35,
+        "description": "CRED. 8551 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+        "amount": 140.4
+      },
+      {
+        "index": 36,
+        "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+        "amount": -16.3
+      },
+      {
+        "index": 37,
+        "description": "COMPRA 8551 BOLT.EUO2604101956 Tallinn EE",
+        "amount": -4.5
+      },
+      {
+        "index": 38,
+        "description": "COMPRA 8551 BOLT.EUO2604102234 Tallinn EE",
+        "amount": -10.76
+      },
+      {
+        "index": 39,
+        "description": "COMPRA 8551 TGTG 2kfqv6zhhf590 Copenhagen DK",
+        "amount": -3.29
+      },
+      {
+        "index": 40,
+        "description": "COMPRA 8551 WWW.PHARMEESTORE.COMVILA DO CONDE",
+        "amount": -74.4
+      },
+      {
+        "index": 41,
+        "description": "COMPRA 8778 CTT - CORREIOS LISBOA",
+        "amount": -2.65
+      },
+      {
+        "index": 42,
+        "description": "PAG BXVAL- 8551 VIAVERDE",
+        "amount": -21.35
+      },
+      {
+        "index": 43,
+        "description": "COMPRA 8551 FAMILIAMART LISBOA PT   CONTACTLESS",
+        "amount": -12.02
+      },
+      {
+        "index": 44,
+        "description": "COMPRA 8551 ARCE BOUTIQUE DOCE LISB CONTACTLESS",
+        "amount": -3.05
+      },
+      {
+        "index": 45,
+        "description": "COMPRA 8551 JOAO BARBOSA NUTRIHESANTO TIRSO",
+        "amount": -35.0
+      },
+      {
+        "index": 46,
+        "description": "COMPRA 8778 CONTINENTE LISBOA       CONTACTLESS",
+        "amount": -24.16
+      },
+      {
+        "index": 47,
+        "description": "TRF MB WAY P/ MARIA LUCIA VELASCO ARBOLI",
+        "amount": -15.66
+      },
+      {
+        "index": 48,
+        "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+        "amount": -4.51
+      },
+      {
+        "index": 49,
+        "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+        "amount": -2.61
+      },
+      {
+        "index": 50,
+        "description": "LEV ATM 8551 BKINT LISBOA        Leitaria Holan",
+        "amount": -30.0
+      },
+      {
+        "index": 51,
+        "description": "COMPRA 8778 MD CLINICA LISBOA PT    CONTACTLESS",
+        "amount": -35.0
+      },
+      {
+        "index": 52,
+        "description": "TRF MB WAY P/ ASSOCIACAO B FREGUESIA ENCARNACAO",
+        "amount": -35.0
+      },
+      {
+        "index": 53,
+        "description": "TRF MB WAY P/ PAULO COSTA DOMINGOS",
+        "amount": -10.0
+      },
+      {
+        "index": 54,
+        "description": "COMPRA 8551 VEDETA POSITIVA LISBOA",
+        "amount": -5.4
+      },
+      {
+        "index": 55,
+        "description": "COMPRA 8551 LUGAR PROTAGONISTA LISBOA",
+        "amount": -5.6
+      },
+      {
+        "index": 56,
+        "description": "TRF MB WAY P/ RITA PENHA DE MATOS ORTIZ DE MONT",
+        "amount": -27.0
+      },
+      {
+        "index": 57,
+        "description": "DD NOS Comunicaco 05953608588    PT20100839",
+        "amount": -40.92
+      },
+      {
+        "index": 58,
+        "description": "TRF. P/O  REEMBOLSOS   IRS            AT - REEM",
+        "amount": 15655.93
+      },
+      {
+        "index": 59,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -17.19
+      },
+      {
+        "index": 60,
+        "description": "COMPRA 8778 BERTRAND CAFE CHIADO LI CONTACTLESS",
+        "amount": -7.5
+      },
+      {
+        "index": 61,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -5.87
+      },
+      {
+        "index": 62,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -10.07
+      },
+      {
+        "index": 63,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -7.44
+      },
+      {
+        "index": 64,
+        "description": "COMPRA 8778 BOLT.EUO2604182159 Tallinn EE",
+        "amount": -3.85
+      },
+      {
+        "index": 65,
+        "description": "COMPRA 8778 MUSA PRAIA COLARES PT   CONTACTLESS",
+        "amount": -3.2
+      },
+      {
+        "index": 66,
+        "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+        "amount": -8.7
+      },
+      {
+        "index": 67,
+        "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+        "amount": -4.9
+      },
+      {
+        "index": 68,
+        "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+        "amount": -3.7
+      },
+      {
+        "index": 69,
+        "description": "COMPRA 8778 Spotify P41965D230 Stockholm SE",
+        "amount": -11.99
+      },
+      {
+        "index": 70,
+        "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+        "amount": -9.0
+      },
+      {
+        "index": 71,
+        "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+        "amount": -3.5
+      },
+      {
+        "index": 72,
+        "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+        "amount": -3.5
+      },
+      {
+        "index": 73,
+        "description": "COMPRA 8551 TGTG jzc1ssajvcwg0 Copenhagen DK",
+        "amount": -3.29
+      },
+      {
+        "index": 74,
+        "description": "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS",
+        "amount": -2.28
+      },
+      {
+        "index": 75,
+        "description": "COMPRA 8551 WELLS SAUDE CHIADO LISB CONTACTLESS",
+        "amount": -5.97
+      },
+      {
+        "index": 76,
+        "description": "COMPRA 8551 MERCEARIA D ASSAFORA CO CONTACTLESS",
+        "amount": -3.08
+      },
+      {
+        "index": 77,
+        "description": "COMPRA 8551 CONT BOM DIA COLARES SI CONTACTLESS",
+        "amount": -3.88
+      },
+      {
+        "index": 78,
+        "description": "COMPRA 8551 CASA DA GALE COLARES PT CONTACTLESS",
+        "amount": -5.8
+      },
+      {
+        "index": 79,
+        "description": "COMPRA 8551 MUSA PRAIA COLARES PT   CONTACTLESS",
+        "amount": -7.3
+      },
+      {
+        "index": 80,
+        "description": "COMPRA 8551 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+        "amount": -9.0
+      },
+      {
+        "index": 81,
+        "description": "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS",
+        "amount": -11.58
+      },
+      {
+        "index": 82,
+        "description": "COMPRA 8551 UBR PENDING.UBER.COM AMSTERDAM NL",
+        "amount": -9.99
+      },
+      {
+        "index": 83,
+        "description": "PAG BXVAL- 8551 VIAVERDE",
+        "amount": -4.0
+      },
+      {
+        "index": 84,
+        "description": "CRED. 8778 Vinted Vilnius LT",
+        "amount": 7.44
+      },
+      {
+        "index": 85,
+        "description": "COMPRA 8778 NANNARELLA LISBOA PT    CONTACTLESS",
+        "amount": -3.4
+      },
+      {
+        "index": 86,
+        "description": "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS",
+        "amount": -3.79
+      },
+      {
+        "index": 87,
+        "description": "TRF DE CLEMENT YVES MICHEL ROUAULT COLIGNY",
+        "amount": 20.37
+      },
+      {
+        "index": 88,
+        "description": "DD EDP COMERCIAL- 16010010706561 PT34100781",
+        "amount": -5.29
+      },
+      {
+        "index": 89,
+        "description": "COMPRA 8778 PQ EST ALCANTARA RIO LI CONTACTLESS",
+        "amount": -1.4
+      },
+      {
+        "index": 90,
+        "description": "COMPRA 8778 ARMAN AMAN LISBOA PT    CONTACTLESS",
+        "amount": -2.0
+      },
+      {
+        "index": 91,
+        "description": "COMPRA 8551 FARM JARDIM REAL LISBOA CONTACTLESS",
+        "amount": -19.35
+      },
+      {
+        "index": 92,
+        "description": "TRF MB WAY P/ INES DE SOUSA FERREIRA JORGE",
+        "amount": -13.2
+      },
+      {
+        "index": 93,
+        "description": "TRF MB WAY P/ INES DE SOUSA FERREIRA JORGE",
+        "amount": 13.2
+      },
+      {
+        "index": 94,
+        "description": "TRF MB WAY P/ MARIANA M LOPES",
+        "amount": -13.2
+      },
+      {
+        "index": 95,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -20.3
+      },
+      {
+        "index": 96,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -15.89
+      },
+      {
+        "index": 97,
+        "description": "PAGSERV LUSIADAS S.A.          54393/945549451",
+        "amount": -34.1
+      },
+      {
+        "index": 98,
+        "description": "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+        "amount": -12.5
+      },
+      {
+        "index": 99,
+        "description": "TRF MB WAY P/ RITA PENHA DE MATOS ORTIZ DE MONT",
+        "amount": -20.0
+      },
+      {
+        "index": 100,
+        "description": "TRF MB WAY P/ ASSOCIACAO B FREGUESIA ENCARNACAO",
+        "amount": -35.0
+      },
+      {
+        "index": 101,
+        "description": "TRF MB WAY P/ MARTA MAGALHAES MARQUES DE AGUIAR",
+        "amount": -20.0
+      },
+      {
+        "index": 102,
+        "description": "CRED. 8778 Vinted Vilnius LT",
+        "amount": 9.8
+      },
+      {
+        "index": 103,
+        "description": "COMPRA 8778 MENIMERCADO YETI LISBOA CONTACTLESS",
+        "amount": -5.0
+      },
+      {
+        "index": 104,
+        "description": "COMPRA 8778 Glovo GLOVO PRIME Lisbon ES",
+        "amount": -4.99
+      },
+      {
+        "index": 105,
+        "description": "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+        "amount": -1.5
+      },
+      {
+        "index": 106,
+        "description": "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+        "amount": -3.5
+      },
+      {
+        "index": 107,
+        "description": "COMPRA 8778 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+        "amount": -29.5
+      },
+      {
+        "index": 108,
+        "description": "COMPRA 8778 AL HORNO COLARES PT     CONTACTLESS",
+        "amount": -2.5
+      },
+      {
+        "index": 109,
+        "description": "COMPRA 8778 MUSA PRAIA COLARES PT   CONTACTLESS",
+        "amount": -3.2
+      },
+      {
+        "index": 110,
+        "description": "COMPRA 8778 QUIOSQUE AMOREIRAS LISB CONTACTLESS",
+        "amount": -1.9
+      },
+      {
+        "index": 111,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -6.65
+      },
+      {
+        "index": 112,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -9.8
+      },
+      {
+        "index": 113,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -15.05
+      },
+      {
+        "index": 114,
+        "description": "COMPRA 8551 BOLT.EUO2604242208 Tallinn EE",
+        "amount": -11.15
+      },
+      {
+        "index": 115,
+        "description": "COMPRA 8551 R. S AVENTUREIRAS TORNA CONTACTLESS",
+        "amount": -8.0
+      },
+      {
+        "index": 116,
+        "description": "COMPRA 8551 VASCO PINTO LDA VILA MA CONTACTLESS",
+        "amount": -7.72
+      },
+      {
+        "index": 117,
+        "description": "COMPRA 8551 TREEGO SOURDOUGH LDA 80 CONTACTLESS",
+        "amount": -5.0
+      },
+      {
+        "index": 118,
+        "description": "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS",
+        "amount": -4.8
+      },
+      {
+        "index": 119,
+        "description": "COMPRA 8551 MA SARAIVA CARVALHO LIS CONTACTLESS",
+        "amount": -10.01
+      },
+      {
+        "index": 120,
+        "description": "COMPRA 8551 MINIMERCADO INTERNET LI CONTACTLESS",
+        "amount": -3.95
+      },
+      {
+        "index": 121,
+        "description": "COMPRA 8551 ATL?TICO CLUBE DE PORTU CONTACTLESS",
+        "amount": -11.5
+      },
+      {
+        "index": 122,
+        "description": "COMPRA 8551 MERCEARIA D ASSAFORA CO CONTACTLESS",
+        "amount": -5.79
+      },
+      {
+        "index": 123,
+        "description": "COMPRA 8551 AMA PIZZERIA. PRAIA DAS CONTACTLESS",
+        "amount": -3.5
+      },
+      {
+        "index": 124,
+        "description": "COMPRA 8551 MAISON DORON BEAUFORT",
+        "amount": -84.5
+      },
+      {
+        "index": 125,
+        "description": "COMPRA 8551 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO",
+        "amount": -22.14
+      },
+      {
+        "index": 126,
+        "description": "CUSTO DE SERVICO INTERNACIONAL",
+        "amount": -0.85
+      },
+      {
+        "index": 127,
+        "description": "IMPOSTO DO SELO",
+        "amount": -0.03
+      },
+      {
+        "index": 128,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -9.8
+      },
+      {
+        "index": 129,
+        "description": "COMPRA 8778 Vinted Vilnius LT",
+        "amount": -11.38
+      },
+      {
+        "index": 130,
+        "description": "COMPRA 8551 MINIPRECO LISBOA PT     CONTACTLESS",
+        "amount": -3.14
+      },
+      {
+        "index": 131,
+        "description": "COMPRA 8551 RAFA MINIMER FRUT LISBO CONTACTLESS",
+        "amount": -2.87
+      },
+      {
+        "index": 132,
+        "description": "CRED. 8778 Vinted Vilnius LT",
+        "amount": 6.65
+      },
+      {
+        "index": 133,
+        "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+        "amount": -675.84
+      },
+      {
+        "index": 134,
+        "description": "COMPRA 8551 BOLT.EU O 2604290830 Tallinn EE",
+        "amount": -11.08
+      },
+      {
+        "index": 135,
+        "description": "COMPRA 8551 EST SERVICO DST BADAJOZ-CAYA BADAJO",
+        "amount": -101.75
+      },
+      {
+        "index": 136,
+        "description": "COMPRA 8551 EST SERVICO BALLENOIL BARBATE II -",
+        "amount": -40.83
+      }
+    ]
+  },
+  "unknown_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ]
+}

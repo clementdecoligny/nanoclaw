@@ -1,0 +1,633 @@
+{
+  "transactions": [
+    {
+      "value_date": "2026-04-01",
+      "description": "COMPRA 3883 T1023 BADALONA ES       CONTACTLESS",
+      "amount": -24.65,
+      "balance": 11007.77,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "COMPRA 3883 Ibis Styles Rastatt Ba  CONTACTLESS",
+      "amount": -3.9,
+      "balance": 11003.87,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "COMPRA 3883 AEROPUERTO SEVILLA SEVI CONTACTLESS",
+      "amount": -5.19,
+      "balance": 10998.68,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "COMPRA 3883 Ratsstuebl Rastatt DE   CONTACTLESS",
+      "amount": -79.1,
+      "balance": 10919.58,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-01",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -1840.0,
+      "balance": 9079.58,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-02",
+      "description": "COMPRA 3883 PARK INN FRANKFURT AIRP CONTACTLESS",
+      "amount": -4.0,
+      "balance": 9075.58,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-03",
+      "description": "JUROS DEPOSITO A PRAZO",
+      "amount": 16.04,
+      "balance": 9069.12,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "OTHER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-03",
+      "description": "IMPOSTO IRS/IRC DEPOSITO PRAZO       3446885107",
+      "amount": -4.49,
+      "balance": 9064.63,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-06",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -22.5,
+      "balance": 9053.08,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-07",
+      "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+      "amount": -2.35,
+      "balance": 9062.28,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-07",
+      "description": "COMPRA 3883 SSP S.A. - AEROPUERTO D CONTACTLESS",
+      "amount": -6.85,
+      "balance": 9055.43,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-07",
+      "description": "COMPRA 3883 LM 1784 VELASCO DE LA F CONTACTLESS",
+      "amount": -29.0,
+      "balance": 9026.43,
+      "account": "personal",
+      "category": "UNCLASSIFIED",
+      "sub_category": "UNCLASSIFIED",
+      "confidence": "unclassified"
+    },
+    {
+      "value_date": "2026-04-08",
+      "description": "STRIPE",
+      "amount": 87.72,
+      "balance": 9114.15,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+      "amount": -82.84,
+      "balance": 9031.31,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+      "amount": -473.4,
+      "balance": 8557.91,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 3883 NUCLEO MUSEOLOGICO POVO CONTACTLESS",
+      "amount": -1.7,
+      "balance": 8556.21,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "STRIPE",
+      "amount": 47.5,
+      "balance": 8603.71,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "STRIPE",
+      "amount": 47.5,
+      "balance": 8651.21,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "STRIPE",
+      "amount": 91.81,
+      "balance": 8743.02,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-10",
+      "description": "COMPRA 3883 LUFTHANSA RETAIL INMOT  CONTACTLESS",
+      "amount": -11.9,
+      "balance": 8731.12,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-13",
+      "description": "TRF. P/O  DTB TECH   DATA HUB, UNIPES Expense N",
+      "amount": 116.65,
+      "balance": 8847.77,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-13",
+      "description": "TRF. P/O  DTB TECH   DATA HUB, UNIPES Expense n",
+      "amount": 134.01,
+      "balance": 8981.78,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-17",
+      "description": "COMPRA 3883 SANDRA M DOS SANTOS POV CONTACTLESS",
+      "amount": -1.8,
+      "balance": 8979.98,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-04-20",
+      "description": "COMPRA 3883 CP CP",
+      "amount": -28.05,
+      "balance": 8951.93,
+      "account": "personal",
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-22",
+      "description": "COMPRA 3883 APPLE.COM BILL ITUNES.COM IE",
+      "amount": -2.99,
+      "balance": 8948.94,
+      "account": "personal",
+      "category": "HOUSE",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-22",
+      "description": "MEDIS-PAG SERVICOS 26111B1008075908",
+      "amount": 20.37,
+      "balance": 8969.31,
+      "account": "personal",
+      "category": "HEALTH",
+      "sub_category": "MEDIS REIMBURSMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-23",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -20.37,
+      "balance": 8948.94,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-24",
+      "description": "COMPRA 3883 CP COMBOIOS DE PORTU LI CONTACTLESS",
+      "amount": -3.2,
+      "balance": 8945.74,
+      "account": "personal",
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 3883 RODIZIO DE PIZZAS TLF 2 CONTACTLESS",
+      "amount": -2.5,
+      "balance": 8943.24,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "COMPRA 3883 PEDROGOPAO LDA PRAIA DO CONTACTLESS",
+      "amount": -6.1,
+      "balance": 8937.14,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "TRANSFERENCIA - VENCIMENTO",
+      "amount": 3069.74,
+      "balance": 12006.88,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "SALARY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "MR OU MME ROUAULT COLIGNY MICHEL",
+      "amount": 110.0,
+      "balance": 12116.88,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-04-28",
+      "description": "TRF P/ PARENTS SOGE",
+      "amount": -138.9,
+      "balance": 11977.98,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    }
+  ],
+  "unknown_count": 33,
+  "exact_count": 0,
+  "conflict_count": 0,
+  "claude_prompt": {
+    "taxonomy": {
+      "BABYSITTING": [
+        "BABYSITTING"
+      ],
+      "EAT OUT": [
+        "BACKERY",
+        "PADARIA",
+        "QUIOSQUE",
+        "RESTAURANT",
+        "UBER EATS"
+      ],
+      "EDUCATION": [
+        "ESCOLA"
+      ],
+      "EMPREGADA": [
+        "EMPREGADA",
+        "SEGURANCA SOCIAL"
+      ],
+      "GROCERIES": [
+        "SUPER",
+        "SUPER ONLINE"
+      ],
+      "HEALTH": [
+        "COUCHES",
+        "HOSPITAL",
+        "MEDIS",
+        "MEDIS REIMBURSMENT",
+        "PHARMACY"
+      ],
+      "HOLIDAY": [
+        "ALPS JULY 2026",
+        "HOTELS",
+        "MISC",
+        "TRANSPORT"
+      ],
+      "HOUSE": [
+        "DONA AJUDA",
+        "EDP",
+        "EPAL AGUA",
+        "FURNITURE",
+        "MISC",
+        "NOS",
+        "NOS INTERNET",
+        "SPOTIFY"
+      ],
+      "KIDS": [
+        "BABYSITTING",
+        "LEISURE",
+        "MISC",
+        "PISCINA",
+        "ROPA",
+        "ROPA VINTED"
+      ],
+      "MOBILITY": [
+        "BOLT",
+        "COOLTRA",
+        "PUBLIC TRANSPORT",
+        "TRANSPORT",
+        "UBER"
+      ],
+      "RENT": [
+        "RENT"
+      ],
+      "VOITURE": [
+        "ESSENCE",
+        "MECHANIC",
+        "VIA VERDE"
+      ],
+      "CASH": [
+        "CASH"
+      ],
+      "LEISURE": [],
+      "FURNITURE": [
+        "FURNITURE"
+      ],
+      "GIFT": [
+        "GIFT"
+      ],
+      "INCOME": [
+        "SALARY",
+        "TRANSFER",
+        "REIMBURSEMENT",
+        "OTHER"
+      ],
+      "MISC": [
+        "MISC"
+      ],
+      "UNCLASSIFIED": [
+        "UNCLASSIFIED"
+      ]
+    },
+    "examples": [],
+    "rows": [
+      {
+        "index": 0,
+        "description": "COMPRA 3883 T1023 BADALONA ES       CONTACTLESS",
+        "amount": -24.65
+      },
+      {
+        "index": 1,
+        "description": "COMPRA 3883 Ibis Styles Rastatt Ba  CONTACTLESS",
+        "amount": -3.9
+      },
+      {
+        "index": 2,
+        "description": "COMPRA 3883 AEROPUERTO SEVILLA SEVI CONTACTLESS",
+        "amount": -5.19
+      },
+      {
+        "index": 3,
+        "description": "COMPRA 3883 Ratsstuebl Rastatt DE   CONTACTLESS",
+        "amount": -79.1
+      },
+      {
+        "index": 4,
+        "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+        "amount": -1840.0
+      },
+      {
+        "index": 5,
+        "description": "COMPRA 3883 PARK INN FRANKFURT AIRP CONTACTLESS",
+        "amount": -4.0
+      },
+      {
+        "index": 6,
+        "description": "JUROS DEPOSITO A PRAZO",
+        "amount": 16.04
+      },
+      {
+        "index": 7,
+        "description": "IMPOSTO IRS/IRC DEPOSITO PRAZO       3446885107",
+        "amount": -4.49
+      },
+      {
+        "index": 8,
+        "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+        "amount": -22.5
+      },
+      {
+        "index": 9,
+        "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+        "amount": -2.35
+      },
+      {
+        "index": 10,
+        "description": "COMPRA 3883 SSP S.A. - AEROPUERTO D CONTACTLESS",
+        "amount": -6.85
+      },
+      {
+        "index": 11,
+        "description": "COMPRA 3883 LM 1784 VELASCO DE LA F CONTACTLESS",
+        "amount": -29.0
+      },
+      {
+        "index": 12,
+        "description": "STRIPE",
+        "amount": 87.72
+      },
+      {
+        "index": 13,
+        "description": "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+        "amount": -82.84
+      },
+      {
+        "index": 14,
+        "description": "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+        "amount": -473.4
+      },
+      {
+        "index": 15,
+        "description": "COMPRA 3883 NUCLEO MUSEOLOGICO POVO CONTACTLESS",
+        "amount": -1.7
+      },
+      {
+        "index": 16,
+        "description": "STRIPE",
+        "amount": 47.5
+      },
+      {
+        "index": 17,
+        "description": "STRIPE",
+        "amount": 47.5
+      },
+      {
+        "index": 18,
+        "description": "STRIPE",
+        "amount": 91.81
+      },
+      {
+        "index": 19,
+        "description": "COMPRA 3883 LUFTHANSA RETAIL INMOT  CONTACTLESS",
+        "amount": -11.9
+      },
+      {
+        "index": 20,
+        "description": "TRF. P/O  DTB TECH   DATA HUB, UNIPES Expense N",
+        "amount": 116.65
+      },
+      {
+        "index": 21,
+        "description": "TRF. P/O  DTB TECH   DATA HUB, UNIPES Expense n",
+        "amount": 134.01
+      },
+      {
+        "index": 22,
+        "description": "COMPRA 3883 SANDRA M DOS SANTOS POV CONTACTLESS",
+        "amount": -1.8
+      },
+      {
+        "index": 23,
+        "description": "COMPRA 3883 CP CP",
+        "amount": -28.05
+      },
+      {
+        "index": 24,
+        "description": "COMPRA 3883 APPLE.COM BILL ITUNES.COM IE",
+        "amount": -2.99
+      },
+      {
+        "index": 25,
+        "description": "MEDIS-PAG SERVICOS 26111B1008075908",
+        "amount": 20.37
+      },
+      {
+        "index": 26,
+        "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+        "amount": -20.37
+      },
+      {
+        "index": 27,
+        "description": "COMPRA 3883 CP COMBOIOS DE PORTU LI CONTACTLESS",
+        "amount": -3.2
+      },
+      {
+        "index": 28,
+        "description": "COMPRA 3883 RODIZIO DE PIZZAS TLF 2 CONTACTLESS",
+        "amount": -2.5
+      },
+      {
+        "index": 29,
+        "description": "COMPRA 3883 PEDROGOPAO LDA PRAIA DO CONTACTLESS",
+        "amount": -6.1
+      },
+      {
+        "index": 30,
+        "description": "TRANSFERENCIA - VENCIMENTO",
+        "amount": 3069.74
+      },
+      {
+        "index": 31,
+        "description": "MR OU MME ROUAULT COLIGNY MICHEL",
+        "amount": 110.0
+      },
+      {
+        "index": 32,
+        "description": "TRF P/ PARENTS SOGE",
+        "amount": -138.9
+      }
+    ]
+  },
+  "unknown_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ]
+}
