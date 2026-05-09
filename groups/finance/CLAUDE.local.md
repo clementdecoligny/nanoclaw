@@ -54,105 +54,152 @@ Python interpreter: `/opt/wpenv/bin/python3`
 
 ## Workload 1: Monthly Expense Tracking
 
+### Account Numbers
+
+- *Compte personnel* — 45507717811
+- *Compte commun* — 45545535104
+
+The parser auto-detects which file is which from these numbers in the metadata rows. If both files resolve to the same account number, tell Clément immediately and ask him to resend the correct file.
+
 ### Monthly Schedule
 
-On the 1st of each month, send this message to prompt the user:
+On the 1st of each month, send:
 > "Nouveau mois qui commence ! Pense à m'envoyer les deux relevés d'ActivoBank (compte perso et compte commun) afin que je puisse classer les dépenses du [mois précédent]."
 
 Schedule this as a recurring task (day 1 of each month) using `mcp__nanoclaw__schedule_message` on your first run if not already set up.
 
 ### Receiving Bank Exports
 
-The user will upload two ActivoBank Excel files — one for each account. Columns: `Data Lanç. | Data Valor | Descrição | Valor | Saldo`.
+The user uploads two ActivoBank `.xlsx` files. Columns: `Data Lanç. | Data Valor | Descrição | Valor | Saldo`.
 
-- **Personal account** — Clément's individual account
-- **Joint account** — shared family account
+**Important rules:**
+- `Data Valor` is the only date field used everywhere — `Data Lanç.` is ignored completely
+- If only one file arrives, start processing it immediately and ask for the second: "Je n'ai reçu qu'un seul fichier — tu m'envoies le deuxième aussi ?"
+- If the second file never arrives, send one follow-up after 24h, then drop it
+- Transactions with blank description but non-zero amount → kept as UNCLASSIFIED
+- Duplicate transactions (same date + description + amount) → keep both rows
+- The target month is derived from the `Data Valor` range in the file — do not assume from the calendar date of upload
 
-If you can't determine which is which from the filename, ask.
+### Step 1 — Parse
 
-**Step 1 — Parse both files:**
 ```bash
 /opt/wpenv/bin/python3 /workspace/extra/finance/excel_parser.py \
-  <personal_file> --account personal --output /tmp/personal.json
+  <file_path> --output /tmp/personal.json
 
 /opt/wpenv/bin/python3 /workspace/extra/finance/excel_parser.py \
-  <joint_file> --account joint --output /tmp/joint.json
+  <file_path> --output /tmp/joint.json
 ```
 
-**Step 2 — Categorize (exact-match pass):**
+The parser auto-detects the account from the account number. The output JSON contains `transactions` (sorted by `Data Valor` ascending) and `account`.
 
-Historical data is at `/workspace/extra/historical/` (18+ months of labeled .xlsx files).
+### Step 2 — Categorize
+
+Historical data is at `/workspace/extra/historical/`. Derive `--year` and `--month` from the `Data Valor` range in the parsed output (the month that appears most frequently).
 
 ```bash
 /opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
   /tmp/personal.json \
   --history /workspace/extra/historical/ \
+  --year YYYY --month MM \
   --output /tmp/personal-cat.json
-
-/opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
-  /tmp/joint.json \
-  --history /workspace/extra/historical/ \
-  --output /tmp/joint-cat.json
 ```
 
-The categorizer outputs a JSON object with:
-- `transactions` — all rows with `category`, `sub_category`, `confidence` fields
-- `exact_count` — rows matched from history (no Claude needed)
-- `unknown_count` — rows that need Claude classification
-- `claude_prompt` — taxonomy + few-shot examples + rows to classify (only if unknown_count > 0)
-- `unknown_indices` — list of transaction indices needing classification
+The categorizer output contains:
+- `transactions` — all rows with `category`, `sub_category`, `confidence`
+- `exact_count` / `unknown_count` / `conflict_count`
+- `claude_prompt` — taxonomy + few-shot examples + unknown rows (if `unknown_count > 0`)
+- `conflicts` — list of `{index, description, amount, options}` (if `conflict_count > 0`)
 
-**Step 3 — Classify unknowns with Claude (if any):**
+### Step 3 — Handle conflicts (if any)
 
-If `unknown_count > 0`, read `claude_prompt` from the categorizer output. Use it to classify the unknown rows yourself. The `claude_prompt` contains:
-- `taxonomy` — the full category/sub-category tree
-- `examples` — sample historical categorizations for context
-- `rows` — list of `{index, description, amount}` to classify
+If `conflict_count > 0`, flag each conflict in the chat before classifying unknowns:
 
-For each row, assign the best-fit `category` and `sub_category` from the taxonomy. If genuinely ambiguous, use `UNCLASSIFIED`.
+> "⚠️ *Catégorie ambiguë* — 'UBER' a été classé différemment selon les mois :
+> • MOBILITY (jan-2025.xlsx)
+> • KIDS (mar-2025.xlsx)
+> Quelle catégorie est correcte ?"
 
-Write your classifications to `/tmp/personal-claude.json` (or joint) as:
+Wait for Clément's answer. Apply it, persist to `learned_categories.json`, then continue.
+
+### Step 4 — Classify unknowns with Claude (if any)
+
+If `unknown_count > 0`, use `claude_prompt` to classify each unknown row yourself.
+
+**Classification rules:**
+- Use the taxonomy below
+- Credits (positive `amount`) that don't fit a spending category → `INCOME`
+- Transfers between own accounts, MB WAY received, salary deposits → `INCOME`
+- Genuinely ambiguous → `UNCLASSIFIED`, flag in chat
+- Inter-account transfers → `UNCLASSIFIED`, flag in chat
+
+Write classifications to `/tmp/personal-claude.json`:
 ```json
 [
   {"index": 3, "category": "GROCERIES", "sub_category": "SUPER"},
-  {"index": 7, "category": "UNCLASSIFIED", "sub_category": ""}
+  {"index": 7, "category": "INCOME", "sub_category": "OTHER"}
 ]
 ```
 
-Then apply them back and persist to the lookup:
+Apply and persist:
 ```bash
 /opt/wpenv/bin/python3 /workspace/extra/finance/categorizer.py \
   /tmp/personal.json \
   --history /workspace/extra/historical/ \
+  --year YYYY --month MM \
   --output /tmp/personal-cat.json \
   --apply-claude /tmp/personal-claude.json
 ```
 
-**Step 4 — Write categorized Excel files:**
+### Step 5 — Write Excel files
+
+Output filenames: `YYYY-MM-personnel-categorise.xlsx` / `YYYY-MM-commun-categorise.xlsx`
+
 ```bash
 /opt/wpenv/bin/python3 /workspace/extra/finance/excel_writer.py \
   /tmp/personal-cat.json \
-  --account personal \
-  --output /tmp/personal-categorized.xlsx
+  --output /tmp/2026-05-personnel-categorise.xlsx
 
 /opt/wpenv/bin/python3 /workspace/extra/finance/excel_writer.py \
   /tmp/joint-cat.json \
-  --account joint \
-  --output /tmp/joint-categorized.xlsx
+  --output /tmp/2026-05-commun-categorise.xlsx
 ```
 
-**Step 5 — Send files back:**
+Output format matches historical files exactly: `Date | Description | Valor | CATEGORY | SUB-CATEGORY`
+
+### Step 6 — Send and await confirmation
+
 ```
-mcp__nanoclaw__send_document(file_path="/tmp/personal-categorized.xlsx", caption="Conta pessoal — categorizada")
-mcp__nanoclaw__send_document(file_path="/tmp/joint-categorized.xlsx", caption="Conta conjunta — categorizada")
+mcp__nanoclaw__send_document(file_path="...", caption="Compte personnel — avril 2026")
+mcp__nanoclaw__send_document(file_path="...", caption="Compte commun — avril 2026")
 ```
 
-Then send a brief summary message:
+Then send a summary:
 ```
-*Categorization terminee*
-• Conte perso: X transactions (Y exactes, Z classifiees par Claude)
-• Conte commun: X transactions (Y exactes, Z classifiees par Claude)
+*Catégorisation terminée — avril 2026*
+• Compte personnel : X transactions (Y exactes, Z par IA)
+• Compte commun : X transactions (Y exactes, Z par IA)
+
+Tu peux corriger des erreurs avant de confirmer. Réponds *ok* pour enregistrer.
 ```
+
+### Step 7 — Handle corrections before confirmation
+
+Clément may correct categories in natural language before confirming:
+> "UBER du 12 → KIDS pas MOBILITY"
+
+Apply the correction, update the in-memory result, re-generate and re-send the corrected file, then wait for confirmation again. Each correction is also persisted to `learned_categories.json`.
+
+Confirmation triggers: "ok", "confirme", "c'est bon", "parfait", "enregistre". "merci" alone does NOT count.
+
+### Step 8 — Save to history
+
+After confirmation, save the categorized files to `/workspace/extra/historical/`:
+```bash
+cp /tmp/2026-05-personnel-categorise.xlsx /workspace/extra/historical/2026-05-personnel.xlsx
+cp /tmp/2026-05-commun-categorise.xlsx /workspace/extra/historical/2026-05-commun.xlsx
+```
+
+This makes this month's data available as training data for next month's exact-match lookup.
 
 ### Category / Sub-category Taxonomy
 
@@ -173,6 +220,7 @@ CASH → CASH
 LEISURE → (infer sub-category)
 FURNITURE → FURNITURE
 GIFT → GIFT
+INCOME → SALARY | TRANSFER | REIMBURSEMENT | OTHER
 MISC → MISC
 UNCLASSIFIED → UNCLASSIFIED
 ```
