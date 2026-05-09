@@ -101,8 +101,11 @@ RUN --mount=type=cache,target=/root/.bun/install/cache \
 #     binary (linux-arm64 variant on our image). Without the allowlist
 #     the SDK fails at spawn time with "native binary not found".
 ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME/bin:$PNPM_HOME:$PATH"
-RUN corepack enable
+ENV PATH="$PNPM_HOME:$PATH"
+# pnpm v11 (Corepack-managed) defaults global-bin-dir to $PNPM_HOME/bin.
+# Pin it back to $PNPM_HOME so binaries land at /pnpm/claude etc., matching
+# the path the Claude Code SDK resolves at runtime.
+RUN corepack enable && pnpm config set global-bin-dir /pnpm
 
 RUN --mount=type=cache,target=/root/.cache/pnpm \
     echo "only-built-dependencies[]=agent-browser" > /root/.npmrc && \
