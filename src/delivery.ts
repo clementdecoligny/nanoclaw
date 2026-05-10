@@ -187,12 +187,8 @@ async function drainSession(session: Session): Promise<void> {
     migrateDeliveredTable(inDb);
 
     // Filter out already-delivered messages using inbound.db's delivered table.
-    // Status rows bypass this guard — they must be re-processed every tick to
-    // edit the pinned status message in place. We still mark them delivered after
-    // processing so they don't replay after restart; the guard just doesn't
-    // pre-filter them out here.
     const delivered = getDeliveredIds(inDb);
-    const undelivered = allDue.filter((m) => m.kind === 'status' || !delivered.has(m.id));
+    const undelivered = allDue.filter((m) => !delivered.has(m.id));
     if (undelivered.length === 0) return;
 
     for (const msg of undelivered) {
