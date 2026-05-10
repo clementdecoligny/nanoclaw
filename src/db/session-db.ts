@@ -267,6 +267,58 @@ export function migrateDeliveredTable(db: Database.Database): void {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Status-feedback sentinels (agent-status-feedback feature)
+// ---------------------------------------------------------------------------
+//
+// Two well-known rows in the `delivered` table track Telegram status-feedback
+// state per session. Both use a sentinel string as `message_out_id` so they
+// survive session re-open (host restarts). The container never reads or writes
+// these rows.
+//
+//   __status_msg__   — platform message ID of the current status message.
+//   __reaction_msg__ — platform message ID of the user message with 👀 reaction.
+//
+// Using INSERT OR REPLACE so each sentinel can be updated in-place as
+// the session progresses.
+//
+
+export type StatusSentinelKey = '__status_msg__' | '__reaction_msg__';
+
+/**
+ * Read a status-feedback sentinel from the delivered table.
+ * Returns the stored platform_message_id, or null if not set.
+ */
+export function getStatusSentinel(db: Database.Database, key: StatusSentinelKey): string | null {
+  const row = db
+    .prepare('SELECT platform_message_id FROM delivered WHERE message_out_id = ?')
+    .get(key) as { platform_message_id: string | null } | undefined;
+  return row?.platform_message_id ?? null;
+}
+
+/**
+ * Upsert a status-feedback sentinel into the delivered table.
+ * Uses INSERT OR REPLACE so it updates if the row already exists.
+ */
+export function upsertStatusSentinel(
+  db: Database.Database,
+  key: StatusSentinelKey,
+  platformMessageId: string,
+): void {
+  db.prepare(
+    `INSERT OR REPLACE INTO delivered (message_out_id, platform_message_id, status, delivered_at)
+     VALUES (?, ?, 'sentinel', datetime('now'))`,
+  ).run(key, platformMessageId);
+}
+
+/**
+ * Delete both status-feedback sentinel rows from the delivered table.
+ * Called after the final answer is delivered or the container is killed.
+ */
+export function clearStatusSentinels(db: Database.Database): void {
+  db.prepare("DELETE FROM delivered WHERE message_out_id IN ('__status_msg__', '__reaction_msg__')").run();
+}
+
 // Adds columns added to messages_in after the initial v2 schema to
 // pre-existing session DBs. No-op on fresh installs where the columns are
 // in the baseline schema. Backfills existing rows so invariants hold.

@@ -27,10 +27,12 @@ import {
   getMessagingGroupWithAgentCount,
 } from './db/messaging-groups.js';
 import { findSessionForAgent } from './db/sessions.js';
+import { upsertStatusSentinel, migrateDeliveredTable } from './db/session-db.js';
 import { startTypingRefresh, stopTypingRefresh } from './modules/typing/index.js';
 import { log } from './log.js';
-import { resolveSession, writeSessionMessage, writeOutboundDirect } from './session-manager.js';
+import { resolveSession, writeSessionMessage, writeOutboundDirect, openInboundDb } from './session-manager.js';
 import { wakeContainer } from './container-runner.js';
+import { getDeliveryAdapter } from './delivery.js';
 import { getSession } from './db/sessions.js';
 import type { AgentGroup, MessagingGroup, MessagingGroupAgent } from './types.js';
 import type { InboundEvent } from './channels/adapter.js';
@@ -473,6 +475,14 @@ async function deliverToAgent(
     // Typing indicator + wake are only for the engaged branch; accumulated
     // messages sit silently until a real trigger fires.
     startTypingRefresh(session.id, session.agent_group_id, event.channelType, event.platformId, event.threadId);
+
+    // Telegram status feedback: add 👀 reaction on the inbound message and
+    // store the sentinel so the delivery loop can clean up later.
+    // Fire-and-forget — best-effort, never blocks wake.
+    void addTelegramAcknowledgement(session, event).catch((err) =>
+      log.warn('addTelegramAcknowledgement threw unexpectedly', { sessionId: session.id, err }),
+    );
+
     const freshSession = getSession(session.id);
     if (freshSession) {
       const woke = await wakeContainer(freshSession);
@@ -493,4 +503,56 @@ async function deliverToAgent(
 function messageIdForAgent(baseId: string | undefined, agentGroupId: string): string {
   const id = baseId && baseId.length > 0 ? baseId : generateId();
   return `${id}:${agentGroupId}`;
+}
+
+/**
+ * Add a 👀 reaction to the user's inbound message and store the platform
+ * message ID under `__reaction_msg__` sentinel in inbound.db so the delivery
+ * loop can remove it when the real answer arrives.
+ *
+ * Telegram-only. Best-effort — failures are logged but never rethrown.
+ */
+async function addTelegramAcknowledgement(
+  session: { id: string; agent_group_id: string },
+  event: InboundEvent,
+): Promise<void> {
+  if (!event.channelType.startsWith('telegram')) return;
+  // Skip if there is no inbound platform message id to react to
+  if (!event.message.id) return;
+
+  const adapter = getDeliveryAdapter();
+  if (!adapter) return;
+
+  // Add 👀 reaction to the user's inbound message
+  try {
+    await adapter.deliver(
+      event.channelType,
+      event.platformId,
+      event.threadId,
+      'chat',
+      JSON.stringify({ operation: 'reaction', messageId: event.message.id, emoji: '👀' }),
+    );
+  } catch (err) {
+    log.warn('addTelegramAcknowledgement: reaction delivery failed', {
+      sessionId: session.id,
+      messageId: event.message.id,
+      err,
+    });
+  }
+
+  // Store the inbound message ID under __reaction_msg__ sentinel
+  try {
+    const inDb = openInboundDb(session.agent_group_id, session.id);
+    try {
+      migrateDeliveredTable(inDb);
+      upsertStatusSentinel(inDb, '__reaction_msg__', event.message.id);
+    } finally {
+      inDb.close();
+    }
+  } catch (err) {
+    log.warn('addTelegramAcknowledgement: failed to store __reaction_msg__ sentinel', {
+      sessionId: session.id,
+      err,
+    });
+  }
 }

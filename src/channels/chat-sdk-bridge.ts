@@ -368,6 +368,27 @@ export function createChatSdkBridge(config: ChatSdkBridgeConfig): ChannelAdapter
         return;
       }
 
+      if (content.operation === 'delete' && content.messageId) {
+        try {
+          await adapter.deleteMessage(tid, content.messageId as string);
+        } catch (err) {
+          log.warn('chat-sdk-bridge: deleteMessage failed (best-effort)', { tid, messageId: content.messageId, err });
+        }
+        return;
+      }
+
+      if (content.operation === 'remove_reaction' && content.messageId) {
+        try {
+          // removeReaction requires an emoji argument; pass '👀' as the default
+          // for the status-feedback reaction (the caller controls which emoji was added).
+          const emoji = (content.emoji as string | undefined) ?? '👀';
+          await adapter.removeReaction(tid, content.messageId as string, emoji);
+        } catch (err) {
+          log.warn('chat-sdk-bridge: removeReaction failed (best-effort)', { tid, messageId: content.messageId, err });
+        }
+        return;
+      }
+
       // Ask question card — render as Card with buttons
       if (content.type === 'ask_question' && content.questionId && content.options) {
         const questionId = content.questionId as string;

@@ -31,19 +31,24 @@ import fs from 'fs';
 
 import { getActiveSessions } from './db/sessions.js';
 import { getAgentGroup } from './db/agent-groups.js';
+import { getMessagingGroup } from './db/messaging-groups.js';
 import {
   countDueMessages,
   getContainerState,
   getMessageForRetry,
   getProcessingClaims,
   markMessageFailed,
+  migrateDeliveredTable,
   retryWithBackoff,
   syncProcessingAcks,
+  getStatusSentinel,
+  clearStatusSentinels,
   type ContainerState,
 } from './db/session-db.js';
 import { log } from './log.js';
 import { openInboundDb, openOutboundDb, inboundDbPath, heartbeatPath } from './session-manager.js';
 import { isContainerRunning, killContainer, wakeContainer } from './container-runner.js';
+import { getDeliveryAdapter } from './delivery.js';
 import type { Session } from './types.js';
 
 const SWEEP_INTERVAL_MS = 60_000;
@@ -196,7 +201,7 @@ async function sweepSession(session: Session): Promise<void> {
 
     // 3. Running-container SLA: absolute ceiling + per-claim stuck rules.
     if (alive && outDb) {
-      enforceRunningContainerSla(inDb, outDb, session, agentGroup.id);
+      await enforceRunningContainerSla(inDb, outDb, session, agentGroup.id);
     }
 
     // 4. Crashed-container cleanup: processing rows left behind get retried.
@@ -204,6 +209,7 @@ async function sweepSession(session: Session): Promise<void> {
     // or wake failed). resetStuckProcessingRows itself is idempotent — it
     // skips messages already scheduled for a future retry.
     if (!alive && outDb) {
+      await sweepTelegramStatusOnCrash(inDb, session);
       resetStuckProcessingRows(inDb, outDb, session, 'container not running');
     }
 
@@ -232,12 +238,98 @@ function bashTimeoutMs(state: ContainerState | null): number | null {
   return typeof state.tool_declared_timeout_ms === 'number' ? state.tool_declared_timeout_ms : null;
 }
 
-function enforceRunningContainerSla(
+/**
+ * Telegram status feedback: when a container is being killed (stuck/ceiling),
+ * edit the status message to "❌ Something went wrong" and remove the 👀
+ * reaction. Best-effort — failures are logged but never thrown.
+ *
+ * Also used when the container has already crashed (not running path).
+ */
+async function sweepTelegramStatusOnKill(inDb: Database.Database, session: Session): Promise<void> {
+  await sweepTelegramStatusMessage(inDb, session, '❌ Something went wrong');
+}
+
+async function sweepTelegramStatusOnCrash(inDb: Database.Database, session: Session): Promise<void> {
+  await sweepTelegramStatusMessage(inDb, session, '❌ Something went wrong');
+}
+
+async function sweepTelegramStatusMessage(
+  inDb: Database.Database,
+  session: Session,
+  errorText: string,
+): Promise<void> {
+  const adapter = getDeliveryAdapter();
+  if (!adapter) return;
+
+  // Resolve the session's channel type and platform ID via its messaging group
+  if (!session.messaging_group_id) return;
+  const mg = getMessagingGroup(session.messaging_group_id);
+  if (!mg || !mg.channel_type?.startsWith('telegram')) return;
+  if (!mg.platform_id) return;
+
+  migrateDeliveredTable(inDb);
+
+  const statusMsgId = getStatusSentinel(inDb, '__status_msg__');
+  const reactionMsgId = getStatusSentinel(inDb, '__reaction_msg__');
+
+  if (!statusMsgId && !reactionMsgId) return;
+
+  const threadId = session.thread_id ?? null;
+
+  // Edit the status message to show error text
+  if (statusMsgId) {
+    try {
+      await adapter.deliver(
+        mg.channel_type,
+        mg.platform_id,
+        threadId,
+        'chat',
+        JSON.stringify({ operation: 'edit', messageId: statusMsgId, text: errorText }),
+      );
+      log.debug('Sweep: status message updated to error', { sessionId: session.id, messageId: statusMsgId });
+    } catch (err) {
+      log.warn('sweepTelegramStatusMessage: edit failed (best-effort)', {
+        sessionId: session.id,
+        messageId: statusMsgId,
+        err,
+      });
+    }
+  }
+
+  // Remove the 👀 reaction
+  if (reactionMsgId) {
+    try {
+      await adapter.deliver(
+        mg.channel_type,
+        mg.platform_id,
+        threadId,
+        'chat',
+        JSON.stringify({ operation: 'remove_reaction', messageId: reactionMsgId, emoji: '👀' }),
+      );
+      log.debug('Sweep: reaction removed', { sessionId: session.id, messageId: reactionMsgId });
+    } catch (err) {
+      log.warn('sweepTelegramStatusMessage: remove_reaction failed (best-effort)', {
+        sessionId: session.id,
+        messageId: reactionMsgId,
+        err,
+      });
+    }
+  }
+
+  // Clear sentinels
+  try {
+    clearStatusSentinels(inDb);
+  } catch (err) {
+    log.warn('sweepTelegramStatusMessage: clearStatusSentinels failed', { sessionId: session.id, err });
+  }
+}
+
+async function enforceRunningContainerSla(
   inDb: Database.Database,
   outDb: Database.Database,
   session: Session,
   agentGroupId: string,
-): void {
+): Promise<void> {
   const decision = decideStuckAction({
     now: Date.now(),
     heartbeatMtimeMs: heartbeatMtimeMs(agentGroupId, session.id),
@@ -253,6 +345,8 @@ function enforceRunningContainerSla(
       heartbeatAgeMs: decision.heartbeatAgeMs,
       ceilingMs: decision.ceilingMs,
     });
+    // Telegram status feedback: update status message before killing
+    await sweepTelegramStatusOnKill(inDb, session);
     killContainer(session.id, 'absolute-ceiling');
     resetStuckProcessingRows(inDb, outDb, session, 'absolute-ceiling');
     return;
@@ -264,6 +358,8 @@ function enforceRunningContainerSla(
     claimAgeMs: decision.claimAgeMs,
     toleranceMs: decision.toleranceMs,
   });
+  // Telegram status feedback: update status message before killing
+  await sweepTelegramStatusOnKill(inDb, session);
   killContainer(session.id, 'claim-stuck');
   resetStuckProcessingRows(inDb, outDb, session, 'claim-stuck');
 }

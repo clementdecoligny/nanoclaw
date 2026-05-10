@@ -19,6 +19,9 @@ import {
   markDelivered,
   markDeliveryFailed,
   migrateDeliveredTable,
+  getStatusSentinel,
+  upsertStatusSentinel,
+  clearStatusSentinels,
 } from './db/session-db.js';
 import { log } from './log.js';
 import { normalizeOptions } from './channels/ask-question.js';
@@ -179,15 +182,33 @@ async function drainSession(session: Session): Promise<void> {
     const allDue = getDueOutboundMessages(outDb);
     if (allDue.length === 0) return;
 
-    // Filter out already-delivered messages using inbound.db's delivered table
-    const delivered = getDeliveredIds(inDb);
-    const undelivered = allDue.filter((m) => !delivered.has(m.id));
-    if (undelivered.length === 0) return;
-
-    // Ensure platform_message_id column exists (migration for existing sessions)
+    // Ensure platform_message_id column exists (migration for existing sessions).
+    // Hoisted before the loop so sentinel reads/writes below work on all sessions.
     migrateDeliveredTable(inDb);
 
+    // Filter out already-delivered messages using inbound.db's delivered table.
+    // Status rows bypass this guard — they must be re-processed every tick to
+    // edit the pinned status message in place. We still mark them delivered after
+    // processing so they don't replay after restart; the guard just doesn't
+    // pre-filter them out here.
+    const delivered = getDeliveredIds(inDb);
+    const undelivered = allDue.filter((m) => m.kind === 'status' || !delivered.has(m.id));
+    if (undelivered.length === 0) return;
+
     for (const msg of undelivered) {
+      // Status messages: edit/create the pinned status message in Telegram.
+      // Do NOT throw on failure — best-effort, mark delivered so we don't loop.
+      if (msg.kind === 'status') {
+        if (msg.channel_type?.startsWith('telegram')) {
+          await deliverStatusMessage(msg, session, inDb);
+        }
+        // Always mark delivered (even for non-Telegram sessions) so the row
+        // doesn't sit in the queue forever.
+        markDelivered(inDb, msg.id, null);
+        deliveryAttempts.delete(msg.id);
+        continue;
+      }
+
       try {
         const platformMsgId = await deliverMessage(msg, session, inDb);
         markDelivered(inDb, msg.id, platformMsgId ?? null);
@@ -201,6 +222,13 @@ async function drainSession(session: Session): Promise<void> {
         // shouldn't get a gap in their typing indicator for them.
         if (msg.kind !== 'system' && msg.channel_type !== 'agent') {
           pauseTypingRefreshAfterDelivery(session.id);
+        }
+
+        // Telegram status feedback cleanup: when a real chat message is
+        // delivered to the user, delete the status message and remove the
+        // 👀 reaction. Gated on Telegram channel type.
+        if (msg.channel_type?.startsWith('telegram') && msg.kind !== 'system') {
+          await cleanupTelegramStatusFeedback(msg, session, inDb);
         }
       } catch (err) {
         const attempts = (deliveryAttempts.get(msg.id) ?? 0) + 1;
@@ -228,6 +256,169 @@ async function drainSession(session: Session): Promise<void> {
   } finally {
     outDb.close();
     inDb.close();
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Telegram status feedback helpers
+// ---------------------------------------------------------------------------
+
+/**
+ * Map a status phase string to a display string with an emoji prefix.
+ * Used for the status message shown while the agent is working.
+ */
+function formatStatusText(phase: string): string {
+  const icons: Record<string, string> = {
+    'Running command': '⚙️',
+    'Reading/writing files': '📂',
+    'Browsing the web': '🌐',
+  };
+  const icon = Object.entries(icons).find(([k]) => phase.startsWith(k))?.[1] ?? '🔄';
+  return `${icon} ${phase}`;
+}
+
+/**
+ * Deliver a `kind='status'` outbound message by editing (or creating) a
+ * single pinned status message in Telegram.
+ *
+ * Strategy:
+ *   - If `__status_msg__` sentinel exists: edit the existing message.
+ *   - Otherwise: send a new message and store its platform ID as `__status_msg__`.
+ *
+ * Best-effort: failures are logged but never thrown (the row is always
+ * marked delivered by the caller so it doesn't replay).
+ */
+async function deliverStatusMessage(
+  msg: {
+    id: string;
+    channel_type: string | null;
+    platform_id: string | null;
+    thread_id: string | null;
+    content: string;
+  },
+  session: Session,
+  inDb: Database.Database,
+): Promise<void> {
+  if (!deliveryAdapter) return;
+  if (!msg.channel_type || !msg.platform_id) return;
+
+  let content: { phase?: string };
+  try {
+    content = JSON.parse(msg.content) as { phase?: string };
+  } catch {
+    return;
+  }
+
+  const phase = content.phase ?? 'Working…';
+  const text = formatStatusText(phase);
+
+  const existingStatusMsgId = getStatusSentinel(inDb, '__status_msg__');
+
+  if (existingStatusMsgId) {
+    // Edit existing status message in place
+    try {
+      await deliveryAdapter.deliver(
+        msg.channel_type,
+        msg.platform_id,
+        msg.thread_id,
+        'chat',
+        JSON.stringify({ operation: 'edit', messageId: existingStatusMsgId, text }),
+      );
+      log.debug('Status message edited', { sessionId: session.id, messageId: existingStatusMsgId, text });
+    } catch (err) {
+      log.warn('deliverStatusMessage: edit failed (best-effort)', {
+        sessionId: session.id,
+        messageId: existingStatusMsgId,
+        err,
+      });
+    }
+  } else {
+    // Send a new status message and store its platform ID
+    try {
+      const platformMsgId = await deliveryAdapter.deliver(
+        msg.channel_type,
+        msg.platform_id,
+        msg.thread_id,
+        'chat',
+        JSON.stringify({ text }),
+      );
+      if (platformMsgId) {
+        upsertStatusSentinel(inDb, '__status_msg__', platformMsgId);
+        log.debug('Status message created', { sessionId: session.id, platformMsgId, text });
+      }
+    } catch (err) {
+      log.warn('deliverStatusMessage: send failed (best-effort)', { sessionId: session.id, err });
+    }
+  }
+}
+
+/**
+ * Clean up Telegram status feedback after the real answer is delivered.
+ *
+ * Deletes the status message and removes the 👀 reaction from the user's
+ * inbound message. Clears both sentinel rows from the delivered table.
+ * Best-effort: individual failures are logged but never thrown.
+ */
+async function cleanupTelegramStatusFeedback(
+  msg: {
+    channel_type: string | null;
+    platform_id: string | null;
+    thread_id: string | null;
+  },
+  session: Session,
+  inDb: Database.Database,
+): Promise<void> {
+  if (!deliveryAdapter) return;
+  if (!msg.channel_type || !msg.platform_id) return;
+
+  const statusMsgId = getStatusSentinel(inDb, '__status_msg__');
+  const reactionMsgId = getStatusSentinel(inDb, '__reaction_msg__');
+
+  if (!statusMsgId && !reactionMsgId) return;
+
+  // Delete the status message
+  if (statusMsgId) {
+    try {
+      await deliveryAdapter.deliver(
+        msg.channel_type,
+        msg.platform_id,
+        msg.thread_id,
+        'chat',
+        JSON.stringify({ operation: 'delete', messageId: statusMsgId }),
+      );
+      log.debug('Status message deleted', { sessionId: session.id, messageId: statusMsgId });
+    } catch (err) {
+      log.warn('cleanupTelegramStatusFeedback: delete status msg failed (best-effort)', {
+        sessionId: session.id,
+        err,
+      });
+    }
+  }
+
+  // Remove the 👀 reaction from the user's inbound message
+  if (reactionMsgId) {
+    try {
+      await deliveryAdapter.deliver(
+        msg.channel_type,
+        msg.platform_id,
+        msg.thread_id,
+        'chat',
+        JSON.stringify({ operation: 'remove_reaction', messageId: reactionMsgId, emoji: '👀' }),
+      );
+      log.debug('Reaction removed', { sessionId: session.id, messageId: reactionMsgId });
+    } catch (err) {
+      log.warn('cleanupTelegramStatusFeedback: remove reaction failed (best-effort)', {
+        sessionId: session.id,
+        err,
+      });
+    }
+  }
+
+  // Clear both sentinels from the delivered table
+  try {
+    clearStatusSentinels(inDb);
+  } catch (err) {
+    log.warn('cleanupTelegramStatusFeedback: clearStatusSentinels failed', { sessionId: session.id, err });
   }
 }
 
@@ -279,7 +470,14 @@ async function deliverMessage(
           Array.isArray(content.files) && content.files.length > 0
             ? readOutboxFiles(session.agent_group_id, session.id, msg.id, content.files as string[])
             : undefined;
-        return await deliveryAdapter.deliver(realMg.channel_type, realMg.platform_id, null, msg.kind, msg.content, files);
+        return await deliveryAdapter.deliver(
+          realMg.channel_type,
+          realMg.platform_id,
+          null,
+          msg.kind,
+          msg.content,
+          files,
+        );
       }
     }
   }

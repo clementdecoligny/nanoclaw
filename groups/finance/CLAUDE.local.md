@@ -40,13 +40,27 @@ Use `mcp__nanoclaw__send_document` to send files (receipts, exports, reports) di
 
 ## RULE: Always Use Python Scripts for Calculations
 
-**Never compute numbers directly.** For any calculation — salary, totals, aggregations, projections — run the appropriate Python script and read back the result.
+**Never compute numbers using in-model reasoning.** For any calculation — salary, totals, aggregations, averages, projections, counts — always run Python and report stdout verbatim. This applies to both pre-built scripts and ad-hoc queries.
+
+### Pre-built scripts
 
 The finance scripts are at `/workspace/agent/finance/`. Available Python scripts:
 - `salary.py` — Branca salary breakdown
 - `excel_parser.py` — parse ActivoBank Excel files into JSON
 - `categorizer.py` — hybrid exact-match + Claude categorization
 - `excel_writer.py` — write categorized JSON back to .xlsx
+- `income_writer.py` — write monthly income entries to .xlsx with joint contribution split
+
+### Ad-hoc calculations
+
+When no pre-built script covers the query (e.g. "average groceries over 4 months", "total holidays spend this year"):
+
+1. Write a script to `/tmp/calc_<unix_timestamp>.py`
+2. Run it: `/opt/wpenv/bin/python3 /tmp/calc_<unix_timestamp>.py`
+3. Report the stdout output verbatim to Clément
+4. If it errors, fix and retry once — if it still fails, report the error
+
+Only use `/opt/wpenv/bin/python3` — do not attempt to install packages. Available libraries: openpyxl + Python stdlib.
 
 Python interpreter: `/opt/wpenv/bin/python3`
 
@@ -67,6 +81,85 @@ On the 1st of each month, send:
 > "Nouveau mois qui commence ! Pense à m'envoyer les deux relevés d'ActivoBank (compte perso et compte commun) afin que je puisse classer les dépenses du [mois précédent]."
 
 Schedule this as a recurring task (day 1 of each month) using `mcp__nanoclaw__schedule_message` on your first run if not already set up.
+
+### Step 0 — Collect monthly income (run BEFORE receiving bank exports)
+
+Each month, collect income before processing expense files. Income is entered manually.
+
+**Income taxonomy — valid Type values:**
+- SALARY — regular monthly net salary
+- FOOD — subsidio de alimentacao (cartao de alimentacao — not in bank statement)
+- EDUCATION — school / training allowances
+- LICENCA — parental leave pay
+- BONUS — one-off performance bonus
+- HOLIDAY — holiday pay (subsídio de férias paid as lump sum)
+- IRS — tax refund (typically Joint)
+
+**Who values:** Clément, Lola, Joint
+
+**Flow:**
+
+1. Open: "Avant de traiter les relevés, dis-moi les revenus du mois."
+2. Collect income lines per person — ask Clément first, then Lola, then Joint if any.
+3. Always ask explicitly: "Et le subsidio de alimentacao — montant pour Clément ? Pour Lola ?"
+4. Ask if any LICENCA, BONUS, HOLIDAY, EDUCATION, or IRS lines to add.
+5. Reject negative amounts: "Un revenu ne peut pas être négatif — tu veux dire une dépense ?"
+6. Reject unknown Type values — show the valid list above.
+7. Warn on duplicates (same Type/date/Who) and ask to confirm before adding.
+8. Always prompt for FOOD before finalising even if user says "ok" early.
+9. Build `/tmp/income.json`:
+
+```json
+{
+  "year": YYYY,
+  "month": MM,
+  "entries": [
+    {"date": "YYYY-MM-DD", "who": "Clément", "value": 3898.63, "type": "SALARY"},
+    {"date": "YYYY-MM-DD", "who": "Clément", "value": 183.60,  "type": "FOOD"},
+    {"date": "YYYY-MM-DD", "who": "Lola",    "value": 2193.00, "type": "SALARY"},
+    {"date": "YYYY-MM-DD", "who": "Lola",    "value": 234.00,  "type": "FOOD"}
+  ],
+  "joint_target": 4500.00
+}
+```
+
+10. Run:
+```bash
+/opt/wpenv/bin/python3 /workspace/agent/finance/income_writer.py   --input /tmp/income.json   --output /tmp/YYYY-MM-revenus.xlsx
+```
+The script prints a JSON summary to stdout — use it for the chat message.
+
+11. Send the file:
+```
+mcp__nanoclaw__send_document(file_path="/tmp/YYYY-MM-revenus.xlsx", caption="Revenus — [mois] [année]")
+```
+
+12. Send the contribution summary in chat (use stdout values from step 10):
+```
+*Revenus — [mois] [année]*
+
+• Clément : €X.XXX,XX  →  part compte commun : €X.XXX,XX
+• Lola : €X.XXX,XX  →  part compte commun : €X.XXX,XX
+• Joint : €X (si applicable)
+
+Total : €X.XXX,XX — Objectif compte commun : €4.500,00
+Excédent : +€XXX,XX
+```
+If shortfall (surplus < 0): prefix with ⚠️ and show the shortfall amount.
+
+13. Wait for confirmation ("ok", "confirme", "c'est bon", "parfait", "enregistre").
+
+14. After confirmation:
+```bash
+cp /tmp/YYYY-MM-revenus.xlsx /workspace/agent/finance/historical/YYYY-MM-revenus.xlsx
+```
+
+15. Continue to Step 1 (parse bank exports).
+
+**Edge cases:**
+- File already exists for that month → warn: "Un fichier de revenus existe déjà pour YYYY-MM — écraser ?" and wait for confirmation before overwriting.
+- One person has €0 income → valid; ask to confirm explicitly before closing.
+- User wants to correct after confirming → not supported; restart with "recommencer les revenus".
 
 ### Receiving Bank Exports
 
