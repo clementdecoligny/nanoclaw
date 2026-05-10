@@ -540,12 +540,15 @@ async function addTelegramAcknowledgement(
     });
   }
 
-  // Store the inbound message ID under __reaction_msg__ sentinel
+  // Store the inbound message ID under __reaction_msg__ sentinel and clear
+  // any stale __status_msg__ from a previous turn so the next status update
+  // creates a fresh message rather than editing a stale one.
   try {
     const inDb = openInboundDb(session.agent_group_id, session.id);
     try {
       migrateDeliveredTable(inDb);
       upsertStatusSentinel(inDb, '__reaction_msg__', event.message.id);
+      inDb.prepare("DELETE FROM delivered WHERE message_out_id = '__status_msg__'").run();
     } finally {
       inDb.close();
     }

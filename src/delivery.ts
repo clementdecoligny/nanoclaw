@@ -326,11 +326,15 @@ async function deliverStatusMessage(
       );
       log.debug('Status message edited', { sessionId: session.id, messageId: existingStatusMsgId, text });
     } catch (err) {
-      log.warn('deliverStatusMessage: edit failed (best-effort)', {
-        sessionId: session.id,
-        messageId: existingStatusMsgId,
-        err,
-      });
+      // Telegram rejects edits when the text hasn't changed — not a real error.
+      const msg2 = err instanceof Error ? err.message : String(err);
+      if (!msg2.includes('message is not modified')) {
+        log.warn('deliverStatusMessage: edit failed (best-effort)', {
+          sessionId: session.id,
+          messageId: existingStatusMsgId,
+          err,
+        });
+      }
     }
   } else {
     // Send a new status message and store its platform ID
