@@ -41,7 +41,7 @@
   },
   "COMPRA 8778 HOTEL LAS BOVEDAS BADAJ CONTACTLESS": {
     "category": "HOLIDAY",
-    "sub_category": "HOTELS"
+    "sub_category": "FOOD"
   },
   "COMPRA 8778 EST SERVICO PETROLEOS EXTREMADURA B": {
     "category": "VOITURE",
@@ -64,8 +64,8 @@
     "sub_category": "SUPER"
   },
   "COMPRA 8551 BOL QUEIJAS": {
-    "category": "GROCERIES",
-    "sub_category": "SUPER"
+    "category": "LEISURE",
+    "sub_category": "CONCERT"
   },
   "COMPRA 8778 COOLTRA BARCELONA ES": {
     "category": "MOBILITY",
@@ -132,8 +132,8 @@
     "sub_category": "SUPER"
   },
   "TRF MB WAY P/ MARIA LUCIA VELASCO ARBOLI": {
-    "category": "BABYSITTING",
-    "sub_category": "BABYSITTING"
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
   },
   "COMPRA 8778 MD CLINICA LISBOA PT    CONTACTLESS": {
     "category": "HEALTH",
@@ -172,8 +172,8 @@
     "sub_category": "SPOTIFY"
   },
   "COMPRA 8778 ATL?TICO CLUBE DE PORTU CONTACTLESS": {
-    "category": "KIDS",
-    "sub_category": "PISCINA"
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
   },
   "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS": {
     "category": "GROCERIES",
@@ -200,8 +200,8 @@
     "sub_category": "RESTAURANT"
   },
   "COMPRA 8551 ATL?TICO CLUBE DE PORTU CONTACTLESS": {
-    "category": "KIDS",
-    "sub_category": "PISCINA"
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
   },
   "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS": {
     "category": "GROCERIES",
@@ -220,8 +220,8 @@
     "sub_category": "TRANSFER"
   },
   "COMPRA 8551 FARM JARDIM REAL LISBOA CONTACTLESS": {
-    "category": "GROCERIES",
-    "sub_category": "SUPER"
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
   },
   "TRF MB WAY P/ INES DE SOUSA FERREIRA JORGE": {
     "category": "INCOME",
@@ -252,8 +252,8 @@
     "sub_category": "LEISURE"
   },
   "COMPRA 8551 TREEGO SOURDOUGH LDA 80 CONTACTLESS": {
-    "category": "EAT OUT",
-    "sub_category": "BACKERY"
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
   },
   "COMPRA 8551 MA SARAIVA CARVALHO LIS CONTACTLESS": {
     "category": "GROCERIES",
@@ -330,5 +330,73 @@
   "DD CNN            00001396672    PT40102031": {
     "category": "KIDS",
     "sub_category": "PISCINA"
+  },
+  "TRF MB WAY P/ CAROLINA CAMPELO DIAS AMARAL": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "TRF P/ SAS SALLETAZ": {
+    "category": "HOLIDAY",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 Lagardere Fil. 224 Fran CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 8551 EQUAL FOOD, LDA. LISBOA PT": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 TGTG 2kfqv6zhhf590 Copenhagen DK": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 JOAO BARBOSA NUTRIHESANTO TIRSO": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "TRF MB WAY P/ ASSOCIACAO B FREGUESIA ENCARNACAO": {
+    "category": "KIDS",
+    "sub_category": "MISC"
+  },
+  "TRF MB WAY P/ PAULO COSTA DOMINGOS": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 VEDETA POSITIVA LISBOA": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 LUGAR PROTAGONISTA LISBOA": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 TGTG jzc1ssajvcwg0 Copenhagen DK": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8778 PQ EST ALCANTARA RIO LI CONTACTLESS": {
+    "category": "VOITURE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8778 ARMAN AMAN LISBOA PT    CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF MB WAY P/ MARIANA M LOPES": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "TRF MB WAY P/ MARTA MAGALHAES MARQUES DE AGUIAR": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8778 Glovo GLOVO PRIME Lisbon ES": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER ONLINE"
+  },
+  "COMPRA 8551 VASCO PINTO LDA VILA MA CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
   }
 }

@@ -2,43 +2,44 @@
   "period": "2026-04",
   "personal": {
     "expenses": {
-      "HOLIDAY": 135.58999999999997,
-      "MISC": 147.54000000000002,
-      "UNCLASSIFIED": 29.0,
+      "MISC": 4.49,
       "LEISURE": 557.94,
+      "EAT OUT": 10.399999999999999,
       "MOBILITY": 31.25,
       "HOUSE": 2.99,
-      "EAT OUT": 8.6
+      "LIABILITY": 138.9
     },
     "income": {
       "OTHER": 16.04,
-      "REIMBURSEMENT": 525.1899999999999,
       "SALARY": 3069.74,
-      "TRANSFER": 110.0
+      "GIFT": 110.0
     },
-    "transaction_count": 33
+    "transaction_count": 19,
+    "verified": true
   },
   "joint": {
     "expenses": {
-      "EMPREGADA": 1406.39,
-      "KIDS": 339.24,
-      "MISC": 329.79,
-      "BABYSITTING": 109.66,
+      "KIDS": 301.24,
+      "UNCLASSIFIED": 240.0,
+      "BABYSITTING": 94.0,
       "VOITURE": 308.15999999999997,
       "HOUSE": 291.47,
       "RENT": 1228.67,
       "HOLIDAY": 144.95,
-      "GROCERIES": 349.23,
+      "GROCERIES": 348.73,
+      "LEISURE": 26.11,
       "MOBILITY": 77.78,
-      "LEISURE": 10.0,
-      "CASH": 40.0,
-      "EAT OUT": 145.03,
-      "HEALTH": 184.47
+      "EMPREGADA": 756.5500000000001,
+      "EAT OUT": 181.45000000000002,
+      "HEALTH": 203.82,
+      "MISC": 46.730000000000004,
+      "CASH": 30.0
     },
     "income": {
-      "TRANSFER": 3606.0699999999997,
-      "REIMBURSEMENT": 15828.97
+      "TRANSFER": 3572.5,
+      "REIMBURSEMENT": 15811.73
     },
-    "transaction_count": 137
+    "transaction_count": 132,
+    "verified": true
   }
 }

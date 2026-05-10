@@ -32,16 +32,16 @@
     "sub_category": "TRANSPORT"
   },
   "STRIPE": {
-    "category": "INCOME",
-    "sub_category": "REIMBURSEMENT"
+    "category": "LEISURE",
+    "sub_category": "CONCERT"
   },
   "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL": {
     "category": "LEISURE",
-    "sub_category": "MISC"
+    "sub_category": "CONCERT"
   },
   "COMPRA 3883 NUCLEO MUSEOLOGICO POVO CONTACTLESS": {
     "category": "LEISURE",
-    "sub_category": "MISC"
+    "sub_category": "CONCERT"
   },
   "COMPRA 3883 LUFTHANSA RETAIL INMOT  CONTACTLESS": {
     "category": "HOLIDAY",
@@ -85,6 +85,14 @@
   },
   "MR OU MME ROUAULT COLIGNY MICHEL": {
     "category": "INCOME",
-    "sub_category": "TRANSFER"
+    "sub_category": "GIFT"
+  },
+  "COMPRA 3883 SANDRA M DOS SANTOS POV CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF P/ PARENTS SOGE": {
+    "category": "LIABILITY",
+    "sub_category": ""
   }
 }
