@@ -18,6 +18,11 @@ cd "$REPO_DIR"
 git add -f data/v2.dump.sql
 git add groups/
 
+# Back up per-agent-group shared settings (model overrides, env flags, etc.)
+find data/v2-sessions -name "settings.json" -path "*/.claude-shared/*" | while read -r f; do
+  git add -f "$f"
+done
+
 if git diff --cached --quiet; then
   echo "backup-db: nothing changed, skipping commit"
   exit 0
