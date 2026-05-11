@@ -55,3 +55,10 @@
 | 2026-05-01 | RECEIVED — Frango de muamba (Branca) | +1×~1.5kg | 1×~1.5kg congélateur | Batch Branca 01/05 |
 | 2026-05-01 | RECEIVED — Couve frita (Branca) | +1×~500g | 1×~500g congélateur | Batch Branca 01/05 |
 | 2026-05-03 | Esparregado (congélateur) | 1×700g | 0 | Consommé — famille n'a pas aimé, ne pas racheter |
+| 2026-05-11 | Salade verte | 1 tête | 0 | Jetée — pourrie avant utilisation |
+| 2026-05-11 | Berinjelas (aubergines) | 3 | 0 | Consommées batch Branca jeu 7 mai (berinjelas ao forno) — pas dans le log initial |
+| 2026-05-11 | Pavés de saumon | 2 pavés | 0 | Dîner lun 11/05 — non utilisés semaine passée contrairement au plan |
+| 2026-05-11 | Pasta (gemelli ou autre) | ~250g | — | Dîner lun 11/05 |
+| 2026-05-11 | Courgette | 1 | 1 restante | Dîner lun 11/05 — sautée |
+| 2026-05-11 | Œufs | ~37 | 0 | Tous jetés — plus bons |
+| 2026-05-11 | Préférence : pisto + riz | — | — | Clément et Lola aiment le pisto avec du riz en général |

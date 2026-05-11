@@ -40,8 +40,8 @@
       "value_date": "2026-04-01",
       "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
       "amount": -240.0,
-      "category": "UNCLASSIFIED",
-      "sub_category": "UNCLASSIFIED",
+      "category": "VOITURE",
+      "sub_category": "MECHANIC",
       "confidence": "verified",
       "account": "joint"
     },

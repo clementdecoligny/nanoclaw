@@ -1,9 +1,12 @@
 {
   "mcpServers": {},
   "packages": {
-    "apt": [],
+    "apt": [
+      "python3-openpyxl"
+    ],
     "npm": []
   },
+  "imageTag": "nanoclaw-agent-v2-3d096325:ag-1777719573240-ynm5lh",
   "additionalMounts": [
     {
       "hostPath": "groups/finance/finance",
