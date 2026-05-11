@@ -487,6 +487,15 @@ async function deliverMessage(
   // `agent_destinations` table won't exist and `routeAgentMessage`'s permission
   // check will throw, which falls into the normal retry → mark-failed path.
   if (msg.channel_type === 'agent') {
+    // UI-only operations (reaction, remove_reaction, edit, delete) are platform
+    // affordances that make no sense over a2a. Routing them would cause infinite
+    // loops when an agent reacts to an a2a message it just received (the reaction
+    // gets routed back to itself, waking it again). Drop them silently.
+    const operation = (content as Record<string, unknown>).operation as string | undefined;
+    if (operation === 'reaction' || operation === 'remove_reaction' || operation === 'edit' || operation === 'delete') {
+      log.debug('Dropping UI operation over a2a channel', { msgId: msg.id, operation });
+      return;
+    }
     if (!hasTable(getDb(), 'agent_destinations')) {
       throw new Error(`agent-to-agent module not installed — cannot route message ${msg.id}`);
     }
