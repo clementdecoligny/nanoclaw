@@ -156,44 +156,41 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ---
 
-## Fruit Bowl & Légumes frais (panier Equal Food livré 08/05)
+## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-05-08 — photos Lola (equal.food)_
+_Mis à jour 2026-05-13 — inventaire complet confirmé par Clément (2 photos)_
 
-### 🥦 Légumes (frigo) — Livraison Equal Food 08/05
-
-| Item | Quantité | Notes |
-|---|---|---|
-| Salade verte | 1 tête | Repas semaine |
-| Courgettes | 2 | Utilisation semaine |
-| Concombres | 2 | Salade |
-| Carottes | 2 | Utilisation semaine |
-| Tomates | 4 | Fraîches |
-| Oignons blancs/jaunes | Plusieurs | Utilisation semaine |
-| Puerros (poireaux) | 3–4 | Utilisation semaine |
-| Cebolletas (oignons frais) | Plusieurs | Utilisation semaine |
-| Ajo (ail) | 1 bulbe | Stock |
-| Remolacha (betterave) | 3–4 | Cuisson semaine |
-| Berenjenas (aubergines) | 3 | Utilisation semaine |
-| Repollo (chou) | 1/2 | Utilisation semaine |
-
-### 🧺 Légumes (hors frigo) — Livraison Equal Food 08/05
+### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes de terre | Varias grandes | Utilisation semaine |
+| Salade verte (frisée) | 1 tête | Achat local 12/05 |
+| Courgettes | 3 | Achat local 12/05 |
+| Concombre | 1 grand | Achat local 12/05 |
+| Carottes | 3 grandes | Achat local 12/05 |
+| Tomates | 4 | Achat local 12/05 |
+| Chou blanc | 1 tête entière | Achat local 12/05 |
+| Avocat | 1 | Achat local 12/05 |
+| Citron jaune | 1 | Achat local 12/05 (frigo) |
+| Limes | 2 | Achat local 12/05 (frigo) |
 
-### 🍊 Fruits — Livraison Equal Food 08/05
+### 🧺 Légumes & fruits (hors frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Bananas | 4 | |
-| Pommes | Mix rojo/dorado | Varias |
-| Oranges | 2 | Grandes |
-| Limones/Limas | 4 | Yellow + green |
-| Aguacates | 3–4 | Maduración |
-| Kiwis | 3–4 | |
-| Fresas | 1 canasta | Utilización rápida |
+| Pommes de terre | 3–4 moyennes | Achat local 12/05 |
+| Oignons jaunes | 2 | Achat local 12/05 |
+| Oignons rouges | 2 | Achat local 12/05 |
+| Ail | 2–3 bulbes | Achat local 12/05 |
+| Citrons jaunes | 3 | Achat local 12/05 (comptoir) |
+| Lime/citron vert | 1 grand | Achat local 12/05 (comptoir) |
+
+### 🍊 Fruits (corbeille)
+
+| Item | Quantité | Notes |
+|---|---|---|
+| Pommes | 4 (mix rouge/jaune) | Achat local 12/05 |
+| Banane | 1 | Achat local 12/05 |
 
 ---
 

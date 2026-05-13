@@ -13,8 +13,6 @@ logs/
 
 # Groups - track knowledge/memory, exclude ephemeral runtime files
 groups/*/logs/
-groups/*/.claude-fragments/
-groups/*/.claude-shared.md
 groups/*/.heartbeat-bootstrapped
 groups/*/HEARTBEAT.md
 groups/*/attachments/

@@ -62,3 +62,20 @@
 | 2026-05-11 | Courgette | 1 | 1 restante | Dîner lun 11/05 — sautée |
 | 2026-05-11 | Œufs | ~37 | 0 | Tous jetés — plus bons |
 | 2026-05-11 | Préférence : pisto + riz | — | — | Clément et Lola aiment le pisto avec du riz en général |
+| 2026-05-13 | ACHAT LOCAL — Courgettes | +2-3 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Concombre | +1 grand | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Tomates | +3-4 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Carottes | +3 grandes | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Salade verte (frisée) | +1 tête | — | Achat local mar 12/05 — remplace celle jetée |
+| 2026-05-13 | ACHAT LOCAL — Chou blanc | +1 tête entière | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Avocat | +1 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Citron jaune | +1 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Limes | +2 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Ail | +2-3 bulbes | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Oignons jaunes | +2 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Oignons rouges | +2 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Citrons jaunes | +3 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Citron vert (lime) | +1 grand | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Pommes de terre | +3-4 moyennes | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Pommes | +3-4 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT LOCAL — Banane | +1 | — | Achat local mar 12/05 |
