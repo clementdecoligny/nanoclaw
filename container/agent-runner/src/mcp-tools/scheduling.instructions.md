@@ -4,6 +4,24 @@ For any recurring task, use `schedule_task`. This is the scheduling path — tas
 
 To inspect or change existing tasks, use `list_tasks` (returns one row per series with the stable id) and `update_task` / `cancel_task` / `pause_task` / `resume_task`. Prefer `update_task` over cancel + reschedule.
 
+### Computing `processAfter` for day-of-week tasks
+
+When scheduling a task that targets a specific day of the week (e.g. `0 8 * * 1` = every Monday), **do not compute the next occurrence by mental arithmetic**. Use a bash one-liner to derive it:
+
+```bash
+# Example: next Monday at 08:00 local time
+python3 -c "
+from datetime import date, timedelta
+today = date.today()
+days_ahead = (0 - today.weekday()) % 7  # 0=Monday
+if days_ahead == 0: days_ahead = 7      # already today → next week
+d = today + timedelta(days=days_ahead)
+print(f'{d}T08:00:00')
+"
+```
+
+Run this first and use the printed date as `processAfter`. This avoids off-by-one errors that cause a Monday task to fire on Tuesday.
+
 Frequent recurring scheduled tasks — more than a few times a day — consume API credits and can risk account restrictions. You can add a `script` that runs first, and you will only be called when the check passes.
 
 ### How it works
