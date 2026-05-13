@@ -259,8 +259,7 @@ function buildMounts(
   // is the entire point of the heartbeat channel. The main .claude-shared
   // directory (and its conversation JSONL) is left untouched.
   const isHeartbeat =
-    !!session.messaging_group_id &&
-    getMessagingGroup(session.messaging_group_id)?.channel_type === 'heartbeat';
+    !!session.messaging_group_id && getMessagingGroup(session.messaging_group_id)?.channel_type === 'heartbeat';
 
   const claudeDir = isHeartbeat
     ? path.join(DATA_DIR, 'v2-sessions', agentGroup.id, '.claude-heartbeat-shared')
@@ -317,7 +316,7 @@ function buildMounts(
     mounts.push({ hostPath: fragmentsDir, containerPath: '/workspace/agent/.claude-fragments', readonly: true });
   }
 
-  // Global memory directory — read-write so executive (Alain) and pepa can both write to it.
+  // Global memory directory — read-write so alain and pepa can both write to it.
   const globalDir = path.join(GROUPS_DIR, 'global');
   if (fs.existsSync(globalDir)) {
     mounts.push({ hostPath: globalDir, containerPath: '/workspace/global', readonly: false });

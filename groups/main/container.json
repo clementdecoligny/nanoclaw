@@ -1,9 +1,0 @@
-{
-  "mcpServers": {},
-  "packages": {
-    "apt": [],
-    "npm": []
-  },
-  "additionalMounts": [],
-  "skills": "all"
-}
