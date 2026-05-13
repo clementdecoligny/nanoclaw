@@ -79,3 +79,8 @@
 | 2026-05-13 | ACHAT LOCAL — Pommes de terre | +3-4 moyennes | — | Achat local mar 12/05 |
 | 2026-05-13 | ACHAT LOCAL — Pommes | +3-4 | — | Achat local mar 12/05 |
 | 2026-05-13 | ACHAT LOCAL — Banane | +1 | — | Achat local mar 12/05 |
+| 2026-05-13 | ACHAT — Œufs | +6 | 6 | Achat local 13/05 |
+| 2026-05-13 | ACHAT — Thon 120g (boîtes) | +3 | ~6 total | Achat local 13/05 (3 existants + 3 nouveaux) |
+| 2026-05-13 | Crevettes épluchées | 200g | 0 | Absentes — non retrouvées au congélateur (Clément 13/05) |
+| 2026-05-13 | Bocal aubergines grillées Chtoura Garden | 1 bocal | 0 | Utilisé pour baba ganoush — dîner mer 13/05. À racheter (épicerie spécialisée) |
+| 2026-05-13 | Queijo Ricotta Granarolo | 1 | 0 | Plus en stock — consommée (date inconnue) |

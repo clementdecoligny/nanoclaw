@@ -141,12 +141,22 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 | Item | Qté | Notes |
 |---|---|---|
-| Miso paste | En stock | |
+| Miso paste (rouge/foncé) | En stock | Bocal entamé — utiliser moitié moins que miso blanc |
 | Filetes de Anchovas em Azeite Pitéu | 1 + 1 × 41g | 1 ancien + 1×41g Livraison 06/05 |
 | Tahini Claro Bio Continente | 1 × 225g | Livraison 06/05 |
 | Olives | En stock | |
 | Miel | En stock | |
 | Vinaigre | En stock | |
+| Sauce soja | 1 × 1L | Grande bouteille — ajouté 13/05 |
+| Sauce teriyaki | ~100ml | ½ bouteille — ajouté 13/05 |
+| Vinaigre de riz | ~500ml | ½ bouteille (~300ml) + 1 bouteille entière (200ml) — ajouté 13/05 |
+| Fish sauce (nuoc-mâm) | 200ml | Bouteille entière — ajouté 13/05 |
+| Worcestershire sauce | En stock | Vieille bouteille, encore bonne — ajouté 13/05 |
+| Molho inglês | ~100ml | Petit flacon — ajouté 13/05 |
+| Dumpling sauce | Presque terminée | Quelques cuillères restantes — ajouté 13/05 |
+| Huile de sésame | ~500ml | ½ litre — ajouté 13/05 |
+| Huile d'argan | ~100ml | Petit flacon — ajouté 13/05 |
+| Liquid smoke | ~100ml | Petit flacon — ajouté 13/05 |
 
 ### Divers
 
@@ -165,11 +175,11 @@ _Mis à jour 2026-05-13 — inventaire complet confirmé par Clément (2 photos)
 | Item | Quantité | Notes |
 |---|---|---|
 | Salade verte (frisée) | 1 tête | Achat local 12/05 |
-| Courgettes | 3 | Achat local 12/05 |
-| Concombre | 1 grand | Achat local 12/05 |
+| Courgette | 1 | Achat local 12/05 |
+| Concombres | 2 | Achat local 12/05 |
 | Carottes | 3 grandes | Achat local 12/05 |
 | Tomates | 4 | Achat local 12/05 |
-| Chou blanc | 1 tête entière | Achat local 12/05 |
+| Chou blanc | ½ tête | Achat local 12/05 |
 | Avocat | 1 | Achat local 12/05 |
 | Citron jaune | 1 | Achat local 12/05 (frigo) |
 | Limes | 2 | Achat local 12/05 (frigo) |
