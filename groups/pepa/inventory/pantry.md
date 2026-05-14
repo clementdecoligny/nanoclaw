@@ -168,39 +168,40 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-05-13 — inventaire complet confirmé par Clément (2 photos)_
+_Mis à jour 2026-05-14 — inventaire complet confirmé par Clément (panier Equal Food + stock existant)_
 
 ### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade verte (frisée) | 1 tête | Achat local 12/05 |
-| Courgette | 1 | Achat local 12/05 |
-| Concombres | 2 | Achat local 12/05 |
-| Carottes | 3 grandes | Achat local 12/05 |
-| Tomates | 4 | Achat local 12/05 |
-| Chou blanc | ½ tête | Achat local 12/05 |
-| Avocat | 1 | Achat local 12/05 |
-| Citron jaune | 1 | Achat local 12/05 (frigo) |
-| Limes | 2 | Achat local 12/05 (frigo) |
+| Salade verte | 2 têtes | 1 panier (⚠️ à manger vite) + 1 stock |
+| Courgettes | 3 | 2 panier + 1 stock |
+| Concombres | 2 | 1 panier + 1 stock |
+| Carottes | 7 | ~4 panier + 3 stock |
+| Tomate cœur de bœuf | 1 | Panier Equal Food 14/05 |
+| Tomates (petites) | ~3 | Stock — dont 1 peut-être entamée |
+| Chou vert | ½ tête | Stock — pour coleslaw |
 
 ### 🧺 Légumes & fruits (hors frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes de terre | 3–4 moyennes | Achat local 12/05 |
-| Oignons jaunes | 2 | Achat local 12/05 |
-| Oignons rouges | 2 | Achat local 12/05 |
-| Ail | 2–3 bulbes | Achat local 12/05 |
-| Citrons jaunes | 3 | Achat local 12/05 (comptoir) |
-| Lime/citron vert | 1 grand | Achat local 12/05 (comptoir) |
+| Poireau | ½ | ½ utilisé omelette déj 14/05 |
+| Pommes de terre | 7 | 4 panier + 3 stock |
+| Oignons jaunes | 2 + ½ | 2 entiers + ½ entamé |
+| Oignons rouges | 2 | Stock |
+| Ail | 3 têtes | 1 panier + 2 stock |
+| Citrons jaunes | 5 | 2 panier + 3 stock |
+| Citrons verts | 3 | Stock |
 
 ### 🍊 Fruits (corbeille)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes | 4 (mix rouge/jaune) | Achat local 12/05 |
-| Banane | 1 | Achat local 12/05 |
+| Pommes | 7 | 6 panier + 1 stock |
+| Poires | 3 | Panier Equal Food 14/05 |
+| Kiwis | 4 | Panier Equal Food 14/05 |
+| Bananes | 3 (petites) | Panier Equal Food 14/05 |
 
 ---
 
@@ -212,12 +213,12 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 12 × 1L | Livraison Continente 06/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 6 × 1kg | Livraison Continente 06/05 |
-| Œufs frais | ~37 | ~25 restants + 12 livraison Equal Food 08/05 |
+| Œufs frais | 6 | 6 utilisés omelette déj 14/05 |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
-| Boquerones en vinagre | 4 × 100g + 1 × 330g | ❤️ Clément loves with bread and butter. Preference noted. |
-| Feta cheese | 5 blocks | 3 existants + 2 achetés le 5/05 |
-| Queijo Ricotta Granarolo | 1 | Livraison 16/04 |
+| Boquerones en vinagre | 4 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ |
+| Feta cheese | 1 block | Confirmé Clément 14/05 |
+| Queijo Ricotta Granarolo | 0 | Consommé — à recomander (liste courses) |
 | Queijo Parmigiano Reggiano DOP Continente | 1 | Livraison 16/04 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Cooked pasta | ~500g | Batch cooking ✅ |
@@ -244,7 +245,8 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 2 × 1 tupperware | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
-| Frango de muamba (Branca) | 1 tupperware | Cuisiné 01/05 — 4 adultes, décongeler en 1 fois |
+| Soupe (type TBC) | 4 tupperwares | Confirmé Clément 14/05 — type à identifier |
+| Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
 | Curry de légumes (maison) | 2 × 900g | |
 | Légumes type ratatouille | 1 × 500g | |
@@ -260,7 +262,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 |---|---|---|
 | Thon à l'huile (Atum Açores CNT) | 3 × 120g | Acheté 14/04 |
 | Thon naturel (Atum Natural Auchan) | 2 × 385g | Acheté 15/04 |
-| Robalo entier (bar/loup de mer) | 1 × 400g + 1 × ~354g | 1 ancien + 1 frais Livraison Continente 06/05 (0.354kg) |
+| Robalo entier (bar/loup de mer) | 0 | Consommé — logué 14/05 |
 | Crevettes épluchées | 1 × 200g | |
 | Gula del Norte | 2 × 100g | |
 | Filets de merluza (merlu) | 1 × 400g | |

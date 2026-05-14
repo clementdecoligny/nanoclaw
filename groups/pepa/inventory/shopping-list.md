@@ -11,7 +11,13 @@ _Last updated: 2026-05-13_
 | Item | Qty | Unit | Category | Notes |
 |---|---|---|---|---|
 | Thon naturel | 3 | ×385g | Protéines | Stock bas |
-| Œufs | 12 | un | Produits frais | Stock bas (6 restants) |
+| Œufs | 12 | un | Produits frais | Stock bas (6 restants) — ⚠️ achat local uniquement |
+| Pan Bimbo sin corteza | 1 | pack | Enfants | Ajouté Lola 14/05 |
+| Zumitos Continente 100% fruta fresa y plátano | 2–3 | packs | Enfants | Ajouté Lola 14/05 |
+| Sopitas bio ready-to-eat (bebé) | 2–3 | units | Bébé | Ajouté Lola 14/05 |
+| Tahini | 1 | jar | Épicerie | Ajouté Lola 14/05 — 1 jar (~225g) déjà en stock, vérifier avant commande |
+| Ricotta | 1–2 | un | Produits laitiers | Stock à zéro |
+| Yaourt grec | 6 | ×1kg | Produits laitiers | Anticiper semaine parents (4 adultes) |
 
 ---
 
