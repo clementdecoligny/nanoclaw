@@ -11,7 +11,6 @@
  * so even if this table is stale the host's enforcement is authoritative.
  */
 import { getInboundDb } from './db/connection.js';
-import { getSessionRouting } from './db/session-routing.js';
 
 export interface DestinationEntry {
   name: string;
@@ -94,8 +93,6 @@ export function buildSystemPromptAddendum(assistantName?: string): string {
 
 function buildDestinationsSection(): string {
   const all = getAllDestinations();
-  const routing = getSessionRouting();
-  const isHeartbeat = routing.channel_type === 'heartbeat';
 
   if (all.length === 0) {
     return [
@@ -103,27 +100,6 @@ function buildDestinationsSection(): string {
       '',
       'You currently have no configured destinations. You cannot send messages until an admin wires one up.',
     ].join('\n');
-  }
-
-  // Heartbeat sessions require explicit blocks — plain text is never delivered.
-  // This mirrors the container-side enforcement: the runner drops all implicit
-  // output from heartbeat turns so silent_if_nothing is enforced by the
-  // infrastructure rather than relying solely on model instruction-following.
-  if (isHeartbeat) {
-    const lines = ['## Sending messages (heartbeat mode)', ''];
-    lines.push('**You are running in a scheduled heartbeat session.** Plain text output is treated as scratchpad and is NOT delivered to anyone — it is only logged internally.');
-    lines.push('');
-    lines.push('To send a message to a user or channel, you **must** use an explicit `<message to="name">...</message>` block. Only use this when the task genuinely requires notifying someone.');
-    lines.push('');
-    lines.push('Available destinations:');
-    lines.push('');
-    for (const d of all.filter((d) => d.channelType !== 'heartbeat')) {
-      const label = d.displayName && d.displayName !== d.name ? ` (${d.displayName})` : '';
-      lines.push(`- \`${d.name}\`${label}`);
-    }
-    lines.push('');
-    lines.push('To send mid-response, call the `send_message` MCP tool with a `to` parameter set to a destination name.');
-    return lines.join('\n');
   }
 
   // Single-destination shortcut: the agent just writes its response normally.

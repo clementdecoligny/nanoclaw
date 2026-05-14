@@ -25,7 +25,6 @@ import { CONTAINER_RUNTIME_BIN, hostGatewayArgs, readonlyMountArgs, stopContaine
 import { composeGroupClaudeMd } from './claude-md-compose.js';
 import { getAgentGroup } from './db/agent-groups.js';
 import { getDb, hasTable } from './db/connection.js';
-import { getMessagingGroup } from './db/messaging-groups.js';
 import { initGroupFilesystem } from './group-init.js';
 import { stopTypingRefresh } from './modules/typing/index.js';
 import { log } from './log.js';
@@ -254,27 +253,7 @@ function buildMounts(
   // is a no-op for groups that have spawned before.
   initGroupFilesystem(agentGroup);
 
-  // Heartbeat sessions get their own .claude-heartbeat-shared directory so
-  // each heartbeat run starts with no conversation history — fresh context
-  // is the entire point of the heartbeat channel. The main .claude-shared
-  // directory (and its conversation JSONL) is left untouched.
-  const isHeartbeat =
-    !!session.messaging_group_id && getMessagingGroup(session.messaging_group_id)?.channel_type === 'heartbeat';
-
-  const claudeDir = isHeartbeat
-    ? path.join(DATA_DIR, 'v2-sessions', agentGroup.id, '.claude-heartbeat-shared')
-    : path.join(DATA_DIR, 'v2-sessions', agentGroup.id, '.claude-shared');
-
-  // Bootstrap settings.json from the main shared dir on first heartbeat spawn
-  // so model selection (e.g. Haiku) and other user settings are inherited.
-  if (isHeartbeat) {
-    const mainSettingsSrc = path.join(DATA_DIR, 'v2-sessions', agentGroup.id, '.claude-shared', 'settings.json');
-    const heartbeatSettingsDst = path.join(claudeDir, 'settings.json');
-    if (fs.existsSync(mainSettingsSrc) && !fs.existsSync(heartbeatSettingsDst)) {
-      fs.mkdirSync(claudeDir, { recursive: true });
-      fs.copyFileSync(mainSettingsSrc, heartbeatSettingsDst);
-    }
-  }
+  const claudeDir = path.join(DATA_DIR, 'v2-sessions', agentGroup.id, '.claude-shared');
 
   // Sync skill symlinks based on container.json selection before mounting.
   syncSkillSymlinks(claudeDir, containerConfig);

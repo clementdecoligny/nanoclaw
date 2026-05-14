@@ -44,16 +44,6 @@ bash -c 'node --input-type=module -e "
 "'
 ```
 
-### HEARTBEAT.md tasks — update `last_run` immediately
-
-If your task was defined in `HEARTBEAT.md` (it has a `schedule:` and `last_run:` field), you **must** update `last_run` to the actual current UTC time at the start of every run, before doing any work. Use the system clock — never compute it by hand:
-
-```bash
-date -u +"%Y-%m-%dT%H:%M:%S.000Z"
-```
-
-Write the printed value into the `last_run:` field for the matching task in `HEARTBEAT.md`. If you skip this step, the next run will see a stale `last_run` and may generate content for the wrong day.
-
 ### When NOT to use scripts
 
 If a task requires your judgment every time (daily briefings, reminders, reports), skip the script — just use a regular prompt. Do not attempt to do things like sentiment analysis or advanced nlp in scripts.

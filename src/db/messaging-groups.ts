@@ -250,23 +250,3 @@ export function getMessagingGroupsByAgentGroup(agentGroupId: string): MessagingG
     )
     .all(agentGroupId) as MessagingGroup[];
 }
-
-/**
- * Resolve the primary real delivery channel for an agent group.
- * Used by heartbeat delivery to reroute output from the synthetic
- * heartbeat session to the agent's actual user-facing channel.
- *
- * Returns the highest-priority non-heartbeat messaging group wired
- * to the agent, or undefined if none exists.
- */
-export function getPrimaryDeliveryChannel(agentGroupId: string): MessagingGroup | undefined {
-  return getDb()
-    .prepare(
-      `SELECT mg.* FROM messaging_groups mg
-       JOIN messaging_group_agents mga ON mga.messaging_group_id = mg.id
-       WHERE mga.agent_group_id = ? AND mg.channel_type != 'heartbeat'
-       ORDER BY mga.priority DESC, mga.created_at ASC
-       LIMIT 1`,
-    )
-    .get(agentGroupId) as MessagingGroup | undefined;
-}

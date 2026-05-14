@@ -138,13 +138,6 @@ async function sweep(): Promise<void> {
   if (!running) return;
 
   try {
-    // Heartbeat: bootstrap new HEARTBEAT.md files + fire 24h fallback triggers.
-    // Runs before the per-session loop so newly-bootstrapped sessions are
-    // visible to getActiveSessions() on the same tick.
-    const { sweepHeartbeatBootstrap, sweepHeartbeatFallback } = await import('./heartbeat-bootstrap.js');
-    await sweepHeartbeatBootstrap();
-    await sweepHeartbeatFallback();
-
     const sessions = getActiveSessions();
     for (const session of sessions) {
       await sweepSession(session);
@@ -253,11 +246,7 @@ async function sweepTelegramStatusOnCrash(inDb: Database.Database, session: Sess
   await sweepTelegramStatusMessage(inDb, session, '❌ Something went wrong');
 }
 
-async function sweepTelegramStatusMessage(
-  inDb: Database.Database,
-  session: Session,
-  errorText: string,
-): Promise<void> {
+async function sweepTelegramStatusMessage(inDb: Database.Database, session: Session, errorText: string): Promise<void> {
   const adapter = getDeliveryAdapter();
   if (!adapter) return;
 
