@@ -26,6 +26,7 @@ _Last updated: 2026-05-13_
 | Item | Qty | Notes |
 |---|---|---|
 | Peeled and grilled eggplant (Chtoura Garden) | 1–2 bocaux | Pour baba ganoush — ajouté 13/05 sur demande Clément |
+| Tortillas grandes | 1 paquet | Terminées wraps 15/05 |
 
 ---
 

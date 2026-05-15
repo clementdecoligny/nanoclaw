@@ -223,6 +223,8 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Cooked pasta | ~500g | Batch cooking ✅ |
 | Cooked rice | ~500g | Batch cooking ✅ — renouveler demain |
+| Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au congélo |
+| Coleslaw (Branca) | 2 tupperwares | Batch 14/05 — sans sauce |
 
 ---
 
@@ -239,6 +241,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Boulettes de viande IKEA | 0 | Utilisées sam 18/04 — enfants |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
 | Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |
+| Pains de burger | 5 | Ajouté 15/05 |
 
 ### Légumes
 
@@ -246,6 +249,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 |---|---|---|
 | Feijoada angolana (Branca) | 2 × 1 tupperware | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
 | Soupe (type TBC) | 4 tupperwares | Confirmé Clément 14/05 — type à identifier |
+| Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
 | Curry de légumes (maison) | 2 × 900g | |
@@ -265,7 +269,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Robalo entier (bar/loup de mer) | 0 | Consommé — logué 14/05 |
 | Crevettes épluchées | 1 × 200g | |
 | Gula del Norte | 2 × 100g | |
-| Filets de merluza (merlu) | 1 × 400g | |
+| Filets de merluza (merlu) | 0 | Consommé wraps dîner 15/05 |
 | Pavés de saumon | 2 pavés | Taille TBC |
 
 ### Herbes
