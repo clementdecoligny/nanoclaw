@@ -222,8 +222,8 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Queijo Parmigiano Reggiano DOP Continente | 1 | Livraison 16/04 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Cooked pasta | ~500g | Batch cooking ✅ |
-| Cooked rice | ~500g | Batch cooking ✅ — renouveler demain |
-| Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au congélo |
+| Cooked rice | 0 | Terminé déj 16/05 — à refaire |
+| Légumes rôtis (Branca) | peu restants | Bien entamés déj 16/05 |
 | Coleslaw (Branca) | 2 tupperwares | Batch 14/05 — sans sauce |
 
 ---
@@ -236,7 +236,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 1 × 600g | |
 | Bife de frango (filet de poulet) | 2 × 500g | |
-| Panados de frango (escalopes panées poulet) | 1 × 800g | |
+| Panados de frango (escalopes panées poulet) | ~400g | ½ utilisé déj 16/05 (burgers enfants + C+L) |
 | Bolognese (maison) | 2 × 230g + 1 × 500g | ~960g total |
 | Boulettes de viande IKEA | 0 | Utilisées sam 18/04 — enfants |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
@@ -248,7 +248,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 2 × 1 tupperware | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
-| Soupe (type TBC) | 4 tupperwares | Confirmé Clément 14/05 — type à identifier |
+| Soupe (type TBC) | 3 tupperwares | 1 consommé déj 16/05 |
 | Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
