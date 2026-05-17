@@ -53,6 +53,9 @@ _Last updated: 2026-05-06 (Continente delivery received 12:56)_
 | Lait entier | 9 × 1L | |
 | Lait demi-écrémé | 17 × 1L | |
 | Caldo de pollo (bouillon de poulet) | 8 × 1L | |
+| Knorr cubes Caldo de Galinha (poulet) | ~24 cubos | 2 boîtes (16 + 8 cubos) |
+| Knorr cubes Caldo de Legumes (légumes) | 8 cubos | 1 boîte |
+| Knorr Doble Caldo Sabor Carne (bœuf) | ~16 cubos | Boîte verte 12+4 — idéal pour ragù |
 
 ---
 
@@ -177,7 +180,7 @@ _Mis à jour 2026-05-14 — inventaire complet confirmé par Clément (panier Eq
 | Salade verte | 2 têtes | 1 panier (⚠️ à manger vite) + 1 stock |
 | Courgettes | 3 | 2 panier + 1 stock |
 | Concombres | 2 | 1 panier + 1 stock |
-| Carottes | 7 | ~4 panier + 3 stock |
+| Carottes | ~6 | ~2 restantes + 4 achetées local 17/05 |
 | Tomate cœur de bœuf | 1 | Panier Equal Food 14/05 |
 | Tomates (petites) | ~3 | Stock — dont 1 peut-être entamée |
 | Chou vert | ½ tête | Stock — pour coleslaw |
@@ -188,7 +191,7 @@ _Mis à jour 2026-05-14 — inventaire complet confirmé par Clément (panier Eq
 |---|---|---|
 | Poireau | ½ | ½ utilisé omelette déj 14/05 |
 | Pommes de terre | 7 | 4 panier + 3 stock |
-| Oignons jaunes | 2 + ½ | 2 entiers + ½ entamé |
+| Oignons jaunes | 5 + ½ | 2+½ restants + 3 achetés local 17/05 |
 | Oignons rouges | 2 | Stock |
 | Ail | 3 têtes | 1 panier + 2 stock |
 | Citrons jaunes | 5 | 2 panier + 3 stock |
@@ -213,7 +216,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 12 × 1L | Livraison Continente 06/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 6 × 1kg | Livraison Continente 06/05 |
-| Œufs frais | 6 | 6 utilisés omelette déj 14/05 |
+| Œufs frais | 14 | 2 restants + 12 achetés local 17/05 |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 4 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ |
@@ -234,10 +237,10 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Peito de frango (blanc de poulet) | 1 × 600g | |
+| Peito de frango (blanc de poulet) | 1 × 600g + 4 peças | 4 peças achetées local 17/05 |
 | Bife de frango (filet de poulet) | 2 × 500g | |
 | Panados de frango (escalopes panées poulet) | ~400g | ½ utilisé déj 16/05 (burgers enfants + C+L) |
-| Bolognese (maison) | 2 × 230g + 1 × 500g | ~960g total |
+| Bolognese (maison) | 4 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants, priorité déjeuner |
 | Boulettes de viande IKEA | 0 | Utilisées sam 18/04 — enfants |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
 | Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |

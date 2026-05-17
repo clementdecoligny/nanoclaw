@@ -17,6 +17,7 @@ _Last updated: 2026-05-13_
 | Sopitas bio ready-to-eat (bebé) | 2–3 | units | Bébé | Ajouté Lola 14/05 |
 | Tahini | 1 | jar | Épicerie | Ajouté Lola 14/05 — 1 jar (~225g) déjà en stock, vérifier avant commande |
 | Ricotta | 1–2 | un | Produits laitiers | Stock à zéro |
+| Vahiné Aroma Vainilla / Baunilha | 1 | bouteille | Épicerie | Stock épuisé — ajouté 17/05 |
 | Yaourt grec | 6 | ×1kg | Produits laitiers | Anticiper semaine parents (4 adultes) |
 
 ---
