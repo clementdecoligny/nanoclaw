@@ -1,47 +1,43 @@
-# Plan semaine — 14–18 mai 2026
+# Plan semaine — 18–26 mai 2026
 
-_Généré : 2026-05-14, panier Equal Food reçu_
-_Contexte : parents de Clément arrivent sam 16/05 après-midi → 4 adultes jusqu'à mer 21/05_
-
----
-
-## Jeudi 14 mai
-| | |
-|---|---|
-| Déjeuner | Riz batch + seitan sauté + légumes (déjà dispatché) |
-| Dîner | C+L absents. Branca + enfants : panados micro-ondes + riz simple |
-| Batch | Branca : soupe de légumes du panier (voir components.md) |
-
-## Vendredi 15 mai
-| | |
-|---|---|
-| Déjeuner | Salade verte + carottes râpées + pois chiches + feta + tomates |
-| Dîner | Filets de merluza (1×400g, congél) + légumes rôtis (courgette + carottes) + riz |
-
-## Samedi 16 mai _(parents arrivent après-midi)_
-| | |
-|---|---|
-| Déjeuner | Soupe + pain (C+L) |
-| Dîner ×4 adultes | Filets de poulet rôtis (2×500g) + pommes de terre vapeur + salade |
-
-## Dimanche 17 mai _(4 adultes)_
-| | |
-|---|---|
-| Déjeuner | Pasta + bolognaise maison (décongeler ~500g) |
-| Dîner | Curry de légumes (congélateur, 2×900g) + riz |
-
-## Lundi 18 mai _(4 adultes)_
-| | |
-|---|---|
-| Déjeuner | Feijoada angolana (1 tupperware, décongeler matin) + riz |
-| Dîner | TBD — selon stocks et humeur |
+_Mis à jour : 2026-05-18_
+_Contexte : parents de Clément → 4 adultes jusqu'au 26 mai. Panier Equal Food jeudi 21/05. Branca : mar jusqu'à 22h, autres jours jusqu'à 20h. C+L absents jeu 21 → dim 24 (course vendredi 22/05). Parents seuls avec enfants jeu–dim._
+_Clément : plan nutrition suave lun–mar, recarga mer–jeu, course vendredi 22/05._
 
 ---
 
-## Stock critique à surveiller
-- Soupe : 0 → produit ce soir par Branca
-- Ricotta : 0 → en commande Continente
-- Œufs : 12 (6 local + 6 panier) ✅
+## Lundi 18 mai ×4 adultes
+| | |
+|---|---|
+| Déjeuner | Feijoada angolana (1 tupperware) + riz + soupe |
+| Dîner | Curry de légumes (décongelé — USE TODAY) + riz + soupe |
 
-## Continente — commande à placer jeudi/vendredi
-Voir shopping-list.md — livraison cible sam/dim pour arrivée parents
+## Mardi 19 mai
+| | |
+|---|---|
+| Déjeuner | ×4 adultes — à planifier |
+| Dîner | C+L absents (Branca jusqu'à 22h) — parents + enfants, repas simple |
+
+## Mercredi 20 mai _(Clément : recarga — 300g riz/pasta par repas)_
+| | |
+|---|---|
+| Déjeuner | Soupe passada + 100g frango/poisson + 300g riz + 1 fruit ×4 adultes |
+| Dîner | Soupe passada + 100g frango/poisson + 300g riz + 1 fruit ×4 adultes |
+
+## Jeudi 21 → Dimanche 24 mai
+_C+L absents pour la course (vendredi 22/05) — parents seuls avec enfants, cuisine autonome. Pas de briefing nécessaire. Panier Equal Food jeudi à réceptionner par les parents._
+
+## Lundi 25 mai ×4 adultes (parents partent mardi 26)
+| | |
+|---|---|
+| Plan | À recaler au retour de C+L |
+
+---
+
+## Stock critique
+- Soupe mixée : 3 tupperwares congélo ✅
+- Feijoada angolana : 1 tupperware restant (après déj lundi)
+- Bolognaise maison : 4 tupperwares (2 adultes + 2 enfants chacun)
+- Frango congélo : peito 600g + 4 peças + bife 2×500g
+- Ricotta : 0 — en commande Continente
+- Légumes frais : panier jeudi 21/05

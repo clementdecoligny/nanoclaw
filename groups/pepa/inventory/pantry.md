@@ -219,15 +219,15 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Œufs frais | 14 | 2 restants + 12 achetés local 17/05 |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
-| Boquerones en vinagre | 4 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ |
+| Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Feta cheese | 1 block | Confirmé Clément 14/05 |
 | Queijo Ricotta Granarolo | 0 | Consommé — à recomander (liste courses) |
 | Queijo Parmigiano Reggiano DOP Continente | 1 | Livraison 16/04 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Cooked pasta | ~500g | Batch cooking ✅ |
-| Cooked rice | 0 | Terminé déj 16/05 — à refaire |
+| Cooked rice | batch frais | Cuisiné 18/05 |
 | Légumes rôtis (Branca) | peu restants | Bien entamés déj 16/05 |
-| Coleslaw (Branca) | 2 tupperwares | Batch 14/05 — sans sauce |
+| Coleslaw (Branca) | 0 | Terminé 17/05 |
 
 ---
 
@@ -250,12 +250,12 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Feijoada angolana (Branca) | 2 × 1 tupperware | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
+| Feijoada angolana (Branca) | 2 tupperwares | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
 | Soupe (type TBC) | 3 tupperwares | 1 consommé déj 16/05 |
 | Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
-| Curry de légumes (maison) | 2 × 900g | |
+| Curry de légumes (maison) | 1 × 900g (congélo) + ~450g (frigo, décongelé 17/05) | ⚠️ Frigo = USE TOMORROW — moitié consommée déj 18/05 |
 | Légumes type ratatouille | 1 × 500g | |
 | Pisto español (maison) | 2 × 500g | Cuisiné 20/04 — semaine prochaine |
 | Paella (Pepe, papa de Lola) | 0 | Consommée dîner 20/04 |

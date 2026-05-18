@@ -2,7 +2,19 @@
 
 > Agent-maintained. Updated automatically when stock drops below thresholds or when a meal plan requires items not in inventory.
 
-_Last updated: 2026-05-13_
+_Last updated: 2026-05-18_
+
+---
+
+## 🚨 Achat local urgent — Plan nutrition course (semaine 18–21 mai)
+
+| Item | Qty | Notes |
+|---|---|---|
+| Yaourt protéiné (~20g protéine) | 4–6 | Lun–jeu matin 11h |
+| Babybel light | 4 | Lun–mar goûter 17h |
+| Jus de fruit coado / Compal | 4 | Mer–jeu goûter 17h |
+| Compote ou marmelada | 1 pot | Mer–jeu goûter 17h avec pain |
+| Vitamine C 1g | 1 boîte | Supplément lun–mar petit-déj |
 
 ---
 
