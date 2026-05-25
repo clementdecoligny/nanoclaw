@@ -224,9 +224,9 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Queijo Ricotta Granarolo | 0 | Consommé — à recomander (liste courses) |
 | Queijo Parmigiano Reggiano DOP Continente | 1 | Livraison 16/04 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
-| Cooked pasta | ~500g | Batch cooking ✅ |
-| Cooked rice | batch frais | Cuisiné 18/05 |
-| Légumes rôtis (Branca) | peu restants | Bien entamés déj 16/05 |
+| Cooked pasta | ~500g | Cuisiné ~16/05 — ⚠️ À JETER (>7 jours) |
+| Cooked rice | batch | Cuisiné 18/05 — ⚠️ À JETER (>7 jours) |
+| Légumes rôtis (Branca) | peu restants | Batch 14/05 — ⚠️ À JETER (>10 jours) |
 | Coleslaw (Branca) | 0 | Terminé 17/05 |
 
 ---
@@ -255,7 +255,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
-| Curry de légumes (maison) | 1 × 900g (congélo) + ~450g (frigo, décongelé 17/05) | ⚠️ Frigo = USE TOMORROW — moitié consommée déj 18/05 |
+| Curry de légumes (maison) | 1 × 900g (congélo) | Frigo (~450g décongelé 17/05) → ⚠️ À JETER (8 jours au frigo) |
 | Légumes type ratatouille | 1 × 500g | |
 | Pisto español (maison) | 2 × 500g | Cuisiné 20/04 — semaine prochaine |
 | Paella (Pepe, papa de Lola) | 0 | Consommée dîner 20/04 |
