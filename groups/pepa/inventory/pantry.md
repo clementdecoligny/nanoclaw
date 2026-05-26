@@ -171,40 +171,36 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-05-14 — inventaire complet confirmé par Clément (panier Equal Food + stock existant)_
+_Mis à jour 2026-05-26 — photos Clément (stock parents + panier 21/05)_
 
 ### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade verte | 2 têtes | 1 panier (⚠️ à manger vite) + 1 stock |
-| Courgettes | 3 | 2 panier + 1 stock |
-| Concombres | 2 | 1 panier + 1 stock |
-| Carottes | ~6 | ~2 restantes + 4 achetées local 17/05 |
-| Tomate cœur de bœuf | 1 | Panier Equal Food 14/05 |
-| Tomates (petites) | ~3 | Stock — dont 1 peut-être entamée |
-| Chou vert | ½ tête | Stock — pour coleslaw |
+| Salade (sachet frisée Auchan) | 1 sachet | ⚠️ À utiliser vite |
+| Carottes | ~3 | Panier 21/05 |
+| Tomate cœur de bœuf | 1 | Belle, à utiliser cette semaine |
+| Courgette | 1 (entamée) | Panier 21/05 |
+| Cerises fraîches | ~25–30 | ⚠️ Frigo — à manger dans 2 jours |
+| ½ melon Piel de Sapo | ½ | ⚠️ Déjà coupé — à finir aujourd'hui ou demain |
 
-### 🧺 Légumes & fruits (hors frigo)
-
-| Item | Quantité | Notes |
-|---|---|---|
-| Poireau | ½ | ½ utilisé omelette déj 14/05 |
-| Pommes de terre | 7 | 4 panier + 3 stock |
-| Oignons jaunes | 5 + ½ | 2+½ restants + 3 achetés local 17/05 |
-| Oignons rouges | 2 | Stock |
-| Ail | 3 têtes | 1 panier + 2 stock |
-| Citrons jaunes | 5 | 2 panier + 3 stock |
-| Citrons verts | 3 | Stock |
-
-### 🍊 Fruits (corbeille)
+### 🧺 Légumes (hors frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes | 7 | 6 panier + 1 stock |
-| Poires | 3 | Panier Equal Food 14/05 |
-| Kiwis | 4 | Panier Equal Food 14/05 |
-| Bananes | 3 (petites) | Panier Equal Food 14/05 |
+| Oignons jaunes | ~2 | Stock restant |
+| Ail | ~2–3 têtes | Stock |
+| Gingembre frais | 1 morceau | Nouveau — parents |
+
+### 🍊 Fruits (corbeille + frigo)
+
+| Item | Quantité | Notes |
+|---|---|---|
+| Oranges | ~7–8 | Corbeille (~3) + frigo (~4-5) |
+| Citrons verts | ~4 | Corbeille (~2) + frigo (~2) |
+| Pommes | 2 | Corbeille |
+| Poires | 2 | Corbeille |
+| Bananes | 3 | ⚠️ Très mûres — banana bread ou à congeler |
 
 ---
 
@@ -215,8 +211,8 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Item | Quantity | Notes |
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 12 × 1L | Livraison Continente 06/05 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | 6 × 1kg | Livraison Continente 06/05 |
-| Œufs frais | 14 | 2 restants + 12 achetés local 17/05 |
+| Greek yogurt — Mythos Ligiero Continente 1kg | 1 × 1kg | Confirmé 26/05 — à recommander |
+| Œufs frais | 0 | Terminés shakshuka 26/05 — ⚠️ à acheter local |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
