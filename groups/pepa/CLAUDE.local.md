@@ -17,6 +17,7 @@ Data is stored in the group directory, accessible inside the container at `/work
 - `/workspace/agent/inventory/thresholds.md` — custom threshold overrides (defaults in pepa-ops.md).
 - `/workspace/agent/inventory/shopping-list.md` — current shopping list (Continente + local).
 - `/workspace/agent/inventory/preferred-products.md` — Continente product name mappings.
+- `/workspace/agent/inventory/orders/` — Historique des commandes Continente (référence pour futures commandes).
 - `/workspace/agent/plan/current.md` — 4-day meal map (set at basket arrival, consumed day by day).
 - `/workspace/agent/plan/components.md` — live cooked component inventory (quantities, location, shelf-life deadline).
 - `/workspace/agent/plan/rotation-log.md` — last-cooked dates per recipe.

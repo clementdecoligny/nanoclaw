@@ -158,6 +158,8 @@ Fish and poultry are not threshold-tracked — add to list only when a planned r
 
 ## Continente Basket Preparation
 
+**Credentials:** available as environment variables — `$CONTINENTE_EMAIL` and `$CONTINENTE_PASSWORD`. The scripts pick them up automatically; you don't need to pass them explicitly.
+
 **Step 1 — Prepare:**
 ```bash
 CONTINENTE_GROUP_PATH=/workspace/agent npx tsx /workspace/extra/continente/index.ts prepare

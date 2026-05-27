@@ -29,7 +29,11 @@
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
 | Gemelli | MASSA GEMELLI LAMOLISANA 500G | 2,16 € | ×2 à ×3 | La Molisana — préféré | <!-- pid:5343579 -->
-| Penne rigate | MASSA RUMMO PENNE RIGATE 500G | 2,39 € | ×2 à ×3 | Rummo — préféré |
+| Penne rigate | Massa Penne Rigate Rummo | 2,39 € | ×2 | Rummo — préféré |
+| Fusilli Rummo | Massa Fusilli Rummo | 2,39 € | ×1 | Rummo |
+| Paccheri rigati Rummo | Massa Paccheri Rigati Rummo | 2,89 € | ×1 | Rummo |
+| Penne lentilles rouges (s/gluten) | Massa Penne de Lentilhas Vermelhas sem Glúten Dalla Costa | 3,72 € | ×1 | Dalla Costa |
+| Fusilli lentilles rouges (s/gluten) | Massa de Lentilhas Vermelhas sem Glúten Dalla Costa | 3,72 € | ×1 | Dalla Costa |
 | Pâtes lettres (enfants) | MASSA LETRAS MILANEZA 250G | 0,62 € | ×2 | Pour les enfants |
 
 ---
@@ -41,6 +45,7 @@
 | Filets de poulet | BIFE FRANGO EXTRAFINO CNT LS | ~9 €/kg | ~1 kg | Acheté frais au poids | <!-- pid:7069726 -->
 | Anchois à l'huile d'olive | Filetes de Anchovas em Azeite Pitéu | — | ×1 | <!-- pid:4449548 --> |
 | Thon à l'huile d'olive | ATUM ACORES FILETE AZEITE CNT | 2,99 € | ×6 | Açores, à l'huile d'olive |
+| Thon naturel | Atum Natural em Água | — | ×6 | Thon en eau 385g <!-- pid:8061426 --> |
 | Bœuf haché Angus | CARN PIC NOV ANGUS CNT 400G | 4,99 € | ×1 à ×2 | 400 g |
 | Burgers Angus | HAMB. NOV. ANGUS SEL 100% CARNE | 4,89 € | ×1 | 100% viande |
 | Dorade fraîche | DOURADA GRANDE (+600G) KG | 8,99 €/kg | selon besoin | Achetée fréquemment |
@@ -52,6 +57,8 @@
 
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
+| Vahiné Aroma Vainilla / Baunilha | Aroma de Baunilha Vahine | — | ×1 | Extrait vanille <!-- pid:2525605 --> |
+| Tahini | Tahini Claro Bio Continente | — | ×1 | |
 | Pesto | MOL.PESTO ALLA GENO.BARILLA 190 | 3,74–4,99 € | ×1 à ×2 | Toujours Barilla Genovese 190 g |
 | Passata Mutti | PASSATA TOMATE (PURE) MUTTI 400 | 2,29 € | ×1 à ×2 | Toujours Mutti |
 | Tomates concassées Mutti | TOMATE TRITURADO MUTTI 400G | 2,39 € | ×1 à ×2 | Mutti |
@@ -105,12 +112,18 @@
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
 | Lait INAN 2 | Leite em Pó de Transição Optipro 2 6M NAN | — | ×2 | <!-- pid:4315778 --> |
+| Leite NAN 2 | Leite em Pó de Transição Optipro 2 6M NAN | — | ×3 | <!-- pid:4315778 --> |
+| Zumitos Continente 100% fruta fresa y plátano | Bebida Fruta Morango Banana Zumito Continente | — | ×5 | Sumo fruta crianças <!-- pid:8112034 --> |
+| Sopitas bio ready-to-eat (bebé) | Sopa Pronta Biologica Bebe | — | ×5 | Pesquisar se disponível |
 | Papilla cereales Inés | Papa Infantil para Preparar com Leite 6M Cerelac | — | selon besoin | <!-- pid:7636124 --> |
 | Petits pots légumes-veau | REF GERBER LEGUMES VITELA 190G | 2,07–2,59 € | selon besoin | 190 g |
 | Petits pots petits pois-patate douce-poulet | REF GERBER ERV BAT FRAGO 190G | 2,49 € | selon besoin | 190 g |
-| Gourde banane-fraise | SAQ.FRUTA BANANA MORANG CNT 90G | 0,54 € | selon besoin | 90 g |
+| Gourde banane-fraise | Saqueta de Fruta Banana e Morango +8M Continente | 0,54 € | ×9 | 90 g |
+| Gourde multifrutos | Saqueta de Fruta Multifrutos +8M Continente | 0,54 € | ×8 | |
 | Petit pot jardinière-veau HB | REFEICAO HB-SOLO JARDINEIRA VIT | 2,15 € | selon besoin | |
 | Snack bio framboise | SNACK BIO GERBER FRAMBOESA 35G | 1,77 € | selon besoin | 35 g |
+| Petits pots légumes-pescada Hero Solo | Refeição Legumes e Pescada Hero Solo | 1,99 € | ×4 | Hero Solo |
+| Petits pots batata-abóbora-peru Nestlé | Refeição para Bebé Batata, Abóbora e Peru +6M Nestlé | 1,94 € | ×3 | Nestlé |
 
 ---
 
@@ -118,7 +131,8 @@
 
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
-| Pão de forma (crianças) | Pão de forma sem côdea Bimbo emb. 650g | — | selon besoin | Sem côdea (sans croûte) |
+| Pão de forma (crianças) | Pão de forma sem côdea Bimbo emb. 650g | — | selon besoin | Sem côdea (sans croûte) | <!-- pid:6246547 -->
+| Pan Bimbo sin corteza | Pão de forma sem côdea Bimbo emb. 650g | — | ×2 | Alias espagnol |
 
 ## Vin
 
@@ -146,6 +160,15 @@
 
 ---
 
+## Hygiène / Salle de bain
+
+| Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
+|---|---|---|---|---|
+| Gel douche Argão Natural Honey | Gel de Banho Argão Natural Honey | 5,29 € | ×1 | |
+| Gel douche Colónia Natural Honey | Gel de Banho Frescura Colónia Natural Honey | 5,29 € | ×1 | |
+
+---
+
 ## Non trouvé chez Continente — à sourcer ailleurs
 
 Ces produits n'apparaissent dans aucune des 6 factures. À chercher sur d'autres enseignes ou à commander séparément.
@@ -155,3 +178,5 @@ Ces produits n'apparaissent dans aucune des 6 factures. À chercher sur d'autres
 | Pois chiches secs | Non vu — format sec, chercher ailleurs |
 | Baies de goji | Non vu |
 | Miel (grand format 1 kg) | Non vu dans les factures — vérifier si disponible en ligne |
+| Peeled and grilled eggplant (Chtoura Garden) | Non vu — épicerie spécialisée uniquement |
+| Tortillas grandes | Non vu — chercher épicerie spécialisée |

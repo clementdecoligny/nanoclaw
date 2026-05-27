@@ -190,7 +190,7 @@ _Mis à jour 2026-05-26 — photos Clément (stock parents + panier 21/05)_
 |---|---|---|
 | Oignons jaunes | ~2 | Stock restant |
 | Ail | ~2–3 têtes | Stock |
-| Gingembre frais | 1 morceau | Nouveau — parents |
+| Gingembre frais | 0 | Non confirmé |
 
 ### 🍊 Fruits (corbeille + frigo)
 
@@ -220,9 +220,9 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Queijo Ricotta Granarolo | 0 | Consommé — à recomander (liste courses) |
 | Queijo Parmigiano Reggiano DOP Continente | 1 | Livraison 16/04 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
-| Cooked pasta | ~500g | Cuisiné ~16/05 — ⚠️ À JETER (>7 jours) |
-| Cooked rice | batch | Cuisiné 18/05 — ⚠️ À JETER (>7 jours) |
-| Légumes rôtis (Branca) | peu restants | Batch 14/05 — ⚠️ À JETER (>10 jours) |
+| Cooked pasta | 0 | Jeté 25/05 |
+| Cooked rice | 0 | Jeté 25/05 |
+| Légumes rôtis (Branca) | 0 | Jeté 25/05 |
 | Coleslaw (Branca) | 0 | Terminé 17/05 |
 
 ---
@@ -236,7 +236,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Peito de frango (blanc de poulet) | 1 × 600g + 4 peças | 4 peças achetées local 17/05 |
 | Bife de frango (filet de poulet) | 2 × 500g | |
 | Panados de frango (escalopes panées poulet) | ~400g | ½ utilisé déj 16/05 (burgers enfants + C+L) |
-| Bolognese (maison) | 4 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants, priorité déjeuner |
+| Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
 | Boulettes de viande IKEA | 0 | Utilisées sam 18/04 — enfants |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
 | Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |
@@ -266,10 +266,10 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Thon à l'huile (Atum Açores CNT) | 3 × 120g | Acheté 14/04 |
 | Thon naturel (Atum Natural Auchan) | 2 × 385g | Acheté 15/04 |
 | Robalo entier (bar/loup de mer) | 0 | Consommé — logué 14/05 |
-| Crevettes épluchées | 1 × 200g | |
+| Crevettes épluchées | 0 | Non confirmées en stock |
 | Gula del Norte | 2 × 100g | |
 | Filets de merluza (merlu) | 0 | Consommé wraps dîner 15/05 |
-| Pavés de saumon | 2 pavés | Taille TBC |
+| Pavés de saumon | 0 | Consommés 27/05 |
 
 ### Herbes
 

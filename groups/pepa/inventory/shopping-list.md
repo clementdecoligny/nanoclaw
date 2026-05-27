@@ -6,19 +6,14 @@ _Last updated: 2026-05-18_
 
 ---
 
-## 📦 Prochaine commande Continente
+## 📦 Commande Continente — panier en cours (27/05)
 
-| Item | Qty | Unit | Category | Notes |
-|---|---|---|---|---|
-| Thon naturel | 3 | ×385g | Protéines | Stock bas |
-| Œufs | 12 | un | Produits frais | Stock bas (6 restants) — ⚠️ achat local uniquement |
-| Pan Bimbo sin corteza | 1 | pack | Enfants | Ajouté Lola 14/05 |
-| Zumitos Continente 100% fruta fresa y plátano | 2–3 | packs | Enfants | Ajouté Lola 14/05 |
-| Sopitas bio ready-to-eat (bebé) | 2–3 | units | Bébé | Ajouté Lola 14/05 |
-| Tahini | 1 | jar | Épicerie | Ajouté Lola 14/05 — 1 jar (~225g) déjà en stock, vérifier avant commande |
-| Ricotta | 1–2 | un | Produits laitiers | Stock à zéro |
-| Vahiné Aroma Vainilla / Baunilha | 1 | bouteille | Épicerie | Stock épuisé — ajouté 17/05 |
-| Yaourt grec | 5 | ×1kg | Produits laitiers | Plus qu'1kg restant (26/05) |
+✅ Ajouté au panier (22 articles, ~€177.66) — en attente de finalisation sur continente.pt
+
+| Item | Qty | Notes |
+|---|---|---|
+| Sopitas bio ready-to-eat (bebé) | 5 | Non trouvé sur Continente — à sourcer |
+| Tahini | 1 | Non trouvé sur Continente — 1 jar en stock, pas urgent |
 
 ---
 
