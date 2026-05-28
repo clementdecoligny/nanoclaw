@@ -1,4 +1,4 @@
-import { authenticate, get, post, mergeCookies } from './auth.js';
+import { authenticate, get, post } from './auth.js';
 import type { Cart, CartItem, PharmeeProduct } from './types.js';
 
 // Fixed product catalogue from wishlist (PIDs verified 2026-05-28)
@@ -45,11 +45,22 @@ function parseCart(cart: any): Cart {
   };
 }
 
+export async function getCartItemCount(): Promise<number> {
+  await authenticate();
+  const res = await get('/api/api.php/getBasket');
+  try {
+    const json = JSON.parse(res.body);
+    return Number(json.response?.cart?.item_count ?? 0);
+  } catch {
+    return 0;
+  }
+}
+
 export async function selectMbway(): Promise<void> {
-  const cookies = await authenticate();
+  await authenticate();
   // Select MBWay as payment method (p=28, m=7)
   const body = 'p=28&m=7&cp=1200-168&distrito=';
-  await post('/checkout/v1/ajax_pagamento.php', body, cookies, {
+  await post('/checkout/v1/ajax_pagamento.php', body, '', {
     Referer: 'https://www.pharmeestore.com/checkout/v1/?id=4',
     'X-Requested-With': 'XMLHttpRequest',
     Origin: 'https://www.pharmeestore.com',

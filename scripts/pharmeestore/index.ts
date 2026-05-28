@@ -14,7 +14,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { addToCart, selectMbway, submitOrder, PRODUCTS } from './client.js';
+import { addToCart, selectMbway, submitOrder, PRODUCTS, getCartItemCount } from './client.js';
 import type { LastOrder, PendingBasket, PharmeeProduct } from './types.js';
 
 const groupPath = process.env.PHARMEESTORE_GROUP_PATH ?? './groups/pepa';
@@ -66,6 +66,15 @@ async function execute(): Promise<void> {
   if (!pending) throw new Error('No pending basket found. Run prepare first.');
 
   const products = pending.products;
+
+  // Ensure cart is empty before adding — reset session to get a fresh basket
+  const existingCount = await getCartItemCount();
+  if (existingCount > 0) {
+    process.stderr.write(`Cart has ${existingCount} existing items — starting fresh session\n`);
+    const { resetSession } = await import('./auth.js');
+    resetSession();
+  }
+
   let lastCart = { items: [] as any[], total: 0, itemCount: 0 };
 
   for (const p of products) {
