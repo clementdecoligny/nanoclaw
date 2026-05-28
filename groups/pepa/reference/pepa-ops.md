@@ -190,6 +190,48 @@ Rules:
 
 ---
 
+## Pharmeestore Ordering (Diapers & Wipes)
+
+**Credentials:** available as environment variables — `$PHARMEESTORE_EMAIL`, `$PHARMEESTORE_PASSWORD`, `$PHARMEESTORE_PHONE`. Scripts pick them up automatically.
+
+**Products** (fixed — always these 3 from the wishlist):
+- Bambo Nature Fraldas T4 (L) 7-14kg (3×48) — for G
+- Bambo Nature Fraldas T5 (XL) 12-18kg (3×44) — for Inés
+- Bambo Nature Toalhitas Sem Perfume 80un (×12)
+
+**When to order:** 4 weeks after last order. A recurring task fires automatically. When triggered, run `prepare` and propose to Clément.
+
+**Step 1 — Prepare:**
+```bash
+PHARMEESTORE_GROUP_PATH=/workspace/agent npx tsx /workspace/extra/pharmeestore/index.ts prepare
+```
+Parse the `PHARMEESTORE_BASKET_REVIEW` output and relay to user:
+> 🧷 *Panier Pharmeestore prêt — 3 articles*
+> Dernière commande : [date] — €XX.XX
+>
+> • Bambo Nature Fraldas T4 ×N
+> • Bambo Nature Fraldas T5 ×N
+> • Bambo Nature Toalhitas ×N
+>
+> Ok pour confirmer, ou dis-moi les quantités à changer.
+
+If user requests quantity changes, update `/workspace/agent/pharmeestore-pending-basket.json` accordingly before executing.
+
+**Step 2 — Execute (only after explicit user confirmation):**
+```bash
+PHARMEESTORE_GROUP_PATH=/workspace/agent npx tsx /workspace/extra/pharmeestore/index.ts execute
+```
+Parse the `PHARMEESTORE_ORDER_DONE` output and relay to user:
+> ✅ Commande envoyée — N articles, €XX.XX
+> Accepte le paiement MBWay sur ton téléphone.
+
+Rules:
+- NEVER run `execute` without explicit confirmation ("ok", "confirma", "go ahead", etc.)
+- After execute, a new `pharmeestore-last-order.json` is written automatically — no manual action needed
+- If `PHARMEESTORE_ERROR` appears in output, report the error to Clément and stop
+
+---
+
 ## Delivery Confirmation — Inventory Sync
 
 Trigger: user says "a entrega chegou", "delivery arrived", "já chegou", "confirma entrega"
