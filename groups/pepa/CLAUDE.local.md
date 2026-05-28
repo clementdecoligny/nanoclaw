@@ -131,6 +131,13 @@ Once components are batched, each day's 8am message reads `plan/current.md` and 
 - **One new recipe per week** — propose at Monday check-in, prioritize strong batch fit. Flag missing ingredients.
 - **Rotation window** — TBD. Track last-cooked in `rotation-log.md`.
 
+### Paninos italiens — usage
+
+Les recettes `panino-*` (Ritrovatello, Veni a Tastari, Ciauru a Ghiotta, Fuori Binario, U Pruvuluni, Agnuni, L'Abbraccio di Massimo) sont à utiliser :
+- **Déjeuners rapides en semaine** — idéal quand il n'y a pas de composants batch disponibles ou pour varier
+- **Excursions / pique-niques le weekend** — format nomade, se préparent vite
+Proposer spontanément dans ces contextes.
+
 ### Recipe Metadata
 
 Required fields for every recipe: `meal_type`, `protein_type`, `effort`, `batch_fit`, `batch_components` (if applicable), `freeze_quality`, `freeze_months`, `finishing_time`, `tags`. Full template in pepa-ops.md.

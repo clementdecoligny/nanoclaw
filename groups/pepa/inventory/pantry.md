@@ -171,36 +171,37 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-05-26 — photos Clément (stock parents + panier 21/05)_
+_Mis à jour 2026-05-28 soir — après batch soupe Branca (légumes utilisés : poireau, courgettes, carottes, pommes de terre, patates douces)_
 
 ### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade (sachet frisée Auchan) | 1 sachet | ⚠️ À utiliser vite |
-| Carottes | ~3 | Panier 21/05 |
-| Tomate cœur de bœuf | 1 | Belle, à utiliser cette semaine |
-| Courgette | 1 (entamée) | Panier 21/05 |
-| Cerises fraîches | ~25–30 | ⚠️ Frigo — à manger dans 2 jours |
-| ½ melon Piel de Sapo | ½ | ⚠️ Déjà coupé — à finir aujourd'hui ou demain |
+| Salade frisée (sachet) | 1 sachet | ⚠️ Urgent |
+| Salade verte | un peu | Entamée |
+| Carottes | 2 | Branca a utilisé le reste pour soupe |
+| Tomates | 3 | Dont 1 cœur de bœuf |
+| Avocat | 1 | ⚠️ À utiliser vite |
 
 ### 🧺 Légumes (hors frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oignons jaunes | ~2 | Stock restant |
-| Ail | ~2–3 têtes | Stock |
-| Gingembre frais | 0 | Non confirmé |
+| Oignons jaunes | 1 | |
+| Ail | 2 têtes | |
+| Gingembre frais | 0 | |
 
 ### 🍊 Fruits (corbeille + frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oranges | ~7–8 | Corbeille (~3) + frigo (~4-5) |
-| Citrons verts | ~4 | Corbeille (~2) + frigo (~2) |
-| Pommes | 2 | Corbeille |
-| Poires | 2 | Corbeille |
-| Bananes | 3 | ⚠️ Très mûres — banana bread ou à congeler |
+| Oranges | 7 | |
+| Citrons verts | 2 | |
+| Citron jaune | 1 | |
+| Pommes | 4 | |
+| Nectarines | 2 | |
+| Poires | 1 | |
+| Bananes | 1,5 | ⚠️ Très mûres |
 
 ---
 
@@ -237,7 +238,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Bife de frango (filet de poulet) | 2 × 500g | |
 | Panados de frango (escalopes panées poulet) | ~400g | ½ utilisé déj 16/05 (burgers enfants + C+L) |
 | Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
-| Boulettes de viande IKEA | 0 | Utilisées sam 18/04 — enfants |
+| Boulettes de viande IKEA | 0 | Confirmé terminées 28/05 |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
 | Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |
 | Pains de burger | 5 | Ajouté 15/05 |
@@ -247,7 +248,7 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 2 tupperwares | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
-| Soupe (type TBC) | 3 tupperwares | 1 consommé déj 16/05 |
+| Soupe (type TBC) | ~7 tupperwares | 3 anciens + ~4 batch Branca 28/05 |
 | Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |

@@ -23,11 +23,16 @@ _Last updated: 2026-05-18_
 |---|---|---|
 | Peeled and grilled eggplant (Chtoura Garden) | 1–2 bocaux | Pour baba ganoush — ajouté 13/05 sur demande Clément |
 | Tortillas grandes | 1 paquet | Terminées wraps 15/05 |
+| Cavala em azeite / sgombro sott'olio | 2–3 latas | Maquereau en boîte — pour paninos Veni a Tastari. "Cavala" = maquereau en PT, dispo Continente |
+| Giardiniera sott'olio | 1 bocal | Légumes marinés italiens. Au Portugal : épicerie italienne, ou Pingo Doce / El Corte Inglés épicerie fine. Équivalent : pickles légumes à l'huile |
+| Poivrons grillés à l'huile (bocal) | 1 bocal | Pour Ciauru a Ghiotta et paninos en général — pimentos assados em azeite au Portugal |
 
 ---
 
 ## 🌿 Fruits & légumes (local)
 
-_(À confirmer après réception du panier Equal Food jeudi 15/05)_
+| Item | Qty | Notes |
+|---|---|---|
+| Œufs | 1–2 dz | Stock à zéro depuis 26/05 |
 
 ---

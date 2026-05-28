@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "pid": "66413",
+      "name": "Bambo Nature Fraldas T4 (L) 7-14kg (3x48)",
+      "qty": 2
+    },
+    {
+      "pid": "65635",
+      "name": "Bambo Nature Fraldas T5 (XL) 12-18kg (3x44)",
+      "qty": 2
+    },
+    {
+      "pid": "79898",
+      "name": "Bambo Nature Toalhitas Sem Perfume 80un (x12)",
+      "qty": 1
+    }
+  ],
+  "createdAt": "2026-05-28T19:34:28.477Z"
+}

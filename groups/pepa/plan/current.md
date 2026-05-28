@@ -1,43 +1,49 @@
-# Plan semaine — 18–26 mai 2026
+# Plan semaine — 29 mai → 01 juin 2026
 
-_Mis à jour : 2026-05-18_
-_Contexte : parents de Clément → 4 adultes jusqu'au 26 mai. Panier Equal Food jeudi 21/05. Branca : mar jusqu'à 22h, autres jours jusqu'à 20h. C+L absents jeu 21 → dim 24 (course vendredi 22/05). Parents seuls avec enfants jeu–dim._
-_Clément : plan nutrition suave lun–mar, recarga mer–jeu, course vendredi 22/05._
+_Mis à jour : 2026-05-28_
+_Contexte : panier Equal Food reçu 28/05. Soupe batch faite par Branca 28/05. Batch C+L ven 29/05. Continente livraison attendue ~29-30/05._
+_Lola au bureau lun + mer — déj Clément seul ces jours._
 
 ---
 
-## Lundi 18 mai ×4 adultes
+## Vendredi 29 mai
+
 | | |
 |---|---|
-| Déjeuner | Feijoada angolana (1 tupperware) + riz + soupe |
-| Dîner | Curry de légumes (décongelé — USE TODAY) + riz + soupe |
+| Déjeuner | Salade composée (salade frisée + avocat + thon au naturel + tomate) + soupe |
+| Dîner | Frango effiloché + lentilles cuites + soupe |
 
-## Mardi 19 mai
+## Samedi 30 mai
+
 | | |
 |---|---|
-| Déjeuner | ×4 adultes — à planifier |
-| Dîner | C+L absents (Branca jusqu'à 22h) — parents + enfants, repas simple |
+| Déjeuner | Bolognaise (1 tupperware) + pasta + soupe |
+| Dîner | Curry de légumes (congél, 900g) + riz + soupe |
 
-## Mercredi 20 mai _(Clément : recarga — 300g riz/pasta par repas)_
+## Dimanche 31 mai
+
 | | |
 |---|---|
-| Déjeuner | Soupe passada + 100g frango/poisson + 300g riz + 1 fruit ×4 adultes |
-| Dîner | Soupe passada + 100g frango/poisson + 300g riz + 1 fruit ×4 adultes |
+| Déjeuner | Pois chiches + feta + tomates + soupe |
+| Dîner | Frango effiloché + pisto español (congél) + riz + soupe |
 
-## Jeudi 21 → Dimanche 24 mai
-_C+L absents pour la course (vendredi 22/05) — parents seuls avec enfants, cuisine autonome. Pas de briefing nécessaire. Panier Equal Food jeudi à réceptionner par les parents._
+## Lundi 01 juin *(Lola au bureau — déj Clément seul)*
 
-## Lundi 25 mai ×4 adultes (parents partent mardi 26)
 | | |
 |---|---|
-| Plan | À recaler au retour de C+L |
+| Déjeuner | Bolognaise (1 tupperware) + pasta + soupe |
+| Dîner | Panados de frango + sauce tomate + riz + soupe |
 
 ---
 
 ## Stock critique
-- Soupe mixée : 3 tupperwares congélo ✅
-- Feijoada angolana : 1 tupperware restant (après déj lundi)
-- Bolognaise maison : 4 tupperwares (2 adultes + 2 enfants chacun)
-- Frango congélo : peito 600g + 4 peças + bife 2×500g
-- Ricotta : 0 — en commande Continente
-- Légumes frais : panier jeudi 21/05
+
+- Soupe : ~7 tupperwares congélo ✅
+- Bolognaise : 3 tupperwares (2 utilisés ce plan : sam déj + lun déj)
+- Frango effiloché : à produire batch ven → ven dîner + dim dîner
+- Lentilles cuites : à produire batch ven → ven dîner
+- Sauce tomate : à produire batch ven → lun dîner
+- Curry de légumes : 1×900g congélo → sam dîner
+- Pisto español : 2×500g congélo → dim dîner (1 tupperware)
+- Panados de frango : ~400g congélo → lun dîner
+- Œufs : 0 — ⚠️ acheter local
