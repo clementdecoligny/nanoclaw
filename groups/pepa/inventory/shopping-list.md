@@ -6,9 +6,9 @@ _Last updated: 2026-05-18_
 
 ---
 
-## 📦 Commande Continente — panier en cours (27/05)
+## 📦 Commande Continente — 27/05
 
-✅ Ajouté au panier (22 articles, ~€177.66) — en attente de finalisation sur continente.pt
+✅ Livrée le 29/05 — pantry mis à jour
 
 | Item | Qty | Notes |
 |---|---|---|
@@ -33,6 +33,6 @@ _Last updated: 2026-05-18_
 
 | Item | Qty | Notes |
 |---|---|---|
-| Œufs | 1–2 dz | Stock à zéro depuis 26/05 |
+| ~~Œufs~~ | ~~1–2 dz~~ | ✅ Reçu livraison Continente 29/05 |
 
 ---

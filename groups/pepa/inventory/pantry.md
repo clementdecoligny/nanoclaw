@@ -1,6 +1,6 @@
 # Pantry / Fridge / Freezer Inventory
 
-_Last updated: 2026-05-06 (Continente delivery received 12:56)_
+_Last updated: 2026-05-29 (Continente delivery received — commande 27/05)_
 
 ---
 
@@ -35,8 +35,10 @@ _Last updated: 2026-05-06 (Continente delivery received 12:56)_
 | La Molisana Gemelli n°80 | 4 × 500g + 2 × 500g | 4 anciens + 2×500g Livraison 06/05 |
 | La Molisana Linguine 500g | 1 × 500g | Livraison Continente 06/05 |
 | La Molisana Fusilli 500g | 1 × 500g | Livraison Continente 06/05 |
-| Rummo Paccheri Rigati n°150 | 500g | |
-| Rummo Penne Rigate n°66 | 500g | |
+| Rummo Paccheri Rigati n°150 | 2 × 500g | +1 livraison 29/05 |
+| Rummo Penne Rigate n°66 | 3 × 500g | +2 livraison 29/05 |
+| Rummo Fusilli | 1 × 500g | Livraison 29/05 |
+| Dalla Costa Penne de Lentilhas Vermelhas s/ Glúten | 2 × 500g | Livraison 29/05 |
 | Pasta letras (enfants) | 4 × 250g | |
 | Cannelloni (secs) | 250g | |
 
@@ -122,6 +124,12 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 |---|---|---|
 | Seitan | 2 × 250g | |
 
+### Poissons (conserves)
+
+| Item | Quantité | Notes |
+|---|---|---|
+| Atum ao Natural Tritão | 3 | Livraison 29/05 |
+
 ---
 
 ### Viandes cuisinées
@@ -201,26 +209,30 @@ _Mis à jour 2026-05-28 soir — après batch soupe Branca (légumes utilisés :
 | Pommes | 4 | |
 | Nectarines | 2 | |
 | Poires | 1 | |
-| Bananes | 1,5 | ⚠️ Très mûres |
+| Bananes | 0 | Terminées smoothie 27/05 |
 
 ---
 
 ## Fridge
 
-_Last updated: 2026-05-06 (Continente delivery processed 12:56)_
+_Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 
 | Item | Quantity | Notes |
 |---|---|---|
-| Lait UHT M/G Mimosa B ESSEN 1L | 12 × 1L | Livraison Continente 06/05 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | 1 × 1kg | Confirmé 26/05 — à recommander |
-| Œufs frais | 0 | Terminés shakshuka 26/05 — ⚠️ à acheter local |
+| Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
+| Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
+| Œufs frais | ~12 | Ovos de Solo Classe M — livraison 29/05 |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
-| Feta cheese | 1 block | Confirmé Clément 14/05 |
-| Queijo Ricotta Granarolo | 0 | Consommé — à recomander (liste courses) |
-| Queijo Parmigiano Reggiano DOP Continente | 1 | Livraison 16/04 |
+| Feta DOP Continente | 5 blocks | 1 ancien + 4 livraison 29/05 |
+| Queijo Ricotta Granarolo | 1 | Livraison 29/05 |
+| Queijo Parmigiano Reggiano DOP Continente | 2 | 1 ancien + 1 livraison 29/05 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
+| Dourada Média Fresca | 1 | ⚠️ Urgent — à cuire vendredi ou samedi |
+| Robalo Grande Fresco | 1 | ⚠️ Urgent — à cuire samedi ou dimanche max |
+| Preparado Carne Picada Bovino Continente | ~500g | ⚠️ Urgent — utiliser ou congeler ce soir |
+| Pão de Forma sem Côdea Bimbo | 2 | |
 | Cooked pasta | 0 | Jeté 25/05 |
 | Cooked rice | 0 | Jeté 25/05 |
 | Légumes rôtis (Branca) | 0 | Jeté 25/05 |
@@ -242,6 +254,8 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
 | Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |
 | Pains de burger | 5 | Ajouté 15/05 |
+| Mini Hambúrguer Bovino Continente | 1 pack | Livraison 29/05 |
+| Mini Pizzas Buitoni Piccolinis | 1 pack | Livraison 29/05 |
 
 ### Légumes
 
@@ -280,8 +294,16 @@ _Last updated: 2026-05-06 (Continente delivery processed 12:56)_
 
 ### Bébé
 
-| Item | Quantité | Fait le | Notes |
-|---|---|---|---|
-| Leite NAN 2 800g | 5 × 800g | 2026-05-06 | Livraison Continente 06/05 |
-| Soupe bébé (poulet + poisson + poireau + carotte + pomme de terre + courgette, sans sel) | Plusieurs tupperwares | 2026-04-12 | Pour bébé uniquement. Nombre exact TBC. |
-| Purée verte (ancienne fournée) | Plusieurs contenants | Inconnu | Contenu TBC |
+| Item | Quantité | Notes |
+|---|---|---|
+| Leite NAN 2 800g | 5 × 800g | Livraison 06/05 |
+| Leite em Pó Optipro 2 +6M NAN | 2 × boîte | Livraison 29/05 |
+| Saqueta Fruta Banana e Morango +8M Continente | 9 | Livraison 29/05 |
+| Saqueta Fruta Multifrutos +8M Continente | 8 | Livraison 29/05 |
+| Refeição Legumes e Pescada Hero Solo | 4 | Livraison 29/05 |
+| Refeição Batata, Abóbora e Peru +6M Nestlé | 3 | Livraison 29/05 |
+| Refeição Ervilha, Batata e Frango +6M Gerber | 4 | Livraison 29/05 |
+| Refeição Jardineira com Vitela +6M Hero Baby | 2 | Livraison 29/05 |
+| Refeição Legumes e Vitela +6M Gerber | 3 | Livraison 29/05 |
+| Soupe bébé (poulet + poisson + poireau + carotte + pomme de terre + courgette, sans sel) | Plusieurs tupperwares | Pour bébé uniquement. Nombre exact TBC. |
+| Purée verte (ancienne fournée) | Plusieurs contenants | Contenu TBC |
