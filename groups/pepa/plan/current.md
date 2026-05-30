@@ -17,7 +17,7 @@ _Lola au bureau lun + mer — déj Clément seul ces jours._
 
 | | |
 |---|---|
-| Déjeuner | Bolognaise (1 tupperware) + pasta + soupe |
+| Déjeuner | Salade de pâtes (thon + ricotta + pimentos + olives) + salade verte |
 | Dîner | Curry de légumes (congél, 900g) + riz + soupe |
 
 ## Dimanche 31 mai

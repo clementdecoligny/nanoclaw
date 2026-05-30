@@ -187,7 +187,7 @@ _Mis à jour 2026-05-28 soir — après batch soupe Branca (légumes utilisés :
 |---|---|---|
 | Salade frisée (sachet) | 1 sachet | ⚠️ Urgent |
 | Salade verte | un peu | Entamée |
-| Carottes | 2 | Branca a utilisé le reste pour soupe |
+| Carottes | 0 | Utilisées en carottes râpées 30/05 |
 | Tomates | 3 | Dont 1 cœur de bœuf |
 | Avocat | 1 | ⚠️ À utiliser vite |
 
@@ -226,11 +226,9 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Feta DOP Continente | 5 blocks | 1 ancien + 4 livraison 29/05 |
-| Queijo Ricotta Granarolo | 1 | Livraison 29/05 |
+| Queijo Ricotta Granarolo | 0 | Utilisée salade pâtes 30/05 |
 | Queijo Parmigiano Reggiano DOP Continente | 2 | 1 ancien + 1 livraison 29/05 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
-| Dourada Média Fresca | 1 | ⚠️ Urgent — à cuire vendredi ou samedi |
-| Robalo Grande Fresco | 1 | ⚠️ Urgent — à cuire samedi ou dimanche max |
 | Preparado Carne Picada Bovino Continente | ~500g | ⚠️ Urgent — utiliser ou congeler ce soir |
 | Pão de Forma sem Côdea Bimbo | 2 | |
 | Cooked pasta | 0 | Jeté 25/05 |
@@ -280,7 +278,8 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Thon à l'huile (Atum Açores CNT) | 3 × 120g | Acheté 14/04 |
 | Thon naturel (Atum Natural Auchan) | 2 × 385g | Acheté 15/04 |
-| Robalo entier (bar/loup de mer) | 0 | Consommé — logué 14/05 |
+| Robalo Grande Fresco (congelé) | 1 | Congelé 30/05 — décongeler la veille |
+| Dourada Média Fresca (congelée) | 1 | Congelée 30/05 — décongeler la veille |
 | Crevettes épluchées | 0 | Non confirmées en stock |
 | Gula del Norte | 2 × 100g | |
 | Filets de merluza (merlu) | 0 | Consommé wraps dîner 15/05 |
