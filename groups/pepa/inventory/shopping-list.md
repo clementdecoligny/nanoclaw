@@ -6,14 +6,16 @@ _Last updated: 2026-05-18_
 
 ---
 
-## 📦 Commande Continente — 27/05
-
-✅ Livrée le 29/05 — pantry mis à jour
+## 📦 Prochaine commande Continente
 
 | Item | Qty | Notes |
 |---|---|---|
 | Sopitas bio ready-to-eat (bebé) | 5 | Non trouvé sur Continente — à sourcer |
 | Tahini | 1 | Non trouvé sur Continente — 1 jar en stock, pas urgent |
+| Olives noires dénoyautées | 2–3 bocaux | À renouveler régulièrement |
+| Origan | 1 | Acheté local 31/05 — à intégrer prochaine commande |
+| Confiture de fraises | 1–2 | Petit-déj enfants — acheté local 31/05 |
+| Liquide lave-vaisselle | 1 | Acheté local 31/05 — à intégrer prochaine commande |
 
 ---
 

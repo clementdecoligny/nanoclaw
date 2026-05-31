@@ -1,6 +1,6 @@
 # Pantry / Fridge / Freezer Inventory
 
-_Last updated: 2026-05-29 (Continente delivery received — commande 27/05)_
+_Last updated: 2026-05-31_
 
 ---
 
@@ -12,8 +12,8 @@ _Last updated: 2026-05-29 (Continente delivery received — commande 27/05)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Granola (Gordon Ramsay recipe, with olive oil) | 4 large jars + 1 small jar (~900mL each) | Cooked 2026-04-12. ~150–200g/day total (Clément + Lola). |
-| Flocons d'avoine grossos Continente | 5 × 400g | Livraison 16/04 — pour prochain batch granola |
+| Granola (Gordon Ramsay recipe, with olive oil) | Nouveau batch 31/05 (600g flocons) | ~150–200g/day total (Clément + Lola). |
+| Flocons d'avoine grossos Continente | ~1400g (~3.5×400g) | 600g utilisés batch 31/05 |
 | Amandes naturelles Frusel | 1 kg | Livraison 16/04 |
 | Graines de tournesol bio Continente | 5 × 200g | Livraison 16/04 |
 | Graines de lin Continente | 3 × 200g | Livraison 16/04 |
@@ -102,7 +102,7 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 | Lentilhas Secas Continente | 1 + 1 × 500g | Livraison 16/04 + 06/05 |
 | Cistér Grão de Bico (pois chiches cuits, bocal) | 1 × 540g (400g égoutté) | |
 | Continente Grão-de-Bico (pois chiches secs, sachet) | 1 sachet | Taille TBC |
-| Continente Grão de Bico cozido (pois chiches cuits) | 1 × 520g + 2 × 520g | 1 ancien + 2×520g Livraison 06/05 |
+| Continente Grão de Bico cozido (pois chiches cuits) | 2 × 520g | 1 utilisé salade pique-nique 31/05 |
 | Grão de Bico Cozido Continente | 2 | Livraison 16/04 |
 | Hacendado Alubia Blanca / Feijão Branco | 1 × 295g | |
 | Compá da Horta Feijão Branco (haricots blancs) | 1 × 468g | |
@@ -155,7 +155,9 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 | Miso paste (rouge/foncé) | En stock | Bocal entamé — utiliser moitié moins que miso blanc |
 | Filetes de Anchovas em Azeite Pitéu | 1 + 1 × 41g | 1 ancien + 1×41g Livraison 06/05 |
 | Tahini Claro Bio Continente | 1 × 225g | Livraison 06/05 |
-| Olives | En stock | |
+| Olives noires dénoyautées | En stock | Acheté 31/05 |
+| Confiture de fraises | En stock | Petit-déj enfants — acheté 31/05 |
+| Origan | En stock | Acheté 31/05 |
 | Miel | En stock | |
 | Vinaigre | En stock | |
 | Sauce soja | 1 × 1L | Grande bouteille — ajouté 13/05 |

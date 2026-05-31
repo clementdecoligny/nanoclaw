@@ -1,49 +1,70 @@
-# Plan semaine — 29 mai → 01 juin 2026
+# Plan semaine — 31 mai → 07 juin 2026
 
-_Mis à jour : 2026-05-28_
-_Contexte : panier Equal Food reçu 28/05. Soupe batch faite par Branca 28/05. Batch C+L ven 29/05. Continente livraison attendue ~29-30/05._
-_Lola au bureau lun + mer — déj Clément seul ces jours._
+_Mis à jour : 2026-05-31_
+_Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants. Mercredi soir Clément sort. Jeudi férié, enfants à la maison. Branca présente mar + jeu soir._
 
 ---
-
-## Vendredi 29 mai
-
-| | |
-|---|---|
-| Déjeuner | Salade composée (salade frisée + avocat + thon au naturel + tomate) + soupe |
-| Dîner | Frango effiloché + lentilles cuites + soupe |
-
-## Samedi 30 mai
-
-| | |
-|---|---|
-| Déjeuner | Salade de pâtes (thon + ricotta + pimentos + olives) + salade verte |
-| Dîner | Curry de légumes (congél, 900g) + riz + soupe |
 
 ## Dimanche 31 mai
 
 | | |
 |---|---|
-| Déjeuner | Pois chiches + feta + tomates + soupe |
-| Dîner | Frango effiloché + pisto español (congél) + riz + soupe |
+| Déjeuner | Salade pois chiches + feta + tomates + olives (pique-nique) |
+| Dîner | ⚠️ À définir — frango effiloché pas encore fait (batch pas réalisé ven ni sam) |
 
-## Lundi 01 juin *(Lola au bureau — déj Clément seul)*
+## Lundi 01 juin
 
 | | |
 |---|---|
 | Déjeuner | Bolognaise (1 tupperware) + pasta + soupe |
-| Dîner | Panados de frango + sauce tomate + riz + soupe |
+| Dîner | Panados de frango + pisto español (congél) + riz + soupe |
+
+## Mardi 02 juin *(Clément solo — Branca le soir)*
+
+| | |
+|---|---|
+| Déjeuner | TBD |
+| Dîner | TBD |
+
+## Mercredi 03 juin *(Clément solo — sort le soir)*
+
+| | |
+|---|---|
+| Déjeuner | TBD |
+| Dîner | Simple pour enfants seuls (Branca ou plat rapide) |
+
+## Jeudi 04 juin *(Férié — enfants à la maison — Branca le soir)*
+
+| | |
+|---|---|
+| Déjeuner | TBD |
+| Dîner | TBD |
+
+## Vendredi 05 juin *(Clément solo)*
+
+| | |
+|---|---|
+| Déjeuner | TBD |
+| Dîner | TBD |
+
+## Samedi 06 juin *(Lola rentre à midi)*
+
+| | |
+|---|---|
+| Déjeuner | TBD |
+| Dîner | TBD |
 
 ---
 
 ## Stock critique
 
-- Soupe : ~7 tupperwares congélo ✅
-- Bolognaise : 3 tupperwares (2 utilisés ce plan : sam déj + lun déj)
-- Frango effiloché : à produire batch ven → ven dîner + dim dîner
-- Lentilles cuites : à produire batch ven → ven dîner
-- Sauce tomate : à produire batch ven → lun dîner
-- Curry de légumes : 1×900g congélo → sam dîner
-- Pisto español : 2×500g congélo → dim dîner (1 tupperware)
+- Soupe : ~7 tupperwares congélo ✅ (batch Branca 28/05)
+- Bolognaise : 3 tupperwares → lun déj (reste 2)
+- Frango effiloché : ⚠️ TOUJOURS À PRODUIRE — bloque dim dîner
+- Sauce tomate : ⚠️ TOUJOURS À PRODUIRE — lun dîner peut se faire avec passata directement
 - Panados de frango : ~400g congélo → lun dîner
-- Œufs : 0 — ⚠️ acheter local
+- Pisto español : 2×500g congélo
+- Dourada (congelée 30/05) + Robalo (congelé 30/05) : à planifier semaine prochaine
+- Feijoada angolana (Branca) : 2 tupperwares congélo
+- Curry de légumes : 1×900g congélo
+- Œufs : ~12 ✅
