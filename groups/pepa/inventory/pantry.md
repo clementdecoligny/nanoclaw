@@ -191,7 +191,7 @@ _Mis à jour 2026-05-28 soir — après batch soupe Branca (légumes utilisés :
 | Salade verte | un peu | Entamée |
 | Carottes | 0 | Utilisées en carottes râpées 30/05 |
 | Tomates | 3 | Dont 1 cœur de bœuf |
-| Avocat | 1 | ⚠️ À utiliser vite |
+| Avocat | 0 | Utilisé wraps 01/06 |
 
 ### 🧺 Légumes (hors frigo)
 
@@ -248,13 +248,13 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 1 × 600g + 4 peças | 4 peças achetées local 17/05 |
 | Bife de frango (filet de poulet) | 2 × 500g | |
-| Panados de frango (escalopes panées poulet) | ~400g | ½ utilisé déj 16/05 (burgers enfants + C+L) |
+| Panados de frango (escalopes panées poulet) | 0 | Utilisés wraps dîner 01/06 |
 | Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
 | Boulettes de viande IKEA | 0 | Confirmé terminées 28/05 |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
 | Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |
 | Pains de burger | 5 | Ajouté 15/05 |
-| Mini Hambúrguer Bovino Continente | 1 pack | Livraison 29/05 |
+| Mini Hambúrguer Bovino Continente | 2 | Lola ×2 déj 01/06. Clément ×2 déj 02/06 + enfants ×2 dîner 02/06 → 0 après demain soir |
 | Mini Pizzas Buitoni Piccolinis | 1 pack | Livraison 29/05 |
 
 ### Légumes

@@ -16,15 +16,15 @@ _Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants
 
 | | |
 |---|---|
-| Déjeuner | Bolognaise (1 tupperware) + pasta + soupe |
-| Dîner | Panados de frango + pisto español (congél) + riz + soupe |
+| Déjeuner | Clément au bureau — bolognaise non consommée, toujours au congélo |
+| Dîner | Wraps panados de frango + avocat + salade + feta + pesto + feijão preto + parmigiano râpé ⭐ très bon |
 
 ## Mardi 02 juin *(Clément solo — Branca le soir)*
 
 | | |
 |---|---|
-| Déjeuner | TBD |
-| Dîner | TBD |
+| Déjeuner | Mini steaks hachés ×2 (Clément) |
+| Dîner | Enfants : mini steaks ×2. Clément : TBD (pas de viande rouge) |
 
 ## Mercredi 03 juin *(Clément solo — sort le soir)*
 
