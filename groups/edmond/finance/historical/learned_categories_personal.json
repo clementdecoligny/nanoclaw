@@ -94,5 +94,33 @@
   "TRF P/ PARENTS SOGE": {
     "category": "LIABILITY",
     "sub_category": ""
+  },
+  "DD PayPal Europe  59922258UW8Q4  LU960000000000": {
+    "category": "MOBILITY",
+    "sub_category": "PUBLIC TRANSPORT"
+  },
+  "COMPRA 3883 SANTARENDIS SOC DIS SAN CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 3883 AMANHECER BARRIL ENCARN CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 3883 CONFEITARIA NACIONAL LI CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 3883 JET CYCLES PARIS 12 FR  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "BIKE"
+  },
+  "COMPRA 3883 ADEGA TAGARRO LISBOA PT CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO": {
+    "category": "MISC",
+    "sub_category": "MISC"
   }
 }

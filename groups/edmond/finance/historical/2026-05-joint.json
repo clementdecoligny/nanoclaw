@@ -1,0 +1,840 @@
+{
+  "transactions": [
+    {
+      "value_date": "2026-05-03",
+      "description": "TRF P/ Ana Filomena Macedo",
+      "amount": -1228.67,
+      "category": "RENT",
+      "sub_category": "RENT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+      "amount": -37.0,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "COMPRA 8551 SEGURANCA SOCIAL 1049-002 LISBOA",
+      "amount": -84.22,
+      "category": "EMPREGADA",
+      "sub_category": "SEGURANCA SOCIAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "DD CNN            00001297344    PT40102031",
+      "amount": -27.0,
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "DD CNN            00001297247    PT40102031",
+      "amount": -28.8,
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "DD CNN            00001396672    PT40102031",
+      "amount": -38.0,
+      "category": "KIDS",
+      "sub_category": "PISCINA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF DE May",
+      "amount": 1579.0,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF DE Lola mayo",
+      "amount": 2921.0,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRANSFERENCIA P/O EDP",
+      "amount": 211.2,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF DE Extra maio / teniendo en cuenta subsidio",
+      "amount": 200.11,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -99.0,
+      "category": "KIDS",
+      "sub_category": "ROPA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF MB WAY P/ CAROLINA CAMPELO DIAS AMARAL",
+      "amount": -10.0,
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -13.9,
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "DD EPAL           84000361013    PT37100921",
+      "amount": -26.32,
+      "category": "HOUSE",
+      "sub_category": "EPAL AGUA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8778 WELLDONE ADVERTISING S. CONTACTLESS",
+      "amount": -30.0,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8778 COVIRAN ZAHARA VEJER DE CONTACTLESS",
+      "amount": -7.3,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -5.39,
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8778 HOTEL LAS BOVEDAS BADAJ CONTACTLESS",
+      "amount": -10.1,
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8778 Vinted Vilnius LT",
+      "amount": -6.53,
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8551 LA POPA ZAHARA DE LOSES CONTACTLESS",
+      "amount": -4.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8551 EST SERVICO PETROLEOS EXTREMADURA B",
+      "amount": -53.34,
+      "category": "VOITURE",
+      "sub_category": "ESSENCE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8551 EST SERVICO PETROLEOS EXTREMADURA B",
+      "amount": -4.25,
+      "category": "VOITURE",
+      "sub_category": "ESSENCE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-05",
+      "description": "COMPRA 8551 ENDICHE ZAHARA ZAHARA D CONTACTLESS",
+      "amount": -2.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-06",
+      "description": "COMPRA 8778 VERDACHADO REST LISBOA  CONTACTLESS",
+      "amount": -23.1,
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-06",
+      "description": "COMPRA 8551 MINIPRECO LISBOA PT     CONTACTLESS",
+      "amount": -2.44,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-06",
+      "description": "COMPRA 8551 EQUAL FOOD, LDA. LISBOA PT",
+      "amount": -54.0,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-06",
+      "description": "COMPRA 8551 TGTG bfdaz6694dxp0 Copenhagen DK",
+      "amount": -3.29,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-06",
+      "description": "TRF MB WAY P/ DR  RODOLFO FREDERICO BEJA LIMA K",
+      "amount": -38.0,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-07",
+      "description": "COMPRA 8551 CONTINENTE BOM DIA LISB CONTACTLESS",
+      "amount": -19.15,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-07",
+      "description": "COMPRA 8551 TGTG z5kp5s5vgk010 Copenhagen DK",
+      "amount": -6.29,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-07",
+      "description": "COMPRA 8551 MINIMERC M A HOSSAIN LI CONTACTLESS",
+      "amount": -3.6,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-07",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -19.1,
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-08",
+      "description": "COMPRA 8551 COOLTRA BARCELONA ES",
+      "amount": -3.64,
+      "category": "MOBILITY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-08",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -19.1,
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-11",
+      "description": "COMPRA 8778 BOLT.EU O 2605072059 Tallinn EE",
+      "amount": -9.15,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-11",
+      "description": "COMPRA 8778 MD CLINICA LDA NIF 5185 CONTACTLESS",
+      "amount": -40.5,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-11",
+      "description": "COMPRA 8551 MERCEARIA LUIS LISBOA P CONTACTLESS",
+      "amount": -1.72,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-11",
+      "description": "COMPRA 8551 BOLT.EUO2605071424 Tallinn EE",
+      "amount": -11.21,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-11",
+      "description": "COMPRA 8551 TTSL - TRANSTEJO LISBOA",
+      "amount": -15.5,
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8778 MERCADO DA ESTRELA LISB CONTACTLESS",
+      "amount": -5.81,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8778 SENHOR UVA LISBOA PT    CONTACTLESS",
+      "amount": -28.5,
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8778 LOJA CONVENIENCIA LISBO CONTACTLESS",
+      "amount": -6.1,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8778 PINGO DOCE LG DO RAT LI CONTACTLESS",
+      "amount": -41.04,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8551 TGTG 68d60b7k0dyd0 Copenhagen DK",
+      "amount": -3.29,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8551 FERREIRA DE ALMEIDA AZU CONTACTLESS",
+      "amount": -2.66,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8551 Farmacia Principe Real  CONTACTLESS",
+      "amount": -7.95,
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8551 MINIPRECO LISBOA",
+      "amount": -3.88,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 8551 QUIO GENGIBRE ESTRELJARDIM ESTRELA",
+      "amount": -6.75,
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+      "amount": -12.75,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "CRED. 8778 Vinted Vilnius LT",
+      "amount": 6.53,
+      "category": "KIDS",
+      "sub_category": "ROPA VINTED",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-13",
+      "description": "COMPRA 8778 UBER EATS PENDING AMSTERDAM NL",
+      "amount": -17.58,
+      "category": "EAT OUT",
+      "sub_category": "UBER EATS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-13",
+      "description": "COMPRA 8551 FARMACIA CONDE BARAO LI CONTACTLESS",
+      "amount": -30.59,
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-13",
+      "description": "COMPRA 8551 JOAO BARBOSA NUTRIHESANTO TIRSO",
+      "amount": -35.0,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-13",
+      "description": "TRF P/ JEROME RONAN NICOLAS ARMEL VINCENT DAVID",
+      "amount": -70.0,
+      "category": "LEISURE",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-13",
+      "description": "TRF MB WAY P/ MARTINHO LUIS DOREY GAIVAO VILLAN",
+      "amount": -30.0,
+      "category": "VOITURE",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-14",
+      "description": "COMPRA 8551 MFORCE LISBOA PT        CONTACTLESS",
+      "amount": -200.63,
+      "category": "VOITURE",
+      "sub_category": "MECHANIC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 8551 MINIPRECO LISBOA PT     CONTACTLESS",
+      "amount": -7.05,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 8551 SAO BENTO MARKET LISBOA CONTACTLESS",
+      "amount": -1.5,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "TRF P/ A casa de aldan",
+      "amount": -129.0,
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 8778 CONTINENTE BOM DIA LISB CONTACTLESS",
+      "amount": -5.72,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 8551 UBR PENDING.UBER.COM AMSTERDAM NL",
+      "amount": -8.94,
+      "category": "MOBILITY",
+      "sub_category": "UBER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 8551 KASHEM OVIE LISBOA PT   CONTACTLESS",
+      "amount": -1.5,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -13.15,
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-18",
+      "description": "COMPRA 8778 CTT - CORREIOS LISBOA",
+      "amount": -2.65,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "DD NOS Comunicaco 05953608588    PT20100839",
+      "amount": -40.92,
+      "category": "HOUSE",
+      "sub_category": "NOS INTERNET",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8778 UBR PENDING.UBER.COM AMSTERDAM NL",
+      "amount": -4.95,
+      "category": "MOBILITY",
+      "sub_category": "UBER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8778 BOLT.EUO2605162250 Tallinn EE",
+      "amount": -4.18,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8778 MINIPRECO LISBOA PT     CONTACTLESS",
+      "amount": -4.14,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 TGTG 0ga1yq9cvatv0 Copenhagen DK",
+      "amount": -7.49,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 TGTG bnhg57rsah0n0 Copenhagen DK",
+      "amount": -5.29,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 TABERNA SAL GROSSO EVOR CONTACTLESS",
+      "amount": -59.8,
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS",
+      "amount": -5.62,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 MENIMERCADO YETI LISBOA CONTACTLESS",
+      "amount": -4.82,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 VENTURA LICITRA MISERIC CONTACTLESS",
+      "amount": -2.0,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 OFICINA VERDE 1200-816  CONTACTLESS",
+      "amount": -47.3,
+      "category": "HOUSE",
+      "sub_category": "FURNITURE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 MINIPRECO LISBOA PT     CONTACTLESS",
+      "amount": -14.27,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 8551 MNI THINK PHARMA TANK Sevilla",
+      "amount": -72.67,
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "PAGSERV HOSPITAL CUF TEJO SA   10598/653212885",
+      "amount": -17.0,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "PAGSERV HOSPITAL CUF TEJO SA   10598/653216916",
+      "amount": -17.0,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "PAGSERV HOSPITAL CUF TEJO SA   10598/653219482",
+      "amount": -46.0,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-21",
+      "description": "COMPRA 8778 SAO BENTO PADELPRO LISB CONTACTLESS",
+      "amount": -2.8,
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-21",
+      "description": "COMPRA 8778 Spotify P4299AA655 Stockholm SE",
+      "amount": -11.99,
+      "category": "HOUSE",
+      "sub_category": "SPOTIFY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-21",
+      "description": "COMPRA 8551 WELLS SAUDE CHIADO LISB CONTACTLESS",
+      "amount": -15.33,
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-21",
+      "description": "COMPRA 8551 CELEIRO DIETA 1 DEZ LIS CONTACTLESS",
+      "amount": -23.4,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "DD EDP COMERCIAL  16010010706561 PT34100781",
+      "amount": -150.57,
+      "category": "HOUSE",
+      "sub_category": "EDP",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 8778 BOLT.EUO2605210640 Tallinn EE",
+      "amount": -13.84,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "PAG BXVAL- 8551 VIAVERDE",
+      "amount": -2.4,
+      "category": "VOITURE",
+      "sub_category": "VIA VERDE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-25",
+      "description": "COMPRA 8551 1ST CAFE LISBOA",
+      "amount": -5.2,
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 8778 KUCHENTISCHLEREI BERLIN CONTACTLESS",
+      "amount": -2.4,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 8778 Glovo Lisbon ES",
+      "amount": -4.99,
+      "category": "EAT OUT",
+      "sub_category": "UBER EATS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 8551 BAR HOTEL DE VIL VIENNE CONTACTLESS",
+      "amount": -7.5,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "COMPRA 8551 BOLT.EUO2605251709 Tallinn EE",
+      "amount": -36.39,
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "COMPRA 8778 PRIMOR PARIS",
+      "amount": -30.54,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "COMPRA 8778 COOLTRA PRIOR VELHO PT",
+      "amount": -2.03,
+      "category": "MOBILITY",
+      "sub_category": "COOLTRA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "COMPRA 8778 COOLTRA PRIOR VELHO PT",
+      "amount": -0.87,
+      "category": "MOBILITY",
+      "sub_category": "COOLTRA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "COMPRA 8778 COOLTRA PRIOR VELHO PT",
+      "amount": -4.67,
+      "category": "MOBILITY",
+      "sub_category": "COOLTRA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 8551 WWW.PHARMEESTORE.COMVILA DO CONDE",
+      "amount": -140.4,
+      "category": "HEALTH",
+      "sub_category": "PHARMACY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "DD EDP COMERCIAL- 16010010706561 PT34100781",
+      "amount": -81.69,
+      "category": "HOUSE",
+      "sub_category": "EDP",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 8551 TGTG fr0krdcad01k0 Copenhagen DK",
+      "amount": -3.29,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "TRF DE CLEMENT YVES MICHEL ROUAULT COLIGNY",
+      "amount": 2480.0,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "TRF DE Lola junho",
+      "amount": 2020.13,
+      "category": "INCOME",
+      "sub_category": "SALARY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 8778 COOLTRA PRIOR VELHO PT",
+      "amount": -15.0,
+      "category": "MOBILITY",
+      "sub_category": "COOLTRA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 8778 BOLT.EUO2605281446 Tallinn EE",
+      "amount": -7.75,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-31",
+      "description": "TRF MB WAY P/ BRANCA MANUEL GASPAR",
+      "amount": -630.0,
+      "category": "EMPREGADA",
+      "sub_category": "EMPREGADA",
+      "confidence": "reviewed"
+    }
+  ],
+  "account": "joint",
+  "year": 2026,
+  "month": 5,
+  "status": "verified"
+}

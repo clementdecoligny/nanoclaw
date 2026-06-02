@@ -22,7 +22,7 @@ _Last updated: 2026-05-31_
 | Riz basmati | 3 kg + 1 kg | Livraison Continente 16/04 (3kg) + 06/05 (2×500g = 1kg) |
 | Arroz agulha vaporizado | 1kg | |
 | Arroz Puff Expandido Seara | 150g | Livraison Continente 06/05 |
-| Purée Mousseline | 250g | |
+| Purée Mousseline | 1 sachet | 1 utilisé dîner enfants 02/06 |
 | Rice vermicelli oriental style | 200g | |
 | Instant noodle ramen poulet | 2 × 100g | |
 
@@ -181,37 +181,36 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-05-28 soir — après batch soupe Branca (légumes utilisés : poireau, courgettes, carottes, pommes de terre, patates douces)_
+_Mis à jour 2026-06-02 (photos Clément)_
 
 ### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade frisée (sachet) | 1 sachet | ⚠️ Urgent |
-| Salade verte | un peu | Entamée |
-| Carottes | 0 | Utilisées en carottes râpées 30/05 |
-| Tomates | 3 | Dont 1 cœur de bœuf |
-| Avocat | 0 | Utilisé wraps 01/06 |
+| Chou blanc | 1 tête | Pour coleslaw |
+| Tomates | ~4–5 | 3 cœur de bœuf + 1–2 normales |
+| Radis | ~8–10 | |
+| Myrtilles | 1 barquette (~½) | |
 
 ### 🧺 Légumes (hors frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
 | Oignons jaunes | 1 | |
-| Ail | 2 têtes | |
+| Ail | ~2 têtes | Partiellement entamées |
 | Gingembre frais | 0 | |
 
 ### 🍊 Fruits (corbeille + frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oranges | 7 | |
-| Citrons verts | 2 | |
-| Citron jaune | 1 | |
-| Pommes | 4 | |
-| Nectarines | 2 | |
-| Poires | 1 | |
-| Bananes | 0 | Terminées smoothie 27/05 |
+| Oranges | ~4 | Frigo |
+| Nectarines | 2–3 | Frigo |
+| Citrons verts | 2 | 1 frigo + 1 corbeille |
+| Citrons jaunes | 2 | 1 frigo + 1 corbeille |
+| Bananes | 4 | Corbeille — mûres |
+| Pommes | 5–6 | Corbeille |
+| Avocat | 1 | ⚠️ Très mûr — à utiliser vite |
 
 ---
 
@@ -246,8 +245,8 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Peito de frango (blanc de poulet) | 1 × 600g + 4 peças | 4 peças achetées local 17/05 |
-| Bife de frango (filet de poulet) | 2 × 500g | |
+| Peito de frango (blanc de poulet) | 0 | Confirmé épuisé 02/06 |
+| Bife de frango (filet de poulet) | 0 | Utilisé (date TBC) |
 | Panados de frango (escalopes panées poulet) | 0 | Utilisés wraps dîner 01/06 |
 | Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
 | Boulettes de viande IKEA | 0 | Confirmé terminées 28/05 |

@@ -1,7 +1,7 @@
 # Plan semaine — 31 mai → 07 juin 2026
 
-_Mis à jour : 2026-05-31_
-_Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants. Mercredi soir Clément sort. Jeudi férié, enfants à la maison. Branca présente mar + jeu soir._
+_Mis à jour : 2026-06-02_
+_Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants. Mercredi soir Clément sort. Jeudi férié, enfants à la maison. Branca présente mar + jeu soir. Panier de légumes mercredi soir 03/06._
 
 ---
 
@@ -60,7 +60,7 @@ _Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants
 
 - Soupe : ~7 tupperwares congélo ✅ (batch Branca 28/05)
 - Bolognaise : 3 tupperwares → lun déj (reste 2)
-- Frango effiloché : ⚠️ TOUJOURS À PRODUIRE — bloque dim dîner
+- Frango effiloché : ⚠️ TOUJOURS À PRODUIRE — utiliser bife de frango 2×500g (peito épuisé)
 - Sauce tomate : ⚠️ TOUJOURS À PRODUIRE — lun dîner peut se faire avec passata directement
 - Panados de frango : ~400g congélo → lun dîner
 - Pisto español : 2×500g congélo

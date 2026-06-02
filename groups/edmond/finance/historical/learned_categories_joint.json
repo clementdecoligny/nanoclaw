@@ -398,5 +398,37 @@
   "COMPRA 8551 VASCO PINTO LDA VILA MA CONTACTLESS": {
     "category": "GROCERIES",
     "sub_category": "SUPER"
+  },
+  "COMPRA 8551 OFICINA VERDE 1200-816  CONTACTLESS": {
+    "category": "HOUSE",
+    "sub_category": "FURNITURE"
+  },
+  "COMPRA 8778 WELLDONE ADVERTISING S. CONTACTLESS": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "TRF P/ JEROME RONAN NICOLAS ARMEL VINCENT DAVID": {
+    "category": "LEISURE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 TABERNA SAL GROSSO EVOR CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 CELEIRO DIETA 1 DEZ LIS CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8778 SAO BENTO PADELPRO LISB CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "DD EDP COMERCIAL  16010010706561 PT34100781": {
+    "category": "HOUSE",
+    "sub_category": "EDP"
+  },
+  "TRF P/ MARIA DOLORES DAROCA GUERRERO": {
+    "category": "KIDS",
+    "sub_category": "ROPA"
   }
 }

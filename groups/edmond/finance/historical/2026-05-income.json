@@ -1,0 +1,41 @@
+{
+  "entries": [
+    {
+      "date": "2026-05-30",
+      "who": "Clément",
+      "value": 204.0,
+      "type": "FOOD"
+    },
+    {
+      "date": "2026-05-30",
+      "who": "Clément",
+      "value": 4445.44,
+      "type": "SALARY"
+    },
+    {
+      "date": "2026-05-30",
+      "who": "Clément",
+      "value": 1149.0,
+      "type": "BONUS"
+    },
+    {
+      "date": "2026-05-30",
+      "who": "Lola",
+      "value": 250.6,
+      "type": "FOOD"
+    },
+    {
+      "date": "2026-05-30",
+      "who": "Lola",
+      "value": 1871.04,
+      "type": "SALARY"
+    },
+    {
+      "date": "2026-05-30",
+      "who": "Lola",
+      "value": 2601.84,
+      "type": "HOLIDAY"
+    }
+  ],
+  "joint_target": 4500.0
+}

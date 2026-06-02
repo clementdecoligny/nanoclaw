@@ -1,0 +1,47 @@
+{
+  "entries": [
+    {
+      "date": "2026-04-30",
+      "who": "Clément",
+      "value": 214.2,
+      "type": "FOOD"
+    },
+    {
+      "date": "2026-04-30",
+      "who": "Clément",
+      "value": 3069.74,
+      "type": "SALARY"
+    },
+    {
+      "date": "2026-04-30",
+      "who": "Lola",
+      "value": 254.73,
+      "type": "FOOD"
+    },
+    {
+      "date": "2026-04-30",
+      "who": "Lola",
+      "value": 2137.7,
+      "type": "SALARY"
+    },
+    {
+      "date": "2026-04-30",
+      "who": "Lola",
+      "value": 4073.26,
+      "type": "BONUS"
+    },
+    {
+      "date": "2026-04-30",
+      "who": "Lola",
+      "value": 1358.24,
+      "type": "LICENCA"
+    },
+    {
+      "date": "2026-04-30",
+      "who": "Joint",
+      "value": 1358.24,
+      "type": "IRS"
+    }
+  ],
+  "joint_target": 4500.0
+}

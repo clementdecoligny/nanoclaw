@@ -1,0 +1,496 @@
+{
+  "transactions": [
+    {
+      "value_date": "2026-05-03",
+      "description": "JUROS DEPOSITO A PRAZO",
+      "amount": 16.04,
+      "category": "INCOME",
+      "sub_category": "OTHER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-03",
+      "description": "IMPOSTO IRS/IRC DEPOSITO PRAZO       3446885107",
+      "amount": -4.49,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-04",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -1579.0,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-08",
+      "description": "COMPRA 6059 CP CP",
+      "amount": -13.55,
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-08",
+      "description": "CRED. 6059 CP CP",
+      "amount": 13.55,
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+      "amount": -13.55,
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 3883 SANTARENDIS SOC DIS SAN CONTACTLESS",
+      "amount": -6.82,
+      "category": "EAT OUT",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 3883 CARDINAL D AROMAS - CAS CONTACTLESS",
+      "amount": -1.3,
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "COMPRA 3883 AMANHECER BARRIL ENCARN CONTACTLESS",
+      "amount": -12.2,
+      "category": "EAT OUT",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-12",
+      "description": "PAGSERV HOSPITAL CUF TEJO SA   10598/650103563",
+      "amount": -17.0,
+      "category": "HEALTH",
+      "sub_category": "HOSPITAL",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "TRF P/ Escola no Chiado",
+      "amount": -16.0,
+      "category": "EDUCATION",
+      "sub_category": "ESCOLA",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 3883 FNAC LOJA DO CHIADO LIS CONTACTLESS",
+      "amount": -19.99,
+      "category": "LEISURE",
+      "sub_category": "",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-15",
+      "description": "COMPRA 3883 OFICINA 35 LISBOA PT    CONTACTLESS",
+      "amount": -210.0,
+      "category": "BIKE",
+      "sub_category": "MAINTENANCE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 3883 AIRBNB HMKFHF8TKC 130-880-3888 LU",
+      "amount": -72.98,
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-19",
+      "description": "COMPRA 6059 pay.amazon.com amazon.es",
+      "amount": -14.5,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-20",
+      "description": "COMPRA 3883 Hotel at Booking.com Amsterdam NL",
+      "amount": -61.85,
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-21",
+      "description": "TRF MB WAY P/ GENNARO STEFANO GIACALONE",
+      "amount": -30.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 CONFEITARIA NACIONAL LI CONTACTLESS",
+      "amount": -10.8,
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 ADP ORY P3 CBBS 4102231 CONTACTLESS",
+      "amount": -6.5,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 APPLE.COM BILL ITUNES.COM IE",
+      "amount": -2.99,
+      "category": "HOUSE",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 BOLT.EUO2605201522 Tallinn EE",
+      "amount": -7.25,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 BOLT.EUO2605201545 Tallinn EE",
+      "amount": -18.37,
+      "category": "MOBILITY",
+      "sub_category": "BOLT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 SNCF VOYAGEURS MONTGERO CONTACTLESS",
+      "amount": -9.1,
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-22",
+      "description": "COMPRA 3883 JET CYCLES PARIS 12 FR  CONTACTLESS",
+      "amount": -189.7,
+      "category": "HOLIDAY",
+      "sub_category": "BIKE",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-23",
+      "description": "TRF. P/O GENNARO STEFANO GIACALONE",
+      "amount": 35.0,
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 MONOPRIX PARIS FR       CONTACTLESS",
+      "amount": -21.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 Hotel at Booking.com Amsterdam NL",
+      "amount": -97.81,
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 PANNETIER ET FILS NEVER CONTACTLESS",
+      "amount": -30.55,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 RELAY 4037764 58347125  CONTACTLESS",
+      "amount": -13.1,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SNCF-VOYAGEURS PARIS 10 FR",
+      "amount": -19.0,
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SNCF-VOYAGEURS PARIS 10 FR",
+      "amount": -38.6,
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SNCF VOYAGEURS NEVERS F CONTACTLESS",
+      "amount": -48.0,
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 LA SCALA SICILIA LYON F CONTACTLESS",
+      "amount": -13.5,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 BOULANGERIE DESROCHE BR CONTACTLESS",
+      "amount": -3.8,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 ALDI FRLYO040 4292242 2 CONTACTLESS",
+      "amount": -12.89,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 CHEZ L ARTISTE MONTELIM CONTACTLESS",
+      "amount": -67.1,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 LA GARE SOYONS FR       CONTACTLESS",
+      "amount": -14.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 PHARMACIE DU MON2993966 CONTACTLESS",
+      "amount": -3.5,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SOUVENIR MT VENTOUX BED CONTACTLESS",
+      "amount": -11.5,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SUPER U 9233602 84VAISO CONTACTLESS",
+      "amount": -4.4,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 UTILE 9236364 84ISLE SU CONTACTLESS",
+      "amount": -4.46,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SumUp TOUILLE MARSEILLE CONTACTLESS",
+      "amount": -10.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 SUMUP ILLYRIAN 13 MARSE CONTACTLESS",
+      "amount": -15.0,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 3883 NMH LYON LYON FR        CONTACTLESS",
+      "amount": -0.88,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-26",
+      "description": "COMPRA 6059 HOTEL DE BOURGOGNE LA CLAYETTE",
+      "amount": -86.7,
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "COMPRA 3883 SNCF-VOYAGEURS PARIS 10 FR",
+      "amount": -14.4,
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "COMPRA 3883 RELAY DAILY MON 4116213 CONTACTLESS",
+      "amount": -52.86,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "COMPRA 3883 DAT GARE VAMP VITROLLES CONTACTLESS",
+      "amount": -1.2,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "COMPRA 3883 DAT GARE VAMP VITROLLES CONTACTLESS",
+      "amount": -1.2,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "COMPRA 3883 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO",
+      "amount": -22.14,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "CUSTO DE SERVICO INTERNACIONAL",
+      "amount": -0.85,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "IMPOSTO DO SELO",
+      "amount": -0.03,
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-27",
+      "description": "TRANSFERENCIA - VENCIMENTO",
+      "amount": 4445.44,
+      "category": "INCOME",
+      "sub_category": "SALARY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "COMPRA 3883 BOUGNATERIE 2412312 MAR CONTACTLESS",
+      "amount": -20.6,
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "COMPRA 3883 ADEGA TAGARRO LISBOA PT CONTACTLESS",
+      "amount": -15.0,
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-28",
+      "description": "TRF P/ Parents SoGe",
+      "amount": -972.3,
+      "category": "LIABILITY",
+      "sub_category": "",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 3883 WWW.TICKET TICKETSWAP AMSTERDAM NL",
+      "amount": -104.7,
+      "category": "LEISURE",
+      "sub_category": "CONCERT",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "TRANSFERENCIA - VENCIMENTO",
+      "amount": 1149.0,
+      "category": "INCOME",
+      "sub_category": "SALARY",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -2480.0,
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 3883 PAULO BRAS UNIO LDA LIS CONTACTLESS",
+      "amount": -3.2,
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-29",
+      "description": "COMPRA 3883 SUPREME SPORTS LISBOA P CONTACTLESS",
+      "amount": -6.0,
+      "category": "LEISURE",
+      "sub_category": "",
+      "confidence": "reviewed"
+    }
+  ],
+  "account": "personal",
+  "year": 2026,
+  "month": 5,
+  "status": "verified"
+}

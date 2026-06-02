@@ -36,5 +36,6 @@ _Last updated: 2026-05-18_
 | Item | Qty | Notes |
 |---|---|---|
 | ~~Œufs~~ | ~~1–2 dz~~ | ✅ Reçu livraison Continente 29/05 |
+| Peito de frango (blanc de poulet) | 1–1.5 kg | Plus de poulet au congélo — urgent pour batch effiloché |
 
 ---
