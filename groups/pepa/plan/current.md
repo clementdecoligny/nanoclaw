@@ -1,6 +1,6 @@
 # Plan semaine — 31 mai → 07 juin 2026
 
-_Mis à jour : 2026-06-02_
+_Mis à jour : 2026-06-03 (panier intégré)_
 _Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants. Mercredi soir Clément sort. Jeudi férié, enfants à la maison. Branca présente mar + jeu soir. Panier de légumes mercredi soir 03/06._
 
 ---
@@ -30,41 +30,43 @@ _Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants
 
 | | |
 |---|---|
-| Déjeuner | TBD |
-| Dîner | Simple pour enfants seuls (Branca ou plat rapide) |
+| Déjeuner | Clément dehors — bolognaise toujours au congélo (3 tupperwares) |
+| Dîner | Enfants : soupe + pasta letras + parmesan. Clément : dehors |
 
 ## Jeudi 04 juin *(Férié — enfants à la maison — Branca le soir)*
 
 | | |
 |---|---|
-| Déjeuner | TBD |
-| Dîner | TBD |
+| Déjeuner | Wraps panados + avocat (urgent mûr) + salade verte + tomates + feta (picnic) |
+| Dîner | Pisto español (1×500g congélo) + riz + œuf au plat (Branca) |
+
+**Branca batch** : soupe poireau+carottes+pmdt (6+ tupperwares), coleslaw chou blanc+carotte, riz basmati 500g
 
 ## Vendredi 05 juin *(Clément solo)*
 
 | | |
 |---|---|
-| Déjeuner | TBD |
-| Dîner | TBD |
+| Déjeuner | Salade thon + pois chiches + tomates + salade verte + feta |
+| Dîner | Curry de légumes (900g congélo) + riz basmati |
 
 ## Samedi 06 juin *(Lola rentre à midi)*
 
 | | |
 |---|---|
-| Déjeuner | TBD |
-| Dîner | TBD |
+| Déjeuner | Bolognaise (1 tupperware congélo) + spaghetti + salade verte |
+| Dîner | Dourada au four + riz + tomates/carottes rôties 🎉 |
 
 ---
 
 ## Stock critique
 
 - Soupe : ~7 tupperwares congélo ✅ (batch Branca 28/05)
-- Bolognaise : 3 tupperwares → lun déj (reste 2)
-- Frango effiloché : ⚠️ TOUJOURS À PRODUIRE — utiliser bife de frango 2×500g (peito épuisé)
-- Sauce tomate : ⚠️ TOUJOURS À PRODUIRE — lun dîner peut se faire avec passata directement
-- Panados de frango : ~400g congélo → lun dîner
+- Soupe : ~7 tupperwares congélo ✅
+- Bolognaise : 3 tupperwares (aucune utilisée — mer déj = 1, reste 2 après)
+- Frango effiloché : ⚠️ TOUJOURS À PRODUIRE — plus de poulet au congélo, à acheter
 - Pisto español : 2×500g congélo
-- Dourada (congelée 30/05) + Robalo (congelé 30/05) : à planifier semaine prochaine
+- Dourada (congelée 30/05) + Robalo (congelé 30/05) : à planifier
 - Feijoada angolana (Branca) : 2 tupperwares congélo
 - Curry de légumes : 1×900g congélo
 - Œufs : ~12 ✅
+- Panier légumes : arrivée mercredi soir 03/06

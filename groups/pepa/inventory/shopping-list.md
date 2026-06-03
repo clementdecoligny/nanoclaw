@@ -2,7 +2,7 @@
 
 > Agent-maintained. Updated automatically when stock drops below thresholds or when a meal plan requires items not in inventory.
 
-_Last updated: 2026-05-18_
+_Last updated: 2026-06-03_
 
 ---
 
@@ -35,7 +35,8 @@ _Last updated: 2026-05-18_
 
 | Item | Qty | Notes |
 |---|---|---|
-| ~~Œufs~~ | ~~1–2 dz~~ | ✅ Reçu livraison Continente 29/05 |
+| Œufs | 2 dz | ⚠️ Épuisés 03/06 — urgent |
+| Lixívia (eau de javel) | 1 | ⚠️ Épuisée 03/06 |
 | Peito de frango (blanc de poulet) | 1–1.5 kg | Plus de poulet au congélo — urgent pour batch effiloché |
 
 ---

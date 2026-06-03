@@ -181,36 +181,41 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-06-02 (photos Clément)_
+_Mis à jour 2026-06-03 (panier reçu)_
 
 ### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
 | Chou blanc | 1 tête | Pour coleslaw |
-| Tomates | ~4–5 | 3 cœur de bœuf + 1–2 normales |
+| Tomates | ~7–8 | ~4-5 anciennes + 3 petites panier |
 | Radis | ~8–10 | |
 | Myrtilles | 1 barquette (~½) | |
+| Salade verte | 1 | Panier 03/06 |
+| Poireau | 1 gros | Panier 03/06 — soupe |
+| Carottes | 3 | Panier 03/06 |
+| Pommes de terre | 2 | Panier 03/06 |
 
 ### 🧺 Légumes (hors frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
 | Oignons jaunes | 1 | |
-| Ail | ~2 têtes | Partiellement entamées |
+| Ail | ~2 têtes | 1 entamée + 1 panier |
 | Gingembre frais | 0 | |
 
 ### 🍊 Fruits (corbeille + frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oranges | ~4 | Frigo |
-| Nectarines | 2–3 | Frigo |
-| Citrons verts | 2 | 1 frigo + 1 corbeille |
-| Citrons jaunes | 2 | 1 frigo + 1 corbeille |
-| Bananes | 4 | Corbeille — mûres |
-| Pommes | 5–6 | Corbeille |
-| Avocat | 1 | ⚠️ Très mûr — à utiliser vite |
+| Oranges | ~6 | ~4 frigo + 2 panier |
+| Nectarines | ~4–5 | 2-3 frigo + 2 panier |
+| Clémentines | 2 | Panier 03/06 |
+| Citrons verts | 2 | |
+| Citrons jaunes | 3 | 2 anciens + 1 panier |
+| Bananes | 8 | 4 mûres + 4 petites panier |
+| Pommes | ~7–8 | 5-6 anciennes + 2 panier |
+| Avocats | 3 | 1 très mûr (urgent) + 2 petits panier |
 
 ---
 
@@ -247,7 +252,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 0 | Confirmé épuisé 02/06 |
 | Bife de frango (filet de poulet) | 0 | Utilisé (date TBC) |
-| Panados de frango (escalopes panées poulet) | 0 | Utilisés wraps dîner 01/06 |
+| Panados de frango (escalopes panées poulet) | En stock | Quantité TBC — confirmé 03/06 |
 | Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
 | Boulettes de viande IKEA | 0 | Confirmé terminées 28/05 |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
