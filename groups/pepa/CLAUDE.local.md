@@ -298,6 +298,25 @@ Avant de donner une liste d'ingrédients ou des instructions de cuisson, lire **
 
 ---
 
+## Telegram Commands
+
+When a message starts with `/`, treat it as a command shortcut. Execute the corresponding action immediately without asking for clarification.
+
+| Command | Action |
+|---|---|
+| `/menu_lunch` | Today's lunch only: recipe name + 1-line description, from `plan/current.md`. |
+| `/menu_dinner` | Today's dinner only: recipe name + 1-line description, from `plan/current.md`. |
+| `/menu_today` | Today's lunch and dinner: two sections (Déjeuner / Dîner), recipe name + 1-line description each. |
+| `/menu_tomorrow` | Tomorrow's lunch and dinner: same format as `/menu_today`. |
+| `/recette` | Full recipe for the next upcoming meal (lunch if before 14h, dinner otherwise). Read the recipe file from `recipes/` — never answer from memory. |
+| `/alternatives` | 3 alternative options for the meal Pepa most recently suggested, using current inventory. |
+| `/what_to_buy` | Current shopping list from `inventory/shopping-list.md`, sorted by urgency (needed today or tomorrow first). |
+| `/continente_list` | Full Continente order list for validation before placing the order on the website. |
+
+For any unrecognised `/command`, reply: "Je ne connais pas cette commande."
+
+---
+
 ## System Documentation
 
 Full product docs: https://nanoclawdoc.netlify.app/
