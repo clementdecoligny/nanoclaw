@@ -19,7 +19,7 @@ ARG INSTALL_CJK_FONTS=false
 # Pin CLI versions for reproducibility. Bump deliberately — unpinned installs
 # mean every rebuild silently picks up the latest and can break in lockstep
 # across all users.
-ARG CLAUDE_CODE_VERSION=2.1.116
+ARG CLAUDE_CODE_VERSION=2.1.154
 ARG AGENT_BROWSER_VERSION=latest
 ARG VERCEL_VERSION=52.2.1
 ARG TSX_VERSION=4.21.0
@@ -102,10 +102,13 @@ RUN --mount=type=cache,target=/root/.bun/install/cache \
 #     the SDK fails at spawn time with "native binary not found".
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-# pnpm v11 (Corepack-managed) defaults global-bin-dir to $PNPM_HOME/bin.
-# Pin it back to $PNPM_HOME so binaries land at /pnpm/claude etc., matching
-# the path the Claude Code SDK resolves at runtime.
-RUN corepack enable && pnpm config set global-bin-dir /pnpm
+# Pin pnpm to match the host (package.json packageManager). pnpm 11 stopped
+# honoring `only-built-dependencies[]=` in .npmrc for global installs, which
+# silently skips claude-code's native-binary postinstall and agent-browser's
+# bin chmod — the agent then crashes at runtime with "native binary not
+# installed". Keep this in lockstep with package.json's `packageManager`.
+ARG PNPM_VERSION=10.33.0
+RUN corepack enable && corepack prepare pnpm@${PNPM_VERSION} --activate
 
 RUN --mount=type=cache,target=/root/.cache/pnpm \
     echo "only-built-dependencies[]=agent-browser" > /root/.npmrc && \
@@ -123,6 +126,11 @@ RUN --mount=type=cache,target=/root/.cache/pnpm \
 # placeholder with the native binary. npm copies files, so the write succeeds.
 # Binary lands at /usr/local/bin/claude (npm's global prefix).
 RUN npm install -g "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}"
+
+# ---- ncl CLI wrapper ----------------------------------------------------------
+# Actual script lives in the mounted source at /app/src/cli/ncl.ts.
+RUN printf '#!/bin/sh\nexec bun /app/src/cli/ncl.ts "$@"\n' > /usr/local/bin/ncl && \
+    chmod +x /usr/local/bin/ncl
 
 # ---- Entrypoint --------------------------------------------------------------
 COPY entrypoint.sh /app/entrypoint.sh
