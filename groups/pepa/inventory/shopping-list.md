@@ -2,7 +2,7 @@
 
 > Agent-maintained. Updated automatically when stock drops below thresholds or when a meal plan requires items not in inventory.
 
-_Last updated: 2026-06-03_
+_Last updated: 2026-06-04_
 
 ---
 
@@ -13,9 +13,9 @@ _Last updated: 2026-06-03_
 | Sopitas bio ready-to-eat (bebé) | 5 | Non trouvé sur Continente — à sourcer |
 | Tahini | 1 | Non trouvé sur Continente — 1 jar en stock, pas urgent |
 | Olives noires dénoyautées | 2–3 bocaux | À renouveler régulièrement |
-| Origan | 1 | Acheté local 31/05 — à intégrer prochaine commande |
-| Confiture de fraises | 1–2 | Petit-déj enfants — acheté local 31/05 |
 | Liquide lave-vaisselle | 1 | Acheté local 31/05 — à intégrer prochaine commande |
+| Chocapic | 1 × 650g | Ajouté 04/06 |
+| Cannelle | 1 | Ajouté 04/06 |
 
 ---
 
