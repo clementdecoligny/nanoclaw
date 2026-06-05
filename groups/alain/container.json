@@ -1,10 +1,25 @@
 {
-  "mcpServers": {},
+  "mcpServers": {
+    "gmail": {
+      "command": "gmail-mcp",
+      "args": [],
+      "env": {
+        "GMAIL_OAUTH_PATH": "/workspace/extra/.gmail-mcp/gcp-oauth.keys.json",
+        "GMAIL_CREDENTIALS_PATH": "/workspace/extra/.gmail-mcp/credentials.json"
+      }
+    }
+  },
   "packages": {
     "apt": [],
     "npm": []
   },
-  "additionalMounts": [],
+  "additionalMounts": [
+    {
+      "hostPath": "/home/clem/.gmail-mcp",
+      "containerPath": ".gmail-mcp",
+      "readonly": false
+    }
+  ],
   "skills": "all",
   "groupName": "Alain",
   "assistantName": "Alain",

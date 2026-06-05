@@ -40,13 +40,13 @@ _Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants
 | Déjeuner | Wraps panados + avocat (urgent mûr) + salade verte + tomates + feta (picnic) |
 | Dîner | Pisto español (1×500g congélo) + riz + œuf au plat (Branca) |
 
-**Branca batch** : soupe poireau+carottes+pmdt (6+ tupperwares), coleslaw chou blanc+carotte, riz basmati 500g
+**Branca batch** : ⚠️ NON RÉALISÉ (05/06) — légumes toujours dispo (poireau, carottes, pmdt, chou blanc). À reporter.
 
 ## Vendredi 05 juin *(Clément solo)*
 
 | | |
 |---|---|
-| Déjeuner | Salade thon + pois chiches + tomates + salade verte + feta |
+| Déjeuner | ~~Salade thon~~ → Bolognaise + pâtes (1 tup congélo utilisé) — restes pour enfants ce soir ou sam déj |
 | Dîner | Curry de légumes (900g congélo) + riz basmati |
 
 ## Samedi 06 juin *(Lola rentre à midi)*
@@ -54,7 +54,7 @@ _Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants
 | | |
 |---|---|
 | Déjeuner | Bolognaise (1 tupperware congélo) + spaghetti + salade verte |
-| Dîner | Dourada au four + riz + tomates/carottes rôties 🎉 |
+| Dîner | **6 adultes invités** — Dourada + Robalo au four (ail, citron, herbes) + riz basmati + légumes rôtis (congélo) + salade verte. Soupe en entrée. 🎉 |
 
 ---
 

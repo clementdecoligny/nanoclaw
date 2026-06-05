@@ -19,12 +19,5 @@
   "skills": "all",
   "groupName": "Pepa",
   "assistantName": "Pepa",
-  "agentGroupId": "ag-1777719573229-tnlcij",
-  "env": {
-    "CONTINENTE_EMAIL": "darocalola@gmail.com",
-    "CONTINENTE_PASSWORD": "Lolita77!",
-    "PHARMEESTORE_EMAIL": "clementdecoligny@gmail.com",
-    "PHARMEESTORE_PASSWORD": "Xg4LNhCzxMM",
-    "PHARMEESTORE_PHONE": "911706263"
-  }
+  "agentGroupId": "ag-1777719573229-tnlcij"
 }
