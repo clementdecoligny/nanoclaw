@@ -1,5 +1,5 @@
-import type { NewMessage } from './types.js';
-import { logger } from './logger.js';
+import type { MessageIn } from './types.js';
+import { log as logger } from './log.js';
 
 /**
  * Extract a session slash command from a message, stripping the trigger prefix if present.
@@ -30,15 +30,12 @@ export interface AgentResult {
 export interface SessionCommandDeps {
   sendMessage: (text: string) => Promise<void>;
   setTyping: (typing: boolean) => Promise<void>;
-  runAgent: (
-    prompt: string,
-    onOutput: (result: AgentResult) => Promise<void>,
-  ) => Promise<'success' | 'error'>;
+  runAgent: (prompt: string, onOutput: (result: AgentResult) => Promise<void>) => Promise<'success' | 'error'>;
   closeStdin: () => void;
   advanceCursor: (timestamp: string) => void;
-  formatMessages: (msgs: NewMessage[], timezone: string) => string;
+  formatMessages: (msgs: MessageIn[], timezone: string) => string;
   /** Whether the denied sender would normally be allowed to interact (for denial messages). */
-  canSenderInteract: (msg: NewMessage) => boolean;
+  canSenderInteract: (msg: MessageIn) => boolean;
 }
 
 function resultToText(result: string | object | null | undefined): string {
@@ -54,7 +51,7 @@ function resultToText(result: string | object | null | undefined): string {
  * success=false means the caller should retry (cursor was not advanced).
  */
 export async function handleSessionCommand(opts: {
-  missedMessages: NewMessage[];
+  missedMessages: MessageIn[];
   isMainGroup: boolean;
   groupName: string;
   triggerPattern: RegExp;
@@ -63,14 +60,12 @@ export async function handleSessionCommand(opts: {
 }): Promise<{ handled: false } | { handled: true; success: boolean }> {
   const { missedMessages, isMainGroup, groupName, triggerPattern, timezone, deps } = opts;
 
-  const cmdMsg = missedMessages.find(
-    (m) => extractSessionCommand(m.content, triggerPattern) !== null,
-  );
+  const cmdMsg = missedMessages.find((m) => extractSessionCommand(m.content, triggerPattern) !== null);
   const command = cmdMsg ? extractSessionCommand(cmdMsg.content, triggerPattern) : null;
 
   if (!command || !cmdMsg) return { handled: false };
 
-  if (!isSessionCommandAllowed(isMainGroup, cmdMsg.is_from_me === true)) {
+  if (!isSessionCommandAllowed(isMainGroup, (cmdMsg as MessageIn & { is_from_me?: boolean }).is_from_me === true)) {
     // DENIED: send denial if the sender would normally be allowed to interact,
     // then silently consume the command by advancing the cursor past it.
     // Trade-off: other messages in the same batch are also consumed (cursor is
@@ -83,7 +78,7 @@ export async function handleSessionCommand(opts: {
   }
 
   // AUTHORIZED: process pre-compact messages first, then run the command
-  logger.info({ group: groupName, command }, 'Session command');
+  logger.info('Session command', { group: groupName, command });
 
   const cmdIndex = missedMessages.indexOf(cmdMsg);
   const preCompactMsgs = missedMessages.slice(0, cmdIndex);
@@ -109,7 +104,7 @@ export async function handleSessionCommand(opts: {
     });
 
     if (preResult === 'error' || hadPreError) {
-      logger.warn({ group: groupName }, 'Pre-compact processing failed, aborting session command');
+      logger.warn('Pre-compact processing failed, aborting session command', { group: groupName });
       await deps.sendMessage(`Failed to process messages before ${command}. Try again.`);
       if (preOutputSent) {
         // Output was already sent — don't retry or it will duplicate.

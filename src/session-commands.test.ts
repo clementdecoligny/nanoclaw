@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { extractSessionCommand, handleSessionCommand, isSessionCommandAllowed } from './session-commands.js';
-import type { NewMessage } from './types.js';
+import type { MessageIn } from './types.js';
 import type { SessionCommandDeps } from './session-commands.js';
 
 describe('extractSessionCommand', () => {
@@ -53,14 +53,20 @@ describe('isSessionCommandAllowed', () => {
   });
 });
 
-function makeMsg(content: string, overrides: Partial<NewMessage> = {}): NewMessage {
+function makeMsg(content: string, overrides: Partial<MessageIn> & { is_from_me?: boolean } = {}): MessageIn & { is_from_me?: boolean } {
   return {
     id: 'msg-1',
-    chat_jid: 'group@test',
-    sender: 'user@test',
-    sender_name: 'User',
+    kind: 'chat' as const,
+    status: 'pending' as const,
+    status_changed: null,
+    process_after: null,
+    recurrence: null,
+    tries: 0,
+    platform_id: null,
+    channel_type: null,
+    thread_id: null,
     content,
-    timestamp: '100',
+    timestamp: new Date(100).toISOString(),
     ...overrides,
   };
 }
@@ -142,10 +148,7 @@ describe('handleSessionCommand', () => {
 
   it('processes pre-compact messages before /compact', async () => {
     const deps = makeDeps();
-    const msgs = [
-      makeMsg('summarize this', { timestamp: '99' }),
-      makeMsg('/compact', { timestamp: '100' }),
-    ];
+    const msgs = [makeMsg('summarize this', { timestamp: '99' }), makeMsg('/compact', { timestamp: '100' })];
     const result = await handleSessionCommand({
       missedMessages: msgs,
       isMainGroup: true,
@@ -178,10 +181,12 @@ describe('handleSessionCommand', () => {
 
   it('reports failure when command-stage runAgent returns error without streamed status', async () => {
     // runAgent resolves 'error' but callback never gets status: 'error'
-    const deps = makeDeps({ runAgent: vi.fn().mockImplementation(async (prompt, onOutput) => {
-      await onOutput({ status: 'success', result: null });
-      return 'error';
-    })});
+    const deps = makeDeps({
+      runAgent: vi.fn().mockImplementation(async (prompt, onOutput) => {
+        await onOutput({ status: 'success', result: null });
+        return 'error';
+      }),
+    });
     const result = await handleSessionCommand({
       missedMessages: [makeMsg('/compact')],
       isMainGroup: true,
@@ -196,10 +201,7 @@ describe('handleSessionCommand', () => {
 
   it('returns success:false on pre-compact failure with no output', async () => {
     const deps = makeDeps({ runAgent: vi.fn().mockResolvedValue('error') });
-    const msgs = [
-      makeMsg('summarize this', { timestamp: '99' }),
-      makeMsg('/compact', { timestamp: '100' }),
-    ];
+    const msgs = [makeMsg('summarize this', { timestamp: '99' }), makeMsg('/compact', { timestamp: '100' })];
     const result = await handleSessionCommand({
       missedMessages: msgs,
       isMainGroup: true,
