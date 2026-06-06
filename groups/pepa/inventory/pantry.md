@@ -158,6 +158,7 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 | Olives noires dénoyautées | En stock | Acheté 31/05 |
 | Confiture de fraises | En stock | Petit-déj enfants — acheté 31/05 |
 | Origan | En stock | Acheté 31/05 |
+| Cannelle | En stock | Acheté 06/06 |
 | Miel | En stock | |
 | Vinaigre | En stock | |
 | Sauce soja | 1 × 1L | Grande bouteille — ajouté 13/05 |
@@ -227,7 +228,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
-| Œufs frais | ~12 | Ovos de Solo Classe M — livraison 29/05 |
+| Œufs frais | ~12 + 6 achetés 06/06 | Ovos de Solo Classe M — livraison 29/05 + achat local 06/06 |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
@@ -250,7 +251,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Peito de frango (blanc de poulet) | 0 | Confirmé épuisé 02/06 |
+| Peito de frango (blanc de poulet) | 6 | Acheté et congelé 06/06 |
 | Bife de frango (filet de poulet) | 0 | Utilisé (date TBC) |
 | Panados de frango (escalopes panées poulet) | En stock | Quantité TBC — confirmé 03/06 |
 | Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
