@@ -12,7 +12,9 @@ import {
   type ComplexityStats,
 } from './metrics.js';
 
-const REPO_ROOT = process.env.REPO_ROOT ?? process.cwd();
+// pnpm sets cwd to the package dir (tools/quality/). Default to two levels up (repo root).
+const REPO_ROOT = process.env.REPO_ROOT ??
+  path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..', '..');
 const HISTORY_PATH = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'history.json');
 const BASELINE_PATH = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'baseline.json');
 
@@ -244,7 +246,23 @@ const isBaseline = process.argv.includes('--baseline');
 
 if (isBaseline) {
   // Scan upstream/main and write baseline.json
-  const originalHead = git('rev-parse HEAD');
+  // Use branch name for restore if on a named branch; fall back to hash for detached HEAD.
+  const originalBranch = (() => {
+    try {
+      const branch = execSync('git symbolic-ref --short HEAD', { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
+      return branch || null;
+    } catch { return null; }
+  })();
+  const originalHead = originalBranch ?? git('rev-parse HEAD');
+  const isDirty = execSync('git status --porcelain', { cwd: REPO_ROOT, encoding: 'utf8' }).trim().length > 0;
+  if (isDirty) {
+    execSync('git stash', { cwd: REPO_ROOT, stdio: 'inherit' });
+  }
+  // Write to a temp path during the upstream/main checkout, then move into place after
+  // restoring HEAD. Writing directly to BASELINE_PATH while on upstream/main causes
+  // "untracked file would be overwritten" when git tries to restore the original branch.
+  const BASELINE_TMP = '/tmp/quality-baseline-tmp.json';
+  let baselineData: string | null = null;
   try {
     console.log('[quality] Checking out upstream/main for baseline scan...');
     execSync('git checkout upstream/main', { cwd: REPO_ROOT, stdio: 'inherit' });
@@ -255,10 +273,17 @@ if (isBaseline) {
       source: 'upstream/main',
       metrics: record.metrics,
     };
-    fs.writeFileSync(BASELINE_PATH, JSON.stringify(baseline, null, 2));
-    console.log('[quality] Baseline written to', BASELINE_PATH);
+    baselineData = JSON.stringify(baseline, null, 2);
+    fs.writeFileSync(BASELINE_TMP, baselineData);
   } finally {
     execSync(`git checkout ${originalHead}`, { cwd: REPO_ROOT, stdio: 'inherit' });
+    if (isDirty) {
+      try { execSync('git stash pop', { cwd: REPO_ROOT, stdio: 'inherit' }); } catch { /* ignore */ }
+    }
+    if (baselineData !== null) {
+      fs.writeFileSync(BASELINE_PATH, baselineData);
+      console.log('[quality] Baseline written to', BASELINE_PATH);
+    }
     console.log('[quality] Restored HEAD to', originalHead.slice(0, 7));
   }
 } else {

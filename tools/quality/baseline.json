@@ -1,1 +1,55 @@
-null
+{
+  "hash": "d14472142d4ddcbb50e5f58ff09d63eb2f99bc20",
+  "date": "2026-06-05T08:04:24+00:00",
+  "source": "upstream/main",
+  "metrics": {
+    "deadCode": {
+      "unusedFiles": 0,
+      "unusedExports": 0,
+      "unusedDependencies": 0
+    },
+    "duplication": {
+      "percentage": 0,
+      "clones": 0,
+      "duplicatedLines": 0
+    },
+    "complexity": {
+      "host": {
+        "avgComplexity": 1.2967123935580178,
+        "maxComplexity": 4,
+        "functionsAboveThreshold": 0
+      },
+      "agentRunner": {
+        "avgComplexity": 1.2392775338633526,
+        "maxComplexity": 3,
+        "functionsAboveThreshold": 0
+      }
+    },
+    "lineCount": {
+      "total": 125484,
+      "byExtension": {
+        ".lock": 1,
+        ".json": 371,
+        ".md": 20851,
+        ".ts": 48079,
+        ".swift": 148,
+        "(no ext)": 837,
+        ".example": 1,
+        ".yml": 348,
+        ".sh": 4169,
+        ".TAG": 10,
+        ".png": 8728,
+        ".jpeg": 10779,
+        ".txt": 31,
+        ".jpg": 1630,
+        ".map": 386,
+        ".js": 27494,
+        ".html": 422,
+        ".plist": 33,
+        ".yaml": 9,
+        ".svg": 83,
+        ".db": 1074
+      }
+    }
+  }
+}

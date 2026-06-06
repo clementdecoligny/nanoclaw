@@ -1,1 +1,5728 @@
-{ "commits": [] }
+{
+  "commits": [
+    {
+      "hash": "2c2f1b11890fb848b4b5dd244889c85f483694c6",
+      "shortHash": "2c2f1b11",
+      "date": "2026-06-06T15:35:33+01:00",
+      "subject": "fix(quality): scope backfill to fork commits only, use local knip/jscpd",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 4.73,
+          "clones": 4,
+          "duplicatedLines": 57
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 1.3557017543859649,
+            "maxComplexity": 1.736842105263158,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 951,
+          "byExtension": {
+            ".json": 45,
+            ".html": 227,
+            ".ts": 679
+          }
+        }
+      }
+    },
+    {
+      "hash": "0161ba508aebaa2793d599d8f5dce1c263254c58",
+      "shortHash": "0161ba50",
+      "date": "2026-03-08T23:18:06+02:00",
+      "subject": "skill/apple-container: switch runtime from Docker to Apple Container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 4.73,
+          "clones": 4,
+          "duplicatedLines": 57
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 0,
+          "byExtension": {}
+        }
+      }
+    },
+    {
+      "hash": "7c04dafa3df78ba739a40b172d20d5b3df0c7d42",
+      "shortHash": "7c04dafa",
+      "date": "2026-03-08T23:24:40+02:00",
+      "subject": "Merge remote-tracking branch 'origin/main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 0,
+          "clones": 0,
+          "duplicatedLines": 0
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 76,
+          "byExtension": {
+            ".json": 76
+          }
+        }
+      }
+    },
+    {
+      "hash": "2f1933775c00a092f1b981ce18f7b1f9d9da9ff4",
+      "shortHash": "2f193377",
+      "date": "2026-03-09T00:07:58+02:00",
+      "subject": "Merge remote-tracking branch 'origin/main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 0,
+          "clones": 0,
+          "duplicatedLines": 0
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 112,
+          "byExtension": {
+            ".json": 112
+          }
+        }
+      }
+    },
+    {
+      "hash": "9558bdfcdd55315f27aa145a8f8970068e5742d4",
+      "shortHash": "9558bdfc",
+      "date": "2026-03-09T00:09:07+02:00",
+      "subject": "skill/compact: /compact session command for context compaction",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 17.69,
+          "clones": 1,
+          "duplicatedLines": 26
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 148,
+          "byExtension": {
+            ".json": 148
+          }
+        }
+      }
+    },
+    {
+      "hash": "4cdd09c45c92cbb663ae43fb680948d7125c8c20",
+      "shortHash": "4cdd09c4",
+      "date": "2026-03-09T23:20:34+02:00",
+      "subject": "Merge remote-tracking branch 'origin/main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 14.21,
+          "clones": 1,
+          "duplicatedLines": 26
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 184,
+          "byExtension": {
+            ".json": 184
+          }
+        }
+      }
+    },
+    {
+      "hash": "5f9774df55394a6caa042f4e11b53d318f0348f1",
+      "shortHash": "5f9774df",
+      "date": "2026-03-09T23:20:51+02:00",
+      "subject": "Merge remote-tracking branch 'origin/main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 19.63,
+          "clones": 2,
+          "duplicatedLines": 43
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 220,
+          "byExtension": {
+            ".json": 220
+          }
+        }
+      }
+    },
+    {
+      "hash": "b0c2c835ff3a6601c352281c45003221a9f4d56c",
+      "shortHash": "b0c2c835",
+      "date": "2026-03-10T01:15:20+02:00",
+      "subject": "Merge commit '4cdd09c' into rebuild-fork",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 16.86,
+          "clones": 2,
+          "duplicatedLines": 43
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 256,
+          "byExtension": {
+            ".json": 256
+          }
+        }
+      }
+    },
+    {
+      "hash": "07c03cc148609118fa8a5a1ec00231b08026bde4",
+      "shortHash": "07c03cc1",
+      "date": "2026-03-10T01:15:26+02:00",
+      "subject": "Merge commit '5f9774d' into rebuild-fork",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 20.62,
+          "clones": 3,
+          "duplicatedLines": 60
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 292,
+          "byExtension": {
+            ".json": 292
+          }
+        }
+      }
+    },
+    {
+      "hash": "b66b123886fefe6c7758e0e896d8d94a6f391714",
+      "shortHash": "b66b1238",
+      "date": "2026-03-10T00:25:36+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 18.35,
+          "clones": 3,
+          "duplicatedLines": 60
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 328,
+          "byExtension": {
+            ".json": 328
+          }
+        }
+      }
+    },
+    {
+      "hash": "de69b8c6b2674ece9be903802638a08471402a79",
+      "shortHash": "de69b8c6",
+      "date": "2026-03-10T00:25:43+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.21,
+          "clones": 4,
+          "duplicatedLines": 77
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 364,
+          "byExtension": {
+            ".json": 364
+          }
+        }
+      }
+    },
+    {
+      "hash": "6c8216e255199a2027dbd106063a3e5b1cf9ffd6",
+      "shortHash": "6c8216e2",
+      "date": "2026-03-10T20:39:54+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 19.3,
+          "clones": 4,
+          "duplicatedLines": 77
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 400,
+          "byExtension": {
+            ".json": 400
+          }
+        }
+      }
+    },
+    {
+      "hash": "6833d76c74a6f2d8acc78ba4f7f5c504f2ae2581",
+      "shortHash": "6833d76c",
+      "date": "2026-03-10T20:40:03+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.61,
+          "clones": 5,
+          "duplicatedLines": 94
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 436,
+          "byExtension": {
+            ".json": 436
+          }
+        }
+      }
+    },
+    {
+      "hash": "5d226ba56c301ddb282d8ff0f6884dfb62b3f7a4",
+      "shortHash": "5d226ba5",
+      "date": "2026-03-10T20:52:02+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 19.96,
+          "clones": 5,
+          "duplicatedLines": 94
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 472,
+          "byExtension": {
+            ".json": 472
+          }
+        }
+      }
+    },
+    {
+      "hash": "f59c863c95303aae96e0fde6f27d4c3edcac2935",
+      "shortHash": "f59c863c",
+      "date": "2026-03-10T20:52:10+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.89,
+          "clones": 6,
+          "duplicatedLines": 111
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 508,
+          "byExtension": {
+            ".json": 508
+          }
+        }
+      }
+    },
+    {
+      "hash": "90d38388ad61aa1f84e33e46d75961923d65807d",
+      "shortHash": "90d38388",
+      "date": "2026-03-10T20:59:38+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 20.44,
+          "clones": 6,
+          "duplicatedLines": 111
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 544,
+          "byExtension": {
+            ".json": 544
+          }
+        }
+      }
+    },
+    {
+      "hash": "a64551a8f3029b621b0e927215bccb95115636f1",
+      "shortHash": "a64551a8",
+      "date": "2026-03-10T20:59:46+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 22.11,
+          "clones": 7,
+          "duplicatedLines": 128
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 580,
+          "byExtension": {
+            ".json": 580
+          }
+        }
+      }
+    },
+    {
+      "hash": "79ddc47703efd89c441b3a5d1f0858964ce91cad",
+      "shortHash": "79ddc477",
+      "date": "2026-03-11T10:25:35+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 20.81,
+          "clones": 7,
+          "duplicatedLines": 128
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 616,
+          "byExtension": {
+            ".json": 616
+          }
+        }
+      }
+    },
+    {
+      "hash": "20ba7a0b915310df6dc1a97314242c5c0892d54a",
+      "shortHash": "20ba7a0b",
+      "date": "2026-03-11T10:25:43+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 22.27,
+          "clones": 8,
+          "duplicatedLines": 145
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 652,
+          "byExtension": {
+            ".json": 652
+          }
+        }
+      }
+    },
+    {
+      "hash": "0432d136179755af0a828195ccc354331d25fc72",
+      "shortHash": "0432d136",
+      "date": "2026-03-11T10:30:39+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.11,
+          "clones": 8,
+          "duplicatedLines": 145
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 688,
+          "byExtension": {
+            ".json": 688
+          }
+        }
+      }
+    },
+    {
+      "hash": "e0401a519fc8717299888ed5e17f3d0c6ed3fe2c",
+      "shortHash": "e0401a51",
+      "date": "2026-03-11T10:30:47+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 22.41,
+          "clones": 9,
+          "duplicatedLines": 162
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 724,
+          "byExtension": {
+            ".json": 724
+          }
+        }
+      }
+    },
+    {
+      "hash": "efab26c97df27b1bedcdf157bcb73d96696e6869",
+      "shortHash": "efab26c9",
+      "date": "2026-03-13T11:59:04+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.34,
+          "clones": 9,
+          "duplicatedLines": 162
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 760,
+          "byExtension": {
+            ".json": 760
+          }
+        }
+      }
+    },
+    {
+      "hash": "3014194ed4d7d7c369ed1e7071f04425d5963097",
+      "shortHash": "3014194e",
+      "date": "2026-03-13T11:59:13+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 22.52,
+          "clones": 10,
+          "duplicatedLines": 179
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 796,
+          "byExtension": {
+            ".json": 796
+          }
+        }
+      }
+    },
+    {
+      "hash": "ed02382e6801b0000f99457b06d9362e970d9aa6",
+      "shortHash": "ed02382e",
+      "date": "2026-03-13T11:59:37+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.54,
+          "clones": 10,
+          "duplicatedLines": 179
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 832,
+          "byExtension": {
+            ".json": 832
+          }
+        }
+      }
+    },
+    {
+      "hash": "b2bfe92598af9a2f9b457171b1d8dbaefdb3e4c4",
+      "shortHash": "b2bfe925",
+      "date": "2026-03-13T11:59:45+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 22.61,
+          "clones": 11,
+          "duplicatedLines": 196
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 868,
+          "byExtension": {
+            ".json": 868
+          }
+        }
+      }
+    },
+    {
+      "hash": "5a16f9883838c4dbf576bc7cf9004587f998c961",
+      "shortHash": "5a16f988",
+      "date": "2026-03-14T13:16:50+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.71,
+          "clones": 11,
+          "duplicatedLines": 196
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 904,
+          "byExtension": {
+            ".json": 904
+          }
+        }
+      }
+    },
+    {
+      "hash": "c0acbfebbff8a9d8edea3cb43c127a3b1b1b5b6e",
+      "shortHash": "c0acbfeb",
+      "date": "2026-03-14T13:17:01+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 22.68,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 940,
+          "byExtension": {
+            ".json": 940
+          }
+        }
+      }
+    },
+    {
+      "hash": "51e776b286f7a2187d8250212330297c58bccc0e",
+      "shortHash": "51e776b2",
+      "date": "2026-03-14T15:24:09+00:00",
+      "subject": "Merge branch 'main' into skill/apple-container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 976,
+          "byExtension": {
+            ".json": 976
+          }
+        }
+      }
+    },
+    {
+      "hash": "44da74b6c55ad5f26892935c7702ff1abf38afee",
+      "shortHash": "44da74b6",
+      "date": "2026-03-14T15:24:19+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1012,
+          "byExtension": {
+            ".json": 1012
+          }
+        }
+      }
+    },
+    {
+      "hash": "540db101bc7bb59ffd08630b1af69ac7899f1569",
+      "shortHash": "540db101",
+      "date": "2026-03-24T23:05:16+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1048,
+          "byExtension": {
+            ".json": 1048
+          }
+        }
+      }
+    },
+    {
+      "hash": "2906a0ec10c27fca89f0dcc9a32f8a72b012ff68",
+      "shortHash": "2906a0ec",
+      "date": "2026-03-24T23:05:34+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1084,
+          "byExtension": {
+            ".json": 1084
+          }
+        }
+      }
+    },
+    {
+      "hash": "832a9aa049cca13c94b64d43b014d4552146beea",
+      "shortHash": "832a9aa0",
+      "date": "2026-03-25T11:26:15+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1120,
+          "byExtension": {
+            ".json": 1120
+          }
+        }
+      }
+    },
+    {
+      "hash": "614278187d70798e614ed051adebcb53d4d27afc",
+      "shortHash": "61427818",
+      "date": "2026-03-25T11:26:27+00:00",
+      "subject": "Merge branch 'main' into skill/compact",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1156,
+          "byExtension": {
+            ".json": 1156
+          }
+        }
+      }
+    },
+    {
+      "hash": "b341bc15858cb8e012ddbe17c739b5f8e9c40e5d",
+      "shortHash": "b341bc15",
+      "date": "2026-03-27T22:39:40+03:00",
+      "subject": "chore: remove direct pino/pino-pretty dependency",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1192,
+          "byExtension": {
+            ".json": 1192
+          }
+        }
+      }
+    },
+    {
+      "hash": "fa1fe39bb383e5716737ba6ea784e74fd382a462",
+      "shortHash": "fa1fe39b",
+      "date": "2026-03-27T22:39:46+03:00",
+      "subject": "chore: remove direct pino/pino-pretty dependency",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1228,
+          "byExtension": {
+            ".json": 1228
+          }
+        }
+      }
+    },
+    {
+      "hash": "d0a61c6f57dafb35d242643ef2610cfffda4a908",
+      "shortHash": "d0a61c6f",
+      "date": "2026-03-28T15:42:15+03:00",
+      "subject": "merge: catch up with upstream main",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1264,
+          "byExtension": {
+            ".json": 1264
+          }
+        }
+      }
+    },
+    {
+      "hash": "12ab5a40b5e7682a04bcc34b53443c59bcba9c2c",
+      "shortHash": "12ab5a40",
+      "date": "2026-03-28T15:57:19+03:00",
+      "subject": "merge: catch up with upstream main",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1300,
+          "byExtension": {
+            ".json": 1300
+          }
+        }
+      }
+    },
+    {
+      "hash": "5c56d4564df2efdb8688d985066238fe075156a6",
+      "shortHash": "5c56d456",
+      "date": "2026-03-28T23:59:11+03:00",
+      "subject": "fix: Apple Container networking and .env mount",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1336,
+          "byExtension": {
+            ".json": 1336
+          }
+        }
+      }
+    },
+    {
+      "hash": "9fc60f6af29ac41f820b5f27cfaf003cf0a3c9ca",
+      "shortHash": "9fc60f6a",
+      "date": "2026-03-29T00:02:32+03:00",
+      "subject": "security: bind credential proxy to bridge IP, not 0.0.0.0",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1372,
+          "byExtension": {
+            ".json": 1372
+          }
+        }
+      }
+    },
+    {
+      "hash": "e3e6ccdbd932bc74f09833197d5f62ab750fd2cc",
+      "shortHash": "e3e6ccdb",
+      "date": "2026-03-29T00:08:46+03:00",
+      "subject": "Merge pull request #1523 from qwibitai/apple-container-fixes",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1408,
+          "byExtension": {
+            ".json": 1408
+          }
+        }
+      }
+    },
+    {
+      "hash": "c0b58bd7aea973be2db204458e2a799dc2f62fa3",
+      "shortHash": "c0b58bd7",
+      "date": "2026-04-03T12:29:13+03:00",
+      "subject": "fix: require CREDENTIAL_PROXY_HOST for Apple Container networking",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1444,
+          "byExtension": {
+            ".json": 1444
+          }
+        }
+      }
+    },
+    {
+      "hash": "2c3300bde91b9680042fb70f9068843e7514f4a7",
+      "shortHash": "2c3300bd",
+      "date": "2026-04-03T12:31:50+03:00",
+      "subject": "Merge pull request #1609 from qwibitai/fix/apple-container-proxy-bind",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1480,
+          "byExtension": {
+            ".json": 1480
+          }
+        }
+      }
+    },
+    {
+      "hash": "fbd8af618d94671cc4d3001e6f0bfd582859c1fd",
+      "shortHash": "fbd8af61",
+      "date": "2026-04-17T15:26:27+03:00",
+      "subject": "fix(channels): drop @chat-adapter/shared dep in registry",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1516,
+          "byExtension": {
+            ".json": 1516
+          }
+        }
+      }
+    },
+    {
+      "hash": "0d75ca26f4f1614a0ec6acc0c247cf79068af905",
+      "shortHash": "0d75ca26",
+      "date": "2026-04-17T15:26:44+03:00",
+      "subject": "feat(channels): add emacs channel adapter",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1552,
+          "byExtension": {
+            ".json": 1552
+          }
+        }
+      }
+    },
+    {
+      "hash": "5454bae4261eb83e2aa15106904cf169534bbc4e",
+      "shortHash": "5454bae4",
+      "date": "2026-04-18T14:53:48+03:00",
+      "subject": "chore: sync channels branch with v2 (through PR #2)",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1588,
+          "byExtension": {
+            ".json": 1588
+          }
+        }
+      }
+    },
+    {
+      "hash": "303a5c7100d3407c800acb04d5eefa56e719c726",
+      "shortHash": "303a5c71",
+      "date": "2026-04-18T15:38:59+03:00",
+      "subject": "fix(channels): restore channel adapters deleted during v2 sync",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1624,
+          "byExtension": {
+            ".json": 1624
+          }
+        }
+      }
+    },
+    {
+      "hash": "cec6768f4b7c77bdd495fcbafabea7cefb346d8a",
+      "shortHash": "cec6768f",
+      "date": "2026-04-18T15:44:21+03:00",
+      "subject": "fix(channels): restore channel-specific setup scripts",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1660,
+          "byExtension": {
+            ".json": 1660
+          }
+        }
+      }
+    },
+    {
+      "hash": "09a3b48dae2c9faf56e5882f43a4998ee54aad83",
+      "shortHash": "09a3b48d",
+      "date": "2026-04-18T15:58:47+03:00",
+      "subject": "Merge remote-tracking branch 'origin/v2' into channels",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1696,
+          "byExtension": {
+            ".json": 1696
+          }
+        }
+      }
+    },
+    {
+      "hash": "2444ab171fa2af677737764fd6b6f02f4d526a3c",
+      "shortHash": "2444ab17",
+      "date": "2026-04-18T19:14:00+03:00",
+      "subject": "Merge branch 'v2' into channels",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1732,
+          "byExtension": {
+            ".json": 1732
+          }
+        }
+      }
+    },
+    {
+      "hash": "100e556ee99b9d39e90b01efa2ba7b8c4bcddbc2",
+      "shortHash": "100e556e",
+      "date": "2026-04-18T19:15:28+03:00",
+      "subject": "fix(channels/telegram): update user/user-roles import paths after PR #5",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1768,
+          "byExtension": {
+            ".json": 1768
+          }
+        }
+      }
+    },
+    {
+      "hash": "12f50281c208b58d1c9b9922e7320e6f418cccee",
+      "shortHash": "12f50281",
+      "date": "2026-04-18T22:06:44+03:00",
+      "subject": "Merge remote-tracking branch 'origin/v2' into channels-sync",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1804,
+          "byExtension": {
+            ".json": 1804
+          }
+        }
+      }
+    },
+    {
+      "hash": "46c8829f2fe000d9ad5c76f2e6f89626cdb49d5c",
+      "shortHash": "46c8829f",
+      "date": "2026-04-19T12:47:19+00:00",
+      "subject": "fix(channels/github): pass userName for @-mention detection",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1840,
+          "byExtension": {
+            ".json": 1840
+          }
+        }
+      }
+    },
+    {
+      "hash": "91400f9f66dc2aaff2617ee64baa4ee3db07e10f",
+      "shortHash": "91400f9f",
+      "date": "2026-04-19T15:46:38+00:00",
+      "subject": "fix(channels/linear): OAuth app auth, userName, team-based channel ID, catchAll",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1876,
+          "byExtension": {
+            ".json": 1876
+          }
+        }
+      }
+    },
+    {
+      "hash": "74c9c9e27ab584081742b494c326c234189a5783",
+      "shortHash": "74c9c9e2",
+      "date": "2026-04-20T11:03:38+00:00",
+      "subject": "feat(channels): extend Matrix adapter with DM user-handle resolution",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1912,
+          "byExtension": {
+            ".json": 1912
+          }
+        }
+      }
+    },
+    {
+      "hash": "fb2790a5d5f05a6613fa0bbd41171e0e6367a401",
+      "shortHash": "fb2790a5",
+      "date": "2026-04-21T17:24:56+00:00",
+      "subject": "feat(channels/wechat): personal WeChat adapter via Tencent iLink Bot API",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1948,
+          "byExtension": {
+            ".json": 1948
+          }
+        }
+      }
+    },
+    {
+      "hash": "6ed228f9a8dd930fafaf012de239fb6fa8f6eee6",
+      "shortHash": "6ed228f9",
+      "date": "2026-04-22T11:56:30+03:00",
+      "subject": "Merge v2 into channels",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 1984,
+          "byExtension": {
+            ".json": 1984
+          }
+        }
+      }
+    },
+    {
+      "hash": "e8b01bdb07f7206e6c2f544a7a12294e1ab0c866",
+      "shortHash": "e8b01bdb",
+      "date": "2026-04-22T11:56:59+03:00",
+      "subject": "style: apply prettier to merged files",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2020,
+          "byExtension": {
+            ".json": 2020
+          }
+        }
+      }
+    },
+    {
+      "hash": "3a29674b4677265c86017265da880f88eec8d33c",
+      "shortHash": "3a29674b",
+      "date": "2026-04-22T12:02:00+03:00",
+      "subject": "fix(channels): adapt adapters to v2 interface changes",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2056,
+          "byExtension": {
+            ".json": 2056
+          }
+        }
+      }
+    },
+    {
+      "hash": "4dfc2e3a24542d4ca74450094b2d765a27468dfe",
+      "shortHash": "4dfc2e3a",
+      "date": "2026-04-22T12:02:22+03:00",
+      "subject": "style: apply prettier to whatsapp.ts",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2092,
+          "byExtension": {
+            ".json": 2092
+          }
+        }
+      }
+    },
+    {
+      "hash": "22ed951f05355365748a204830dd57ff5d6cf120",
+      "shortHash": "22ed951f",
+      "date": "2026-04-22T12:36:58+03:00",
+      "subject": "fix(channels): use named pino import for NodeNext compat",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2128,
+          "byExtension": {
+            ".json": 2128
+          }
+        }
+      }
+    },
+    {
+      "hash": "68352351e43ee70d761b35581df92177ff1fc2ba",
+      "shortHash": "68352351",
+      "date": "2026-04-23T01:50:21+03:00",
+      "subject": "fix(telegram): flatten Markdown horizontal rules in the sanitizer",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2164,
+          "byExtension": {
+            ".json": 2164
+          }
+        }
+      }
+    },
+    {
+      "hash": "c91168bd74d1f573c1a0289bf7b443a6d449eed9",
+      "shortHash": "c91168bd",
+      "date": "2026-04-23T01:50:44+03:00",
+      "subject": "style(telegram): apply prettier formatting to HR test",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2200,
+          "byExtension": {
+            ".json": 2200
+          }
+        }
+      }
+    },
+    {
+      "hash": "f0a0939860fe90b5b716860f0af1f3cb214b14fe",
+      "shortHash": "f0a09398",
+      "date": "2026-04-23T22:55:45+03:00",
+      "subject": "feat(signal): add native Signal channel adapter",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2236,
+          "byExtension": {
+            ".json": 2236
+          }
+        }
+      }
+    },
+    {
+      "hash": "53513db5bc762388717efae3a3ff8e7e04e8578f",
+      "shortHash": "53513db5",
+      "date": "2026-04-23T17:48:25-07:00",
+      "subject": "feat(signal): replyTo shape fix + voice transcription, images, mentions, groupV2",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2272,
+          "byExtension": {
+            ".json": 2272
+          }
+        }
+      }
+    },
+    {
+      "hash": "de448ef22f800b3157760e8440c9a8951e15a5d7",
+      "shortHash": "de448ef2",
+      "date": "2026-04-24T15:45:18+03:00",
+      "subject": "Merge pull request #1962 from jorgenclaw/feat/signal-improvements",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2308,
+          "byExtension": {
+            ".json": 2308
+          }
+        }
+      }
+    },
+    {
+      "hash": "b672e8271ef7c71236d8dd27a7888944475facf7",
+      "shortHash": "b672e827",
+      "date": "2026-04-26T22:19:28-04:00",
+      "subject": "feat(signal): support outbound attachments via signal-cli `attachments`",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2344,
+          "byExtension": {
+            ".json": 2344
+          }
+        }
+      }
+    },
+    {
+      "hash": "8f4c79dcaa9ce04190ec1551a808e0cdddc27a04",
+      "shortHash": "8f4c79dc",
+      "date": "2026-04-28T13:30:17+03:00",
+      "subject": "Fix path traversal in WhatsApp attachment handling",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2380,
+          "byExtension": {
+            ".json": 2380
+          }
+        }
+      }
+    },
+    {
+      "hash": "6ec5f06d51ea981ff02a37d4928d099781628ad0",
+      "shortHash": "6ec5f06d",
+      "date": "2026-04-28T13:50:36+03:00",
+      "subject": "Merge main into channels",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2416,
+          "byExtension": {
+            ".json": 2416
+          }
+        }
+      }
+    },
+    {
+      "hash": "7789fcc67a221746178388daa86ebef0b3a09159",
+      "shortHash": "7789fcc6",
+      "date": "2026-04-28T17:17:15+03:00",
+      "subject": "Update stale /new-setup references to /setup",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2452,
+          "byExtension": {
+            ".json": 2452
+          }
+        }
+      }
+    },
+    {
+      "hash": "4a8887636cd346f99c2242035c02b3b76899b3ce",
+      "shortHash": "4a888763",
+      "date": "2026-04-29T13:19:49+00:00",
+      "subject": "feat(slack): implement resolveChannelName via fetchThread",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2488,
+          "byExtension": {
+            ".json": 2488
+          }
+        }
+      }
+    },
+    {
+      "hash": "c6b21e74934bd36e465a6fee6a0df85184200d6a",
+      "shortHash": "c6b21e74",
+      "date": "2026-04-29T14:20:25+00:00",
+      "subject": "fix(channels/telegram): wire maxTextLength to engage splitter from #1900",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2524,
+          "byExtension": {
+            ".json": 2524
+          }
+        }
+      }
+    },
+    {
+      "hash": "221c4948cdd1ae085fbe1cd5963b462729e2cefa",
+      "shortHash": "221c4948",
+      "date": "2026-04-30T12:56:12+00:00",
+      "subject": "feat(telegram): implement resolveChannelName via getChat API",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2560,
+          "byExtension": {
+            ".json": 2560
+          }
+        }
+      }
+    },
+    {
+      "hash": "106c21a567ea4271204d45f02a8a84ad1ece8e99",
+      "shortHash": "106c21a5",
+      "date": "2026-04-30T22:54:30+03:00",
+      "subject": "Merge pull request #2107 from qwibitai/feat/slack-resolve-channel-name",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2596,
+          "byExtension": {
+            ".json": 2596
+          }
+        }
+      }
+    },
+    {
+      "hash": "7b4dfd28c38bee3b69be6eabca47742ab6ad465a",
+      "shortHash": "7b4dfd28",
+      "date": "2026-05-01T00:32:26+03:00",
+      "subject": "Merge pull request #2112 from robbyczgw-cla/fix/telegram-maxtextlength-wiring",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2632,
+          "byExtension": {
+            ".json": 2632
+          }
+        }
+      }
+    },
+    {
+      "hash": "b52ab850b252cb89e374a30baf812c9b98b49d38",
+      "shortHash": "b52ab850",
+      "date": "2026-05-01T01:02:42+03:00",
+      "subject": "Merge pull request #2040 from ddaniels/feat/signal-outbound-attachments",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2668,
+          "byExtension": {
+            ".json": 2668
+          }
+        }
+      }
+    },
+    {
+      "hash": "2d3e6cdd114f921b3a8a9cdd079b225b831411f4",
+      "shortHash": "2d3e6cdd",
+      "date": "2026-05-01T23:12:09+01:00",
+      "subject": "Merge remote-tracking branch 'upstream/channels' into HEAD",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2704,
+          "byExtension": {
+            ".json": 2704
+          }
+        }
+      }
+    },
+    {
+      "hash": "6a4573a67e4ae2acd35e2da3410a3af915d8431a",
+      "shortHash": "6a4573a6",
+      "date": "2026-05-02T09:50:26+01:00",
+      "subject": "feat: apply v1 customizations to v2 upgrade",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2740,
+          "byExtension": {
+            ".json": 2740
+          }
+        }
+      }
+    },
+    {
+      "hash": "c224e638f54a37cc1c4bdf375665008725f745ab",
+      "shortHash": "c224e638",
+      "date": "2026-05-02T10:21:17+01:00",
+      "subject": "chore: restore migration guide post-upgrade",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2776,
+          "byExtension": {
+            ".json": 2776
+          }
+        }
+      }
+    },
+    {
+      "hash": "180fb16938c781fc0df1e3d5cf94b9f120d2dc3f",
+      "shortHash": "180fb169",
+      "date": "2026-05-02T15:57:36+01:00",
+      "subject": "feat: multi-bot Telegram fix, ContainerConfig env support, agent cleanup",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2812,
+          "byExtension": {
+            ".json": 2812
+          }
+        }
+      }
+    },
+    {
+      "hash": "330528d83711ddc645f9bf1624abd78a3fbc42d3",
+      "shortHash": "330528d8",
+      "date": "2026-05-02T16:22:10+01:00",
+      "subject": "docs: add MkDocs Material product documentation site",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2848,
+          "byExtension": {
+            ".json": 2848
+          }
+        }
+      }
+    },
+    {
+      "hash": "83c08779b6efd8ac65b440695502e00c3041268b",
+      "shortHash": "83c08779",
+      "date": "2026-05-03T00:36:29+01:00",
+      "subject": "docs(pepa): rewrite agent page to reflect new planning mechanism",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2884,
+          "byExtension": {
+            ".json": 2884
+          }
+        }
+      }
+    },
+    {
+      "hash": "b98e00fb99285818b947ca9bea748555d2786fcd",
+      "shortHash": "b98e00fb",
+      "date": "2026-05-03T14:28:54+01:00",
+      "subject": "docs(pepa): update agent page to reflect component batching model",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2920,
+          "byExtension": {
+            ".json": 2920
+          }
+        }
+      }
+    },
+    {
+      "hash": "9d2d212761281163cabf4a79c70fd19f9bcd7883",
+      "shortHash": "9d2d2127",
+      "date": "2026-05-03T16:53:48+01:00",
+      "subject": "docs(pepa): update inventory and grocery algorithm",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2956,
+          "byExtension": {
+            ".json": 2956
+          }
+        }
+      }
+    },
+    {
+      "hash": "ed88e99d7f05ec910ac028a5a49e479ae31bf363",
+      "shortHash": "ed88e99d",
+      "date": "2026-05-03T20:08:15+01:00",
+      "subject": "feat(container): pre-install tsx for Continente scripts",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 2992,
+          "byExtension": {
+            ".json": 2992
+          }
+        }
+      }
+    },
+    {
+      "hash": "88a4fc44a782e8b2933318127cf7c162b7d663bf",
+      "shortHash": "88a4fc44",
+      "date": "2026-05-03T22:02:57+01:00",
+      "subject": "fix(container): pass env vars from container.json to container",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3028,
+          "byExtension": {
+            ".json": 3028
+          }
+        }
+      }
+    },
+    {
+      "hash": "a98b6638071e6b478fbad3fa85b446c76505d4a1",
+      "shortHash": "a98b6638",
+      "date": "2026-05-03T22:12:21+01:00",
+      "subject": "feat(telegram): add setTyping via sendChatAction",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3064,
+          "byExtension": {
+            ".json": 3064
+          }
+        }
+      }
+    },
+    {
+      "hash": "2ee76e30be21cdb52398f8d6d968bf9610c5bcb0",
+      "shortHash": "2ee76e30",
+      "date": "2026-05-04T08:03:22+01:00",
+      "subject": "feat(tokens): reduce Pepa context + add compact reminder hook",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3100,
+          "byExtension": {
+            ".json": 3100
+          }
+        }
+      }
+    },
+    {
+      "hash": "3c1130c174fa23b6923a0f99030469463882a759",
+      "shortHash": "3c1130c1",
+      "date": "2026-05-04T13:32:43+01:00",
+      "subject": "fix(sweep): skip orphaned processing_ack claims to prevent container deadlock",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3136,
+          "byExtension": {
+            ".json": 3136
+          }
+        }
+      }
+    },
+    {
+      "hash": "d61fd2709759d7a8d5fdaf177d17f8dec5fc1213",
+      "shortHash": "d61fd270",
+      "date": "2026-05-05T16:22:57+01:00",
+      "subject": "chore: update preferred tools and Pepa family schedule",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3172,
+          "byExtension": {
+            ".json": 3172
+          }
+        }
+      }
+    },
+    {
+      "hash": "f68e237d44c1654b7bfd86dfb11c51c4f31aaf8c",
+      "shortHash": "f68e237d",
+      "date": "2026-05-06T11:20:38+01:00",
+      "subject": "feat(heartbeat): add autonomous heartbeat execution channel",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3208,
+          "byExtension": {
+            ".json": 3208
+          }
+        }
+      }
+    },
+    {
+      "hash": "19d85fd5153b8c8e32495de679ec4004c3a45c9b",
+      "shortHash": "19d85fd5",
+      "date": "2026-05-06T16:11:35+01:00",
+      "subject": "fix(heartbeat): don't reroute messages that already have an explicit destination",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3244,
+          "byExtension": {
+            ".json": 3244
+          }
+        }
+      }
+    },
+    {
+      "hash": "050728d7cd051cf886e0b90d01f15b31898eda99",
+      "shortHash": "050728d7",
+      "date": "2026-05-06T17:09:47+01:00",
+      "subject": "fix(chat-sdk-bridge): pass media-only messages with empty text to router",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3280,
+          "byExtension": {
+            ".json": 3280
+          }
+        }
+      }
+    },
+    {
+      "hash": "04f03e9064dc31c9eb6f5c0ea235dab0154977b3",
+      "shortHash": "04f03e90",
+      "date": "2026-05-08T00:38:37+03:00",
+      "subject": "fix(agent-to-agent): route a2a replies back to the originating session",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3316,
+          "byExtension": {
+            ".json": 3316
+          }
+        }
+      }
+    },
+    {
+      "hash": "323ba125e7e78caacafb403e04a99f49210d8f7b",
+      "shortHash": "323ba125",
+      "date": "2026-05-08T00:38:53+03:00",
+      "subject": "fix(agent-to-agent): thread in_reply_to through MCP send_message + add peer-affinity fallback",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3352,
+          "byExtension": {
+            ".json": 3352
+          }
+        }
+      }
+    },
+    {
+      "hash": "6c2134694a86bb858c922fbcd7c099280dbbd33e",
+      "shortHash": "6c213469",
+      "date": "2026-05-08T00:39:40+03:00",
+      "subject": "test: flip A2A return-path test to assert correct behavior",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3388,
+          "byExtension": {
+            ".json": 3388
+          }
+        }
+      }
+    },
+    {
+      "hash": "5b66525e5476d503d9ab612fc3a6b5f48921ada9",
+      "shortHash": "5b66525e",
+      "date": "2026-05-08T00:41:16+03:00",
+      "subject": "merge main into skill/a2a-return-path",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3424,
+          "byExtension": {
+            ".json": 3424
+          }
+        }
+      }
+    },
+    {
+      "hash": "e9fafee764034d70602bf4c1f3d541f1521604fd",
+      "shortHash": "e9fafee7",
+      "date": "2026-05-08T00:44:44+03:00",
+      "subject": "chore: trigger CI rerun after rebase",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3460,
+          "byExtension": {
+            ".json": 3460
+          }
+        }
+      }
+    },
+    {
+      "hash": "6313a63d43dd9765591070d5ad9da59852a8da10",
+      "shortHash": "6313a63d",
+      "date": "2026-05-08T00:46:07+03:00",
+      "subject": "chore: whitespace to retrigger CI",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3496,
+          "byExtension": {
+            ".json": 3496
+          }
+        }
+      }
+    },
+    {
+      "hash": "36b8970613d2190c54b430daee4b972cd0a2dcb3",
+      "shortHash": "36b89706",
+      "date": "2026-05-09T09:27:05+01:00",
+      "subject": "fix(heartbeat): suppress implicit delivery from heartbeat sessions",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3532,
+          "byExtension": {
+            ".json": 3532
+          }
+        }
+      }
+    },
+    {
+      "hash": "3f8591ef6e04f5f3fa219d005172b16cc72c672e",
+      "shortHash": "3f8591ef",
+      "date": "2026-05-09T09:50:11+01:00",
+      "subject": "fix(container): add /pnpm/bin to PATH for Corepack-managed pnpm",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3568,
+          "byExtension": {
+            ".json": 3568
+          }
+        }
+      }
+    },
+    {
+      "hash": "5ba56935d6be3b92cea03d962b8ab73b573f11d8",
+      "shortHash": "5ba56935",
+      "date": "2026-05-09T10:07:56+01:00",
+      "subject": "fix(container): pin pnpm global-bin-dir to /pnpm",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3604,
+          "byExtension": {
+            ".json": 3604
+          }
+        }
+      }
+    },
+    {
+      "hash": "7728afffb8ea5deb626da50f95e0cd74a86971f6",
+      "shortHash": "7728afff",
+      "date": "2026-05-09T10:17:36+01:00",
+      "subject": "fix(container): install claude-code via npm to allow postinstall write",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3640,
+          "byExtension": {
+            ".json": 3640
+          }
+        }
+      }
+    },
+    {
+      "hash": "fd6ed03ad4967f0ba351a73816a3b22acdf07e2f",
+      "shortHash": "fd6ed03a",
+      "date": "2026-05-09T19:42:28+01:00",
+      "subject": "track groups/ knowledge and memory files for disaster recovery",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3676,
+          "byExtension": {
+            ".json": 3676
+          }
+        }
+      }
+    },
+    {
+      "hash": "8e8b958dafef436a9b69c0b19d907975367e4aae",
+      "shortHash": "8e8b958d",
+      "date": "2026-05-09T20:41:26+01:00",
+      "subject": "chore: daily backup 2026-05-09",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3712,
+          "byExtension": {
+            ".json": 3712
+          }
+        }
+      }
+    },
+    {
+      "hash": "ad1d175c03871b809d4783c9d6316da831982798",
+      "shortHash": "ad1d175c",
+      "date": "2026-05-09T20:42:20+01:00",
+      "subject": "add daily backup script and systemd timer for v2.db + groups",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3748,
+          "byExtension": {
+            ".json": 3748
+          }
+        }
+      }
+    },
+    {
+      "hash": "99d8ff21e0531f5a829f1faf9764295e401f23af",
+      "shortHash": "99d8ff21",
+      "date": "2026-05-09T21:46:56+01:00",
+      "subject": "feat(edmond): bank transaction categorization pipeline",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3784,
+          "byExtension": {
+            ".json": 3784
+          }
+        }
+      }
+    },
+    {
+      "hash": "c1c8441b44107275460ba12d48ad4479ee57a25a",
+      "shortHash": "c1c8441b",
+      "date": "2026-05-09T22:14:20+01:00",
+      "subject": "feat(edmond): harden categorization pipeline with edge cases from grilling",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3820,
+          "byExtension": {
+            ".json": 3820
+          }
+        }
+      }
+    },
+    {
+      "hash": "1f8a23937c683e013ed973371e92add2e5b6e211",
+      "shortHash": "1f8a2393",
+      "date": "2026-05-09T22:25:00+01:00",
+      "subject": "feat(edmond): add confidence levels to categorization",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3856,
+          "byExtension": {
+            ".json": 3856
+          }
+        }
+      }
+    },
+    {
+      "hash": "84d5f6c5018848e53c7bb84a847efea52fb76d40",
+      "shortHash": "84d5f6c5",
+      "date": "2026-05-10T00:00:19+01:00",
+      "subject": "chore: daily backup 2026-05-09",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3892,
+          "byExtension": {
+            ".json": 3892
+          }
+        }
+      }
+    },
+    {
+      "hash": "144ff0ab24907ae35d2ca7a761efd94b3630b3ae",
+      "shortHash": "144ff0ab",
+      "date": "2026-05-10T16:59:10+01:00",
+      "subject": "feat: real-time agent status feedback in Telegram",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3928,
+          "byExtension": {
+            ".json": 3928
+          }
+        }
+      }
+    },
+    {
+      "hash": "0302a0d3407e3cfc7f81ba958ae1bf9faea9dca3",
+      "shortHash": "0302a0d3",
+      "date": "2026-05-10T21:05:23+01:00",
+      "subject": "fix: clear stale status sentinel on new turn, suppress not-modified error",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 3964,
+          "byExtension": {
+            ".json": 3964
+          }
+        }
+      }
+    },
+    {
+      "hash": "49fadb4e390b6bc33f38f6cebeb6b03dc63585c8",
+      "shortHash": "49fadb4e",
+      "date": "2026-05-10T21:22:02+01:00",
+      "subject": "chore: back up per-agent .claude-shared/settings.json in daily backup",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4000,
+          "byExtension": {
+            ".json": 4000
+          }
+        }
+      }
+    },
+    {
+      "hash": "43caae0aa52ba674437defc2a8e03085b8250311",
+      "shortHash": "43caae0a",
+      "date": "2026-05-10T21:29:26+01:00",
+      "subject": "fix: status rows must not bypass delivered dedup guard",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4036,
+          "byExtension": {
+            ".json": 4036
+          }
+        }
+      }
+    },
+    {
+      "hash": "d6a03ea68f9ccf8bdec1fc146ee58c9d1f1499b1",
+      "shortHash": "d6a03ea6",
+      "date": "2026-05-11T00:00:17+01:00",
+      "subject": "chore: daily backup 2026-05-10",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4072,
+          "byExtension": {
+            ".json": 4072
+          }
+        }
+      }
+    },
+    {
+      "hash": "0c8262656e1cf991600d6d0cd5a715039861f0ac",
+      "shortHash": "0c826265",
+      "date": "2026-05-11T13:10:22+01:00",
+      "subject": "fix: drop UI operations (reaction/edit/delete) when routed over a2a channel",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4108,
+          "byExtension": {
+            ".json": 4108
+          }
+        }
+      }
+    },
+    {
+      "hash": "3f0591c26be143535b96f44dc1315ac182981de7",
+      "shortHash": "3f0591c2",
+      "date": "2026-05-12T00:00:09+01:00",
+      "subject": "chore: daily backup 2026-05-11",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4144,
+          "byExtension": {
+            ".json": 4144
+          }
+        }
+      }
+    },
+    {
+      "hash": "b0a1f031214c9d9013b227864508c241176810e2",
+      "shortHash": "b0a1f031",
+      "date": "2026-05-13T00:00:18+01:00",
+      "subject": "chore: daily backup 2026-05-12",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4180,
+          "byExtension": {
+            ".json": 4180
+          }
+        }
+      }
+    },
+    {
+      "hash": "0d710bc56120d850a27cafbbe679278f1529724d",
+      "shortHash": "0d710bc5",
+      "date": "2026-05-13T10:15:05+01:00",
+      "subject": "fix: prevent day-of-week scheduling off-by-one in agent instructions",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4216,
+          "byExtension": {
+            ".json": 4216
+          }
+        }
+      }
+    },
+    {
+      "hash": "fec7a007688f2fa3c2d7cfdd451c6608bd32ace5",
+      "shortHash": "fec7a007",
+      "date": "2026-05-13T10:24:40+01:00",
+      "subject": "chore: remove stale plan-semaine.md from pepa group folder",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4252,
+          "byExtension": {
+            ".json": 4252
+          }
+        }
+      }
+    },
+    {
+      "hash": "fc112dc64422963eef9b4338aaeb672c7e32f8fd",
+      "shortHash": "fc112dc6",
+      "date": "2026-05-13T10:36:11+01:00",
+      "subject": "refactor: rename group folders executive→alain, finance→edmond; drop orphaned main",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4288,
+          "byExtension": {
+            ".json": 4288
+          }
+        }
+      }
+    },
+    {
+      "hash": "457c6cf0bf07be0879965e9a759c9bded380a522",
+      "shortHash": "457c6cf0",
+      "date": "2026-05-13T11:02:31+01:00",
+      "subject": "chore: track agent group runtime state in git",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4324,
+          "byExtension": {
+            ".json": 4324
+          }
+        }
+      }
+    },
+    {
+      "hash": "dbd128635e76439b0a96c89e4749578d9c922950",
+      "shortHash": "dbd12863",
+      "date": "2026-05-14T00:00:19+01:00",
+      "subject": "chore: daily backup 2026-05-13",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4360,
+          "byExtension": {
+            ".json": 4360
+          }
+        }
+      }
+    },
+    {
+      "hash": "53e0770b9150c3f0d4ca16ed6f3b0fd270b3ed9c",
+      "shortHash": "53e0770b",
+      "date": "2026-05-14T09:32:45+01:00",
+      "subject": "fix: require HEARTBEAT.md last_run update on every task run",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4396,
+          "byExtension": {
+            ".json": 4396
+          }
+        }
+      }
+    },
+    {
+      "hash": "ff933e05c84f064f36e63a33416775b9353a6990",
+      "shortHash": "ff933e05",
+      "date": "2026-05-14T12:02:20+01:00",
+      "subject": "refactor: remove heartbeat task system entirely",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4432,
+          "byExtension": {
+            ".json": 4432
+          }
+        }
+      }
+    },
+    {
+      "hash": "80c3ab6e58c8570f645fdd275ca0646011bd6c05",
+      "shortHash": "80c3ab6e",
+      "date": "2026-05-15T00:00:19+01:00",
+      "subject": "chore: daily backup 2026-05-14",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4468,
+          "byExtension": {
+            ".json": 4468
+          }
+        }
+      }
+    },
+    {
+      "hash": "20e1a2a2a6dfe057480e869725c6d86e1f0a93e6",
+      "shortHash": "20e1a2a2",
+      "date": "2026-05-16T00:00:18+01:00",
+      "subject": "chore: daily backup 2026-05-15",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4504,
+          "byExtension": {
+            ".json": 4504
+          }
+        }
+      }
+    },
+    {
+      "hash": "5e5cfd485de1b75e9bccce5a2b31a64d12e07a4d",
+      "shortHash": "5e5cfd48",
+      "date": "2026-05-17T00:00:20+01:00",
+      "subject": "chore: daily backup 2026-05-16",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4540,
+          "byExtension": {
+            ".json": 4540
+          }
+        }
+      }
+    },
+    {
+      "hash": "f04c6ccfb4fc62cd0264280f0935ec062aa24eda",
+      "shortHash": "f04c6ccf",
+      "date": "2026-05-18T00:00:18+01:00",
+      "subject": "chore: daily backup 2026-05-17",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4576,
+          "byExtension": {
+            ".json": 4576
+          }
+        }
+      }
+    },
+    {
+      "hash": "750a39df0ebc4902f053ce4c77c9f3302fb121a3",
+      "shortHash": "750a39df",
+      "date": "2026-05-19T00:00:18+01:00",
+      "subject": "chore: daily backup 2026-05-18",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4612,
+          "byExtension": {
+            ".json": 4612
+          }
+        }
+      }
+    },
+    {
+      "hash": "d4bff791d384b4a3c1372243e0c0ac27a33baad3",
+      "shortHash": "d4bff791",
+      "date": "2026-05-20T00:00:25+01:00",
+      "subject": "chore: daily backup 2026-05-19",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4648,
+          "byExtension": {
+            ".json": 4648
+          }
+        }
+      }
+    },
+    {
+      "hash": "7dfe33153e6f82b82de1eade53c5c9b6307b21df",
+      "shortHash": "7dfe3315",
+      "date": "2026-05-21T00:00:19+01:00",
+      "subject": "chore: daily backup 2026-05-20",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4684,
+          "byExtension": {
+            ".json": 4684
+          }
+        }
+      }
+    },
+    {
+      "hash": "4adaf94ee7b11f1260a989e8c916a3150921050f",
+      "shortHash": "4adaf94e",
+      "date": "2026-05-22T00:00:19+01:00",
+      "subject": "chore: daily backup 2026-05-21",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4720,
+          "byExtension": {
+            ".json": 4720
+          }
+        }
+      }
+    },
+    {
+      "hash": "e13fb84d1cca9d4c73c419651a160c60f46f26cf",
+      "shortHash": "e13fb84d",
+      "date": "2026-05-23T00:00:20+01:00",
+      "subject": "chore: daily backup 2026-05-22",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4756,
+          "byExtension": {
+            ".json": 4756
+          }
+        }
+      }
+    },
+    {
+      "hash": "3e200242ef1f829cf2259936c5ba285d2f204e03",
+      "shortHash": "3e200242",
+      "date": "2026-05-24T00:00:17+01:00",
+      "subject": "chore: daily backup 2026-05-23",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4792,
+          "byExtension": {
+            ".json": 4792
+          }
+        }
+      }
+    },
+    {
+      "hash": "45e9b3afe889e6ca670ef036e22f187260a5e07d",
+      "shortHash": "45e9b3af",
+      "date": "2026-05-25T00:00:18+01:00",
+      "subject": "chore: daily backup 2026-05-24",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4828,
+          "byExtension": {
+            ".json": 4828
+          }
+        }
+      }
+    },
+    {
+      "hash": "60bde0a319c90245bb882683e72785c7e07ed5db",
+      "shortHash": "60bde0a3",
+      "date": "2026-05-26T00:00:17+01:00",
+      "subject": "chore: daily backup 2026-05-25",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4864,
+          "byExtension": {
+            ".json": 4864
+          }
+        }
+      }
+    },
+    {
+      "hash": "d1552b94de8c93c19f42017aee897de5878aa974",
+      "shortHash": "d1552b94",
+      "date": "2026-05-27T00:00:21+01:00",
+      "subject": "chore: daily backup 2026-05-26",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4900,
+          "byExtension": {
+            ".json": 4900
+          }
+        }
+      }
+    },
+    {
+      "hash": "37bab648caec8d3eda4b52e87a65afa4a4fad1a7",
+      "shortHash": "37bab648",
+      "date": "2026-05-28T00:00:27+01:00",
+      "subject": "chore: daily backup 2026-05-27",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4936,
+          "byExtension": {
+            ".json": 4936
+          }
+        }
+      }
+    },
+    {
+      "hash": "34ed0ba7a5c7c34deeccf22ae6a34c3aaf89af2a",
+      "shortHash": "34ed0ba7",
+      "date": "2026-05-28T20:00:54+01:00",
+      "subject": "feat: add pharmeestore ordering script for Pepa",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 4972,
+          "byExtension": {
+            ".json": 4972
+          }
+        }
+      }
+    },
+    {
+      "hash": "023b4c82fbcbc4f8df7127db47987023ab3e641d",
+      "shortHash": "023b4c82",
+      "date": "2026-05-28T20:19:44+01:00",
+      "subject": "fix: clear cart before execute, drop unused imports in pharmeestore",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5008,
+          "byExtension": {
+            ".json": 5008
+          }
+        }
+      }
+    },
+    {
+      "hash": "c88c5c147bf06499e2833e0ea871b78057951cfa",
+      "shortHash": "c88c5c14",
+      "date": "2026-05-29T00:00:19+01:00",
+      "subject": "chore: daily backup 2026-05-28",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5044,
+          "byExtension": {
+            ".json": 5044
+          }
+        }
+      }
+    },
+    {
+      "hash": "079b2520f3c17e533eaf01ea54f5ba64b8f7fc90",
+      "shortHash": "079b2520",
+      "date": "2026-05-30T00:00:23+01:00",
+      "subject": "chore: daily backup 2026-05-29",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5080,
+          "byExtension": {
+            ".json": 5080
+          }
+        }
+      }
+    },
+    {
+      "hash": "a7d824bd5f598b35c1326c91de0ffd5a9817dbda",
+      "shortHash": "a7d824bd",
+      "date": "2026-05-31T00:00:28+01:00",
+      "subject": "chore: daily backup 2026-05-30",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5116,
+          "byExtension": {
+            ".json": 5116
+          }
+        }
+      }
+    },
+    {
+      "hash": "a4ae8395bd6e8bbcd41d8b32c949522bfec0cd81",
+      "shortHash": "a4ae8395",
+      "date": "2026-06-01T00:00:30+01:00",
+      "subject": "chore: daily backup 2026-05-31",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5152,
+          "byExtension": {
+            ".json": 5152
+          }
+        }
+      }
+    },
+    {
+      "hash": "519666774fdf1a01900dcc5a78a6432caaedcad6",
+      "shortHash": "51966677",
+      "date": "2026-06-02T00:00:27+01:00",
+      "subject": "chore: daily backup 2026-06-01",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5188,
+          "byExtension": {
+            ".json": 5188
+          }
+        }
+      }
+    },
+    {
+      "hash": "e88bc7993c91a0c097d6012eb0da08cef22a5dba",
+      "shortHash": "e88bc799",
+      "date": "2026-06-03T00:00:29+01:00",
+      "subject": "chore: daily backup 2026-06-02",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5224,
+          "byExtension": {
+            ".json": 5224
+          }
+        }
+      }
+    },
+    {
+      "hash": "79ac1d681afb23244b26cfe57d504f23b9a78c42",
+      "shortHash": "79ac1d68",
+      "date": "2026-06-03T01:44:44+01:00",
+      "subject": "chore: daily backup 2026-06-03",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5260,
+          "byExtension": {
+            ".json": 5260
+          }
+        }
+      }
+    },
+    {
+      "hash": "687488e4f678808661fe7be2899b4fab8af0b81e",
+      "shortHash": "687488e4",
+      "date": "2026-06-04T00:00:22+01:00",
+      "subject": "chore: daily backup 2026-06-03",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5296,
+          "byExtension": {
+            ".json": 5296
+          }
+        }
+      }
+    },
+    {
+      "hash": "32bb053373d46f2e316f9f84696df24b35b64042",
+      "shortHash": "32bb0533",
+      "date": "2026-06-04T14:42:29+01:00",
+      "subject": "chore: daily backup 2026-06-04",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5332,
+          "byExtension": {
+            ".json": 5332
+          }
+        }
+      }
+    },
+    {
+      "hash": "8df8a0ade3c5618d8fdc232b1784a4326f1b8bb9",
+      "shortHash": "8df8a0ad",
+      "date": "2026-06-05T00:00:20+01:00",
+      "subject": "chore: daily backup 2026-06-04",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5368,
+          "byExtension": {
+            ".json": 5368
+          }
+        }
+      }
+    },
+    {
+      "hash": "677e6eb864f40c9866220bf1574d99e78793c996",
+      "shortHash": "677e6eb8",
+      "date": "2026-06-05T00:41:53+01:00",
+      "subject": "Merge remote-tracking branch 'upstream/main'",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5404,
+          "byExtension": {
+            ".json": 5404
+          }
+        }
+      }
+    },
+    {
+      "hash": "171e5a814319f518fcdbe90777d667099e9dab4f",
+      "shortHash": "171e5a81",
+      "date": "2026-06-05T09:10:14+01:00",
+      "subject": "fix: add ORPHAN_CLAIM_GRACE_MS to host-sweep.test.ts import after upstream merge",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5440,
+          "byExtension": {
+            ".json": 5440
+          }
+        }
+      }
+    },
+    {
+      "hash": "83ead48710a710c0567828e7fff73004639d5143",
+      "shortHash": "83ead487",
+      "date": "2026-06-05T09:14:21+01:00",
+      "subject": "Merge remote-tracking branch 'upstream/skill/compact'",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5476,
+          "byExtension": {
+            ".json": 5476
+          }
+        }
+      }
+    },
+    {
+      "hash": "24f1285128558d2b0a8208ba08baa9210153d804",
+      "shortHash": "24f12851",
+      "date": "2026-06-05T09:18:38+01:00",
+      "subject": "Merge remote-tracking branch 'upstream/skill/apple-container'",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5512,
+          "byExtension": {
+            ".json": 5512
+          }
+        }
+      }
+    },
+    {
+      "hash": "fed9f451c1f1a866b3a402ac8cb592385ccbae7b",
+      "shortHash": "fed9f451",
+      "date": "2026-06-05T09:19:53+01:00",
+      "subject": "fix: restore Docker container-runtime.ts after apple-container skill merge",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5548,
+          "byExtension": {
+            ".json": 5548
+          }
+        }
+      }
+    },
+    {
+      "hash": "9f8944aba6adcd0e1c7858d18957d64fb702408e",
+      "shortHash": "9f8944ab",
+      "date": "2026-06-05T09:22:54+01:00",
+      "subject": "Merge remote-tracking branch 'upstream/skill/a2a-return-path'",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5584,
+          "byExtension": {
+            ".json": 5584
+          }
+        }
+      }
+    },
+    {
+      "hash": "169ff7b97b55a03e503179f34db0f787c3d92906",
+      "shortHash": "169ff7b9",
+      "date": "2026-06-05T09:39:22+01:00",
+      "subject": "fix: resolve build errors from skill merges (a2a, compact, native-credential-proxy)",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5620,
+          "byExtension": {
+            ".json": 5620
+          }
+        }
+      }
+    },
+    {
+      "hash": "ebe68073220bc4facbf1089165b2a3af81ecabd7",
+      "shortHash": "ebe68073",
+      "date": "2026-06-05T23:13:45+01:00",
+      "subject": "feat: add Gmail MCP server to container image",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5656,
+          "byExtension": {
+            ".json": 5656
+          }
+        }
+      }
+    },
+    {
+      "hash": "50962748c075f7c4ce23429ac2039d428624ac46",
+      "shortHash": "50962748",
+      "date": "2026-06-06T00:01:08+01:00",
+      "subject": "chore: daily backup 2026-06-05",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 21.85,
+          "clones": 12,
+          "duplicatedLines": 213
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 0,
+            "maxComplexity": 0,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 5692,
+          "byExtension": {
+            ".json": 5692
+          }
+        }
+      }
+    }
+  ]
+}

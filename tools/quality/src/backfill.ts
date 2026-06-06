@@ -1,4 +1,4 @@
-import { execSync } from 'node:child_process';
+import { execSync, spawnSync } from 'node:child_process';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { isCommitScanned, appendCommitRecord, type History } from './metrics.js';
@@ -6,6 +6,9 @@ import { runScan } from './scan.js';
 
 const REPO_ROOT = process.env.REPO_ROOT ?? process.cwd();
 const HISTORY_PATH = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'history.json');
+// Write history to a temp path during iteration — files written inside the repo while in
+// detached HEAD state block `git checkout <branch>` with "untracked file would be overwritten".
+const HISTORY_TMP = '/tmp/quality-history-tmp.json';
 
 function git(args: string): string {
   return execSync(`git ${args}`, { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
@@ -21,12 +24,11 @@ async function main(): Promise<void> {
 
   // Parse commit list
   const commits = lines.map((line) => {
-    // Format: "<hash> <date> <subject...>"
     const [hash, date, ...subjectParts] = line.replace(/^"/, '').replace(/"$/, '').split(' ');
     return { hash: hash ?? '', date: date ?? '', subject: subjectParts.join(' ') };
   }).filter((c) => c.hash.length > 0);
 
-  // Load existing history
+  // Load existing history from the canonical path (we're still on main here)
   const historyRaw = fs.existsSync(HISTORY_PATH)
     ? fs.readFileSync(HISTORY_PATH, 'utf8')
     : '{"commits":[]}';
@@ -40,6 +42,7 @@ async function main(): Promise<void> {
 
   if (unscanned.length === 0) {
     console.log('[backfill] Nothing to do.');
+    return;
   }
 
   // Stash if working tree is dirty
@@ -51,19 +54,20 @@ async function main(): Promise<void> {
 
   const originalHead = git('rev-parse HEAD');
 
+  // Seed temp file with current history so we can write incrementally
+  fs.writeFileSync(HISTORY_TMP, JSON.stringify(history, null, 2));
+
   try {
     for (const commit of unscanned) {
       done++;
       const shortHash = commit.hash.slice(0, 7);
       process.stdout.write(`[${done}/${total}] ${shortHash} ${commit.subject}\n`);
 
-      // Checkout this commit
       execSync(`git checkout ${commit.hash}`, {
         cwd: REPO_ROOT,
         stdio: ['pipe', 'pipe', 'pipe'],
       });
 
-      // Set REPO_ROOT so scan.ts uses the right directory
       process.env.REPO_ROOT = REPO_ROOT;
 
       let record;
@@ -75,11 +79,12 @@ async function main(): Promise<void> {
       }
 
       history = appendCommitRecord(history, record);
-      // Write incrementally so progress is preserved on interruption
-      fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
+      // Write to temp path — writing inside the repo while in detached HEAD state
+      // blocks the restore checkout with "untracked file would be overwritten"
+      fs.writeFileSync(HISTORY_TMP, JSON.stringify(history, null, 2));
     }
   } finally {
-    // Always restore original HEAD
+    // Restore HEAD before moving any files into the repo
     console.log('[backfill] Restoring original HEAD...');
     execSync(`git checkout ${originalHead}`, { cwd: REPO_ROOT, stdio: 'inherit' });
 
@@ -88,21 +93,24 @@ async function main(): Promise<void> {
       try {
         execSync('git stash pop', { cwd: REPO_ROOT, stdio: 'inherit' });
       } catch {
-        console.warn('[backfill] stash pop failed — you may need to manually run: git stash pop');
+        console.warn('[backfill] stash pop failed — run: git stash pop');
       }
     }
+
+    // Now safe to write history into the repo
+    fs.copyFileSync(HISTORY_TMP, HISTORY_PATH);
+    console.log(`[backfill] History saved (${history.commits.length} commits).`);
   }
 
-  // Run baseline scan
+  // Run baseline scan (also handles its own stash/restore internally)
   console.log('[backfill] Running baseline scan against upstream/main...');
-  const { default: { spawnSync } } = await import('node:child_process');
   const result = spawnSync(
     'pnpm',
     ['--filter', 'quality', 'scan', '--', '--baseline'],
     { cwd: REPO_ROOT, stdio: 'inherit' }
   );
   if (result.status !== 0) {
-    console.warn('[backfill] Baseline scan failed (upstream/main may not be fetched). Run: git fetch upstream && pnpm --filter quality scan --baseline');
+    console.warn('[backfill] Baseline scan failed. Run: git fetch upstream && pnpm --filter quality scan --baseline');
   }
 
   console.log('[backfill] Done.');
@@ -110,11 +118,8 @@ async function main(): Promise<void> {
 
 main().catch((err) => {
   console.error('[backfill] Fatal error:', err);
-  // Try to restore HEAD
   try {
     execSync('git checkout -', { cwd: REPO_ROOT, stdio: 'inherit' });
-  } catch {
-    // ignore
-  }
+  } catch { /* ignore */ }
   process.exit(1);
 });
