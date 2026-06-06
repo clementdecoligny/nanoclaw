@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanoclaw Code Quality</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+      color: #f0f6fc;
+      letter-spacing: -0.02em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .chart-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .chart-card h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8b949e;
+      margin-bottom: 1rem;
+    }
+
+    .chart-wrapper {
+      position: relative;
+      height: 260px;
+    }
+
+    .status {
+      text-align: center;
+      padding: 4rem;
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Nanoclaw Code Quality</h1>
+
+  <div class="grid" id="grid">
+    <div class="chart-card">
+      <h2>Dead Code</h2>
+      <div class="chart-wrapper"><canvas id="chart-deadcode"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h2>Duplication %</h2>
+      <div class="chart-wrapper"><canvas id="chart-duplication"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h2>Avg Complexity</h2>
+      <div class="chart-wrapper"><canvas id="chart-complexity"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h2>Total Lines</h2>
+      <div class="chart-wrapper"><canvas id="chart-lines"></canvas></div>
+    </div>
+  </div>
+
+  <script>
+    const COLORS = {
+      line: '#58a6ff',
+      baseline: '#f78166',
+      fill: 'rgba(88,166,255,0.08)',
+    };
+
+    const CHART_DEFAULTS = {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title(items) {
+              const idx = items[0].dataIndex;
+              return items[0].chart._customLabels?.[idx] ?? items[0].label;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: { color: '#8b949e', maxTicksLimit: 8, maxRotation: 30 },
+          grid: { color: '#21262d' },
+        },
+        y: {
+          ticks: { color: '#8b949e' },
+          grid: { color: '#21262d' },
+          beginAtZero: true,
+        },
+      },
+    };
+
+    function makeDataset(data, label) {
+      return {
+        label,
+        data,
+        borderColor: COLORS.line,
+        backgroundColor: COLORS.fill,
+        borderWidth: 2,
+        pointRadius: 3,
+        pointHoverRadius: 5,
+        tension: 0.3,
+        fill: true,
+      };
+    }
+
+    function makeBaselineDataset(value, length) {
+      return {
+        label: 'upstream v2',
+        data: Array(length).fill(value),
+        borderColor: COLORS.baseline,
+        borderWidth: 1.5,
+        borderDash: [6, 4],
+        pointRadius: 0,
+        fill: false,
+      };
+    }
+
+    function buildChart(canvasId, labels, tooltipLabels, values, baselineValue) {
+      const ctx = document.getElementById(canvasId).getContext('2d');
+      const datasets = [makeDataset(values, 'value')];
+      if (baselineValue !== null && baselineValue !== undefined) {
+        datasets.push(makeBaselineDataset(baselineValue, labels.length));
+      }
+      const chart = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets },
+        options: {
+          ...CHART_DEFAULTS,
+          plugins: {
+            ...CHART_DEFAULTS.plugins,
+            legend: {
+              display: baselineValue !== null && baselineValue !== undefined,
+              labels: { color: '#8b949e', boxWidth: 24, font: { size: 11 } },
+            },
+          },
+        },
+      });
+      chart._customLabels = tooltipLabels;
+      return chart;
+    }
+
+    async function load() {
+      const [historyRes, baselineRes] = await Promise.all([
+        fetch('/api/history'),
+        fetch('/api/baseline'),
+      ]);
+      const history = await historyRes.json();
+      const baseline = await baselineRes.json();
+
+      const commits = history.commits ?? [];
+      if (commits.length === 0) {
+        document.getElementById('grid').innerHTML =
+          '<p class="status">No commits scanned yet. Run <code>pnpm --filter quality backfill</code>.</p>';
+        return;
+      }
+
+      const labels = commits.map(c => c.date.slice(0, 10));
+      const tooltipLabels = commits.map(c => `${c.shortHash}: ${c.subject}`);
+
+      const deadCodeValues = commits.map(c =>
+        (c.metrics.deadCode.unusedFiles ?? 0) +
+        (c.metrics.deadCode.unusedExports ?? 0) +
+        (c.metrics.deadCode.unusedDependencies ?? 0)
+      );
+      const duplicationValues = commits.map(c => c.metrics.duplication.percentage ?? 0);
+      const complexityValues = commits.map(c => {
+        const h = c.metrics.complexity.host.avgComplexity ?? 0;
+        const a = c.metrics.complexity.agentRunner.avgComplexity ?? 0;
+        return (h + a) / 2;
+      });
+      const lineValues = commits.map(c => c.metrics.lineCount.total ?? 0);
+
+      const bm = baseline?.metrics;
+      const bDeadCode = bm
+        ? (bm.deadCode.unusedFiles + bm.deadCode.unusedExports + bm.deadCode.unusedDependencies)
+        : null;
+      const bDuplication = bm?.duplication?.percentage ?? null;
+      const bComplexity = bm
+        ? ((bm.complexity.host.avgComplexity + bm.complexity.agentRunner.avgComplexity) / 2)
+        : null;
+      const bLines = bm?.lineCount?.total ?? null;
+
+      buildChart('chart-deadcode', labels, tooltipLabels, deadCodeValues, bDeadCode);
+      buildChart('chart-duplication', labels, tooltipLabels, duplicationValues, bDuplication);
+      buildChart('chart-complexity', labels, tooltipLabels, complexityValues, bComplexity);
+      buildChart('chart-lines', labels, tooltipLabels, lineValues, bLines);
+    }
+
+    load().catch(err => {
+      document.getElementById('grid').innerHTML =
+        `<p class="status">Failed to load data: ${err.message}</p>`;
+    });
+  </script>
+</body>
+</html>
