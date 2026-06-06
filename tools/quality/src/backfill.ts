@@ -8,12 +8,38 @@ import { runScan } from './scan.js';
 const REPO_ROOT = process.env.REPO_ROOT ??
   path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..', '..');
 const HISTORY_PATH = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'history.json');
-// Write history to a temp path during iteration — files written inside the repo while in
-// detached HEAD state block `git checkout <branch>` with "untracked file would be overwritten".
-const HISTORY_TMP = '/tmp/quality-history-tmp.json';
 
-function git(args: string): string {
-  return execSync(`git ${args}`, { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
+function git(args: string, cwd = REPO_ROOT): string {
+  return execSync(`git ${args}`, { cwd, encoding: 'utf8' }).trim();
+}
+
+async function scanCommitInWorktree(hash: string): Promise<Awaited<ReturnType<typeof runScan>>> {
+  const wtPath = `/tmp/quality-wt-${hash.slice(0, 7)}`;
+
+  // Clean up any stale worktree from a previous interrupted run
+  if (fs.existsSync(wtPath)) {
+    try {
+      execSync(`git worktree remove --force "${wtPath}"`, { cwd: REPO_ROOT, stdio: 'pipe' });
+    } catch { /* may not be registered */ }
+    fs.rmSync(wtPath, { recursive: true, force: true });
+  }
+
+  execSync(`git worktree add --detach "${wtPath}" ${hash}`, {
+    cwd: REPO_ROOT,
+    stdio: ['pipe', 'pipe', 'pipe'],
+  });
+
+  try {
+    // Point scan.ts functions at the worktree instead of the main repo
+    process.env.REPO_ROOT = wtPath;
+    return await runScan();
+  } finally {
+    process.env.REPO_ROOT = REPO_ROOT;
+    try {
+      execSync(`git worktree remove --force "${wtPath}"`, { cwd: REPO_ROOT, stdio: 'pipe' });
+    } catch { /* ignore */ }
+    fs.rmSync(wtPath, { recursive: true, force: true });
+  }
 }
 
 async function main(): Promise<void> {
@@ -24,13 +50,11 @@ async function main(): Promise<void> {
     .map((l) => l.trim())
     .filter(Boolean);
 
-  // Parse commit list
   const commits = lines.map((line) => {
     const [hash, date, ...subjectParts] = line.replace(/^"/, '').replace(/"$/, '').split(' ');
     return { hash: hash ?? '', date: date ?? '', subject: subjectParts.join(' ') };
   }).filter((c) => c.hash.length > 0);
 
-  // Load existing history from the canonical path (we're still on main here)
   const historyRaw = fs.existsSync(HISTORY_PATH)
     ? fs.readFileSync(HISTORY_PATH, 'utf8')
     : '{"commits":[]}';
@@ -47,64 +71,27 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Stash if working tree is dirty
-  const isDirty = execSync('git status --porcelain', { cwd: REPO_ROOT, encoding: 'utf8' }).trim().length > 0;
-  if (isDirty) {
-    console.log('[backfill] Stashing uncommitted changes...');
-    execSync('git stash', { cwd: REPO_ROOT, stdio: 'inherit' });
-  }
+  for (const commit of unscanned) {
+    done++;
+    const shortHash = commit.hash.slice(0, 7);
+    process.stdout.write(`[${done}/${total}] ${shortHash} ${commit.subject}\n`);
 
-  const originalHead = git('rev-parse HEAD');
-
-  // Seed temp file with current history so we can write incrementally
-  fs.writeFileSync(HISTORY_TMP, JSON.stringify(history, null, 2));
-
-  try {
-    for (const commit of unscanned) {
-      done++;
-      const shortHash = commit.hash.slice(0, 7);
-      process.stdout.write(`[${done}/${total}] ${shortHash} ${commit.subject}\n`);
-
-      execSync(`git checkout ${commit.hash}`, {
-        cwd: REPO_ROOT,
-        stdio: ['pipe', 'pipe', 'pipe'],
-      });
-
-      process.env.REPO_ROOT = REPO_ROOT;
-
-      let record;
-      try {
-        record = await runScan();
-      } catch (err) {
-        console.warn(`[backfill] Scan failed for ${shortHash}:`, (err as Error).message?.slice(0, 80));
-        continue;
-      }
-
-      history = appendCommitRecord(history, record);
-      // Write to temp path — writing inside the repo while in detached HEAD state
-      // blocks the restore checkout with "untracked file would be overwritten"
-      fs.writeFileSync(HISTORY_TMP, JSON.stringify(history, null, 2));
-    }
-  } finally {
-    // Restore HEAD before moving any files into the repo
-    console.log('[backfill] Restoring original HEAD...');
-    execSync(`git checkout ${originalHead}`, { cwd: REPO_ROOT, stdio: 'inherit' });
-
-    if (isDirty) {
-      console.log('[backfill] Popping stash...');
-      try {
-        execSync('git stash pop', { cwd: REPO_ROOT, stdio: 'inherit' });
-      } catch {
-        console.warn('[backfill] stash pop failed — run: git stash pop');
-      }
+    let record;
+    try {
+      record = await scanCommitInWorktree(commit.hash);
+    } catch (err) {
+      console.warn(`[backfill] Scan failed for ${shortHash}:`, (err as Error).message?.slice(0, 120));
+      continue;
     }
 
-    // Now safe to write history into the repo
-    fs.copyFileSync(HISTORY_TMP, HISTORY_PATH);
-    console.log(`[backfill] History saved (${history.commits.length} commits).`);
+    history = appendCommitRecord(history, record);
+    // Write incrementally — if interrupted, progress so far is preserved
+    fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
   }
 
-  // Run baseline scan (also handles its own stash/restore internally)
+  console.log(`[backfill] History saved (${history.commits.length} commits).`);
+
+  // Baseline scan — also uses a worktree internally (see scan.ts --baseline path)
   console.log('[backfill] Running baseline scan against upstream/main...');
   const result = spawnSync(
     'pnpm',
@@ -120,8 +107,5 @@ async function main(): Promise<void> {
 
 main().catch((err) => {
   console.error('[backfill] Fatal error:', err);
-  try {
-    execSync('git checkout -', { cwd: REPO_ROOT, stdio: 'inherit' });
-  } catch { /* ignore */ }
   process.exit(1);
 });

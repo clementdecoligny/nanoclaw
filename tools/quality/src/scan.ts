@@ -245,27 +245,26 @@ export async function runScan(): Promise<CommitRecord> {
 const isBaseline = process.argv.includes('--baseline');
 
 if (isBaseline) {
-  // Scan upstream/main and write baseline.json
-  // Use branch name for restore if on a named branch; fall back to hash for detached HEAD.
-  const originalBranch = (() => {
+  // Scan upstream/main in an isolated git worktree — never touches the main working tree
+  const upstreamHash = execSync('git rev-parse upstream/main', { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
+  const wtPath = `/tmp/quality-baseline-wt-${upstreamHash.slice(0, 7)}`;
+
+  if (fs.existsSync(wtPath)) {
     try {
-      const branch = execSync('git symbolic-ref --short HEAD', { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
-      return branch || null;
-    } catch { return null; }
-  })();
-  const originalHead = originalBranch ?? git('rev-parse HEAD');
-  const isDirty = execSync('git status --porcelain', { cwd: REPO_ROOT, encoding: 'utf8' }).trim().length > 0;
-  if (isDirty) {
-    execSync('git stash', { cwd: REPO_ROOT, stdio: 'inherit' });
+      execSync(`git worktree remove --force "${wtPath}"`, { cwd: REPO_ROOT, stdio: 'pipe' });
+    } catch { /* may not be registered */ }
+    fs.rmSync(wtPath, { recursive: true, force: true });
   }
-  // Write to a temp path during the upstream/main checkout, then move into place after
-  // restoring HEAD. Writing directly to BASELINE_PATH while on upstream/main causes
-  // "untracked file would be overwritten" when git tries to restore the original branch.
-  const BASELINE_TMP = '/tmp/quality-baseline-tmp.json';
+
+  execSync(`git worktree add --detach "${wtPath}" upstream/main`, {
+    cwd: REPO_ROOT,
+    stdio: ['pipe', 'pipe', 'pipe'],
+  });
+
   let baselineData: string | null = null;
   try {
-    console.log('[quality] Checking out upstream/main for baseline scan...');
-    execSync('git checkout upstream/main', { cwd: REPO_ROOT, stdio: 'inherit' });
+    console.log('[quality] Scanning upstream/main in worktree for baseline...');
+    process.env.REPO_ROOT = wtPath;
     const record = await runScan();
     const baseline: Baseline = {
       hash: record.hash,
@@ -274,17 +273,16 @@ if (isBaseline) {
       metrics: record.metrics,
     };
     baselineData = JSON.stringify(baseline, null, 2);
-    fs.writeFileSync(BASELINE_TMP, baselineData);
   } finally {
-    execSync(`git checkout ${originalHead}`, { cwd: REPO_ROOT, stdio: 'inherit' });
-    if (isDirty) {
-      try { execSync('git stash pop', { cwd: REPO_ROOT, stdio: 'inherit' }); } catch { /* ignore */ }
-    }
+    process.env.REPO_ROOT = REPO_ROOT;
+    try {
+      execSync(`git worktree remove --force "${wtPath}"`, { cwd: REPO_ROOT, stdio: 'pipe' });
+    } catch { /* ignore */ }
+    fs.rmSync(wtPath, { recursive: true, force: true });
     if (baselineData !== null) {
       fs.writeFileSync(BASELINE_PATH, baselineData);
       console.log('[quality] Baseline written to', BASELINE_PATH);
     }
-    console.log('[quality] Restored HEAD to', originalHead.slice(0, 7));
   }
 } else {
   // Normal scan: append to history.json
