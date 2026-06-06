@@ -1,0 +1,7 @@
+{
+  "entry": ["src/index.ts", "src/cli/dispatch.ts", "src/channels/channel-registry.ts"],
+  "project": ["src/**/*.ts", "container/agent-runner/src/**/*.ts", "setup/**/*.ts", "scripts/**/*.ts"],
+  "ignore": ["**/*.test.ts", "**/*.d.ts"],
+  "ignoreDependencies": [],
+  "ignoreWorkspaces": ["tools/quality"]
+}
