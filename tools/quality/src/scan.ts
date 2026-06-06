@@ -20,13 +20,30 @@ const BASELINE_PATH = path.join(path.dirname(new URL(import.meta.url).pathname),
 // Dead code via knip
 // ---------------------------------------------------------------------------
 
+// Resolved once at import time — works whether scan.ts is the entry point or imported by backfill.ts
+const KNIP_BIN = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'node_modules', '.bin', 'knip');
+const JSCPD_BIN = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'node_modules', '.bin', 'jscpd');
+
 function runKnip(): { unusedFiles: number; unusedExports: number; unusedDependencies: number } {
+  // Skip if knip has no config in the checked-out commit — avoids hanging on old commits
+  const hasKnipConfig =
+    fs.existsSync(path.join(REPO_ROOT, 'knip.json')) ||
+    fs.existsSync(path.join(REPO_ROOT, 'knip.ts')) ||
+    (() => {
+      try {
+        const pkg = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'package.json'), 'utf8'));
+        return 'knip' in pkg;
+      } catch { return false; }
+    })();
+  if (!hasKnipConfig) {
+    return { unusedFiles: 0, unusedExports: 0, unusedDependencies: 0 };
+  }
   try {
-    const output = execSync('npx --yes knip --reporter json 2>/dev/null', {
+    const output = execSync(`"${KNIP_BIN}" --reporter json 2>/dev/null`, {
       cwd: REPO_ROOT,
       encoding: 'utf8',
       stdio: ['pipe', 'pipe', 'pipe'],
-      timeout: 120_000,
+      timeout: 60_000,
     });
     const json = JSON.parse(output);
     // knip JSON shape varies; be defensive
@@ -52,13 +69,13 @@ function runJscpd(): { percentage: number; clones: number; duplicatedLines: numb
   const outputDir = '/tmp/quality-jscpd';
   try {
     execSync(
-      `npx --yes jscpd --min-tokens 50 --reporters json --output "${outputDir}" ` +
+      `"${JSCPD_BIN}" --min-tokens 50 --reporters json --output "${outputDir}" ` +
         `--ignore "data/**,logs/**,groups/**,node_modules/**,.venv/**,pnpm-lock.yaml,bun.lock" .`,
       {
         cwd: REPO_ROOT,
         encoding: 'utf8',
         stdio: ['pipe', 'pipe', 'pipe'],
-        timeout: 120_000,
+        timeout: 60_000,
       }
     );
     const reportPath = path.join(outputDir, 'jscpd-report.json');

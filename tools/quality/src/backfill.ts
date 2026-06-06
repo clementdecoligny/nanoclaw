@@ -12,8 +12,8 @@ function git(args: string): string {
 }
 
 async function main(): Promise<void> {
-  // Get all commits oldest-first
-  const logOutput = git('log --reverse --format="%H %cI %s"');
+  // Get commits on this fork that are not in upstream/main, oldest-first
+  const logOutput = git('log upstream/main..HEAD --reverse --format="%H %cI %s"');
   const lines = logOutput
     .split('\n')
     .map((l) => l.trim())
