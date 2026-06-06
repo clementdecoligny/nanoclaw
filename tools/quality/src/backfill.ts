@@ -4,7 +4,9 @@ import * as path from 'node:path';
 import { isCommitScanned, appendCommitRecord, type History } from './metrics.js';
 import { runScan } from './scan.js';
 
-const REPO_ROOT = process.env.REPO_ROOT ?? process.cwd();
+// pnpm sets cwd to the package dir (tools/quality/). Resolve two levels up to repo root.
+const REPO_ROOT = process.env.REPO_ROOT ??
+  path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..', '..');
 const HISTORY_PATH = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'history.json');
 // Write history to a temp path during iteration — files written inside the repo while in
 // detached HEAD state block `git checkout <branch>` with "untracked file would be overwritten".
