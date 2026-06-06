@@ -30,11 +30,8 @@ async function scanCommitInWorktree(hash: string): Promise<Awaited<ReturnType<ty
   });
 
   try {
-    // Point scan.ts functions at the worktree instead of the main repo
-    process.env.REPO_ROOT = wtPath;
-    return await runScan();
+    return await runScan(wtPath);
   } finally {
-    process.env.REPO_ROOT = REPO_ROOT;
     try {
       execSync(`git worktree remove --force "${wtPath}"`, { cwd: REPO_ROOT, stdio: 'pipe' });
     } catch { /* ignore */ }
