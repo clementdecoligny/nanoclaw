@@ -1,1 +1,52 @@
-{ "commits": [] }
+{
+  "hash": "d14472142d4ddcbb50e5f58ff09d63eb2f99bc20",
+  "date": "2026-06-05T08:04:24+00:00",
+  "source": "upstream/main",
+  "metrics": {
+    "deadCode": {
+      "unusedFiles": 0,
+      "unusedExports": 0,
+      "unusedDependencies": 0
+    },
+    "duplication": {
+      "percentage": 3.48,
+      "clones": 127,
+      "duplicatedLines": 1487
+    },
+    "complexity": {
+      "host": {
+        "avgComplexity": 1.2967123935580178,
+        "maxComplexity": 4,
+        "functionsAboveThreshold": 0
+      },
+      "agentRunner": {
+        "avgComplexity": 1.2392775338633526,
+        "maxComplexity": 3,
+        "functionsAboveThreshold": 0
+      }
+    },
+    "lineCount": {
+      "total": 92551,
+      "byExtension": {
+        ".lock": 1,
+        ".json": 153,
+        ".md": 20524,
+        ".ts": 44835,
+        ".swift": 148,
+        "(no ext)": 633,
+        ".example": 1,
+        ".yml": 348,
+        ".png": 8728,
+        ".jpeg": 10779,
+        ".txt": 31,
+        ".jpg": 1630,
+        ".sh": 4160,
+        ".html": 422,
+        ".js": 33,
+        ".plist": 33,
+        ".yaml": 9,
+        ".svg": 83
+      }
+    }
+  }
+}
