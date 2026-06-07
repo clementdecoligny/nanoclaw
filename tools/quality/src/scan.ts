@@ -26,13 +26,15 @@ const JSCPD_BIN = path.join(path.dirname(new URL(import.meta.url).pathname), '..
 // Dead code via knip
 // ---------------------------------------------------------------------------
 
-function runKnip(repoRoot: string): { unusedFiles: number; unusedExports: number; unusedDependencies: number } {
+// knip requires node_modules to resolve imports — always runs against the installed working tree,
+// not a bare worktree. Dead code is a current-HEAD snapshot, not a historical per-commit metric.
+function runKnip(): { unusedFiles: number; unusedExports: number; unusedDependencies: number } {
   const hasKnipConfig =
-    fs.existsSync(path.join(repoRoot, 'knip.json')) ||
-    fs.existsSync(path.join(repoRoot, 'knip.ts')) ||
+    fs.existsSync(path.join(DEFAULT_REPO_ROOT, 'knip.json')) ||
+    fs.existsSync(path.join(DEFAULT_REPO_ROOT, 'knip.ts')) ||
     (() => {
       try {
-        const pkg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'package.json'), 'utf8'));
+        const pkg = JSON.parse(fs.readFileSync(path.join(DEFAULT_REPO_ROOT, 'package.json'), 'utf8'));
         return 'knip' in pkg;
       } catch { return false; }
     })();
@@ -41,7 +43,7 @@ function runKnip(repoRoot: string): { unusedFiles: number; unusedExports: number
   }
   try {
     const output = execSync(`"${KNIP_BIN}" --reporter json 2>/dev/null`, {
-      cwd: repoRoot,
+      cwd: DEFAULT_REPO_ROOT,
       encoding: 'utf8',
       stdio: ['pipe', 'pipe', 'pipe'],
       timeout: 60_000,
@@ -213,7 +215,7 @@ function git(args: string, cwd: string): string {
 
 export async function runScan(repoRoot = DEFAULT_REPO_ROOT): Promise<CommitRecord> {
   console.log('[quality] Running knip...');
-  const deadCode = runKnip(repoRoot);
+  const deadCode = runKnip();
 
   console.log('[quality] Running jscpd...');
   const duplication = runJscpd(repoRoot);

@@ -1,10 +1,10 @@
 {
   "commits": [
     {
-      "hash": "ee9cb3a025fe0b855938c52d7bcc1e872d3b2f7f",
-      "shortHash": "ee9cb3a0",
-      "date": "2026-06-06T19:20:17+01:00",
-      "subject": "refactor(quality): use git worktree for backfill and baseline scans",
+      "hash": "5689ab0eead937770057712f4860bcce81d04cbe",
+      "shortHash": "5689ab0e",
+      "date": "2026-06-07T10:37:28+01:00",
+      "subject": "fix(quality): fix knip JSON parser to use issues[] array",
       "metrics": {
         "deadCode": {
           "unusedFiles": 0,
@@ -29,12 +29,12 @@
           }
         },
         "lineCount": {
-          "total": 150254,
+          "total": 150260,
           "byExtension": {
             ".lock": 1,
             ".json": 3254,
             ".md": 28487,
-            ".ts": 58049,
+            ".ts": 58055,
             ".swift": 148,
             "(no ext)": 860,
             ".example": 1,
@@ -6242,7 +6242,7 @@
       "hash": "fc112dc64422963eef9b4338aaeb672c7e32f8fd",
       "shortHash": "fc112dc6",
       "date": "2026-05-13T10:36:11+01:00",
-      "subject": "refactor: rename group folders executive→alain, finance→edmond; drop orphaned main",
+      "subject": "refactor: rename group folders executive\u2192alain, finance\u2192edmond; drop orphaned main",
       "metrics": {
         "deadCode": {
           "unusedFiles": 0,
@@ -8781,6 +8781,234 @@
             ".json": 2978,
             ".md": 23401,
             ".ts": 54721,
+            ".swift": 148,
+            "(no ext)": 656,
+            ".example": 1,
+            ".yml": 391,
+            ".png": 8728,
+            ".jpeg": 10779,
+            ".txt": 31,
+            ".jpg": 1630,
+            ".sh": 4193,
+            ".html": 649,
+            ".el": 505,
+            ".js": 33,
+            ".plist": 33,
+            ".toml": 7,
+            ".yaml": 12,
+            ".svg": 83,
+            ".pyc": 1257,
+            ".py": 2182
+          }
+        }
+      }
+    },
+    {
+      "hash": "ee9cb3a025fe0b855938c52d7bcc1e872d3b2f7f",
+      "shortHash": "ee9cb3a0",
+      "date": "2026-06-06T19:20:17+01:00",
+      "subject": "refactor(quality): use git worktree for backfill and baseline scans",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 3.08,
+          "clones": 146,
+          "duplicatedLines": 1669
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 1.2897752941238076,
+            "maxComplexity": 4,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 1.257645075574089,
+            "maxComplexity": 3,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 112401,
+          "byExtension": {
+            ".lock": 1,
+            ".json": 2978,
+            ".md": 23401,
+            ".ts": 54703,
+            ".swift": 148,
+            "(no ext)": 656,
+            ".example": 1,
+            ".yml": 391,
+            ".png": 8728,
+            ".jpeg": 10779,
+            ".txt": 31,
+            ".jpg": 1630,
+            ".sh": 4193,
+            ".html": 649,
+            ".el": 505,
+            ".js": 33,
+            ".plist": 33,
+            ".toml": 7,
+            ".yaml": 12,
+            ".svg": 83,
+            ".pyc": 1257,
+            ".py": 2182
+          }
+        }
+      }
+    },
+    {
+      "hash": "dd47f7a6d78aec8fb4a2bd1ca19026bee44cd1d6",
+      "shortHash": "dd47f7a6",
+      "date": "2026-06-06T23:50:06+01:00",
+      "subject": "fix(quality): pass repoRoot explicitly through scan functions",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 3.08,
+          "clones": 146,
+          "duplicatedLines": 1669
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 1.2897752941238076,
+            "maxComplexity": 4,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 1.257645075574089,
+            "maxComplexity": 3,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 112393,
+          "byExtension": {
+            ".lock": 1,
+            ".json": 2978,
+            ".md": 23401,
+            ".ts": 54695,
+            ".swift": 148,
+            "(no ext)": 656,
+            ".example": 1,
+            ".yml": 391,
+            ".png": 8728,
+            ".jpeg": 10779,
+            ".txt": 31,
+            ".jpg": 1630,
+            ".sh": 4193,
+            ".html": 649,
+            ".el": 505,
+            ".js": 33,
+            ".plist": 33,
+            ".toml": 7,
+            ".yaml": 12,
+            ".svg": 83,
+            ".pyc": 1257,
+            ".py": 2182
+          }
+        }
+      }
+    },
+    {
+      "hash": "654ead3b26cbaea043e93f9235e167be535d0c98",
+      "shortHash": "654ead3b",
+      "date": "2026-06-07T00:00:51+01:00",
+      "subject": "chore: daily backup 2026-06-06",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 0,
+          "unusedExports": 0,
+          "unusedDependencies": 0
+        },
+        "duplication": {
+          "percentage": 3.08,
+          "clones": 146,
+          "duplicatedLines": 1669
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 1.2897752941238076,
+            "maxComplexity": 4,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 1.257645075574089,
+            "maxComplexity": 3,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 112393,
+          "byExtension": {
+            ".lock": 1,
+            ".json": 2978,
+            ".md": 23401,
+            ".ts": 54695,
+            ".swift": 148,
+            "(no ext)": 656,
+            ".example": 1,
+            ".yml": 391,
+            ".png": 8728,
+            ".jpeg": 10779,
+            ".txt": 31,
+            ".jpg": 1630,
+            ".sh": 4193,
+            ".html": 649,
+            ".el": 505,
+            ".js": 33,
+            ".plist": 33,
+            ".toml": 7,
+            ".yaml": 12,
+            ".svg": 83,
+            ".pyc": 1257,
+            ".py": 2182
+          }
+        }
+      }
+    },
+    {
+      "hash": "209fb77f31fe8fc18c05bb6058d8d19ffe9b938d",
+      "shortHash": "209fb77f",
+      "date": "2026-06-07T00:46:10+01:00",
+      "subject": "chore(quality): add backfill history (164 commits) and upstream baseline",
+      "metrics": {
+        "deadCode": {
+          "unusedFiles": 72,
+          "unusedExports": 150,
+          "unusedDependencies": 10
+        },
+        "duplication": {
+          "percentage": 3.08,
+          "clones": 146,
+          "duplicatedLines": 1669
+        },
+        "complexity": {
+          "host": {
+            "avgComplexity": 1.2897752941238076,
+            "maxComplexity": 4,
+            "functionsAboveThreshold": 0
+          },
+          "agentRunner": {
+            "avgComplexity": 1.257645075574089,
+            "maxComplexity": 3,
+            "functionsAboveThreshold": 0
+          }
+        },
+        "lineCount": {
+          "total": 121248,
+          "byExtension": {
+            ".lock": 1,
+            ".json": 11833,
+            ".md": 23401,
+            ".ts": 54695,
             ".swift": 148,
             "(no ext)": 656,
             ".example": 1,
