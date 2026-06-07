@@ -47,13 +47,19 @@ function runKnip(repoRoot: string): { unusedFiles: number; unusedExports: number
       timeout: 60_000,
     });
     const json = JSON.parse(output);
+    // knip JSON shape: { files: string[], issues: Array<{ exports?, types?, dependencies?, ... }> }
     const unusedFiles = Array.isArray(json.files) ? json.files.length : 0;
-    const unusedExports = Array.isArray(json.exports)
-      ? json.exports.reduce((acc: number, f: { exports?: unknown[] }) => acc + (Array.isArray(f.exports) ? f.exports.length : 0), 0)
-      : 0;
-    const unusedDependencies = Array.isArray(json.dependencies)
-      ? json.dependencies.reduce((acc: number, f: { dependencies?: unknown[] }) => acc + (Array.isArray(f.dependencies) ? f.dependencies.length : 0), 0)
-      : (typeof json.unlisted === 'object' && json.unlisted !== null ? Object.keys(json.unlisted).length : 0);
+    const issues: Array<Record<string, unknown[]>> = Array.isArray(json.issues) ? json.issues : [];
+    const unusedExports = issues.reduce((acc, f) => {
+      const exports = Array.isArray(f['exports']) ? f['exports'].length : 0;
+      const types = Array.isArray(f['types']) ? f['types'].length : 0;
+      return acc + exports + types;
+    }, 0);
+    const unusedDependencies = issues.reduce((acc, f) => {
+      const deps = Array.isArray(f['dependencies']) ? f['dependencies'].length : 0;
+      const devDeps = Array.isArray(f['devDependencies']) ? f['devDependencies'].length : 0;
+      return acc + deps + devDeps;
+    }, 0);
     return { unusedFiles, unusedExports, unusedDependencies };
   } catch (err) {
     console.warn('[quality] knip failed, returning zeroes:', (err as Error).message?.slice(0, 120));
