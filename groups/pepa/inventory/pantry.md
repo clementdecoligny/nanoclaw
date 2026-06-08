@@ -182,18 +182,18 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-06-03 (panier reçu)_
+_Mis à jour 2026-06-08_
 
 ### 🥦 Légumes (frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
 | Chou blanc | 1 tête | Pour coleslaw |
-| Tomates | ~7–8 | ~4-5 anciennes + 3 petites panier |
+| Tomates | 0 | Consommées déj 08/06 |
 | Radis | ~8–10 | |
 | Myrtilles | 1 barquette (~½) | |
-| Salade verte | 1 | Panier 03/06 |
-| Poireau | 1 gros | Panier 03/06 — soupe |
+| Salade verte | 0 | Jetée 08/06 (trop vieille) |
+| Poireau | 1 gros | Panier 03/06 — soupe (batch Branca) |
 | Carottes | 3 | Panier 03/06 |
 | Pommes de terre | 2 | Panier 03/06 |
 
@@ -267,7 +267,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 2 tupperwares | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
-| Soupe (type TBC) | ~7 tupperwares | 3 anciens + ~4 batch Branca 28/05 |
+| Soupe (type TBC) | 0 | Épuisée 08/06 |
 | Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
