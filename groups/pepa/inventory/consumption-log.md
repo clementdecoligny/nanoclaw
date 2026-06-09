@@ -5,6 +5,12 @@
 
 | Date | Item | Qty Used | Remaining | Notes |
 |------|------|----------|-----------|-------|
+| 2026-06-08 | Atum à l'huile 120g | 2 × 120g | 1 boîte | Dîner — pasta au thon |
+| 2026-06-08 | Tomate frito (grand bocal) | ~200g | ~920g | Dîner — pasta au thon |
+| 2026-06-08 | Spaghetti | ~200g | ~2 × 500g restants | Dîner — pasta au thon |
+| 2026-06-08 | Olives noires | ~40g | en stock | Dîner — pasta au thon |
+| 2026-06-08 | Feta | ~60g | ~4.5 blocs | Dîner — pasta au thon |
+| 2026-06-08 | Soupe (Branca) | +3L batch | ~6 tupperwares | Batch Branca — soupe légumes |
 | 2026-04-11 | Eggs | 2 | ~4 | Friday cooking |
 | 2026-04-12 | Eggs | 2 | ~2 | Sunday cooking |
 | 2026-04-13 | Apples | 1 | ~3 | Morning snack |

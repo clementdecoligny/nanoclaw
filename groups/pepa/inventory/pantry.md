@@ -128,7 +128,7 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Atum ao Natural Tritão | 3 | Livraison 29/05 |
+| Atum ao Natural Tritão | 1 | 2 utilisées dîner 08/06 (pasta au thon) |
 
 ---
 
@@ -267,7 +267,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 2 tupperwares | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
-| Soupe (type TBC) | 0 | Épuisée 08/06 |
+| Soupe Branca (légumes) | ~6 tupperwares | Batch 08/06 — 3L total |
 | Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
 | Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
 | Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
