@@ -48,7 +48,13 @@ import {
 } from './session-manager.js';
 import type { AgentGroup, Session } from './types.js';
 
-const onecli = new OneCLI({ url: ONECLI_URL, apiKey: ONECLI_API_KEY });
+// timeout: the SDK default is 5s. ensureAgent() runs on the container spawn
+// path and issues an authenticated POST that resolves the user identity via a
+// postgres lookup; on a busy/IO-stalled host (e.g. WSL2 disk hiccups) that
+// occasionally exceeds 5s, aborting the spawn and sending the session into a
+// multi-minute host-sweep retry loop. 30s tolerates the hiccup instead of
+// turning it into an outage.
+const onecli = new OneCLI({ url: ONECLI_URL, apiKey: ONECLI_API_KEY, timeout: 30_000 });
 
 /** Active containers tracked by session ID. */
 const activeContainers = new Map<string, { process: ChildProcess; containerName: string }>();
@@ -125,7 +131,7 @@ async function spawnContainer(session: Session): Promise<void> {
   // Materialize container.json from DB — writes fresh file and returns
   // the config object, threaded through provider resolution, buildMounts,
   // and buildContainerArgs so we don't re-read.
-  const containerConfig = materializeContainerJson(agentGroup.id);
+  const containerConfig = await materializeContainerJson(agentGroup.id);
 
   // Resolve the effective provider + any host-side contribution it declares
   // (extra mounts, env passthrough). Computed once and threaded through both
