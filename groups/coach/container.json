@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "strava": {
+      "type": "http",
+      "url": "https://mcp.strava.com/mcp",
+      "headers": {
+        "Authorization": "Bearer 65f5093d59b6c33996dc07d0f8bc27ea21a9868a"
+      }
+    }
+  },
+  "packages": {
+    "apt": [],
+    "npm": []
+  },
+  "additionalMounts": [],
+  "skills": "all",
+  "groupName": "Coach",
+  "assistantName": "Coach",
+  "agentGroupId": "ag-1781482851576-coach"
+}

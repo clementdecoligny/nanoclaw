@@ -155,6 +155,8 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 | Miso paste (rouge/foncé) | En stock | Bocal entamé — utiliser moitié moins que miso blanc |
 | Filetes de Anchovas em Azeite Pitéu | 1 + 1 × 41g | 1 ancien + 1×41g Livraison 06/05 |
 | Tahini Claro Bio Continente | 1 × 225g | Livraison 06/05 |
+| Tahini (Celeiro) | 1 × 230g | Acheté 15/06 |
+| Concentré de tomate (tube) | 1 × 150g | Acheté Celeiro 15/06 |
 | Olives noires dénoyautées | En stock | Acheté 31/05 |
 | Confiture de fraises | En stock | Petit-déj enfants — acheté 31/05 |
 | Origan | En stock | Acheté 31/05 |

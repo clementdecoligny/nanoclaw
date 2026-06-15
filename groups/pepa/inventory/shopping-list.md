@@ -16,6 +16,11 @@ _Last updated: 2026-06-04_
 | Liquide lave-vaisselle | 1 | Acheté local 31/05 — à intégrer prochaine commande |
 | Chocapic | 1 × 650g | Ajouté 04/06 |
 | Cannelle | 1 | Ajouté 04/06 |
+| Papel higiénico | 1 pack | Ajouté 15/06 |
+| Cavala em azeite | 2–3 latas | Pour panino Veni a Tastari — non trouvé Celeiro 15/06 |
+| Pimentos assados em azeite (bocal) | 1 | Pour panino Ciauru a Ghiotta — non trouvé Celeiro 15/06 |
+| Harissa | 1 | Fond de réserve + substitut paninos — non trouvé Celeiro 15/06 |
+| Doce de pimento picante | 1 | Pour panino Ritrovatello — non trouvé Celeiro 15/06 |
 
 ---
 
