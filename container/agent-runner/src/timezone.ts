@@ -48,6 +48,34 @@ export function formatLocalTime(utcIso: string, timezone: string): string {
   });
 }
 
+/**
+ * Authoritative "now" string for the per-turn context header: weekday + ISO
+ * date + 24h local time, all in the given timezone. The agent reads
+ * day-of-week from this rather than computing it itself — the SDK's preset
+ * system prompt carries its own date which can disagree, and reasoning about
+ * weekdays from a bare ISO date is error-prone. See formatter.ts header.
+ *
+ * Example: "Monday, 2026-06-15 14:05"
+ */
+export function formatNow(timezone: string, now: Date = new Date()): string {
+  const tz = resolveTimezone(timezone);
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'long', timeZone: tz });
+  // en-CA renders ISO-style YYYY-MM-DD regardless of host locale.
+  const ymd = new Intl.DateTimeFormat('en-CA', {
+    timeZone: tz,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(now);
+  const hm = now.toLocaleTimeString('en-GB', {
+    timeZone: tz,
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+  return `${weekday}, ${ymd} ${hm}`;
+}
+
 function resolveContainerTimezone(): string {
   const candidates = [process.env.TZ, Intl.DateTimeFormat().resolvedOptions().timeZone];
   for (const tz of candidates) {

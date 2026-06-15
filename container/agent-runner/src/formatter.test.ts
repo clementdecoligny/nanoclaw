@@ -60,6 +60,26 @@ describe('context timezone header', () => {
     expect(ctxIdx).toBeGreaterThanOrEqual(0);
     expect(firstMsgIdx).toBeGreaterThan(ctxIdx);
   });
+
+  it('includes a now="..." attribute with the authoritative local date', () => {
+    insertMessage('m1', 'chat', { sender: 'Alice', text: 'hello' });
+    const result = formatMessages(getPendingMessages());
+    expect(result).toMatch(/<context timezone="[^"]+" now="[^"]+"\s*\/>/);
+  });
+
+  it('now attribute names the weekday and the ISO date for the current instant', () => {
+    const result = formatMessages([]);
+    const now = new Date();
+    const weekday = now.toLocaleDateString('en-US', { weekday: 'long', timeZone: TIMEZONE });
+    // YYYY-MM-DD in the configured timezone.
+    const ymd = new Intl.DateTimeFormat('en-CA', {
+      timeZone: TIMEZONE,
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(now);
+    expect(result).toContain(`now="${weekday}, ${ymd}`);
+  });
 });
 
 describe('multi-message chat batches', () => {

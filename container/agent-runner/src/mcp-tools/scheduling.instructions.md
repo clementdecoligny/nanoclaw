@@ -22,6 +22,8 @@ print(f'{d}T08:00:00')
 
 Run this first and use the printed date as `processAfter`. This avoids off-by-one errors that cause a Monday task to fire on Tuesday.
 
+The current local date and day-of-week are also given to you each turn in the `now="..."` attribute of the `<context>` header at the top of the message batch. Treat that as authoritative for "what day is it today" — do not infer the weekday from your own training-time knowledge.
+
 Frequent recurring scheduled tasks — more than a few times a day — consume API credits and can risk account restrictions. You can add a `script` that runs first, and you will only be called when the check passes.
 
 ### How it works
