@@ -1,5 +1,5 @@
 # Macro-plan — Marseille–Naples 2026
-_Construit le 15 juin 2026 — À valider avec Clément_
+_Construit le 15 juin 2026 — Ajusté le 16 juin 2026 avec Clément_
 
 ## Objectif
 
@@ -28,15 +28,11 @@ _Construit le 15 juin 2026 — À valider avec Clément_
 
 Objectif : réparer le genou, reconstruire la base musculaire, maintenir la base aérobie.
 
-- Semaines 1–3 (15 juin – 5 juil) :
-  - Natation : 2–3 séances/semaine
-  - Vélo : Z1/Z2 uniquement, plat, < 2h, 2–3 sorties/semaine max
-  - Renforcement : **3 séances/semaine** (protocole kiné post M-N 2025)
+- Semaines 1–4 (15 juin – 15 juil) :
+  - Natation : 1–2 séances/semaine
+  - Vélo : Z1/Z2 uniquement, plat, **2 sorties/semaine**, < 90 min (progression vers 2h après feu vert ostéo 25 juin)
+  - Renforcement : **3 séances/semaine** (protocole 7 exercices)
   - Checkpoint : RDV ostéo 25 juin
-- Semaine 4 (6–15 juil) :
-  - Si green light ostéo : introduction progressive de volume Z2 (2h30–3h)
-  - Natation 1–2x
-  - Renfo : maintien 3x/semaine
 
 ### Phase 2 — Randonnée Alpes (Cross-training D+)
 **16–24 juillet (1 semaine)**
@@ -45,7 +41,7 @@ Ne pas traiter comme vacances passives. 15–20 km/j × 1 500 m D+ moyen = ~12 0
 
 - Marche : effort en Z1/Z2, rester aérobie
 - Aucun vélo
-- Continuer les exercices de renfo (corps de poids, disponibles partout)
+- Pas de renfo cette semaine (randonnées chargées, pas de matériel)
 
 ### Phase 3 — Base intensive
 **25 juillet → 9 août (2,5 semaines)**
@@ -61,13 +57,13 @@ Objectif : reconstruire le volume vélo, introduire les sorties longues, back-to
 ### Phase 4 — Construction
 **10–30 août (3 semaines)**
 
-Annecy 10–19 : exploiter le terrain si vélo disponible (excellent pour le D+). Sinon, marche/trail en compensation.
+Annecy 10–19 : moins de volume qu'une semaine normale. Priorité à la course à pied (trail si possible), vélo si disponible et si le terrain le permet. Les 20-30 août sont pleinement disponibles pour rattraper le volume.
 
-- Volume cible : 12–16h vélo/semaine
-- Sorties longues 5–6h
-- Back-to-back 2–3 jours consécutifs
-- D+ cible : 2 000–3 000m/semaine
-- Renfo : 2 séances/semaine minimum
+- Course à pied : 2–3 runs/semaine, Z1/Z2, terrain varié
+- Vélo : si disponible, 1–2 sorties ; sinon pas de stress
+- Trail/marche avec D+ : bonus si le terrain s'y prête
+- Renfo : 2 séances/semaine si possible (priorité secondaire)
+- Volume moindre qu'une semaine pleine → compensé semaines 20-30 août
 
 ### Phase 5 — Pic
 **31 août → 13 septembre (2 semaines)**

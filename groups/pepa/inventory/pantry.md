@@ -195,7 +195,7 @@ _Mis à jour 2026-06-08_
 | Radis | ~8–10 | |
 | Myrtilles | 1 barquette (~½) | |
 | Salade verte | 0 | Jetée 08/06 (trop vieille) |
-| Poireau | 1 gros | Panier 03/06 — soupe (batch Branca) |
+| Poireau | 0 | Confirmé épuisé 16/06 |
 | Carottes | 3 | Panier 03/06 |
 | Pommes de terre | 2 | Panier 03/06 |
 
@@ -230,7 +230,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
-| Œufs frais | ~12 + 6 achetés 06/06 | Ovos de Solo Classe M — livraison 29/05 + achat local 06/06 |
+| Œufs frais | 0 | Épuisés 15/06 (dîner riz ratatouille oeufs) — ⚠️ acheter urgent |
 | Pimento assado | 250g | Roasted peppers — ready to use |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |

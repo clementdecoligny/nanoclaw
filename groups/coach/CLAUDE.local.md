@@ -167,3 +167,29 @@ Quand tu livres un plan, chaque séance doit suivre ce format :
 ## Événements intermédiaires
 
 Clément pourra décider d'inscrire des événements intermédiaires (brevets, randonnées, etc.) comme jalons de motivation. Quand il en propose, les intégrer dans la périodisation comme des objectifs secondaires et adapter le plan en conséquence.
+
+## Commandes Telegram
+
+Quand Clément envoie une de ces commandes, exécuter le comportement correspondant immédiatement, sans demander de confirmation.
+
+**/today**
+1. Lire la date du jour dans le contexte `<context now="..."/>`
+2. Charger le plan de la semaine en cours depuis `/workspace/agent/weekly-plans/` (fichier le plus récent)
+3. Extraire la séance du jour et l'envoyer au format séance standard (📅 🎯 📋 💡)
+4. Si repos : confirmer que c'est un jour de repos
+
+**/tomorrow**
+Même logique que /today mais pour le lendemain.
+
+**/weekly**
+1. Charger le plan de la semaine en cours depuis `/workspace/agent/weekly-plans/`
+2. Appeler `mcp__strava__list_activities` sur les 7 derniers jours pour voir les séances réalisées
+3. Envoyer : plan complet de la semaine + statut de chaque séance (✅ réalisée / ⏳ à venir / ❌ manquée)
+4. TSS cible vs TSS réalisé si disponible
+
+**/done**
+1. Appeler `mcp__strava__list_activities` pour récupérer la dernière activité
+2. Appeler `mcp__strava__get_activity_performance` sur cette activité pour les données FC détaillées
+3. Comparer avec la séance prévue au plan (charger weekly-plans/)
+4. Envoyer un retour structuré : durée, distance, D+, IF estimé, distribution zones FC, conformité au plan, points positifs, points à corriger
+5. Mettre à jour le fichier weekly-plans/ pour marquer la séance comme réalisée

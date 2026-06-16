@@ -11,12 +11,19 @@ _Last updated: 2026-06-04_
 | Item | Qty | Notes |
 |---|---|---|
 | Sopitas bio ready-to-eat (bebé) | 5 | Non trouvé sur Continente — à sourcer |
-| Tahini | 1 | Non trouvé sur Continente — 1 jar en stock, pas urgent |
 | Olives noires dénoyautées | 2–3 bocaux | À renouveler régulièrement |
 | Liquide lave-vaisselle | 1 | Acheté local 31/05 — à intégrer prochaine commande |
 | Chocapic | 1 × 650g | Ajouté 04/06 |
 | Cannelle | 1 | Ajouté 04/06 |
 | Papel higiénico | 1 pack | Ajouté 15/06 |
+| Anti-humedad (pack ×3) | 1 caja | Pedido Lola 16/06 |
+| Laurel | 1 | Pedido Lola 16/06 |
+| Vainilla | 1 | Pedido Lola 16/06 — esencia o extracto |
+| Leite meio gordo Mimosa (brick) | 2 cajas | Pedido Lola 16/06 |
+| Sumos 100% fruta fresa y plátano (bebé) | ×10 | Pedido Lola 16/06 |
+| Tomate seco (bote) | 1 | Pedido Lola 16/06 |
+| Pesto verde (Barilla) | 2 botes | Pedido Lola 16/06 |
+| Pesto rojo | 2 botes | Pedido Lola 16/06 |
 | Cavala em azeite | 2–3 latas | Pour panino Veni a Tastari — non trouvé Celeiro 15/06 |
 | Pimentos assados em azeite (bocal) | 1 | Pour panino Ciauru a Ghiotta — non trouvé Celeiro 15/06 |
 | Harissa | 1 | Fond de réserve + substitut paninos — non trouvé Celeiro 15/06 |
@@ -40,8 +47,9 @@ _Last updated: 2026-06-04_
 
 | Item | Qty | Notes |
 |---|---|---|
-| Œufs | 2 dz | ⚠️ Épuisés 03/06 — urgent |
+| Œufs | 2 dz | ⚠️ Épuisés 15/06 — urgent |
 | Lixívia (eau de javel) | 1 | ⚠️ Épuisée 03/06 |
 | Peito de frango (blanc de poulet) | 1–1.5 kg | Plus de poulet au congélo — urgent pour batch effiloché |
+| Panados de frango | 1 paquet | Épuisés 16/06 |
 
 ---
