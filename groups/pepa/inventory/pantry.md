@@ -190,9 +190,9 @@ _Mis à jour 2026-06-08_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Chou blanc | 1 tête | Pour coleslaw |
+| Chou blanc | 0 | Épuisé 16/06 |
 | Tomates | 0 | Consommées déj 08/06 |
-| Radis | ~8–10 | |
+| Radis | 0 | Épuisés 16/06 |
 | Myrtilles | 1 barquette (~½) | |
 | Salade verte | 0 | Jetée 08/06 (trop vieille) |
 | Poireau | 0 | Confirmé épuisé 16/06 |
@@ -231,7 +231,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
 | Œufs frais | 0 | Épuisés 15/06 (dîner riz ratatouille oeufs) — ⚠️ acheter urgent |
-| Pimento assado | 250g | Roasted peppers — ready to use |
+| Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Feta DOP Continente | 5 blocks | 1 ancien + 4 livraison 29/05 |
@@ -255,7 +255,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 6 | Acheté et congelé 06/06 |
 | Bife de frango (filet de poulet) | 0 | Utilisé (date TBC) |
-| Panados de frango (escalopes panées poulet) | En stock | Quantité TBC — confirmé 03/06 |
+| Panados de frango (escalopes panées poulet) | 0 | Épuisés 16/06 — à racheter |
 | Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
 | Boulettes de viande IKEA | 0 | Confirmé terminées 28/05 |
 | San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |

@@ -49,7 +49,6 @@ _Last updated: 2026-06-04_
 |---|---|---|
 | Œufs | 2 dz | ⚠️ Épuisés 15/06 — urgent |
 | Lixívia (eau de javel) | 1 | ⚠️ Épuisée 03/06 |
-| Peito de frango (blanc de poulet) | 1–1.5 kg | Plus de poulet au congélo — urgent pour batch effiloché |
 | Panados de frango | 1 paquet | Épuisés 16/06 |
 
 ---

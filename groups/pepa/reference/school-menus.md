@@ -9,11 +9,11 @@ Règle : pas de répétition entre déjeuner école et dîner maison (protéine 
 
 | Jour | Sopa | Prato |
 |------|------|-------|
-| Lun 16/06 | Couve coração | Empadão de carne de vitela em arroz |
-| Mar 17/06 | Abóbora com massinhas | Pescada ao natural com batata cozida |
-| Mer 18/06 | Caldo verde | Carne de porco à portuguesa |
-| Jeu 19/06 | Alho francês | Bacalhau à Brás |
-| Ven 20/06 | Espinafres | Salsichas frescas c/arroz |
+| Lun 15/06 | Couve coração | Empadão de carne de vitela em arroz |
+| Mar 16/06 | Abóbora com massinhas | Pescada ao natural com batata cozida |
+| Mer 17/06 | Caldo verde | Carne de porco à portuguesa |
+| Jeu 18/06 | Alho francês | Bacalhau à Brás |
+| Ven 19/06 | Espinafres | Salsichas frescas c/arroz |
 
 ---
 
