@@ -8,6 +8,7 @@ import {
   formatMessages,
   extractRouting,
   categorizeMessage,
+  commandFileExists,
   isClearCommand,
   isRunnerCommand,
   stripInternalTags,
@@ -160,8 +161,9 @@ export async function runPollLoop(config: PollLoopConfig): Promise<void> {
     }
 
     // Format messages: passthrough commands get raw text (only if the
-    // provider natively handles slash commands), others get XML.
-    const prompt = formatMessagesWithCommands(keep, config.provider.supportsNativeSlashCommands);
+    // provider natively handles slash commands AND a real command file backs
+    // them), others get XML.
+    const prompt = formatMessagesWithCommands(keep, config.provider.supportsNativeSlashCommands, config.cwd);
 
     log(`Processing ${keep.length} message(s), kinds: ${[...new Set(keep.map((m) => m.kind))].join(',')}`);
 
@@ -179,7 +181,7 @@ export async function runPollLoop(config: PollLoopConfig): Promise<void> {
     // can stamp it on outbound rows — needed for a2a return-path routing.
     setCurrentInReplyTo(routing.inReplyTo);
     try {
-      const result = await processQuery(query, routing, processingIds, config.providerName);
+      const result = await processQuery(query, routing, processingIds, config.providerName, config.cwd);
       if (result.continuation && result.continuation !== continuation) {
         continuation = result.continuation;
         setContinuation(config.providerName, continuation);
@@ -219,18 +221,29 @@ export async function runPollLoop(config: PollLoopConfig): Promise<void> {
 
 /**
  * Format messages, handling passthrough commands differently.
- * When the provider handles slash commands natively (Claude Code),
- * passthrough commands are sent raw (no XML wrapping) so the SDK can
- * dispatch them. Otherwise they fall through to standard XML formatting.
+ * When the provider handles slash commands natively (Claude Code), a slash
+ * command is sent raw (no XML wrapping) so the SDK can dispatch it — but ONLY
+ * for admin commands and passthrough commands backed by a real command file
+ * (`<cwd>/.claude/commands/<name>.md` or the user dir). A passthrough command
+ * with no backing file (e.g. a behavior defined only in CLAUDE.local.md like
+ * `/weekly`) would be silently dropped by the SDK, so it falls through to
+ * standard XML formatting and the agent interprets it from its instructions.
  */
-function formatMessagesWithCommands(messages: MessageInRow[], nativeSlashCommands: boolean): string {
+function formatMessagesWithCommands(
+  messages: MessageInRow[],
+  nativeSlashCommands: boolean,
+  cwd: string,
+): string {
   const parts: string[] = [];
   const normalBatch: MessageInRow[] = [];
 
   for (const msg of messages) {
     if (nativeSlashCommands && (msg.kind === 'chat' || msg.kind === 'chat-sdk')) {
       const cmdInfo = categorizeMessage(msg);
-      if (cmdInfo.category === 'passthrough' || cmdInfo.category === 'admin') {
+      const dispatchNatively =
+        cmdInfo.category === 'admin' ||
+        (cmdInfo.category === 'passthrough' && commandFileExists(cmdInfo.command, { cwd }));
+      if (dispatchNatively) {
         // Flush normal batch first
         if (normalBatch.length > 0) {
           parts.push(formatMessages(normalBatch));
@@ -260,6 +273,7 @@ async function processQuery(
   routing: RoutingContext,
   initialBatchIds: string[],
   providerName: string,
+  cwd: string,
 ): Promise<QueryResult> {
   let queryContinuation: string | undefined;
   let done = false;
@@ -290,7 +304,7 @@ async function processQuery(
         // the SDK never runs them. End the stream and leave the rows
         // pending; the outer loop handles them on next iteration via the
         // canonical command path + formatMessagesWithCommands.
-        if (pending.some((m) => isRunnerCommand(m))) {
+        if (pending.some((m) => isRunnerCommand(m, { cwd }))) {
           log('Pending slash command — ending stream so outer loop can process');
           endedForCommand = true;
           query.end();

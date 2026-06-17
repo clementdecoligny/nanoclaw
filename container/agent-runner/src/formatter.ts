@@ -1,3 +1,7 @@
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+
 import { findByRouting } from './destinations.js';
 import type { MessageInRow } from './db/messages-in.js';
 import { TIMEZONE, formatLocalTime, formatNow } from './timezone.js';
@@ -66,16 +70,56 @@ export function isClearCommand(msg: MessageInRow): boolean {
   return text.toLowerCase().startsWith('/clear');
 }
 
+/** Options controlling how slash commands are resolved against the filesystem. */
+export interface CommandResolutionOpts {
+  /** Working directory — Claude Code looks for `<cwd>/.claude/commands/<name>.md`. */
+  cwd: string;
+  /** Home dir — Claude Code looks for `<home>/.claude/commands/<name>.md`. Defaults to os.homedir(). */
+  home?: string;
+}
+
 /**
- * True for any chat that needs the outer loop's command path: /clear plus
- * admin/passthrough slash commands the SDK can only dispatch when they are
- * a query's first input. Used by the follow-up poller to bail out and let
- * the outer loop reopen the query.
+ * True if a real Claude Code command file backs the given `/command`.
+ * Claude Code resolves slash commands from `<cwd>/.claude/commands/<name>.md`
+ * (project) and `<home>/.claude/commands/<name>.md` (user). `command` is the
+ * leading token including the slash (e.g. "/weekly"); the name is matched
+ * case-insensitively.
  */
-export function isRunnerCommand(msg: MessageInRow): boolean {
+export function commandFileExists(command: string, opts: CommandResolutionOpts): boolean {
+  const name = command.replace(/^\//, '').toLowerCase();
+  if (!name) return false;
+  const home = opts.home ?? os.homedir();
+  const candidates = [
+    path.join(opts.cwd, '.claude', 'commands', `${name}.md`),
+    path.join(home, '.claude', 'commands', `${name}.md`),
+  ];
+  return candidates.some((p) => {
+    try {
+      return fs.existsSync(p);
+    } catch {
+      return false;
+    }
+  });
+}
+
+/**
+ * True for any chat that needs the outer loop's command path: admin commands
+ * (handled directly by the runner/host, e.g. /clear) plus passthrough slash
+ * commands that are backed by a real Claude Code command file — those only
+ * dispatch when they're a query's first input. Used by the follow-up poller
+ * to bail out and let the outer loop reopen the query.
+ *
+ * Passthrough commands WITHOUT a backing command file (e.g. behaviors defined
+ * only in CLAUDE.local.md like `/weekly`) are NOT runner commands: dispatching
+ * them natively makes the SDK silently drop them. They fall through to normal
+ * text formatting so the agent interprets them from its instructions.
+ */
+export function isRunnerCommand(msg: MessageInRow, opts: CommandResolutionOpts): boolean {
   if (msg.kind !== 'chat' && msg.kind !== 'chat-sdk') return false;
-  const cat = categorizeMessage(msg).category;
-  return cat === 'admin' || cat === 'passthrough';
+  const info = categorizeMessage(msg);
+  if (info.category === 'admin') return true;
+  if (info.category === 'passthrough') return commandFileExists(info.command, opts);
+  return false;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

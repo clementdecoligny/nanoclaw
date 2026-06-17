@@ -10,11 +10,32 @@
  * stable for the numeric parts we assert on (hour, minute, year).
  */
 import { describe, it, expect, beforeEach, afterEach } from 'bun:test';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
 
 import { initTestSessionDb, closeSessionDb, getInboundDb } from './db/connection.js';
-import { getPendingMessages } from './db/messages-in.js';
-import { formatMessages, stripInternalTags } from './formatter.js';
+import { getPendingMessages, type MessageInRow } from './db/messages-in.js';
+import { formatMessages, stripInternalTags, isRunnerCommand } from './formatter.js';
 import { TIMEZONE } from './timezone.js';
+
+function commandMsg(text: string): MessageInRow {
+  return {
+    id: 'c1',
+    seq: 1,
+    kind: 'chat-sdk',
+    timestamp: new Date().toISOString(),
+    status: 'pending',
+    process_after: null,
+    recurrence: null,
+    tries: 0,
+    trigger: 1,
+    platform_id: null,
+    channel_type: 'telegram',
+    thread_id: null,
+    content: JSON.stringify({ text }),
+  };
+}
 
 beforeEach(() => {
   initTestSessionDb();
@@ -79,6 +100,50 @@ describe('context timezone header', () => {
       day: '2-digit',
     }).format(now);
     expect(result).toContain(`now="${weekday}, ${ymd}`);
+  });
+});
+
+describe('isRunnerCommand — native dispatch gated on command file existence', () => {
+  let tmp: string;
+
+  beforeEach(() => {
+    tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'cmd-gate-'));
+  });
+
+  afterEach(() => {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  });
+
+  function writeCommandFile(name: string) {
+    const dir = path.join(tmp, '.claude', 'commands');
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, `${name}.md`), '# stub command\n');
+  }
+
+  it('treats an unknown /command as NOT a runner command (so it is interpreted as text)', () => {
+    // Regression for the silent-/weekly bug: /weekly has no command file, so it
+    // must NOT be dispatched natively to the SDK (which drops it silently).
+    expect(isRunnerCommand(commandMsg('/weekly'), { cwd: tmp, home: tmp })).toBe(false);
+  });
+
+  it('treats a /command WITH a matching command file as a runner command', () => {
+    writeCommandFile('weekly');
+    expect(isRunnerCommand(commandMsg('/weekly'), { cwd: tmp, home: tmp })).toBe(true);
+  });
+
+  it('matches the command name case-insensitively and ignores arguments', () => {
+    writeCommandFile('weekly');
+    expect(isRunnerCommand(commandMsg('/WEEKLY some args'), { cwd: tmp, home: tmp })).toBe(true);
+  });
+
+  it('still treats admin commands as runner commands without any file', () => {
+    // /clear and other admin commands are handled by the runner/host directly,
+    // not via a command file — they must remain runner commands.
+    expect(isRunnerCommand(commandMsg('/clear'), { cwd: tmp, home: tmp })).toBe(true);
+  });
+
+  it('non-slash chat is never a runner command', () => {
+    expect(isRunnerCommand(commandMsg('hello there'), { cwd: tmp, home: tmp })).toBe(false);
   });
 });
 
