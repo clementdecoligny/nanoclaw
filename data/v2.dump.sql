@@ -115,11 +115,11 @@ CREATE TABLE sessions (
 INSERT INTO sessions VALUES('sess-1777719703226-kwys2a','ag-1777719573229-tnlcij','mg-1777718761518-kgb1yu',NULL,NULL,'active','running','2026-06-06T17:41:08.096Z','2026-05-02T11:01:43.226Z');
 INSERT INTO sessions VALUES('sess-1777727966855-m1yevu','ag-1777719573236-pywwsu','mg-1777719573249-8cqrcc',NULL,NULL,'active','stopped','2026-06-05T23:27:46.660Z','2026-05-02T13:19:26.855Z');
 INSERT INTO sessions VALUES('sess-1777727969808-h4w4hv','ag-1777719573240-ynm5lh','mg-1777719573250-r1ny4z',NULL,NULL,'active','stopped','2026-06-06T13:25:18.838Z','2026-05-02T13:19:29.808Z');
-INSERT INTO sessions VALUES('sess-1777917826702-flz8jg','ag-1777719573229-tnlcij','mg-1777719573251-oiqgzh',NULL,NULL,'active','stopped','2026-06-19T07:02:58.225Z','2026-05-04T18:03:46.702Z');
+INSERT INTO sessions VALUES('sess-1777917826702-flz8jg','ag-1777719573229-tnlcij','mg-1777719573251-oiqgzh',NULL,NULL,'active','stopped','2026-06-20T22:22:26.070Z','2026-05-04T18:03:46.702Z');
 INSERT INTO sessions VALUES('sess-1778063434775-8u3zq1','ag-1777719573236-pywwsu','mg-1778063434755-qrm1gk',NULL,NULL,'active','stopped','2026-05-14T07:02:29.388Z','2026-05-06T10:30:34.775Z');
 INSERT INTO sessions VALUES('sess-1778063439242-ipppx1','ag-1777719573240-ynm5lh','mg-1778063439239-sl59lc',NULL,NULL,'active','stopped','2026-06-03T10:00:18.606Z','2026-05-06T10:30:39.242Z');
 INSERT INTO sessions VALUES('sess-1778063443710-u8l0rb','ag-1777719573229-tnlcij','mg-1778063443707-dl7upj',NULL,NULL,'active','stopped','2026-05-14T08:32:47.136Z','2026-05-06T10:30:43.710Z');
-INSERT INTO sessions VALUES('sess-1781484610630-7uhf0h','ag-1781482851576-coach','mg-1781484300469-dtlzkm',NULL,NULL,'active','stopped','2026-06-19T13:35:25.020Z','2026-06-15T00:50:10.630Z');
+INSERT INTO sessions VALUES('sess-1781484610630-7uhf0h','ag-1781482851576-coach','mg-1781484300469-dtlzkm',NULL,NULL,'active','stopped','2026-06-20T22:27:30.014Z','2026-06-15T00:50:10.630Z');
 CREATE TABLE pending_questions (
         question_id    TEXT PRIMARY KEY,
         session_id     TEXT NOT NULL REFERENCES sessions(id),
@@ -136,90 +136,11 @@ CREATE TABLE chat_sdk_kv (
         value TEXT NOT NULL,
         expires_at INTEGER
       );
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:9','true',1781551014984);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:12','true',1781551098497);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:17','true',1781556103064);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:23','true',1781556789890);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:26','true',1781557548313);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:30','true',1781558179189);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:35','true',1781560056100);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:38','true',1781560416892);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:41','true',1781560847405);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:44','true',1781560901000);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:46','true',1781560926024);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:47','true',1781560926028);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:49','true',1781562020371);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:50','true',1781562494941);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:51','true',1781562495259);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:53','true',1781563561007);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:56','true',1781563615424);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:57','true',1781563615430);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:62','true',1781563736556);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2174','true',1781595834122);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2177','true',1781595994700);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2179','true',1781596638901);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2180','true',1781596638903);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:65','true',1781599825825);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:72','true',1781600504566);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:76','true',1781600711095);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:79','true',1781600745026);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:82','true',1781600930782);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:85','true',1781605437455);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:88','true',1781610121656);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2183','true',1781613767915);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2186','true',1781613856200);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2188','true',1781614023677);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:91','true',1781614230660);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:94','true',1781614296942);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2190','true',1781614423962);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2193','true',1781614448669);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2196','true',1781614542626);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2199','true',1781614576526);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2201','true',1781614588555);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:98','true',1781619684454);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:101','true',1781623273879);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2205','true',1781625070442);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2208','true',1781625342886);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2212','true',1781625392594);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2213','true',1781625404694);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2220','true',1781630196234);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2224','true',1781630292511);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2231','true',1781630390549);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2235','true',1781630462443);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2241','true',1781630676678);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:104','true',1781630798066);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:106','true',1781632239559);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:108','true',1781632302820);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:111','true',1781633121022);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2244','true',1781633198416);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:112','true',1781635759838);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:113','true',1781647240860);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2249','true',1781680930896);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2253','true',1781680957614);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:114','true',1781681868367);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:116','true',1781687061552);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:119','true',1781690588547);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:120','true',1781690589222);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:124','true',1781690909227);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:127','true',1781711358441);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:130','true',1781721782762);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2259','true',1781798685130);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2262','true',1781799064420);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:135','true',1781800180606);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:139','true',1781801131689);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:143','true',1781801260410);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:146','true',1781822732951);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:149','true',1781823166947);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:153','true',1781823274494);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:157','true',1781823359537);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:160','true',1781823558508);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:163','true',1781852021353);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:-5124234082:2267','true',1781852877888);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:168','true',1781858249664);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:172','true',1781858510572);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:175','true',1781873625708);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:178','true',1781876125475);
-INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:182','true',1781876424806);
+INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:185','true',1781994426602);
+INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:186','true',1781994426609);
+INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:187','true',1781994426614);
+INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:188','true',1781994429390);
+INSERT INTO chat_sdk_kv VALUES('dedupe:telegram:8641420749:190','true',1781994749358);
 CREATE TABLE chat_sdk_subscriptions (
         thread_id TEXT PRIMARY KEY,
         subscribed_at TEXT NOT NULL DEFAULT (datetime('now'))
@@ -236,9 +157,6 @@ CREATE TABLE chat_sdk_lists (
         expires_at INTEGER,
         PRIMARY KEY (key, idx)
       );
-INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:-5124234082',326,'{"_type":"chat:Message","id":"-5124234082:2129","threadId":"telegram:-5124234082","text":"On l’a deja fait hier soir cette recette.","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"On l’a deja fait hier soir cette recette.","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":42,"offset":41}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":42,"offset":41}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":42,"offset":41}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-09T07:17:58.000Z","edited":false},"attachments":[],"isMention":false}',1781594275958);
-INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:-5124234082',327,'{"_type":"chat:Message","id":"-5124234082:2130","threadId":"telegram:-5124234082","text":"Branca a fait un batch de 3L de soupe hier","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Branca a fait un batch de 3L de soupe hier","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":43,"offset":42}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":43,"offset":42}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":43,"offset":42}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-09T07:18:09.000Z","edited":false},"attachments":[],"isMention":false}',1781594289540);
-INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:-5124234082',328,'{"_type":"chat:Message","id":"-5124234082:2133","threadId":"telegram:-5124234082","text":"Cette semaine on n’est pas là de mardi apres midi à dimanche apres midi. Aujourd’hui on est mardi","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Cette semaine on n’est pas là de mardi apres midi à dimanche apres midi. Aujourd’hui on est mardi","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":98,"offset":97}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":98,"offset":97}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":98,"offset":97}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-09T07:37:32.000Z","edited":false},"attachments":[],"isMention":false}',1781595450504);
 INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',0,'{"_type":"chat:Message","id":"8641420749:1","threadId":"telegram:8641420749","text":"/start","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"/start","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-15T00:43:20.000Z","edited":false},"attachments":[],"isMention":false}',1782089100457);
 INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',1,'{"_type":"chat:Message","id":"8641420749:2","threadId":"telegram:8641420749","text":"Hi","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Hi","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":3,"offset":2}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":3,"offset":2}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":3,"offset":2}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-15T00:45:14.000Z","edited":false},"attachments":[],"isMention":false}',1782089113140);
 INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',2,'{"_type":"chat:Message","id":"8641420749:3","threadId":"telegram:8641420749","text":"Oi","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Oi","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":3,"offset":2}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":3,"offset":2}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":3,"offset":2}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-15T00:48:02.000Z","edited":false},"attachments":[],"isMention":false}',1782089282323);
@@ -341,6 +259,11 @@ INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',60,'{"_type"
 INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',61,'{"_type":"chat:Message","id":"8641420749:175","threadId":"telegram:8641420749","text":"What do you say about my fitness data in Strava?","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"What do you say about my fitness data in Strava?","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":49,"offset":48}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":49,"offset":48}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":49,"offset":48}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-19T12:48:47.000Z","edited":false},"attachments":[],"isMention":false}',1782478125710);
 INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',62,'{"_type":"chat:Message","id":"8641420749:178","threadId":"telegram:8641420749","text":"J’ai du mal à croire que ça baisse autant. N’est-ce pas aussi lié au fait que c’est optimisé pour la performance et pas pour l’endurance/ultracycling ? Et aussi ça ne tient pas compte du renfo et pas de donnees HR pour la natation ?","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"J’ai du mal à croire que ça baisse autant. N’est-ce pas aussi lié au fait que c’est optimisé pour la performance et pas pour l’endurance/ultracycling ? Et aussi ça ne tient pas compte du renfo et pas de donnees HR pour la natation ?","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":233,"offset":232}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":233,"offset":232}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":233,"offset":232}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-19T13:30:27.000Z","edited":false},"attachments":[],"isMention":false}',1782480625477);
 INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',63,'{"_type":"chat:Message","id":"8641420749:182","threadId":"telegram:8641420749","text":"Ok donc concentre toi bien sur les metriques qui compte dans la planification macro, hebdomadaire et sur l’analyse de ou j’en suis chaque semaine","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Ok donc concentre toi bien sur les metriques qui compte dans la planification macro, hebdomadaire et sur l’analyse de ou j’en suis chaque semaine","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":146,"offset":145}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":146,"offset":145}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":146,"offset":145}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-19T13:35:26.000Z","edited":false},"attachments":[],"isMention":false}',1782480924808);
+INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',64,'{"_type":"chat:Message","id":"8641420749:185","threadId":"telegram:8641420749","text":"/today","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"/today","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-20T07:29:16.000Z","edited":false},"attachments":[],"isMention":false}',1782598926618);
+INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',65,'{"_type":"chat:Message","id":"8641420749:186","threadId":"telegram:8641420749","text":"/today","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"/today","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":7,"offset":6}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-20T08:01:23.000Z","edited":false},"attachments":[],"isMention":false}',1782598926619);
+INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',66,'{"_type":"chat:Message","id":"8641420749:187","threadId":"telegram:8641420749","text":"/done","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"/done","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":6,"offset":5}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":6,"offset":5}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":6,"offset":5}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-20T22:21:13.000Z","edited":false},"attachments":[],"isMention":false}',1782598926619);
+INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',67,'{"_type":"chat:Message","id":"8641420749:188","threadId":"telegram:8641420749","text":"Oi?","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Oi?","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":4,"offset":3}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":4,"offset":3}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":4,"offset":3}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-20T22:22:06.000Z","edited":false},"attachments":[],"isMention":false}',1782598929396);
+INSERT INTO chat_sdk_lists VALUES('msg-history:telegram:8641420749',68,'{"_type":"chat:Message","id":"8641420749:190","threadId":"telegram:8641420749","text":"Are we on?","formatted":{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"Are we on?","position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":11,"offset":10}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":11,"offset":10}}}],"position":{"start":{"line":1,"column":1,"offset":0},"end":{"line":1,"column":11,"offset":10}}},"raw":null,"author":{"userId":"8641420749","userName":"Clément","fullName":"Clément de Coligny","isBot":false,"isMe":false},"metadata":{"dateSent":"2026-06-20T22:27:29.000Z","edited":false},"attachments":[],"isMention":false}',1782599249379);
 CREATE TABLE pending_approvals (
         approval_id         TEXT PRIMARY KEY,
         session_id          TEXT REFERENCES sessions(id),
