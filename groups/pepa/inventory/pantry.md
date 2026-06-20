@@ -191,12 +191,12 @@ _Mis à jour 2026-06-08_
 | Item | Quantité | Notes |
 |---|---|---|
 | Chou blanc | 0 | Épuisé 16/06 |
-| Tomates | 0 | Consommées déj 08/06 |
+| Tomates | 2 | Panier 18/06 — à utiliser Branca 19/06 |
 | Radis | 0 | Épuisés 16/06 |
 | Myrtilles | 1 barquette (~½) | |
 | Salade verte | 0 | Jetée 08/06 (trop vieille) |
-| Poireau | 0 | Confirmé épuisé 16/06 |
-| Carottes | 3 | Panier 03/06 |
+| Poireau | 1 | Panier 18/06 — à utiliser Branca 19/06 |
+| Carottes | 3 | Panier 18/06 (+ anciennes potentiellement épuisées) |
 | Pommes de terre | 2 | Panier 03/06 |
 
 ### 🧺 Légumes (hors frigo)
