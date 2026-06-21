@@ -2,53 +2,60 @@
 
 > Agent-maintained. Updated automatically when stock drops below thresholds or when a meal plan requires items not in inventory.
 
-_Last updated: 2026-06-04_
+_Last updated: 2026-06-21 (post-commande 430974128_001)_
 
 ---
 
 ## 📦 Prochaine commande Continente
 
-| Item | Qty | Notes |
-|---|---|---|
-| Sopitas bio ready-to-eat (bebé) | 5 | Non trouvé sur Continente — à sourcer |
-| Olives noires dénoyautées | 2–3 bocaux | À renouveler régulièrement |
-| Liquide lave-vaisselle | 1 | Acheté local 31/05 — à intégrer prochaine commande |
-| Chocapic | 1 × 650g | Ajouté 04/06 |
-| Cannelle | 1 | Ajouté 04/06 |
-| Papel higiénico | 1 pack | Ajouté 15/06 |
-| Anti-humedad (pack ×3) | 1 caja | Pedido Lola 16/06 |
-| Laurel | 1 | Pedido Lola 16/06 |
-| Vainilla | 1 | Pedido Lola 16/06 — esencia o extracto |
-| Leite meio gordo Mimosa (brick) | 2 cajas | Pedido Lola 16/06 |
-| Sumos 100% fruta fresa y plátano (bebé) | ×10 | Pedido Lola 16/06 |
-| Tomate seco (bote) | 1 | Pedido Lola 16/06 |
-| Pesto verde (Barilla) | 2 botes | Pedido Lola 16/06 |
-| Pesto rojo | 2 botes | Pedido Lola 16/06 |
-| Cavala em azeite | 2–3 latas | Pour panino Veni a Tastari — non trouvé Celeiro 15/06 |
-| Pimentos assados em azeite (bocal) | 1 | Pour panino Ciauru a Ghiotta — non trouvé Celeiro 15/06 |
-| Harissa | 1 | Fond de réserve + substitut paninos — non trouvé Celeiro 15/06 |
-| Doce de pimento picante | 1 | Pour panino Ritrovatello — non trouvé Celeiro 15/06 |
+> Commande du 21/06 passée. Livraison attendue ~23/06. Items ci-dessous : à reporter sur la prochaine commande.
+
+| Item | Qty | Statut | Notes |
+|---|---|---|---|
+| Sopitas bio ready-to-eat (bebé) | 5 | - | Non trouvé sur Continente — à sourcer |
+| Olives noires dénoyautées | ×2 | - | Non inclus dans commande 21/06 |
+| Liquide lave-vaisselle | ×1 | - | Non inclus — choix pas fait |
+| Anti-humedad (pack ×3) | ×3 | - | Non inclus — choix pas fait |
+| Laurel | ×1 | - | Non inclus dans commande 21/06 |
+| Tomate seco (bote) | ×1 | - | Non inclus dans commande 21/06 |
+| Pesto rojo | ×2 | - | Non inclus — pesto verde ×2 seulement commandé |
+| Pimentos assados em azeite (bocal) | ×1 | - | Non inclus dans commande 21/06 |
+| Harissa | ×1 | - | Non dispo Continente — épicerie spécialisée |
+| Doce de pimento picante | ×1 | - | Non dispo Continente |
+| Tofu firme | ×1 | - | Erreur panier — ajouter manuellement sur continente.pt (pid:3047531) |
+| Tempeh | ×1 | - | Non dispo Continente |
+| Altramuces | ×1 | - | Non inclus dans commande 21/06 |
+| Pipas de calabaza | ×1 | - | Non inclus dans commande 21/06 |
+| Cacahuetes tostados | ×1 | - | Amendoim Matutano commandé à la place — OK? |
+| Piñones | ×1 | - | Non inclus dans commande 21/06 |
+| Aceitunas Kalamata | ×1 | - | Non inclus dans commande 21/06 |
+| Miso blanco | ×1 | - | Non dispo Continente |
+| Remolacha cocida (bote) | ×1 | - | Non inclus dans commande 21/06 |
+| Za'atar | ×1 | - | Non dispo Continente |
+| Sumac | ×1 | - | Non dispo Continente |
+| Copos de guindilla seca | ×1 | - | Non dispo Continente |
+| Leche de coco | ×2 | - | Non inclus dans commande 21/06 |
+| Anacardos sin sal | ×1 | - | Non inclus dans commande 21/06 |
+| Amendoim sem casca | ×1 | - | Non dispo Continente |
+| Levadura nutricional | ×1 | - | Non dispo Continente |
 
 ---
 
 ## 🛒 Épicerie spécialisée / autre
 
-| Item | Qty | Notes |
-|---|---|---|
-| Peeled and grilled eggplant (Chtoura Garden) | 1–2 bocaux | Pour baba ganoush — ajouté 13/05 sur demande Clément |
-| Tortillas grandes | 1 paquet | Terminées wraps 15/05 |
-| Cavala em azeite / sgombro sott'olio | 2–3 latas | Maquereau en boîte — pour paninos Veni a Tastari. "Cavala" = maquereau en PT, dispo Continente |
-| Giardiniera sott'olio | 1 bocal | Légumes marinés italiens. Au Portugal : épicerie italienne, ou Pingo Doce / El Corte Inglés épicerie fine. Équivalent : pickles légumes à l'huile |
-| Poivrons grillés à l'huile (bocal) | 1 bocal | Pour Ciauru a Ghiotta et paninos en général — pimentos assados em azeite au Portugal |
+| Item | Qty | Statut | Notes |
+|---|---|---|---|
+| Peeled and grilled eggplant (Chtoura Garden) | ×1 | - | Pour baba ganoush — ajouté 13/05 sur demande Clément |
+| Tortillas grandes | ×1 | - | Terminées wraps 15/05 |
+| Giardiniera sott'olio | ×1 | - | Légumes marinés italiens. Au Portugal : épicerie italienne, ou Pingo Doce / El Corte Inglés épicerie fine. |
 
 ---
 
 ## 🌿 Fruits & légumes (local)
 
-| Item | Qty | Notes |
-|---|---|---|
-| Œufs | 2 dz | ⚠️ Épuisés 15/06 — urgent |
-| Lixívia (eau de javel) | 1 | ⚠️ Épuisée 03/06 |
-| Panados de frango | 1 paquet | Épuisés 16/06 |
+| Item | Qty | Statut | Notes |
+|---|---|---|---|
+| Lixívia (eau de javel) | ×1 | urgent | Épuisée 03/06 |
+| Panados de frango | ×1 | - | Épuisés 16/06 |
 
 ---

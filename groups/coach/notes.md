@@ -1,6 +1,6 @@
 # Notes — Clément
 
-_Dernière mise à jour : 15 juin 2026_
+_Dernière mise à jour : 21 juin 2026_
 
 ## Santé — Genoux
 
@@ -50,6 +50,11 @@ Cible : 3 séances/semaine. Durée ~15 min. Pas d'excuse de temps.
   - Natation augmentée
   - Exercices genoux + core (protocole post M-N 2025)
 - RDV ostéo le 25 juin
+
+## Sommeil
+
+**Baseline : 8h** — en dessous = dette, au-dessus = bonus.
+Suivi détaillé dans `/workspace/agent/sleep.md`.
 
 ## Disponibilités
 

@@ -12,7 +12,7 @@
 |---|---|---|---|---|
 | Yaourt grec | Iogurte Grego Mythos Ligeiro Natural Continente Equilíbrio | 2,35 € | ×5 à ×6 | Toujours Mythos 1 kg <!-- pid:7403702 --> |
 | Lait entier UHT | LEITE UHT GORD MIMOSA B ESSEN 1L | 1,19 € | ×6 à ×18 | Mimosa Bem Essencial |
-| Lait demi-écrémé UHT | LEITE UHT M/G MIMOSA B ESSEN 1L | 0,90 € | selon besoin | Apparu dans commandes récentes |
+| Leite meio gordo Mimosa | LEITE UHT M/G MIMOSA B ESSEN 1L | 0,90 € | ×2 | Lait demi-écrémé UHT |
 | Œufs (douzaine) | Ovos de Ar Livre Classe M/L Matinados | ~4,00 € | ×12 (soit 12 dz) | Alternative : OVOS DE SOLO CLASSE L CNT 1DZ <!-- pid:6664918 --> |
 | Feta | QJ FETA DOP CONTINENTE 150G | 1,79 € | ×1 à ×5 | Acheté à chaque commande |
 | Parmesan | Queijo Parmigiano Reggiano DOP Continente | — | ×1 à ×2 | Continente brand <!-- pid:8421688 --> |
@@ -59,7 +59,7 @@
 |---|---|---|---|---|
 | Vahiné Aroma Vainilla / Baunilha | Aroma de Baunilha Vahine | — | ×1 | Extrait vanille <!-- pid:2525605 --> |
 | Tahini | Tahini Claro Bio Continente | — | ×1 | |
-| Pesto | MOL.PESTO ALLA GENO.BARILLA 190 | 3,74–4,99 € | ×1 à ×2 | Toujours Barilla Genovese 190 g |
+| Pesto | MOL.PESTO ALLA GENO.BARILLA 190 | 3,74–4,99 € | ×1 à ×2 | Toujours Barilla Genovese 190 g | <!-- pid:4023987 -->
 | Passata Mutti | PASSATA TOMATE (PURE) MUTTI 400 | 2,29 € | ×1 à ×2 | Toujours Mutti |
 | Tomates concassées Mutti | TOMATE TRITURADO MUTTI 400G | 2,39 € | ×1 à ×2 | Mutti |
 | Tomates pelées entières Mutti | TOMATE INTEIRO PELADO MUTTI 400 | 2,29 € | ×1 | Mutti |
@@ -68,7 +68,7 @@
 | Ketchup zéro sucre | KETC ZERO TOP DOWN HEINZ 425G | 5,75 € | ×1 | Heinz |
 | Mayonnaise | MAION HELLMAN MAGRA VIDRO 461G | 3,14 € | ×1 | Hellmann's light |
 | Moutarde Dijon | MOSTARDA DIJON SAVORA FRS 190G | 2,69 € | ×1 | Savora |
-| Poivrons rôtis bio | PIMENTO ASSADO EM TIRAS BIO 250 | 3,39 € | ×3 | Bio, acheté en stock |
+| Pimentos assados em azeite | PIMENTO ASSADO EM TIRAS BIO 250 | 3,39 € | ×1 | Bio, acheté en stock | <!-- pid:6418505 -->
 | Lentilles vertes sèches | Lentilhas Secas Continente | — | ×1 | <!-- pid:6604652 --> |
 | Lentilles cuites bio | Lentilhas Cozidas Origens Bio | — | ×1 | <!-- pid:7994682 --> |
 | Pois chiches en conserve | Grão de Bico Cozido Continente | — | ×2 | <!-- pid:2859737 --> |
@@ -84,7 +84,7 @@
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
 | Flocons d'avoine | Flocos de Aveia Integral Grossos Continente Equilíbrio | 0,79 €/400g | ×4 à ×6 (pour 2 kg) | Acheter en plusieurs paquets <!-- pid:8070073 --> |
-| Graines de courge bio | Sementes de Abóbora Biológicas Continente Bio | 2,49 €/200g | ×5 (pour 1 kg) | Bio <!-- pid:6627432 --> |
+| Pipas de calabaza | Sementes de Abóbora Biológicas Continente Bio | 2,49 € | ×1 | Bio <!-- pid:6627432 --> |
 | Graines de tournesol bio | SEMENTES GIRAS 200G-PT-BIO-03 | 1,19 €/200g | ×5 (pour 1 kg) | Bio <!-- pid:6627430 --> |
 | Mix graines petit-déjeuner bio | MIST SEM PEQ ALMOCO CONT BIO | 1,99 € | ×1 | Bio <!-- pid:6625962 --> |
 | Graines de lin | SEMENTES LINHACA CNT 200G | 1,19 €/200g | ×2 à ×3 (pour 500 g) | <!-- pid:8117181 --> |
@@ -146,7 +146,7 @@
 
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
-| Papier toilette Scottex | Papel Higiénico 3 Folhas Acolchoado Scottex | — | ×1 | <!-- pid:8157021 --> |
+| Papel higiénico | Papel Higiénico 3 Folhas Acolchoado Scottex | — | ×1 | <!-- pid:8157021 --> |
 | Sacs recyclage 30 L | SACOS RECICLAGEM CNT 30L 3UN | 2,19 €/3 | ×3 à ×4 | Tri sélectif |
 | Sacs poubelle WC 10 L | SACOS LIXO CONTINENTE WC 10L | 0,99 € | ×1 | |
 | Sacs poubelle grands 50 L | SACOS LIXO SILVEX 50L | 3,35 € | ×1 | Silvex |
@@ -166,6 +166,50 @@
 |---|---|---|---|---|
 | Gel douche Argão Natural Honey | Gel de Banho Argão Natural Honey | 5,29 € | ×1 | |
 | Gel douche Colónia Natural Honey | Gel de Banho Frescura Colónia Natural Honey | 5,29 € | ×1 | |
+
+---
+
+## Épicerie méditerranéenne & bio
+
+| Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
+|---|---|---|---|---|
+| Liquide lave-vaisselle | Detergente Máquina Loiça Continente | — | ×1 | |
+| Cannelle | Canela Moída em Frasco Continente | 0,59 € | ×1 | <!-- pid:6046641 --> |
+| Anti-humedad | Absorsor Humidade | — | ×3 | Anti-humidade |
+| Laurel | Louro Folha em Saqueta Continente | 0,69 € | ×1 | <!-- pid:6046671 --> |
+| Tomate seco | Tomate Seco | — | ×1 | | <!-- pid:5384860 -->
+| Pesto rojo | Pesto Alla Siciliana Barilla | — | ×2 | Barilla rouge |
+| Olives noires dénoyautées | Azeitona Preta Descaroçada Oxidada Continente | 1,29 € | ×2 | <!-- pid:7571617 --> |
+| Cavala em azeite | Cavala em Azeite | — | ×2 | Maquereau en conserve | <!-- pid:7400660 -->
+| Harissa | — | — | ×1 | Non vu |
+| Tofu firme | Tofu Refrigerado Biológico Seara | 2,25 € | ×1 | <!-- pid:3047531 --> |
+| Tempeh | — | — | ×1 | Non vu |
+| Edamame congelado | Edamame Congelado | — | ×1 | | <!-- pid:7835426 -->
+| Altramuces | Tremoço Extra Qampo | 2,31 € | ×1 | <!-- pid:7723320 --> |
+| Quinoa | Quinoa | — | ×1 | | <!-- pid:7191221 -->
+| Cacahuetes tostados | Amendoim Torrado com Casca Continente | 1,99 € | ×1 | <!-- pid:8114026 --> |
+| Piñones | Pinhão Os Originais | 12,99 € | ×1 | <!-- pid:7458389 --> |
+| Maíz dulce lata | Milho Doce em Lata sem Glúten Continente | 1,15 € | ×1 | <!-- pid:6445104 --> |
+| Aceitunas Kalamata | Azeitonas Kalamata | — | ×1 | | <!-- pid:7264219 -->
+| Alga wakame seca | Alga Wakame | — | ×1 | | <!-- pid:7472966 -->
+| Miso blanco | — | — | ×1 | Non vu |
+| Bulgur | Bulgur | — | ×1 | Trigo partido | <!-- pid:6873416 -->
+| Remolacha cocida | Beterraba Cozida | — | ×1 | | <!-- pid:2202907 -->
+| Za'atar | — | — | ×1 | Non vu |
+| Sumac | — | — | ×1 | Non vu |
+| Pimentón ahumado | Colorau Fumado | — | ×1 | | <!-- pid:7212170 -->
+| Copos de guindilla seca | — | — | ×1 | Non vu — líquido piri-piri ≠ flocos secos |
+| Pasta de cacahuete | Manteiga de Amendoim Cremosa Continente Equilíbrio | 2,49 € | ×1 | <!-- pid:8167238 --> |
+| Leche de coco | Leite de Coco | — | ×2 | | <!-- pid:4721024 -->
+| Alcaparras | Alcaparras | — | ×1 | | <!-- pid:2004612 -->
+| Anacardos | Caju Torrado sem Sal Continente | — | ×1 | <!-- pid:8116806 --> |
+| Semillas de sésamo | Sementes de Sésamo | — | ×1 | | <!-- pid:8117162 -->
+| Amendoim sem casca | — | — | ×1 | Non vu — só barras/manteiga em resultados |
+| Coco rallado sin azúcar | Coco Ralado sem Glúten Origens Bio | 2,64 € | ×1 | <!-- pid:6919365 --> |
+| Levadura nutricional | — | — | ×1 | Non vu |
+| Mirin | Mirin | — | ×1 | | <!-- pid:6615676 -->
+| Giardiniera sott'olio | — | — | ×1 | Non vu — épicerie italienne uniquement |
+| Chocapic | Chocapic Nestlé | — | ×1 | | <!-- pid:8512966 -->
 
 ---
 
