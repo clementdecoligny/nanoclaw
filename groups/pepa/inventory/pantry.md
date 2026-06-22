@@ -184,41 +184,39 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-06-08_
+_Mis à jour 2026-06-22 (photos inventaire Clément)_
 
-### 🥦 Légumes (frigo)
-
-| Item | Quantité | Notes |
-|---|---|---|
-| Chou blanc | 0 | Épuisé 16/06 |
-| Tomates | 2 | Panier 18/06 — à utiliser Branca 19/06 |
-| Radis | 0 | Épuisés 16/06 |
-| Myrtilles | 1 barquette (~½) | |
-| Salade verte | 0 | Jetée 08/06 (trop vieille) |
-| Poireau | 1 | Panier 18/06 — à utiliser Branca 19/06 |
-| Carottes | 3 | Panier 18/06 (+ anciennes potentiellement épuisées) |
-| Pommes de terre | 2 | Panier 03/06 |
-
-### 🧺 Légumes (hors frigo)
+### 🥦 Légumes (frigo — tiroir)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oignons jaunes | 1 | |
-| Ail | ~2 têtes | 1 entamée + 1 panier |
+| Salade verte | 1 tête | Fraîche — frigo |
+| Tomates | ~5–6 | Frigo — bien mûres, ⚠️ à utiliser rapidement |
+| Carottes | 2–3 | Frigo |
+| Poireau | 1 | Frigo |
+| Concombre | 1 | Frigo |
+| Fruits de la passion | 2–3 | Frigo — bien mûrs (ridés = prêts) |
+
+### 🧺 Légumes (hors frigo — plan de travail)
+
+| Item | Quantité | Notes |
+|---|---|---|
+| Pommes de terre | ~8 | Plan de travail — ⚠️ germent, à utiliser rapidement |
+| Ail | 3 têtes | Plan de travail |
+| Oignons jaunes | 0 | Non visibles |
 | Gingembre frais | 0 | |
 
 ### 🍊 Fruits (corbeille + frigo)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oranges | ~6 | ~4 frigo + 2 panier |
-| Nectarines | ~4–5 | 2-3 frigo + 2 panier |
-| Clémentines | 2 | Panier 03/06 |
-| Citrons verts | 2 | |
-| Citrons jaunes | 3 | 2 anciens + 1 panier |
-| Bananes | 8 | 4 mûres + 4 petites panier |
-| Pommes | ~7–8 | 5-6 anciennes + 2 panier |
-| Avocats | 3 | 1 très mûr (urgent) + 2 petits panier |
+| Oranges | ~4–5 | Frigo |
+| Clémentines/mandarines | 2–3 | Frigo |
+| Citrons jaunes | ~4 | Mix plan de travail + frigo |
+| Citrons verts | ~2 | Frigo |
+| Bananes | 0 | Non visibles |
+| Pommes | 0 | Non visibles |
+| Avocats | 0 | Non visibles |
 
 ---
 
@@ -230,7 +228,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
-| Œufs frais | 0 | Épuisés 15/06 (dîner riz ratatouille oeufs) — ⚠️ acheter urgent |
+| Œufs frais | 5 | Mis à jour 22/06 (Clément) — encore bons à la coque |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
