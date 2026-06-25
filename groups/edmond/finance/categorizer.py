@@ -141,7 +141,7 @@ def load_history(history_dir):
 def filter_to_month(transactions, year, month):
     """Keep only transactions whose Data Valor falls in the given year/month."""
     prefix = f"{year:04d}-{month:02d}"
-    return [t for t in transactions if t.get("value_date", "").startswith(prefix)]
+    return [t for t in transactions if (t.get("value_date") or "").startswith(prefix)]
 
 
 def categorize(transactions, lookup, conflicts):

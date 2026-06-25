@@ -241,23 +241,22 @@ def build_html(r):
 
 
 def main():
-    import json as _json
-    history_path = os.path.join(os.path.dirname(__file__), "../salary/history.json")
-    with open(history_path) as f:
-        history = _json.load(f)
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("hours", type=float, help="Hours worked this month")
+    parser.add_argument("--year", type=int, required=True)
+    parser.add_argument("--month", type=int, required=True)
+    parser.add_argument("--history", default="", help="Comma-separated prior base salaries")
+    parser.add_argument("--output", required=True, help="Output PDF path")
+    args = parser.parse_args()
 
-    months = history["months"]
-    # Find May 2026
-    target = next(m for m in months if m["year"] == 2026 and m["month"] == 5)
-    prior_bases = [m["base_salary"] for m in months if (m["year"], m["month"]) < (2026, 5)]
-
-    r = calculate(target["hours"], 2026, 5, prior_bases)
+    prior_bases = [float(x) for x in args.history.split(",") if x.strip()] if args.history else []
+    r = calculate(args.hours, args.year, args.month, prior_bases)
     html = build_html(r)
 
-    output = os.path.join(os.path.dirname(__file__), "../salary/2026-05-recibo.pdf")
     from weasyprint import HTML
-    HTML(string=html).write_pdf(output)
-    print(f"PDF saved: {output}")
+    HTML(string=html).write_pdf(args.output)
+    print(f"PDF saved: {args.output}")
 
 
 if __name__ == "__main__":

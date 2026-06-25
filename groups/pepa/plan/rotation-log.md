@@ -1,10 +1,28 @@
 # Rotation Log — Dernière date par recette
 
-| Recette | Dernière cuisson | Notes |
-|---------|-----------------|-------|
-| pasta-thon-tomate-olives-feta | 2026-06-08 | Dîner dimanche |
-| pisto-español | 2026-06-07 | Déjeuner samedi (selon Clément 08/06) |
-| bolognaise | 2026-06-07 | Déjeuner samedi (1 tup congélo) |
-| curry-legumes | 2026-06-05 | Dîner vendredi |
-| wraps-panados-frango | 2026-06-04 | Déjeuner jeudi |
-| soupe-legumes | 2026-06-08 | Batch Branca 3L |
+> Fenêtre active : **14 jours**. Ne pas reprendre un assemblage si last_cooked < 14 jours.
+> Mis à jour d'après le plan (suivi par défaut) et les corrections Clément/Lola.
+> Reconstruit le 25/06 depuis transcripts conversations — peut être incomplet.
+
+| Recette | Dernière date | Notes |
+|---------|--------------|-------|
+| soupe-legumes | 2026-06-25 | Batch en cours |
+| poulet-sauté-pâtes | 2026-06-22 | Dîner lundi |
+| pisto-español | 2026-06-23 | Dîner mardi |
+| bolognaise | 2026-06-24 | Déjeuner mercredi (tup congélo) |
+| salade-pois-chiches-feta | 2026-06-24 | Dîner mercredi |
+| arroz-alubias-tomate | 2026-06-16 | Déjeuner |
+| panados-frango | 2026-06-16 | Dîner |
+| salade-pates-caprese-poulet | 2026-06-16 | Dîner pique-nique parc |
+| riz-ratatouille-oeufs | 2026-06-17 | Dîner (ratatouille bocal + œufs) |
+| pasta-thon-tomate-olives | 2026-06-08 | Dîner |
+| alubias-puerros-miso | 2026-05-12 | Déjeuner (✓ libre — > 14 jours) |
+| coleslaw-sain-ete | 2026-05-10 | (✓ libre — > 14 jours) |
+| tzatziki | 2026-05-10 | (✓ libre — > 14 jours) |
+| bolognaise | 2026-05-17 | (entrée dupliquée — dernière date = 24/06) |
+
+---
+
+## ⚠️ Log incomplet
+
+Clément a confirmé le 25/06 que plusieurs recettes proposées ont été faites dans les 2 dernières semaines mais ne sont pas dans ce log. **À reconstruire avec Clément** — lui demander de compléter la liste lors du prochain check-in lundi.

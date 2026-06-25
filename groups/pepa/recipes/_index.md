@@ -60,4 +60,24 @@ These recipe pairs share a base component — one cook session feeds two meals:
 
 ## Maintenance
 
-When a new recipe is added to `/workspace/group/recipes/`, add a row here immediately.
+When a new recipe is added to `/workspace/agent/recipes/`, add a row here immediately.
+
+---
+
+## Recipe Metadata Template
+
+Every recipe file must include this YAML front-matter:
+
+```yaml
+meal_type: lunch | dinner | both
+protein_type: red_meat | pork | poultry | fish | vegetarian | egg
+effort: low | medium | high        # low=reheat/assemble, medium=30-45min, high=1h+
+batch_fit: none | components | full_dish
+batch_components: [protein, grain, sauce, roasted_veg, ...]  # only when batch_fit: components
+freeze_quality: good | ok | poor
+freeze_months: N
+finishing_time: N                  # minutes from frozen to table
+tags: [vegetable-basket-friendly, kid-approved, branca-can-make, assembly, ...]
+```
+
+`last_cooked` is tracked in `plan/rotation-log.md` — not in the recipe file.
