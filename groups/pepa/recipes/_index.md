@@ -30,6 +30,10 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | crema-calabacin-manzana-miso.md | Crema calabacín manzana miso | soup / veg | very low | ⭐⭐⭐ | Thermomix. Freezes well. |
 | crema-esparragos-thermomix.md | Crema espárragos Thermomix | soup / veg | very low | ⭐⭐⭐ | Thermomix. Freezes well. |
 | salade-ricotta-radis-oeufs-pickles.md | Salade ricotta radis œufs marinés | eggs / salad | medium | ⭐⭐ | Make-ahead friendly. |
+| tortilla-espanola.md | Tortilla Española | eggs / potato | low | no | Pommes de terre + oignon + œufs. Tiède ou t° ambiante. |
+| pommes-de-terre-sautees.md | Pommes de Terre Sautées | side / veg | very low | no | PdT déjà cuites — technique poêle. Accompagnement rapide. |
+| shakshuka-maison.md | Shakshuka Maison | eggs / veg | low | ⭐⭐ | Sauce peut se congeler, œufs ajoutés au moment. Basket-friendly. |
+| frittata-courgette-parmesan.md | Frittata Courgette-Parmesan | eggs / veg | low | no | Courgette + œufs + parmesan. 20 min. |
 | ottolenghi-charred-tomatoes-cold-yoghurt.md | Hot charred tomatoes cold yoghurt | veg / starter | very low | no | Serve immediately. |
 | hinojo-tomates-parmesano.md | Hinojo al horno tomates parmesano | veg / side | very low | partial | Can prep ahead, serve warm. |
 | choux-bruxelles-roties-parmesan.md | Choux de Bruxelles rôtis parmesan | veg / side | very low | ⭐⭐ | Reheat 5 min in oven. |
