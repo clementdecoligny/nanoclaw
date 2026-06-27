@@ -247,50 +247,49 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 
 ## Freezer
 
+_Mis à jour : 2026-06-27 (inventaire complet Lola)_
+
 ### Viandes & protéines
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Peito de frango (blanc de poulet) | 6 | Acheté et congelé 06/06 |
-| Bife de frango (filet de poulet) | 0 | Utilisé (date TBC) |
-| Panados de frango (escalopes panées poulet) | 0 | Épuisés 16/06 — à racheter |
-| Bolognese (maison) | 3 tupperwares | Cuisiné 17/05 — chaque tupperware = 2 adultes + 2 enfants. 1 utilisé 27/05 (déj Clément + dîner Lola+enfants) |
-| Boulettes de viande IKEA | 0 | Confirmé terminées 28/05 |
-| San Jacobos (panado de fiambre) | 0 | Terminé 13/04 |
-| Solomillo de cerdo (filet mignon de porc) | 2 × 170g | |
-| Pains de burger | 5 | Ajouté 15/05 |
-| Mini Hambúrguer Bovino Continente | 2 | Lola ×2 déj 01/06. Clément ×2 déj 02/06 + enfants ×2 dîner 02/06 → 0 après demain soir |
-| Mini Pizzas Buitoni Piccolinis | 1 pack | Livraison 29/05 |
+| Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
+| Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
+| Panados de frango (escalopes panées poulet) | 2 tupperwares | Confirmé 27/06 |
+| Dumplings | 1 unité | Confirmé 27/06 |
+| Bolognese (maison) | 1 tupperware | Confirmé 27/06 |
+| Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
+| Pains de burger | 0 | ❌ Consommés |
 
-### Légumes
+### Légumes & plats
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Feijoada angolana (Branca) | 2 tupperwares | Cuisiné 01/05 — chaque tupperware = 4 adultes, décongeler en 1 fois |
-| Soupe Branca (légumes) | ~6 tupperwares | Batch 08/06 — 3L total |
-| Légumes rôtis (Branca) | ½ batch | Batch 14/05 — l'autre moitié au frigo |
-| Frango de muamba (Branca) | 0 | Consommé dîner invité 06/05 |
-| Couve frita (Branca) | 1 tupperware | Cuisiné 01/05 — accompagnement |
-| Curry de légumes (maison) | 1 × 900g (congélo) | Frigo (~450g décongelé 17/05) → ⚠️ À JETER (8 jours au frigo) |
-| Légumes type ratatouille | 1 × 500g | |
-| Pisto español (maison) | 2 × 500g | Cuisiné 20/04 — semaine prochaine |
-| Paella (Pepe, papa de Lola) | 0 | Consommée dîner 20/04 |
-| Alcachofas troceadas (artichauts en morceaux) | 1 × 400g | |
-| Petits pois | 1 × 300g | |
-| Esparregado (épinards à la portugaise) | 0 | ❌ Consommé 03/05 — famille n'a pas aimé, ne pas racheter |
+| Feijoada angolana (Branca) | 1–2 tupperwares | Confirmé 27/06 (qté exacte TBC) |
+| Soupe / caldo | 1 tupperware | ⚠️ Stock critique — prévoir batch urgent |
+| Edamame | 2 sachets | Confirmé 27/06 |
+| Feijão verde (haricots verts surgelés) | 1 sachet | Confirmé 27/06 |
+| Alcachofas troceadas (artichauts) | 1 sachet | Confirmé 27/06 |
+| Guisantes (petits pois) | 1 sachet | Confirmé 27/06 |
+| Pisto español (maison) | 0 | ❌ Consommé |
+| Légumes rôtis (Branca) | 0 | ❌ Consommés |
+| Couve frita (Branca) | 0 | ❌ Consommée |
+| Légumes type ratatouille | 0 | ❌ Consommés |
 
-### Poissons & fruits de mer
+### Poissons
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Thon à l'huile (Atum Açores CNT) | 3 × 120g | Acheté 14/04 |
-| Thon naturel (Atum Natural Auchan) | 2 × 385g | Acheté 15/04 |
-| Robalo Grande Fresco (congelé) | 1 | Congelé 30/05 — décongeler la veille |
-| Dourada Média Fresca (congelée) | 1 | Congelée 30/05 — décongeler la veille |
-| Crevettes épluchées | 0 | Non confirmées en stock |
-| Gula del Norte | 2 × 100g | |
-| Filets de merluza (merlu) | 0 | Consommé wraps dîner 15/05 |
-| Pavés de saumon | 0 | Consommés 27/05 |
+| Barritas de pescado (bâtonnets de poisson) | 1 boîte | Confirmé 27/06 |
+| Gula del Norte | 1 boîte | Confirmé 27/06 |
+| Robalo Grande Fresco | 0 | ❌ Consommé (confirmé 27/06) |
+| Dourada Média Fresca | 0 | ❌ Consommée (confirmé 27/06) |
+
+### Divers
+
+| Item | Quantité | Notes |
+|---|---|---|
+| Pizza congelada | 1 | Confirmé 27/06 |
 
 ### Herbes
 

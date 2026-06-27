@@ -1,6 +1,6 @@
 # Notes — Clément
 
-_Dernière mise à jour : 21 juin 2026_
+_Dernière mise à jour : 26 juin 2026_
 
 ## Santé — Genoux
 
@@ -39,17 +39,26 @@ _Dernière mise à jour : 21 juin 2026_
 
 Cible : 3 séances/semaine. Durée ~15 min. Pas d'excuse de temps.
 
-**Prochain RDV ostéopathe** : 25 juin 2026 → checkpoint état du genou
+**RDV ostéopathe 26 juin 2026 — bilan session**
 
-## État actuel (15 juin 2026)
+Session atypique : 100% psychologique/énergétique, pas de bilan biomécanique, pas de clearance physique formelle.
 
-- Genou pas récupéré à 100% depuis Paris-Marseille (22 mai)
-- Pas d'exercices de renfo depuis ~7 semaines
-- A décidé de faire 3 semaines de récupération active :
-  - Volume vélo réduit
-  - Natation augmentée
-  - Exercices genoux + core (protocole post M-N 2025)
-- RDV ostéo le 25 juin
+Points clés :
+- "Zéro douleur" comme objectif = contre-productif. Génère monitoring anxieux et tension anticipatoire. Reformulé vers objectif positif (flow, amitié, traversée).
+- Paris-Marseille J1 : inflammation rapide = décharge psychique (10j d'arrêt + anxiété "est-ce que je vais y arriver"), pas purement mécanique. Confirme : désenflammé en une nuit.
+- Porto-Lisboa (18h, 0 douleur, flow complet) = modèle de référence. Pas de monitoring = corps qui fait son job.
+- Trauma originel : sortie fixie avec amis (~10 ans), continuée malgré douleur → 10 ans de culpabilité + "mode gestion de douleur permanent" installé.
+- Profil "control" utile pour l'ultra mais dysfonctionne sur la gestion de douleur → axe de travail : méditation, lâcher-prise.
+- Volet physique (identifié en fin de session) : vaste médial + vaste latéral **tendus** → déséquilibre = rotule tire de travers → friction → SFP. Sensation d'engourdissement mi-cuisse le matin du 27/06 cohérente avec cette tension.
+- Action ajoutée : étirement statique quadriceps 2×30s chaque jambe après chaque renfo.
+- **Prochain RDV ostéo : jeudi 2 juillet 2026** — vérifier évolution asymétrie VL/VMO, clearance 2h+, reprise course à pied, position vélo.
+
+## État actuel (26 juin 2026)
+
+- Genou : fonctionnel, épisodes 2/10 résiduels sous effort, pattern récupération nocturne (0/10 le matin)
+- Renfo : W25 2/2 ✅, W26 2/2 ✅ — tendance positive à confirmer
+- Phase 1 récupération en cours jusqu'au 15 juillet
+- Rides max 90 min Z1/Z2 — progression 2h+ en attente d'un avis physio clinique
 
 ## Sommeil
 

@@ -7,6 +7,7 @@
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
 | soupe-legumes | 2026-06-25 | Batch en cours |
+| pad-thai-pollo | 2026-06-27 | Déjeuner samedi |
 | poulet-sauté-pâtes | 2026-06-22 | Dîner lundi |
 | pisto-español | 2026-06-23 | Dîner mardi |
 | bolognaise | 2026-06-24 | Déjeuner mercredi (tup congélo) |
