@@ -201,7 +201,7 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes de terre | ~8 | Plan de travail — ⚠️ germent, à utiliser rapidement |
+| Pommes de terre | 0 | ❌ Consommées 26/06 (omelette + pommes de terre sautées enfants) |
 | Ail | 3 têtes | Plan de travail |
 | Oignons jaunes | 0 | Non visibles |
 | Gingembre frais | 0 | |
