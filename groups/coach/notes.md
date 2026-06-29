@@ -62,7 +62,8 @@ Points clés :
 
 ## Sommeil
 
-**Baseline : 8h** — en dessous = dette, au-dessus = bonus.
+**Baseline : 7h30** *(ajusté 29 juin — Clément confirme se sentir "top" à 7h30)* — en dessous = dette, au-dessus = bonus.
+Test libre prévu : Alpes 16-24 juillet (sans alarme).
 Suivi détaillé dans `/workspace/agent/sleep.md`.
 
 ## Disponibilités

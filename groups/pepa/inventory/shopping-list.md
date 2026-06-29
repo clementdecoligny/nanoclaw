@@ -55,7 +55,7 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 
 | Item | Qty | Statut | Notes |
 |---|---|---|---|
-| Lixívia (eau de javel) | ×1 | urgent | Épuisée 03/06 |
-| Panados de frango | ×1 | - | Épuisés 16/06 |
+| Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
+| Panados de frango | — | ✅ en stock | 2 tupperwares congélo (confirmé Lola 27/06) |
 
 ---
