@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workout_file>
+    <author>Coach</author>
+    <name>Vélo Z2 — 65 min</name>
+    <description>15 min Z1 (FC &lt; 106 bpm) + 35 min Z2 (FC 107-128 bpm, cible 115-120) + 15 min Z1. Terrain plat. Ignorer les cibles de puissance — piloter à la FC uniquement.</description>
+    <sportType>bike</sportType>
+    <tags/>
+    <workout>
+        <SteadyState Duration="900" Power="0.55" pace="0">
+            <textevent timeoffset="0" message="Z1 — FC cible &lt; 106 bpm. Allure très légère, récupération."/>
+        </SteadyState>
+        <SteadyState Duration="2100" Power="0.70" pace="0">
+            <textevent timeoffset="0" message="Z2 — FC cible 107-128 bpm, viser 115-120 bpm. Allure conversationnelle."/>
+            <textevent timeoffset="600" message="10 min écoulées en Z2. FC stable ? Si dérive &gt; +5 bpm, note-le."/>
+            <textevent timeoffset="1200" message="20 min en Z2. Bonne allure — encore 15 min."/>
+            <textevent timeoffset="1800" message="30 min Z2 atteints. Retour au calme dans 5 min."/>
+        </SteadyState>
+        <SteadyState Duration="900" Power="0.55" pace="0">
+            <textevent timeoffset="0" message="Retour au calme — Z1, FC &lt; 106 bpm. Routine A après la séance."/>
+        </SteadyState>
+    </workout>
+</workout_file>
