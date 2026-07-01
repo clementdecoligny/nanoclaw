@@ -77,7 +77,7 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 | Mutti Molho de Tomate para Pizza | 1 × 400g | |
 | El Peregrino Piperrada | 1 × 690g | |
 | Ederki Piperade Basquaise | 1 × 660g | |
-| Ponti Pomodori Secchi (tomates séchées à l'huile) | 1 × 280g | |
+| Ponti Pomodori Secchi (tomates séchées à l'huile) | 0 | ❌ Utilisé salade pâtes plage 29/06 |
 | Don Molino Carne de Pimiento Choricero | 1 × 140g | |
 | Tierra Palaciega Pisto con Tomate de los Palacios | 1 bocal | Taille TBC |
 | La Costeña Salsa de Chipotle | 1 × 220g | |
@@ -190,10 +190,11 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade verte | 1 tête | Fraîche — frigo |
-| Tomates | ~5–6 | Frigo — bien mûres, ⚠️ à utiliser rapidement |
-| Carottes | 2–3 | Frigo |
-| Poireau | 1 | Frigo |
+| Salade verte | 1 tête | Frigo — vieille (panier 25/06), à vérifier |
+| Tomates | ~4 | Frigo — très mûres ⚠️ (panier 25/06, j7) |
+| Poivrons grillés | ~1 poivron | Frigo ⚠️ à utiliser ce soir — poivron rouge du panier rôti |
+| Carottes | 1–2 | Frigo — petites |
+| Poireau | 0 | ❌ Utilisé par Branca (soupe sem. dernière) |
 | Concombre | 1 | Frigo |
 | Fruits de la passion | 2–3 | Frigo — bien mûrs (ridés = prêts) |
 
@@ -202,6 +203,7 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Pommes de terre | 0 | ❌ Consommées 26/06 (omelette + pommes de terre sautées enfants) |
+| Courgette | 0 | ❌ Utilisée par Branca (soupe sem. dernière) |
 | Ail | 3 têtes | Plan de travail |
 | Oignons jaunes | 0 | Non visibles |
 | Gingembre frais | 0 | |

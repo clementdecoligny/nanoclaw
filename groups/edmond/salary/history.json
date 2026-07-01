@@ -31,6 +31,12 @@
       "month": 5,
       "hours": 88.0,
       "base_salary": 506.0
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "hours": 93.5,
+      "base_salary": 537.63
     }
   ],
   "notes": "Subsídio de férias/natal = 1/12 da média de todos os meses desde o início. SS pago separadamente no site da SS (não incluído no MBWay)."

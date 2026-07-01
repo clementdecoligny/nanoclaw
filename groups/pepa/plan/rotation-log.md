@@ -8,6 +8,7 @@
 |---------|--------------|-------|
 | soupe-legumes | 2026-06-25 | Batch en cours |
 | pad-thai-pollo | 2026-06-27 | Déjeuner samedi |
+| shakshuka-maison | 2026-06-30 | Dîner mardi |
 | salade-pates-plage | 2026-06-28 | Déjeuner dimanche (plage, sans mayo) |
 | poulet-sauté-pâtes | 2026-06-22 | Dîner lundi |
 | pisto-español | 2026-06-23 | Dîner mardi |
