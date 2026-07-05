@@ -39,6 +39,16 @@ _Dernière mise à jour : 26 juin 2026_
 
 Cible : 3 séances/semaine. Durée ~15 min. Pas d'excuse de temps.
 
+**RDV ostéopathe 2 juillet 2026 — bilan session**
+
+Session biomécanique. Verdict : physiquement très bien, feu vert pour reprendre l'entraînement intensif.
+- "Peut s'entraîner plus fort maintenant" — fin de Phase 1 Récupération 2 semaines avant prévu
+- Run feu vert : à intégrer progressivement à partir de W28
+- Clearance rides longs : 90 min de plafond levé
+- **Prochain RDV : 14 septembre 2026** — entre Phase Pic et Affûtage, 2 semaines avant M-N. Timing parfait.
+
+---
+
 **RDV ostéopathe 26 juin 2026 — bilan session**
 
 Session atypique : 100% psychologique/énergétique, pas de bilan biomécanique, pas de clearance physique formelle.
