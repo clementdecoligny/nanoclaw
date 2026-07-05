@@ -87,3 +87,9 @@ Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 - Aime les événements comme jalons de motivation
 - Analytique, veut comprendre le "pourquoi"
 - La maladie peut être un facteur déstabilisant sur la préparation
+
+## Méthode TSS — Activités non trackées
+
+Inclure toujours une estimation TSS pour le surf et autres activités sans capteur :
+- **Surf** : ~60 TSS/session (effort modéré 60-80 min, upper body + cardio) — signaler comme estimé
+- Règle générale : ne jamais exclure une activité du total TSS faute de données — estimer et noter "(estimé)"

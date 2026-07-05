@@ -1,6 +1,6 @@
 # Suivi de progression — Clément
 
-_Dernière mise à jour : 15 juin 2026_
+_Dernière mise à jour : 5 juillet 2026_
 
 ## Chronologie des événements clés
 
@@ -16,7 +16,9 @@ _Dernière mise à jour : 15 juin 2026_
 | Mai 22 2026 | Paris–Marseille DNF @ 160km (genou gauche) | 159 km | 850m | 7h11 |
 | Mai 23 2026 | Paris–Marseille Résurrection | 202 km | 606m | 8h28 |
 | Mai 24 2026 | Paris–Marseille "Almost Finisher" (Ventoux) | 205 km | 2896m | 10h16 |
-| **Sep 27 2026** | **Marseille–Naples 2026** 🎯 | 1300 km | ~15 000m | — |
+| 2 juil 2026 | **Feu vert ostéo — fin Phase 1 anticipée** (2 sem early) | — | — | — |
+| 5 juil 2026 | Premier run depuis PM2026 — 6.7km, D+87m, 5:39/km, genou 0/10 | — | — | — |
+| **Sep 27 2026** | **Marseille–Naples 2026** 🎯 | 1300 km | ~17 950m | — |
 
 ## Volumes mensuels estimés (temps de mouvement, tous sports)
 
@@ -34,6 +36,9 @@ _Dernière mise à jour : 15 juin 2026_
 | Avr 2026 | ~29h | ~6h | 0.5h | 0 | ~36h |
 | Mai 2026 | ~39h | ~2h | 0.5h | 1 séance | ~42h |
 | Juin 2026 (1–15) | ~14h (low intensity) | 0 | 0 | 0 | ~14h |
+| Juin 2026 (W26 16–22) | ~2h (post Stuttgart récup) | 0 | 0.5h | 2 séances | ~2.5h |
+| Juin–Juil 2026 (W27 28 juin–4 juil) | ~1h10 (71min vélo) | 0 | 0.5h (500m) | 2 séances, surf 4x | ~2h |
+| Juil 2026 (W28 5–11, en cours) | — | 37min (run) | — | 0 (surf 3j) | — |
 
 ## Tests lactate
 
@@ -51,6 +56,22 @@ _Dernière mise à jour : 15 juin 2026_
 - **Genou gauche** : inflammation lors de Paris–Marseille Mai 2026 (DNF @ 160km). Récupération rapide (2 jours), reprise pour finir l'événement.
 - **Froid/toux persistant** : Mai 2026 (≥3 semaines). A affecté la préparation et la performance à Paris–Marseille.
 
+## Bilan Phase 1 — Récupération (15 juin → 4 juillet)
+
+**TERMINÉE 2 SEMAINES EN AVANCE — Feu vert ostéo 2 juillet**
+
+| Semaine | Vélo | Course | Natation | Renfo | Surf | Genou |
+|---------|------|--------|----------|-------|------|-------|
+| W25 (15–22 juin) | 2 sorties ~2h total | 0 | 0 | 2 séances ✅ | 0 | ~2/10 résiduel |
+| W26 (23–27 juin) | Stuttgart → arrêt | 0 | 0 | 2 séances ✅ | 0 | 0/10 post-Stuttgart |
+| W27 (28 juin–4 juil) | 1 sortie 71min / Z2 parfait ✅ | 0 | 500m ✅ | 2 séances (Mar+Mer) | 4 sessions ✅ | 0/10 ✅ |
+
+**Points clés Phase 1 :**
+- Renfo : 2/3 par semaine en moyenne (bon pour la phase)
+- Vélo Z2 W27 : FC 119.8 sur bloc 40min — quasi parfait
+- Genou : 0/10 confirmé J2 ostéo — résolution complète
+- Surf : 4 sessions W27 = bon cross-training upper body/gainage
+
 ## TSS hebdomadaires clés (Training Stress Score)
 
 | Période | TSS/semaine | Contexte |
@@ -65,6 +86,8 @@ _Dernière mise à jour : 15 juin 2026_
 | Paris-Marseille (mai 22-24) | ~1310 sur 3j | Course (partielle) |
 | Juin 2026 (2–5 juin) | ~250 | Reprise tranquille |
 | Juin 2026 (Galice) | ~230 | Famille, très faible intensité |
+| W27 (28 juin–4 juil) | ~120–150 (estimé) | Phase 1 finale — vélo 71min + surf + renfo |
+| W28 (5–11 juil) cible | 290–320 | Phase 3 — transition (premier vélo 90min, vélo 2h) |
 
 **Cibles de planning :**
 - Phase récupération : 150–200 TSS/sem
@@ -125,5 +148,8 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 - Avr 2026 : **0 séance** ❌
 - Mai 2026 : 1 séance ❌
 - Juin 2026 : **0 séance** ❌
+- W25–W26 2026 : 2/2 ✅ (relance !)
+- W27 2026 : 2/3 ✅ (surf weekend = réaliste)
+- W28 2026 : objectif 3/3
 
-Tendance : déclin progressif depuis novembre. Critique à corriger.
+**Tendance récente :** relance depuis W25. 3 semaines consécutives avec renfo. C'est la fenêtre de changement — tenir jusqu'à M-N.

@@ -1,5 +1,5 @@
 # Macro-plan — Marseille–Naples 2026
-_Construit le 15 juin 2026 — Ajusté le 16 juin 2026 avec Clément_
+_Construit le 15 juin 2026 — Ajusté le 16 juin 2026 avec Clément — Mis à jour le 5 juillet 2026_
 
 ## Objectif
 
@@ -24,15 +24,30 @@ _Construit le 15 juin 2026 — Ajusté le 16 juin 2026 avec Clément_
 ## Périodisation globale (15 semaines)
 
 ### Phase 1 — Récupération & Fondations
-**15 juin → 15 juillet (4 semaines)**
+**15 juin → 4 juillet ✅ TERMINÉE** *(2 semaines avant prévu — feu vert ostéo 2 juillet)*
 
 Objectif : réparer le genou, reconstruire la base musculaire, maintenir la base aérobie.
 
-- Semaines 1–4 (15 juin – 15 juil) :
-  - Natation : 1–2 séances/semaine
-  - Vélo : Z1/Z2 uniquement, plat, **2 sorties/semaine**, < 90 min (progression vers 2h après feu vert ostéo 25 juin)
-  - Renforcement : **3 séances/semaine** (protocole 7 exercices)
-  - Checkpoint : RDV ostéo 25 juin
+- Natation : 1 séance/semaine
+- Vélo : Z1/Z2 uniquement, plat, 2 sorties/semaine, < 90 min
+- Renforcement : 3 séances/semaine (protocole 7 exercices)
+- Checkpoints : RDV ostéo 26 juin (psycho/énergie), RDV ostéo 2 juillet (biométrique → FEU VERT)
+
+**Résultat :** Feu vert complet. "Physiquement très bien, peut s'entraîner plus fort." Genou 0/10. Phase 3 anticipée de 2 semaines.
+
+### Phase 3 — Base intensive
+**5 juillet → 15 juillet + 25 juillet → 9 août (4,5 semaines effectives)**
+
+*(Démarrage anticipé de 3 semaines grâce au feu vert ostéo 2 juillet)*
+
+Objectif : reconstruire le volume vélo, introduire les sorties longues, back-to-back.
+
+- Volume cible : 8–12h vélo/semaine (W28 : 290-320 TSS de transition)
+- 1 sortie longue 3h+ par semaine (progresser vers 4–5h)
+- Premiers enchaînements (2 jours consécutifs) à partir de W29
+- D+ progressif : commencer à 200–400m/semaine, monter vers 1 000–1 500m
+- Run : 1–2 séances/semaine à partir de W28, Z1/Z2 strict
+- Renfo : 3 séances/semaine (non négociable)
 
 ### Phase 2 — Randonnée Alpes (Cross-training D+)
 **16–24 juillet (1 semaine)**
@@ -42,17 +57,6 @@ Ne pas traiter comme vacances passives. 15–20 km/j × 1 500 m D+ moyen = ~12 0
 - Marche : effort en Z1/Z2, rester aérobie
 - Aucun vélo
 - Pas de renfo cette semaine (randonnées chargées, pas de matériel)
-
-### Phase 3 — Base intensive
-**25 juillet → 9 août (2,5 semaines)**
-
-Objectif : reconstruire le volume vélo, introduire les sorties longues, back-to-back.
-
-- Volume cible : 10–14h vélo/semaine
-- 1 sortie longue 4h+ minimum par semaine
-- Premiers enchaînements (2 jours consécutifs)
-- D+ progressif : commencer à 500–800m/semaine, monter vers 1 500–2 000m
-- Renfo : 2–3 séances/semaine (maintien)
 
 ### Phase 4 — Construction
 **10–30 août (3 semaines)**
@@ -92,14 +96,16 @@ Objectif : arriver frais. Volume –40 à –50%, intensité maintenue.
 
 | Date | Événement |
 |------|-----------|
-| 25 juin | RDV ostéopathe → green light reprise |
-| 6 juillet | Fin phase récupération → évaluation genou |
+| 26 juin | RDV ostéopathe #1 (psycho/énergie) |
+| 2 juillet | RDV ostéopathe #2 → **FEU VERT complet** ✅ — fin Phase 1 anticipée |
+| 5 juillet | **Démarrage Phase 3** (2 semaines avant prévu) |
 | 16 juillet | Départ randonnée Alpes |
-| 25 juillet | Reprise vélo sérieuse |
+| 25 juillet | Reprise vélo post-Alpes — Phase 3 reprend |
 | ~20 août | Bilan mi-parcours : forme, D+ accumulé, genoux |
-| 31 août | Entrée en phase pic |
+| 31 août | Entrée en Phase Pic |
+| 14 septembre | **RDV ostéopathe #3** → transition Pic → Affûtage |
 | 14 septembre | Début affûtage |
-| 27 septembre | **M-N 2026 — Départ Marseille** |
+| 27 septembre | **M-N 2026 — Départ Marseille** 🎯 |
 
 ## Note sur les amis moins expérimentés
 
