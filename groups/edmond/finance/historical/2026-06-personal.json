@@ -1,0 +1,964 @@
+{
+  "transactions": [
+    {
+      "value_date": "2026-06-02",
+      "description": "COMPRA 3883 PATTY SMASH BURGERS LIS CONTACTLESS",
+      "amount": -6.0,
+      "balance": 10611.38,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "COMPRA 3883 REST JARDIM CEREJAS LIS CONTACTLESS",
+      "amount": -12.5,
+      "balance": 10598.88,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "TRF MB WAY P/ SEAN CRONIN",
+      "amount": -40.0,
+      "balance": 10558.88,
+      "account": "personal",
+      "category": "GIFT",
+      "sub_category": "",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "JUROS DEPOSITO A PRAZO",
+      "amount": 16.04,
+      "balance": 10574.92,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "OTHER",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "IMPOSTO IRS/IRC DEPOSITO PRAZO       3446885107",
+      "amount": -4.49,
+      "balance": 10570.43,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "TRF. P/O PAYPAL",
+      "amount": 300.0,
+      "balance": 10870.43,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "TRF DE Erreur comun MBWay Gennaro",
+      "amount": 70.0,
+      "balance": 10940.43,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "TRF DE Error comun escola no chiado",
+      "amount": 191.42,
+      "balance": 11131.85,
+      "account": "personal",
+      "category": "EDUCATION",
+      "sub_category": "ESCOLA",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-02",
+      "description": "TRF DE Error comun escola no chiado",
+      "amount": 16.0,
+      "balance": 11147.85,
+      "account": "personal",
+      "category": "EDUCATION",
+      "sub_category": "ESCOLA",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-03",
+      "description": "COMPRA 3883 PAD PORT CAMOES LISBOA  CONTACTLESS",
+      "amount": -13.69,
+      "balance": 11134.16,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "PADARIA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-05",
+      "description": "COMPRA 3883 SAO BENTO MARKET LISBOA CONTACTLESS",
+      "amount": -1.5,
+      "balance": 11132.66,
+      "account": "personal",
+      "category": "GROCERIES",
+      "sub_category": "SUPER",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-05",
+      "description": "COMPRA 3883 AUCHAN CASCAIS NASCE CA CONTACTLESS",
+      "amount": -5.97,
+      "balance": 11126.69,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-10",
+      "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+      "amount": -10.13,
+      "balance": 11116.56,
+      "account": "personal",
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-11",
+      "description": "COMPRA 3883 VEDETA POSITIVA LISBOA  CONTACTLESS",
+      "amount": -1.8,
+      "balance": 11114.76,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "QUIOSQUE",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-11",
+      "description": "COMPRA 3883 HELLO ASSO BEGLES FR",
+      "amount": -25.0,
+      "balance": 11089.76,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-06-12",
+      "description": "COMPRA 3883 HSN STORE.COM ALBOLOTE ES",
+      "amount": -14.69,
+      "balance": 11075.07,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-17",
+      "description": "COMPRA 3883 Starbucks 03892 Estacao CONTACTLESS",
+      "amount": -1.4,
+      "balance": 11073.67,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "BACKERY",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-17",
+      "description": "TRF DE Error Vinted",
+      "amount": 16.19,
+      "balance": 11049.86,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "REIMBURSEMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-18",
+      "description": "TRF MB WAY P/ MAIMUNA SAMBU",
+      "amount": -40.0,
+      "balance": 11033.67,
+      "account": "personal",
+      "category": "BABYSITTING",
+      "sub_category": "BABYSITTING",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-06-18",
+      "description": "COMPRA 3883 Documentos e Solucoes L CONTACTLESS",
+      "amount": -1.8,
+      "balance": 11048.06,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "medium"
+    },
+    {
+      "value_date": "2026-06-19",
+      "description": "COMPRA 3883 GOBIK YECLA ES",
+      "amount": -95.0,
+      "balance": 10953.06,
+      "account": "personal",
+      "category": "BIKE",
+      "sub_category": "GEAR",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-23",
+      "description": "COMPRA 3883 APPLE.COM BILL ITUNES.COM IE",
+      "amount": -2.99,
+      "balance": 10950.07,
+      "account": "personal",
+      "category": "HOUSE",
+      "sub_category": "MISC",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-23",
+      "description": "Mangopay",
+      "amount": 85.0,
+      "balance": 11035.07,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "VINTED",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-24",
+      "description": "COMPRA 3883 SOHO COFFEE LISBOA PT   CONTACTLESS",
+      "amount": -25.0,
+      "balance": 11010.07,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-24",
+      "description": "COMPRA 3883 DB Automat STUTTGART FLUGStuttgart",
+      "amount": -2.1,
+      "balance": 11007.97,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-24",
+      "description": "COMPRA 3883 Parkhotel Stuttgart Lei CONTACTLESS",
+      "amount": -39.0,
+      "balance": 10968.97,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "HOTELS",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-24",
+      "description": "COMPRA 3883 BAECKEREI TREIBER FILDE CONTACTLESS",
+      "amount": -1.25,
+      "balance": 10967.72,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+      "amount": -5.7,
+      "balance": 10962.02,
+      "account": "personal",
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "LEV ATM 3883 DEU Landesbank Baden-Wuertt MARIEN",
+      "amount": -50.0,
+      "balance": 10912.02,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "COMPRA 3883 STUTTGARTER STRASSENBA  CONTACTLESS",
+      "amount": -4.5,
+      "balance": 10907.52,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "COMPRA 3883 SSB FAHRSCHEINVERKAUF S CONTACTLESS",
+      "amount": -4.5,
+      "balance": 10903.02,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "COMPRA 3883 L.A. Signorina Stuttgar CONTACTLESS",
+      "amount": -12.0,
+      "balance": 10891.02,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "COMPRA 3883 EDEKA BAUER LEINFELDEN- CONTACTLESS",
+      "amount": -2.54,
+      "balance": 10888.48,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-25",
+      "description": "COMPRA 3883 EST SERVICO SHELL 0564 STUTTGART DE",
+      "amount": -6.03,
+      "balance": 10882.45,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "TRANSPORT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+      "amount": -10.0,
+      "balance": 10872.45,
+      "account": "personal",
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "DD PayPal Europe  59922258UW8Q4  LU960000000000",
+      "amount": -22.0,
+      "balance": 10850.45,
+      "account": "personal",
+      "category": "MOBILITY",
+      "sub_category": "PUBLIC TRANSPORT",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 SumUp Restaurant Lunica CONTACTLESS",
+      "amount": -52.5,
+      "balance": 10797.95,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 FRIEDRICH MUELLER OMNI  CONTACTLESS",
+      "amount": -4.0,
+      "balance": 10793.95,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "low"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "TRANSFERENCIA - VENCIMENTO",
+      "amount": 4445.44,
+      "balance": 15239.39,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "SALARY",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 PASTELARIA SAMBINHA 2800-299 ALMADA",
+      "amount": -2.65,
+      "balance": 15236.74,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "PADARIA",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 T-MOBILE HOTSPOT GMBH BONN DE",
+      "amount": -9.9,
+      "balance": 15226.84,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 SumUp Laanas Cafe Leinf CONTACTLESS",
+      "amount": -35.8,
+      "balance": 15191.04,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 REST SOHO LISBOA PT     CONTACTLESS",
+      "amount": -39.6,
+      "balance": 15151.44,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "RESTAURANT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "COMPRA 3883 ANTHROPIC CLAUDE SUB ANTHROPIC.COMC",
+      "amount": -22.14,
+      "balance": 15129.3,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "CUSTO DE SERVICO INTERNACIONAL",
+      "amount": -0.85,
+      "balance": 15128.45,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-26",
+      "description": "IMPOSTO DO SELO",
+      "amount": -0.03,
+      "balance": 15128.42,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-27",
+      "description": "TRF. P/O JOAO RODRIGO CAMELO BARROSO",
+      "amount": 100.0,
+      "balance": 15228.42,
+      "account": "personal",
+      "category": "BIKE",
+      "sub_category": "SELLING",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-29",
+      "description": "MEDIS-PAG SERVICOS 26177B1009334777",
+      "amount": 52.0,
+      "balance": 15280.42,
+      "account": "personal",
+      "category": "HEALTH",
+      "sub_category": "MEDIS REIMBURSMENT",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-29",
+      "description": "TRF P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -2934.0,
+      "balance": 12346.42,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "TRANSFER",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-29",
+      "description": "TRF MB WAY P/ MARIA DOLORES DAROCA GUERRERO",
+      "amount": -37.9,
+      "balance": 12308.52,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "SWIMMING",
+      "confidence": "exact"
+    },
+    {
+      "value_date": "2026-06-30",
+      "description": "COMPRA 3883 CASUALFOOD 4350 Stuttga CONTACTLESS",
+      "amount": -11.7,
+      "balance": 12296.82,
+      "account": "personal",
+      "category": "HOLIDAY",
+      "sub_category": "FOOD",
+      "confidence": "high"
+    },
+    {
+      "value_date": "2026-06-30",
+      "description": "COMPRA 3883 MGP Vinted Vilnius LT",
+      "amount": -74.1,
+      "balance": 12222.72,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "HIKING SHOES",
+      "confidence": "exact"
+    }
+  ],
+  "unknown_count": 41,
+  "exact_count": 11,
+  "conflict_count": 0,
+  "claude_prompt": {
+    "taxonomy": {
+      "BABYSITTING": [
+        "BABYSITTING"
+      ],
+      "EAT OUT": [
+        "BACKERY",
+        "PADARIA",
+        "QUIOSQUE",
+        "RESTAURANT",
+        "UBER EATS"
+      ],
+      "EDUCATION": [
+        "ESCOLA"
+      ],
+      "EMPREGADA": [
+        "EMPREGADA",
+        "SEGURANCA SOCIAL"
+      ],
+      "GROCERIES": [
+        "SUPER",
+        "SUPER ONLINE"
+      ],
+      "HEALTH": [
+        "COUCHES",
+        "HOSPITAL",
+        "MEDIS",
+        "MEDIS REIMBURSMENT",
+        "PHARMACY"
+      ],
+      "HOLIDAY": [
+        "ALPS JULY 2026",
+        "BIKE",
+        "FOOD",
+        "HOTELS",
+        "MISC",
+        "TRANSPORT"
+      ],
+      "HOUSE": [
+        "DONA AJUDA",
+        "EDP",
+        "EPAL AGUA",
+        "FURNITURE",
+        "MISC",
+        "NOS",
+        "NOS INTERNET",
+        "SPOTIFY"
+      ],
+      "KIDS": [
+        "BABYSITTING",
+        "LEISURE",
+        "MISC",
+        "PISCINA",
+        "ROPA",
+        "ROPA VINTED"
+      ],
+      "MOBILITY": [
+        "BOLT",
+        "COOLTRA",
+        "PUBLIC TRANSPORT",
+        "TRANSPORT",
+        "UBER"
+      ],
+      "RENT": [
+        "RENT"
+      ],
+      "VOITURE": [
+        "ESSENCE",
+        "MECHANIC",
+        "VIA VERDE"
+      ],
+      "BIKE": [
+        "GEAR",
+        "MAINTENANCE",
+        "RENTAL"
+      ],
+      "CASH": [
+        "CASH"
+      ],
+      "LEISURE": [],
+      "FURNITURE": [
+        "FURNITURE"
+      ],
+      "GIFT": [
+        "GIFT"
+      ],
+      "INCOME": [
+        "SALARY",
+        "TRANSFER",
+        "REIMBURSEMENT",
+        "OTHER"
+      ],
+      "MISC": [
+        "MISC"
+      ],
+      "UNCLASSIFIED": [
+        "UNCLASSIFIED"
+      ]
+    },
+    "examples": [
+      {
+        "description": "trf p ana filomena macedo",
+        "category": "RENT",
+        "sub_category": "RENT"
+      },
+      {
+        "description": "trf mb way p branca manuel gaspar",
+        "category": "EMPREGADA",
+        "sub_category": "EMPREGADA"
+      },
+      {
+        "description": "dd cnn 00001297344 pt40102031",
+        "category": "KIDS",
+        "sub_category": "PISCINA"
+      },
+      {
+        "description": "trf de may",
+        "category": "INCOME",
+        "sub_category": "TRANSFER"
+      },
+      {
+        "description": "trf mb way p carolina campelo dias amaral",
+        "category": "BABYSITTING",
+        "sub_category": "BABYSITTING"
+      },
+      {
+        "description": "pag bxval 8551 viaverde",
+        "category": "VOITURE",
+        "sub_category": "VIA VERDE"
+      },
+      {
+        "description": "dd epal 84000361013 pt37100921",
+        "category": "HOUSE",
+        "sub_category": "EPAL AGUA"
+      },
+      {
+        "description": "compra 8778 welldone advertising s contactless",
+        "category": "MISC",
+        "sub_category": "MISC"
+      },
+      {
+        "description": "compra 8778 coviran zahara vejer de contactless",
+        "category": "HOLIDAY",
+        "sub_category": "MISC"
+      },
+      {
+        "description": "compra 8778 verdachado rest lisboa contactless",
+        "category": "EAT OUT",
+        "sub_category": "RESTAURANT"
+      },
+      {
+        "description": "compra 8551 minipreco lisboa pt contactless",
+        "category": "GROCERIES",
+        "sub_category": "SUPER"
+      },
+      {
+        "description": "trf mb way p dr rodolfo frederico beja lima k",
+        "category": "HEALTH",
+        "sub_category": "HOSPITAL"
+      },
+      {
+        "description": "compra 8551 cooltra barcelona es",
+        "category": "MOBILITY",
+        "sub_category": "TRANSPORT"
+      },
+      {
+        "description": "trf p jerome ronan nicolas armel vincent david",
+        "category": "LEISURE",
+        "sub_category": "MISC"
+      },
+      {
+        "description": "trf p escola no chiado",
+        "category": "EDUCATION",
+        "sub_category": "ESCOLA"
+      },
+      {
+        "description": "compra 3883 oficina 35 lisboa pt contactless",
+        "category": "BIKE",
+        "sub_category": "MAINTENANCE"
+      },
+      {
+        "description": "trf p parents soge",
+        "category": "LIABILITY",
+        "sub_category": ""
+      }
+    ],
+    "rows": [
+      {
+        "index": 0,
+        "description": "COMPRA 3883 PATTY SMASH BURGERS LIS CONTACTLESS",
+        "amount": -6.0
+      },
+      {
+        "index": 1,
+        "description": "COMPRA 3883 REST JARDIM CEREJAS LIS CONTACTLESS",
+        "amount": -12.5
+      },
+      {
+        "index": 2,
+        "description": "TRF MB WAY P/ SEAN CRONIN",
+        "amount": -40.0
+      },
+      {
+        "index": 5,
+        "description": "TRF. P/O PAYPAL",
+        "amount": 300.0
+      },
+      {
+        "index": 6,
+        "description": "TRF DE Erreur comun MBWay Gennaro",
+        "amount": 70.0
+      },
+      {
+        "index": 7,
+        "description": "TRF DE Error comun escola no chiado",
+        "amount": 191.42
+      },
+      {
+        "index": 8,
+        "description": "TRF DE Error comun escola no chiado",
+        "amount": 16.0
+      },
+      {
+        "index": 9,
+        "description": "COMPRA 3883 PAD PORT CAMOES LISBOA  CONTACTLESS",
+        "amount": -13.69
+      },
+      {
+        "index": 10,
+        "description": "COMPRA 3883 SAO BENTO MARKET LISBOA CONTACTLESS",
+        "amount": -1.5
+      },
+      {
+        "index": 11,
+        "description": "COMPRA 3883 AUCHAN CASCAIS NASCE CA CONTACTLESS",
+        "amount": -5.97
+      },
+      {
+        "index": 13,
+        "description": "COMPRA 3883 VEDETA POSITIVA LISBOA  CONTACTLESS",
+        "amount": -1.8
+      },
+      {
+        "index": 14,
+        "description": "COMPRA 3883 HELLO ASSO BEGLES FR",
+        "amount": -25.0
+      },
+      {
+        "index": 15,
+        "description": "COMPRA 3883 HSN STORE.COM ALBOLOTE ES",
+        "amount": -14.69
+      },
+      {
+        "index": 16,
+        "description": "COMPRA 3883 Starbucks 03892 Estacao CONTACTLESS",
+        "amount": -1.4
+      },
+      {
+        "index": 17,
+        "description": "TRF DE Error Vinted",
+        "amount": 16.19
+      },
+      {
+        "index": 18,
+        "description": "TRF MB WAY P/ MAIMUNA SAMBU",
+        "amount": -40.0
+      },
+      {
+        "index": 19,
+        "description": "COMPRA 3883 Documentos e Solucoes L CONTACTLESS",
+        "amount": -1.8
+      },
+      {
+        "index": 20,
+        "description": "COMPRA 3883 GOBIK YECLA ES",
+        "amount": -95.0
+      },
+      {
+        "index": 22,
+        "description": "Mangopay",
+        "amount": 85.0
+      },
+      {
+        "index": 23,
+        "description": "COMPRA 3883 SOHO COFFEE LISBOA PT   CONTACTLESS",
+        "amount": -25.0
+      },
+      {
+        "index": 24,
+        "description": "COMPRA 3883 DB Automat STUTTGART FLUGStuttgart",
+        "amount": -2.1
+      },
+      {
+        "index": 25,
+        "description": "COMPRA 3883 Parkhotel Stuttgart Lei CONTACTLESS",
+        "amount": -39.0
+      },
+      {
+        "index": 26,
+        "description": "COMPRA 3883 BAECKEREI TREIBER FILDE CONTACTLESS",
+        "amount": -1.25
+      },
+      {
+        "index": 28,
+        "description": "LEV ATM 3883 DEU Landesbank Baden-Wuertt MARIEN",
+        "amount": -50.0
+      },
+      {
+        "index": 29,
+        "description": "COMPRA 3883 STUTTGARTER STRASSENBA  CONTACTLESS",
+        "amount": -4.5
+      },
+      {
+        "index": 30,
+        "description": "COMPRA 3883 SSB FAHRSCHEINVERKAUF S CONTACTLESS",
+        "amount": -4.5
+      },
+      {
+        "index": 31,
+        "description": "COMPRA 3883 L.A. Signorina Stuttgar CONTACTLESS",
+        "amount": -12.0
+      },
+      {
+        "index": 32,
+        "description": "COMPRA 3883 EDEKA BAUER LEINFELDEN- CONTACTLESS",
+        "amount": -2.54
+      },
+      {
+        "index": 33,
+        "description": "COMPRA 3883 EST SERVICO SHELL 0564 STUTTGART DE",
+        "amount": -6.03
+      },
+      {
+        "index": 36,
+        "description": "COMPRA 3883 SumUp Restaurant Lunica CONTACTLESS",
+        "amount": -52.5
+      },
+      {
+        "index": 37,
+        "description": "COMPRA 3883 FRIEDRICH MUELLER OMNI  CONTACTLESS",
+        "amount": -4.0
+      },
+      {
+        "index": 39,
+        "description": "COMPRA 3883 PASTELARIA SAMBINHA 2800-299 ALMADA",
+        "amount": -2.65
+      },
+      {
+        "index": 40,
+        "description": "COMPRA 3883 T-MOBILE HOTSPOT GMBH BONN DE",
+        "amount": -9.9
+      },
+      {
+        "index": 41,
+        "description": "COMPRA 3883 SumUp Laanas Cafe Leinf CONTACTLESS",
+        "amount": -35.8
+      },
+      {
+        "index": 42,
+        "description": "COMPRA 3883 REST SOHO LISBOA PT     CONTACTLESS",
+        "amount": -39.6
+      },
+      {
+        "index": 43,
+        "description": "COMPRA 3883 ANTHROPIC CLAUDE SUB ANTHROPIC.COMC",
+        "amount": -22.14
+      },
+      {
+        "index": 46,
+        "description": "TRF. P/O JOAO RODRIGO CAMELO BARROSO",
+        "amount": 100.0
+      },
+      {
+        "index": 47,
+        "description": "MEDIS-PAG SERVICOS 26177B1009334777",
+        "amount": 52.0
+      },
+      {
+        "index": 49,
+        "description": "TRF MB WAY P/ MARIA DOLORES DAROCA GUERRERO",
+        "amount": -37.9
+      },
+      {
+        "index": 50,
+        "description": "COMPRA 3883 CASUALFOOD 4350 Stuttga CONTACTLESS",
+        "amount": -11.7
+      },
+      {
+        "index": 51,
+        "description": "COMPRA 3883 MGP Vinted Vilnius LT",
+        "amount": -74.1
+      }
+    ]
+  },
+  "unknown_indices": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    39,
+    40,
+    41,
+    42,
+    43,
+    46,
+    47,
+    49,
+    50,
+    51
+  ]
+}

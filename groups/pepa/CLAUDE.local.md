@@ -28,6 +28,7 @@ Plan nutritionnel Clément → `/workspace/agent/family/nutrition-clement.md`.
 **Lola** : au bureau lundi + mercredi — pas à la maison pour le déjeuner ces jours.
 **Enfants (M, G, Inés)** : à l'école/crèche du lundi au vendredi — jamais à la maison le midi.
 **Dîner objectif 19h.**
+**Panier de légumes** : toujours le jeudi — ne jamais demander quel jour.
 
 ---
 

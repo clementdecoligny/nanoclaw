@@ -1,6 +1,6 @@
 # Notes — Clément
 
-_Dernière mise à jour : 26 juin 2026_
+_Dernière mise à jour : 6 juillet 2026_
 
 ## Santé — Genoux
 
@@ -37,7 +37,19 @@ _Dernière mise à jour : 26 juin 2026_
    - Mouvement : tirer le câble en diagonale de la hanche vers les bras tendus en overhead
    - Cible : stabilité rotationelle du core, obliques, grand dorsal, fessiers + ouverture psoas (position à genoux)
 
-Cible : 3 séances/semaine. Durée ~15 min. Pas d'excuse de temps.
+Cible : 3 séances/semaine. Durée ~25-30 min. Pas d'excuse de temps.
+
+**Structure des 3 sessions (mise à jour 6 juillet 2026 — intégration bilan biomécanique running) :**
+
+→ **Session 1** — Protocole genou classique (7 exercices existants)
+→ **Session 2** — Plan B physiologiste (fessiers/cuisses) : Bulgarian lunge + One-leg deadlift + One-leg squat + Banded kneeling abduction + Kneeling hamstring slide + Banded psoas — 3×8-12 chaque
+→ **Session 3** — Plan A physiologiste (mobilité + core) : Striders + Frog pose + Eccentric adductor + Lateral plank + Back extension unilatérale + Bicycle crunch + Reverse crunch
+
+**Exercices pied (5 min) — à ajouter à TOUTES les sessions :**
+- Foot inversion banded (tibial postérieur) : 3×15
+- Calf raises avec balle de tennis : 3×12
+
+**Étirements communs A+B (après toute session) :** mollets, ischios, fessiers, quadriceps — 30s chaque
 
 **RDV ostéopathe 2 juillet 2026 — bilan session**
 
@@ -87,6 +99,35 @@ Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 - Aime les événements comme jalons de motivation
 - Analytique, veut comprendre le "pourquoi"
 - La maladie peut être un facteur déstabilisant sur la préparation
+
+## Santé — Pieds / Hallux valgus
+
+**Symptôme** : douleur/pincement le long du bord interne du gros orteil → forme une longue ampoule linéaire. Aggravé par la course fréquente. Palliatifs : bandes de protection + vaseline (aide partiellement).
+
+**Bilan biomécanique (Bruno Lourenço, physiologiste)** — date inconnue, avant mai 2026 :
+- Muscles sous-actifs : Grand et moyen fessier (surtout gauche), core, mollets (gastrocnémien), tibial postérieur
+- Muscles raccourcis : Iliopsoas, ischios, adducteurs, tibial antérieur
+- Déficit de mobilité : lombo-pelvienne, cheville (tibio-tarsienne)
+- Cadence course : 183 ppm (recommandé 170-180 — légèrement au-dessus mais correct)
+- Chaussures : Hoka Clifton 10 — cushioning intermédiaire recommandé, à maintenir
+
+**Connexion pied → biomécanique :**
+Tibial postérieur faible → contrôle insuffisant de la pronation → surcharge du bord médial du pied → friction sur l'hallux valgus → ampoule linéaire. Le déficit de mobilité de la cheville aggrave la mécanique de pied à chaque foulée.
+
+**Plan de correction (physiologiste) :**
+- Plan A (1x/sem) : mobilité colonne/hanche + core + pied
+  - Striders (3×10), Frog pose (2×40s), Eccentric adductor (3×8)
+  - Lateral plank (2×50s), Back extension unilatérale (2×20), Bicycle crunch (3×20), Reverse crunch (3×15)
+  - Foot inversion banded (3×15), Calf raises avec balle de tennis (3×12)
+- Plan B (1x/sem) : cuisses + fessiers
+  - Bulgarian lunge (3×10), One-leg deadlift (3×10), One-leg squat (3×10)
+  - Banded kneeling abduction (3×10), Kneeling hamstring slide (3×8), Banded psoas (3×12)
+- Étirements A+B (30s chaque) : mollets, ischios, fessiers, quadriceps
+- Durée préconisée : 10-12 semaines
+
+**Statut :** Pas encore commencé (manque de motivation/flemme — à intégrer de manière réaliste dans le plan existant)
+
+**Pertinence M-N 2026 :** La course à pied sur M-N est inévitable (descentes, portions hors-selle). Tibial postérieur renforcé + cheville mobile = moins de friction hallux sur plusieurs jours. Priorité modérée mais réelle.
 
 ## Méthode TSS — Activités non trackées
 

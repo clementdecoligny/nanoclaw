@@ -17,6 +17,7 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 | Liquide lave-vaisselle | ×1 | - | Non inclus — choix pas fait |
 | Anti-humedad (pack ×3) | ×3 | - | Non inclus — choix pas fait |
 | Laurel | ×1 | - | Non inclus dans commande 21/06 |
+| Star anis (anis étoilé) | ×1 | - | Ajouté 06/07 |
 | Tomate seco (bote) | ×1 | - | Non inclus dans commande 21/06 |
 | Pesto rojo | ×2 | - | Non inclus — pesto verde ×2 seulement commandé |
 | Pimentos assados em azeite (bocal) | ×1 | - | Non inclus dans commande 21/06 |
@@ -55,6 +56,7 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 
 | Item | Qty | Statut | Notes |
 |---|---|---|---|
+| Œufs | 1 boîte | 🔴 urgent | Épuisés 06/07 |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ✅ en stock | 2 tupperwares congélo (confirmé Lola 27/06) |
 

@@ -1,7 +1,7 @@
 {
   "TRF MB WAY P/ BRANCA MANUEL GASPAR": {
-    "category": "EMPREGADA",
-    "sub_category": "EMPREGADA"
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
   },
   "TRF DE MARIA DOLORES DAROCA GUERRERO": {
     "category": "INCOME",
@@ -430,5 +430,413 @@
   "TRF P/ MARIA DOLORES DAROCA GUERRERO": {
     "category": "KIDS",
     "sub_category": "ROPA"
+  },
+  "DD EPAL SA        84000361013    PT37100921": {
+    "category": "HOUSE",
+    "sub_category": "EPAL AGUA"
+  },
+  "COMPRA 8778 BOLT.EUO2605302319 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 BOLT.EUO2605302255 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 VENTURA E LICITRA LISBO CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 BAR TR3S LISBOA PT      CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 QUIOSQUE AMOREIRAS LISB CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "QUIOSQUE"
+  },
+  "COMPRA 8551 MARIE BLACHERE M. DE 51 CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 8551 COOLTRA PRIOR VELHO PT": {
+    "category": "MOBILITY",
+    "sub_category": "COOLTRA"
+  },
+  "COMPRA 8551 EASYJET AIR KCR2SVJ LISBON": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 8551 CAFE YAKARI ALCANTARA P CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 OUIOUI GALETTE LISBOA P CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 GLEBA LISBOA PT         CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 8551 EST SERVICO PETROFAST - POSTOS DCRU": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8778 MADRAGOA MINI MERCADO E CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 TGTG k03xx9j9q37w0 Copenhagen DK": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 UBER EATS PENDING AMSTERDAM NL": {
+    "category": "EAT OUT",
+    "sub_category": "UBER EATS"
+  },
+  "COMPRA 8551 INSPEAUTO CENTRO INSCARNAXIDE": {
+    "category": "VOITURE",
+    "sub_category": "MECHANIC"
+  },
+  "CRED. 8778 MGP Vinted Vilnius LT": {
+    "category": "KIDS",
+    "sub_category": "ROPA VINTED"
+  },
+  "COMPRA 8551 NYX WashProCentrodeLa C CONTACTLESS": {
+    "category": "VOITURE",
+    "sub_category": "MECHANIC"
+  },
+  "CRED. 8551 NORAUTO 2790-005 CARNPT": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8551 NORAUTO 2790-005 CARNPT CONTACTLESS": {
+    "category": "LEISURE",
+    "sub_category": "BIKE"
+  },
+  "COMPRA 8551 NORAUTO 2675-626 ODIVPT CONTACTLESS": {
+    "category": "LEISURE",
+    "sub_category": "BIKE"
+  },
+  "COMPRA 8778 RECTORAL DE COBRES COBR CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 8778 FRUTAS KATUXA MOA A 1 M CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 BEGUI 6 MOA A ES        CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 FROIZ MOA A 1 MOA A ES  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 SARAIBA PONTEVEDRA ES   CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 OVELLA NEGRA PONTEVEDRA CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 SP UXIA COFFEE MOANA ES CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 CAFE - BAR BONIN 6 CANG CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 EROSKI CENTER 3108 CANG CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 CASA PORRON CANGAS DE M CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 TABERNA O JEFE CANGAS E CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 VOLTAREI ALDAN CANGAS E CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 HOTEL AIRI OS DO MAR S. CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 8778 AWEN GASTROBAR PONTEVED CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 DESPACHO 1 SAN CIBRAN ( CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 SUPERMERCADO MANDI COVI CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 ANPA JOSE GRA A CANGAS  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 CHIRINGO ISLE O CANGAS  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 SUPERMERCADO MARIO CANG CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 O CON ALDAN CANGAS ES   CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 PINELA CANGAS ES        CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 EST SERVICO PLENERGY US 154 MOS I M": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 8551 BAR MARINA CANGAS ES    CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8551 EROSKI CENTER 3108 CANG CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8551 BAR PERALTA CANGAS ES   CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "CRED. 8551 MGP Vinted Vilnius LT": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8551 DROGARIA SAO MARCAL LIS CONTACTLESS": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 WWW.AMAZON NR6S03VJ4 LUXEMBOURG": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8778 CLUBE NACIONAL NATAC LI CONTACTLESS": {
+    "category": "KIDS",
+    "sub_category": "PISCINA"
+  },
+  "COMPRA 8551 BOLT.EUO2606182019 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 GUARDA-MOR RESTAURANT L CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 Too Good To Go Copenhagen DK": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 VEDETA POSITIVA LISBOA  CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "QUIOSQUE"
+  },
+  "COMPRA 8778 Spotify P43AEA8436 Stockholm SE": {
+    "category": "HOUSE",
+    "sub_category": "SPOTIFY"
+  },
+  "COMPRA 8778 FARMACIA C. COLOMBIA 10 CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 FARMACIA C. COLOMBIA 10 CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 HOTEL LAS BOVEDAS BADAJ CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 8778 SNOB LISBOA             CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 GLEBA LISBOA PT         CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "BACKERY"
+  },
+  "PAGSERV HOSPITAL CUF TEJO SA   10598/659171920": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "COMPRA 8551 WELLS SAUDE E OPTICALISBOA": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 MU GELATO ITALIANO LISBOA": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 Glovo LISBOA PT": {
+    "category": "EAT OUT",
+    "sub_category": "UBER EATS"
+  },
+  "COMPRA 8551 CHEN JINGQIANG LISBOA": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8778 VENTURA LICITRA MISERIC CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 MUSTARDA HAMBURGARIA LI CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 Too Good To Go Copenhagen DK": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 CHASHU RAMEN LISBOA PT  CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 CLINICA MEDISER ALMADA  CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "TRF MB WAY P/ Angel Gonzalez": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF MB WAY P/ GIACOMO CARLOTTO": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF MB WAY P/ CLETO LUCAS LESSA BALBINO": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF DE Pizzas parque (catarina e benedita)": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 RENOVAR A MOURARIA SANT CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 NEW SHEET PACO DE ARCOS CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 8551 www.fabricacoffeeroast Lisboa PT": {
+    "category": "LEISURE",
+    "sub_category": "BIKE"
+  },
+  "COMPRA 8778 FARMACIA M PAZ SOAJE PO CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "TRF P/ Escola no Chiado": {
+    "category": "EDUCATION",
+    "sub_category": "ESCOLA"
+  },
+  "COMPRA 8778 A CASA DE ALDAN CANGAS  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 8778 Zara.com Arteixo ES": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "TRF MB WAY P/ CARLOS MIGUEL DO ESPÍRITO SANTO P": {
+    "category": "MOBILITY",
+    "sub_category": "COOLTRA"
+  },
+  "TRF MB WAY P/ PAULO JORGE BARATEIRO DIAS PIRES": {
+    "category": "LEISURE",
+    "sub_category": "BIKE"
+  },
+  "TRF MB WAY P/ DR  RODOLFO FREDERICO BEJA LIMA K": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "COMPRA 8551 ONESHOTPAY 2172175 SAINT JEAN FR": {
+    "category": "EAT OUT",
+    "sub_category": "UBER EATS"
+  },
+  "COMPRA 8551 EST SERVICO PETROLEOS EXTREMADURA B": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "TRF DE Snob - con pedro alonso": {
+    "category": "MOBILITY",
+    "sub_category": "COOLTRA"
+  },
+  "COMPRA 8778 UBER EATS PENDING AMSTERDAM NL": {
+    "category": "EAT OUT",
+    "sub_category": "UBER EATS"
+  },
+  "COMPRA 8778 UBR PENDING.UBER.COM AMSTERDAM NL": {
+    "category": "MOBILITY",
+    "sub_category": "UBER"
+  },
+  "COMPRA 8778 ZARA LISBOA PT          CONTACTLESS": {
+    "category": "MOBILITY",
+    "sub_category": "COOLTRA"
+  },
+  "COMPRA 8778 MARINA DE PRAETERE LISB CONTACTLESS": {
+    "category": "KIDS",
+    "sub_category": "ROPA VINTED"
+  },
+  "TRF MB WAY P/ CARLOS DINIS AFONSO SILVA FIGUEIR": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "TRF MB WAY P/ MATILDE PEREIRA R CASTRO PEREIRA": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "TRF MB WAY P/ HOMERO DAVID UNDA VASQUEZ": {
+    "category": "VOITURE",
+    "sub_category": "MISC"
+  },
+  "TRF MB WAY P/ MARIA LEONOR STILWELL D AVILLEZ A": {
+    "category": "BABYSITTING",
+    "sub_category": "BABYSITTING"
+  },
+  "COMPRA 8778 ABNER GUIMARAES CRUZ DE PAU": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "COMPRA 8778 BOXCAR RM AUTO LISBOA": {
+    "category": "MOBILITY",
+    "sub_category": "COOLTRA"
+  },
+  "TRF DE July": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF DE Lola julio": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF MB WAY P/ CENTRO SOC PAR N SENHORA ENCARNAC": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 DOBECO GULBENKIAN LISBO CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
   }
 }

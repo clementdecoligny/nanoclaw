@@ -122,5 +122,145 @@
   "COMPRA 3883 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO": {
     "category": "MISC",
     "sub_category": "MISC"
+  },
+  "COMPRA 3883 PATTY SMASH BURGERS LIS CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 REST JARDIM CEREJAS LIS CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "TRF DE Erreur comun MBWay Gennaro": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "TRF DE Error comun escola no chiado": {
+    "category": "EDUCATION",
+    "sub_category": "ESCOLA"
+  },
+  "COMPRA 3883 PAD PORT CAMOES LISBOA  CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "PADARIA"
+  },
+  "COMPRA 3883 SAO BENTO MARKET LISBOA CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 3883 AUCHAN CASCAIS NASCE CA CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 VEDETA POSITIVA LISBOA  CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "QUIOSQUE"
+  },
+  "COMPRA 3883 Starbucks 03892 Estacao CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "TRF DE Error Vinted": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 3883 GOBIK YECLA ES": {
+    "category": "BIKE",
+    "sub_category": "GEAR"
+  },
+  "Mangopay": {
+    "category": "INCOME",
+    "sub_category": "VINTED"
+  },
+  "COMPRA 3883 SOHO COFFEE LISBOA PT   CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 DB Automat STUTTGART FLUGStuttgart": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 3883 Parkhotel Stuttgart Lei CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 3883 BAECKEREI TREIBER FILDE CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "LEV ATM 3883 DEU Landesbank Baden-Wuertt MARIEN": {
+    "category": "HOLIDAY",
+    "sub_category": "MISC"
+  },
+  "COMPRA 3883 STUTTGARTER STRASSENBA  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 3883 SSB FAHRSCHEINVERKAUF S CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 3883 L.A. Signorina Stuttgar CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 3883 EDEKA BAUER LEINFELDEN- CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 3883 EST SERVICO SHELL 0564 STUTTGART DE": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 3883 SumUp Restaurant Lunica CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 PASTELARIA SAMBINHA 2800-299 ALMADA": {
+    "category": "EAT OUT",
+    "sub_category": "PADARIA"
+  },
+  "COMPRA 3883 T-MOBILE HOTSPOT GMBH BONN DE": {
+    "category": "HOLIDAY",
+    "sub_category": "MISC"
+  },
+  "COMPRA 3883 SumUp Laanas Cafe Leinf CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 3883 REST SOHO LISBOA PT     CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 3883 ANTHROPIC CLAUDE SUB ANTHROPIC.COMC": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "MEDIS-PAG SERVICOS 26177B1009334777": {
+    "category": "HEALTH",
+    "sub_category": "MEDIS REIMBURSMENT"
+  },
+  "COMPRA 3883 CASUALFOOD 4350 Stuttga CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 3883 MGP Vinted Vilnius LT": {
+    "category": "LEISURE",
+    "sub_category": "HIKING SHOES"
+  },
+  "TRF MB WAY P/ SEAN CRONIN": {
+    "category": "GIFT",
+    "sub_category": ""
+  },
+  "COMPRA 3883 HSN STORE.COM ALBOLOTE ES": {
+    "category": "LEISURE",
+    "sub_category": ""
+  },
+  "TRF. P/O JOAO RODRIGO CAMELO BARROSO": {
+    "category": "BIKE",
+    "sub_category": "SELLING"
+  },
+  "TRF MB WAY P/ MARIA DOLORES DAROCA GUERRERO": {
+    "category": "LEISURE",
+    "sub_category": "SWIMMING"
   }
 }

@@ -79,6 +79,10 @@ Confidence : `high` = marchand clairement identifiable, `medium` = interprétabl
   --output /tmp/YYYY-MM-commun-categorise.xlsx
 ```
 
+### Règle : Escola no Chiado (mensuel obligatoire)
+
+L'escola no Chiado est une dépense mensuelle fixe (~437€) du compte commun. Elle doit être présente chaque mois sous EDUCATION / ESCOLA. Si absente du relevé commun : vérifier si la Data Valor est tombée hors du mois (possible décalage), signaler à Clément et corriger manuellement. Ne jamais laisser passer un mois sans cette ligne.
+
 ### Step 6 — Envoyer + attendre confirmation
 
 Envoyer les deux fichiers. Résumé chat : ✅ exactes / 🟡 incertaines / 🟠 non classifiées. Lister explicitement les lignes medium-confidence. Attendre confirmation.
@@ -95,6 +99,17 @@ cp /tmp/YYYY-MM-commun-categorise.xlsx /workspace/extra/historical/YYYY-MM-commu
 ```
 
 JSON : `/workspace/agent/finance/historical/YYYY-MM-personal.json` et `YYYY-MM-joint.json`.
+
+Puis mettre à jour la base SQLite :
+
+```bash
+/opt/wpenv/bin/python3 /workspace/agent/finance/db_insert_month.py \
+  /workspace/agent/finance/historical/YYYY-MM-personal.json personal
+/opt/wpenv/bin/python3 /workspace/agent/finance/db_insert_month.py \
+  /workspace/agent/finance/historical/YYYY-MM-joint.json joint
+/opt/wpenv/bin/python3 /workspace/agent/finance/db_insert_month.py \
+  --income /workspace/agent/finance/historical/YYYY-MM-income.json
+```
 
 ### Taxonomie
 
@@ -161,6 +176,7 @@ Famille en location à Lisbonne, objectif achat "maison de rêve" dans ~5 ans (L
 
 ## Mémoire
 
+- `/workspace/agent/finance/finance.db` — SQLite, toutes les transactions (jan 2025+), joint + personal. Query : `db_query.py`. Insert mensuel : `db_insert_month.py`.
 - `/workspace/agent/finance/historical/` — JSON mensuels, learned_categories, fichiers salaire
 - `/workspace/extra/historical/` — xlsx historiques (source pour le categorizer)
 - `/workspace/agent/finance/goals.md` — objectifs financiers (mettre à jour quand on apprend quelque chose de nouveau)

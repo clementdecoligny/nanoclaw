@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dépenses du foyer</title>
+<style>
+:root{
+  --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e;
+  --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --good:#006300; --bad:#d03b3b; --warn:#eda100;
+  --s1:#2a78d6;--s2:#1baf7a;--s3:#eda100;--s4:#008300;--s5:#4a3aa7;
+  --s6:#e34948;--s7:#e87ba4;--s8:#eb6834;--s9:#898781;
+}
+@media (prefers-color-scheme:dark){:root{
+  --plane:#0d0d0d;--surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;--muted:#898781;
+  --grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);
+  --good:#0ca30c;--bad:#e66767;--warn:#c98500;
+  --s1:#3987e5;--s2:#199e70;--s3:#c98500;--s4:#008300;--s5:#9085e9;
+  --s6:#e66767;--s7:#d55181;--s8:#d95926;--s9:#898781;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--plane);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:22px;margin:0 0 2px;font-weight:650}
+.sub{color:var(--ink2);font-size:13px;margin:0 0 24px}
+.sub b{color:var(--ink);font-weight:600}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:20px;margin-bottom:18px}
+.card h2{font-size:13px;text-transform:uppercase;letter-spacing:.04em;
+  color:var(--ink2);margin:0 0 4px;font-weight:600}
+.card .hint{font-size:12px;color:var(--muted);margin:0 0 16px}
+/* hero */
+.hero{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:1px;
+  background:var(--border);border-radius:12px;overflow:hidden}
+.hero>div{background:var(--surface);padding:18px 18px 16px}
+.hero .k{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px}
+.hero .v{font-size:30px;font-weight:660;letter-spacing:-.01em}
+.hero .v.small{font-size:26px}
+.hero .foot{font-size:11.5px;color:var(--muted);margin-top:5px}
+.good{color:var(--good)} .bad{color:var(--bad)}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;
+  background:color-mix(in srgb,var(--good) 14%,transparent);color:var(--good)}
+.pill.bad{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+/* charts */
+svg{display:block;width:100%;height:auto;overflow:visible}
+.axis text{fill:var(--muted);font-size:11px}
+.axis line{stroke:var(--grid);stroke-width:1}
+.baseline{stroke:var(--axis);stroke-width:1}
+.legend{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:14px;font-size:12px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.03em;
+  color:var(--muted);font-weight:600;padding:0 10px 8px;border-bottom:1px solid var(--border)}
+td{padding:9px 10px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:0}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cat{font-weight:600}
+.muted{color:var(--muted)}
+td.up{color:var(--bad)} td.down{color:var(--good)}
+.rel{font-size:11px;color:var(--muted);margin-left:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.tooltip{position:fixed;pointer-events:none;background:var(--surface);
+  border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:12px;
+  box-shadow:0 4px 16px rgba(0,0,0,.12);opacity:0;transition:opacity .08s;z-index:10;
+  color:var(--ink);white-space:nowrap}
+.tooltip b{font-weight:600}
+.note{font-size:12px;color:var(--ink2);background:color-mix(in srgb,var(--warn) 10%,transparent);
+  border-left:3px solid var(--warn);padding:8px 12px;border-radius:0 8px 8px 0;margin:0 0 4px}
+.foot-note{font-size:11.5px;color:var(--muted);margin-top:26px;text-align:center}
+@media(max-width:760px){.hero{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}
+  .hero .v{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Dépenses du foyer</h1>
+  <p class="sub">Où va l'argent &amp; combien on épargne · <b>18 mois</b>, 3169 transactions · dernier mois : <b>Jun 26</b></p>
+
+  <!-- HERO -->
+  <div class="card">
+    <div class="hero">
+      <div>
+        <div class="k">Jun 26 · épargne nette</div>
+        <div class="v bad">-€670</div>
+        <div class="foot">taux d'épargne <span class="pill bad">-9%</span> · moy. 6 mois €6 605</div>
+      </div>
+      <div>
+        <div class="k">Revenus</div>
+        <div class="v small">€7 131</div>
+        <div class="foot">moy. 6 mois €14 369</div>
+      </div>
+      <div>
+        <div class="k">Dépenses</div>
+        <div class="v small">€7 801</div>
+        <div class="foot">moy. 6 mois €7 764</div>
+      </div>
+      <div>
+        <div class="k">Compte commun · cible</div>
+        <div class="v small">€4 500</div>
+        <div class="foot">Clément €2 934 · Lola €1 566</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAVINGS OVER TIME -->
+  <div class="card">
+    <h2>Revenus vs dépenses — épargne-t-on ?</h2>
+    <p class="hint">Barres = épargne nette par mois (revenus − dépenses). Lignes = revenus et dépenses. Revenus depuis la table income ; dépenses = tous les mouvements (les remboursements réduisent le total).</p>
+    <div id="netChart"></div>
+    <div class="legend">
+      <span><i style="background:var(--s1)"></i>Revenus</span>
+      <span><i style="background:var(--s8)"></i>Dépenses</span>
+      <span><i style="background:var(--s2)"></i>Épargne nette (barre)</span>
+    </div>
+  </div>
+
+  <!-- WHERE MONEY GOES -->
+  <div class="card">
+    <h2>Où va l'argent</h2>
+    <p class="hint">Dépenses mensuelles par catégorie, empilées. Top 8 catégories ; le reste regroupé dans « Autre ».</p>
+    <div id="stackChart"></div>
+    <div class="legend" id="stackLegend"></div>
+  </div>
+
+  <div class="grid2">
+    <!-- ANOMALIES -->
+    <div class="card">
+      <h2>Inhabituel ce mois-ci</h2>
+      <p class="hint">Catégories de Jun 26 qui ont beaucoup bougé vs leur moyenne 3 mois.</p>
+      <table>
+        <thead><tr><th>Catégorie</th><th class="num">Ce mois</th><th class="num">Référence</th><th class="num">Écart</th></tr></thead>
+        <tbody><tr><td class="cat">HOLIDAY</td><td class="num">€2 430</td><td class="num muted">moy. €569</td><td class="num up">▲ €1 861 <span class="rel">+327%</span></td></tr><tr><td class="cat">LEISURE</td><td class="num">€820</td><td class="num muted">moy. €266</td><td class="num up">▲ €554 <span class="rel">+209%</span></td></tr><tr><td class="cat">LIABILITY</td><td class="num">€0</td><td class="num muted">moy. €417</td><td class="num down">▼ €417 <span class="rel">-100%</span></td></tr><tr><td class="cat">HEALTH</td><td class="num">€144</td><td class="num muted">moy. €486</td><td class="num down">▼ €342 <span class="rel">-70%</span></td></tr><tr><td class="cat">GROCERIES</td><td class="num">€100</td><td class="num muted">moy. €360</td><td class="num down">▼ €261 <span class="rel">-72%</span></td></tr><tr><td class="cat">KIDS</td><td class="num">€462</td><td class="num muted">moy. €226</td><td class="num up">▲ €236 <span class="rel">+104%</span></td></tr><tr><td class="cat">EAT OUT</td><td class="num">€468</td><td class="num muted">moy. €295</td><td class="num up">▲ €173 <span class="rel">+59%</span></td></tr><tr><td class="cat">BABYSITTING</td><td class="num">€250</td><td class="num muted">moy. €84</td><td class="num up">▲ €166 <span class="rel">+198%</span></td></tr><tr><td class="cat">HOUSE</td><td class="num">€157</td><td class="num muted">moy. €312</td><td class="num down">▼ €155 <span class="rel">-50%</span></td></tr></tbody>
+      </table>
+    </div>
+    <!-- BIG TRANSACTIONS -->
+    <div class="card">
+      <h2>Plus grosses transactions</h2>
+      <p class="hint">Plus grosses sorties de Jun 26 (&gt; €300).</p>
+      <table>
+        <thead><tr><th>Date</th><th>Description</th><th>Catégorie</th><th class="num">Montant</th></tr></thead>
+        <tbody><tr><td class="muted">06-01</td><td>TRF P/ Ana Filomena Macedo</td><td class="cat">RENT</td><td class="num">-€1 229</td></tr><tr><td class="muted">06-01</td><td>COMPRA 8551 EASYJET AIR KCR2SVJ LISBON</td><td class="cat">HOLIDAY</td><td class="num">-€1 119</td></tr><tr><td class="muted">06-01</td><td>TRF MB WAY P/ BRANCA MANUEL GASPAR</td><td class="cat">EMPREGADA</td><td class="num">-€630</td></tr><tr><td class="muted">06-01</td><td>TRF P/ Escola no Chiado</td><td class="cat">EDUCATION</td><td class="num">-€437</td></tr><tr><td class="muted">06-01</td><td>COMPRA 8778 A CASA DE ALDAN CANGAS  CONT</td><td class="cat">HOLIDAY</td><td class="num">-€301</td></tr><tr><td class="muted">06-01</td><td>COMPRA 8551 NORAUTO 2790-005 CARNPT CONT</td><td class="cat">LEISURE</td><td class="num">-€300</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAIRNESS -->
+  <div class="card">
+    <h2>Contribution au compte commun — Jun 26</h2>
+    <p class="hint">Cible €4 500/mois, répartie au prorata des revenus personnels (formule d'Edmond).</p>
+    <table>
+      <thead><tr><th>Personne</th><th class="num">Revenus</th><th class="num">Part des revenus</th><th class="num">Part du commun</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">Clément</td><td class="num">€4 649</td><td class="num muted">65%</td><td class="num">€2 934</td></tr>
+        <tr><td class="cat">Lola</td><td class="num">€2 482</td><td class="num muted">35%</td><td class="num">€1 566</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="foot-note">Généré le 2026-07-06 depuis finance.db · relancer build_dashboard.py après ajout d'un mois.</p>
+</div>
+
+<div class="tooltip" id="tt"></div>
+<script>
+const D = {"months": ["2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"], "labels": ["Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26"], "income": [6713, 6932, 6517, 11261, 18502, 4811, 8391, 4916, 5287, 6929, 8572, 5329, 6456, 6853, 6856, 37872, 21044, 7131], "spend": [4727, 5271, 9378, 45483, 8214, 9976, 6622, 5222, 11829, 8092, 21001, 14724, 12504, 7692, 6065, 5901, 6618, 7801], "net": [1986, 1661, -2861, -34221, 10288, -5165, 1769, -306, -6542, -1163, -12429, -9395, -6048, -839, 791, 31971, 14426, -670], "rate": [30, 24, -44, -304, 56, -107, 21, -6, -124, -17, -145, -176, -94, -12, 12, 84, 69, -9], "stack": [{"m": "2025-01", "COMUN": 0, "INVEST": 0, "RENT": 1201, "HOLIDAY": 1711, "EMPREGADA": 300, "EDUCATION": 438, "EAT OUT": 156, "GROCERIES": 216, "OTHER": 704}, {"m": "2025-02", "COMUN": 0, "INVEST": 0, "RENT": 1201, "HOLIDAY": 585, "EMPREGADA": 300, "EDUCATION": 438, "EAT OUT": 476, "GROCERIES": 170, "OTHER": 2101}, {"m": "2025-03", "COMUN": 4117, "INVEST": 0, "RENT": 1201, "HOLIDAY": 1265, "EMPREGADA": 300, "EDUCATION": 438, "EAT OUT": 521, "GROCERIES": 214, "OTHER": 1362}, {"m": "2025-04", "COMUN": 1200, "INVEST": 38500, "RENT": 1201, "HOLIDAY": 322, "EMPREGADA": 300, "EDUCATION": 682, "EAT OUT": 779, "GROCERIES": 368, "OTHER": 2130}, {"m": "2025-05", "COMUN": 2092, "INVEST": 0, "RENT": 1201, "HOLIDAY": 1149, "EMPREGADA": 300, "EDUCATION": 785, "EAT OUT": 516, "GROCERIES": 133, "OTHER": 2120}, {"m": "2025-06", "COMUN": 2080, "INVEST": 0, "RENT": 1201, "HOLIDAY": 3415, "EMPREGADA": 300, "EDUCATION": 438, "EAT OUT": 499, "GROCERIES": 280, "OTHER": 1779}, {"m": "2025-07", "COMUN": 156, "INVEST": 0, "RENT": 1201, "HOLIDAY": 152, "EMPREGADA": 300, "EDUCATION": 55, "EAT OUT": 569, "GROCERIES": 698, "OTHER": 3491}, {"m": "2025-08", "COMUN": 1357, "INVEST": 0, "RENT": 1201, "HOLIDAY": 308, "EMPREGADA": 300, "EDUCATION": 0, "EAT OUT": 254, "GROCERIES": 290, "OTHER": 1901}, {"m": "2025-09", "COMUN": 5070, "INVEST": 0, "RENT": 1201, "HOLIDAY": 592, "EMPREGADA": 300, "EDUCATION": 437, "EAT OUT": 482, "GROCERIES": 622, "OTHER": 3141}, {"m": "2025-10", "COMUN": 970, "INVEST": 0, "RENT": 1201, "HOLIDAY": 1643, "EMPREGADA": 300, "EDUCATION": 456, "EAT OUT": 216, "GROCERIES": 744, "OTHER": 2563}, {"m": "2025-11", "COMUN": 14872, "INVEST": 0, "RENT": 1201, "HOLIDAY": 41, "EMPREGADA": 300, "EDUCATION": 944, "EAT OUT": 643, "GROCERIES": 454, "OTHER": 2694}, {"m": "2025-12", "COMUN": 6639, "INVEST": 0, "RENT": 1201, "HOLIDAY": 2262, "EMPREGADA": 300, "EDUCATION": 929, "EAT OUT": 335, "GROCERIES": 236, "OTHER": 2822}, {"m": "2026-01", "COMUN": 6240, "INVEST": 0, "RENT": 1229, "HOLIDAY": 553, "EMPREGADA": 570, "EDUCATION": 437, "EAT OUT": 135, "GROCERIES": 689, "OTHER": 2651}, {"m": "2026-02", "COMUN": 1000, "INVEST": 0, "RENT": 1229, "HOLIDAY": 348, "EMPREGADA": 800, "EDUCATION": 437, "EAT OUT": 529, "GROCERIES": 870, "OTHER": 2524}, {"m": "2026-03", "COMUN": 0, "INVEST": 0, "RENT": 1229, "HOLIDAY": 390, "EMPREGADA": 650, "EDUCATION": 487, "EAT OUT": 499, "GROCERIES": 442, "OTHER": 2369}, {"m": "2026-04", "COMUN": 0, "INVEST": 0, "RENT": 1229, "HOLIDAY": 145, "EMPREGADA": 1406, "EDUCATION": 517, "EAT OUT": 192, "GROCERIES": 349, "OTHER": 2063}, {"m": "2026-05", "COMUN": 0, "INVEST": 0, "RENT": 1229, "HOLIDAY": 1170, "EMPREGADA": 714, "EDUCATION": 16, "EAT OUT": 195, "GROCERIES": 290, "OTHER": 3004}, {"m": "2026-06", "COMUN": 0, "INVEST": 0, "RENT": 1229, "HOLIDAY": 2430, "EMPREGADA": 630, "EDUCATION": 421, "EAT OUT": 468, "GROCERIES": 100, "OTHER": 2528}], "topCats": ["COMUN", "INVEST", "RENT", "HOLIDAY", "EMPREGADA", "EDUCATION", "EAT OUT", "GROCERIES", "OTHER"], "catTotals": {"EAT OUT": 7463, "EDUCATION": 8357, "EMPREGADA": 8371, "GROCERIES": 7166, "HEALTH": 6106, "HOLIDAY": 18483, "HOUSE": 5830, "KIDS": 4159, "LEISURE": 4318, "MISC": 1967, "MOBILITY": 2340, "RENT": 21784, "UNCLASSIFIED": 768, "VOITURE": 5298, "BABYSITTING": 3059, "CASH": 1450, "CLOTHES": 598, "GIFT": 1660, "LIABILITY": 2917, "COMUN": 45793, "INVEST": 38500, "BIKE": 1367, "ERROR COMUN": 110}, "catOrder": ["COMUN", "INVEST", "RENT", "HOLIDAY", "EMPREGADA", "EDUCATION", "EAT OUT", "GROCERIES", "HEALTH", "HOUSE", "VOITURE", "LEISURE", "KIDS", "BABYSITTING", "LIABILITY", "MOBILITY", "MISC", "GIFT", "CASH", "BIKE", "UNCLASSIFIED", "CLOTHES", "ERROR COMUN"], "anomalies": [{"cat": "HOLIDAY", "cur": 2430, "base": 569, "delta": 1861, "rel": 327}, {"cat": "LEISURE", "cur": 820, "base": 266, "delta": 554, "rel": 209}, {"cat": "LIABILITY", "cur": 0, "base": 417, "delta": -417, "rel": -100}, {"cat": "HEALTH", "cur": 144, "base": 486, "delta": -342, "rel": -70}, {"cat": "GROCERIES", "cur": 100, "base": 360, "delta": -261, "rel": -72}, {"cat": "KIDS", "cur": 462, "base": 226, "delta": 236, "rel": 104}, {"cat": "EAT OUT", "cur": 468, "base": 295, "delta": 173, "rel": 59}, {"cat": "BABYSITTING", "cur": 250, "base": 84, "delta": 166, "rel": 198}, {"cat": "HOUSE", "cur": 157, "base": 312, "delta": -155, "rel": -50}], "big": [{"date": "2026-06-01", "desc": "TRF P/ Ana Filomena Macedo", "amt": -1229, "cat": "RENT"}, {"date": "2026-06-01", "desc": "COMPRA 8551 EASYJET AIR KCR2SVJ LISBON", "amt": -1119, "cat": "HOLIDAY"}, {"date": "2026-06-01", "desc": "TRF MB WAY P/ BRANCA MANUEL GASPAR", "amt": -630, "cat": "EMPREGADA"}, {"date": "2026-06-01", "desc": "TRF P/ Escola no Chiado", "amt": -437, "cat": "EDUCATION"}, {"date": "2026-06-01", "desc": "COMPRA 8778 A CASA DE ALDAN CANGAS  CONT", "amt": -301, "cat": "HOLIDAY"}, {"date": "2026-06-01", "desc": "COMPRA 8551 NORAUTO 2790-005 CARNPT CONT", "amt": -300, "cat": "LEISURE"}]};
+const SC = ['--s1','--s2','--s3','--s4','--s5','--s6','--s7','--s8','--s9']
+  .map(v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim());
+const css = k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+const tt = document.getElementById('tt');
+function showTT(html,x,y){tt.innerHTML=html;tt.style.opacity=1;
+  tt.style.left=Math.min(x+14,innerWidth-tt.offsetWidth-8)+'px';
+  tt.style.top=(y-10)+'px';}
+function hideTT(){tt.style.opacity=0;}
+const eur=n=>{n=Math.round(n);const s=Math.abs(n).toLocaleString('fr-FR').replace(/ /g,' ');
+  return (n<0?'-':'')+'€'+s;};
+const SVGNS='http://www.w3.org/2000/svg';
+function el(t,a){const e=document.createElementNS(SVGNS,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+
+// ---- Net / income / spend chart ----
+(function(){
+  const W=1000,H=340,mL=54,mR=16,mT=16,mB=34;
+  const iw=W-mL-mR, ih=H-mT-mB;
+  const n=D.months.length;
+  const maxV=Math.max(...D.income,...D.spend, ...D.net.map(Math.abs))*1.1||1;
+  const minNet=Math.min(0,...D.net);
+  const top=Math.max(maxV, ...D.income,...D.spend);
+  const bot=Math.min(0,minNet);
+  const sc=v=>mT+ih*(1-(v-bot)/(top-bot));
+  const bw=iw/n;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img'});
+  // gridlines
+  const g=el('g',{class:'axis'});
+  const ticks=4;
+  for(let i=0;i<=ticks;i++){const v=bot+(top-bot)*i/ticks;const y=sc(v);
+    g.appendChild(el('line',{x1:mL,y1:y,x2:W-mR,y2:y}));
+    const t=el('text',{x:mL-8,y:y+3,'text-anchor':'end'});t.textContent=eur(v);g.appendChild(t);}
+  svg.appendChild(g);
+  // zero baseline
+  svg.appendChild(el('line',{x1:mL,y1:sc(0),x2:W-mR,y2:sc(0),class:'baseline'}));
+  // net bars
+  D.net.forEach((v,i)=>{const x=mL+bw*i+bw*0.2;const w=bw*0.6;
+    const y0=sc(0),y1=sc(v);const y=Math.min(y0,y1),h=Math.max(2,Math.abs(y1-y0));
+    const r=el('rect',{x:x,y:y,width:w,height:h,rx:4,
+      fill:v>=0?SC[1]:css('--bad'),opacity:.85});
+    r.addEventListener('mousemove',e=>showTT(
+      `<b>${D.labels[i]}</b><br>Net ${eur(v)}<br>Rev. ${eur(D.income[i])} · Dép. ${eur(D.spend[i])}`,
+      e.clientX,e.clientY));
+    r.addEventListener('mouseleave',hideTT);
+    svg.appendChild(r);});
+  // line helper
+  function line(arr,color){let d='';arr.forEach((v,i)=>{const x=mL+bw*i+bw/2;const y=sc(v);
+    d+=(i?'L':'M')+x+' '+y+' ';});
+    svg.appendChild(el('path',{d:d,fill:'none',stroke:color,'stroke-width':2,
+      'stroke-linejoin':'round','stroke-linecap':'round'}));
+    arr.forEach((v,i)=>{const x=mL+bw*i+bw/2;svg.appendChild(el('circle',
+      {cx:x,cy:sc(v),r:3,fill:color,stroke:css('--surface'),'stroke-width':1.5}));});}
+  line(D.income,SC[0]);
+  line(D.spend,SC[7]);
+  // x labels (every other if crowded)
+  const step=n>12?2:1;
+  D.labels.forEach((lb,i)=>{if(i%step)return;const x=mL+bw*i+bw/2;
+    const t=el('text',{x:x,y:H-12,'text-anchor':'middle',class:''});
+    t.setAttribute('fill',css('--muted'));t.setAttribute('font-size','11');
+    t.textContent=lb;svg.appendChild(t);});
+  document.getElementById('netChart').appendChild(svg);
+})();
+
+// ---- Stacked area (spending by category) ----
+(function(){
+  const W=1000,H=360,mL=54,mR=16,mT=16,mB=34;
+  const iw=W-mL-mR, ih=H-mT-mB;
+  const cats=D.topCats, n=D.stack.length;
+  // totals per month for max
+  const totals=D.stack.map(r=>cats.reduce((s,c)=>s+(r[c]||0),0));
+  const top=Math.max(...totals)*1.08||1;
+  const sc=v=>mT+ih*(1-v/top);
+  const bw=iw/n;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img'});
+  const g=el('g',{class:'axis'});
+  for(let i=0;i<=4;i++){const v=top*i/4;const y=sc(v);
+    g.appendChild(el('line',{x1:mL,y1:y,x2:W-mR,y2:y}));
+    const t=el('text',{x:mL-8,y:y+3,'text-anchor':'end'});t.textContent=eur(v);g.appendChild(t);}
+  svg.appendChild(g);
+  // stacked bars per month (clearer than area for discrete months)
+  D.stack.forEach((r,i)=>{let acc=0;const x=mL+bw*i+bw*0.15;const w=bw*0.7;
+    cats.forEach((c,ci)=>{const val=r[c]||0;if(val<=0)return;
+      const y1=sc(acc+val),y0=sc(acc);acc+=val;
+      const seg=el('rect',{x:x,y:y1,width:w,height:Math.max(0,y0-y1),
+        fill:ci===cats.length-1&&c==='OTHER'?css('--s9'):SC[ci%9]});
+      // 2px surface gap between segments
+      seg.setAttribute('stroke',css('--surface'));seg.setAttribute('stroke-width','1');
+      seg.addEventListener('mousemove',e=>showTT(
+        `<b>${c}</b> · ${D.labels[i]}<br>${eur(val)}`,e.clientX,e.clientY));
+      seg.addEventListener('mouseleave',hideTT);
+      svg.appendChild(seg);});});
+  const step=n>12?2:1;
+  D.labels.forEach((lb,i)=>{if(i%step)return;const x=mL+bw*i+bw/2;
+    const t=el('text',{x:x,y:H-12,'text-anchor':'middle'});
+    t.setAttribute('fill',css('--muted'));t.setAttribute('font-size','11');
+    t.textContent=lb;svg.appendChild(t);});
+  document.getElementById('stackChart').appendChild(svg);
+  // legend
+  const lg=document.getElementById('stackLegend');
+  cats.forEach((c,ci)=>{const s=document.createElement('span');
+    const col=(c==='OTHER')?css('--s9'):SC[ci%9];
+    s.innerHTML=`<i style="background:${col}"></i>${c}`;lg.appendChild(s);});
+})();
+</script>
+</body>
+</html>

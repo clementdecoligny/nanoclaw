@@ -216,9 +216,9 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Clémentines/mandarines | 2–3 | Frigo |
 | Citrons jaunes | ~4 | Mix plan de travail + frigo |
 | Citrons verts | ~2 | Frigo |
-| Bananes | 0 | Non visibles |
+| Bananes | 7 | Acheté local 06/07 |
 | Pommes | 0 | Non visibles |
-| Avocats | 0 | Non visibles |
+| Avocats | 1 | Acheté local 06/07 |
 
 ---
 
@@ -230,7 +230,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
-| Œufs frais | 5 | Mis à jour 22/06 (Clément) — encore bons à la coque |
+| Œufs frais | 0 | ❌ Épuisés 06/07 |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
@@ -240,6 +240,8 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Preparado Carne Picada Bovino Continente | ~500g | ⚠️ Urgent — utiliser ou congeler ce soir |
 | Pão de Forma sem Côdea Bimbo | 2 | |
+| Peito de frango frais | ~500g | Acheté local 06/07 — utiliser sous 2 jours |
+| Babybel light | 12 | Acheté local 06/07 |
 | Cooked pasta | 0 | Jeté 25/05 |
 | Cooked rice | 0 | Jeté 25/05 |
 | Légumes rôtis (Branca) | 0 | Jeté 25/05 |
