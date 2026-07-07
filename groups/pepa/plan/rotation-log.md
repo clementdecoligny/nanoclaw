@@ -15,7 +15,7 @@
 | bolognaise | 2026-06-24 | Déjeuner mercredi (tup congélo) |
 | salade-pois-chiches-feta | 2026-06-24 | Dîner mercredi |
 | arroz-alubias-tomate | 2026-06-16 | Déjeuner |
-| panados-frango | 2026-06-16 | Dîner |
+| panados-frango | 2026-07-07 | Déjeuner mardi (Clément) |
 | salade-pates-caprese-poulet | 2026-06-16 | Dîner pique-nique parc |
 | riz-ratatouille-oeufs | 2026-06-17 | Dîner (ratatouille bocal + œufs) |
 | pasta-thon-tomate-olives | 2026-06-08 | Dîner |

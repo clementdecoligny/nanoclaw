@@ -191,6 +191,7 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Salade verte | 1 tête | Frigo — vieille (panier 25/06), à vérifier |
+| Betteraves | 2 | Frigo — reste après déj 07/07 |
 | Tomates | ~4 | Frigo — très mûres ⚠️ (panier 25/06, j7) |
 | Poivrons grillés | ~1 poivron | Frigo ⚠️ à utiliser ce soir — poivron rouge du panier rôti |
 | Carottes | 1–2 | Frigo — petites |
@@ -259,7 +260,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
-| Panados de frango (escalopes panées poulet) | 2 tupperwares | Confirmé 27/06 |
+| Panados de frango (escalopes panées poulet) | 1 tupperware | 1 utilisé déj 07/07 |
 | Dumplings | 1 unité | Confirmé 27/06 |
 | Bolognese (maison) | 1 tupperware | Confirmé 27/06 |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
