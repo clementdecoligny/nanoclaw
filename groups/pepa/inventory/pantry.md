@@ -98,7 +98,7 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 | Item | Qté | Notes |
 |---|---|---|
 | Ferbar Lentilhas | 1 × 380g | |
-| Lentilhas Cozidas Origens Bio | 1 | Livraison 16/04 |
+| Lentilhas Cozidas Origens Bio | 0 | ❌ Utilisée déj 08/07 |
 | Lentilhas Secas Continente | 1 + 1 × 500g | Livraison 16/04 + 06/05 |
 | Cistér Grão de Bico (pois chiches cuits, bocal) | 1 × 540g (400g égoutté) | |
 | Continente Grão-de-Bico (pois chiches secs, sachet) | 1 sachet | Taille TBC |
@@ -128,7 +128,7 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Atum ao Natural Tritão | 1 | 2 utilisées dîner 08/06 (pasta au thon) |
+| Atum ao Natural Tritão | 0 | ❌ Dernière boîte utilisée déj 08/07 |
 
 ---
 
@@ -191,7 +191,7 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Salade verte | 1 tête | Frigo — vieille (panier 25/06), à vérifier |
-| Betteraves | 2 | Frigo — reste après déj 07/07 |
+| Betteraves | 0 | ❌ Utilisées déj 08/07 |
 | Tomates | ~4 | Frigo — très mûres ⚠️ (panier 25/06, j7) |
 | Poivrons grillés | ~1 poivron | Frigo ⚠️ à utiliser ce soir — poivron rouge du panier rôti |
 | Carottes | 1–2 | Frigo — petites |
@@ -219,7 +219,7 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Citrons verts | ~2 | Frigo |
 | Bananes | 7 | Acheté local 06/07 |
 | Pommes | 0 | Non visibles |
-| Avocats | 1 | Acheté local 06/07 |
+| Avocats | 0 | ❌ Utilisé déj 08/07 |
 
 ---
 
@@ -231,7 +231,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
-| Œufs frais | 0 | ❌ Épuisés 06/07 |
+| Œufs frais | 24 | 2 dúzias Auchan — acheté 08/07 (€2.09/dúzia) |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
@@ -241,7 +241,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Preparado Carne Picada Bovino Continente | ~500g | ⚠️ Urgent — utiliser ou congeler ce soir |
 | Pão de Forma sem Côdea Bimbo | 2 | |
-| Peito de frango frais | ~500g | Acheté local 06/07 — utiliser sous 2 jours |
+| Peito de frango frais | 0 | Congelé 08/07 (~250g) |
 | Babybel light | 12 | Acheté local 06/07 |
 | Cooked pasta | 0 | Jeté 25/05 |
 | Cooked rice | 0 | Jeté 25/05 |
@@ -259,6 +259,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
+| Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
 | Panados de frango (escalopes panées poulet) | 1 tupperware | 1 utilisé déj 07/07 |
 | Dumplings | 1 unité | Confirmé 27/06 |
@@ -286,7 +287,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Barritas de pescado (bâtonnets de poisson) | 1 boîte | Confirmé 27/06 |
-| Gula del Norte | 1 boîte | Confirmé 27/06 |
+| Gula del Norte | 0 | ❌ Utilisé dîner 08/07 |
 | Robalo Grande Fresco | 0 | ❌ Consommé (confirmé 27/06) |
 | Dourada Média Fresca | 0 | ❌ Consommée (confirmé 27/06) |
 

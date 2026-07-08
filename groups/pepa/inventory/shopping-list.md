@@ -18,6 +18,8 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 | Anti-humedad (pack ×3) | ×3 | - | Non inclus — choix pas fait |
 | Laurel | ×1 | - | Non inclus dans commande 21/06 |
 | Star anis (anis étoilé) | ×1 | - | Ajouté 06/07 |
+| Atum ao Natural Tritão | ×3 | - | Épuisé 08/07 |
+| Gula del Norte | ×2 | - | Épuisé 08/07 — ❤️ validé |
 | Baies de goji | ×1 | - | Ajouté 07/07 |
 | Flocos de aveia integral grossos | ×4 | - | Ajouté 07/07 |
 | Tomate seco (bote) | ×1 | - | Non inclus dans commande 21/06 |
@@ -54,11 +56,19 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 
 ---
 
+## 🛍️ Supermercado local (Auchan/Pingo Doce)
+
+| Item | Qty | Statut | Notes |
+|---|---|---|---|
+| Pão de Forma sem Côdea Bimbo | ×2 | - | Ajouté 08/07 |
+
+---
+
 ## 🌿 Fruits & légumes (local)
 
 | Item | Qty | Statut | Notes |
 |---|---|---|---|
-| Œufs | 1 boîte | 🔴 urgent | Épuisés 06/07 |
+| Œufs | 1 boîte | ✅ acheté | 2 dúzias Auchan 08/07 |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ✅ en stock | 2 tupperwares congélo (confirmé Lola 27/06) |
 

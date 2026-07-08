@@ -47,6 +47,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | pesto-genovese.md | Pesto alla Genovese | sauce | very low | ⭐⭐ | Fridge 1 week / freeze. |
 | tzatziki.md | Tzatziki | sauce / dip | very low | ⭐⭐ | |
 | granola-gordon-ramsay.md | Granola Gordon Ramsay | breakfast | low | ⭐⭐⭐ | Clément scales to large batches. |
+| gulas-ajillo-pasta.md | Gulas al ajillo con pasta | fish / pasta | very low | no | 15 min. Gulas congélo + ail + huile d'olive. |
 
 ---
 

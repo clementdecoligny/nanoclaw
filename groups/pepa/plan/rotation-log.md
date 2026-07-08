@@ -6,6 +6,7 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| gulas-ajillo-pasta | 2026-07-08 | Dîner mercredi ❤️ |
 | soupe-legumes | 2026-06-25 | Batch en cours |
 | pad-thai-pollo | 2026-06-27 | Déjeuner samedi |
 | shakshuka-maison | 2026-06-30 | Dîner mardi |
