@@ -11,8 +11,8 @@
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
 | Yaourt grec | Iogurte Grego Mythos Ligeiro Natural Continente Equilíbrio | 2,35 € | ×5 à ×6 | Toujours Mythos 1 kg <!-- pid:7403702 --> |
-| Lait entier UHT | LEITE UHT GORD MIMOSA B ESSEN 1L | 1,19 € | ×6 à ×18 | Mimosa Bem Essencial |
-| Leite meio gordo Mimosa | LEITE UHT M/G MIMOSA B ESSEN 1L | 0,90 € | ×2 | Lait demi-écrémé UHT |
+| Lait entier UHT | LEITE UHT GORD MIMOSA B ESSEN 1L | 1,80 € | — | ❌ NE PAS COMMANDER — toujours meio gordo | <!-- pid:8596969 -->
+| Leite meio gordo Mimosa | Leite UHT Meio Gordo Bem Essencial Mimosa | 5,40 € | ×3 packs (=18L) | Pack de 6 — pid:4421406 <!-- pid:4421406 --> |
 | Œufs (douzaine) | Ovos de Ar Livre Classe M/L Matinados | ~4,00 € | ×12 (soit 12 dz) | Alternative : OVOS DE SOLO CLASSE L CNT 1DZ <!-- pid:6664918 --> |
 | Feta | QJ FETA DOP CONTINENTE 150G | 1,79 € | ×1 à ×5 | Acheté à chaque commande |
 | Parmesan | Queijo Parmigiano Reggiano DOP Continente | — | ×1 à ×2 | Continente brand <!-- pid:8421688 --> |
@@ -92,6 +92,7 @@
 | Graines de chia | Sementes de Chia Continente | — | ×2 | <!-- pid:8117186 --> |
 | Raisins secs | Uva Passa sem Grainha Continente | — | ×1 | <!-- pid:8112327 --> |
 | Canneberges séchées | Bagas de Arando Cem Porcento | — | ×1 | <!-- pid:4430301 --> |
+| Baies de goji | Bagas de Goji Biológicas Continente Bio | — | ×1 | <!-- pid:6625958 --> |
 
 ---
 
@@ -173,8 +174,9 @@
 
 | Notre nom | Nom exact Continente | Prix | Qté / commande | Notes |
 |---|---|---|---|---|
-| Liquide lave-vaisselle | Detergente Máquina Loiça Continente | — | ×1 | |
+| Liquide lave-vaisselle | Detergente Máquina Loiça Gel All in One Continente | — | ×1 | <!-- pid:7486414 --> |
 | Cannelle | Canela Moída em Frasco Continente | 0,59 € | ×1 | <!-- pid:6046641 --> |
+| Star anis (anis étoilé) | Anis Estrelado em Saqueta Margão | — | ×1 | <!-- pid:2725521 --> |
 | Anti-humedad | Absorsor Humidade | — | ×3 | Anti-humidade |
 | Laurel | Louro Folha em Saqueta Continente | 0,69 € | ×1 | <!-- pid:6046671 --> |
 | Tomate seco | Tomate Seco | — | ×1 | | <!-- pid:5384860 -->
@@ -194,13 +196,13 @@
 | Alga wakame seca | Alga Wakame | — | ×1 | | <!-- pid:7472966 -->
 | Miso blanco | — | — | ×1 | Non vu |
 | Bulgur | Bulgur | — | ×1 | Trigo partido | <!-- pid:6873416 -->
-| Remolacha cocida | Beterraba Cozida | — | ×1 | | <!-- pid:2202907 -->
+| Remolacha cocida | Beterraba Cozida Biológica Beterraba Bio | — | ×1 | Version bio préférée | <!-- pid:5103536 -->
 | Za'atar | — | — | ×1 | Non vu |
 | Sumac | — | — | ×1 | Non vu |
 | Pimentón ahumado | Colorau Fumado | — | ×1 | | <!-- pid:7212170 -->
 | Copos de guindilla seca | — | — | ×1 | Non vu — líquido piri-piri ≠ flocos secos |
 | Pasta de cacahuete | Manteiga de Amendoim Cremosa Continente Equilíbrio | 2,49 € | ×1 | <!-- pid:8167238 --> |
-| Leche de coco | Leite de Coco | — | ×2 | | <!-- pid:4721024 -->
+| Leche de coco | Leite de Coco Origens Bio | — | ×2 | Bio préféré | <!-- pid:5870516 -->
 | Alcaparras | Alcaparras | — | ×1 | | <!-- pid:2004612 -->
 | Anacardos | Caju Torrado sem Sal Continente | — | ×1 | <!-- pid:8116806 --> |
 | Semillas de sésamo | Sementes de Sésamo | — | ×1 | | <!-- pid:8117162 -->
@@ -220,7 +222,7 @@ Ces produits n'apparaissent dans aucune des 6 factures. À chercher sur d'autres
 | Notre nom | Remarques |
 |---|---|
 | Pois chiches secs | Non vu — format sec, chercher ailleurs |
-| Baies de goji | Non vu |
+| Baies de goji | Disponible — voir section Granola & graines |
 | Miel (grand format 1 kg) | Non vu dans les factures — vérifier si disponible en ligne |
 | Peeled and grilled eggplant (Chtoura Garden) | Non vu — épicerie spécialisée uniquement |
 | Tortillas grandes | Non vu — chercher épicerie spécialisée |

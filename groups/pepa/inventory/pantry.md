@@ -190,23 +190,23 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade verte | 1 tête | Frigo — vieille (panier 25/06), à vérifier |
+| Salade verte | 2 têtes | 1 vieille (panier 25/06) + 1 nouvelle (panier 09/07) — utiliser vieille en premier |
 | Betteraves | 0 | ❌ Utilisées déj 08/07 |
-| Tomates | ~4 | Frigo — très mûres ⚠️ (panier 25/06, j7) |
-| Poivrons grillés | ~1 poivron | Frigo ⚠️ à utiliser ce soir — poivron rouge du panier rôti |
-| Carottes | 1–2 | Frigo — petites |
+| Tomates | ~8 | ~4 très mûres ⚠️ (urgence) + 4 fraîches (panier 09/07) |
+| Carottes | ~4–5 | 1-2 anciennes + 3 panier 09/07 |
+| Courgette | 1 très grosse | Panier 09/07 |
 | Poireau | 0 | ❌ Utilisé par Branca (soupe sem. dernière) |
-| Concombre | 1 | Frigo |
+| Concombre | 2 | 1 frigo (ancien) + 1 panier 09/07 — utiliser ancien en premier |
+| Avocat | 1 | Panier 09/07 |
 | Fruits de la passion | 2–3 | Frigo — bien mûrs (ridés = prêts) |
 
 ### 🧺 Légumes (hors frigo — plan de travail)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes de terre | 0 | ❌ Consommées 26/06 (omelette + pommes de terre sautées enfants) |
-| Courgette | 0 | ❌ Utilisée par Branca (soupe sem. dernière) |
+| Pommes de terre | 8 | Panier 09/07 |
 | Ail | 3 têtes | Plan de travail |
-| Oignons jaunes | 0 | Non visibles |
+| Oignons jaunes | 1 | Panier 09/07 |
 | Gingembre frais | 0 | |
 
 ### 🍊 Fruits (corbeille + frigo)
@@ -230,8 +230,8 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Item | Quantity | Notes |
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | 7 × 1kg | +6 livraison 29/05 |
-| Œufs frais | 24 | 2 dúzias Auchan — acheté 08/07 (€2.09/dúzia) |
+| Greek yogurt — Mythos Ligiero Continente 1kg | 1 × 1kg | ⚠️ Stock bas — 09/07 |
+| Œufs frais | ~30 | 24 Auchan 08/07 + 6 panier 09/07 |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
