@@ -32,6 +32,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | salade-ricotta-radis-oeufs-pickles.md | Salade ricotta radis œufs marinés | eggs / salad | medium | ⭐⭐ | Make-ahead friendly. |
 | tortilla-espanola.md | Tortilla Española | eggs / potato | low | no | Pommes de terre + oignon + œufs. Tiède ou t° ambiante. |
 | pommes-de-terre-sautees.md | Pommes de Terre Sautées | side / veg | very low | no | PdT déjà cuites — technique poêle. Accompagnement rapide. |
+| puree-maison-pdt-cuites.md | Purée Maison (pdt cuites) | side / veg | very low | no | 10 min. PdT déjà cuites. Kid-approved. |
 | shakshuka-maison.md | Shakshuka Maison | eggs / veg | low | ⭐⭐ | Sauce peut se congeler, œufs ajoutés au moment. Basket-friendly. |
 | frittata-courgette-parmesan.md | Frittata Courgette-Parmesan | eggs / veg | low | no | Courgette + œufs + parmesan. 20 min. |
 | ottolenghi-charred-tomatoes-cold-yoghurt.md | Hot charred tomatoes cold yoghurt | veg / starter | very low | no | Serve immediately. |

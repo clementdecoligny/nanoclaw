@@ -272,7 +272,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 1–2 tupperwares | Confirmé 27/06 (qté exacte TBC) |
-| Soupe / caldo | 1 tupperware | ⚠️ Stock critique — prévoir batch urgent |
+| Soupe / caldo | 0 | ❌ Épuisé déj 10/07 — batch URGENT |
 | Edamame | 2 sachets | Confirmé 27/06 |
 | Feijão verde (haricots verts surgelés) | 1 sachet | Confirmé 27/06 |
 | Alcachofas troceadas (artichauts) | 1 sachet | Confirmé 27/06 |
