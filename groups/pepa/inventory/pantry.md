@@ -231,7 +231,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 1 × 1kg | ⚠️ Stock bas — 09/07 |
-| Œufs frais | ~30 | 24 Auchan 08/07 + 6 panier 09/07 |
+| Œufs frais | ~24 | 24 Auchan 08/07 + 6 panier 09/07 — 6 consommés ptit-dej 11/07 |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
