@@ -197,14 +197,14 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Courgette | 1 très grosse | Panier 09/07 |
 | Poireau | 0 | ❌ Utilisé par Branca (soupe sem. dernière) |
 | Concombre | 2 | 1 frigo (ancien) + 1 panier 09/07 — utiliser ancien en premier |
-| Avocat | 1 | Panier 09/07 |
+| Avocat | 2 | Mûrs — à utiliser sous 2-3 jours |
 | Fruits de la passion | 2–3 | Frigo — bien mûrs (ridés = prêts) |
 
 ### 🧺 Légumes (hors frigo — plan de travail)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes de terre | 8 | Panier 09/07 |
+| Pommes de terre | 0 | ❌ Purée enfants ven 10/07 |
 | Ail | 3 têtes | Plan de travail |
 | Oignons jaunes | 1 | Panier 09/07 |
 | Gingembre frais | 0 | |
@@ -231,7 +231,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 1 × 1kg | ⚠️ Stock bas — 09/07 |
-| Œufs frais | ~24 | 24 Auchan 08/07 + 6 panier 09/07 — 6 consommés ptit-dej 11/07 |
+| Œufs frais | ~6 | ⚠️ Stock bas — consommés au ptit-dej 12/07 |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
@@ -272,7 +272,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 1–2 tupperwares | Confirmé 27/06 (qté exacte TBC) |
-| Soupe / caldo | 0 | ❌ Épuisé déj 10/07 — batch URGENT |
+| Soupe / caldo | plusieurs tupperwares | ✅ Confirmé 12/07 par Clément |
 | Edamame | 2 sachets | Confirmé 27/06 |
 | Feijão verde (haricots verts surgelés) | 1 sachet | Confirmé 27/06 |
 | Alcachofas troceadas (artichauts) | 1 sachet | Confirmé 27/06 |

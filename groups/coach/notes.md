@@ -1,6 +1,6 @@
 # Notes — Clément
 
-_Dernière mise à jour : 6 juillet 2026_
+_Dernière mise à jour : 12 juillet 2026_
 
 ## Santé — Genoux
 
@@ -128,6 +128,14 @@ Tibial postérieur faible → contrôle insuffisant de la pronation → surcharg
 **Statut :** Pas encore commencé (manque de motivation/flemme — à intégrer de manière réaliste dans le plan existant)
 
 **Pertinence M-N 2026 :** La course à pied sur M-N est inévitable (descentes, portions hors-selle). Tibial postérieur renforcé + cheville mobile = moins de friction hallux sur plusieurs jours. Priorité modérée mais réelle.
+
+## Nutrition (suivi par João Barbosa — je n'interviens pas)
+
+Coach nutrition : João Barbosa (joaobarbosanutrition@gmail.com).
+Plans complets sauvegardés dans **`/workspace/agent/nutrition.md`** (mis à jour 12 juil 2026).
+Discussion nutrition disponible sur demande — ne pas inclure spontanément dans les plans.
+
+---
 
 ## Méthode TSS — Activités non trackées
 
