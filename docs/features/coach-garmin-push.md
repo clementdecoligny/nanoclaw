@@ -62,7 +62,7 @@ correct per-step HR bpm ranges (not pace, not generic zones).
 | 10 | Script partially succeeds (uploaded but not scheduled) | Script is two-step (upload → schedule); on schedule failure it reports the created workout ID so it isn't orphaned silently, and Coach relays the partial state. |
 | 11 | Malformed session JSON from Coach | Script validates the JSON (required: ordered steps, each with `type`, `durationSec`, `hrMin`, `hrMax`; sport=cycling) and exits with a specific error Coach can read and correct. |
 | 12 | bpm range inverted / implausible (hrMin>hrMax, or 0/negative/>230) | Script rejects with a clear validation error. |
-| 13 | Wrong Garmin account / credentials | Credentials come from OneCLI vault only; if injection fails the script gets no creds and reports an auth error. Never prompt for raw creds in chat. |
+| 13 | Wrong Garmin account / credentials | Auth is from a pre-seeded on-disk token store (mounted read-only into the coach container); if it is missing/expired the script reports an auth error. The container never holds the password. Never prompt for raw creds in chat. |
 | 14 | Timezone of the scheduled date | Garmin schedules by calendar date (no time). Coach resolves the date in Europe/Lisbon (Clem's tz) from the `<context now=.../>` value. |
 
 ## Entity model changes
@@ -87,22 +87,35 @@ the private mobile-app SSO flow. That unofficial-API breakage risk is inherent t
 Guardrails:
 - **Pin the version.** Never `pip install` blindly; treat bumps as deliberate,
   matching the host supply-chain posture.
-- **Isolate blast radius.** Garmin credential lives in the OneCLI vault, injected
-  only into the *coach* container at request time. A misbehaving library sees the
-  Garmin login and nothing else — no other secrets, no other groups.
+- **Isolate blast radius.** Auth material is a Garmin OAuth token store mounted
+  only into the *coach* container. A misbehaving library sees the Garmin session
+  and nothing else — no password, no other secrets, no other groups.
 - **Uses Clem's real Garmin login against a private endpoint** (ToS grey area) —
   accepted knowingly by the operator.
 
 ## Container boundary
 
-- **New container package (coach group only):** `garminconnect==0.3.6` (pip) added to the
-  coach group's `container.json` `packages.pip` (via `ncl groups config
-  add-package` / container-config). Container rebuild required for the coach group.
-- **New credential (OneCLI vault):** Garmin email + password stored as secrets,
-  injected into the coach container at request time (host pattern matching
-  `connect.garmin.com` / `garmin.com`). No creds in env or chat.
-- **Token persistence:** `garmin_tokens.json` written under `/workspace/agent/`
-  (a persistent mounted path for the coach group) so re-auth/MFA is one-time.
+- **Python 3.12 requirement (base image).** `garminconnect>=0.3` requires
+  Python ≥3.12, but the container base (`node:22-slim` / Debian bookworm) ships
+  Python 3.11 in `/opt/wpenv`. So the per-group pip channel (which targets
+  `/opt/wpenv`) cannot install it. Instead the **base image** builds a separate
+  `/opt/py312` venv via `uv` (fetches a standalone CPython 3.12) with
+  `garminconnect==0.3.6` + `pydantic` baked in (pinned via `UV_VERSION` /
+  `GARMINCONNECT_VERSION` build args). The coach script runs under
+  `/opt/py312/bin/python`. Requires a base-image rebuild (`./container/build.sh`).
+- **pydantic is mandatory.** Without it, `garminconnect.workout` classes silently
+  fall back to unconstructable stubs (`ExecutableStep() takes no arguments`). It
+  is installed into `/opt/py312` alongside garminconnect.
+- The generic **pip package channel** (migration 016, `packages_pip`) still
+  exists as reusable infra but targets `/opt/wpenv` (3.11); it is *not* used for
+  the Garmin deps. Coach's `packages_pip` is empty.
+- **Credential (token-file mount):** a Garmin OAuth token store, seeded once by an
+  interactive host login (`scripts/garmin_login.py`), lives at
+  `groups/coach/.garminconnect/` (git-ignored, 0600) and reaches the container via
+  the standard `groups/coach → /workspace/agent` mount at
+  `/workspace/agent/.garminconnect`. No password in env, container, or chat.
+- **Token persistence:** the store persists across container restarts (it lives on
+  the host mount), so re-auth/MFA is one-time until the refresh token expires.
 - No new host↔container protocol. No session-DB fields cross the boundary.
 
 ## API contract
@@ -142,27 +155,37 @@ python push_to_garmin.py <session.json>
   # exit 0 on success, non-zero on any failure
 ```
 
-Auth: reads Garmin email/password from env (injected by OneCLI at request time),
-loads/saves token store at `/workspace/agent/.garminconnect/`.
+Auth: loads the pre-seeded OAuth token store at `/workspace/agent/.garminconnect/`
+(mounted from the host, never a password). Fails loud if missing/expired. An
+optional `GARMIN_EMAIL`/`GARMIN_PASSWORD` env fallback exists for deployments that
+inject them, but token-file mount is the default and only supported path here.
 
 ## Affected files
 
 - `docs/features/coach-garmin-push.md` — this spec.
 - `groups/coach/scripts/push_to_garmin.py` — the push script (build JSON→CyclingWorkout, upload, schedule).
 - `groups/coach/scripts/test_push_to_garmin.py` — tests (validation, HR-target-type-is-HR-not-pace, JSON→step mapping) with the network call mocked.
-- `groups/coach/container.json` — add `garminconnect` to `packages.pip`; ensure `/workspace/agent` token dir persists.
+- `groups/coach/scripts/garmin_login.py` — one-time interactive host login that seeds the OAuth token store.
+- `container/Dockerfile` — `/opt/py312` venv (uv + CPython 3.12) with `garminconnect` + `pydantic` baked in.
+- `.gitignore` — exclude `groups/*/.garminconnect/` and the host login venv.
 - `groups/coach/CLAUDE.local.md` — add the `/garmin` (push-next-session) command spec + the on-demand-only + confirmation-required behavior + zone→bpm mapping instruction.
-- OneCLI vault — Garmin secret entries + host pattern (operator setup step, documented, not code).
 - `product-docs/` coach page — move "Automated Garmin push" from limitation to active (on-demand), document the command and the confirmation flow.
 
 ## Operator setup — Garmin credentials (one-time)
 
-**Design note / gap:** OneCLI's primary model injects secrets as **HTTP headers**
-matching a host pattern. `garminconnect` does not consume a header token — it
-logs in with **email + password** via Garmin's SSO flow, then manages its own
-OAuth token store on disk. So header-injection does not fit. Two options:
+**Decision (implemented): token-file mount, option 2 below.** OneCLI's model
+injects secrets as **HTTP headers** matching a host pattern, but `garminconnect`
+logs in with **email + password** via Garmin's SSO flow and manages its own OAuth
+token store — so header-injection does not fit. The chosen path: a one-time
+interactive host login (`groups/coach/scripts/garmin_login.py`, run with
+`.venv/garmin/bin/python`) writes the token store to `groups/coach/.garminconnect/`
+(git-ignored, mode 0600), which mounts into the container at
+`/workspace/agent/.garminconnect`. The container never holds the password. The
+`_make_client()` in the push script authenticates token-first and fails loud if
+the store is missing/expired. Re-seed by re-running the login helper when the
+refresh token expires (~1 year). Options considered:
 
-1. **Env-var injection (used here).** The script reads `GARMIN_EMAIL` /
+1. **Env-var injection (considered, not used).** The script reads `GARMIN_EMAIL` /
    `GARMIN_PASSWORD` from the environment. Store both in the OneCLI vault as
    `generic` secrets and configure OneCLI to expose them to the coach agent as
    env vars (or, if the deployment injects vault secrets into the container

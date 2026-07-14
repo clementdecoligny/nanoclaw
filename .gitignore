@@ -39,3 +39,7 @@ groups/*/attachments/
 agents-sdk-docs
 scripts/setup-v2-groups.ts
 site/
+
+# Garmin OAuth token stores (per-group) — never commit credentials/tokens
+groups/*/.garminconnect/
+.venv/garmin/

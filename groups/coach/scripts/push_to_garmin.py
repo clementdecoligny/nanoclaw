@@ -253,23 +253,41 @@ def push(session: dict[str, Any], client: Any) -> dict[str, Any]:
 # Auth + CLI entrypoint
 # --------------------------------------------------------------------------- #
 def _make_client() -> Any:
-    """Authenticate to Garmin using env creds + on-disk token store."""
+    """Authenticate to Garmin from the on-disk token store.
+
+    The container never holds the Garmin password. A one-time interactive
+    login on the host (see scripts/garmin_login.py) seeds the token store at
+    GARMIN_TOKENSTORE; here we load it and let the library auto-refresh. If
+    the store is missing or the refresh token has expired, we fail loud so
+    the operator re-seeds rather than silently hanging.
+
+    Optional env fallback: if GARMIN_EMAIL / GARMIN_PASSWORD *are* present
+    (e.g. a deployment that injects them), a full login is attempted. This is
+    not the default path — token-file mount is.
+    """
     from garminconnect import Garmin  # type: ignore
 
+    tokenstore = os.environ.get("GARMIN_TOKENSTORE", "/workspace/agent/.garminconnect")
     email = os.environ.get("GARMIN_EMAIL")
     password = os.environ.get("GARMIN_PASSWORD")
-    tokenstore = os.environ.get("GARMIN_TOKENSTORE", "/workspace/agent/.garminconnect")
 
-    if not email or not password:
+    if not os.path.isdir(tokenstore) and not (email and password):
         raise RuntimeError(
-            "GARMIN_EMAIL / GARMIN_PASSWORD not set — credentials must be "
-            "injected by OneCLI. Aborting rather than prompting."
+            f"no Garmin token store at {tokenstore} and no GARMIN_EMAIL/PASSWORD. "
+            "Seed the token store once on the host (scripts/garmin_login.py)."
         )
 
-    client = Garmin(email, password)
-    # login() loads the cached token if present and refreshes; otherwise does a
-    # full SSO login (may require MFA — handled interactively at setup time).
-    client.login(tokenstore)
+    # Garmin(...) accepts empty creds; login(tokenstore) then loads and
+    # refreshes the cached OAuth tokens. Only if the store is absent does it
+    # need the email/password to do a full SSO login.
+    client = Garmin(email or "", password or "")
+    try:
+        client.login(tokenstore)
+    except Exception as e:
+        raise RuntimeError(
+            f"Garmin auth from token store failed ({e}). The refresh token may "
+            "have expired — re-run scripts/garmin_login.py on the host to re-seed."
+        ) from e
     return client
 
 

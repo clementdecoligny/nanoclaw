@@ -68,6 +68,25 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && /opt/wpenv/bin/pip install --no-cache-dir weasyprint openpyxl \
     && rm -rf /root/.cache/pip
 
+# ---- Python 3.12 virtualenv (/opt/py312) -------------------------------------
+# The base image's system python is 3.11 (Debian bookworm), but some tools need
+# Python >=3.12 — notably garminconnect>=0.3 (Coach's Garmin Connect push).
+# We use uv to fetch an official standalone CPython 3.12 and create a venv, then
+# pre-install the Garmin deps. Pinned via ARGs; bump deliberately.
+ARG UV_VERSION=0.5.11
+ARG GARMINCONNECT_VERSION=0.3.6
+# Install uv's standalone CPython into a WORLD-READABLE dir (not /root, which is
+# 0700) so the container's non-root `node` user can load libpython at runtime.
+# UV_PYTHON_INSTALL_DIR fixes the interpreter location; we chmod it readable.
+ENV UV_PYTHON_INSTALL_DIR=/opt/uv-python
+RUN curl -LsSf https://astral.sh/uv/${UV_VERSION}/install.sh | sh \
+    && /root/.local/bin/uv python install 3.12 \
+    && /root/.local/bin/uv venv --python 3.12 /opt/py312 \
+    && VIRTUAL_ENV=/opt/py312 /root/.local/bin/uv pip install --no-cache \
+        "garminconnect==${GARMINCONNECT_VERSION}" pydantic \
+    && chmod -R a+rX /opt/uv-python /opt/py312 \
+    && rm -rf /root/.cache/uv
+
 # Chromium path for agent-browser / Playwright consumers
 ENV AGENT_BROWSER_EXECUTABLE_PATH=/usr/bin/chromium
 ENV PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium
