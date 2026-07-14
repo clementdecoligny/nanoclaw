@@ -8,6 +8,7 @@
 |---------|--------------|-------|
 | gulas-ajillo-pasta | 2026-07-08 | Dîner mercredi ❤️ |
 | dumplings | 2026-07-13 | Dîner lundi + restes purée + riz |
+| salade-betteraves-avocat-feta | 2026-07-14 | Dîner mardi, fait maison |
 | soupe-legumes | 2026-06-25 | Batch en cours |
 | pad-thai-pollo | 2026-06-27 | Déjeuner samedi |
 | shakshuka-maison | 2026-06-30 | Dîner mardi |

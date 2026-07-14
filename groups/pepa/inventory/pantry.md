@@ -197,7 +197,7 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 | Courgette | 1 très grosse | Panier 09/07 |
 | Poireau | 0 | ❌ Utilisé par Branca (soupe sem. dernière) |
 | Concombre | 2 | 1 frigo (ancien) + 1 panier 09/07 — utiliser ancien en premier |
-| Avocat | 2 | Mûrs — à utiliser sous 2-3 jours |
+| Avocat | 0 | ❌ Salade dîner 14/07 |
 | Fruits de la passion | 2–3 | Frigo — bien mûrs (ridés = prêts) |
 
 ### 🧺 Légumes (hors frigo — plan de travail)

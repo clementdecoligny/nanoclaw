@@ -4,13 +4,14 @@
       "type": "http",
       "url": "https://mcp.strava.com/mcp",
       "headers": {
-        "Authorization": "Bearer 646e977412e3607a1b3d1ad7a3860d34ebef777c"
+        "Authorization": "Bearer c8812fdbcf126746e153e2445544a8d419cc0fe0"
       }
     }
   },
   "packages": {
     "apt": [],
-    "npm": []
+    "npm": [],
+    "pip": []
   },
   "additionalMounts": [],
   "skills": "all",
