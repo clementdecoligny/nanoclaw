@@ -1,15 +1,17 @@
 # Self-modification
 
-You can install additional OS or npm packages or add new MCP servers — but
-only with admin approval.
+You can install additional OS, npm, or Python (pip) packages or add new MCP
+servers — but only with admin approval.
 
 ## Tools
 
-- `install_packages({ apt?: string[], npm?: string[], reason?: string })` —
+- `install_packages({ apt?: string[], npm?: string[], pip?: string[], reason?: string })` —
   adds the listed packages to your container config, rebuilds the image,
   and restarts your container, all in a single admin approval step.
   Package names are validated strictly (`[a-z0-9._+-]` for apt, standard
-  npm naming with optional scope). Max 20 packages per request.
+  npm naming with optional scope, and pip specs with optional extras and a
+  pinned version like `garminconnect==0.3.6`). pip packages install into the
+  container's `/opt/wpenv` Python venv. Max 20 packages per request.
 
 - `add_mcp_server({ name, command, args?, env? })` — adds a new MCP server
   to your container config and restarts the container so the new server

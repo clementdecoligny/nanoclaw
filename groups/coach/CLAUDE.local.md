@@ -193,3 +193,72 @@ Même logique que /today mais pour le lendemain.
 3. Comparer avec la séance prévue au plan (charger weekly-plans/)
 4. Envoyer un retour structuré : durée, distance, D+, IF estimé, distribution zones FC, conformité au plan, points positifs, points à corriger
 5. Mettre à jour le fichier weekly-plans/ pour marquer la séance comme réalisée
+
+## Pousser une séance sur Garmin Connect (à la demande)
+
+Clément peut demander (« pousse la prochaine séance sur mon Garmin », « pousse la
+séance de demain sur Garmin », etc.). C'est **uniquement à la demande** — ne
+JAMAIS pousser automatiquement, parce que Clément adapte souvent son plan. Une
+fois programmée sur Garmin Connect, la séance se synchronise seule sur son
+compteur vélo au prochain sync. TrainingPeaks reste un simple réceptacle
+Garmin→TP des activités **réalisées** ; on n'y planifie rien.
+
+**v1 : vélo uniquement.** Pour un run/natation/renfo, décline poliment (« Le push
+Garmin ne gère que le vélo pour l'instant »). Pour un jour de repos, décline
+(« C'est un jour de repos, rien à pousser »).
+
+### Déroulé
+
+1. **Identifier la séance.** Par défaut, la prochaine séance vélo datée du plan de
+   la semaine en cours (`weekly-plans/`, fichier le plus récent) à partir
+   d'aujourd'hui. Si Clément désigne une séance précise, prends celle-là.
+2. **Construire les intervalles FC en bpm.** Chaque étape (échauffement / intervalle
+   / récupération / retour au calme) doit avoir une **plage FC en bpm réelle**, pas
+   un simple numéro de zone. Si le plan ne donne qu'une zone, convertis avec la
+   table des zones (test lactate) :
+   - Z1 : 90–106 · Z2 : 107–128 · Z3 : 129–145 · Z4 : 146–162 · Z5 : 163–180
+   (pour Z1, borne basse ~90 ; adapte la cible précise si le plan la donne, ex.
+   « Z2 viser 115–120 » → hrMin 115, hrMax 128 ou la fenêtre décidée ensemble).
+3. **Écrire le JSON de séance** dans `/workspace/agent/garmin/<date>-<slug>.json` :
+   ```json
+   {
+     "sport": "cycling",
+     "name": "Vélo Z2 — 65 min",
+     "date": "2026-07-15",
+     "description": "Piloter à la FC uniquement.",
+     "steps": [
+       {"type": "warmup",   "durationSec": 900,  "hrMin": 95,  "hrMax": 106, "note": "Z1"},
+       {"type": "interval", "durationSec": 2100, "hrMin": 115, "hrMax": 128, "note": "Z2 viser 115-120"},
+       {"type": "cooldown", "durationSec": 900,  "hrMin": 95,  "hrMax": 106, "note": "Z1"}
+     ]
+   }
+   ```
+   - `type` ∈ warmup, interval, recovery, cooldown · `durationSec` en secondes ·
+     `hrMin`/`hrMax` en bpm (0 < hrMin < hrMax ≤ 230).
+   - `date` = date calendaire résolue depuis le jour de la séance dans le plan,
+     par rapport à `<context now=.../>` (fuseau Europe/Lisbon).
+4. **Montrer et confirmer.** Envoie à Clément la séance structurée (chaque étape :
+   durée + plage FC bpm) **et la date programmée**, puis demande confirmation.
+   **N'exécute rien tant qu'il n'a pas confirmé** (« ok », « vas-y », « confirme »).
+   S'il corrige la séance ou la date, régénère le JSON.
+5. **Pousser.** À la confirmation, exécute :
+   ```bash
+   /opt/wpenv/bin/python /workspace/agent/scripts/push_to_garmin.py /workspace/agent/garmin/<fichier>.json
+   ```
+   Le script s'authentifie via les identifiants Garmin injectés par OneCLI (jamais
+   demandés en clair), construit l'entraînement vélo avec cibles FC, l'upload et le
+   programme à la date. Il imprime un JSON.
+6. **Rapporter le résultat.**
+   - `{"ok": true, "workoutId": ..., "scheduledDate": "..."}` → « ✅ Séance poussée
+     sur Garmin, programmée pour le JJ/MM. Elle se synchronisera sur ton vélo au
+     prochain sync. »
+   - `{"ok": false, "error": ...}` → relaie l'erreur en clair. Si l'erreur parle
+     d'auth Garmin expirée, dis-le (re-login nécessaire) — ne réessaie pas en
+     boucle. Si `workoutId` est présent malgré `ok:false`, la séance est créée mais
+     pas programmée : signale-le pour éviter un doublon.
+7. **Éviter les doublons.** Si tu as déjà poussé cette séance aujourd'hui (note-le
+   dans le fichier `weekly-plans/` concerné), préviens Clément avant de repousser.
+
+Ne demande jamais les identifiants Garmin en clair — ils passent uniquement par
+OneCLI. Le script ne touche qu'à la création/programmation d'entraînements ; il ne
+lit ni ne modifie l'historique d'activités.

@@ -12,6 +12,18 @@ import {
 import type { ContainerConfigRow } from '../../types.js';
 import { registerResource } from '../crud.js';
 
+/**
+ * Package channels: CLI flag → container_configs JSON column + a name/spec
+ * validator. Package strings are interpolated into a `RUN` shell line in the
+ * per-group Dockerfile (see buildAgentGroupImage), so they MUST reject shell
+ * metacharacters. Mirrors the self-mod MCP-tool regexes.
+ */
+const PACKAGE_CHANNELS = [
+  ['apt', 'packages_apt', /^[a-z0-9][a-z0-9._+-]*$/],
+  ['npm', 'packages_npm', /^(@[a-z0-9][a-z0-9._-]*\/)?[a-z0-9][a-z0-9._-]*$/],
+  ['pip', 'packages_pip', /^[a-z0-9][a-z0-9._-]*(\[[a-z0-9,._-]+\])?([<>=!~]=?[a-z0-9._*+-]+)?$/i],
+] as const satisfies ReadonlyArray<readonly [string, keyof ContainerConfigRow, RegExp]>;
+
 /** Deserialize JSON columns for display. */
 function presentConfig(row: ContainerConfigRow): Record<string, unknown> {
   return {
@@ -26,6 +38,7 @@ function presentConfig(row: ContainerConfigRow): Record<string, unknown> {
     mcp_servers: JSON.parse(row.mcp_servers),
     packages_apt: JSON.parse(row.packages_apt),
     packages_npm: JSON.parse(row.packages_npm),
+    packages_pip: JSON.parse(row.packages_pip),
     additional_mounts: JSON.parse(row.additional_mounts),
     cli_scope: row.cli_scope,
     updated_at: row.updated_at,
@@ -257,24 +270,38 @@ registerResource({
       access: 'approval',
       description:
         'Add an MCP server to a group. Requires `ncl groups restart` to take effect. ' +
-        'Use --id <group-id> --name <server-name> --command <cmd> [--args <json-array>] [--env <json-object>].',
+        'Stdio: --id <group-id> --name <server-name> --command <cmd> [--args <json-array>] [--env <json-object>]. ' +
+        'Remote: --id <group-id> --name <server-name> --type http|sse --url <url> [--headers <json-object>].',
       handler: async (args) => {
         const id = args.id as string;
         if (!id) throw new Error('--id is required');
         const name = args.name as string;
         if (!name) throw new Error('--name is required');
-        const command = args.command as string;
-        if (!command) throw new Error('--command is required');
 
         const row = getContainerConfig(id);
         if (!row) throw new Error(`No container config for group: ${id}`);
 
         const servers = JSON.parse(row.mcp_servers) as Record<string, McpServerConfig>;
-        servers[name] = {
-          command,
-          args: args.args ? (JSON.parse(args.args as string) as string[]) : [],
-          env: args.env ? (JSON.parse(args.env as string) as Record<string, string>) : {},
-        };
+
+        const type = args.type as string | undefined;
+        if (type === 'http' || type === 'sse') {
+          const url = args.url as string;
+          if (!url) throw new Error('--url is required for remote MCP servers');
+          servers[name] = {
+            type,
+            url,
+            ...(args.headers ? { headers: JSON.parse(args.headers as string) as Record<string, string> } : {}),
+          };
+        } else {
+          const command = args.command as string;
+          if (!command) throw new Error('--command is required for stdio MCP servers');
+          servers[name] = {
+            command,
+            args: args.args ? (JSON.parse(args.args as string) as string[]) : [],
+            env: args.env ? (JSON.parse(args.env as string) as Record<string, string>) : {},
+          };
+        }
+
         updateContainerConfigJson(id, 'mcp_servers', servers);
 
         return { added: name, servers };
@@ -304,7 +331,7 @@ registerResource({
     'config add-package': {
       access: 'approval',
       description:
-        'Add a package to a group. Requires `ncl groups restart --rebuild` to take effect. Use --id <group-id> and --apt <pkg> or --npm <pkg>.',
+        'Add a package to a group. Requires `ncl groups restart --rebuild` to take effect. Use --id <group-id> and --apt <pkg>, --npm <pkg>, or --pip <pkg>.',
       handler: async (args) => {
         const id = args.id as string;
         if (!id) throw new Error('--id is required');
@@ -312,27 +339,25 @@ registerResource({
         const row = getContainerConfig(id);
         if (!row) throw new Error(`No container config for group: ${id}`);
 
-        const apt = args.apt as string | undefined;
-        const npm = args.npm as string | undefined;
-        if (!apt && !npm) throw new Error('Provide --apt <pkg> or --npm <pkg>');
-
-        if (apt) {
-          const existing = JSON.parse(row.packages_apt) as string[];
-          if (!existing.includes(apt)) {
-            existing.push(apt);
-            updateContainerConfigJson(id, 'packages_apt', existing);
-          }
+        const requested = PACKAGE_CHANNELS.map(
+          ([flag, col, re]) => [flag, col, re, args[flag] as string | undefined] as const,
+        );
+        if (requested.every(([, , , pkg]) => !pkg)) {
+          throw new Error('Provide --apt <pkg>, --npm <pkg>, or --pip <pkg>');
         }
-        if (npm) {
-          const existing = JSON.parse(row.packages_npm) as string[];
-          if (!existing.includes(npm)) {
-            existing.push(npm);
-            updateContainerConfigJson(id, 'packages_npm', existing);
+
+        for (const [flag, col, re, pkg] of requested) {
+          if (!pkg) continue;
+          if (!re.test(pkg)) throw new Error(`Invalid ${flag} package spec: "${pkg}"`);
+          const existing = JSON.parse(row[col]) as string[];
+          if (!existing.includes(pkg)) {
+            existing.push(pkg);
+            updateContainerConfigJson(id, col, existing);
           }
         }
 
         return {
-          added: { apt: apt || null, npm: npm || null },
+          added: Object.fromEntries(requested.map(([flag, , , pkg]) => [flag, pkg || null])),
           note: 'Image rebuild required for packages to take effect. Use install_packages from the agent or rebuild manually.',
         };
       },
@@ -340,7 +365,7 @@ registerResource({
     'config remove-package': {
       access: 'approval',
       description:
-        'Remove a package from a group. Requires `ncl groups restart --rebuild` to take effect. Use --id <group-id> and --apt <pkg> or --npm <pkg>.',
+        'Remove a package from a group. Requires `ncl groups restart --rebuild` to take effect. Use --id <group-id> and --apt <pkg>, --npm <pkg>, or --pip <pkg>.',
       handler: async (args) => {
         const id = args.id as string;
         if (!id) throw new Error('--id is required');
@@ -348,23 +373,23 @@ registerResource({
         const row = getContainerConfig(id);
         if (!row) throw new Error(`No container config for group: ${id}`);
 
-        const apt = args.apt as string | undefined;
-        const npm = args.npm as string | undefined;
-        if (!apt && !npm) throw new Error('Provide --apt <pkg> or --npm <pkg>');
-
-        if (apt) {
-          const existing = JSON.parse(row.packages_apt) as string[];
-          const filtered = existing.filter((p) => p !== apt);
-          updateContainerConfigJson(id, 'packages_apt', filtered);
+        const requested = PACKAGE_CHANNELS.map(([flag, col]) => [flag, col, args[flag] as string | undefined] as const);
+        if (requested.every(([, , pkg]) => !pkg)) {
+          throw new Error('Provide --apt <pkg>, --npm <pkg>, or --pip <pkg>');
         }
-        if (npm) {
-          const existing = JSON.parse(row.packages_npm) as string[];
-          const filtered = existing.filter((p) => p !== npm);
-          updateContainerConfigJson(id, 'packages_npm', filtered);
+
+        for (const [, col, pkg] of requested) {
+          if (!pkg) continue;
+          const existing = JSON.parse(row[col]) as string[];
+          updateContainerConfigJson(
+            id,
+            col,
+            existing.filter((p) => p !== pkg),
+          );
         }
 
         return {
-          removed: { apt: apt || null, npm: npm || null },
+          removed: Object.fromEntries(requested.map(([flag, , pkg]) => [flag, pkg || null])),
           note: 'Image rebuild required for package changes to take effect.',
         };
       },

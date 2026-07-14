@@ -486,6 +486,41 @@ async function buildContainerArgs(
   return args;
 }
 
+/**
+ * Build the per-agent-group Dockerfile that layers custom packages onto the
+ * base image. Pure/exported so the install logic is unit-testable without
+ * invoking Docker. Throws if there are no packages to install.
+ *
+ * - apt: system packages.
+ * - npm: pnpm global installs (allowlisted so postinstall scripts run).
+ * - pip: installed into the base image's /opt/wpenv venv (same venv as
+ *   weasyprint/openpyxl). Pin versions (e.g. `garminconnect==0.3.6`).
+ */
+export function buildPackageDockerfile(packages: { apt: string[]; npm: string[]; pip: string[] }): string {
+  const { apt, npm, pip } = packages;
+  if (apt.length === 0 && npm.length === 0 && pip.length === 0) {
+    throw new Error('No packages to install. Use install_packages first.');
+  }
+
+  let dockerfile = `FROM ${CONTAINER_IMAGE}\nUSER root\n`;
+  if (apt.length > 0) {
+    dockerfile += `RUN apt-get update && apt-get install -y ${apt.join(' ')} && rm -rf /var/lib/apt/lists/*\n`;
+  }
+  if (npm.length > 0) {
+    // pnpm skips build scripts unless packages are allowlisted. Append each
+    // to /root/.npmrc (base image sets it up for agent-browser) so packages
+    // with postinstall — e.g. playwright, puppeteer, native addons — don't
+    // install silently broken.
+    const allowlist = npm.map((p) => `echo 'only-built-dependencies[]=${p}' >> /root/.npmrc`).join(' && ');
+    dockerfile += `RUN ${allowlist} && pnpm install -g ${npm.join(' ')}\n`;
+  }
+  if (pip.length > 0) {
+    dockerfile += `RUN /opt/wpenv/bin/pip install --no-cache-dir ${pip.join(' ')} && rm -rf /root/.cache/pip\n`;
+  }
+  dockerfile += 'USER node\n';
+  return dockerfile;
+}
+
 /** Build a per-agent-group Docker image with custom packages. */
 export async function buildAgentGroupImage(agentGroupId: string): Promise<void> {
   const agentGroup = getAgentGroup(agentGroupId);
@@ -495,27 +530,19 @@ export async function buildAgentGroupImage(agentGroupId: string): Promise<void> 
   if (!configRow) throw new Error('Container config not found');
   const aptPackages = JSON.parse(configRow.packages_apt) as string[];
   const npmPackages = JSON.parse(configRow.packages_npm) as string[];
-  if (aptPackages.length === 0 && npmPackages.length === 0) {
-    throw new Error('No packages to install. Use install_packages first.');
-  }
+  const pipPackages = JSON.parse(configRow.packages_pip) as string[];
 
-  let dockerfile = `FROM ${CONTAINER_IMAGE}\nUSER root\n`;
-  if (aptPackages.length > 0) {
-    dockerfile += `RUN apt-get update && apt-get install -y ${aptPackages.join(' ')} && rm -rf /var/lib/apt/lists/*\n`;
-  }
-  if (npmPackages.length > 0) {
-    // pnpm skips build scripts unless packages are allowlisted. Append each
-    // to /root/.npmrc (base image sets it up for agent-browser) so packages
-    // with postinstall — e.g. playwright, puppeteer, native addons — don't
-    // install silently broken.
-    const allowlist = npmPackages.map((p) => `echo 'only-built-dependencies[]=${p}' >> /root/.npmrc`).join(' && ');
-    dockerfile += `RUN ${allowlist} && pnpm install -g ${npmPackages.join(' ')}\n`;
-  }
-  dockerfile += 'USER node\n';
+  const dockerfile = buildPackageDockerfile({ apt: aptPackages, npm: npmPackages, pip: pipPackages });
 
   const imageTag = `${CONTAINER_IMAGE_BASE}:${agentGroupId}`;
 
-  log.info('Building per-agent-group image', { agentGroupId, imageTag, apt: aptPackages, npm: npmPackages });
+  log.info('Building per-agent-group image', {
+    agentGroupId,
+    imageTag,
+    apt: aptPackages,
+    npm: npmPackages,
+    pip: pipPackages,
+  });
 
   // Write Dockerfile to temp file and build
   const tmpDockerfile = path.join(DATA_DIR, `Dockerfile.${agentGroupId}`);

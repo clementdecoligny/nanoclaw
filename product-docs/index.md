@@ -13,6 +13,7 @@ Instead of one general-purpose assistant that knows a little about everything, N
 | [Pepa](agents/pepa.md) | PepaLisboaBot | Family meal planning, grocery ordering, batch cooking |
 | [Alain](agents/alain.md) | AlainLisboaBot | Personal executive assistant — inbox, schedule, admin follow-ups |
 | [Edmond](agents/edmond.md) | DantesLisboaBot | Personal finance — expense tracking, salary management, investments |
+| [Coach](agents/coach.md) | Coach | Ultra-endurance cycling — HR-based training plans, activity review, Garmin push |
 
 ## How it works
 
