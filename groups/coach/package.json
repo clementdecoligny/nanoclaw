@@ -1,5 +1,7 @@
 {
 	"dependencies": {
-		"fit-file-parser": "^3.0.2"
+		"@garmin/fitsdk": "^21.208.0",
+		"fit-file-parser": "^3.0.2",
+		"xml2js": "^0.6.2"
 	}
 }
