@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z1/Z2 — Reactivation post-Alpes",
+  "date": "2026-07-25",
+  "description": "Piloter à la FC uniquement. Cible Z2 : 110-115 bpm.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — laisser les jambes se souvenir"},
+    {"type": "interval", "durationSec": 2700, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 110-115 bpm"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — retour au calme"}
+  ]
+}
