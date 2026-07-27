@@ -11,6 +11,7 @@
 | salade-betteraves-avocat-feta | 2026-07-14 | Dîner mardi, fait maison |
 | bolognaise | 2026-07-15 | Déj mercredi (tup congélo) + pâtes |
 | dumplings | 2026-07-25 | Dîner samedi retour voyage |
+| salade-pates-anchoiade-mediterraneenne | 2026-07-26 | Pique-nique dimanche (avec feta, carottes) |
 | soupe-legumes | 2026-06-25 | Batch en cours |
 | pad-thai-pollo | 2026-06-27 | Déjeuner samedi |
 | shakshuka-maison | 2026-06-30 | Dîner mardi |

@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h50",
+  "date": "2026-07-27",
+  "description": "Reprise post-Alpes. Piloter à la FC uniquement — ne pas dépasser 125 bpm.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90, "hrMax": 106, "note": "Z1 — laisser le moteur chauffer"},
+    {"type": "interval", "durationSec": 4800, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 112-118 bpm, ne pas dépasser 125"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90, "hrMax": 106, "note": "Z1"}
+  ]
+}

@@ -20,9 +20,11 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 | Star anis (anis étoilé) | ×1 | - | Ajouté 06/07 |
 | Atum ao Natural Tritão | ×3 | - | Épuisé 08/07 |
 | Gula del Norte | ×2 | - | Épuisé 08/07 — ❤️ validé |
+| Feta DOP Continente | ×4 | ⚠️ URGENT | Épuisée 26/07 |
+| Œufs frais | ×2 dúzias | ⚠️ URGENT | Épuisés 27/07 |
 | Baies de goji | ×1 | - | Ajouté 09/07 — Continente Bio (pid:6625958) |
 | Flocos de aveia integral grossos | ×4 | - | Ajouté 07/07 |
-| Yaourt grec Mythos Ligiero Continente 1kg | ×5 | - | Stock bas 09/07 — 1 en stock, commander 5 |
+| Yaourt grec Mythos Ligiero Continente 1kg | ×6 | ⚠️ URGENT | Épuisé 27/07 — max 6kg frigo |
 | Pão de Forma sem Côdea Bimbo | ×2 | - | Ajouté 09/07 (pid:6246547) |
 | Tomate seco (bote) | ×3 | - | Mis à jour 09/07 |
 | Pimentos assados em azeite (bocal) | ×2 | - | Mis à jour 09/07 |

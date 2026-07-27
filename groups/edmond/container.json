@@ -4,7 +4,8 @@
     "apt": [
       "python3-openpyxl"
     ],
-    "npm": []
+    "npm": [],
+    "pip": []
   },
   "imageTag": "nanoclaw-agent-v2-3d096325:ag-1777719573240-ynm5lh",
   "additionalMounts": [

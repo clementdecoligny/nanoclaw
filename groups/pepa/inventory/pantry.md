@@ -184,27 +184,31 @@ _Inventaire au 2026-04-12 — 1 photo = 1 item physique_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-06-22 (photos inventaire Clément)_
+_Mis à jour 2026-07-26 (inventaire Clément message)_
 
 ### 🥦 Légumes (frigo — tiroir)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Salade verte | 2 têtes | 1 vieille (panier 25/06) + 1 nouvelle (panier 09/07) — utiliser vieille en premier |
+| Salade verte | 0 | ❌ À vérifier — non mentionnée 26/07 |
 | Betteraves | 0 | ❌ Utilisées déj 08/07 |
-| Tomates | ~8 | ~4 très mûres ⚠️ (urgence) + 4 fraîches (panier 09/07) |
-| Carottes | ~4–5 | 1-2 anciennes + 3 panier 09/07 |
-| Courgette | 1 très grosse | Panier 09/07 |
-| Poireau | 0 | ❌ Utilisé par Branca (soupe sem. dernière) |
-| Concombre | 2 | 1 frigo (ancien) + 1 panier 09/07 — utiliser ancien en premier |
-| Avocat | 0 | ❌ Salade dîner 14/07 |
-| Fruits de la passion | 2–3 | Frigo — bien mûrs (ridés = prêts) |
+| Tomates Cœur de bœuf | 4 | 26/07, 1 utilisée salade pâtes pique-nique |
+| Tomates cerises bio | 250g | Acheté 27/07 |
+| Carottes | 5 | 26/07, 3 utilisées salade pâtes pique-nique |
+| Courgettes | 4 | 26/07 |
+| Poireau | 1 | 26/07 |
+| Céleri | un peu | 26/07 |
+| Poivrons rouges | 2 | 26/07 |
+| Aubergine | 1 | 26/07 |
+| Concombre | 1 | 26/07 |
+| Avocat | 0 | ❌ Salade pâtes pique-nique 26/07 |
+| Fruits de la passion | 0 | Consommés |
 
 ### 🧺 Légumes (hors frigo — plan de travail)
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes de terre | 0 | ❌ Purée enfants ven 10/07 |
+| Pommes de terre | 6 | 26/07 |
 | Ail | 3 têtes | Plan de travail |
 | Oignons jaunes | 1 | Panier 09/07 |
 | Gingembre frais | 0 | |
@@ -213,13 +217,13 @@ _Mis à jour 2026-06-22 (photos inventaire Clément)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Oranges | ~4–5 | Frigo |
-| Clémentines/mandarines | 2–3 | Frigo |
-| Citrons jaunes | ~4 | Mix plan de travail + frigo |
-| Citrons verts | ~2 | Frigo |
-| Bananes | 7 | Acheté local 06/07 |
+| Oranges | 2 | 26/07 |
+| Clémentines/mandarines | 0 | Consommées |
+| Citrons jaunes | 2 | 26/07 |
+| Citrons verts | 0 | Consommés |
+| Bananes | ~450g | Madère — acheté 27/07 |
 | Pommes | 0 | Non visibles |
-| Avocats | 0 | ❌ Utilisé déj 08/07 |
+| Avocats | 0 | ❌ — demi-avocat frigo comptabilisé ci-dessus |
 
 ---
 
@@ -230,13 +234,15 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Item | Quantity | Notes |
 |---|---|---|
 | Lait UHT M/G Mimosa B ESSEN 1L | 15 × 1L | +3 livraison 29/05 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | 1 × 1kg | ⚠️ Stock bas — 09/07 |
-| Œufs frais | ~6 | ⚠️ Stock bas — consommés au ptit-dej 12/07 |
+| Greek yogurt — Mythos Ligiero Continente 1kg | 2 × 1kg | Acheté 27/07 |
+| Œufs frais | ~12 | Bio — acheté 27/07 |
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
-| Feta DOP Continente | 5 blocks | 1 ancien + 4 livraison 29/05 |
+| Feta DOP Continente | 1 × 150g | Omiros — acheté 27/07 (petit bloc) |
 | Queijo Ricotta Granarolo | 0 | Utilisée salade pâtes 30/05 |
+| Ricotta Finetta Galbani | 1 | Acheté 27/07 — pour Norma (substitut ricotta salata) |
+| Requeijão Ovelha Seia Lagos | 1 | Acheté 27/07 — fromage brebis portugais, plus salé que ricotta |
 | Queijo Parmigiano Reggiano DOP Continente | 2 | 1 ancien + 1 livraison 29/05 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Preparado Carne Picada Bovino Continente | ~500g | ⚠️ Urgent — utiliser ou congeler ce soir |
