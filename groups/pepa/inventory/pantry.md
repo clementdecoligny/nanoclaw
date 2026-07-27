@@ -262,7 +262,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
 | Panados de frango (escalopes panées poulet) | 1 tupperware | 1 utilisé déj 07/07 |
-| Dumplings | reste (qté TBC) | 9 consommés dîner 13/07 — vérifier ce qu'il reste dans la boîte |
+| Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
 | Bolognese (maison) | 0 | ❌ Déj 15/07 |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
 | Pains de burger | 0 | ❌ Consommés |
