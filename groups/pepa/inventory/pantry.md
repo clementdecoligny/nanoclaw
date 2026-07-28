@@ -195,7 +195,7 @@ _Mis à jour 2026-07-26 (inventaire Clément message)_
 | Tomates Cœur de bœuf | 4 | 26/07, 1 utilisée salade pâtes pique-nique |
 | Tomates cerises bio | 250g | Acheté 27/07 |
 | Carottes | 5 | 26/07, 3 utilisées salade pâtes pique-nique |
-| Courgettes | 4 | 26/07 |
+| Courgettes | 3 | 26/07, 1 utilisée dîner enfants 28/07 |
 | Poireau | 1 | 26/07 |
 | Céleri | un peu | 26/07 |
 | Poivrons rouges | 2 | 26/07 |
@@ -245,7 +245,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Requeijão Ovelha Seia Lagos | 1 | Acheté 27/07 — fromage brebis portugais, plus salé que ricotta |
 | Queijo Parmigiano Reggiano DOP Continente | 2 | 1 ancien + 1 livraison 29/05 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
-| Preparado Carne Picada Bovino Continente | ~500g | ⚠️ Urgent — utiliser ou congeler ce soir |
+| Preparado Carne Picada Bovino Continente | 0 | ❌ Utilisé dîner enfants 28/07 |
 | Pão de Forma sem Côdea Bimbo | 2 | |
 | Peito de frango frais | 0 | Congelé 08/07 (~250g) |
 | Babybel light | 12 | Acheté local 06/07 |
@@ -278,7 +278,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Feijoada angolana (Branca) | 1–2 tupperwares | Confirmé 27/06 (qté exacte TBC) |
-| Soupe / caldo | plusieurs tupperwares | ✅ Confirmé 12/07 par Clément |
+| Soupe / caldo | plusieurs tupperwares | ✅ Confirmé 12/07 par Clément — sopa supermarchée utilisée 27/07 |
 | Edamame | 2 sachets | Confirmé 27/06 |
 | Feijão verde (haricots verts surgelés) | 1 sachet | Confirmé 27/06 |
 | Alcachofas troceadas (artichauts) | 1 sachet | Confirmé 27/06 |

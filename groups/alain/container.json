@@ -19,7 +19,8 @@
   },
   "packages": {
     "apt": [],
-    "npm": []
+    "npm": [],
+    "pip": []
   },
   "additionalMounts": [
     {
