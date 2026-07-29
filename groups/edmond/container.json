@@ -28,5 +28,6 @@
   "skills": "all",
   "groupName": "Edmond",
   "assistantName": "Edmond",
-  "agentGroupId": "ag-1777719573240-ynm5lh"
+  "agentGroupId": "ag-1777719573240-ynm5lh",
+  "model": "opus"
 }

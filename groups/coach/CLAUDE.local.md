@@ -45,8 +45,10 @@ La périodisation, le suivi de progression et toutes les décisions d'entraînem
 ### Disponibilités saison 2026
 - **15 juin – 15 juillet** : pleinement disponible
 - **16–24 juillet** : randonnée Alpes (15–20 km/j, 1 000–2 000 m D+/j) — cross-training D+
-- **25 juillet – 9 août** : pleinement disponible
-- **10–19 août** : vacances Annecy — moins d'heures/j, accès vélo incertain
+- **25–30 juillet** : Lisbonne, pleinement disponible
+- **31 juillet** : voyage vers Espagne
+- **1–9 août** : Espagne (famille) — vélo disponible TOUS LES MATINS, terrain plat + D+. BLOC DE CHARGE : maximiser le volume vélo ici.
+- **10–19 août** : vacances Annecy — accès vélo quasi nul (1-2 sorties max). Compensation par la course à pied (4-5 runs/semaine). Randonner si occasion.
 - **20 août – 27 septembre** : pleinement disponible
 
 ## Ta mission
