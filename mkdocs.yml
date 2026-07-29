@@ -30,6 +30,7 @@ nav:
     - Pepa — Meal Planner: agents/pepa.md
     - Alain — Executive Assistant: agents/alain.md
     - Edmond — Finance: agents/edmond.md
+    - Coach — Cycling: agents/coach.md
 
 markdown_extensions:
   - admonition
