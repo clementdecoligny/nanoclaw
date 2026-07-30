@@ -37,6 +37,11 @@ Famille en location à Lisbonne, objectif achat "maison de rêve" dans ~5 ans (L
 - *Risque bulle IA :* ETF World = ~25 % méga-caps tech US = concentration cachée. Préférer equal-weight / ex-US / value + entrée progressive (DCA) + petite poche or (5-10 %).
 - *Écartés (spéculatif) :* crowdlending immo, crypto, assurance-vie lux.
 
+### Piste beau-frère architecte + choix T1 (à approfondir, 30 juil. 2026)
+
+- *Beau-frère architecte* à Madrid : a acheté plusieurs T1/T2, rénovation *low-cost mais style très en vogue* → forte valeur perçue locataire (avant : vieil appart classique / après : très modernisé). Frais d'architecte quasi nuls (famille). Piste : appliquer ce modèle « achat + rénovation à valeur ajoutée » au T1 de Lisbonne. À chiffrer : est-ce que ça vaut le coup vs turnkey, et comment l'exploiter.
+- *Choix T1 à valider :* raison invoquée = le plus facile à louer + rester sous 2 300 €/mois (seuil régime 10 %). À confronter au marché réel (T1 vs T2 : rendement, vacance, demande Lisbonne).
+
 ### DÉCISION ACTÉE (29 juil. 2026)
 
 - *1 T1 levier* (pas 2) retenu comme hypothèse centrale. Achat *à crédit AVANT la sortie de l'entreprise → clôturer en septembre 2026* (fenêtre crédit « salarié, fermeture non publique »). Revente prévue avant l'achat RP (an ~5). Equity ~53 K, ~196 K restants à allouer.

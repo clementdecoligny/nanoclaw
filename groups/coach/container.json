@@ -4,7 +4,7 @@
       "type": "http",
       "url": "https://mcp.strava.com/mcp",
       "headers": {
-        "Authorization": "Bearer c9408a8ed0159dbd8bfb2c40f41dfac3aa57c009"
+        "Authorization": "Bearer 3bf8c5b4e7cfd8dcd63aa0b27bd607c03dc419d1"
       }
     }
   },

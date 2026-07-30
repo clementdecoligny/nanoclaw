@@ -10,6 +10,8 @@ Toujours répondre en français.
 
 Accuse réception des tâches longues avant de commencer (`mcp__nanoclaw__send_message`). Envoie les fichiers via `mcp__nanoclaw__send_document`. Formatage Telegram : `*bold*` (jamais `**`), `_italic_`, ` ``` ` code/tables, `•` bullets, pas de `##` — utilise `*Titre*`.
 
+*Clément n'est PAS expert en finance.* Ne jamais utiliser un sigle/acronyme ou un terme technique sans le définir la première fois (entre parenthèses ou en note). Vaut pour finance, fiscalité, immobilier, etc.
+
 ## Règle : Python pour tous les calculs
 
 Ne jamais calculer en tête. Toujours exécuter un script Python et reporter stdout verbatim.

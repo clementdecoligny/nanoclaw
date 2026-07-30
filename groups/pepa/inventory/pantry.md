@@ -192,15 +192,15 @@ _Mis à jour 2026-07-26 (inventaire Clément message)_
 |---|---|---|
 | Salade verte | 0 | ❌ À vérifier — non mentionnée 26/07 |
 | Betteraves | 0 | ❌ Utilisées déj 08/07 |
-| Tomates Cœur de bœuf | 4 | 26/07, 1 utilisée salade pâtes pique-nique |
+| Tomates Cœur de bœuf | 2 | Salade feta dîner 29/07 |
 | Tomates cerises bio | 250g | Acheté 27/07 |
-| Carottes | 5 | 26/07, 3 utilisées salade pâtes pique-nique |
-| Courgettes | 3 | 26/07, 1 utilisée dîner enfants 28/07 |
+| Carottes | 0 | ❌ Épuisées 30/07 |
+| Courgettes | 1 | 1 utilisée dîner enfants 28/07 + 1 dîner 29/07 |
 | Poireau | 1 | 26/07 |
 | Céleri | un peu | 26/07 |
 | Poivrons rouges | 2 | 26/07 |
-| Aubergine | 1 | 26/07 |
-| Concombre | 1 | 26/07 |
+| Aubergine | 0 | ❌ Utilisée Pasta alla Norma 27/07 |
+| Concombre | 0 | ❌ Épuisé 30/07 |
 | Avocat | 0 | ❌ Salade pâtes pique-nique 26/07 |
 | Fruits de la passion | 0 | Consommés |
 
@@ -239,7 +239,7 @@ _Last updated: 2026-05-29 (Continente delivery processed — commande 27/05)_
 | Pimento assado | 0 | Épuisé 16/06 |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
-| Feta DOP Continente | 1 × 150g | Omiros — acheté 27/07 (petit bloc) |
+| Feta DOP Continente | ~80g | Salade feta dîner 29/07 |
 | Queijo Ricotta Granarolo | 0 | Utilisée salade pâtes 30/05 |
 | Ricotta Finetta Galbani | 1 | Acheté 27/07 — pour Norma (substitut ricotta salata) |
 | Requeijão Ovelha Seia Lagos | 1 | Acheté 27/07 — fromage brebis portugais, plus salé que ricotta |
