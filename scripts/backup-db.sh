@@ -51,10 +51,11 @@ fi
 
 # Branch hygiene: flag branches fully merged into main (safe to delete) and
 # branches untouched 2+ days (the user finishes same-day work, so anything
-# older than that is forgotten, not in progress). Written for the main
-# agent's scheduled task to read and relay as a chat message — this script
-# only detects, it never deletes or messages anyone itself.
-HYGIENE_FILE="$REPO_DIR/data/git-branch-hygiene.json"
+# older than that is forgotten, not in progress). Written into Alain's group
+# folder (mounted at /workspace/agent in his container) so his scheduled
+# task can read and relay it as a chat message — this script only detects,
+# it never deletes or messages anyone itself.
+HYGIENE_FILE="$REPO_DIR/groups/alain/git-branch-hygiene.json"
 mkdir -p "$(dirname "$HYGIENE_FILE")"
 
 merged_json="[]"

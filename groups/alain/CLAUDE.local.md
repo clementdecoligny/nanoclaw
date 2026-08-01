@@ -77,6 +77,27 @@ One pass per message: when Clément tells you something, handle everything that 
 - `/workspace/agent/movies.md` — liste de films à regarder (pour recommandations selon l'humeur)
 - `/workspace/agent/movies-pepe.md` — liste des films favoris de Pepe Daroca (28 classiques, titres originaux)
 
+## Git Branch Hygiene Check
+
+The nanoclaw project itself has no external backup beyond the nightly `scripts/backup-db.sh` push to `origin`. Clément doesn't reliably remember to delete old branches, so this is a standing check, not something to wait to be asked for.
+
+That script writes `/workspace/agent/git-branch-hygiene.json` (only when there's something to report) with:
+- `merged` — branches fully merged into `main`, safe to delete
+- `stale` — branches untouched 2+ days and not merged. Clément always finishes what he starts same-day, so anything older is forgotten, not in-progress — flag for review, don't delete.
+
+If not already scheduled, set up:
+
+```
+schedule_task(
+  prompt: "Read /workspace/agent/git-branch-hygiene.json if it exists. Message Clément a short summary in French: merged branches as 'à supprimer' with the git branch -d command, stale branches as 'à vérifier — Nj sans activité' without deleting them. Then delete the file.",
+  schedule_type: "cron",
+  schedule_value: "30 9 * * *",
+  script: "test -f /workspace/agent/git-branch-hygiene.json && echo '{\"wakeAgent\": true}' || echo '{\"wakeAgent\": false}'"
+)
+```
+
+Runs shortly after the nightly backup (00:00). Never delete branches yourself — only report; Clément decides.
+
 ## System Documentation
 
 The full product documentation for this system is at: https://nanoclawdoc.netlify.app/

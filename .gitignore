@@ -21,6 +21,7 @@ groups/*/logs/
 groups/*/.heartbeat-bootstrapped
 groups/*/HEARTBEAT.md
 groups/*/attachments/
+groups/alain/git-branch-hygiene.json
 *Zone.Identifier
 
 # Secrets
