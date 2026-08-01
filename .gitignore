@@ -6,6 +6,11 @@ node_modules/
 # Build output
 dist/
 
+# Python
+__pycache__/
+*.pyc
+.venv/
+
 # Local data & auth
 store/
 data/
@@ -42,4 +47,6 @@ site/
 
 # Garmin OAuth token stores (per-group) — never commit credentials/tokens
 groups/*/.garminconnect/
-.venv/garmin/
+
+# Runtime lock files (transient, not durable content)
+.claude/scheduled_tasks.lock
