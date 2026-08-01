@@ -16,12 +16,21 @@ import { getContainerConfig } from './db/container-configs.js';
 import { getAgentGroup } from './db/agent-groups.js';
 import type { AgentGroup, ContainerConfigRow } from './types.js';
 
-export interface McpServerConfig {
+export interface McpServerStdioConfig {
   command: string;
   args?: string[];
   env?: Record<string, string>;
   instructions?: string;
 }
+
+export interface McpServerRemoteConfig {
+  type: 'http' | 'sse';
+  url: string;
+  headers?: Record<string, string>;
+  instructions?: string;
+}
+
+export type McpServerConfig = McpServerStdioConfig | McpServerRemoteConfig;
 
 export interface AdditionalMountConfig {
   hostPath: string;
@@ -69,11 +78,31 @@ export function configFromDb(row: ContainerConfigRow, group: AgentGroup): Contai
 }
 
 /**
+ * Resolve dynamic token placeholders in remote MCP server headers.
+ * Currently supports `Bearer {{strava}}` — replaced with a fresh Strava
+ * access token at spawn time.
+ */
+async function resolveRemoteMcpTokens(config: ContainerConfig): Promise<void> {
+  for (const mcp of Object.values(config.mcpServers)) {
+    if (!('url' in mcp) || !mcp.headers) continue;
+    for (const [key, value] of Object.entries(mcp.headers)) {
+      if (value === 'Bearer {{strava}}') {
+        const { getStravaAccessToken } = await import('./strava-token.js');
+        const token = await getStravaAccessToken();
+        if (token) {
+          mcp.headers[key] = `Bearer ${token}`;
+        }
+      }
+    }
+  }
+}
+
+/**
  * Materialize `container.json` from the DB. Called at spawn time so the
  * container always sees fresh config. Returns the `ContainerConfig` for
  * use by the caller (buildMounts, buildContainerArgs, etc.).
  */
-export function materializeContainerJson(agentGroupId: string): ContainerConfig {
+export async function materializeContainerJson(agentGroupId: string): Promise<ContainerConfig> {
   const group = getAgentGroup(agentGroupId);
   if (!group) throw new Error(`Agent group not found: ${agentGroupId}`);
 
@@ -81,6 +110,9 @@ export function materializeContainerJson(agentGroupId: string): ContainerConfig 
   if (!row) throw new Error(`Container config not found for agent group: ${agentGroupId}`);
 
   const config = configFromDb(row, group);
+
+  // Resolve dynamic tokens in remote MCP server headers before writing
+  await resolveRemoteMcpTokens(config);
 
   const p = path.join(GROUPS_DIR, group.folder, 'container.json');
   const dir = path.dirname(p);
