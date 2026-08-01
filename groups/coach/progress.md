@@ -153,3 +153,4 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 - W28 2026 : objectif 3/3
 
 **Tendance récente :** relance depuis W25. 3 semaines consécutives avec renfo. C'est la fenêtre de changement — tenir jusqu'à M-N.
+
