@@ -48,3 +48,42 @@ git push origin "$BRANCH"
 if [ "$BRANCH" != "main" ]; then
   echo "backup-db: snapshotted branch '$BRANCH', not 'main' — main's backup history has a gap for today until this is merged" >&2
 fi
+
+# Branch hygiene: flag branches fully merged into main (safe to delete) and
+# branches untouched 2+ days (the user finishes same-day work, so anything
+# older than that is forgotten, not in progress). Written for the main
+# agent's scheduled task to read and relay as a chat message — this script
+# only detects, it never deletes or messages anyone itself.
+HYGIENE_FILE="$REPO_DIR/data/git-branch-hygiene.json"
+mkdir -p "$(dirname "$HYGIENE_FILE")"
+
+merged_json="[]"
+stale_json="[]"
+merged_list=""
+stale_list=""
+
+while read -r b; do
+  [ "$b" = "main" ] && continue
+  if git merge-base --is-ancestor "$b" main 2>/dev/null; then
+    merged_list="$merged_list$b"$'\n'
+  else
+    ts=$(git log -1 --format=%ct "$b")
+    age_days=$(( ( $(date +%s) - ts ) / 86400 ))
+    if [ "$age_days" -ge 2 ]; then
+      stale_list="$stale_list$b (${age_days}d)"$'\n'
+    fi
+  fi
+done < <(git for-each-ref refs/heads --format='%(refname:short)')
+
+if [ -n "$merged_list" ] || [ -n "$stale_list" ]; then
+  node -e '
+    const [merged, stale] = process.argv.slice(1);
+    console.log(JSON.stringify({
+      checkedAt: new Date().toISOString(),
+      merged: merged.trim() ? merged.trim().split("\n") : [],
+      stale: stale.trim() ? stale.trim().split("\n") : [],
+    }, null, 2));
+  ' "$merged_list" "$stale_list" > "$HYGIENE_FILE"
+else
+  rm -f "$HYGIENE_FILE"
+fi
