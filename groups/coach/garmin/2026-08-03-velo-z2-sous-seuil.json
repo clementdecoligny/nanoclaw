@@ -1,0 +1,14 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 + sous-seuil 2×20 — 3 août",
+  "date": "2026-08-03",
+  "description": "Z2 avec 2 blocs sous-seuil 20 min à 132-140 bpm. Genou 0/10 obligatoire avant de démarrer les blocs.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — échauffement progressif"},
+    {"type": "interval", "durationSec": 3600, "hrMin": 107, "hrMax": 128, "note": "Z2 — montées intégrées, viser 115-122 en côte"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Bloc sous-seuil 1 — bas Z3, stopper si ≥141"},
+    {"type": "recovery", "durationSec": 600,  "hrMin": 90,  "hrMax": 115, "note": "Récupération Z1/Z2 basse"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Bloc sous-seuil 2 — maintenir, jamais Z4 (146+)"},
+    {"type": "cooldown", "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — retour au calme"}
+  ]
+}
