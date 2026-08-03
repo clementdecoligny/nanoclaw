@@ -154,6 +154,34 @@ function safeParseContent(raw: string): { text?: string; sender?: string; sender
 }
 
 /**
+ * Instruction text the agent receives in place of a `/model` command.
+ *
+ * The agent already has every tool this needs: `ask_user_question` (blocking
+ * — renders a button card and returns the clicked value inline) and
+ * `set_model_config`. Keeping the flow agent-side means no host-side card
+ * plumbing and no second turn per click.
+ */
+function modelCommandInstruction(argument?: string): string {
+  if (argument) {
+    return (
+      `The admin ran "/model ${argument}". If "${argument}" is one of opus, sonnet, or haiku, ` +
+      `call set_model_config with model="${argument}" (leave effort unset so it stays as-is) and confirm what you set. ` +
+      `Otherwise reply that "${argument}" is not a valid model and list: opus, sonnet, haiku. Do not ask any questions.`
+    );
+  }
+  return (
+    'The admin ran "/model". Run this two-step flow now, without any other commentary:\n' +
+    '1. Call ask_user_question with title "Choose model", a question naming your current model, and options ' +
+    '[{"label":"Opus","value":"opus"},{"label":"Sonnet","value":"sonnet"},{"label":"Haiku","value":"haiku"},' +
+    '{"label":"Keep current","value":"keep_current"}].\n' +
+    '2. Call ask_user_question with title "Choose effort", a question naming your current effort, and options ' +
+    '["low","medium","high","xhigh","max"] (xhigh and max are the deep-research tiers).\n' +
+    '3. Call set_model_config with the chosen effort, plus the chosen model unless the answer was keep_current.\n' +
+    'Then confirm in one short sentence what was set.'
+  );
+}
+
+/**
  * Route an inbound message from a channel adapter to the correct session.
  * Creates messaging group + session if they don't exist yet.
  */
@@ -429,11 +457,22 @@ async function deliverToAgent(
   // Command gate: classify slash commands before they reach the container.
   // Filtered commands are dropped silently. Denied admin commands get a
   // permission-denied response written directly to messages_out.
+  let messageContent = event.message.content;
   if (event.message.kind === 'chat' || event.message.kind === 'chat-sdk') {
     const gate = gateCommand(event.message.content, userId, agent.agent_group_id);
     if (gate.action === 'filter') {
       log.debug('Filtered command dropped by gate', { agentGroupId: agent.agent_group_id });
       return;
+    }
+    if (gate.action === 'model') {
+      // Admin-gated already. Hand the agent an instruction rather than the
+      // raw slash command — it drives the flow with ask_user_question +
+      // set_model_config, both tools it already has.
+      messageContent = JSON.stringify({
+        ...safeParseContent(event.message.content),
+        text: modelCommandInstruction(gate.argument),
+      });
+      log.info('Model command routed to agent', { argument: gate.argument, agentGroupId: agent.agent_group_id });
     }
     if (gate.action === 'deny') {
       writeOutboundDirect(session.agent_group_id, session.id, {
@@ -456,7 +495,7 @@ async function deliverToAgent(
     platformId: deliveryAddr.platformId,
     channelType: deliveryAddr.channelType,
     threadId: deliveryAddr.threadId,
-    content: event.message.content,
+    content: messageContent,
     trigger: wake ? 1 : 0,
   });
 

@@ -124,4 +124,39 @@ export const addMcpServer: McpToolDefinition = {
   },
 };
 
-registerTools([installPackages, addMcpServer]);
+const MODEL_ALIASES = ['opus', 'sonnet', 'haiku'];
+const EFFORT_LEVELS = ['low', 'medium', 'high', 'xhigh', 'max'];
+
+export const setModelConfig: McpToolDefinition = {
+  tool: {
+    name: 'set_model_config',
+    description:
+      'Change YOUR model and/or reasoning effort. Used by the /model command. Fire-and-forget: the host applies the change and restarts your container, so your reply should tell the user what was set before you finish. Effort xhigh/max are the "deep research" tiers.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        model: { type: 'string', enum: MODEL_ALIASES, description: 'Model alias to switch to' },
+        effort: { type: 'string', enum: EFFORT_LEVELS, description: 'Reasoning effort level' },
+      },
+    },
+  },
+  async handler(args) {
+    const model = args.model as string | undefined;
+    const effort = args.effort as string | undefined;
+    if (!model && !effort) return err('At least one of model or effort is required');
+    if (model && !MODEL_ALIASES.includes(model)) return err(`Unknown model "${model}". Valid: ${MODEL_ALIASES.join(', ')}`);
+    if (effort && !EFFORT_LEVELS.includes(effort)) return err(`Unknown effort "${effort}". Valid: ${EFFORT_LEVELS.join(', ')}`);
+
+    const requestId = generateId();
+    writeMessageOut({
+      id: requestId,
+      kind: 'system',
+      content: JSON.stringify({ action: 'set_model_config', model, effort }),
+    });
+
+    log(`set_model_config: ${requestId} → model=${model ?? '(unchanged)'} effort=${effort ?? '(unchanged)'}`);
+    return ok(`Config update submitted (model=${model ?? 'unchanged'}, effort=${effort ?? 'unchanged'}). Container will restart.`);
+  },
+};
+
+registerTools([installPackages, addMcpServer, setModelConfig]);

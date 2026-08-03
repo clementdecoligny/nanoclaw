@@ -39,6 +39,21 @@ vi.mock('./container-runner.js', () => ({
   killContainer: vi.fn(),
 }));
 
+// gateCommand's admin/argument parsing is covered by src/command-gate.test.ts.
+// Here we only verify the router wiring: a 'model' GateResult rewrites the
+// message into an agent instruction and still routes+wakes normally.
+// The mock delegates to the real implementation by default (the other router
+// tests depend on real classification of plain text) and is overridden
+// per-test with mockReturnValueOnce — this file doesn't wire the permissions
+// module's setSenderResolver, so userId is always null here, which would
+// otherwise make every admin command deny.
+const mockGateCommand = vi.fn();
+vi.mock('./command-gate.js', async () => {
+  const actual = await vi.importActual<typeof import('./command-gate.js')>('./command-gate.js');
+  mockGateCommand.mockImplementation(actual.gateCommand);
+  return { gateCommand: (...args: unknown[]) => mockGateCommand(...args) };
+});
+
 // Override DATA_DIR for tests
 vi.mock('./config.js', async () => {
   const actual = await vi.importActual('./config.js');
@@ -594,6 +609,105 @@ describe('router', () => {
     expect(wakeContainer).not.toHaveBeenCalled();
     // No session should have been created for this agent.
     expect(findSession('mg-1', null)).toBeUndefined();
+  });
+
+  it('/model <alias> is rewritten into a set_model_config instruction, then routed and woken normally', async () => {
+    const { routeInbound } = await import('./router.js');
+    const { wakeContainer } = await import('./container-runner.js');
+    (wakeContainer as unknown as ReturnType<typeof vi.fn>).mockClear();
+    mockGateCommand.mockReturnValueOnce({ action: 'model', argument: 'opus' });
+
+    await routeInbound({
+      channelType: 'discord',
+      platformId: 'chan-123',
+      threadId: null,
+      message: {
+        id: 'msg-model',
+        kind: 'chat',
+        content: JSON.stringify({ text: '/model opus' }),
+        timestamp: now(),
+      },
+    });
+
+    const session = findSession('mg-1', null);
+    expect(session).toBeDefined();
+    const db = new Database(inboundDbPath('ag-1', session!.id));
+    const rows = db.prepare('SELECT * FROM messages_in').all() as Array<{ content: string }>;
+    db.close();
+
+    expect(rows).toHaveLength(1);
+    const text = JSON.parse(rows[0].content).text as string;
+    // Raw slash command replaced by an instruction naming the target tool.
+    expect(text).toContain('set_model_config');
+    expect(text).toContain('opus');
+    expect(text).not.toMatch(/^\/model/);
+    expect(wakeContainer).toHaveBeenCalled();
+  });
+
+  it('bare /model is rewritten into a two-step ask_user_question wizard instruction', async () => {
+    const { routeInbound } = await import('./router.js');
+    mockGateCommand.mockReturnValueOnce({ action: 'model', argument: undefined });
+
+    await routeInbound({
+      channelType: 'discord',
+      platformId: 'chan-123',
+      threadId: null,
+      message: {
+        id: 'msg-model-bare',
+        kind: 'chat',
+        content: JSON.stringify({ text: '/model' }),
+        timestamp: now(),
+      },
+    });
+
+    const session = findSession('mg-1', null);
+    const db = new Database(inboundDbPath('ag-1', session!.id));
+    const rows = db.prepare('SELECT * FROM messages_in').all() as Array<{ content: string }>;
+    db.close();
+
+    const text = JSON.parse(rows[0].content).text as string;
+    expect(text).toContain('ask_user_question');
+    expect(text).toContain('set_model_config');
+    expect(text).toContain('keep_current');
+    expect(text).toContain('xhigh');
+  });
+
+  it('a denied /model writes a permission-denied reply and never reaches the agent', async () => {
+    const { routeInbound } = await import('./router.js');
+    const { wakeContainer } = await import('./container-runner.js');
+    (wakeContainer as unknown as ReturnType<typeof vi.fn>).mockClear();
+    mockGateCommand.mockReturnValueOnce({ action: 'deny', command: '/model' });
+
+    await routeInbound({
+      channelType: 'discord',
+      platformId: 'chan-123',
+      threadId: null,
+      message: {
+        id: 'msg-model-denied',
+        kind: 'chat',
+        content: JSON.stringify({ text: '/model opus' }),
+        timestamp: now(),
+      },
+    });
+
+    expect(wakeContainer).not.toHaveBeenCalled();
+
+    const session = findSession('mg-1', null);
+    expect(session).toBeDefined();
+
+    // Nothing reached the agent...
+    const inDb = new Database(inboundDbPath('ag-1', session!.id));
+    const inRows = inDb.prepare('SELECT * FROM messages_in').all();
+    inDb.close();
+    expect(inRows).toHaveLength(0);
+
+    // ...but the denial reply was queued for delivery. (Regression guard for
+    // the writeOutboundDirect readonly-DB bug: this path used to throw.)
+    const outDb = new Database(outboundDbPath('ag-1', session!.id));
+    const outRows = outDb.prepare('SELECT content FROM messages_out').all() as Array<{ content: string }>;
+    outDb.close();
+    expect(outRows).toHaveLength(1);
+    expect(JSON.parse(outRows[0].content).text).toContain('Permission denied');
   });
 });
 
