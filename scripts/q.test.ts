@@ -35,8 +35,13 @@ describe('scripts/q.ts', () => {
     fs.rmSync(tempDir, { recursive: true, force: true });
   });
 
+  // Invoke the tsx binary directly rather than via `pnpm exec tsx`. pnpm's own
+  // startup costs ~4.4s here, which alone exceeded the old 5s default timeout
+  // and made every test in this file a coin flip. Resolving the binary skips it.
+  const TSX = path.resolve(__dirname, '..', 'node_modules', '.bin', 'tsx');
+
   function run(sql: string): { stdout: string; stderr: string; status: number } {
-    const r = spawnSync('pnpm', ['exec', 'tsx', Q, dbPath, sql], {
+    const r = spawnSync(TSX, [Q, dbPath, sql], {
       encoding: 'utf-8',
       cwd: path.resolve(__dirname, '..'),
     });

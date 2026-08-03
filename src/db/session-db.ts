@@ -9,10 +9,36 @@ import Database from 'better-sqlite3';
 
 import { INBOUND_SCHEMA, OUTBOUND_SCHEMA } from './schema.js';
 
+/**
+ * Durability pragmas for session DBs.
+ *
+ * journal_mode=DELETE is load-bearing in production and is NEVER relaxed —
+ * see the header of container/agent-runner/src/db/connection.ts for why
+ * (cross-mount visibility between host and container).
+ *
+ * synchronous defaults to FULL, which means every commit fsyncs the journal
+ * file it just created and again when it unlinks it. On hosts with slow fsync
+ * (WSL2 measures ~148ms per fsync) that is ~325ms per single-row write, enough
+ * to blow vitest's per-test budget during setup alone.
+ *
+ * Under test we drop to synchronous=OFF: ~0.4ms per write, a ~600x speedup on
+ * the suite. This is safe *only* because tests never survive a crash — the
+ * temp dirs are wiped in beforeEach. It must never apply in production, where
+ * a torn write means a lost or corrupted message.
+ */
+const IS_TEST = process.env.VITEST === 'true' || process.env.NODE_ENV === 'test';
+
+function applySessionPragmas(db: Database.Database, opts: { readonly?: boolean } = {}): void {
+  // A readonly connection cannot change journal_mode; the writer owns it.
+  if (!opts.readonly) db.pragma('journal_mode = DELETE');
+  if (IS_TEST) db.pragma('synchronous = OFF');
+  db.pragma('busy_timeout = 5000');
+}
+
 /** Apply the inbound or outbound schema to a DB file. Idempotent. */
 export function ensureSchema(dbPath: string, schema: 'inbound' | 'outbound'): void {
   const db = new Database(dbPath);
-  db.pragma('journal_mode = DELETE');
+  applySessionPragmas(db);
   db.exec(schema === 'inbound' ? INBOUND_SCHEMA : OUTBOUND_SCHEMA);
   db.close();
 }
@@ -20,23 +46,21 @@ export function ensureSchema(dbPath: string, schema: 'inbound' | 'outbound'): vo
 /** Open the inbound DB for a session (host reads/writes). */
 export function openInboundDb(dbPath: string): Database.Database {
   const db = new Database(dbPath);
-  db.pragma('journal_mode = DELETE');
-  db.pragma('busy_timeout = 5000');
+  applySessionPragmas(db);
   return db;
 }
 
 /** Open the outbound DB for a session (host reads only). */
 export function openOutboundDb(dbPath: string): Database.Database {
   const db = new Database(dbPath, { readonly: true });
-  db.pragma('busy_timeout = 5000');
+  applySessionPragmas(db, { readonly: true });
   return db;
 }
 
 /** Open the outbound DB for a session with write access. Only safe to call when no container is running. */
 export function openOutboundDbRw(dbPath: string): Database.Database {
   const db = new Database(dbPath);
-  db.pragma('journal_mode = DELETE');
-  db.pragma('busy_timeout = 5000');
+  applySessionPragmas(db);
   return db;
 }
 
