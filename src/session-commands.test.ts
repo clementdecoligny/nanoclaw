@@ -53,7 +53,10 @@ describe('isSessionCommandAllowed', () => {
   });
 });
 
-function makeMsg(content: string, overrides: Partial<MessageIn> & { is_from_me?: boolean } = {}): MessageIn & { is_from_me?: boolean } {
+function makeMsg(
+  content: string,
+  overrides: Partial<MessageIn> & { is_from_me?: boolean } = {},
+): MessageIn & { is_from_me?: boolean } {
   return {
     id: 'msg-1',
     kind: 'chat' as const,

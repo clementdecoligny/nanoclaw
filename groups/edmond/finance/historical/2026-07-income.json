@@ -1,0 +1,10 @@
+{
+  "year": 2026,
+  "month": 7,
+  "entries": [
+    {"date": "2026-07-31", "who": "Clément", "value": 3530.00, "type": "SALARY"},
+    {"date": "2026-07-31", "who": "Lola", "value": 2229.94, "type": "SALARY"},
+    {"date": "2026-07-31", "who": "Lola", "value": 287.99, "type": "FOOD"}
+  ],
+  "joint_target": 4500.00
+}

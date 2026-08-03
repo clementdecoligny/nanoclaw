@@ -9,10 +9,21 @@
  */
 import { getDb, hasTable } from './db/connection.js';
 
-export type GateResult = { action: 'pass' } | { action: 'filter' } | { action: 'deny'; command: string };
+export type GateResult =
+  | { action: 'pass' }
+  | { action: 'filter' }
+  | { action: 'deny'; command: string }
+  | { action: 'model'; argument?: string };
 
 const FILTERED_COMMANDS = new Set(['/help', '/login', '/logout', '/doctor', '/config', '/remote-control']);
 const ADMIN_COMMANDS = new Set(['/clear', '/compact', '/context', '/cost', '/files', '/upload-trace']);
+
+// /model is its own command, not an ADMIN_COMMANDS entry — ADMIN_COMMANDS'
+// only consumer is "pass through to the container as admin-dispatched SDK
+// text", and the raw /model text must never reach the container. The router
+// rewrites it into an instruction the agent executes with its existing
+// ask_user_question + set_model_config tools (src/router.ts).
+const MODEL_COMMAND = '/model';
 
 /**
  * Classify a message and decide whether it should reach the container.
@@ -31,9 +42,18 @@ export function gateCommand(content: string, userId: string | null, agentGroupId
 
   if (!text.startsWith('/')) return { action: 'pass' };
 
-  const command = text.split(/\s/)[0].toLowerCase();
+  const parts = text.split(/\s+/);
+  const command = parts[0].toLowerCase();
 
   if (FILTERED_COMMANDS.has(command)) return { action: 'filter' };
+
+  if (command === MODEL_COMMAND) {
+    if (!isAdmin(userId, agentGroupId)) {
+      return { action: 'deny', command: MODEL_COMMAND };
+    }
+    const argument = parts[1]?.toLowerCase();
+    return { action: 'model', argument };
+  }
 
   if (ADMIN_COMMANDS.has(command)) {
     if (isAdmin(userId, agentGroupId)) {

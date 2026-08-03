@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h45",
+  "date": "2026-07-30",
+  "description": "Bloc jeudi. Piloter à la FC uniquement — viser 110-120 bpm, ne pas dépasser 125.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — mise en route"},
+    {"type": "interval", "durationSec": 4500, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 110-120 bpm"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}

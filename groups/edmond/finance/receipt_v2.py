@@ -4,7 +4,7 @@
 import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
-from salary import calculate
+from salary import calculate, load_prior_bases
 import json
 
 EMPLOYER = {
@@ -246,11 +246,16 @@ def main():
     parser.add_argument("hours", type=float, help="Hours worked this month")
     parser.add_argument("--year", type=int, required=True)
     parser.add_argument("--month", type=int, required=True)
-    parser.add_argument("--history", default="", help="Comma-separated prior base salaries")
+    parser.add_argument("--history", default=None,
+                        help="Override manuel des salaires base antérieurs "
+                             "(virgules). Par défaut : lus depuis history.json.")
     parser.add_argument("--output", required=True, help="Output PDF path")
     args = parser.parse_args()
 
-    prior_bases = [float(x) for x in args.history.split(",") if x.strip()] if args.history else []
+    if args.history is not None:
+        prior_bases = [float(x) for x in args.history.split(",") if x.strip()]
+    else:
+        prior_bases = load_prior_bases(args.year, args.month)
     r = calculate(args.hours, args.year, args.month, prior_bases)
     html = build_html(r)
 

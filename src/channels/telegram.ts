@@ -330,3 +330,12 @@ registerChannelAdapter('telegram_alain', {
     return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_ALAIN, 'telegram_alain');
   },
 });
+
+// Coach bot — cycling coach agent.
+registerChannelAdapter('telegram_coach', {
+  factory: () => {
+    const env = readEnvFile(['TELEGRAM_BOT_TOKEN_COACH']);
+    if (!env.TELEGRAM_BOT_TOKEN_COACH) return null;
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_COACH, 'telegram_coach');
+  },
+});

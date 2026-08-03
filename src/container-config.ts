@@ -11,17 +11,26 @@
 import fs from 'fs';
 import path from 'path';
 
-import { GROUPS_DIR } from './config.js';
+import { GROUPS_DIR, STRAVA_PROXY_PORT } from './config.js';
 import { getContainerConfig } from './db/container-configs.js';
 import { getAgentGroup } from './db/agent-groups.js';
 import type { AgentGroup, ContainerConfigRow } from './types.js';
 
-export interface McpServerConfig {
+export interface McpServerStdioConfig {
   command: string;
   args?: string[];
   env?: Record<string, string>;
   instructions?: string;
 }
+
+export interface McpServerRemoteConfig {
+  type: 'http' | 'sse';
+  url: string;
+  headers?: Record<string, string>;
+  instructions?: string;
+}
+
+export type McpServerConfig = McpServerStdioConfig | McpServerRemoteConfig;
 
 export interface AdditionalMountConfig {
   hostPath: string;
@@ -69,11 +78,38 @@ export function configFromDb(row: ContainerConfigRow, group: AgentGroup): Contai
 }
 
 /**
+ * Rewrite remote MCP servers marked with a `{{strava}}` placeholder to go
+ * through the host-side Strava proxy.
+ *
+ * We deliberately do NOT inject an access token here. Strava tokens expire
+ * after 6 hours, and `container.json` is only materialized at spawn time, so a
+ * baked-in token goes stale in any container that outlives it — producing 401s
+ * that `mcp.strava.com` reports as a bogus "reconnect via OAuth" prompt.
+ *
+ * Instead we point the container at the proxy, which resolves a fresh token on
+ * every request. The Authorization header is dropped entirely: the proxy
+ * supplies it, and the container never sees a Strava credential.
+ */
+function resolveRemoteMcpTokens(config: ContainerConfig): void {
+  for (const mcp of Object.values(config.mcpServers)) {
+    if (!('url' in mcp) || !mcp.headers) continue;
+
+    const usesStrava = Object.values(mcp.headers).some((v) => v === 'Bearer {{strava}}');
+    if (!usesStrava) continue;
+
+    for (const [key, value] of Object.entries(mcp.headers)) {
+      if (value === 'Bearer {{strava}}') delete mcp.headers[key];
+    }
+    mcp.url = `http://host.docker.internal:${STRAVA_PROXY_PORT}/`;
+  }
+}
+
+/**
  * Materialize `container.json` from the DB. Called at spawn time so the
  * container always sees fresh config. Returns the `ContainerConfig` for
  * use by the caller (buildMounts, buildContainerArgs, etc.).
  */
-export function materializeContainerJson(agentGroupId: string): ContainerConfig {
+export async function materializeContainerJson(agentGroupId: string): Promise<ContainerConfig> {
   const group = getAgentGroup(agentGroupId);
   if (!group) throw new Error(`Agent group not found: ${agentGroupId}`);
 
@@ -81,6 +117,9 @@ export function materializeContainerJson(agentGroupId: string): ContainerConfig 
   if (!row) throw new Error(`Container config not found for agent group: ${agentGroupId}`);
 
   const config = configFromDb(row, group);
+
+  // Point Strava-marked MCP servers at the host proxy before writing
+  resolveRemoteMcpTokens(config);
 
   const p = path.join(GROUPS_DIR, group.folder, 'container.json');
   const dir = path.dirname(p);

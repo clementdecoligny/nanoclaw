@@ -12,10 +12,60 @@
  * tool validates first. Both layers matter: the DB row carries the payload
  * verbatim through to shell exec on apply.
  */
+import { restartAgentGroupContainers } from '../../container-restart.js';
 import { getAgentGroup } from '../../db/agent-groups.js';
+import { updateContainerConfigScalars } from '../../db/container-configs.js';
 import { log } from '../../log.js';
 import type { Session } from '../../types.js';
 import { notifyAgent, requestApproval } from '../approvals/index.js';
+
+/** Model aliases `/model` accepts. Full model IDs stay CLI-only. */
+const MODEL_ALIASES = ['opus', 'sonnet', 'haiku'];
+/** Mirrors ProviderOptions.effort in container/agent-runner/src/providers/types.ts. */
+const EFFORT_LEVELS = ['low', 'medium', 'high', 'xhigh', 'max'];
+
+/**
+ * Apply a model/effort change from the `/model` command.
+ *
+ * No approval gate: `/model` is already admin-only at the command gate
+ * (src/command-gate.ts), and unlike install_packages this changes no code
+ * and no dependencies. Values are re-validated here because the MCP tool's
+ * validation is client-side (defense in depth, same as install_packages).
+ */
+export async function handleSetModelConfig(content: Record<string, unknown>, session: Session): Promise<void> {
+  const model = content.model as string | undefined;
+  const effort = content.effort as string | undefined;
+
+  if (!model && !effort) {
+    notifyAgent(session, 'set_model_config failed: at least one of model or effort is required.');
+    return;
+  }
+  if (model && !MODEL_ALIASES.includes(model)) {
+    notifyAgent(session, `set_model_config failed: unknown model "${model}". Valid: ${MODEL_ALIASES.join(', ')}.`);
+    log.warn('set_model_config: invalid model rejected', { model });
+    return;
+  }
+  if (effort && !EFFORT_LEVELS.includes(effort)) {
+    notifyAgent(session, `set_model_config failed: unknown effort "${effort}". Valid: ${EFFORT_LEVELS.join(', ')}.`);
+    log.warn('set_model_config: invalid effort rejected', { effort });
+    return;
+  }
+
+  const updates: { model?: string; effort?: string } = {};
+  if (model) updates.model = model;
+  if (effort) updates.effort = effort;
+  updateContainerConfigScalars(session.agent_group_id, updates);
+
+  // A wakeMessage is required for respawn — without it killContainer has no
+  // onExit callback and the container stays down until the next user message.
+  const restarted = restartAgentGroupContainers(
+    session.agent_group_id,
+    'model command',
+    'Model/effort updated — resuming.',
+  );
+
+  log.info('set_model_config applied', { agentGroupId: session.agent_group_id, ...updates, restarted });
+}
 
 export async function handleInstallPackages(content: Record<string, unknown>, session: Session): Promise<void> {
   const agentGroup = getAgentGroup(session.agent_group_id);

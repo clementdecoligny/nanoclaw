@@ -6,6 +6,11 @@ node_modules/
 # Build output
 dist/
 
+# Python
+__pycache__/
+*.pyc
+.venv/
+
 # Local data & auth
 store/
 data/
@@ -16,6 +21,7 @@ groups/*/logs/
 groups/*/.heartbeat-bootstrapped
 groups/*/HEARTBEAT.md
 groups/*/attachments/
+groups/alain/git-branch-hygiene.json
 *Zone.Identifier
 
 # Secrets
@@ -42,4 +48,11 @@ site/
 
 # Garmin OAuth token stores (per-group) — never commit credentials/tokens
 groups/*/.garminconnect/
-.venv/garmin/
+
+# Per-group container config — a build artifact, regenerated from the
+# container_configs table by materializeContainerJson() on every spawn.
+# Never commit: it has historically carried resolved API tokens in MCP headers.
+groups/*/container.json
+
+# Runtime lock files (transient, not durable content)
+.claude/scheduled_tasks.lock
