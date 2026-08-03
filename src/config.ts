@@ -44,10 +44,7 @@ export const CONTAINER_MAX_OUTPUT_SIZE = parseInt(process.env.CONTAINER_MAX_OUTP
 // aren't frozen to the token that existed at spawn time (Strava tokens expire
 // after 6h). Bound on the host; containers reach it via host.docker.internal.
 // 10260 deliberately avoids 10254-10255, which the OneCLI container publishes.
-export const STRAVA_PROXY_PORT = parseInt(
-  process.env.STRAVA_PROXY_PORT || envConfig.STRAVA_PROXY_PORT || '10260',
-  10,
-);
+export const STRAVA_PROXY_PORT = parseInt(process.env.STRAVA_PROXY_PORT || envConfig.STRAVA_PROXY_PORT || '10260', 10);
 
 export const ONECLI_URL = process.env.ONECLI_URL || envConfig.ONECLI_URL;
 export const ONECLI_API_KEY = process.env.ONECLI_API_KEY || envConfig.ONECLI_API_KEY;

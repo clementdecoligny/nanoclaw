@@ -120,9 +120,7 @@ describe('strava-proxy', () => {
   it('sets the Host header to the upstream host, not the proxy', async () => {
     await makeRequest(proxyPort(), { method: 'POST', path: '/' }, '{}');
 
-    expect(received[0].headers.host).toBe(
-      `127.0.0.1:${(upstreamServer.address() as AddressInfo).port}`,
-    );
+    expect(received[0].headers.host).toBe(`127.0.0.1:${(upstreamServer.address() as AddressInfo).port}`);
   });
 
   it('strips hop-by-hop headers before forwarding', async () => {
