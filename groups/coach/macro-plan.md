@@ -1,112 +1,196 @@
 # Macro-plan — Marseille–Naples 2026
-_Construit le 15 juin 2026 — Ajusté le 16 juin 2026 avec Clément — Mis à jour le 5 juillet 2026_
+_Construit le 15 juin 2026 — Mis à jour le 2 août 2026 (intégration feedback coach externe v2)_
 
 ## Objectif
 
 **Marseille–Naples 2026 — Départ dimanche 27 septembre 2026**
-- Distance : ~1 300 km
-- Dénivelé : **17 950 m D+**
-- Format : avec 2 amis moins expérimentés
-- Objectif : terminer vendredi soir (6 jours), ~230 km/jour
-- Priorité absolue : **zéro douleur de genou**
-- Esprit : meilleure expérience possible pour le groupe, pas de performance
+- Distance : ~1 300 km | Dénivelé : **17 950 m D+** (13,8 m/km — +14% vs 2025)
+- **Format : 7 jours** (6 jours exclu — produit des journées de 16h, incompatible avec tout plan protégeant le genou). 8 jours reste disponible.
+- Les splits de journée seront construits depuis le tracé réel (positions montagneuses, villes viables, hébergements), pas depuis une moyenne.
+- Priorité absolue : **zéro douleur de genou**. Terminer. Profiter avec les amis.
+- Pas d'objectif de chrono ou de performance.
+
+## Contexte de préparation
+
+**Baseline 2025** : 20h (juil) + 19h (août) + 46h (sept) = **85h vélo** sur 3 mois avant la course.
+**Objectif 2026** : ~41h août + ~29h septembre = **~70h sur 2 mois**, mieux distribuées, sans falaise de septembre.
+**Déficit clé** : course 2026 = 13,8 m/km vs 11,8 en 2025 (+14% vertical). Lisbonne = 2–8 m/km. Ce gap est le principal déficit de spécificité à combler.
 
 ## Disponibilités
 
 | Période | Statut | Notes |
 |---------|--------|-------|
-| 15 juin – 15 juil | ✅ Pleinement disponible | 31 jours |
-| 16–24 juillet | 🏔️ Randonnée Alpes | 15–20 km/j, 1 000–2 000 m D+/j — cross-training D+ |
-| 25 juil – 9 août | ✅ Pleinement disponible | 16 jours |
-| 10–19 août | ⚠️ Vacances Annecy | Moins d'heures/j, vélo incertain |
-| 20 août – 27 sept | ✅ Pleinement disponible | 38 jours |
+| 15 juin – 15 juil | ✅ TERMINÉE | Phase 1 + Phase 3 début |
+| 16–24 juillet | 🏔️ Alpes TERMINÉE | 5 701m D+ en 6 jours — cross-training D+ majeur |
+| 25 juil – 9 août | 🔄 En cours | Reprise Lisbonne + Espagne bloc charge |
+| 10–19 août | ⚠️ Annecy | **Louer un vélo** (cible 6–8h). Run max 2–3x/semaine |
+| 20 août – 27 sept | ✅ Pleinement disponible | Construction → Pic → Affûtage |
 
-## Périodisation globale (15 semaines)
+## Périodisation
 
-### Phase 1 — Récupération & Fondations
-**15 juin → 4 juillet ✅ TERMINÉE** *(2 semaines avant prévu — feu vert ostéo 2 juillet)*
+### Phase 1 — Récupération & Fondations ✅
+**15 juin → 4 juillet**
+- Résultat : Feu vert ostéo 2 juillet. Genou 0/10. Phase 3 anticipée de 2 semaines.
 
-Objectif : réparer le genou, reconstruire la base musculaire, maintenir la base aérobie.
+### Phase 3 — Base intensive 🔄
+**5 juillet → 9 août (5 semaines effectives — Alpes intégrées comme D+ spécifique)**
+- Volume vélo : 8–12h/semaine
+- Sorties longues progressives jusqu'à 3h30
+- Premiers enchaînements 2–3 jours consécutifs
+- D+ progressif vers 600–800m/semaine
+- **1 bloc sous-seuil (2×20 min à 132–140 bpm) — lundi 3 août (Espagne), si genou 0/10**
 
-- Natation : 1 séance/semaine
-- Vélo : Z1/Z2 uniquement, plat, 2 sorties/semaine, < 90 min
-- Renforcement : 3 séances/semaine (protocole 7 exercices)
-- Checkpoints : RDV ostéo 26 juin (psycho/énergie), RDV ostéo 2 juillet (biométrique → FEU VERT)
+### W32 — Bloc Espagne ← SEMAINE EN COURS
+**3–9 août | ~12h30 vélo | 2 renfo | 1 run**
+Exception de charge autorisée (B3) : la base aérobie est préservée par les 5 701m Alpes. Pas detrained, juste non-spécifique.
+⚠️ **Condition : genou > 1/10 → vendredi 7 et samedi 8 coupés.**
+- Lundi 3 : Vélo 2h30 Z2 + **bloc sous-seuil 2×20 min à 132–140 bpm** (si genou 0/10)
+- **Mercredi 5 (3h30) + Jeudi 6 (1h30) : BACK-TO-BACK OBLIGATOIRE** — séance la plus importante du bloc
 
-**Résultat :** Feu vert complet. "Physiquement très bien, peut s'entraîner plus fort." Genou 0/10. Phase 3 anticipée de 2 semaines.
-
-### Phase 3 — Base intensive
-**5 juillet → 15 juillet + 25 juillet → 9 août (4,5 semaines effectives)**
-
-*(Démarrage anticipé de 3 semaines grâce au feu vert ostéo 2 juillet)*
-
-Objectif : reconstruire le volume vélo, introduire les sorties longues, back-to-back.
-
-- Volume cible : 8–12h vélo/semaine (W28 : 290-320 TSS de transition)
-- 1 sortie longue 3h+ par semaine (progresser vers 4–5h)
-- Premiers enchaînements (2 jours consécutifs) à partir de W29
-- D+ progressif : commencer à 200–400m/semaine, monter vers 1 000–1 500m
-- Run : 1–2 séances/semaine à partir de W28, Z1/Z2 strict
-- Renfo : 3 séances/semaine (non négociable)
-
-### Phase 2 — Randonnée Alpes (Cross-training D+)
-**16–24 juillet (1 semaine)**
-
-Ne pas traiter comme vacances passives. 15–20 km/j × 1 500 m D+ moyen = ~12 000 m D+ sur la semaine. Stimulus aérobie et D+ significatif. Base cardio et mental endurance.
-
-- Marche : effort en Z1/Z2, rester aérobie
-- Aucun vélo
-- Pas de renfo cette semaine (randonnées chargées, pas de matériel)
+### W33 — Annecy
+**10–16 août | 6–8h vélo (à louer) | 3 renfo | 2 runs max**
+- Longue 3h avec 800m+ D+ — premier test réel de grimpe soutenue + rotation assis/danseuse sur long gradient
+- 1 bloc sous-seuil si vélo loué et confirmé
+- Assumption ouverte : confirmer location vélo avant le 9 août
 
 ### Phase 4 — Construction
-**10–30 août (3 semaines)**
+**17–30 août (2 semaines)**
 
-Annecy 10–19 : moins de volume qu'une semaine normale. Priorité à la course à pied (trail si possible), vélo si disponible et si le terrain le permet. Les 20-30 août sont pleinement disponibles pour rattraper le volume.
+#### W34 — 17–23 août | 9h vélo | 3 renfo | 2 runs
+- **2 blocs sous-seuil/semaine à partir d'ici et jusqu'à fin août**
+- Samedi 22 : **4h / 800–1 000 m D+** — première sortie longue à **setup course** (vélo race, sacoches, poids race)
+- Règle B8 : toute sortie >3h à setup course dès le 17 août
 
-- Course à pied : 2–3 runs/semaine, Z1/Z2, terrain varié
-- Vélo : si disponible, 1–2 sorties ; sinon pas de stress
-- Trail/marche avec D+ : bonus si le terrain s'y prête
-- Renfo : 2 séances/semaine si possible (priorité secondaire)
-- Volume moindre qu'une semaine pleine → compensé semaines 20-30 août
+#### W35 — 24–30 août | 11h vélo | 3 renfo | 1 run
+- Samedi 29 : **5h / 1 200 m D+** — setup course
+- Dimanche 30 : **3h back-to-back**
+- Monitoring compliance renforcement escalade à partir du 24 août (fenêtre d'érosion prédite)
 
 ### Phase 5 — Pic
-**31 août → 13 septembre (2 semaines)**
+**31 août → 13 septembre**
 
-Objectif : simulation des conditions M-N. Volume maximal. Confiance.
+#### W36 — 31 août–6 sept | 13h vélo | 3 renfo | 1 run
+- Bloc sous-seuil réduit à 1/semaine pendant le bloc
+- **Samedi 5 : 6h / 1 500 m D+** — setup course, test conditions course
+- **Dimanche 6 : 5h / 1 200 m D+** — back-to-back jour 2
 
-- Volume cible : 14–18h vélo/semaine
-- Au moins 1 sortie longue 6–8h
-- Back-to-back de 3 jours si possible
-- D+ cible : 3 000–4 000m/semaine
-- Renfo : 2 séances/semaine (maintenir — ne pas rogner)
-- Semaine 1 : charge maximale
-- Semaine 2 : légère réduction (–20%) pour amorcer l'affûtage
+#### W37 — 7–13 sept | ~8h30 vélo | 2 renfo | 0 run
+- **Lundi 7 : 3h — JOUR 3 DU BLOC (OBLIGATOIRE)** — 14h et ~2 900m D+ sur 3 jours consécutifs, terminer à 20 jours de la course
+- Puis récupération genuine : 2 sorties faciles Z2, zéro sous-seuil
+- **Gate G2 : évaluation état du bloc le 8 septembre** — décider avant le 10 sept
 
 ### Phase 6 — Affûtage
-**14–27 septembre (2 semaines)**
+**14–27 septembre**
 
-Objectif : arriver frais. Volume –40 à –50%, intensité maintenue.
+#### W38 — 14–20 sept | ~7h30 vélo | 2 renfo | 0 run
+- **Lundi 14 : RDV ostéo** → Gate G3 (question binaire préécrite sur capacité genou)
+- Mardi 15 : dernier bloc sous-seuil
+- Mercredi 16 : dernière vraie charge
+- **Jeudi 17 : début affûtage** — fréquence maintenue, durée coupée
+- **Samedi 19 (D−8) : 3h Z2 — dress rehearsal complet, setup course**
 
-- Semaine 1 : ~8–10h vélo, sorties courtes mais quality Z2
-- Semaine 2 : ~5–6h, 2–3 courtes sorties, activation
-- Zéro renfo semaine avant la course (ne pas fatiguer les muscles)
-- Sommeil, nutrition, logistique
+#### W39 — 21–27 sept | ~5h vélo | 2 renfo activation | 0 run
+- Lundi 21 : 1h + renfo léger activation
+- Mardi 22 : 1h30 avec 3×5 min effort montée course, alternation assis/danseuse
+- Jeudi 24 : 45 min + renfo activation
+- Vendredi 25 : voyage Marseille, 45 min spin
+- Samedi 26 : 30–40 min
+- **Dimanche 27 : DÉPART** 🎯
 
-## Checkpoint clés
+## Volumes cibles par semaine
 
-| Date | Événement |
-|------|-----------|
-| 26 juin | RDV ostéopathe #1 (psycho/énergie) |
-| 2 juillet | RDV ostéopathe #2 → **FEU VERT complet** ✅ — fin Phase 1 anticipée |
-| 5 juillet | **Démarrage Phase 3** (2 semaines avant prévu) |
-| 16 juillet | Départ randonnée Alpes |
-| 25 juillet | Reprise vélo post-Alpes — Phase 3 reprend |
-| ~20 août | Bilan mi-parcours : forme, D+ accumulé, genoux |
-| 31 août | Entrée en Phase Pic |
-| 14 septembre | **RDV ostéopathe #3** → transition Pic → Affûtage |
-| 14 septembre | Début affûtage |
-| 27 septembre | **M-N 2026 — Départ Marseille** 🎯 |
+| Semaine | Dates | Vélo h | Sous-seuil | D+ clé | Renfo |
+|---------|-------|--------|------------|--------|-------|
+| W32 | 3–9 août | ~12h30 | 1×(2×20) | 600–800m | 2 |
+| W33 | 10–16 août | 6–8h | 1 si vélo | 800m+ | 3 |
+| W34 | 17–23 août | 9h | 2×(2×20) | 800–1000m | 3 |
+| W35 | 24–30 août | 11h | 2×(2×20) | 1200m | 3 |
+| W36 | 31 août–6 sept | 13h | 1×(2×20) | 2700m | 3 |
+| W37 | 7–13 sept | ~8h30 | 0 | — | 2 |
+| W38 | 14–20 sept | ~7h30 | 1×(2×20) | — | 2 |
+| W39 | 21–27 sept | ~5h | 0 | — | 2 léger |
 
-## Note sur les amis moins expérimentés
+**Total août : ~41h | Total septembre avant course : ~29h**
+**Comparaison 2025 : 19h (août) + 46h (sept) = 65h — 2026 plan ≈ 70h, mieux réparti, sans falaise**
 
-L'objectif "meilleure expérience possible" implique que Clément sera fort, disponible mentalement, sans genou qui brûle. Pour ça, il faut qu'il arrive en over-préparé sur l'endurance et sous-chargé sur l'intensité. Un Clément à 85% de sa forme mais avec zéro douleur vaut mieux qu'un Clément à 100% mais qui gère son genou depuis le jour 2.
+## Checkpoints et Gates clés
+
+| Date | Événement | Action |
+|------|-----------|--------|
+| 8 sept | **Gate G2** | Bloc 5–7 sept complété ? Genou ≤ 1/10 ? → Go. Sinon : affûtage 14j ou format 8 jours |
+| 10 sept | **Décision format** | Si G2 → fallback, décider ici, pas à la ligne de départ |
+| 14 sept | **Gate G3 (ostéo)** | Question binaire : *"Le genou peut-il tenir 7 jours consécutifs à ~2 500m D+/j avec rotation assis/danseuse ?"* — réponse verbatim |
+| 17 sept | **Début affûtage** | Fréquence maintenue, durée coupée |
+| 19 sept | **Dress rehearsal 3h** | Setup course complet, D−8 |
+| 27 sept | **M-N 2026 — DÉPART** 🎯 | |
+
+## Rehearsal checklist (à compléter avant le 20 septembre)
+
+- [ ] Bloc 3 jours consécutifs complété à poids course (5–7 sept)
+- [ ] 1 sortie départ avant l'aube ou arrivée après tombée de nuit (14h/jour en course, inévitable)
+- [ ] 1 journée avec 1 500m+ de descente — test mains/nuque/dos/hallux gauche sous fatigue
+- [ ] Setup course roulé 4h+ sans plainte de position
+- [ ] Rotation assis/danseuse testée sur montée >30 min et pattern gagnant noté
+
+## Minimum Viable Week (semaines rouges)
+
+Quand la semaine est compromise (travail, famille, maladie) :
+- 1× 90 min Z2
+- 1× 90 min avec 2×20 min sous-seuil
+- 1× 3h Z2
+- 2× renfo (Session 1 + Session 2)
+≈ **6h vélo minimum**
+Runs et natation tombent en premier. **Jamais compenser une semaine rouge en ajoutant du volume à la suivante.**
+
+## Modèle de pacing course (E2)
+
+La cause des problèmes de genou 2025 : pas le Z3 sur les montées. Le tempo soutenu sur les plats toute la journée (IF 0,73 J1 / 0,78 J7 en 2025).
+
+**Flats / faux-plats / descentes (~60–65% du temps) : Z1/Z2 strict. Sans exception. Ni "juste pour rester dans le groupe", ni tirage.**
+**Montées : Z3 accepté avec rotation assis/danseuse.** Contraintes : pas de bloc Z3 continu >10 min ; plafond 145 bpm ; jamais Z4 (146+).
+
+Deux métriques quotidiennes lisibles sur le compteur :
+- **FC moyenne journée ≤ 120 bpm** (ancre : Porto–Lisbonne = 108 bpm sur 15h32 à 6,4 m/km → 115–120 est l'équivalent honnête à 13,8 m/km)
+- **Temps au-dessus de 145 bpm < 3%**
+
+**Plafond J1 : FC moy ≤ 115, rien au-dessus de 145.** 2025 J1 = 59% Z3+ et le genou était fini dès J2.
+
+## Modèle de découpage des étapes (E1)
+
+Pour chaque étape candidate :
+```
+temps_mvt ≈ km / 24 + D+ / 700
+temps_réel ≈ temps_mvt × 1,22  (repas, mécaniques, regroupements)
+à partir du J5 : +10%
+```
+
+Seuils : vert ≤ 13,5h réel · ambré 13,5–15h · rouge >15h
+Pas plus d'un jour ambré consécutif. Aucun jour rouge.
+Découper par D+, pas par distance. Une étape 150 km / 3 000m dure plus qu'une étape 220 km / 1 800m.
+
+| Format | Moy/jour | Mvt | Réel | Slack (sommeil 6–7h) |
+|--------|----------|-----|------|----------------------|
+| 6 jours | 217 km / 2 992m | 13,3h | 16,2h | 0,8–1,8h → **non viable** |
+| **7 jours** | **186 km / 2 564m** | **11,4h** | **13,9h** | **3,1–4,1h → viable** |
+| 8 jours | 163 km / 2 244m | 10,0h | 12,2h | 4,8–5,8h → confortable |
+
+## Rolling load table (mise à jour hebdomadaire)
+
+| Semaine | Vélo h | D+ m | Moy 4 sem h |
+|---------|--------|------|-------------|
+| W26 (22-28 juin) | ~4h | — | — |
+| W27 (29 juin-5 juil) | ~5h | — | — |
+| W28 (6-12 juil) | ~5h | 258m | — |
+| W29-30 (Alpes 13-25 juil) | ~0h vélo (+5 701m D+ hike) | — | ~3,5h |
+| W31 (26 juil-2 août) | ~3h | — | ~4h |
+| W32 (3-9 août) | ~12h30 | ~1 400m | — |
+| W33 (10-16 août) | — | — | — |
+| W34 (17-23 août) | — | — | — |
+
+*Mettre à jour chaque lundi.*
+
+## Assumption register (ouvert)
+
+- [ ] Location vélo Annecy confirmée ? (à résoudre avant le 9 août)
+- [ ] Lundi 7 septembre disponible (J3 du bloc) ? Travail et famille dégagés ?
+- [ ] Splits d'étapes finaux — passer chaque étape dans E1 avant de réserver l'hébergement

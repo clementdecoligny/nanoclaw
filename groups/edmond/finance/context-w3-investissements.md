@@ -61,6 +61,41 @@ Voir `/workspace/agent/finance/rapport-consultant-investissement.md` pour le bil
 
 ---
 
+## Phase 2 — Angles fiscaux (en cours, maj. 3 août 2026)
+
+Objectif : fermer les 3 points fiscaux avant de chiffrer les scénarios (Phase 4).
+
+### 2.1 — ETF de Lola : Mediolanum Espagne + résidence fiscale PT ⚠️ ANGLE MORT
+- *Fait :* les ~181 K€ d'ETF/fonds sont sur des comptes *Mediolanum en Espagne* ; Lola est *résidente fiscale au Portugal*.
+- *Chiffres manquants :* prix d'achat / plus-value latente — Clément les fournira plus tard. Calcul du coût de mobilisation de l'apport EN ATTENTE.
+- *Points à valider avec la consultante :*
+  - Plus-values imposées au Portugal (28% flat, ou option englobamento). Traité fiscal PT-ES : les gains sur parts de fonds sont taxés dans l'État de résidence (Portugal) → pas de double imposition en principe.
+  - *Traspaso :* les fonds Mediolanum espagnols permettent d'échanger de fonds sans impôt (report) — MAIS c'est un avantage réservé aux résidents espagnols. Pour une résidente PT, un arbitrage interne pourrait être un fait générateur d'impôt au Portugal → risque de *plus-value latente non déclarée* si Lola a arbitré en pensant que c'était neutre. À VÉRIFIER.
+  - Fonds distribuants → retenue à la source espagnole (19%, ramenée à 15% par le traité) créditable au PT. À confirmer selon distribuant/capitalisant.
+  - Déclaration des comptes étrangers dans l'IRS portugais (anexo).
+
+### 2.2 — IRS Jovem — données extraites de la déclaration IRS 2025 (Modelo 3)
+- *Foyer :* Casado, *tributação conjunta* (imposition commune). SP A = Clément Rouault de Coligny (NIF 291628788) ; SP B = Maria Dolores « Lola » Daroca Guerrero (NIF 291623573). Résidents *Continente* (PT) — confirme la résidence fiscale portugaise.
+- *Revenus travail dépendant 2025 (cat. A, cód. 401) :*
+  - Clément (A) : *56 267,93 €* brut ; retenue à la source 16 525,00 € ; SS 5 462,76 € (employeur NIF 515020303).
+  - Lola (B) : *22 733,00 €* brut au total sur *2 employeurs* (2 187,26 € + 20 545,74 €) ; retenue 5 382,00 € ; SS 1 599,47 €.
+  - *Total foyer : 79 000,93 € brut.*
+- *IRS Jovem (art. 12.º-B) :* quadro F.1 « anos de 2025 e seguintes » rempli — *2025 = 1re année*. Les deux titulaires (A et B) semblent cochés → À CONFIRMER qui bénéficie réellement (Clément, Lola, ou les deux) + année de naissance / 1re année de revenus au PT pour situer dans la fenêtre de 10 ans.
+- *Barème régime 2025+ (à valider consultante) :* exonération dégressive sur 10 ans, plafonnée à 55×IAS (~28 737 € de revenu exonéré/an en 2025) : an 1 = 100 %, ans 2-4 = 75 %, ans 5-7 = 50 %, ans 8-10 = 25 %. Âge max 35 ans.
+- *RÉSOLU (3 août 2026) :* IRS Jovem pour *les deux*, nés *1992*. 1re année de revenus PT : Lola 2017 ininterrompu ; Clément 2017, rien 2018, 1 mois 2019, ininterrompu depuis 2020. Déclaré avec 2025 = année 1.
+- *Runway réel tronqué par la limite d'âge 35 :* seules 3 années éligibles →
+  - 2025 (33 ans) : 100 %
+  - 2026 (34 ans) : 75 %
+  - 2027 (35 ans) : 75 %
+  - 2028 (36 ans) : *fin de l'avantage* pour les deux.
+- *Implication stratégique forte :* le boost fiscal IRS Jovem coïncide *exactement* avec la période de transition pro et *s'éteint en 2028*, juste après la fermeture de l'entreprise. Le revenu net 2025-2027 est temporairement gonflé → NE PAS extrapoler la capacité d'épargne/remboursement au-delà de 2027. Argument de plus pour verrouiller le crédit et maximiser l'épargne fiscalement avantagée pendant 2025-2027.
+- *Question consultante maintenue :* confirmer que le démarrage « année 1 en 2025 » est correct malgré revenus depuis 2017 (sinon runway encore plus court). Fournir aussi le montant exact d'impôt économisé 2025 (attendre l'avis de liquidação / nota de cobrança).
+
+### 2.3 — Séquençage précis du crédit
+- Ordre des opérations entre obtention du crédit (sept. 2026) et mobilisation des fonds, pour ne pas fragiliser le dossier bancaire. À détailler (non bloqué par les chiffres ETF).
+
+---
+
 ## Sur demande
 
 Modéliser : PPR, ETFs, Certificados do Tesouro, buy-to-rent vs. épargne liquide.
