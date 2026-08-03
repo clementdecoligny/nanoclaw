@@ -7,7 +7,7 @@
 import path from 'path';
 
 import { backfillContainerConfigs } from './backfill-container-configs.js';
-import { DATA_DIR } from './config.js';
+import { DATA_DIR, STRAVA_PROXY_PORT } from './config.js';
 import { enforceStartupBackoff, resetCircuitBreaker } from './circuit-breaker.js';
 import { migrateGroupsToClaudeLocal } from './claude-md-compose.js';
 import { initDb } from './db/connection.js';
@@ -59,9 +59,13 @@ import './modules/index.js';
 import './cli/commands/index.js';
 import './cli/delivery-action.js';
 import { startCliServer, stopCliServer } from './cli/socket-server.js';
+import { startStravaProxy } from './strava-proxy.js';
+import { hasStravaTokens } from './strava-token.js';
 
 import type { ChannelAdapter, ChannelSetup } from './channels/adapter.js';
 import { initChannelAdapters, teardownChannelAdapters, getChannelAdapter } from './channels/channel-registry.js';
+
+let stravaProxyServer: import('http').Server | null = null;
 
 async function main(): Promise<void> {
   log.info('NanoClaw starting');
@@ -177,6 +181,29 @@ async function main(): Promise<void> {
   // 7. Start the `ncl` CLI socket server (data/ncl.sock).
   await startCliServer();
 
+  // 8. Strava MCP proxy — only when Strava is actually configured. Injects a
+  // fresh access token per request so long-lived containers don't get stuck
+  // with an expired one.
+  if (hasStravaTokens()) {
+    try {
+      stravaProxyServer = await startStravaProxy(STRAVA_PROXY_PORT);
+    } catch (err) {
+      // Non-fatal: everything except Strava MCP still works. Call out port
+      // collisions explicitly — a bound-but-foreign listener silently answers
+      // container requests and looks exactly like a broken Strava integration.
+      const code = (err as NodeJS.ErrnoException)?.code;
+      if (code === 'EADDRINUSE') {
+        log.error(
+          'Strava proxy port already in use — another process owns it. ' +
+            'Strava MCP will not work until this is resolved. Set STRAVA_PROXY_PORT to a free port.',
+          { port: STRAVA_PROXY_PORT },
+        );
+      } else {
+        log.error('Failed to start Strava proxy', { err, port: STRAVA_PROXY_PORT });
+      }
+    }
+  }
+
   log.info('NanoClaw running');
 }
 
@@ -193,6 +220,10 @@ async function shutdown(signal: string): Promise<void> {
   stopDeliveryPolls();
   stopHostSweep();
   await stopCliServer();
+  if (stravaProxyServer) {
+    await new Promise<void>((r) => stravaProxyServer!.close(() => r()));
+    stravaProxyServer = null;
+  }
   try {
     await teardownChannelAdapters();
   } finally {
