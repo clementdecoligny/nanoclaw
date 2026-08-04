@@ -24,6 +24,7 @@ import { materializeContainerJson } from './container-config.js';
 import { getContainerConfig } from './db/container-configs.js';
 import { updateContainerConfigScalars, updateContainerConfigJson } from './db/container-configs.js';
 import { CONTAINER_RUNTIME_BIN, hostGatewayArgs, readonlyMountArgs, stopContainer } from './container-runtime.js';
+import { buildNoProxyValue } from './no-proxy.js';
 import { composeGroupClaudeMd } from './claude-md-compose.js';
 import { getAgentGroup } from './db/agent-groups.js';
 import { getDb, hasTable } from './db/connection.js';
@@ -453,6 +454,13 @@ async function buildContainerArgs(
     throw new Error('OneCLI gateway not applied — refusing to spawn container without credentials');
   }
   log.info('OneCLI gateway applied', { containerName });
+
+  // OneCLI's HTTP_PROXY would otherwise capture requests to host-local
+  // services too (e.g. the Strava MCP proxy on host.docker.internal), which
+  // the gateway can't route. Applied after applyContainerConfig so it wins.
+  const noProxy = buildNoProxyValue(providerContribution.env?.NO_PROXY);
+  args.push('-e', `NO_PROXY=${noProxy}`);
+  args.push('-e', `no_proxy=${noProxy}`);
 
   // Host gateway
   args.push(...hostGatewayArgs());
