@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 sortie longue — 3h15",
+  "date": "2026-08-05",
+  "description": "Sortie longue avec D+ 600-800m. Piloter à la FC. Si ça monte en Z3 dans une côte raide, couper la puissance.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 échauffement progressif"},
+    {"type": "interval", "durationSec": 9600, "hrMin": 107, "hrMax": 128, "note": "Z2 — intégrer les montées en FC, viser 115-122 en côte"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 retour au calme"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 récup — 60 min",
+  "date": "2026-08-04",
+  "description": "Récupération active après renfo. FC basse, terrain plat, pas de D+ lourd.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 2400, "hrMin": 107, "hrMax": 115, "note": "Z2 basse 107-115"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
