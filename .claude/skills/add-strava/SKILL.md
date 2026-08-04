@@ -137,6 +137,7 @@ Common signals:
 - `Strava MCP proxy started` missing from the log → `data/strava-tokens.json` doesn't exist, so the proxy was skipped. Run the OAuth script.
 - `Bearer {{strava}}` appears literally in `container.json` → `resolveRemoteMcpTokens` didn't run. Ensure `pnpm run build` completed and the group was re-materialized (restart the group).
 - Connection timeout to `host.docker.internal:<port>` from the container → the proxy isn't bound, or bound to `127.0.0.1` instead of `0.0.0.0`. Verify with `ss -ltn | grep <port>`.
+- **HTTP 000 from inside a real agent container, but 200 from an ad-hoc `docker run`** → `NO_PROXY` is missing. OneCLI sets `HTTP_PROXY` in agent containers, which captures host-local requests too and tunnels them into a gateway with no route for them. Check with `docker exec <container> env | grep -i no_proxy`; it must list `host.docker.internal`. Set in `src/container-runner.ts` via `buildNoProxyValue`. Note that ad-hoc `docker run` containers have no `HTTP_PROXY`, so they will not reproduce this — always verify from a real agent container.
 - Agent says "I don't have Strava tools" → the `strava` MCP server isn't registered in this group's `mcpServers` (re-run the `ncl groups config add-mcp-server` step).
 
 Verify the whole path from inside a container:
