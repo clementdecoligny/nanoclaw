@@ -58,8 +58,8 @@ Contexte réel :
 - Ven 14 : Renfo Session 1.
 - **Sam 15 : Vélo 3h–3h30 Z2 + D+ 800m+ — parents présents, enfants couverts, vélo confirmé. 1ère vraie grimpe soutenue du cycle.**
 - Dim 16 : Run 45 min ou repos.
-- **Lun 17 : Vélo 2h–2h30 Z2 + 1 bloc sous-seuil (20 min 132–140 bpm) — SETUP COURSE (règle B8 active dès aujourd'hui).**
-- **Mar 18 : Vélo 1h30 back-to-back Z2 — setup course.**
+- **Lun 17 : Vélo 2h30 Z2 + sous-seuil (2×20 min 132–140 bpm) — D+ 500m — SETUP COURSE. ⚠️ Genou 0/10 requis.**
+- **Mar 18 : Vélo 3h Z2 — D+ 700m — setup course (J3 consécutif).**
 - Mer 19 : voyage Annecy→Lisbonne. Repos.
 
 ⚠️ **Assumption ouverte : Nord Portugal (à partir du 20 août) — durée et disponibilité vélo inconnues. Impact direct sur W34.**

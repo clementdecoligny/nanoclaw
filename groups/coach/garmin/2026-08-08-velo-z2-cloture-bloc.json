@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h30 (clôture bloc)",
+  "date": "2026-08-08",
+  "description": "Clôture du bloc Espagne. Z2 basse, terrain tranquille. Pas de D+ lourd.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 échauffement"},
+    {"type": "interval", "durationSec": 3600, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 107-118 bpm, terrain tranquille"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 retour au calme"}
+  ]
+}

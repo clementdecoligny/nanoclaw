@@ -51,6 +51,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | gulas-ajillo-pasta.md | Gulas al ajillo con pasta | fish / pasta | very low | no | 15 min. Gulas congélo + ail + huile d'olive. |
 | salade-pates-anchoiade-mediterraneenne.md | Salade pâtes anchoïade méditerranéenne | fish / pasta salad | very low | no | Vinaigrette anchois-citron-ail. Original. Portable (assembler sur place). |
 | pasta-alla-norma.md | Pasta alla Norma | pasta / veg | low | components | Siciliana clásica. Berenjena frita + salsa tomate + ricotta salata. |
+| salmorejo-cordobes.md | Salmorejo Cordobés | soup / veg | low | full_dish | Sopa fría. Sin cocción. Tomate + pan + AOVE. Aguanta 3 días nevera. |
 
 ---
 
