@@ -47,19 +47,35 @@ Exception de charge autorisée (B3) : la base aérobie est préservée par les 5
 - Lundi 3 : Vélo 2h30 Z2 + **bloc sous-seuil 2×20 min à 132–140 bpm** (si genou 0/10)
 - **Mercredi 5 (3h30) + Jeudi 6 (1h30) : BACK-TO-BACK OBLIGATOIRE** — séance la plus importante du bloc
 
-### W33 — Annecy
-**10–16 août | 6–8h vélo (à louer) | 3 renfo | 2 runs max**
-- Longue 3h avec 800m+ D+ — premier test réel de grimpe soutenue + rotation assis/danseuse sur long gradient
-- 1 bloc sous-seuil si vélo loué et confirmé
-- Assumption ouverte : confirmer location vélo avant le 9 août
+### W33 — Annecy _(mis à jour 7 août 2026)_
+**10–19 août | ~3h30 vélo (Aug 15–18 uniquement) | 4 renfo | 4 runs**
+
+Contexte réel :
+- Lun 10 : voyage Lisbonne→Genève→Annecy. Renfo Session 1 si énergie.
+- Mar 11 : Annecy, enfants + frère. Run 50 min Z2. Pas de vélo.
+- Mer 12 : Renfo Session 2 (chargé — noter la charge dans Strava).
+- Jeu 13 : Run 50 min Z2.
+- Ven 14 : Renfo Session 1.
+- **Sam 15 : Vélo 3h–3h30 Z2 + D+ 800m+ — parents présents, enfants couverts, vélo confirmé. 1ère vraie grimpe soutenue du cycle.**
+- Dim 16 : Run 45 min ou repos.
+- **Lun 17 : Vélo 2h–2h30 Z2 + 1 bloc sous-seuil (20 min 132–140 bpm) — SETUP COURSE (règle B8 active dès aujourd'hui).**
+- **Mar 18 : Vélo 1h30 back-to-back Z2 — setup course.**
+- Mer 19 : voyage Annecy→Lisbonne. Repos.
+
+⚠️ **Assumption ouverte : Nord Portugal (à partir du 20 août) — durée et disponibilité vélo inconnues. Impact direct sur W34.**
 
 ### Phase 4 — Construction
 **17–30 août (2 semaines)**
 
-#### W34 — 17–23 août | 9h vélo | 3 renfo | 2 runs
+#### W34 — 17–23 août | 9h vélo | 3 renfo | 1 run _(révisé 7 août 2026)_
 - **2 blocs sous-seuil/semaine à partir d'ici et jusqu'à fin août**
-- Samedi 22 : **4h / 800–1 000 m D+** — première sortie longue à **setup course** (vélo race, sacoches, poids race)
-- Règle B8 : toute sortie >3h à setup course dès le 17 août
+- Lun 17 : Vélo 2h30 Z2 + 1 bloc sous-seuil (à Annecy — setup course)
+- Mar 18 : Vélo 1h30 back-to-back Z2 (à Annecy — setup course)
+- Mer 19 : Repos (voyage Annecy→Lisbonne)
+- Jeu 20 : **Full dispo** → Vélo 2h Z2 + 2e bloc sous-seuil (2×20 min 132–140 bpm)
+- Ven 21 : Renfo + run 45 min
+- **Sam 22 : Vélo 3h30–4h / 800–1 000 m D+ — setup course**
+- Dim 23 : Repos
 
 #### W35 — 24–30 août | 11h vélo | 3 renfo | 1 run
 - Samedi 29 : **5h / 1 200 m D+** — setup course
@@ -191,6 +207,7 @@ Découper par D+, pas par distance. Une étape 150 km / 3 000m dure plus qu'une 
 
 ## Assumption register (ouvert)
 
-- [ ] Location vélo Annecy confirmée ? (à résoudre avant le 9 août)
+- [x] Location vélo Annecy : disponible 15–18 août (confirmé 7 août)
+- [x] Nord Portugal : full dispo vélo à partir du 20 août (confirmé 7 août) → W34 plan nominal
 - [ ] Lundi 7 septembre disponible (J3 du bloc) ? Travail et famille dégagés ?
 - [ ] Splits d'étapes finaux — passer chaque étape dans E1 avant de réserver l'hébergement

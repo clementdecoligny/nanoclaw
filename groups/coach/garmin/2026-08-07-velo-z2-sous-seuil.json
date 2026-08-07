@@ -1,0 +1,14 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 + bloc sous-seuil — 2h",
+  "date": "2026-08-07",
+  "description": "Bloc sous-seuil réactivé. Stopper si genou signal ou si FC > 141 bpm pendant le bloc.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 échauffement"},
+    {"type": "interval", "durationSec": 2700, "hrMin": 107, "hrMax": 128, "note": "Z2 viser 115-122 en côte"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Bloc sous-seuil — jamais > 141 bpm"},
+    {"type": "recovery", "durationSec": 600,  "hrMin": 90,  "hrMax": 115, "note": "Récup Z1/Z2 basse"},
+    {"type": "interval", "durationSec": 900,  "hrMin": 107, "hrMax": 128, "note": "Z2 avec D+ 400-500m total"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 retour au calme"}
+  ]
+}
