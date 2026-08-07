@@ -1,1 +1,0 @@
-/app/skills/whatsapp-formatting/instructions.md
