@@ -360,7 +360,6 @@ export function buildMounts(
     mounts.push({ hostPath: globalDir, containerPath: '/workspace/global', readonly: false });
   }
 
-
   // Shared CLAUDE.md — read-only, imported by the composed entry point via
   // the `.claude-shared.md` symlink inside the group dir.
   const sharedClaudeMd = path.join(process.cwd(), 'container', 'CLAUDE.md');
