@@ -56,3 +56,10 @@ groups/*/container.json
 
 # Runtime lock files (transient, not durable content)
 .claude/scheduled_tasks.lock
+.agents
+AGENTS.md
+
+# Internal working docs, never committed
+docs/maintainer-guide.md
+docs/drafts/
+forks.md

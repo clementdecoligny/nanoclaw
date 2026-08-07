@@ -115,7 +115,7 @@ describe('handleSessionCommand', () => {
     });
     expect(result).toEqual({ handled: true, success: true });
     expect(deps.runAgent).toHaveBeenCalledWith('/compact', expect.any(Function));
-    expect(deps.advanceCursor).toHaveBeenCalledWith('100');
+    expect(deps.advanceCursor).toHaveBeenCalledWith(new Date(100).toISOString());
   });
 
   it('sends denial to interactable sender in non-main group', async () => {
@@ -131,7 +131,7 @@ describe('handleSessionCommand', () => {
     expect(result).toEqual({ handled: true, success: true });
     expect(deps.sendMessage).toHaveBeenCalledWith('Session commands require admin access.');
     expect(deps.runAgent).not.toHaveBeenCalled();
-    expect(deps.advanceCursor).toHaveBeenCalledWith('100');
+    expect(deps.advanceCursor).toHaveBeenCalledWith(new Date(100).toISOString());
   });
 
   it('silently consumes denied command when sender cannot interact', async () => {
@@ -146,7 +146,7 @@ describe('handleSessionCommand', () => {
     });
     expect(result).toEqual({ handled: true, success: true });
     expect(deps.sendMessage).not.toHaveBeenCalled();
-    expect(deps.advanceCursor).toHaveBeenCalledWith('100');
+    expect(deps.advanceCursor).toHaveBeenCalledWith(new Date(100).toISOString());
   });
 
   it('processes pre-compact messages before /compact', async () => {

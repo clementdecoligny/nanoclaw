@@ -76,6 +76,21 @@ export function formatNow(timezone: string, now: Date = new Date()): string {
   return `${weekday}, ${ymd} ${hm}`;
 }
 
+/**
+ * Compact sortable local stamp for log lines: "YYYY-MM-DD HH:mm" in `timezone`.
+ * (sv-SE is the one locale whose default rendering is this exact shape.)
+ */
+export function formatLocalStamp(date: Date, timezone: string): string {
+  return date.toLocaleString('sv-SE', {
+    timeZone: resolveTimezone(timezone),
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+}
+
 function resolveContainerTimezone(): string {
   const candidates = [process.env.TZ, Intl.DateTimeFormat().resolvedOptions().timeZone];
   for (const tz of candidates) {

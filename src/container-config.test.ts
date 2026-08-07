@@ -49,6 +49,7 @@ function row(overrides: Partial<ContainerConfigRow> = {}): ContainerConfigRow {
     packages_pip: '[]',
     additional_mounts: '[]',
     cli_scope: 'group',
+    timezone: null,
     updated_at: '2026-07-14T00:00:00.000Z',
     ...overrides,
   };
