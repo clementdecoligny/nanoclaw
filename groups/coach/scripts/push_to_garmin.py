@@ -42,8 +42,14 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 from datetime import datetime
 from typing import Any
+
+# requests uses REQUESTS_CA_BUNDLE, not SSL_CERT_FILE — bridge the gap so the
+# OneCLI proxy CA (injected via SSL_CERT_FILE) is trusted by the garminconnect library.
+if "REQUESTS_CA_BUNDLE" not in os.environ and os.environ.get("SSL_CERT_FILE"):
+    os.environ["REQUESTS_CA_BUNDLE"] = os.environ["SSL_CERT_FILE"]
 
 # Canonical Garmin HR target type — MUST match garminconnect
 # workout.TargetType.HEART_RATE_ZONE. Used for a custom bpm range via
@@ -281,14 +287,29 @@ def _make_client() -> Any:
     # refreshes the cached OAuth tokens. Only if the store is absent does it
     # need the email/password to do a full SSO login.
     client = Garmin(email or "", password or "")
-    try:
-        client.login(tokenstore)
-    except Exception as e:
-        raise RuntimeError(
-            f"Garmin auth from token store failed ({e}). The refresh token may "
-            "have expired — re-run scripts/garmin_login.py on the host to re-seed."
-        ) from e
-    return client
+    # Retry once before blaming the refresh token. login() refreshes an expired
+    # ACCESS token on its own, and the first attempt can still fail on a
+    # transient network/5xx from Garmin. Treating that as "refresh token dead"
+    # sends the operator to a needless interactive MFA re-login — and the agent
+    # relays that advice to the user, who then can't push a session that would
+    # have gone through on a second try.
+    last_err: Exception | None = None
+    for attempt in (1, 2):
+        try:
+            client.login(tokenstore)
+            return client
+        except Exception as e:  # noqa: PERF203 — two attempts, clarity over speed
+            last_err = e
+            if attempt == 1:
+                time.sleep(2)
+
+    raise RuntimeError(
+        f"Garmin auth from token store failed after 2 attempts ({last_err}). "
+        "The access token refreshes automatically, so this usually means the "
+        "REFRESH token itself expired (~1 year) or Garmin is down. Verify with "
+        "a third attempt before re-seeding; if it keeps failing, re-run "
+        "scripts/garmin_login.py on the host (needs an interactive TTY for MFA)."
+    ) from last_err
 
 
 def main(argv: list[str]) -> int:
