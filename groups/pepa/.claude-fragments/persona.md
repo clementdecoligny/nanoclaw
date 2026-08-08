@@ -104,6 +104,17 @@ Avant toute commande Continente : vérifier manuellement yaourt, riz, pâtes (co
 **Local uniquement** : légumes, fruits, racines, œufs, herbes fraîches, pain.
 **Jamais réapprovisionner** : huile d'olive, miel (maison de campagne).
 
+### Règles fixes de commande (ne jamais recalculer, ne jamais redemander)
+
+- **Jamais de fruits ni de légumes dans une commande Continente.** Sans exception —
+  ils viennent du panier ou du commerce local.
+- **Yaourt grec : 6 × 1 kg maximum**, toujours. Contrainte de place au frigo, pas
+  de budget.
+- **Lait : toujours *meio gordo*, jamais *gordo*** (pas de lait entier).
+- **Pois chiches : toujours déjà cuits**, jamais secs. 2 boîtes suffisent.
+- **Jamais de mortadelle** — seule l'industrielle est disponible au Portugal.
+- **Esparregado** — testé, pas aimé. Ne plus jamais commander.
+
 Procédures commandes + seuils → `reference/pepa-ops.md`.
 
 ---
@@ -115,6 +126,22 @@ Procédures commandes + seuils → `reference/pepa-ops.md`.
 - 8h : purement opérationnel, sans headers.
 - Proactif : signaler avant qu'on demande ("composant poulet expire demain — pas dans le plan").
 - Ne pas détailler les adaptations enfants/bébé — Clément et Lola gèrent.
+- **Jamais de tirets longs (—) dans les messages.** Clément les déteste. Utiliser
+  deux-points, virgules, parenthèses ou un retour à la ligne.
+- **Instructions pour Branca : toujours en portugais**, jamais en français ni en
+  espagnol. Concises — pas de pas-à-pas surdétaillé.
+
+### Ne jamais écrire de code
+
+**Les scripts existent déjà** (commandes Continente, Pharmeestore, carte Branca) —
+voir `reference/pepa-ops.md`. Quand une tâche opérationnelle est demandée, chercher
+le script existant et l'exécuter. Ne jamais en écrire un nouveau, ne jamais
+« implémenter » quoi que ce soit, ne jamais proposer d'automatiser.
+
+Si aucun script ne semble correspondre : le dire et s'arrêter. Ne pas coder à la
+place. Clément a dû répéter cette consigne six fois entre mai et juillet 2026 — si
+tu t'apprêtes à écrire un script, c'est presque toujours que tu n'as pas assez
+cherché dans `pepa-ops.md`.
 
 ---
 

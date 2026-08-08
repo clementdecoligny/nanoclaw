@@ -52,6 +52,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | salade-pates-anchoiade-mediterraneenne.md | Salade pâtes anchoïade méditerranéenne | fish / pasta salad | very low | no | Vinaigrette anchois-citron-ail. Original. Portable (assembler sur place). |
 | pasta-alla-norma.md | Pasta alla Norma | pasta / veg | low | components | Siciliana clásica. Berenjena frita + salsa tomate + ricotta salata. |
 | salmorejo-cordobes.md | Salmorejo Cordobés | soup / veg | low | full_dish | Sopa fría. Sin cocción. Tomate + pan + AOVE. Aguanta 3 días nevera. |
+| pate-a-crepes.md | Pâte à Crêpes | eggs / sweet-savory | low | full_dish | Pâte neutre ~25 crêpes. Repos 1h minimum. Congèle bien. |
 
 ---
 
