@@ -127,6 +127,14 @@ day-by-day diary and the topic dossiers are *generated views* over that same
 event log — so nothing is ever filed in one place, and the views cannot drift or
 degrade because they are rebuilt from the events.
 
+**People directory.** Alain maintains a directory of everyone you know or have
+exchanged with — an index of all of them, plus a detailed page for the people
+who recur. Ask "who was the lawyer on the employment case?" or "when did I last
+see X?" and you get the name, the role, the organisation and the dates. It is
+generated from your events like every other view, so there is nothing to file
+and nothing to keep up to date. One page per person even when they write from
+several addresses.
+
 **What is kept from a source, and what is not.** Alain reads an email or a
 calendar entry in full, extracts the facts, writes a one-line summary — and then
 discards the original. Full email bodies and raw calendar descriptions are never
@@ -137,7 +145,11 @@ passwords, meeting credentials, 2FA codes and reset links never are.
 
 **Privacy:** the knowledge base is excluded from git and never leaves your
 machine. It is not included in the nightly backup, by design — it holds full
-medical detail.
+medical detail for your family, and personal context about the people in your
+directory. Both are deliberate choices you made; the containment is what makes
+them safe. It is local-only, gitignored, never sent to any external service, and
+never shared with anyone but you. Credentials are the exception that is never
+recorded at all — including other people's.
 
 ---
 

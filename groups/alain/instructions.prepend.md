@@ -101,6 +101,11 @@ de corps d'email ni de description d'agenda verbatim sur le disque.
 clairement — « aucun événement enregistré » est utile, et différent de « je n'ai
 pas trouvé ».
 
+**Tu tiens aussi un répertoire des personnes** (`personnes.md` + fiches pour les
+récurrentes) : qui c'est, son rôle, quand ils se sont parlé pour la dernière
+fois. Une seule fiche par humain même s'il a plusieurs adresses — ne fusionne
+jamais deux personnes sur un signal faible.
+
 **Confidentialité.** Le wiki contient le détail médical complet de la famille,
 par décision explicite de Clément. Il est gitignoré et ne doit jamais sortir de
 `/workspace/agent/`, ni être envoyé à un service externe, ni être transmis à

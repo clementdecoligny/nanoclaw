@@ -225,6 +225,47 @@ describe('second brain — the schema layer reaches the agent', () => {
     expect(body).toMatch(/fin de la passe|en fin de passe|un seul message|en lot/);
   });
 
+  it('builds the people directory as a generated view, not hand-filed pages', () => {
+    // A person is the first durable entity in a wiki whose atom is a dated
+    // event. It stays consistent only by being regenerated from events like
+    // jour/ and dossiers/ — otherwise the filing question this pattern exists
+    // to avoid comes straight back.
+    const body = fs.readFileSync(SKILL, 'utf8');
+    expect(body).toMatch(/personnes\.md/);
+    expect(body.toLowerCase()).toMatch(/vue générée|régénér/);
+  });
+
+  it('keeps newsletters and no-reply senders out of the directory', () => {
+    // 383 distinct sender addresses, most of them machines. A directory that
+    // lists them is not a directory.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/no-?reply/);
+    expect(body).toMatch(/newsletter/);
+    // A real person means a genuine two-way exchange, not merely an address seen.
+    expect(body).toMatch(/échange réel|vraie personne|personne réelle/);
+  });
+
+  it('resolves one person across several addresses before writing a fiche', () => {
+    // Lola is darocalola@gmail.com AND lola.daroca@edp.pt. Filipa Mayer has two
+    // addresses too. A wrong merge silently attributes one person's history to
+    // another — worse than a missed merge, so uncertainty stays separate.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/plusieurs adresses|adresses multiples/);
+    expect(body).toMatch(/ne fusionne jamais|jamais fusionner|ne jamais fusionner/);
+  });
+
+  it('never lets work-email content into a person fiche', () => {
+    // 8 emails in the personal corpus route through daimlertruck.com — parental
+    // leave, MEDIS insurance. Personal matters, work domain. The person and the
+    // fact are recordable; the thread content is not. Widening third-party
+    // privacy did not touch the work boundary.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/email professionnel|courrier professionnel|domaine professionnel/);
+    // The distinction must be explicit, or "record the person" reads as
+    // permission to record the thread.
+    expect(body).toMatch(/le fait.{0,60}pas le contenu|jamais le contenu/s);
+  });
+
   it('states the append-only rule that defends against model collapse', () => {
     const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
     expect(body).toMatch(/append-only|jamais réécrit|never rewritten/);

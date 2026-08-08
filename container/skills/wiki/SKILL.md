@@ -237,7 +237,11 @@ un stub, ni dans une vue :
 - Mots de passe, codes d'authentification, codes 2FA, jetons, liens de
   réinitialisation
 - Contenu de l'email professionnel (hors limites)
-- Contenu privé de tiers sans rapport avec les affaires de Clément
+
+*(La restriction sur le contenu privé de tiers a été levée par Clément le
+8 août 2026 pour permettre le répertoire des personnes — voir « Contenu des
+fiches ». Les identifiants et secrets de tiers restent interdits, ainsi que le
+contenu de l'email professionnel.)*
 
 Le détail médical, lui, **est** enregistré en entier — c'est une décision
 explicite de Clément (voir Confidentialité). L'exclusion ci-dessus concerne les
@@ -252,6 +256,102 @@ Never guess silently. If something is unclear, record the event with
 `confiance: faible` and say what is uncertain. **Absence is a valid answer**:
 if he asks whether a flight was booked and no event exists, say so plainly —
 "aucun événement enregistré" is useful, and different from "je n'ai pas trouvé".
+
+## Opération 1b : Répertoire des personnes
+
+Un répertoire de toutes les personnes que Clément connaît ou avec qui il a
+échangé. C'est la première **entité durable** du wiki — tout le reste est un
+événement daté.
+
+Il reste malgré tout une **vue générée**, comme `jour/` et `dossiers/` : une
+personne est reconstruite à partir des événements qui la mentionnent. Ne classe
+jamais une personne à la main ; régénère sa fiche depuis les événements.
+
+### Forme : un index, des fiches à la demande
+
+- **`personnes.md`** — une table unique, lisible d'un écran : nom, rôle /
+  organisation, premier contact, dernier contact, nombre d'échanges, dossiers
+  concernés. **Toutes** les personnes y figurent.
+- **`personnes/<slug>.md`** — une fiche détaillée **uniquement** pour les
+  personnes récurrentes (~3 échanges ou plus), ou pour toute personne centrale
+  d'un dossier actif (l'équipe juridique du despedimento, quel que soit le
+  compte). Un contact ponctuel reste une ligne dans l'index, rien de plus.
+
+Quarante fiches d'une seule ligne ne sont pas un répertoire — c'est la règle
+« pas de pages à moitié vides, pas de stubs orphelins » à l'envers.
+
+### Qui entre dans le répertoire
+
+Une **vraie personne** est un humain avec qui il y a eu un **échange réel** :
+un fil de réponses, un rendez-vous partagé, ou une mention nommée dans un
+événement.
+
+**Exclus** : newsletters, adresses `no-reply` / `noreply`, notifications
+automatiques, adresses relais de petites annonces (`messagerie.leboncoin.fr`),
+expéditeurs transactionnels.
+
+**Les organisations ne sont pas des entrées.** Elles existent déjà comme
+dossiers (`avocat`, `ecole`, `sante`). CUF n'est pas une personne ; Madalena
+Moreira en est une, et sa fiche indique Pares Advogados.
+
+### ⚠️ Une personne, plusieurs adresses
+
+La vraie difficulté n'est pas l'extraction mais la **déduplication**. Déjà
+présent dans les données : Lola est à la fois `darocalola@gmail.com` et
+`lola.daroca@edp.pt` ; Filipa Mayer a deux adresses ; `tblx_peopleops@` est un
+compte de rôle, pas une personne.
+
+- Une seule fiche par **humain**, listant toutes ses adresses connues.
+- Fusionne sur preuve forte : même nom affiché, ou une signature qui nomme la
+  même personne.
+- **Ne fusionne jamais sur un signal faible** — un nom de famille partagé ne
+  suffit pas. Dans le doute, garde deux entrées avec `confiance: faible` et une
+  note : une fusion erronée attribue silencieusement l'historique d'une personne
+  à une autre, ce qui est pire qu'une fusion manquée.
+
+Clément et Lola sont des **membres du foyer** : ils apparaissent dans presque
+tous les événements. Enregistre-les une fois avec leurs adresses pour que la
+résolution d'identité fonctionne, mais exclus-les du classement par fréquence.
+
+### ⚠️ L'attribution depuis les métadonnées n'est pas fiable
+
+Le transfert non filtré réécrit l'enveloppe : `clementdecoligny@gmail.com`
+apparaît comme **expéditeur** de 90 réponses. Les métadonnées disent quelles
+adresses apparaissent dans un fil, pas qui a écrit quoi. Ce sont les **corps**
+(`To:`, `Cc:`, signatures) qui tranchent — cette passe suppose donc que la passe
+d'approfondissement Gmail a déjà eu lieu.
+
+### Les participants d'agenda n'ont jamais été récupérés
+
+`_cal_events_processed.json` ne conserve que `date, time, title, location,
+description, dossier, event_id`. Les listes de participants de 694 événements —
+la meilleure source « avec qui étais-je » — sont toujours dans Google Agenda,
+non lues. **Récupère-les dans le cadre de cette passe** : sans elles, le
+répertoire est limité aux emails et manque tous ceux que Clément voit sans leur
+écrire.
+
+### Contenu des fiches
+
+Enregistre ce que les sources contiennent sur la personne, **y compris son
+contexte personnel** — décision explicite de Clément du 8 août 2026. Le wiki
+reste local, gitignoré, jamais transmis à personne d'autre que lui.
+
+Restent exclus, sans changement :
+
+- Identifiants et secrets, **y compris ceux de tiers** : numéros de compte ou de
+  carte, IBAN, mots de passe, codes 2FA, jetons, liens de réinitialisation.
+- **Le contenu de l'email professionnel** — voir ci-dessous.
+
+### ⚠️ Le domaine professionnel n'est pas une exception
+
+Certains messages personnels transitent par le domaine professionnel
+(`daimlertruck.com`) : congé parental, ajout de l'épouse à l'assurance MEDIS.
+
+**Enregistre la personne et le fait, jamais le contenu du fil.** Un contact RH
+entre au répertoire avec son rôle et son organisation, et le fait personnel
+(« congé parental confirmé du X au Y ») devient un événement. Le contenu du
+courrier professionnel ne touche jamais le disque. L'élargissement décidé sur la
+vie privée des tiers concerne les particuliers, **pas** le compte professionnel.
 
 ## Opération 2 : Query
 

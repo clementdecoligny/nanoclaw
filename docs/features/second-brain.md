@@ -502,3 +502,148 @@ Secondary: `dossiers/finance.md` carries amounts rather than "relevé mensuel";
 Negative signal (the pass failed even if it ran): any full email body on disk,
 any surviving `<br>`, or a finance event still reading "relevé mensuel" with no
 figure.
+
+---
+
+# Pass 3 — People directory
+
+Requested 2026-08-08: a directory of everyone Clément knows or has communicated
+with.
+
+## Why this is a different shape
+
+Everything in the wiki so far is a **dated event**. A person is not an event —
+it is a durable entity that accumulates across events. This is the first thing
+in the wiki with an identity that persists.
+
+It stays consistent with the architecture by being a **generated view**, exactly
+like `jour/` and `dossiers/`: the events remain the atom, and a person page is
+rebuilt from every event mentioning them. Nothing is filed by hand; the "which
+page does this belong to" question still never arises.
+
+## Form — one index, fiches on demand
+
+`personnes.md` is a single table: name, role/organisation, first contact, last
+contact, interaction count, dossiers touched. Scannable in one screen.
+
+`personnes/<slug>.md` is written **only for recurring people** — a threshold of
+roughly 3+ interactions, or anyone central to an active dossier (the legal team
+during the despedimento, for instance, regardless of count). One-off contacts
+live as a row in the index and nothing more.
+
+Rejected: a fiche per person from the start. 45 people today, most with a single
+interaction, would produce 45 files of one line each — the "no half-finished
+pages, no orphan stubs" rule in reverse, and unreadable as a directory.
+
+## Scope — real people only
+
+A real person is a human with whom a **genuine exchange** happened: a reply
+thread, a shared appointment, or a named mention inside an event. Excluded:
+newsletters, `no-reply@`, notification senders, marketplace relay addresses
+(`messagerie.leboncoin.fr`), and transactional senders.
+
+Organisations are **not** directory entries. They already exist as dossiers
+(`avocat`, `ecole`, `sante`), and a person's fiche records their organisation as
+an attribute. CUF is not a person; Madalena Moreira is, and her fiche says
+Pares Advogados.
+
+## What the sources can actually support
+
+Measured 2026-08-08, before building:
+
+- **45 real people** are recoverable from Gmail metadata alone (reply threads,
+  after filtering machines and forward artifacts) — Vasco Alves, Helena Sá
+  Machado, the Pares Advogados team, João Barroso, Filipa Mayer, the school.
+- **Sender identity is unreliable from metadata.** The unfiltered forward
+  rewrites the envelope: `clementdecoligny@gmail.com` appears as the *sender* of
+  90 replies across 57 threads. Alain can tell which addresses appear in a
+  thread, not reliably who wrote what. Bodies (`To:`, `Cc:`, signatures) are
+  what disambiguate — so this pass **depends on pass 2** and must run after it.
+- **Calendar attendees were never fetched.** `_cal_events_processed.json` keeps
+  only `date, time, title, location, description, dossier, event_id`; the entire
+  12-month cache holds 12 `@` characters. Attendee lists across 694 events — the
+  single best "who was I with" source — are still in Google Calendar, unread.
+  Same root cause as the email bodies in pass 2.
+
+**Consequence: a re-fetch of calendar attendees is part of this pass**, not a
+later refinement. Without it the directory is email-only and misses everyone
+Clément sees in person but does not email.
+
+## Third-party content — rule change
+
+The existing rule forbade "contenu privé de tiers sans rapport avec les affaires
+de Clément". **Clément explicitly widened this on 2026-08-08**, after being shown
+the trade-off: person fiches record whatever the sources contain about that
+person, including personal context, not only the parts touching his own dealings.
+
+Recorded as a deliberate decision with its consequences stated:
+
+- The wiki becomes a file on identifiable third parties who have not consented.
+  It was already sensitive (family clinical detail); this widens *whose* data it
+  holds, not just how much.
+- Mitigation is unchanged and already in force: `wiki/` and `sources/` are
+  gitignored, excluded from the nightly backup, local-only, and never sent to
+  any external service or any person other than Clément.
+
+**What remains excluded, unchanged** — these are not third-party-privacy rules
+but credential and boundary rules, and pass 3 does not touch them:
+
+- Account/card numbers, IBANs, passwords, 2FA codes, tokens, reset links —
+  including those belonging to third parties.
+- **Work email content.** See below.
+
+### Work domain is not an exception
+
+8 emails in the personal corpus touch `daimlertruck.com` — HR threads about
+parental leave dates and adding his wife to MEDIS insurance. These are *personal
+matters* that happen to route through the work domain.
+
+Decision: **the person and the fact are recorded; the work-email content is
+not.** An HR contact appears in the directory with role and organisation, and
+the personal fact ("congé parental confirmé du X au Y", "épouse ajoutée à MEDIS")
+becomes an event. The thread content does not land on disk. The work-email
+boundary is a standing rule from the persona and pass 3 does not relax it — the
+third-party widening above applies to private individuals, not to the work
+account.
+
+## Identity resolution
+
+The directory's real difficulty is not extraction but **deduplication**. Already
+visible in the data:
+
+- Two addresses, one person: `darocalola@gmail.com` and `lola.daroca@edp.pt`.
+- Display-name variants: `Lola Daroca` / `LOLA DAROCA`; `Filipa Mayer` at both
+  `pilates.filipamayer@` and `pilates.marcar@`.
+- Role accounts that are not a person: `tblx_peopleops@`, `secretaria@`.
+
+Rules: one fiche per **human**, listing every known address. Merge on strong
+evidence (same display name, or a signature naming the same person); never merge
+on a weak signal such as a shared surname. When uncertain, keep them separate
+with `confiance: faible` and a note — a wrong merge is worse than a missed one,
+because it silently attributes one person's history to another.
+
+Clément and Lola are **household members**, not directory entries in the usual
+sense: they appear in nearly every event, so a fiche listing "interactions" is
+meaningless for them. Record them once with their addresses so identity
+resolution works, and exclude them from the interaction ranking.
+
+## Affected files — pass 3
+
+| File | Change |
+|---|---|
+| `container/skills/wiki/SKILL.md` | people-directory operation; identity resolution; third-party rule change; calendar attendee re-fetch |
+| `src/second-brain-wiki.test.ts` | tests for scope, dedup, work-email boundary, generated-view discipline |
+| `groups/alain/wiki/personnes.md` + `personnes/` | new — index and recurring fiches |
+| `docs/features/second-brain.md` | this section |
+| `product-docs/agents/alain.md` | directory workflow |
+
+## Success signal — pass 3
+
+Golden path: **« C'est qui déjà l'avocate sur le dossier laboral ? »** → Madalena
+Moreira dos Santos, Pares Advogados, first contact January 2026, last exchange
+July 2026, with the thread cited. And: **« Quand j'ai vu Vasco pour la dernière
+fois ? »** answered from his fiche.
+
+Secondary: `personnes.md` lists ~45 people rising materially once calendar
+attendees are fetched; no newsletter or `no-reply@` address appears anywhere in
+it; Lola has exactly one fiche despite two addresses.
