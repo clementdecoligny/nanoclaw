@@ -42,6 +42,19 @@ if git diff --cached --quiet; then
   exit 0
 fi
 
+# Second brain (docs/features/second-brain.md) holds full medical detail and must
+# never reach the remote. .gitignore is the policy; this is the guard at the point
+# of the dangerous action, in case an entry is dropped or a file was `git add -f`'d.
+# -z avoids git's octal-quoting of non-ASCII paths ("sant\303\251-tom.md"),
+# whose leading quote would defeat the ^ anchor.
+staged_private="$(git diff --cached --name-only -z | tr '\0' '\n' | grep -E '^groups/[^/]+/(wiki|sources)/' || true)"
+if [ -n "$staged_private" ]; then
+  echo "backup-db: refusing to commit — second-brain files are staged:" >&2
+  echo "$staged_private" >&2
+  echo "backup-db: these must stay local. Check .gitignore and run: git rm --cached <path>" >&2
+  exit 1
+fi
+
 git commit --no-verify -m "chore: daily backup $(date -u +%Y-%m-%d) [$BRANCH]"
 git push origin "$BRANCH"
 

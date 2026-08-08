@@ -22,6 +22,17 @@ groups/*/.heartbeat-bootstrapped
 groups/*/HEARTBEAT.md
 groups/*/attachments/
 groups/alain/git-branch-hygiene.json
+# Second brain (docs/features/second-brain.md). Alain's holds full clinical
+# detail for the family by explicit decision. scripts/backup-db.sh runs
+# `git add groups/` and pushes to origin nightly — these entries are the only
+# thing keeping medical records off the remote. Do not remove without reading
+# the spec.
+#
+# Globbed, not per-group: the wiki skill is mounted into every group with
+# skills:"all" (all of them), so any group can grow a wiki/. A per-group entry
+# would silently leave the next one exposed.
+groups/*/wiki/
+groups/*/sources/
 *Zone.Identifier
 
 # Secrets
