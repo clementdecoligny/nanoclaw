@@ -77,6 +77,15 @@ function parseArgv(argv: string[]): {
       const next = argv[i + 1];
       if (next === undefined || next.startsWith('--')) {
         args[key] = true;
+      } else if (key in args) {
+        // Repeated flag (e.g. `--var A=1 --var B=2`): accumulate instead of
+        // overwriting. Silently keeping only the last occurrence loses data —
+        // for `config set-env` that means a credential the caller believes was
+        // stored. Handlers that expect a single value are unaffected: a flag
+        // passed once still arrives as a plain string.
+        const prev = args[key];
+        args[key] = Array.isArray(prev) ? [...prev, next] : [prev as string, next];
+        i++;
       } else {
         args[key] = next;
         i++;

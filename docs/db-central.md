@@ -322,9 +322,14 @@ CREATE TABLE container_configs (
   additional_mounts      TEXT NOT NULL DEFAULT '[]',
   cli_scope              TEXT NOT NULL DEFAULT 'group',   -- disabled | group | global
   timezone               TEXT,                            -- IANA id; NULL = install-global TZ (added by migration 20)
+  env                    TEXT NOT NULL DEFAULT '{}',      -- JSON Record<string,string>; per-group env vars (added by migration 23)
   updated_at             TEXT NOT NULL
 );
 ```
+
+`env` holds per-agent-group environment variables, passed as `-e KEY=VALUE` at spawn and scoped to that one group. It exists for credentials the OneCLI gateway structurally cannot inject: OneCLI rewrites HTTP **headers and query params**, so a multi-step *form* login (Continente: username → password → OAuth code → session cookie) puts the secret in a request **body**, where there is nothing to hook into. **Prefer OneCLI whenever the credential travels in a header** — this column is the fallback, not the default.
+
+Set via `ncl groups config set-env --id <group> --var KEY=VALUE` (repeatable; `--var KEY=` removes a key). Writes **merge** rather than overwrite, so setting one key never silently drops another. Names must be POSIX shell identifiers — the values become docker `-e` arguments, and a name containing `=` or whitespace could smuggle in extra arguments. `ncl groups config get` returns only the **key names**; values are never echoed, because that output is returned to the container agent and would otherwise put the secret straight into the model's context.
 
 `timezone` overrides the install-global timezone for one agent group: host-side scheduling (cron interpretation, `--process-after`, run-log stamps) resolves it live via `resolveGroupTimezone` (`src/container-config.ts`); the container gets it as its `TZ` env on next respawn. Set via `ncl groups config update --timezone <IANA>` (`""` clears back to NULL) or `ncl groups create --timezone`.
 
@@ -434,6 +439,8 @@ Several early migrations were later renamed/retired and replaced by "module" fil
 | 19 | `wiring-threads-override` | `019-wiring-threads.ts` | `messaging_group_agents.threads` — per-wiring thread-policy override (NULL = adapter default) |
 | 20 | `container-config-timezone` | `020-container-config-timezone.ts` | `container_configs.timezone` — per-agent-group timezone override (NULL = install-global) |
 | 21 | `approval-question-render-metadata` | `021-approval-question.ts` | `question` card-body column on all three approval tables so terminal edits retain the original request |
+| 22 | `container-configs-pip` | `022-container-configs-pip.ts` | `container_configs.packages_pip` — pip packages installed into the `/opt/wpenv` venv |
+| 23 | `container-config-env` | `023-container-config-env.ts` | `container_configs.env` — per-agent-group env vars for credentials OneCLI cannot inject (header/param injection only) |
 
 Numbers 5 and 6 are intentionally absent — migrations were renumbered during early development.
 

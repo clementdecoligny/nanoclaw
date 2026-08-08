@@ -88,7 +88,36 @@ export function configFromDb(row: ContainerConfigRow, group: AgentGroup): Contai
     model: row.model ?? undefined,
     effort: row.effort ?? undefined,
     timezone: row.timezone && isValidTimezone(row.timezone) ? row.timezone : undefined,
+    // Undefined rather than {} when empty: the runner guards with `if (config.env)`,
+    // and an empty object would still be truthy — harmless today, but it keeps the
+    // materialized container.json free of a meaningless `"env": {}` line.
+    env: parseEnvColumn(row.env),
   };
+}
+
+/**
+ * Parse the `env` JSON column into the shape the container runner expects.
+ *
+ * Tolerates NULL/absent (rows written before migration 023) and malformed JSON:
+ * a bad value degrades to "no env vars" rather than aborting every spawn for
+ * the group. Non-string values are dropped — they would stringify into
+ * surprising `-e KEY=[object Object]` arguments.
+ */
+function parseEnvColumn(raw: string | null | undefined): Record<string, string> | undefined {
+  if (!raw) return undefined;
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    return undefined;
+  }
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return undefined;
+
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(parsed as Record<string, unknown>)) {
+    if (typeof v === 'string') out[k] = v;
+  }
+  return Object.keys(out).length > 0 ? out : undefined;
 }
 
 /**

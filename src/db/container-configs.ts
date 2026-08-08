@@ -38,11 +38,11 @@ export function createContainerConfig(config: ContainerConfigRow): void {
       `INSERT INTO container_configs (
         agent_group_id, provider, model, effort, image_tag, assistant_name,
         max_messages_per_prompt, skills, mcp_servers, packages_apt, packages_npm,
-        packages_pip, additional_mounts, cli_scope, timezone, updated_at
+        packages_pip, additional_mounts, cli_scope, timezone, env, updated_at
       ) VALUES (
         @agent_group_id, @provider, @model, @effort, @image_tag, @assistant_name,
         @max_messages_per_prompt, @skills, @mcp_servers, @packages_apt, @packages_npm,
-        @packages_pip, @additional_mounts, @cli_scope, @timezone, @updated_at
+        @packages_pip, @additional_mounts, @cli_scope, @timezone, @env, @updated_at
       )`,
     )
     .run(config);
@@ -128,6 +128,37 @@ export function updateContainerConfigJson(
   getDb()
     .prepare(`UPDATE container_configs SET ${column} = ?, updated_at = ? WHERE agent_group_id = ?`)
     .run(JSON.stringify(value), now, agentGroupId);
+}
+
+/**
+ * Merge environment variables into a group's `env` map.
+ *
+ * Merge rather than overwrite: these hold credentials, and a wholesale write
+ * means setting one key silently drops every other — a failure that surfaces as
+ * an unrelated login breaking days later. Pass `null` as a value to remove a key.
+ *
+ * Names are restricted to POSIX shell identifiers because the values become
+ * `-e KEY=VALUE` docker arguments; a name containing `=` or whitespace could
+ * smuggle in additional arguments.
+ */
+export function setContainerConfigEnv(agentGroupId: string, vars: Record<string, string | null>): void {
+  const row = getContainerConfig(agentGroupId);
+  if (!row) throw new Error(`No container config for group: ${agentGroupId}`);
+
+  const merged = JSON.parse(row.env ?? '{}') as Record<string, string>;
+  for (const [name, value] of Object.entries(vars)) {
+    if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(name)) {
+      throw new Error(
+        `Invalid env var name "${name}": must be a POSIX shell identifier (letters, digits, underscore; not starting with a digit)`,
+      );
+    }
+    if (value === null) delete merged[name];
+    else merged[name] = value;
+  }
+
+  getDb()
+    .prepare('UPDATE container_configs SET env = ?, updated_at = ? WHERE agent_group_id = ?')
+    .run(JSON.stringify(merged), new Date().toISOString(), agentGroupId);
 }
 
 export function deleteContainerConfig(agentGroupId: string): void {

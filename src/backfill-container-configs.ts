@@ -24,6 +24,7 @@ interface LegacyContainerJson {
   provider?: string;
   assistantName?: string;
   maxMessagesPerPrompt?: number;
+  env?: Record<string, string>;
 }
 
 export function backfillContainerConfigs(): void {
@@ -67,6 +68,9 @@ export function backfillContainerConfigs(): void {
       additional_mounts: JSON.stringify(legacy.additionalMounts ?? []),
       cli_scope: 'group',
       timezone: null,
+      // Legacy container.json files could already carry an env block; preserve it
+      // so a backfill never silently drops credentials the group depends on.
+      env: JSON.stringify(legacy.env ?? {}),
       updated_at: new Date().toISOString(),
     };
 

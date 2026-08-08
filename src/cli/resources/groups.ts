@@ -9,6 +9,7 @@ import { getSession } from '../../db/sessions.js';
 import { writeSessionMessage } from '../../session-manager.js';
 import {
   getContainerConfig,
+  setContainerConfigEnv,
   updateContainerConfigScalars,
   updateContainerConfigJson,
 } from '../../db/container-configs.js';
@@ -66,6 +67,11 @@ function presentConfig(row: ContainerConfigRow): Record<string, unknown> {
     additional_mounts: JSON.parse(row.additional_mounts),
     cli_scope: row.cli_scope,
     timezone: row.timezone,
+    // Names only, never values. This output is returned to the container agent,
+    // and `env` exists to hold credentials the OneCLI gateway cannot inject —
+    // echoing them back would put the secret straight into the model's context,
+    // which is the leak this column was added to prevent.
+    env: Object.keys(JSON.parse(row.env ?? '{}')).sort(),
     updated_at: row.updated_at,
   };
 }
@@ -343,6 +349,41 @@ registerResource({
         return presentConfig(updated);
       },
     },
+    'config set-env': {
+      access: 'approval',
+      description:
+        'Set or remove per-group environment variables. Requires `ncl groups restart` to take effect. ' +
+        'Use --id <group-id> and --var KEY=VALUE (repeatable); --var KEY= (empty value) removes the key. ' +
+        'Intended for credentials the OneCLI gateway cannot inject — it rewrites HTTP headers and query ' +
+        'params, so a form login that posts a password in a request body has nothing for it to hook into. ' +
+        'Prefer OneCLI whenever the credential travels in a header. Values are never echoed back.',
+      handler: async (args) => {
+        const id = args.id as string;
+        if (!id) throw new Error('--id is required');
+
+        // Repeated --var arrives as string[]; a single one as string.
+        const raw = args.var;
+        const pairs = raw === undefined ? [] : Array.isArray(raw) ? (raw as string[]) : [raw as string];
+        if (pairs.length === 0) {
+          throw new Error('--var KEY=VALUE is required (repeat for several; --var KEY= removes a key)');
+        }
+
+        const vars: Record<string, string | null> = {};
+        for (const pair of pairs) {
+          const eq = pair.indexOf('=');
+          if (eq <= 0) {
+            throw new Error(`Invalid --var "${pair}": expected KEY=VALUE (use KEY= to remove)`);
+          }
+          const name = pair.slice(0, eq);
+          const value = pair.slice(eq + 1);
+          vars[name] = value === '' ? null : value;
+        }
+
+        setContainerConfigEnv(id, vars);
+        return presentConfig(getContainerConfig(id)!);
+      },
+    },
+
     'config add-mcp-server': {
       access: 'approval',
       description:

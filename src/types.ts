@@ -27,6 +27,7 @@ export interface ContainerConfigRow {
   additional_mounts: string; // JSON: AdditionalMountConfig[]
   cli_scope: string; // 'disabled' | 'group' | 'global'
   timezone: string | null; // IANA id; NULL = follow the install-global timezone
+  env: string; // JSON: Record<string,string> — per-group env vars, passed as -e at spawn
   updated_at: string;
 }
 

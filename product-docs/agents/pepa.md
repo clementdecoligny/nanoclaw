@@ -157,6 +157,32 @@ Olive oil and honey are never purchased — they come from the family's countrys
 
 ---
 
+## Credentials
+
+Pepa signs in to Continente to build the basket. Those credentials live in the
+central database as per-group environment variables, scoped to Pepa alone, and are
+passed to her container at startup. They never appear in chat, and she never sees
+them as text she could repeat back.
+
+To set or rotate them:
+
+```
+ncl groups config set-env --id <pepa-group-id> \
+  --var CONTINENTE_EMAIL=<email> --var CONTINENTE_PASSWORD=<password>
+ncl groups restart --id <pepa-group-id>
+```
+
+Reading the config back (`ncl groups config get`) lists only the variable *names* —
+values are never echoed. Use `--var KEY=` with an empty value to remove one.
+
+Most integrations should use the OneCLI vault instead, which injects credentials per
+request. Continente cannot: OneCLI adds credentials to HTTP headers and query
+parameters, while Continente uses a multi-step sign-in form that posts the password
+in the request body. Reach for group environment variables only when a credential
+cannot travel in a header.
+
+---
+
 ## Current limitations
 
 - **No automatic availability detection** — Pepa asks you every Monday what the week looks like. She cannot pull this from a calendar yet.

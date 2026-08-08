@@ -149,6 +149,14 @@ Per-agent-group container runtime config (provider, model, packages, MCP servers
 | `group` (default) | Agent can access `groups`, `sessions`, `destinations`, `members`, `tasks` only, scoped to its own agent group. `--id` and group args are auto-filled. Cross-group access rejected. `cli_scope` changes blocked. |
 | `global` | Unrestricted. Set automatically for owner agent groups via `init-first-agent`. |
 
+**`env`** — per-agent-group environment variables, passed as `-e KEY=VALUE` at spawn and scoped to that group alone. For credentials the OneCLI gateway **structurally cannot** inject: OneCLI rewrites HTTP headers and query params, so a multi-step *form* login (password in a request body) has nothing for it to hook into. **Prefer OneCLI whenever the credential travels in a header** — this is the fallback, not the default.
+
+```bash
+ncl groups config set-env --id <group> --var KEY=VALUE   # repeatable; --var KEY= removes
+```
+
+Writes merge rather than overwrite. `ncl groups config get` returns only the key *names* — values are never echoed, since that output goes to the container agent.
+
 Key files: `src/db/container-configs.ts`, `src/container-config.ts`, `src/cli/dispatch.ts` (scope enforcement), `src/claude-md-compose.ts` (instructions exclusion).
 
 ## Container Restart
