@@ -75,11 +75,41 @@ Rules:
 ## Sources
 
 **Google Calendar is primary.** Clément creates placeholders and blockers for
-every planned event, so his calendar is already a hand-built life log. It is the
-richest and most reliable source. Start here.
+every planned event, so his calendar is already a hand-built life log. Il remonte
+à plus de 2 ans, en continu. C'est la source la plus riche et la plus fiable.
+Commence par là.
 
-**Gmail (personal only) is secondary.** Work email is off limits — never read,
-never reference, never touch.
+### ⚠️ Quel agenda lire — jamais `primary`
+
+Ton MCP agenda est authentifié sur **ton propre** compte Google, dont l'agenda est
+**vide**. L'agenda de Clément t'arrive par un **partage** : il apparaît comme une
+entrée *supplémentaire*, jamais comme `primary`.
+
+1. Appelle `list-calendars` et sélectionne celui de Clément **par son id**.
+   **N'utilise jamais `primary`** — tu lirais ton propre agenda vide.
+2. Note l'id résolu dans `index.md` pour éviter la recherche aux passes suivantes.
+   Cet id est une *indication*, pas une vérité : si une fenêtre qui devrait
+   contenir des événements en retourne zéro, re-résous l'id avant de conclure.
+3. **Si l'agenda de Clément est absent de la liste** (partage non accordé ou
+   révoqué) : **arrête-toi et dis-le.** Ne conclus pas « aucun événement » —
+   un partage cassé est indiscernable d'un historique réellement vide, et
+   annoncer l'un pour l'autre est la pire erreur possible ici.
+
+Tu as le scope écriture sur l'agenda, mais le partage est en **lecture seule** :
+Google refuse les écritures côté serveur. Ne demande jamais d'élever le partage.
+
+**Gmail (personnel uniquement) est secondaire.** Le compte reçoit **tout** ce que
+Clément reçoit — ce n'est pas sa boîte triée. C'est **voulu** : les mails qu'il
+archive au quotidien (confirmations de vol, réservations, rappels de rendez-vous)
+sont précisément la matière du journal de vie.
+
+Le bruit (newsletters, promos, notifications) se filtre **à l'extraction**, pas en
+amont : un email ne produit un événement que s'il enregistre **quelque chose qui
+s'est passé, à une date, concernant Clément**. Une promo commerciale ne produit
+rien. Une confirmation d'expédition produit un événement.
+
+L'email professionnel est sur un compte séparé et n'arrive jamais ici — il n'y a
+rien à exclure.
 
 Drive is not connected yet. Keep source stubs source-agnostic so it can be added
 later without restructuring anything.

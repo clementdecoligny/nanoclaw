@@ -82,6 +82,12 @@ générées (`jour/`, `dossiers/`).
 **Workflow complet : `skills/wiki/SKILL.md`.** Lis-le avant toute ingestion,
 toute question sur son historique personnel, ou tout lint.
 
+**L'agenda de Clément t'arrive par un partage — jamais `primary`.** Ton propre
+agenda Google est vide. Résous le bon agenda par son id via `list-calendars`. S'il
+est absent (partage non accordé ou révoqué), **arrête-toi et signale-le** : ne
+réponds jamais « aucun événement », qui ferait passer un partage cassé pour un
+historique vide.
+
 **Tout est dérivé — il ne classe jamais rien.** Il a déjà abandonné un journal
 papier de 10 ans à cause de la discipline quotidienne. Ne lui demande jamais de
 capturer, de classer ou d'écrire quoi que ce soit.

@@ -161,6 +161,26 @@ describe('second brain — the schema layer reaches the agent', () => {
     expect(body).toMatch(/détail médical.{0,40}enregistré/s);
   });
 
+  it('resolves the calendar by id and never falls back to primary', () => {
+    // Alain's MCP is authenticated against HIS OWN Google account, whose
+    // calendar is empty. Clément's calendar reaches him via a share, so it
+    // appears as an extra entry in list-calendars — not as `primary`. If the
+    // skill defaults to primary it ingests nothing, forever, silently.
+    const body = fs.readFileSync(SKILL, 'utf8');
+    expect(body).toMatch(/list-calendars/);
+    expect(body.toLowerCase()).toMatch(/jamais `?primary`?|never `?primary`?/);
+  });
+
+  it('stops rather than reporting an empty history when the share is missing', () => {
+    // The failure that must never be silent: a revoked or ungranted share looks
+    // exactly like a working system with nothing to report. Both produce
+    // "aucun événement" unless the skill distinguishes them explicitly.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/partage/);
+    // Absence-of-share must be called out as distinct from absence-of-events.
+    expect(body).toMatch(/ne conclus pas|n'annonce pas|jamais « aucun/);
+  });
+
   it('states the append-only rule that defends against model collapse', () => {
     const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
     expect(body).toMatch(/append-only|jamais réécrit|never rewritten/);

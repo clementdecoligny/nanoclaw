@@ -70,11 +70,13 @@ A proposed event with full details (title, date, time, attendees, description). 
 
 ### Second brain — personal life knowledge base
 
-!!! note "Status: built, not yet populated"
-    The structure and the workflow are in place. The knowledge base is empty
-    until the first pass runs: Alain samples your calendar and inbox, proposes
-    the topic categories he found, and waits for your approval before writing
-    anything. Until then, every question returns "aucun événement enregistré".
+!!! note "Status: built, waiting on calendar sharing"
+    The structure and the workflow are in place. Two things remain before it
+    holds anything: **share your personal calendar with Alain's Google account**
+    (read-only — see *How Alain reaches your data* below), then trigger the first
+    pass. He samples your calendar and inbox, proposes the topic categories he
+    found, and waits for your approval before writing anything. Until then, every
+    question returns "aucun événement enregistré".
 
 Alain maintains a knowledge base about your personal life, derived automatically
 from your calendar and personal inbox. Based on Karpathy's LLM Wiki pattern.
@@ -98,6 +100,21 @@ plainly — "aucun événement enregistré" is a real answer, and different from
 calendar (primary — you already create a blocker for every planned event) and
 your personal inbox (secondary). There is no capture step, no daily prompt, and
 nothing to maintain.
+
+**How Alain reaches your data.** The two sources work differently, on purpose:
+
+- **Calendar — you share it with him.** Alain's own Google calendar is empty; your
+  calendar reaches him as a *shared* calendar at read-only level. Nothing is
+  copied, so every past and future event is visible with no sync step, and
+  revoking the share cuts his access to the history too. Google enforces
+  read-only server-side, so he cannot alter your calendar even by mistake.
+- **Inbox — an unfiltered forward.** Alain sees everything you receive, not the
+  inbox you curate. That is deliberate: the mail you archive daily (booking
+  confirmations, appointment reminders, receipts) is exactly what the knowledge
+  base is made of. Noise is discarded when events are extracted, not before —
+  a marketing email simply produces no event.
+
+Work email is on a separate account and never reaches Alain.
 
 **Structure.** The atom is a dated event, written once and never rewritten. The
 day-by-day diary and the topic dossiers are *generated views* over that same
