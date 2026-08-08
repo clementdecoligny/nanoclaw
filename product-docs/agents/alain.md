@@ -70,13 +70,19 @@ A proposed event with full details (title, date, time, attendees, description). 
 
 ### Second brain — personal life knowledge base
 
-!!! note "Status: built, waiting on calendar sharing"
-    The structure and the workflow are in place. Two things remain before it
-    holds anything: **share your personal calendar with Alain's Google account**
-    (read-only — see *How Alain reaches your data* below), then trigger the first
-    pass. He samples your calendar and inbox, proposes the topic categories he
-    found, and waits for your approval before writing anything. Until then, every
-    question returns "aucun événement enregistré".
+!!! note "Status: live — 12 months ingested, email deepening in progress"
+    The calendar share is granted and the first pass is done: **577 events over
+    the last 12 months**, across 11 topic dossiers he derived from your actual
+    data and you approved. Date questions and topic questions answer from the
+    wiki today.
+
+    In progress: the **email deepening pass**. The first pass classified 1530
+    emails from their subject lines without opening any of them, so it recorded
+    *that* a receipt arrived but never the amount, and *that* a consultation
+    happened but never the outcome. The deepening pass reads the bodies of the
+    ~250 emails that carry real content — invoices, CUF, legal, school,
+    bookings — so that "how much did I pay" and "what did the doctor say" become
+    answerable.
 
 Alain maintains a knowledge base about your personal life, derived automatically
 from your calendar and personal inbox. Based on Karpathy's LLM Wiki pattern.
@@ -120,6 +126,14 @@ Work email is on a separate account and never reaches Alain.
 day-by-day diary and the topic dossiers are *generated views* over that same
 event log — so nothing is ever filed in one place, and the views cannot drift or
 degrade because they are rebuilt from the events.
+
+**What is kept from a source, and what is not.** Alain reads an email or a
+calendar entry in full, extracts the facts, writes a one-line summary — and then
+discards the original. Full email bodies and raw calendar descriptions are never
+written to disk; a pointer back to the Gmail thread or calendar entry is kept
+instead, so the original is always one click away without being duplicated.
+Amounts and clinical detail are recorded. Account and card numbers, IBANs,
+passwords, meeting credentials, 2FA codes and reset links never are.
 
 **Privacy:** the knowledge base is excluded from git and never leaves your
 machine. It is not included in the nightly backup, by design — it holds full

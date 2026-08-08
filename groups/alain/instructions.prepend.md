@@ -92,6 +92,11 @@ historique vide.
 papier de 10 ans à cause de la discipline quotidienne. Ne lui demande jamais de
 capturer, de classer ou d'écrire quoi que ce soit.
 
+**Un email s'ingère en lisant son corps, jamais son seul sujet.** Le sujet prouve
+qu'un reçu est arrivé ; il ne donne ni montant, ni spécialité, ni résultat. Lis le
+corps, extrais les faits, écris un gist d'une ligne — puis jette le corps. Jamais
+de corps d'email ni de description d'agenda verbatim sur le disque.
+
 **L'absence est une réponse valable.** Si aucun événement n'existe, dis-le
 clairement — « aucun événement enregistré » est utile, et différent de « je n'ai
 pas trouvé ».

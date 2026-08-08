@@ -181,6 +181,50 @@ describe('second brain — the schema layer reaches the agent', () => {
     expect(body).toMatch(/ne conclus pas|n'annonce pas|jamais « aucun/);
   });
 
+  it('requires fetching email bodies, not classifying from subject lines', () => {
+    // Pass 1 classified 1530 emails from `id, subject, from, date` alone and
+    // never opened a body — so every finance event reads "relevé mensuel" with
+    // no amount, and Alain himself wrote "spécialité non identifiée depuis les
+    // métadonnées". A subject line proves a receipt arrived; it cannot yield
+    // the amount, the payee, or the outcome. Nothing in the skill said to read
+    // the body, so nothing did.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/lis le corps|lire le corps|read the body|ouvre l'email/);
+    // The failure mode named, so it cannot silently return.
+    expect(body).toMatch(/métadonnées seules|sujet seul|subject line alone|jamais.{0,30}depuis le sujet/);
+  });
+
+  it('discards the body after extracting a gist, and always writes a stub', () => {
+    // The deepening pass fetches ~250 attacker-reachable bodies. Reading them is
+    // the point; keeping them is the leak. sources/gmail/ held zero stubs after
+    // pass 1 — the stub rule existed but was never exercised, because nothing
+    // was ever fetched to violate it with.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/jamais le corps complet|never write the body/);
+    // A fetched email that yields no event still gets a stub — that is what
+    // makes a re-run skip it instead of re-fetching.
+    expect(body).toMatch(/même si.{0,60}aucun événement|stub.{0,80}même sans événement/);
+  });
+
+  it('applies the gist rule to calendar descriptions, not just email bodies', () => {
+    // The rule was written for Gmail, so it was applied to neither: the initial
+    // ingest copied calendar descriptions verbatim into views, carrying `<br>`
+    // markup and a CUF patient reference (JMS37913792) onto disk.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/description.{0,80}(agenda|calendar|événement)/s);
+    expect(body).toMatch(/identifiant|référence patient|numéro de dossier/);
+  });
+
+  it('batches injection reports instead of halting the pass', () => {
+    // Halting on first detection means one marketing email with imperative
+    // phrasing stalls a 250-email run overnight, and a pass that never finishes
+    // gets abandoned. Quarantine, continue, report once at the end.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/confiance: faible/);
+    expect(body).toMatch(/continue|poursuis|ne t'arrête pas/);
+    expect(body).toMatch(/fin de la passe|en fin de passe|un seul message|en lot/);
+  });
+
   it('states the append-only rule that defends against model collapse', () => {
     const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
     expect(body).toMatch(/append-only|jamais réécrit|never rewritten/);

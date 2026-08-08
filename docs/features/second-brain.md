@@ -337,3 +337,168 @@ of the last 12 months that Clément never had to write.
 Deferred to a scheduled weekly pass (`ncl tasks`) — ingest new material, run
 lint, send one French summary. Not part of the v1 build; added once retrieval is
 proven.
+
+---
+
+# Pass 2 — Gmail deepening
+
+Written 2026-08-08, after the initial ingest completed (577 events, 12 months).
+
+## The problem
+
+The first Gmail pass extracted **35 events from 1530 emails**. The ratio looked
+like under-coverage. It is not — it is a **missing fetch step**.
+
+`wiki/_gmail_meta_12mo.json` holds four fields per email: `id, subject, from,
+date`. The pass classified all 1530 emails **from subject lines alone and never
+opened a body**. `groups/alain/sources/gmail/` contains **zero stub files**,
+though "Stubs de source" mandates one per ingested source.
+
+Alain said so himself, in the event text:
+
+```markdown
+## 2026-01-31 | sante | Consultation(s) CUF — recibo(s) émis
+2 reçus CUF reçus. Spécialité non identifiée depuis les métadonnées.
+```
+
+A subject line proves a receipt arrived. It cannot yield the amount, the payee,
+the specialty, or the outcome. So every finance event reads "relevé mensuel"
+with no figure, and every santé event reads "recibo(s) émis" with no clinical
+content. **The wiki cannot answer "combien j'ai payé" or "qu'est-ce qui est
+sorti de la consultation" because that data was never fetched.**
+
+### Gmail is additive, not an echo of the calendar
+
+Tested before committing to the pass — if Gmail merely duplicated the calendar,
+deepening would buy nothing:
+
+- **209 of 1530 (13.7%)** are calendar notifications (`Invitation:`, `Accepted:`,
+  `Cancelled event:`). Genuine overlap, correctly excluded by dedupe.
+- **1321 emails carry information the calendar does not have.**
+- The transactional veins are almost entirely additive — counts before → after
+  removing calendar notifications: invoices **73 → 73**, bookings **34 → 34**,
+  deliveries **51 → 51**, school **26 → 26**, avocat **20 → 20**.
+- **966 distinct threads, 153 multi-message.** A thread is a negotiation *with an
+  outcome* — the calendar has no equivalent shape.
+
+## Scope — the four dense veins (~250 emails)
+
+Chosen over "everything non-calendar" (1321): most of the remainder is
+newsletters and Vinted/OLX notifications that yield no event, and fetching them
+dilutes the log while multiplying the injection surface for nothing.
+
+| Vein | Emails | What a body adds that a subject cannot |
+|---|---|---|
+| Finance / recibos | 73 | Amount, payee, due date, reference. Today: "relevé mensuel", no figure. |
+| Santé / CUF | 25 | Specialty, provider, diagnosis, result, amount. Today: "spécialité non identifiée". |
+| Avocat | 20 | Positions, deadlines, what was sent and answered. Highest-stakes thread in the wiki. |
+| École | 26 | Closures, payments, meetings, medical notes. **No dossier exists today.** |
+| Réservations | 34 | Confirmation number, dates, property, cancellation terms. |
+
+Multi-message threads (153) are **out of scope for this pass** — thread
+reconstruction is a distinct extraction shape and is deferred to pass 3. Single
+messages within those threads are still eligible if they fall in a vein above.
+
+## Extraction contract
+
+Non-negotiable, and the reason this pass needs a spec rather than a prompt:
+
+**Read body → extract facts → write a one-line gist → discard the body.** The
+body is never written to disk, not in an event, not in a stub, not in a view.
+The `gmail_id` is the pointer back; the thread in Gmail stays the source of
+truth. This is the existing "Stubs de source" rule — pass 2 is the first time it
+is actually exercised, because pass 1 never fetched anything to violate it with.
+
+Every fetched email produces exactly one stub in
+`groups/alain/sources/gmail/YYYY-MM-DD-<slug>.md` (currently: zero exist). A
+fetched email that yields no event still gets a stub, so the pass is idempotent
+and re-runs skip it.
+
+Amounts are recorded. **Full account numbers, card numbers, complete IBANs,
+passwords, 2FA codes, tokens and reset links are not** — unchanged from the
+existing rule. Payee + amount + date is the useful triple; the account it was
+drawn on is not.
+
+## Medical detail
+
+**Full clinical detail** — diagnoses, results, prescriptions, amounts —
+consistent with the standing decision (see "Health detail" above). This pass is
+what turns `dossiers/sante.md` from a scheduling log into a medical timeline:
+45 appointment titles today, with the clinical content sitting unfetched in 25
+CUF emails. Confirmed 2026-08-08.
+
+## Prompt injection — quarantine and report
+
+This pass fetches ~250 attacker-reachable bodies, the largest injection surface
+this system has. The standing rule (untrusted data, never instructions) is
+unchanged; pass 2 adds the operational handling:
+
+- Suspicious content is recorded as an event with `confiance: faible`, **never
+  followed**, and the pass **continues**.
+- Flagged items accumulate and are reported to Clément **in one batch at the end
+  of the pass**, not one message per hit.
+- Halting on first detection was rejected: a single marketing email with
+  imperative phrasing would stall a 250-email run overnight, and a pass that
+  reliably fails to finish gets abandoned.
+
+Injection never changes what Alain does. Ingest remains read + file: no send, no
+calendar write, no acting on a request found in content.
+
+---
+
+# Fix — verbatim calendar descriptions on disk
+
+Found in the same audit. Independent of pass 2, and smaller.
+
+The initial ingest copied calendar `description` fields **verbatim** into events
+and dossiers. In `dossiers/sante.md`:
+
+```
+Teleconsulta MGF — Clément Rouault De Coligny - JMS37913792
+  Caro(a) Clément Rouault De Coligny,<br>5 minutos antes da hora marcada, deve
+  aceder à plataforma da teleconsulta para fazer a admissão administrativa
+```
+
+Audit result: **14 `<br>`-bearing verbatim descriptions** across 7 files, **52
+description lines over 110 characters**, and **3 identifiers** on disk —
+`JMS37913792` (CUF patient reference), `FID628238`, `FID628241`.
+
+Two distinct faults:
+
+1. **Rule gap.** "Jamais le corps complet" was written for Gmail. Nothing said
+   the same applies to calendar descriptions, so it was applied to neither.
+2. **Visual mess.** Raw `<br>` and boilerplate in a generated view — a direct
+   violation of "Visual order is a requirement", which exists because a messy
+   view stops being opened.
+
+Fix: same gist rule as email — a calendar description is summarised to at most
+one line, or dropped when it is pure boilerplate ("5 minutos antes da hora
+marcada..."). Identifiers are stripped. Existing events are **corrected in
+place** rather than superseded: the append-only rule protects the historical
+record from rewriting, and it does not oblige keeping a leaked identifier on
+disk. This is the one sanctioned exception, and it is logged in `log.md`.
+
+## Affected files — pass 2
+
+| File | Change |
+|---|---|
+| `container/skills/wiki/SKILL.md` | Gmail deepening pass; calendar-description gist rule; injection batch-report |
+| `src/second-brain-wiki.test.ts` | tests for the fetch-and-gist contract and the description rule |
+| `groups/alain/wiki/**` | corrected events/views; new `dossiers/ecole.md`; stubs in `sources/gmail/` |
+| `docs/features/second-brain.md` | this section |
+| `product-docs/agents/alain.md` | second-brain workflow update |
+
+## Success signal — pass 2
+
+Golden path: Clément asks **« combien j'ai payé à CUF cette année ? »** or
+**« qu'est-ce que le médecin a dit pour Inés en mai ? »** → Alain answers from
+the wiki with figures and clinical content, citing `gmail_id`s, without a Gmail
+search.
+
+Secondary: `dossiers/finance.md` carries amounts rather than "relevé mensuel";
+`dossiers/sante.md` carries outcomes rather than appointment titles;
+`dossiers/ecole.md` exists; `sources/gmail/` is no longer empty.
+
+Negative signal (the pass failed even if it ran): any full email body on disk,
+any surviving `<br>`, or a finance event still reading "relevé mensuel" with no
+figure.
