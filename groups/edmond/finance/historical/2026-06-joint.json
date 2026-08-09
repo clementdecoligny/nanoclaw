@@ -296,9 +296,10 @@
       "amount": -191.42,
       "balance": 19877.59,
       "account": "joint",
-      "category": "EDUCATION",
-      "sub_category": "ESCOLA",
-      "confidence": "exact"
+      "category": "COMUN",
+      "sub_category": "TRANSFER",
+      "confidence": "exact",
+      "subcategory": "TRANSFER"
     },
     {
       "value_date": "2026-06-02",
@@ -306,9 +307,10 @@
       "amount": -16.0,
       "balance": 19861.59,
       "account": "joint",
-      "category": "MISC",
-      "sub_category": "MISC",
-      "confidence": "exact"
+      "category": "COMUN",
+      "sub_category": "TRANSFER",
+      "confidence": "exact",
+      "subcategory": "TRANSFER"
     },
     {
       "value_date": "2026-06-03",

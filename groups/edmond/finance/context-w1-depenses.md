@@ -6,6 +6,14 @@ Comptes : personnel `45507717811` / commun `45545535104` (auto-détectés par le
 
 ## Notes de contexte importantes
 
+### ⚠️ À TRAITER lors de l'import du relevé d'AOÛT 2026 — SS de mai payée en retard
+
+Clément a oublié de payer la Segurança Social (SS) de mai, puis l'a réglée le
+9 août 2026. Le paiement `SEGURANCA SOCIAL` (~77,26 €) apparaîtra sur le relevé
+d'*août* mais doit être *rattaché au mois de MAI* : catégorie EMPREGADA /
+SEGURANCA SOCIAL, avec `year=2026, month=5` (et non month=8). Ne pas le compter
+dans les dépenses d'août. Retirer cette note une fois le rattachement fait.
+
 ### Escola No Chiado — paiements hors ActivoBank
 
 Les mensualités Escola No Chiado sont payées via *Coverflex* (tickets crèches, avantage entreprise). Elles n'apparaissent donc PAS dans les exports ActivoBank. Clément les saisit manuellement dans le historical xlsx (libellé "ESCOLA NO CHIADO MOIS", catégorie EDUCATION/ESCOLA).

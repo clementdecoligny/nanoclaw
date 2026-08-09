@@ -1,0 +1,1 @@
+2026-08-09 05:01 — La passe historique 2023-2024 n'avait en réalité jamais été créée (le log l'annonçait "programmée" mais aucune tâche correspondante n'existait). Tâche `passe-historique-2023-20-a91a` recréée et lancée, message envoyé à Clément.

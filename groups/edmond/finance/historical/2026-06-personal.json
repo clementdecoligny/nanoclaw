@@ -76,9 +76,10 @@
       "amount": 191.42,
       "balance": 11131.85,
       "account": "personal",
-      "category": "EDUCATION",
-      "sub_category": "ESCOLA",
-      "confidence": "exact"
+      "category": "COMUN",
+      "sub_category": "TRANSFER",
+      "confidence": "exact",
+      "subcategory": "TRANSFER"
     },
     {
       "value_date": "2026-06-02",
@@ -86,9 +87,10 @@
       "amount": 16.0,
       "balance": 11147.85,
       "account": "personal",
-      "category": "EDUCATION",
-      "sub_category": "ESCOLA",
-      "confidence": "exact"
+      "category": "COMUN",
+      "sub_category": "TRANSFER",
+      "confidence": "exact",
+      "subcategory": "TRANSFER"
     },
     {
       "value_date": "2026-06-03",
@@ -246,9 +248,10 @@
       "amount": -2.1,
       "balance": 11007.97,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "FOOD",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-24",
@@ -256,9 +259,10 @@
       "amount": -39.0,
       "balance": 10968.97,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "HOTELS",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-24",
@@ -266,9 +270,10 @@
       "amount": -1.25,
       "balance": 10967.72,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "FOOD",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-25",
@@ -286,9 +291,10 @@
       "amount": -50.0,
       "balance": 10912.02,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "MISC",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-25",
@@ -296,9 +302,10 @@
       "amount": -4.5,
       "balance": 10907.52,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "TRANSPORT",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-25",
@@ -306,9 +313,10 @@
       "amount": -4.5,
       "balance": 10903.02,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "TRANSPORT",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-25",
@@ -316,9 +324,10 @@
       "amount": -12.0,
       "balance": 10891.02,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "FOOD",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-25",
@@ -326,9 +335,10 @@
       "amount": -2.54,
       "balance": 10888.48,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "FOOD",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-25",
@@ -336,9 +346,10 @@
       "amount": -6.03,
       "balance": 10882.45,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "TRANSPORT",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-26",
@@ -376,9 +387,10 @@
       "amount": -4.0,
       "balance": 10793.95,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "MISC",
-      "confidence": "low"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "low",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-26",
@@ -406,9 +418,10 @@
       "amount": -9.9,
       "balance": 15226.84,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "MISC",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-26",
@@ -416,9 +429,10 @@
       "amount": -35.8,
       "balance": 15191.04,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "FOOD",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-26",
@@ -506,9 +520,10 @@
       "amount": -11.7,
       "balance": 12296.82,
       "account": "personal",
-      "category": "HOLIDAY",
-      "sub_category": "FOOD",
-      "confidence": "high"
+      "category": "BUSINESS",
+      "sub_category": "STUTTGART JUNE 2026",
+      "confidence": "high",
+      "subcategory": "STUTTGART JUNE 2026"
     },
     {
       "value_date": "2026-06-30",

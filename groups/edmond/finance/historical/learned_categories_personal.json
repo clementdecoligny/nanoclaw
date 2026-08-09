@@ -262,5 +262,29 @@
   "TRF MB WAY P/ MARIA DOLORES DAROCA GUERRERO": {
     "category": "LEISURE",
     "sub_category": "SWIMMING"
+  },
+  "TRF DE Error babysitting Maimuna": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 6059 PAUL CASCAIS CASCAIS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 6059 APPLE.COM BILL ITUNES.COM IE": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 6059 REST JARDIM CEREJAS LISBOA": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 6059 ANTHROPIC CLAUDE SUB ANTHROPIC.COM": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "COMPRA 6059 QUIOSQUE AMOREIRAS LISBOA": {
+    "category": "EAT OUT",
+    "sub_category": "QUIOSQUE"
   }
 }

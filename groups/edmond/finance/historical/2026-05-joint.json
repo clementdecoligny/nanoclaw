@@ -831,6 +831,18 @@
       "category": "EMPREGADA",
       "sub_category": "EMPREGADA",
       "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-01",
+      "date": "2026-05-01",
+      "description": "ESCOLA NO CHIADO MAIO (COVERFLEX)",
+      "amount": -245.72,
+      "account": "joint",
+      "category": "EDUCATION",
+      "sub_category": "ESCOLA",
+      "subcategory": "ESCOLA",
+      "confidence": "confirmed",
+      "source": "manual-coverflex"
     }
   ],
   "account": "joint",

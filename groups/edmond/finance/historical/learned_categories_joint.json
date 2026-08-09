@@ -838,5 +838,241 @@
   "COMPRA 8778 DOBECO GULBENKIAN LISBO CONTACTLESS": {
     "category": "EAT OUT",
     "sub_category": "RESTAURANT"
+  },
+  "TRF DE Medis": {
+    "category": "HEALTH",
+    "sub_category": "MEDIS REIMBURSMENT"
+  },
+  "COMPRA 8778 BOLT.EUO2606302106 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 APPLE.COM PT 707-200-826 IE": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8551 BOLT.EUO2607021252 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "TRF DE Comida papa - hermanos": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8551 BOLT.EUO2607051859 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 BOLT.EUO2607071441 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 BOLT.EUO2607102103 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 BOB BURGER HUB LISBOA P CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 SUPERMERCADO VIP CASCAI CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8551 BOLT.EUO2607142127 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "TRF DE Pingo dice refeicao": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "TRF DE Gasolina payed by EDP": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8551 FARMACIA 2 CIRCULAR POR CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8778 REST PAUL LISBOA PT     CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "BACKERY"
+  },
+  "COMPRA 8778 MC DONALD ALBERT ALBERT CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8551 BOLT.EUO2607161154 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 EST SERVICO REPSOL E1105 1700 LISBO": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8551 UBER TRIP AMSTERDAM NL": {
+    "category": "MOBILITY",
+    "sub_category": "UBER"
+  },
+  "COMPRA 8551 MCDONALDS 2 CIRCULAR LI CONTACTLESS": {
+    "category": "EAT OUT",
+    "sub_category": "RESTAURANT"
+  },
+  "COMPRA 8778 SECRETS DES ALPES HAUTE CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 LE PETIT CASINO BEAUFOR CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 Spotify P44BD8A9D2 Stockholm SE": {
+    "category": "HOUSE",
+    "sub_category": "SPOTIFY"
+  },
+  "COMPRA 8778 L ECONDU AIME LA PLAGNF CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "LEV ATM 8551 FRA BEAUFORT 1 BEAUFORT FR": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 LES 3MEL BEAUFORT FR": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 MAISON DORON BEAUFORT FR": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 LA MARIE ROSE BEAUFORT  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 LE PETIT CASINO BEAUFOR CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 BOUCHERIE FAVRE BEAUFOR CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 LA MIE DES CIMES2212062 CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 BIOCOOP BOURG-SAINT-MFR CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 BIOCOOP BOURG-SAINT-MFR": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 CAFE DE LA PAIX BOURG S CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "TRF DE Strava": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "COMPRA 8778 CAPITAINE BOURG-SAINT-M CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 LA RUELLE BOURG ST MAURFR": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 HOSTELLERIE DU PETIT BO CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 RIFUGIO TETRAS LYRE VAL CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 RIFUGIO CHABOD VALSAVAR CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 APPLE.COM BILL ITUNES.COM IE": {
+    "category": "HOUSE",
+    "sub_category": "MISC"
+  },
+  "COMPRA 8778 PRINSI TERESA D.I. AOST CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 MGP Vinted Vilnius LT": {
+    "category": "KIDS",
+    "sub_category": "ROPA VINTED"
+  },
+  "COMPRA 8778 D SOCKA AOSTA IT        CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 OSTERIA DELL OCA AOSTA  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "PAGSERV HOSPITAL CUF TEJO SA   10598/609996650": {
+    "category": "HEALTH",
+    "sub_category": "HOSPITAL"
+  },
+  "COMPRA 8778 NAVARRETTA AOSTA IT     CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 LIPO SAS AOSTA IT       CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 AUTOGRILL 0546 SOMMA LO CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 BONDAZ S.N.C. AOSTA IT  CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8778 MOXY MILAN MALPENSA SOM CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 CRF MKT AOS5041 AOSTA I CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 GIUNTI AL PUNTO 70261 A CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 MOXY MILAN MALPENSA SOM CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "ALPS JULY 2026"
+  },
+  "COMPRA 8551 BOLT.EUO2607250729 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 BOLT.EUO2607262241 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 BOLT.EUO2607282125 TALLINN EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "TRF DE Lola agosto": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
+  },
+  "TRF DE Agosto": {
+    "category": "INCOME",
+    "sub_category": "TRANSFER"
   }
 }

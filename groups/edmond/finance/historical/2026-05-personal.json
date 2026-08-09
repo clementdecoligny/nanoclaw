@@ -487,6 +487,18 @@
       "category": "LEISURE",
       "sub_category": "",
       "confidence": "reviewed"
+    },
+    {
+      "value_date": "2026-05-01",
+      "date": "2026-05-01",
+      "description": "ESCOLA NO CHIADO MAIO (SOLDE)",
+      "amount": -191.42,
+      "account": "personal",
+      "category": "EDUCATION",
+      "sub_category": "ESCOLA",
+      "subcategory": "ESCOLA",
+      "confidence": "confirmed",
+      "source": "manual-correction"
     }
   ],
   "account": "personal",
