@@ -107,14 +107,14 @@ CREATE TABLE sessions (
         created_at         TEXT NOT NULL
       );
 INSERT INTO sessions VALUES('sess-1777719703226-kwys2a','ag-1777719573229-tnlcij','mg-1777718761518-kgb1yu',NULL,NULL,'active','running','2026-06-06T17:41:08.096Z','2026-05-02T11:01:43.226Z');
-INSERT INTO sessions VALUES('sess-1777727966855-m1yevu','ag-1777719573236-pywwsu','mg-1777719573249-8cqrcc',NULL,NULL,'active','stopped','2026-08-09T13:23:26.550Z','2026-05-02T13:19:26.855Z');
+INSERT INTO sessions VALUES('sess-1777727966855-m1yevu','ag-1777719573236-pywwsu','mg-1777719573249-8cqrcc',NULL,NULL,'active','stopped','2026-08-10T08:30:39.455Z','2026-05-02T13:19:26.855Z');
 INSERT INTO sessions VALUES('sess-1777727969808-h4w4hv','ag-1777719573240-ynm5lh','mg-1777719573250-r1ny4z',NULL,NULL,'active','stopped','2026-08-09T13:43:00.497Z','2026-05-02T13:19:29.808Z');
-INSERT INTO sessions VALUES('sess-1777917826702-flz8jg','ag-1777719573229-tnlcij','mg-1777719573251-oiqgzh',NULL,NULL,'active','stopped','2026-08-09T17:51:22.467Z','2026-05-04T18:03:46.702Z');
+INSERT INTO sessions VALUES('sess-1777917826702-flz8jg','ag-1777719573229-tnlcij','mg-1777719573251-oiqgzh',NULL,NULL,'active','stopped','2026-08-10T07:00:58.573Z','2026-05-04T18:03:46.702Z');
 INSERT INTO sessions VALUES('sess-1778063434775-8u3zq1','ag-1777719573236-pywwsu','mg-1778063434755-qrm1gk',NULL,NULL,'active','stopped','2026-05-14T07:02:29.388Z','2026-05-06T10:30:34.775Z');
 INSERT INTO sessions VALUES('sess-1778063439242-ipppx1','ag-1777719573240-ynm5lh','mg-1778063439239-sl59lc',NULL,NULL,'active','stopped','2026-08-07T06:40:00.333Z','2026-05-06T10:30:39.242Z');
 INSERT INTO sessions VALUES('sess-1778063443710-u8l0rb','ag-1777719573229-tnlcij','mg-1778063443707-dl7upj',NULL,NULL,'active','stopped','2026-05-14T08:32:47.136Z','2026-05-06T10:30:43.710Z');
 INSERT INTO sessions VALUES('sess-1781484610630-7uhf0h','ag-1781482851576-coach','mg-1781484300469-dtlzkm',NULL,NULL,'active','stopped','2026-08-09T09:00:07.544Z','2026-06-15T00:50:10.630Z');
-INSERT INTO sessions VALUES('sess-1786092992031-w8v6c1','ag-1777719573236-pywwsu',NULL,'system:tasks:upstream-watch-671e',NULL,'active','stopped',NULL,'2026-08-07T08:56:32.031Z');
+INSERT INTO sessions VALUES('sess-1786092992031-w8v6c1','ag-1777719573236-pywwsu',NULL,'system:tasks:upstream-watch-671e',NULL,'active','stopped','2026-08-10T08:01:02.332Z','2026-08-07T08:56:32.031Z');
 INSERT INTO sessions VALUES('sess-1786230347957-0drx5i','ag-1777719573236-pywwsu',NULL,'system:tasks:passe-historique-2023-20-8593',NULL,'closed','stopped',NULL,'2026-08-08T23:05:47.957Z');
 INSERT INTO sessions VALUES('sess-1786230675223-qj1wmf','ag-1777719573236-pywwsu',NULL,'system:tasks:check-passe-5h-9ff2',NULL,'closed','stopped','2026-08-09T04:00:05.181Z','2026-08-08T23:11:15.223Z');
 INSERT INTO sessions VALUES('sess-1786248082013-onkwey','ag-1777719573236-pywwsu',NULL,'system:tasks:passe-historique-2023-20-a91a',NULL,'closed','stopped','2026-08-09T04:02:17.198Z','2026-08-09T04:01:22.013Z');
