@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 2h (premier alpin)",
+  "date": "2026-08-12",
+  "description": "Première sortie alpine du cycle. Z2 piloté à la FC. D+ 500m cible. Accepter une vitesse basse — les jambes s'adaptent à l'altitude.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — échauffement progressif"},
+    {"type": "interval", "durationSec": 5400, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 107-118 bpm, piloter à la FC dans les montées"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — retour au calme"}
+  ]
+}
