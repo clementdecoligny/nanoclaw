@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 2h30 avec le frère",
+  "date": "2026-08-13",
+  "description": "Sortie avec le frère. D+ 750m cible. Z2 piloté à la FC — les montées peuvent faire monter, rester sous 145 bpm. Pas de structure par intervalles.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min échauffement"},
+    {"type": "interval", "durationSec": 7200, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 110-122 bpm, plafond 145 en montée"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min retour au calme"}
+  ]
+}
