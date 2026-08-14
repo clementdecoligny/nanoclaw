@@ -54,6 +54,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | salmorejo-cordobes.md | Salmorejo Cordobés | soup / veg | low | full_dish | Sopa fría. Sin cocción. Tomate + pan + AOVE. Aguanta 3 días nevera. |
 | pate-a-crepes.md | Pâte à Crêpes | eggs / sweet-savory | low | full_dish | Pâte neutre ~25 crêpes. Repos 1h minimum. Congèle bien. |
 | tarte-feuilletee-tomate-mozza-tomates-sechees-amandes.md | Tarte a Italiana | veg / tart | medium | components | Croûte brisée maison + crème tomates séchées + mozza + roquette. Froide. Livre cookbook. |
+| fajitas-poulet.md | Fajitas au Poulet | chicken / Mexican | low | components | Build-your-own. Kid-approved. 20 min cuisson. |
 
 ---
 
