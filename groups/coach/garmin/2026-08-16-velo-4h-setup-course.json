@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo 4h — Setup course D+1000m+",
+  "date": "2026-08-16",
+  "description": "SÉANCE CLÉ Annecy. Setup course complet : vélo race + sacoches + poids course. Z2 piloté à la FC. Rotation assis/danseuse sur toute montée > 10 min (toutes les 3-5 min). Plafond 145 bpm.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min échauffement progressif"},
+    {"type": "interval", "durationSec": 12000, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 110-122 bpm, plafond 145 en montée"},
+    {"type": "cooldown", "durationSec": 1200,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min retour au calme"}
+  ]
+}
