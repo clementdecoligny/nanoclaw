@@ -1,0 +1,14 @@
+{
+  "sport": "cycling",
+  "name": "Vélo 2h30 — Sous-seuil × 2 + Setup course",
+  "date": "2026-08-17",
+  "description": "Construction J1. SETUP COURSE : vélo race + sacoches + poids course. 2×20 min à 132-140 bpm (bas Z3) dans une sortie Z2. Stopper le bloc 2 si >141 bpm ou signal genou. Gate : genou 0/10 au réveil pour les blocs — sinon Z2 uniquement.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min échauffement"},
+    {"type": "interval", "durationSec": 3900, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 110-122 bpm"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Sous-seuil 1 — terrain plat, 132-140 bpm"},
+    {"type": "recovery", "durationSec": 600,  "hrMin": 95,  "hrMax": 115, "note": "Récup active Z1/Z2 basse"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Sous-seuil 2 — stopper si >141 bpm ou genou"},
+    {"type": "cooldown", "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min retour au calme"}
+  ]
+}

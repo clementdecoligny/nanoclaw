@@ -99,6 +99,7 @@ Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 - Aime les événements comme jalons de motivation
 - Analytique, veut comprendre le "pourquoi"
 - La maladie peut être un facteur déstabilisant sur la préparation
+- **Ne plus mentionner "setup course" dans les plans/retours** (16 août 2026 — la règle B8 reste active, il sait que ça s'applique, ne pas le répéter)
 
 ## Santé — Pieds / Hallux valgus
 
