@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo 3h Z2 — Semnoz partiel J3",
+  "date": "2026-08-18",
+  "description": "J3 bloc consécutif. Semnoz depuis Annecy : monter jusqu'à D+700m (~10km), demi-tour. FC naturellement plus haute sur jambes fatiguées — normal. Rester Z2, accepter la vitesse basse. Rotation assis/danseuse sur toute montée > 10 min.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min échauffement"},
+    {"type": "interval", "durationSec": 9000, "hrMin": 107, "hrMax": 128, "note": "Z2 — viser 110-122 bpm, accepter la dérive sur les montées"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min retour au calme"}
+  ]
+}
