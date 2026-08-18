@@ -2,7 +2,7 @@
 
 > Agent-maintained. Updated automatically when stock drops below thresholds or when a meal plan requires items not in inventory.
 
-_Last updated: 2026-06-21 (post-commande 430974128_001)_
+_Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 
 ---
 
@@ -12,6 +12,27 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 
 | Item | Qty | Statut | Notes |
 |---|---|---|---|
+| Arroz basmati Cigala 1kg | ×3 | - | Lola 18/08 — 3 kg total |
+| Massa (Gemelli La Molisana ou Penne Rummo) | ×2 | - | Lola 18/08 |
+| Frango de campo inteiro congelar | ×1 | - | Lola 18/08 — fresco, pedir próximo de 30/08 |
+| Bife bovino (novilho) 1 kg | ×1 | - | Lola 18/08 |
+| Robalo fresco | ×1 | - | Lola 18/08 — fresco, pedir próximo de 30/08 |
+| Manteiga | ×1 | - | Lola 18/08 |
+| Fiambre | ×1 | - | Lola 18/08 |
+| Queijo (tipo?) | ×1 | ❓ | Lola 18/08 — especificar: emmental, parmesan, São Jorge? |
+| Bolachas de aveia | ×2 | - | Lola 18/08 |
+| Bolachas Maria | ×1 | - | Lola 18/08 |
+| Leite UHT Meio Gordo Mimosa | ×4 L | - | Lola 18/08 — sempre meio gordo |
+| Sumo Compal manga | ×3 | - | Lola 18/08 |
+| Iogurte Grego Mythos Ligeiro Continente 1kg | ×6 | - | Lola 18/08 — max 6kg frigo |
+| Pimenta preta | ×1 | - | Lola 18/08 |
+| Sal de mesa | ×1 | - | Lola 18/08 |
+| Vinagre | ×1 | - | Lola 18/08 |
+| Malagueta (piripiri) | ×1 | - | Lola 18/08 |
+| Água | ×1 | - | Lola 18/08 |
+| Chocolate negro | ×2 | - | Lola 18/08 |
+| Pão de Forma sem Côdea Bimbo 650g | ×1 | - | Lola 18/08 |
+| Ovos de Ar Livre Classe M/L | ×1 dúzia | - | Lola 18/08 |
 | Sopitas bio ready-to-eat (bebé) | 5 | - | Non trouvé sur Continente — à sourcer |
 | Olives noires dénoyautées | ×2 | - | Non inclus dans commande 21/06 |
 | Liquide lave-vaisselle | ×1 | - | Non inclus — choix pas fait |
@@ -70,6 +91,21 @@ _Last updated: 2026-06-21 (post-commande 430974128_001)_
 
 | Item | Qty | Statut | Notes |
 |---|---|---|---|
+| Alface | ×3 emb. | - | Lola 18/08 |
+| Tomate | ×5 | - | Lola 18/08 |
+| Pepino | ×3 | - | Lola 18/08 |
+| Cenoura | ×5 | - | Lola 18/08 |
+| Beterraba | ×2 | - | Lola 18/08 |
+| Maçã | ×5 | - | Lola 18/08 |
+| Pêra | ×5 | - | Lola 18/08 |
+| Laranja | ×5 | - | Lola 18/08 |
+| Uvas | ×1 cacho | - | Lola 18/08 |
+| Batatas | 1,5 kg | - | Lola 18/08 |
+| Pimento verde | ×1 | - | Lola 18/08 |
+| Alho | ×2 cabeças | - | Lola 18/08 |
+| Cebola | ×5 | - | Lola 18/08 |
+| Limão | ×6 | - | Lola 18/08 |
+| Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
 | Œufs | 1 boîte | ✅ acheté | 2 dúzias Auchan 08/07 |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ✅ en stock | 2 tupperwares congélo (confirmé Lola 27/06) |
