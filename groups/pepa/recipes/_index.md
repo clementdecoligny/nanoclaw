@@ -56,6 +56,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | tarte-feuilletee-tomate-mozza-tomates-sechees-amandes.md | Tarte a Italiana | veg / tart | medium | components | Croûte brisée maison + crème tomates séchées + mozza + roquette. Froide. Livre cookbook. |
 | fajitas-poulet.md | Fajitas au Poulet | chicken / Mexican | low | components | Build-your-own. Kid-approved. 20 min cuisson. |
 | salade-betteraves.md | Salade de Betteraves | veg / salad | low | full_dish | Vinaigrette moutardée. Variante feta. 3 jours frigo. |
+| salade-pois-chiches-feta.md | Salade de Pois Chiches Feta | legumes / salad | very low | full_dish | Assemblage méditerranéen 5 min. Variantes : avocat, thon. |
 
 ---
 

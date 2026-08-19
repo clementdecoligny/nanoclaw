@@ -154,3 +154,8 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 
 **Tendance récente :** relance depuis W25. 3 semaines consécutives avec renfo. C'est la fenêtre de changement — tenir jusqu'à M-N.
 
+## Log genou — épisodes (août 2026)
+
+- **18 août (Col de la Forclaz, Annecy)** : 2/10 pendant les 2 premiers km de la montée (8km à 11% de pente moyenne), résolu à 0/10 pour le reste de la montée. Position : alterné assis/danseuse mais majoritairement assis vu l'inclinaison forte. 0/10 au réveil le 19 août. Pas de déclenchement G1 (jamais ≥3/10). Séance précédente : J2 du bloc consécutif (mardi, après lundi 2h30 sous-seuil).
+  - Point de vigilance : position assise prolongée à cadence basse sur pente raide charge le genou différemment de la danseuse — cohérent avec le mécanisme B5. À surveiller si le pattern se répète sur les prochains reliefs raides.
+
