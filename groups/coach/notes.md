@@ -18,11 +18,11 @@ _Dernière mise à jour : 12 juillet 2026_
 **Dos** : Ligament lombaire insuffisant → renforcement du dos également non négociable.
 
 **Protocole de renforcement (post M-N 2025, coach PT) :**
-1. Contralateral plank — 3×20-30s chaque côté
-2. SL bridge 45° — 2×20-30s chaque côté
-3. SL bridge 20° — 2×10-20s chaque côté
-4. Side plank + leg raise + pieds sur banc — 2×10s chaque côté
-5. SL mid thigh pull (isométrique quadriceps) :
+1. **Contralateral plank** (planche controlatérale) — Position : appui sur l'avant-bras et les orteils comme une planche classique. Mouvement : lever le bras opposé tendu devant ET la jambe opposée tendue derrière en même temps (ex. appui sur avant-bras droit → lever bras gauche + jambe droite). Ressenti : gainage profond + fessier de la jambe restée au sol qui travaille pour stabiliser le bassin. 3×20-30s par côté.
+2. **SL bridge 45°** (pont fessier unipodal, amplitude haute) — Position : allongé sur le dos, un pied au sol genou plié, l'autre jambe tendue en l'air. Mouvement : pousser les hanches vers le haut jusqu'à ce que le tronc forme un angle d'environ 45° avec le sol (pas à plat, amplitude partielle contrôlée). Ressenti : fessier de la jambe d'appui au sol. 2×20-30s par côté.
+3. **SL bridge 20°** (même mouvement, amplitude réduite) — Même position que ci-dessus, mais on ne monte que jusqu'à ~20° du sol. Ressenti : travail plus isolé, proche de l'insertion ischio/fessier. 2×10-20s par côté.
+4. **Side plank + leg raise + pieds sur banc** — Position : planche latérale (avant-bras au sol, corps de profil), pieds surélevés sur un banc ou une chaise. Mouvement : depuis cette position, lever la jambe du dessus vers le plafond puis la reposer. Ressenti : obliques + moyen fessier de la jambe levée. 2×10s de maintien par côté.
+5. **SL mid thigh pull isométrique** (quadriceps) — Position : debout, résistance fixe ancrée (élastique ou machine) au niveau de la cuisse/tibia. Mouvement : pousser contre la résistance en tentant d'étendre le genou sans que l'articulation ne bouge réellement — contraction isométrique pure. Ressenti : quadriceps, en particulier le vaste médial (face interne du genou, juste au-dessus de la rotule).
    - Sem 1-2 : 5×10s à 70% d'intention
    - Sem 3 : 5×5s à 90% d'intention
 6. Half-kneeling Cable Lift (Low to High) — 3×10 chaque côté :
@@ -92,6 +92,12 @@ Suivi détaillé dans `/workspace/agent/sleep.md`.
 
 Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 
+## Contraintes temporaires (à purger après expiration)
+
+- **20–30 août 2026 : vacances en famille (10 jours)**, annoncé le 20/08. Remplace l'hypothèse "pleinement disponible" du macro-plan pour cette fenêtre. Vélo/terrain/fenêtres horaires inconnus — à clarifier avec Clément au fil de l'eau plutôt que supposés.
+  - **Dimanche 30 août : route du retour, vélo impossible ce jour-là (confirmé).**
+  - Cette note expire le 30 août — la purger une fois la semaine du 31 août planifiée.
+
 ## Comportement / Observations
 
 - Clément a tendance à perdre la discipline sur le renforcement musculaire après 2-3 mois
@@ -143,3 +149,9 @@ Discussion nutrition disponible sur demande — ne pas inclure spontanément dan
 Inclure toujours une estimation TSS pour le surf et autres activités sans capteur :
 - **Surf** : ~60 TSS/session (effort modéré 60-80 min, upper body + cardio) — signaler comme estimé
 - Règle générale : ne jamais exclure une activité du total TSS faute de données — estimer et noter "(estimé)"
+
+## Préférence — ton et mise en forme des messages (20 août 2026)
+
+Clément a signalé que mes retours (`/done` notamment) étaient devenus trop plats : peu de mise en forme (gras/italique/emojis) et un ton trop analytique, sans chaleur ni encouragement. À corriger durablement, pas juste pour ce message :
+- Utiliser gras, emojis (🎯💪⚠️✅ etc.) et rupture visuelle systématiquement, pas seulement dans les plans hebdomadaires formatés.
+- Garder le contenu analytique (chiffres, comparaison au plan) mais l'envelopper dans un ton engagé — reconnaître l'effort avant de décortiquer les données, pas juste lister des faits.
