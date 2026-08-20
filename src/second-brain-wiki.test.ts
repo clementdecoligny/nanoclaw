@@ -266,6 +266,47 @@ describe('second brain — the schema layer reaches the agent', () => {
     expect(body).toMatch(/le fait.{0,60}pas le contenu|jamais le contenu/s);
   });
 
+  it('carries a second atom for durable facts, not only dated events', () => {
+    // Measured on the live wiki: 362 of 572 events are a title and a date, and
+    // a query for non-dated content across every dossier returned nothing. The
+    // event log is a chronological index of occurrences, not a memory. Notions
+    // hold "X is true"; events hold "X happened on D".
+    const body = fs.readFileSync(SKILL, 'utf8');
+    expect(body).toMatch(/notions\//);
+    expect(body.toLowerCase()).toMatch(/ce qui est vrai|fait durable/);
+  });
+
+  it('lets notions be revised while events stay append-only', () => {
+    // The two atoms differ precisely here. Rewriting generated prose causes
+    // model collapse, which is why events are frozen — but a state that changed
+    // must be updatable, or the wiki cannot answer "what is true now" without a
+    // full scan. The notion is a cache; the append-only log stays the record.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/une notion.{0,80}(se met à jour|révis|mise à jour)/s);
+    // The change itself must still land in the event log.
+    expect(body).toMatch(/enregistre.{0,60}événement|append.{0,40}événement/s);
+  });
+
+  it('captures durable facts from conversation, with provenance', () => {
+    // The derived-only rule protected Clément from filing work, not sourcing
+    // purity. Alain doing the noticing costs Clément nothing — that was the
+    // property that mattered. But a captured fact must stay as citable as a
+    // gmail: or calendar: one.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/conversation:/);
+    // Capture is silent — a confirmation per fact reintroduces the friction
+    // that killed the paper diary.
+    expect(body).toMatch(/sans (le )?lui demander|sans rien demander|ne lui demande pas/);
+  });
+
+  it('never lets a notion exist without a source', () => {
+    // "conversation:<date>" is a source. "no source" is not — an unsourced
+    // notion is indistinguishable from a hallucinated one, and the whole wiki
+    // rests on every claim being traceable.
+    const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
+    expect(body).toMatch(/jamais.{0,60}sans source|toute notion.{0,60}source/s);
+  });
+
   it('states the append-only rule that defends against model collapse', () => {
     const body = fs.readFileSync(SKILL, 'utf8').toLowerCase();
     expect(body).toMatch(/append-only|jamais réécrit|never rewritten/);

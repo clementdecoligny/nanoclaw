@@ -122,10 +122,26 @@ nothing to maintain.
 
 Work email is on a separate account and never reaches Alain.
 
-**Structure.** The atom is a dated event, written once and never rewritten. The
-day-by-day diary and the topic dossiers are *generated views* over that same
-event log — so nothing is ever filed in one place, and the views cannot drift or
-degrade because they are rebuilt from the events.
+**Structure — two kinds of thing.** A memory holds *what happened* and *what is
+true*, and they behave differently:
+
+- **Events** — dated, written once, never rewritten. "Consultation at CUF on
+  14 May." The append-only record.
+- **Notions** — durable facts with no date, or with a duration. "Lola's parents
+  have a summer flat in Zahara", "you liked *Rear Window*", "the employment case
+  is ongoing." These are *revisable*: when something changes, the notion is
+  updated and the change is recorded as an event — so the history is never lost,
+  but the answer to "what is true now" doesn't require reading it all.
+
+The day-by-day diary and the topic dossiers are *generated views* over both — so
+nothing is ever filed in one place, and the views cannot drift because they are
+rebuilt from the source.
+
+**He records what you tell him.** Mention in passing that Lola's parents have a
+place in Zahara, and it is captured — no filing, no confirmation step, no list to
+maintain. Weeks later, "where do we usually go in summer?" is answerable from a
+fact you stated once and never wrote down. Everything carries its provenance,
+including things said in conversation.
 
 **People directory.** Alain maintains a directory of everyone you know or have
 exchanged with — an index of all of them, plus a detailed page for the people
@@ -155,10 +171,12 @@ recorded at all — including other people's.
 
 ## Current limitations
 
-- **Second brain is derived-only** — it captures life that leaves a paper trail
-  (bookings, appointments, school, purchases). A weekend at home that generated
-  no email or calendar entry will be missing. This is deliberate: a system
-  requiring manual capture gets abandoned.
+- **Second brain captures what leaves a trace, plus what you say** — bookings,
+  appointments, school, purchases, and durable facts you mention in
+  conversation. A weekend at home that generated no email, no calendar entry and
+  no remark still leaves no trace. You are never asked to file anything: Alain
+  does the noticing and the writing, because a system requiring manual capture
+  gets abandoned.
 - **Google Drive not connected** — the knowledge base draws on calendar and
   Gmail only. Drive is a planned source.
 - **Knowledge base is not backed up** — excluded from the nightly push because it

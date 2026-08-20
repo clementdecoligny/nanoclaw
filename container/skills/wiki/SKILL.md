@@ -9,8 +9,13 @@ A persistent knowledge base about Clément's personal life. Based on Karpathy's
 LLM Wiki pattern, adapted to an event-log core.
 
 You are the maintainer. Clément never files anything — he already abandoned a
-paper 10-year diary because of the daily discipline it demanded. **Everything
-here is derived. Never ask him to capture, file, or write anything.**
+paper 10-year diary because of the daily discipline it demanded. **Never lui
+demander de capturer, de classer, de relire ou de maintenir quoi que ce soit.**
+
+La matière vient de deux endroits : ce que tu **dérives** de son agenda et de ses
+emails, et ce qu'il te **dit en conversation** (voir « Capture
+conversationnelle »). Dans les deux cas c'est **toi** qui repères et qui écris —
+c'est ce qui compte, pas la provenance.
 
 ## The problem you are solving
 
@@ -26,24 +31,75 @@ Typical questions, verbatim in shape:
 
 Answer these in seconds, from the wiki, with citations.
 
-## Architecture — events are the atom
+## Architecture — deux atomes
+
+Un second cerveau doit contenir **ce qui s'est passé** *et* **ce qui est vrai**.
+Ce sont deux natures différentes, et elles ont chacune leur atome.
 
 ```
 wiki/
 ├── index.md            point d'entrée — À LIRE EN PREMIER sur toute question
 ├── log.md              journal append-only : ingest / query / lint + watermark
-├── evenements/         L'ATOME — append-only, un fichier par mois
+├── evenements/         ATOME 1 — ce qui s'est passé. Daté, append-only.
 │   └── 2026-08.md
+├── notions/            ATOME 2 — ce qui est vrai. Durable, révisable.
+│   ├── personnes/      (une personne est une notion)
+│   ├── famille.md
+│   ├── preferences.md
+│   └── etats.md
 ├── jour/               VUE : le journal, une ligne par jour
 │   └── 2026-08.md
-└── dossiers/           VUE : un fil par sujet
+└── dossiers/           VUE : un fil par sujet (événements + notions)
     ├── sante-tom.md
     └── voyages.md
 ```
 
-**Only `evenements/` is written directly.** `jour/` and `dossiers/` are
-**generated views** over the event log — regenerated from events, never edited by
-hand, and never generated from another view.
+**`evenements/` et `notions/` sont écrits directement.** `jour/` et `dossiers/`
+sont des **vues générées** — régénérées depuis les atomes, jamais éditées à la
+main, jamais générées depuis une autre vue.
+
+### Événement ou notion ?
+
+| C'est... | Atome | Exemple |
+|----------|-------|---------|
+| daté, ponctuel, ça a eu lieu | événement | « 2026-05-14 — consultation CUF » |
+| vrai sans date, ou vrai sur une durée | notion | « les parents de Lola ont un appartement à Zahara » |
+| une préférence, un avis | notion | « vu et aimé : *Rear Window* » |
+| un état en cours | notion | « despedimento en cours » |
+| un fait durable | notion | « pédiatre des enfants : Dr X, CUF Tejo » |
+
+Dans le doute : si la question naturelle est « **quand** ? », c'est un
+événement ; si c'est « **c'est quoi / c'est qui** ? », c'est une notion.
+
+### ⚠️ Une notion se met à jour — un événement, jamais
+
+C'est la seule différence de traitement entre les deux atomes, et elle est
+délibérée.
+
+- Un **événement** n'est jamais réécrit (voir « modèle qui s'effondre »
+  ci-dessous). Une correction ajoute un événement qui supersède.
+- Une **notion** est **révisable** : quand un état change, tu mets la notion à
+  jour — et tu **enregistres le changement comme un événement**
+  (`2026-08-12 | état | despedimento clos`).
+
+L'historique reste donc entièrement dans le journal append-only, pendant que la
+notion répond à « qu'est-ce qui est vrai **maintenant** » sans tout relire.
+**La notion est un cache ; le journal d'événements reste la source de vérité.**
+
+### Format d'une notion
+
+```markdown
+## Parents de Lola — Zahara de los Atunes
+Appartement d'été à Zahara de los Atunes (Espagne). Belle-famille côté Lola.
+Lieu de vacances récurrent l'été.
+confiance: haute
+sources: calendar:abc123, conversation:2026-08-08
+```
+
+**Toute notion porte une source, sans exception.** `conversation:<date>` en est
+une. « Pas de source » n'en est pas une : une notion sans source est
+indiscernable d'une invention, et tout le wiki repose sur la traçabilité de
+chaque affirmation.
 
 Two reasons this matters, both load-bearing:
 
@@ -256,6 +312,35 @@ Never guess silently. If something is unclear, record the event with
 `confiance: faible` and say what is uncertain. **Absence is a valid answer**:
 if he asks whether a flight was booked and no event exists, say so plainly —
 "aucun événement enregistré" is useful, and different from "je n'ai pas trouvé".
+
+## Opération 1c : Capture conversationnelle
+
+**Quand Clément mentionne un fait durable en conversation, enregistre-le —
+sans le lui demander, et sans qu'il ait quoi que ce soit à classer.**
+
+C'est toi qui repères et qui écris. Il ne classe rien, ne confirme rien, ne
+maintient rien. Une confirmation à chaque fait réintroduirait exactement la
+friction qui lui a fait abandonner son journal papier.
+
+Ce qui déclenche une capture :
+
+- Une relation : « la mère de Lola », « mon associé sur ce projet »
+- Une préférence ou un avis : « j'ai adoré ce film », « je déteste les réunions
+  avant 9h »
+- Un fait durable : un numéro administratif, une taille, une allergie, le nom
+  d'un médecin habituel
+- Un état qui commence ou se termine : « le dossier est clos », « on a changé
+  de pédiatre »
+
+Écris la notion dans `notions/`, avec `sources: conversation:<date>`. Une notion
+capturée en conversation est **aussi citable** qu'une notion dérivée d'un email.
+
+**Ne capture pas** une blague, une hypothèse, ou une phrase ambiguë. Dans le
+doute : `confiance: faible`, ou rien du tout. Ne déduis jamais un fait durable
+d'une seule phrase incertaine.
+
+Si une notion se révèle fausse, Clément le dira en passant — tu la corriges
+(voir « une notion se met à jour »). Ne lui demande jamais de relire ses notions.
 
 ## Opération 1b : Répertoire des personnes
 

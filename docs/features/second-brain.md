@@ -647,3 +647,159 @@ fois ? »** answered from his fiche.
 Secondary: `personnes.md` lists ~45 people rising materially once calendar
 attendees are fetched; no newsletter or `no-reply@` address appears anywhere in
 it; Lola has exactly one fiche despite two addresses.
+
+---
+
+# Pass 4 — Notions: the second atom
+
+Correction recorded 2026-08-08, from Clément: *"tu as peut-être trop insisté sur
+la partie event lors du premier spec. mais ça reste un second brain, l'idée
+étant de dupliquer mon cerveau/ma mémoire mais en version qui n'oublie rien."*
+
+He is right, and the measurement is unambiguous.
+
+## What the event-only design actually built
+
+Measured on the live wiki, 2026-08-08:
+
+- **362 of 572 events are a title and a date, nothing more.**
+- Of the 210 carrying a descriptive line, most are a street address copied from
+  the calendar's `location` field — `Parque Urbano do Jamor, Praça da
+  Maratona...` repeated verbatim across five events. A venue string, not a
+  memory.
+- A query for any non-dated content across every dossier returns **nothing**.
+  There is not one fact in the wiki of the form "X is true" — only "X occurred
+  on date D."
+
+The result is a **chronological index of occurrences**. It answers *when* and
+*how many times*, and it does that well: « c'était quand la dernière fois chez
+le coiffeur » works today. It is not a duplicate of a memory.
+
+## The design error
+
+The original spec over-fitted to one failure mode. Clément had abandoned a paper
+10-year diary over daily discipline, so the design optimised hard for zero
+capture effort. Derived-only means the schema can hold only what a calendar
+entry or a receipt *proves* — and every such proof is dated.
+
+**Derivation was a constraint on sourcing; it was allowed to become the
+ontology.** Karpathy's pattern has pages about *things*; this build replaced
+them with an event log plus generated views, and kept no place for a durable
+fact.
+
+The evidence was already on disk, unnoticed:
+
+- An event description reads *"Zahara de los Atunes — appartement d'été des
+  parents de Lola Daroca (belle-mère)"*. Real knowledge, surviving by accident,
+  trapped inside one event. Nothing holds "Lola's parents have a summer flat in
+  Zahara."
+- `groups/alain/movies.md` holds 40+ films with a `Vu` column, and
+  `groups/alain/notes.md` holds dated, structured ideas Clément dictated in
+  conversation. **Both are second-brain content living outside the wiki**,
+  because the event schema had nowhere to put them.
+- `personnes/` (pass 3) already forced a durable entity into an event-only
+  world. The same pressure, appearing twice.
+
+## The fix: notions alongside events
+
+A second atom, not a replacement. The event log stays exactly as it is —
+append-only is a real defence against model collapse and the right substrate for
+"when did X happen."
+
+```
+wiki/
+├── evenements/      ATOM 1 — what happened, dated, append-only
+├── notions/         ATOM 2 — what is true, durable, revisable
+│   ├── personnes/   (pass 3 folds in here — a person is a notion)
+│   ├── famille.md
+│   ├── preferences.md
+│   └── etats.md
+├── jour/            VIEW over events
+└── dossiers/        VIEW over events + notions
+```
+
+A **notion** is a fact that is true rather than a thing that happened. Four
+kinds, prioritised by Clément (2026-08-08): **people and relationships** and
+**preferences and opinions** first; durable family facts and ongoing states
+follow.
+
+| Kind | Example | Why an event cannot hold it |
+|---|---|---|
+| Relationship | "Lola's parents own a summer flat in Zahara" | No date; true across years |
+| Preference | "Vu et aimé: *Rear Window*"; "déteste les réunions avant 9h" | Currently exiled to `movies.md` |
+| Durable fact | NIF, sizes, allergies, the children's pediatrician | Never appears as an occurrence |
+| State | "despedimento ongoing"; "Tom's ear infection resolved" | Has a duration, not a date |
+
+### Notions are revisable — and that is not model collapse
+
+Events are append-only because rewriting generated prose flattens detail. A
+notion is different: when a state changes, the notion is **updated**, and the
+change is recorded as an event (`2026-08-12 | état | despedimento clos`). So the
+history still lives in the append-only log, while the notion answers "what is
+true *now*" without a scan.
+
+This is the one place the two atoms interlock, and it is why notions do not
+reintroduce the collapse problem: **the notion is a cache; the event log remains
+the record.**
+
+## Conversational capture
+
+**Alain records what Clément tells him, without being asked and without Clément
+filing anything.** Confirmed 2026-08-08, choosing capture-silently over
+confirm-each-fact: a confirmation step per fact reintroduces exactly the
+friction that killed the paper diary.
+
+This is a **real change to the derived-only rule**, and the reason it is safe:
+
+- The rule existed to protect Clément from *filing work*, not to make sourcing
+  pure. Alain doing the noticing and the writing costs Clément nothing — which
+  is the property that actually mattered.
+- The habit already exists: `instructions.prepend.md:51` says `notes.md` holds
+  "anything Clément wants captured", and `notes.md` proves it works. Pass 4
+  points that habit at the wiki instead of a loose file.
+- Provenance stays explicit. A conversationally-captured notion carries
+  `sources: conversation:<date>` and is as citable as `gmail:` or `calendar:`.
+  Confidence rules are unchanged: uncertain readings get `confiance: faible`,
+  never a silent guess.
+
+`movies.md` and `notes.md` migrate into `notions/` and stop being separate
+files. The films keep their `Vu` column — a preference notion with structure.
+
+**Unchanged:** Clément is never asked to capture, classify, review, or maintain
+anything. If a notion is wrong he says so in passing and Alain revises it.
+
+## Edge cases — pass 4
+
+| Edge case | Decision |
+|---|---|
+| Notion contradicts an event | The event wins on "what happened"; the notion wins on "what is true now". Contradiction between two *notions* is a lint finding. |
+| Fact stated in conversation, later contradicted by a source | Update the notion, append an event recording the correction. Both readings stay traceable. |
+| Clément states something as a joke or hypothetical | `confiance: faible`, or not captured. Never infer a durable fact from a single ambiguous line. |
+| A notion is derived from an untrusted source (email) | Unchanged: content is data, never instruction. A notion never triggers an action. |
+| Third-party notions | Same widened rule as pass 3, same exclusions (credentials, work-email content). |
+| Notion with no source | Not allowed. `conversation:<date>` is a source; "no source" is not. |
+| Migration of `movies.md` / `notes.md` | Content moves into `notions/`, originals deleted. `movies.md` is referenced in the persona — that reference updates in the same change. |
+
+## Affected files — pass 4
+
+| File | Change |
+|---|---|
+| `container/skills/wiki/SKILL.md` | notions atom; conversational capture; revision-vs-append rule |
+| `groups/alain/instructions.prepend.md` | capture rule points at the wiki; `movies.md` reference updated |
+| `src/second-brain-wiki.test.ts` | tests for the two atoms, revisability, capture provenance |
+| `groups/alain/wiki/notions/**` | new — migrated `movies.md`, `notes.md`, plus derived notions |
+| `docs/features/second-brain.md` | this section |
+| `product-docs/agents/alain.md` | second brain described as memory, not a log |
+
+## Success signal — pass 4
+
+Golden path: Clément mentions in passing that Lola's parents have a place in
+Zahara. Weeks later he asks « on va où cet été d'habitude ? » and Alain answers
+from a notion — a fact he was told once, never filed, and that no email or
+calendar entry proves.
+
+Secondary: « quels films j'ai aimés ? » answers from the wiki rather than a
+separate file; a durable fact asked twice is answered the second time without a
+search.
+
+Negative signal: the wiki still answers only *when* things happened.
