@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 3h30 — D+500-700m",
+  "date": "2026-08-21",
+  "description": "Sortie longue de la semaine. Piloter à la FC uniquement. Danseuse sur toute montée >10min, alterner toutes les 3-5min.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 10200, "hrMin": 107, "hrMax": 128, "note": "Z2 — chercher le D+ (Arrábida, Sintra, Almada)"},
+    {"type": "cooldown", "durationSec": 1200,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
