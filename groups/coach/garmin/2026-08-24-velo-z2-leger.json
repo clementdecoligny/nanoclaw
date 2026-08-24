@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 léger — 1h30",
+  "date": "2026-08-24",
+  "description": "Récupération active après la sortie longue de samedi. Piloter à la FC uniquement, rythme confortable.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 3600, "hrMin": 107, "hrMax": 128, "note": "Z2 confortable"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
