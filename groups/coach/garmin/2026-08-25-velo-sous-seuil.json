@@ -1,0 +1,14 @@
+{
+  "sport": "cycling",
+  "name": "Vélo — Sous-seuil 1/2 (2 blocs)",
+  "date": "2026-08-25",
+  "description": "Piloter à la FC uniquement. 2 blocs sous-seuil : rester dans la fenêtre 132-140, stopper si >141.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 1500, "hrMin": 107, "hrMax": 128, "note": "Z2"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Sous-seuil bloc 1"},
+    {"type": "recovery", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Récup Z1"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Sous-seuil bloc 2"},
+    {"type": "cooldown", "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}

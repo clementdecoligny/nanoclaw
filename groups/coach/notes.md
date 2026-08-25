@@ -96,6 +96,7 @@ Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 
 - **20–30 août 2026 : vacances en famille (10 jours)**, annoncé le 20/08. Remplace l'hypothèse "pleinement disponible" du macro-plan pour cette fenêtre. Vélo/terrain/fenêtres horaires inconnus — à clarifier avec Clément au fil de l'eau plutôt que supposés.
   - **Dimanche 30 août : route du retour, vélo impossible ce jour-là (confirmé).**
+  - **Terrain vallonné, pas de roulant/plat disponible (confirmé 25/08, mar+jeu+ven)** — les blocs sous-seuil de la semaine se pilotent en côte (braquet facile, priorité FC sur vitesse), pas d'hypothèse de terrain plat. Samedi (sortie 5h) : Clément peut aller plus loin, marge possible.
   - Cette note expire le 30 août — la purger une fois la semaine du 31 août planifiée.
 
 ## Comportement / Observations
@@ -150,8 +151,11 @@ Inclure toujours une estimation TSS pour le surf et autres activités sans capte
 - **Surf** : ~60 TSS/session (effort modéré 60-80 min, upper body + cardio) — signaler comme estimé
 - Règle générale : ne jamais exclure une activité du total TSS faute de données — estimer et noter "(estimé)"
 
-## Préférence — ton et mise en forme des messages (20 août 2026)
+## Préférence — ton et mise en forme des messages (20 août 2026, réitéré 25 août 2026)
 
-Clément a signalé que mes retours (`/done` notamment) étaient devenus trop plats : peu de mise en forme (gras/italique/emojis) et un ton trop analytique, sans chaleur ni encouragement. À corriger durablement, pas juste pour ce message :
-- Utiliser gras, emojis (🎯💪⚠️✅ etc.) et rupture visuelle systématiquement, pas seulement dans les plans hebdomadaires formatés.
-- Garder le contenu analytique (chiffres, comparaison au plan) mais l'envelopper dans un ton engagé — reconnaître l'effort avant de décortiquer les données, pas juste lister des faits.
+Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient illisibles : trop de paragraphes de prose, pas assez de gras/rupture visuelle. La consigne du 20 août n'a pas suffi — être plus strict et plus concret :
+- **Jamais de paragraphe de plus de 2 lignes.** Si une explication est longue, la découper en puces avec un label en gras au début de chaque puce, pas un bloc de texte continu.
+- **Bold systématique** sur chaque donnée chiffrée et chaque label de section (FC, durée, D+, verdict) — pas juste dans les titres de section.
+- Emojis (🎯💪⚠️✅ etc.) et sauts de ligne fréquents — viser une lecture en diagonale sur téléphone, pas un rapport à lire linéairement.
+- Garder le contenu analytique (chiffres, comparaison au plan) mais l'envelopper dans un ton engagé — reconnaître l'effort avant de décortiquer les données.
+- Avant d'envoyer un retour `/done` ou tout message structuré : relire et vérifier qu'aucun bloc de texte ne dépasse 2 lignes sans rupture (puce, saut de ligne, gras).
