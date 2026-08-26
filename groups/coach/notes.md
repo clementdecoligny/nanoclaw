@@ -94,10 +94,7 @@ Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 
 ## Contraintes temporaires (à purger après expiration)
 
-- **20–30 août 2026 : vacances en famille (10 jours)**, annoncé le 20/08. Remplace l'hypothèse "pleinement disponible" du macro-plan pour cette fenêtre. Vélo/terrain/fenêtres horaires inconnus — à clarifier avec Clément au fil de l'eau plutôt que supposés.
-  - **Dimanche 30 août : route du retour, vélo impossible ce jour-là (confirmé).**
-  - **Terrain vallonné, pas de roulant/plat disponible (confirmé 25/08, mar+jeu+ven)** — les blocs sous-seuil de la semaine se pilotent en côte (braquet facile, priorité FC sur vitesse), pas d'hypothèse de terrain plat. Samedi (sortie 5h) : Clément peut aller plus loin, marge possible.
-  - Cette note expire le 30 août — la purger une fois la semaine du 31 août planifiée.
+- ~~20–30 août 2026 : vacances en famille~~ — **expirée, purgée le 26/08** (semaine du 31 août planifiée en aperçu ; retour à la disponibilité pleine par défaut du macro-plan pour le 20 août–27 sept).
 
 ## Comportement / Observations
 
