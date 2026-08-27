@@ -86,14 +86,18 @@ Contexte réel :
 **31 août → 13 septembre**
 
 #### W36 — 31 août–6 sept | 13h vélo | 3 renfo | 1 run
+*(Bloc obligatoire déplacé le 27/08 — indisponibilités familiales sam 5/dim 6, voyage à vélo remorque lun 31-jeu 3.)*
 - Bloc sous-seuil réduit à 1/semaine pendant le bloc
-- **Samedi 5 : 6h / 1 500 m D+** — setup course, test conditions course
-- **Dimanche 6 : 5h / 1 200 m D+** — back-to-back jour 2
+- **Lundi 31 → jeudi 3 sept : voyage à vélo en famille, remorque avec les enfants, ≥4h/j, Z1/Z2 strict** — mer 2 + jeu 3 = jours 1-2 du bloc obligatoire (2 derniers jours du voyage)
+- **Vendredi 4 sept (solo, sans enfant) : 6h / ~1 500 m D+ — JOUR 3 DU BLOC** — setup course, test conditions course, remplace l'ancien samedi 5
+- **Samedi 5 / dimanche 6 sept : repos forcé** (indisponible) — 2 jours pleins de récup juste après le bloc, au lieu d'une nuit dans la version initiale
+- Bloc total révisé : ~14h / ~2 000-2 300 m D+ sur 3 jours (mer 2-jeu 3-ven 4) — D+ un peu sous les 2 900m visés initialement (terrain familial peu vallonné), compensé par la fatigue cumulée du portage remorque
 
 #### W37 — 7–13 sept | ~8h30 vélo | 2 renfo | 0 run
-- **Lundi 7 : 3h — JOUR 3 DU BLOC (OBLIGATOIRE)** — 14h et ~2 900m D+ sur 3 jours consécutifs, terminer à 20 jours de la course
-- Puis récupération genuine : 2 sorties faciles Z2, zéro sous-seuil
-- **Gate G2 : évaluation état du bloc le 8 septembre** — décider avant le 10 sept
+- **Lundi 7 / mardi 8 sept : récupération genuine, 2 sorties faciles Z2, zéro sous-seuil** — tombe naturellement après les 2 jours de repos forcé du week-end
+- **Gate G2 : évaluation état du bloc le 8 septembre** — décider avant le 10 sept (signal plus fiable qu'initialement prévu : 3 jours de repos/récup avant l'évaluation au lieu d'un lendemain immédiat)
+- Mercredi 9 sept : indisponible (repos)
+- Jeudi 10 / vendredi 11 sept : dispo, reste de la semaine à finaliser
 
 ### Phase 6 — Affûtage
 **14–27 septembre**
