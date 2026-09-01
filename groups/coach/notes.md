@@ -17,6 +17,8 @@ _Dernière mise à jour : 12 juillet 2026_
 
 **Dos** : Ligament lombaire insuffisant → renforcement du dos également non négociable.
 
+**Vélo avec remorque enfants (trailer)** : la danseuse n'est pas praticable avec la remorque attelée (stabilité/maniabilité). La rotation assis/danseuse (protocole B5) ne s'applique donc pas sur les jours remorque — tout le travail en montée se fait assis. Levier de protection restant : braquet très facile + cadence haute (80+ rpm), jamais de gros braquet à cadence basse assis (contre-indiqué en toute circonstance). Précédent 2025 (Col de Turini, genou déjà enflammé) : assis uniquement + cadence haute a permis de finir — donc assis n'est pas intrinsèquement mauvais si la cadence est gérée.
+
 **Protocole de renforcement (post M-N 2025, coach PT) :**
 1. **Contralateral plank** (planche controlatérale) — Position : appui sur l'avant-bras et les orteils comme une planche classique. Mouvement : lever le bras opposé tendu devant ET la jambe opposée tendue derrière en même temps (ex. appui sur avant-bras droit → lever bras gauche + jambe droite). Ressenti : gainage profond + fessier de la jambe restée au sol qui travaille pour stabiliser le bassin. 3×20-30s par côté.
 2. **SL bridge 45°** (pont fessier unipodal, amplitude haute) — Position : allongé sur le dos, un pied au sol genou plié, l'autre jambe tendue en l'air. Mouvement : pousser les hanches vers le haut jusqu'à ce que le tronc forme un angle d'environ 45° avec le sol (pas à plat, amplitude partielle contrôlée). Ressenti : fessier de la jambe d'appui au sol. 2×20-30s par côté.
