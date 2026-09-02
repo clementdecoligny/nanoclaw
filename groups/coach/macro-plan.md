@@ -86,12 +86,11 @@ Contexte réel :
 **31 août → 13 septembre**
 
 #### W36 — 31 août–6 sept | 13h vélo | 3 renfo | 1 run
-*(Bloc obligatoire déplacé le 27/08 — indisponibilités familiales sam 5/dim 6, voyage à vélo remorque lun 31-jeu 3.)*
-- Bloc sous-seuil réduit à 1/semaine pendant le bloc
-- **Lundi 31 → jeudi 3 sept : voyage à vélo en famille, remorque avec les enfants, ≥4h/j, Z1/Z2 strict** — mer 2 + jeu 3 = jours 1-2 du bloc obligatoire (2 derniers jours du voyage)
-- **Vendredi 4 sept (solo, sans enfant) : 6h / ~1 500 m D+ — JOUR 3 DU BLOC** — setup course, test conditions course, remplace l'ancien samedi 5
-- **Samedi 5 / dimanche 6 sept : repos forcé** (indisponible) — 2 jours pleins de récup juste après le bloc, au lieu d'une nuit dans la version initiale
-- Bloc total révisé : ~14h / ~2 000-2 300 m D+ sur 3 jours (mer 2-jeu 3-ven 4) — D+ un peu sous les 2 900m visés initialement (terrain familial peu vallonné), compensé par la fatigue cumulée du portage remorque
+*(Bloc obligatoire déplacé le 27/08, puis réinterprété le 2/09 — voir note ci-dessous.)*
+- **Réalisé — voyage à vélo famille avec remorque, lundi 31 → mercredi 2 sept (raccourci de 4 à 3 jours, décision Clément le 1/09 pour protéger le genou)** : 3h31 (49,3km/D+694m) + 4h06 (66,2km/D+1060m) + 2h07 (41,4km/D+426m, écourté pour cause de chaleur 34-40°C). Genou resté ≤1-2/10 sur les 3 jours.
+- **Bloc obligatoire (Gate G2) réinterprété (2/09, accord Clément)** : ce voyage de 3 jours consécutifs, malgré l'absence de setup course et de sous-seuil, a validé le critère central de la Gate — fatigue cumulée jour après jour + genou qui tient (la cariole ajoutant une résistance continue). **Gate G2 : Go pour le format 7 jours.**
+- **Ce qui manque encore et reste à programmer avant le 19 sept (dress rehearsal)** : une sortie solo 4-5h avec setup course complet + bloc sous-seuil (2×20 min 132–140 bpm) — teste le pacing en solo sur les plats (le vrai facteur de risque genou 2025, pas la montée), pas fait pendant le voyage familial.
+- Vendredi 4 / samedi 5 / dimanche 6 sept : repos/récupération légère (genou clean mais fatigue de 3 jours consécutifs réelle) — pas de nouveau bloc de charge, juste Z1/Z2 facile si vélo, chaleur à éviter (sorties tôt le matin).
 
 #### W37 — 7–13 sept | ~8h30 vélo | 2 renfo | 0 run
 - **Lundi 7 / mardi 8 sept : récupération genuine, 2 sorties faciles Z2, zéro sous-seuil** — tombe naturellement après les 2 jours de repos forcé du week-end
@@ -137,7 +136,7 @@ Contexte réel :
 
 | Date | Événement | Action |
 |------|-----------|--------|
-| 8 sept | **Gate G2** | Bloc 5–7 sept complété ? Genou ≤ 1/10 ? → Go. Sinon : affûtage 14j ou format 8 jours |
+| 8 sept | **Gate G2** | **Tranchée par anticipation le 2 sept** — bloc réinterprété comme le voyage remorque 31 août-2 sept (3 jours consécutifs, genou ≤1-2/10) → **Go, format 7 jours confirmé**. Reste à programmer : 1 sortie solo setup course + sous-seuil avant le 19 sept |
 | 10 sept | **Décision format** | Si G2 → fallback, décider ici, pas à la ligne de départ |
 | 14 sept | **Gate G3 (ostéo)** | Question binaire : *"Le genou peut-il tenir 7 jours consécutifs à ~2 500m D+/j avec rotation assis/danseuse ?"* — réponse verbatim |
 | 17 sept | **Début affûtage** | Fréquence maintenue, durée coupée |
@@ -146,7 +145,8 @@ Contexte réel :
 
 ## Rehearsal checklist (à compléter avant le 20 septembre)
 
-- [ ] Bloc 3 jours consécutifs complété à poids course (5–7 sept)
+- [x] Bloc 3 jours consécutifs complété (31 août-2 sept, voyage remorque — pas à poids course, mais fatigue cumulée + genou validés)
+- [ ] Sortie solo setup course + sous-seuil (encore à faire, remplace le volet "poids course" du bloc)
 - [ ] 1 sortie départ avant l'aube ou arrivée après tombée de nuit (14h/jour en course, inévitable)
 - [ ] 1 journée avec 1 500m+ de descente — test mains/nuque/dos/hallux gauche sous fatigue
 - [ ] Setup course roulé 4h+ sans plainte de position
