@@ -13,7 +13,8 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Item | Qty | Statut | Notes |
 |---|---|---|---|
 | Arroz basmati Cigala 1kg | ×3 | - | Lola 18/08 — 3 kg total |
-| Massa (Gemelli La Molisana ou Penne Rummo) | ×2 | - | Lola 18/08 |
+| Gemelli La Molisana 500g | ×3 | - | Pâtes épuisées — 03/09 |
+| Penne Rummo n°66 500g | ×3 | - | Pâtes épuisées — 03/09 |
 | Frango de campo inteiro congelar | ×1 | - | Lola 18/08 — fresco, pedir próximo de 30/08 |
 | Bife bovino (novilho) 1 kg | ×1 | - | Lola 18/08 |
 | Robalo fresco | ×1 | - | Lola 18/08 — fresco, pedir próximo de 30/08 |
@@ -108,6 +109,6 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
 | Œufs | 1 boîte | ✅ acheté | 2 dúzias Auchan 08/07 |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
-| Panados de frango | — | ✅ en stock | 2 tupperwares congélo (confirmé Lola 27/06) |
+| Panados de frango | — | ❌ épuisés | Confirmé Clément 03/09 — à refaire |
 
 ---

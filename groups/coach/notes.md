@@ -150,6 +150,12 @@ Inclure toujours une estimation TSS pour le surf et autres activités sans capte
 - **Surf** : ~60 TSS/session (effort modéré 60-80 min, upper body + cardio) — signaler comme estimé
 - Règle générale : ne jamais exclure une activité du total TSS faute de données — estimer et noter "(estimé)"
 
+## Renfo — érosion de compliance confirmée (3 septembre 2026)
+
+Seulement 2 séances renfo loggées entre le 20 août et le 2 septembre (21/08, 24/08) — aucune depuis 10 jours au 3/09. C'est la fenêtre d'érosion prédite (escalade monitoring depuis le 24 août) qui se confirme.
+
+**Clément a demandé explicitement (3/09) : "mets-moi la pression si je ne fais pas le renfo."** Consigne active — être direct et ferme (pas de jugement, mais pas d'excuse) dès qu'une séance renfo planifiée est sautée sans raison logistique valable (voyage, indisponibilité annoncée). Rattrapage en cours sur la semaine du 7-13 sept (3 séances vs 2 prévues).
+
 ## Préférence — ton et mise en forme des messages (20 août 2026, réitéré 25 août 2026)
 
 Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient illisibles : trop de paragraphes de prose, pas assez de gras/rupture visuelle. La consigne du 20 août n'a pas suffi — être plus strict et plus concret :

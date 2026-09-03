@@ -1,72 +1,73 @@
-# Plan semaine — 31 mai → 07 juin 2026
+# Plan semaine — 4 → 11 septembre 2026
 
-_Mis à jour : 2026-06-03 (panier intégré)_
-_Contexte : Lola absente mar→sam midi (02→06/06). Clément seul avec enfants. Mercredi soir Clément sort. Jeudi férié, enfants à la maison. Branca présente mar + jeu soir. Panier de légumes mercredi soir 03/06._
+_Mis à jour : 2026-09-03 (retour vacances — confirmation Clément)_
+_Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier jeudi 10 sept. Branca : jour TBD. Menus école septembre non disponibles._
 
 ---
 
-## Dimanche 31 mai
+## Vendredi 4 septembre
 
 | | |
 |---|---|
-| Déjeuner | Salade pois chiches + feta + tomates + olives (pique-nique) |
-| Dîner | ⚠️ À définir — frango effiloché pas encore fait (batch pas réalisé ven ni sam) |
+| Déjeuner | — (arrivée le soir) |
+| Dîner | Soupe (congélo) + barritas de pescado (congélo) + riz basmati + edamame |
 
-## Lundi 01 juin
-
-| | |
-|---|---|
-| Déjeuner | Clément au bureau — bolognaise non consommée, toujours au congélo |
-| Dîner | Wraps panados de frango + avocat + salade + feta + pesto + feijão preto + parmigiano râpé ⭐ très bon |
-
-## Mardi 02 juin *(Clément solo — Branca le soir)*
+## Samedi 5 septembre
 
 | | |
 |---|---|
-| Déjeuner | Mini steaks hachés ×2 (Clément) |
-| Dîner | Enfants : mini steaks ×2. Clément : TBD (pas de viande rouge) |
+| Déjeuner | Soupe (congélo) + salade lentilles + atum ao natural + feta + tomates |
+| Dîner | Soupe (congélo) + pollo chipotle (frango de campo, batch) + riz basmati ⭐ |
 
-## Mercredi 03 juin *(Clément solo — sort le soir)*
-
-| | |
-|---|---|
-| Déjeuner | Clément dehors — bolognaise toujours au congélo (3 tupperwares) |
-| Dîner | Enfants : soupe + pasta letras + parmesan. Clément : dehors |
-
-## Jeudi 04 juin *(Férié — enfants à la maison — Branca le soir)*
+## Dimanche 6 septembre *(pique-nique)*
 
 | | |
 |---|---|
-| Déjeuner | Wraps panados + avocat (urgent mûr) + salade verte + tomates + feta (picnic) |
-| Dîner | Pisto español (1×500g congélo) + riz + œuf au plat (Branca) |
+| Déjeuner | Salade de riz + atum + œufs durs + tomates + pepino (pique-nique). Soupe thermos si possible. |
+| Dîner | Soupe (congélo) + shakshuka maison + pain |
 
-**Branca batch** : ⚠️ NON RÉALISÉ (05/06) — légumes toujours dispo (poireau, carottes, pmdt, chou blanc). À reporter.
-
-## Vendredi 05 juin *(Clément solo)*
+## Lundi 7 septembre *(Lola bureau)*
 
 | | |
 |---|---|
-| Déjeuner | ~~Salade thon~~ → Bolognaise + pâtes (1 tup congélo utilisé) — restes pour enfants ce soir ou sam déj |
-| Dîner | Curry de légumes (900g congélo) + riz basmati |
+| Déjeuner | Soupe (congélo) + restes pollo chipotle + lentilles |
+| Dîner | Soupe (congélo) + arroz con alubias y tomate (conserves) |
 
-## Samedi 06 juin *(Lola rentre à midi)*
+## Mardi 8 septembre
 
 | | |
 |---|---|
-| Déjeuner | Bolognaise (1 tupperware congélo) + spaghetti + salade verte |
-| Dîner | **6 adultes invités** — Dourada + Robalo au four (ail, citron, herbes) + riz basmati + légumes rôtis (congélo) + salade verte. Soupe en entrée. 🎉 |
+| Déjeuner | Soupe (congélo) + riz + feijão verde (congélo) + restes poulet chipotle |
+| Dîner | Soupe (congélo) + robalo ao forno (ail, citron, herbes) + riz + alcachofas (congélo) |
+
+## Mercredi 9 septembre *(Lola bureau)*
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + alubias puerros miso |
+| Dîner | Soupe (congélo) + pasta + sauce tomates maison + parmesan |
+
+## Jeudi 10 septembre *(panier de légumes)*
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + pasta pesto + parmesan |
+| Dîner | Soupe (congélo) + feijoada angolana (congélo) + riz ⚠️ vérifier composition avec Branca avant |
+
+## Vendredi 11 septembre
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + salade lentilles + seitan + tomates |
+| Dîner | Soupe (congélo) + à définir selon panier jeudi |
 
 ---
 
 ## Stock critique
 
-- Soupe : ~7 tupperwares congélo ✅ (batch Branca 28/05)
-- Soupe : ~7 tupperwares congélo ✅
-- Bolognaise : 3 tupperwares (aucune utilisée — mer déj = 1, reste 2 après)
-- Frango effiloché : ⚠️ TOUJOURS À PRODUIRE — plus de poulet au congélo, à acheter
-- Pisto español : 2×500g congélo
-- Dourada (congelée 30/05) + Robalo (congelé 30/05) : à planifier
-- Feijoada angolana (Branca) : 2 tupperwares congélo
-- Curry de légumes : 1×900g congélo
-- Œufs : ~12 ✅
-- Panier légumes : arrivée mercredi soir 03/06
+- Soupe : plusieurs tupperwares congélo ✅
+- Robalo fresco : livraison Continente ven 4 — cuire mar 8 au plus tard
+- Feijoada angolana : 1–2 tupperwares congélo — vérifier composition (canard/poulet ou porc ?)
+- Pâtes : épuisées — réappro Continente ven 4, disponibles à partir de sam
+- Panados de frango : épuisés — à refaire (batch Branca ?)
+- Branca : jour TBD — carte batch à générer une fois confirmé

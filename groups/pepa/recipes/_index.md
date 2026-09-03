@@ -52,6 +52,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | salade-pates-anchoiade-mediterraneenne.md | Salade pâtes anchoïade méditerranéenne | fish / pasta salad | very low | no | Vinaigrette anchois-citron-ail. Original. Portable (assembler sur place). |
 | pasta-alla-norma.md | Pasta alla Norma | pasta / veg | low | components | Siciliana clásica. Berenjena frita + salsa tomate + ricotta salata. |
 | salmorejo-cordobes.md | Salmorejo Cordobés | soup / veg | low | full_dish | Sopa fría. Sin cocción. Tomate + pan + AOVE. Aguanta 3 días nevera. |
+| minestrone-ete.md | Minestrone d'Été | soup / veg | low | ⭐⭐⭐ | 7 légumes en saison. Croûte parmesan (secret). Pesto à servir. Congèle très bien. |
 | pate-a-crepes.md | Pâte à Crêpes | eggs / sweet-savory | low | full_dish | Pâte neutre ~25 crêpes. Repos 1h minimum. Congèle bien. |
 | tarte-feuilletee-tomate-mozza-tomates-sechees-amandes.md | Tarte a Italiana | veg / tart | medium | components | Croûte brisée maison + crème tomates séchées + mozza + roquette. Froide. Livre cookbook. |
 | fajitas-poulet.md | Fajitas au Poulet | chicken / Mexican | low | components | Build-your-own. Kid-approved. 20 min cuisson. |

@@ -14,6 +14,15 @@ d'*août* mais doit être *rattaché au mois de MAI* : catégorie EMPREGADA /
 SEGURANCA SOCIAL, avec `year=2026, month=5` (et non month=8). Ne pas le compter
 dans les dépenses d'août. Retirer cette note une fois le rattachement fait.
 
+### ⚠️ À IDENTIFIER lors de l'import du relevé de SEPTEMBRE 2026 — commande HSN
+
+Le 3 septembre 2026, Clément a passé une commande *MB WAY* de *113,75 €* sur
+*hsnstore.pt* (HSN = marque de nutrition sportive : protéines, compléments).
+Commande #300643301. Quand un débit MB WAY de ~113,75 € apparaîtra sur le relevé
+(perso ou commun), c'est ça : compléments sportifs. Catégorie proposée à
+confirmer avec Clément (HEALTH ou LEISURE). Retirer cette note une fois la ligne
+identifiée et catégorisée.
+
 ### Escola No Chiado — paiements hors ActivoBank
 
 Les mensualités Escola No Chiado sont payées via *Coverflex* (tickets crèches, avantage entreprise). Elles n'apparaissent donc PAS dans les exports ActivoBank. Clément les saisit manuellement dans le historical xlsx (libellé "ESCOLA NO CHIADO MOIS", catégorie EDUCATION/ESCOLA).

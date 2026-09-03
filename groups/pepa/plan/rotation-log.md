@@ -6,6 +6,21 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| salade-lentilles-seitan | 2026-09-11 | Déj vendredi (planifié) |
+| feijoada-angolana | 2026-09-10 | Dîner jeudi (planifié) |
+| pasta-pesto | 2026-09-10 | Déj jeudi (planifié) |
+| pasta-sauce-tomates | 2026-09-09 | Dîner mercredi (planifié) |
+| alubias-puerros-miso | 2026-09-09 | Déj mercredi (planifié) |
+| robalo-ao-forno | 2026-09-08 | Dîner mardi (planifié) |
+| arroz-alubias-tomate | 2026-09-07 | Dîner lundi (planifié) |
+| shakshuka-maison | 2026-09-06 | Dîner dimanche (planifié) |
+| salade-riz-thon-oeufs-durs | 2026-09-06 | Déj dimanche pique-nique (planifié) |
+| pollo-chipotle | 2026-09-05 | Dîner samedi (planifié, batch) |
+| salade-lentilles-atum-feta | 2026-09-05 | Déj samedi (planifié) |
+| barritas-pescado | 2026-09-04 | Dîner vendredi (planifié) |
+| pad-thai-pollo | 2026-08-22 | Vacances Annecy |
+| tortilla-espanola | 2026-08-25 | Vacances Annecy (date approx) |
+| salade-pois-chiches-feta | 2026-08-25 | Vacances Annecy (date approx) |
 | gulas-ajillo-pasta | 2026-07-08 | Dîner mercredi ❤️ |
 | dumplings | 2026-07-13 | Dîner lundi + restes purée + riz |
 | salade-betteraves-avocat-feta | 2026-07-14 | Dîner mardi, fait maison |
