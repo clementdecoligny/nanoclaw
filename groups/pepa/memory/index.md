@@ -6,7 +6,7 @@ okf_version: "0.1"
 
 ## Core Memory
 
-- Famille en vacances jusqu'au vendredi 4 septembre 2026 (retour repoussé, confirmé le 30/08). Pas de briefing ni de planning avant le retour.
+- Famille rentrée à Lisbonne le vendredi 4 septembre 2026. Routine reprend normalement. Plan actif : 4–11 septembre.
 
 ## Map
 

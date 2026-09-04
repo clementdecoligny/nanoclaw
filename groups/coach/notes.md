@@ -150,6 +150,17 @@ Inclure toujours une estimation TSS pour le surf et autres activités sans capte
 - **Surf** : ~60 TSS/session (effort modéré 60-80 min, upper body + cardio) — signaler comme estimé
 - Règle générale : ne jamais exclure une activité du total TSS faute de données — estimer et noter "(estimé)"
 
+## Santé — Quadriceps droit, douleur musculaire (4 septembre 2026)
+
+**Nouveau signal, distinct du genou** — première apparition, à surveiller dans la durée avant de conclure.
+- **Localisation** : haut/avant de la cuisse droite (quadriceps proximal — zone rectus fémoral, pas la rotule).
+- **Déclencheur** : apparue uniquement au pédalage, absente à la marche. Non ressentie avant de monter sur le vélo.
+- **Sortie concernée** : spin récup 1h Z1 (4/09 soir, HR moy 98) — douleur présente sur toute la sortie, 3/10, non résolue en fin de ride.
+- **Correction (Clément, 4/09 21h16)** : Renfo S1 **pas fait** ce matin (prévu le soir, annulé à cause de la douleur) — l'hypothèse isométrique matinale est donc écartée.
+- **Cause retenue (Clément)** : les **3 jours de voyage remorque** (31/08-2/09), où certaines montées ont demandé de **vraiment forcer sans pouvoir se mettre en danseuse** — grinding assis à forte charge, exactement le pattern contre-indiqué par le protocole B5 (gros braquet/cadence basse assis). Douleur apparue 2 jours après la fin du bloc (délai typique d'une surcharge/microtrauma musculaire qui se révèle à la remise en charge, ici le pédalage de ce soir).
+- **Action** : massage sportif prévu 5/09 matin. Renfo S1 mis en pause tant que la douleur n'est pas résolue (l'isométrique quadriceps du protocole ne doit pas être fait sur un muscle en surcharge). À surveiller sur la sortie du 5/09 (3-4h) : la douleur s'aggrave-t-elle, change-t-elle de nature (aiguë vs sourde), apparaît-elle désormais aussi à la marche ?
+- **Distinction du protocole G1** : ce n'est pas une douleur de genou/articulation — le seuil G1 (≥3/10 réveil → coupe la séance) ne s'applique pas tel quel, mais vigilance équivalente tant que non résolu.
+
 ## Renfo — érosion de compliance confirmée (3 septembre 2026)
 
 Seulement 2 séances renfo loggées entre le 20 août et le 2 septembre (21/08, 24/08) — aucune depuis 10 jours au 3/09. C'est la fenêtre d'érosion prédite (escalade monitoring depuis le 24 août) qui se confirme.
