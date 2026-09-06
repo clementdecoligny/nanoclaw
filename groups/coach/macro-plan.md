@@ -92,11 +92,15 @@ Contexte réel :
 - **Ce qui manque encore et reste à programmer avant le 19 sept (dress rehearsal)** : une sortie solo 4-5h avec setup course complet + bloc sous-seuil (2×20 min 132–140 bpm) — teste le pacing en solo sur les plats (le vrai facteur de risque genou 2025, pas la montée), pas fait pendant le voyage familial.
 - Vendredi 4 / samedi 5 / dimanche 6 sept : repos/récupération légère (genou clean mais fatigue de 3 jours consécutifs réelle) — pas de nouveau bloc de charge, juste Z1/Z2 facile si vélo, chaleur à éviter (sorties tôt le matin).
 
-#### W37 — 7–13 sept | ~8h30 vélo | 2 renfo | 0 run
-- **Lundi 7 / mardi 8 sept : récupération genuine, 2 sorties faciles Z2, zéro sous-seuil** — tombe naturellement après les 2 jours de repos forcé du week-end
-- **Gate G2 : évaluation état du bloc le 8 septembre** — décider avant le 10 sept (signal plus fiable qu'initialement prévu : 3 jours de repos/récup avant l'évaluation au lieu d'un lendemain immédiat)
-- Mercredi 9 sept : indisponible (repos)
-- Jeudi 10 / vendredi 11 sept : dispo, reste de la semaine à finaliser
+#### W37 — 7–13 sept | ~12-13h vélo | 3 renfo | 0 run _(révisé 3 sept 2026, accord Clément — voir weekly-plans/2026-sep07-sep13.md)_
+Gate G2 tranchée par anticipation le 2 sept (Go, format 7 jours) — plan reconstruit depuis les données réelles plutôt que depuis les chiffres macro d'origine (8h30/0 sous-seuil), car le vélo n'était pas le point faible : le renfo l'est (2 séances loggées en 14 jours au 3/09).
+- Lundi 7 : Vélo 2h + Renfo S2 chargée (rattrape le trou de compliance)
+- Mardi 8 : Vélo 2h Z2, zéro sous-seuil
+- Mercredi 9 : indisponible (repos)
+- Jeudi 10 : Piscine + Vélo 2h
+- **Vendredi 11 : Vélo 4-5h + 2×20 min sous-seuil (132-140 bpm)** — clôt le dernier point ouvert du rehearsal checklist (sortie solo + sous-seuil), dernière fenêtre avant l'affûtage
+- Samedi 12 : Vélo 2h + Renfo S1
+- Dimanche 13 : Renfo S3, repos actif avant Gate G3 (14 sept)
 
 ### Phase 6 — Affûtage
 **14–27 septembre**
@@ -206,6 +210,7 @@ Découper par D+, pas par distance. Une étape 150 km / 3 000m dure plus qu'une 
 | W32 (3-9 août) | ~12h30 | ~1 400m | — |
 | W33 (10-16 août) | — | — | — |
 | W34 (17-23 août) | — | — | — |
+| W36 (31 août-6 sept) | ~10h45 (bloc remorque 3j + spin récup, vendredi 6h annulé) | ~2 293m | — |
 
 *Mettre à jour chaque lundi.*
 

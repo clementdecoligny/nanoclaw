@@ -158,7 +158,7 @@ Inclure toujours une estimation TSS pour le surf et autres activités sans capte
 - **Sortie concernée** : spin récup 1h Z1 (4/09 soir, HR moy 98) — douleur présente sur toute la sortie, 3/10, non résolue en fin de ride.
 - **Correction (Clément, 4/09 21h16)** : Renfo S1 **pas fait** ce matin (prévu le soir, annulé à cause de la douleur) — l'hypothèse isométrique matinale est donc écartée.
 - **Cause retenue (Clément)** : les **3 jours de voyage remorque** (31/08-2/09), où certaines montées ont demandé de **vraiment forcer sans pouvoir se mettre en danseuse** — grinding assis à forte charge, exactement le pattern contre-indiqué par le protocole B5 (gros braquet/cadence basse assis). Douleur apparue 2 jours après la fin du bloc (délai typique d'une surcharge/microtrauma musculaire qui se révèle à la remise en charge, ici le pédalage de ce soir).
-- **Action** : massage sportif prévu 5/09 matin. Renfo S1 mis en pause tant que la douleur n'est pas résolue (l'isométrique quadriceps du protocole ne doit pas être fait sur un muscle en surcharge). À surveiller sur la sortie du 5/09 (3-4h) : la douleur s'aggrave-t-elle, change-t-elle de nature (aiguë vs sourde), apparaît-elle désormais aussi à la marche ?
+- **Résolu (6/09)** : massage sportif fait le 5/09 matin (intense — 1200km depuis le dernier massage, conseil de ne pas pédaler le jour même). Test 1h Z1 le 6/09 → **douleur disparue**. Renfo S1/S2 peuvent reprendre normalement.
 - **Distinction du protocole G1** : ce n'est pas une douleur de genou/articulation — le seuil G1 (≥3/10 réveil → coupe la séance) ne s'applique pas tel quel, mais vigilance équivalente tant que non résolu.
 
 ## Renfo — érosion de compliance confirmée (3 septembre 2026)

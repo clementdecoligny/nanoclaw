@@ -1,0 +1,1 @@
+2026-09-06 08:02 — Message envoyé. La recette adapte la base du fichier sans mayo (sauce citron vert + huile + moutarde à la place), sans cornichons (remplacés par concombre), sans maïs, et intègre l'avocat, la feta et les coentros disponibles — avec la consigne d'ajouter l'avocat au dernier moment.
