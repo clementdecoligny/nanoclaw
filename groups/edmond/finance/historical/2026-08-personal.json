@@ -1,0 +1,116 @@
+{
+  "year": 2026,
+  "month": 8,
+  "transactions": [
+    {
+      "date": "2026-08-01",
+      "value_date": "2026-08-01",
+      "description": "JUROS DEPOSITO A PRAZO",
+      "amount": 16.04,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "OTHER",
+      "subcategory": "OTHER",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-01",
+      "value_date": "2026-08-01",
+      "description": "IMPOSTO IRS/IRC DEPOSITO PRAZO       3446885107",
+      "amount": -4.49,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "subcategory": "MISC",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-03",
+      "value_date": "2026-08-03",
+      "description": "MR OU MME ROUAULT COLIGNY MICHEL",
+      "amount": 50.0,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "GIFT",
+      "subcategory": "GIFT",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-21",
+      "value_date": "2026-08-21",
+      "description": "COMPRA 6059 APPLE.COM BILL ITUNES.COM IE",
+      "amount": -2.99,
+      "account": "personal",
+      "category": "HOUSE",
+      "sub_category": "MISC",
+      "subcategory": "MISC",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-26",
+      "value_date": "2026-08-26",
+      "description": "COMPRA 6059 SP TRIEYE KLOKKARSTUA",
+      "amount": -196.95,
+      "account": "personal",
+      "category": "BIKE",
+      "sub_category": "GEAR",
+      "subcategory": "GEAR",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-27",
+      "value_date": "2026-08-27",
+      "description": "TRANSFERENCIA - VENCIMENTO",
+      "amount": 4142.52,
+      "account": "personal",
+      "category": "INCOME",
+      "sub_category": "SALARY",
+      "subcategory": "SALARY",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-27",
+      "value_date": "2026-08-27",
+      "description": "COMPRA 6059 ANTHROPIC CLAUDE SUB ANTHROPIC.COM",
+      "amount": -22.14,
+      "account": "personal",
+      "category": "LEISURE",
+      "sub_category": "TECH",
+      "subcategory": "TECH",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-27",
+      "value_date": "2026-08-27",
+      "description": "CUSTO DE SERVICO INTERNACIONAL",
+      "amount": -0.85,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "subcategory": "MISC",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-27",
+      "value_date": "2026-08-27",
+      "description": "IMPOSTO DO SELO",
+      "amount": -0.03,
+      "account": "personal",
+      "category": "MISC",
+      "sub_category": "MISC",
+      "subcategory": "MISC",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-31",
+      "value_date": "2026-08-31",
+      "description": "COMPRA 6059 ARCO DOCE BRAGA",
+      "amount": -4.9,
+      "account": "personal",
+      "category": "EAT OUT",
+      "sub_category": "PADARIA",
+      "subcategory": "PADARIA",
+      "confidence": "confirmed"
+    }
+  ]
+}

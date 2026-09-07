@@ -12,4 +12,5 @@ preferences. Replace this note with your first core fact.
 
 ## Map
 
+- [Finance](finance/index.md) - règles durables des finances du foyer (contribution compte commun, etc.)
 - [Memory system definition](system/definition.md) - how this memory works, and yours to improve

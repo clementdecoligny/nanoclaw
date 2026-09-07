@@ -6,14 +6,6 @@ Comptes : personnel `45507717811` / commun `45545535104` (auto-détectés par le
 
 ## Notes de contexte importantes
 
-### ⚠️ À TRAITER lors de l'import du relevé d'AOÛT 2026 — SS de mai payée en retard
-
-Clément a oublié de payer la Segurança Social (SS) de mai, puis l'a réglée le
-9 août 2026. Le paiement `SEGURANCA SOCIAL` (~77,26 €) apparaîtra sur le relevé
-d'*août* mais doit être *rattaché au mois de MAI* : catégorie EMPREGADA /
-SEGURANCA SOCIAL, avec `year=2026, month=5` (et non month=8). Ne pas le compter
-dans les dépenses d'août. Retirer cette note une fois le rattachement fait.
-
 ### ⚠️ À IDENTIFIER lors de l'import du relevé de SEPTEMBRE 2026 — commande HSN
 
 Le 3 septembre 2026, Clément a passé une commande *MB WAY* de *113,75 €* sur
@@ -22,6 +14,36 @@ Commande #300643301. Quand un débit MB WAY de ~113,75 € apparaîtra sur le re
 (perso ou commun), c'est ça : compléments sportifs. Catégorie proposée à
 confirmer avec Clément (HEALTH ou LEISURE). Retirer cette note une fois la ligne
 identifiée et catégorisée.
+
+### ⚠️ À IDENTIFIER lors de l'import du relevé de SEPTEMBRE 2026 — remboursement Lola (vacances)
+
+Un *transfer / virement de 234,90 €* apparaîtra en septembre : c'est *Lola qui se
+rembourse* de dépenses de vacances qu'elle a réglées depuis son *compte perso*
+(non suivi dans nos exports ActivoBank). Ce n'est donc PAS une nouvelle dépense
+en plus des vacances déjà comptées — ce sont ces dépenses-là qui arrivent sur les
+comptes suivis via ce virement. À catégoriser en *HOLIDAY* (label voyage à
+confirmer, type "Sevilla/Espagne sept. 2026"), pas en virement interne neutre,
+car les dépenses sous-jacentes n'ont jamais été comptées ailleurs.
+
+Détail fourni par Clément (somme = 234,90 €, vérifiée) :
+• Comida papis Vila Real : 29,00 €
+• Babysitting Séville — lundi 11-13h : 17,50 €
+• Babysitting Séville — mardi 11h30-13h30 : 16,00 €
+• Babysitting Séville — mercredi 11-13h : 16,00 €
+• Babysitting Séville — jeudi 19-23h : 32,00 €
+• Coloniales (épicerie/produits) : 44,40 €
+• Booking hôtel : 80,00 €
+
+Retirer cette note une fois la ligne identifiée et catégorisée.
+
+Cas inverse (compte *commun*) — dépenses réglées *pour la mère de Lola*, à
+*ne pas compter comme dépenses de la famille* (elles seront/sont remboursées par
+la mère → crédits attendus sur le commun) :
+• 20,00 € (à préciser)
+• 78,10 € train *CP* (Comboios de Portugal = chemins de fer portugais)
+→ total 98,10 €. À neutraliser (catégorie INCOME / REIMBURSEMENT ou virement
+interne, à confirmer avec Clément selon que le remboursement apparaît ou non).
+Direction exacte (crédit entrant à venir vs. déjà reçu) à confirmer avec Clément.
 
 ### Escola No Chiado — paiements hors ActivoBank
 
@@ -160,7 +182,8 @@ MOBILITY → BOLT | COOLTRA | PUBLIC TRANSPORT | TRANSPORT | UBER
 RENT → RENT
 VOITURE → ESSENCE | MECHANIC | VIA VERDE
 CASH → CASH
-LEISURE → (inférer sub-category)
+LAWYER → (sans sous-catégorie) [avocats, ex. Pares Advogados]
+LEISURE → (inférer sub-category) [inclut TECH — ex. abonnement Anthropic/Claude]
 FURNITURE → FURNITURE
 GIFT → GIFT
 INCOME → SALARY | TRANSFER | REIMBURSEMENT | OTHER

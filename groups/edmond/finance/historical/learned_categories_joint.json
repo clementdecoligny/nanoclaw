@@ -1,7 +1,7 @@
 {
   "TRF MB WAY P/ BRANCA MANUEL GASPAR": {
-    "category": "HOLIDAY",
-    "sub_category": "FOOD"
+    "category": "EMPREGADA",
+    "sub_category": "EMPREGADA"
   },
   "TRF DE MARIA DOLORES DAROCA GUERRERO": {
     "category": "INCOME",
@@ -113,7 +113,7 @@
   },
   "COMPRA 8551 WWW.PHARMEESTORE.COMVILA DO CONDE": {
     "category": "HEALTH",
-    "sub_category": "PHARMACY"
+    "sub_category": "COUCHES"
   },
   "COMPRA 8778 CTT - CORREIOS LISBOA": {
     "category": "MISC",
@@ -272,8 +272,8 @@
     "sub_category": "HOTELS"
   },
   "COMPRA 8551 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO": {
-    "category": "MISC",
-    "sub_category": "MISC"
+    "category": "LEISURE",
+    "sub_category": "TECH"
   },
   "CUSTO DE SERVICO INTERNACIONAL": {
     "category": "MISC",
@@ -1074,5 +1074,81 @@
   "TRF DE Agosto": {
     "category": "INCOME",
     "sub_category": "TRANSFER"
+  },
+  "COMPRA 8778 EST SERVICO ESTACION DE SERVICIO SO": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8551 PARAFARMACIA LOWE ZAHAR CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8778 FARMACIA JESUS MORILLO  CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 EST SERVICO BARBATE BARBATE ES": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "COMPRA 8778 BOLT.EUO2608091750 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 EASYJET 000KCR2SVJ LISBON": {
+    "category": "HOLIDAY",
+    "sub_category": "TRANSPORT"
+  },
+  "COMPRA 8551 PHARMACIE ROMEFO2182203 CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 PHIE VERNIER ANNECY FR  CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 PHARMACIE EUROPE ANNECY CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 PHARMACIE HOMEO 2921329 CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8778 Spotify P45D4D8E45 Stockholm SE": {
+    "category": "HOUSE",
+    "sub_category": "SPOTIFY"
+  },
+  "COMPRA 8551 BOLT.EUO2608191831 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8778 FARMACIA BRAAMCAMP LISB CONTACTLESS": {
+    "category": "HEALTH",
+    "sub_category": "PHARMACY"
+  },
+  "COMPRA 8551 BOLT.EUO2608201915 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 8551 PINGO DOCE FELGUEIRA FE CONTACTLESS": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "COMPRA 8778 EST SERVICO BP A11 IP 9 LOUSADA VIL": {
+    "category": "VOITURE",
+    "sub_category": "ESSENCE"
+  },
+  "TRF DE Tren vuelta maimuna hilaria": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "TRF DE Parfois lola / error vuelta a la comun": {
+    "category": "INCOME",
+    "sub_category": "REIMBURSEMENT"
+  },
+  "TRF P/ PARES ADVOGADOS SP S A": {
+    "category": "LAWYER",
+    "sub_category": ""
   }
 }

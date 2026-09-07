@@ -1,0 +1,30 @@
+{
+  "year": 2026,
+  "month": 8,
+  "entries": [
+    {
+      "date": "2026-08-27",
+      "who": "Clément",
+      "type": "SALARY",
+      "value": 4142.52
+    },
+    {
+      "date": "2026-08-27",
+      "who": "Clément",
+      "type": "FOOD",
+      "value": 132.6
+    },
+    {
+      "date": "2026-08-27",
+      "who": "Lola",
+      "type": "SALARY",
+      "value": 2230.94
+    },
+    {
+      "date": "2026-08-27",
+      "who": "Lola",
+      "type": "FOOD",
+      "value": 262.73
+    }
+  ]
+}

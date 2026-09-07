@@ -120,8 +120,8 @@
     "sub_category": "RESTAURANT"
   },
   "COMPRA 3883 CLAUDE.AI SUBSCRIPTION ANTHROPIC.CO": {
-    "category": "MISC",
-    "sub_category": "MISC"
+    "category": "LEISURE",
+    "sub_category": "TECH"
   },
   "COMPRA 3883 PATTY SMASH BURGERS LIS CONTACTLESS": {
     "category": "EAT OUT",
@@ -232,8 +232,8 @@
     "sub_category": "RESTAURANT"
   },
   "COMPRA 3883 ANTHROPIC CLAUDE SUB ANTHROPIC.COMC": {
-    "category": "MISC",
-    "sub_category": "MISC"
+    "category": "LEISURE",
+    "sub_category": "TECH"
   },
   "MEDIS-PAG SERVICOS 26177B1009334777": {
     "category": "HEALTH",
@@ -280,11 +280,19 @@
     "sub_category": "RESTAURANT"
   },
   "COMPRA 6059 ANTHROPIC CLAUDE SUB ANTHROPIC.COM": {
-    "category": "MISC",
-    "sub_category": "MISC"
+    "category": "LEISURE",
+    "sub_category": "TECH"
   },
   "COMPRA 6059 QUIOSQUE AMOREIRAS LISBOA": {
     "category": "EAT OUT",
     "sub_category": "QUIOSQUE"
+  },
+  "CUSTO DE SERVICO INTERNACIONAL": {
+    "category": "MISC",
+    "sub_category": "MISC"
+  },
+  "IMPOSTO DO SELO": {
+    "category": "MISC",
+    "sub_category": "MISC"
   }
 }

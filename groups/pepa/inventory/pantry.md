@@ -262,11 +262,11 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Tofu Biológico Seara 250g | 1 × 250g | Livraison 04/09 |
 | Ravioli Abobora Ceb.Caram.250g | 1 × 250g | Livraison 04/09 |
-| Gran Ravioli Trufas BR.250g | 1 × 250g | Livraison 04/09 |
+| Gran Ravioli Trufas BR.250g | 0 | ❌ Consommé Lun midi/soir 07/09 (enfants) |
 | Ravioli Bolonhesa Rana 250g | 1 × 250g | Livraison 04/09 |
 | Ravioli Frango Assado Alec.250g | 1 × 250g | Livraison 04/09 |
 | Peito de frango frais Campo Seleccao | ~772g | Livraison 04/09 — à cuire ou congeler aujourd'hui |
-| Steaks (petits) | 5 | Ajouté 05/09 |
+| Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Babybel light | 12 | Acheté local 06/07 — à vérifier |
 | Pão de Forma sem Côdea Bimbo | 0 | Probablement consommé |
 | Pão de Forma S/Codea CNT 450gr | 2 | Livraison 04/09 |
@@ -284,7 +284,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
-| Steaks (petits) | 5 | Ajouté 05/09 |
+| Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Panados de frango (escalopes panées poulet) | 1 tupperware | 1 utilisé déj 07/07 |
 | Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
 | Bolognese (maison) | 0 | ❌ Déj 15/07 |
@@ -310,7 +310,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Barritas de pescado (bâtonnets de poisson) | 1 boîte | Confirmé 27/06 |
+| Barritas de pescado (bâtonnets de poisson) | 0 | ❌ Consommé Lun soir 07/09 |
 | Gula del Norte | 0 | ❌ Utilisé dîner 08/07 |
 | Robalo Grande Fresco | 0 | ❌ Consommé (confirmé 27/06) |
 | Dourada Média Fresca | 0 | ❌ Consommée (confirmé 27/06) |
