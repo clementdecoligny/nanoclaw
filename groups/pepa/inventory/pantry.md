@@ -1,6 +1,6 @@
 # Pantry / Fridge / Freezer Inventory
 
-_Last updated: 2026-09-05 (livraison Continente 04/09 + achats locaux Clément)_
+_Last updated: 2026-09-08 (panier 08/09 — arrivé en avance sur le prévu jeu 10/09)_
 
 ---
 
@@ -112,9 +112,9 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Ferbar Lentilhas | 1 × 380g | |
 | Lentilhas Cozidas Origens Bio | 0 | ❌ Utilisée déj 08/07 |
 | Lentilhas Secas Continente | 1 + 1 × 500g | Livraison 16/04 + 06/05 |
-| Cistér Grão de Bico (pois chiches cuits, bocal) | 1 × 540g (400g égoutté) | |
+| Cistér Grão de Bico (pois chiches cuits, bocal) | 0 | ❌ Utilisé salade pois chiches midi 08/09 |
 | Continente Grão-de-Bico (pois chiches secs, sachet) | 1 sachet | Taille TBC |
-| Continente Grão de Bico cozido (pois chiches cuits) | 2 × 520g | 1 utilisé salade pique-nique 31/05 |
+| Continente Grão de Bico cozido (pois chiches cuits) | 0 | ❌ Utilisé salade pois chiches midi 08/09 |
 | Grão de Bico Cozido Continente | 2 | Livraison 16/04 |
 | Hacendado Alubia Blanca / Feijão Branco | 1 × 295g | |
 | Compá da Horta Feijão Branco (haricots blancs) | 1 × 468g | |
@@ -123,7 +123,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 
 | Item | Qté | Notes |
 |---|---|---|
-| El Peregrino Espárragos Blancos Extra | 1 × 330g | |
+| El Peregrino Espárragos Blancos Extra | 0 | ❌ Consommé dîner 08/09 |
 | Continente Ervilhas Cozidas (petits pois) | 1 × 420g | |
 | La Legua Guindilla Extra en Vinagre | 1 × 110g (net) | Piments basques au vinaigre |
 | Judía Verde Cortada en trozos medianos Extra Gourmet | 1 × 660g (360g égoutté) | Haricots verts |
@@ -204,18 +204,21 @@ _Mis à jour 2026-09-05 (livraison Continente 04/09 — items juillet à vérifi
 
 ### 🥦 Légumes (frigo — tiroir)
 
-_Mis à jour 2026-09-05 (inventaire complet Clément)_
+_Mis à jour 2026-09-08 (panier 08/09)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Tomates cerises | 300g | 05/09 |
-| Tomate (grosse) | 1 | 05/09 |
+| Tomates cerises | 0 | ❌ Consommées salade midi 08/09 |
+| Tomate (grosse) | 3 | 1 ancien 05/09 + 2 panier 08/09 |
+| Salade | ½ | Panier 08/09 — ½ consommée dîner 08/09 |
+| Courgette | 1 | Panier 08/09 |
+| Poivron vert | 1 | Panier 08/09 |
 | Coentros (coriandre fraîche) | 50g | 05/09 |
-| Carotte | 1 | 05/09 |
+| Carottes | 6 | 1 ancien 05/09 + 5 panier 08/09 |
 | Aubergines | 3 | 05/09 |
-| Fenouil | 400g | 05/09 |
-| Concombres | 2 | 05/09 |
-| Oignon rouge | 1 | 05/09 |
+| Fenouil | 0 | ❌ Consommé (confirmé 08/09) |
+| Concombres | 2 | 2 anciens — 1 utilisé salade midi + 1 panier 08/09 |
+| Oignon rouge | ~½ | 05/09 — ½ utilisé salade midi 08/09 |
 | Betterave cuite Bio 450g | 1 × 450g | Livraison 04/09 — sous vide |
 | Aipo CNT Emb. 500g (céleri) | 1 × 500g | Livraison 04/09 |
 | Pimento Assado em Tiras Bio | 2 × 250g | Livraison 04/09 |
@@ -224,8 +227,9 @@ _Mis à jour 2026-09-05 (inventaire complet Clément)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Avocats | 2 | 1 consommé dîner enfants 05/09 |
-| Ail | 3 têtes | Plan de travail |
+| Avocats | 0 | ❌ Consommés salade pois chiches midi 08/09 |
+| Pommes de terre | 4 | Panier 08/09 |
+| Ail | 4 têtes | 3 anciens + 1 panier 08/09 |
 | Gingembre frais | 0 | |
 
 ### 🍊 Fruits (corbeille + frigo)
@@ -234,7 +238,11 @@ _Mis à jour 2026-09-05 (inventaire complet Clément)_
 |---|---|---|
 | Clémentines/mandarines | 0 | Consommées |
 | Citrons verts (Lima) | ~200g | Livraison 04/09 (2-3 pièces) |
-| Bananes | 0 | Consommées |
+| Citron jaune | 1 | Panier 08/09 |
+| Bananes | 2 | Panier 08/09 |
+| Poires | 2 | Panier 08/09 — utiliser vite (soupe Branca aujourd'hui) |
+| Oranges | 2 | Panier 08/09 |
+| Prunes | 2 | Panier 08/09 |
 | Pommes | 0 | |
 
 ---
@@ -249,10 +257,10 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | 6 × 1kg | Livraison 04/09 |
-| Œufs Matinados M/L 1DZ | 2 douzaines (~24) | Livraison 04/09 |
+| Œufs Matinados M/L 1DZ | ~22 | 2 utilisés dîner 08/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~480g | Livraison 04/09 |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
-| Feta DOP Continente 150g | 4 × 150g | Livraison 04/09 |
+| Feta DOP Continente 150g | 3 × 150g | 1 utilisée salade pois chiches midi 08/09 |
 | Ricotta CNT 250g | 2 × 250g | Livraison 04/09 |
 | Ricotta Finetta Galbani | ? | Acheté 27/07 — à vérifier |
 | Requeijão Ovelha Seia Lagos | ? | Acheté 27/07 — à vérifier |
@@ -285,7 +293,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
-| Panados de frango (escalopes panées poulet) | 1 tupperware | 1 utilisé déj 07/07 |
+| Panados de frango (escalopes panées poulet) | 0 | ❌ Épuisés — recommandés (date livraison TBC) |
 | Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
 | Bolognese (maison) | 0 | ❌ Déj 15/07 |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
@@ -310,7 +318,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Barritas de pescado (bâtonnets de poisson) | 0 | ❌ Consommé Lun soir 07/09 |
+| Barritas de pescado (bâtonnets de poisson) | 1 boîte | Confirmé 08/09 — 1 poisson consommé Lun soir |
 | Gula del Norte | 0 | ❌ Utilisé dîner 08/07 |
 | Robalo Grande Fresco | 0 | ❌ Consommé (confirmé 27/06) |
 | Dourada Média Fresca | 0 | ❌ Consommée (confirmé 27/06) |

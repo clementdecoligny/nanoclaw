@@ -20,7 +20,9 @@
 | barritas-pescado | 2026-09-04 | Dîner vendredi (planifié) |
 | pad-thai-pollo | 2026-08-22 | Vacances Annecy |
 | tortilla-espanola | 2026-08-25 | Vacances Annecy (date approx) |
-| salade-pois-chiches-feta | 2026-08-25 | Vacances Annecy (date approx) |
+| minestrone-ete | 2026-09-01 | Semaine dernière — confirmé Clément 08/09 |
+| sopa-cenoura-pera-rocha | 2026-09-01 | Semaine dernière — confirmé Clément 08/09 |
+| salade-pois-chiches-feta | 2026-09-08 | Déj mardi 08/09 |
 | gulas-ajillo-pasta | 2026-07-08 | Dîner mercredi ❤️ |
 | dumplings | 2026-07-13 | Dîner lundi + restes purée + riz |
 | salade-betteraves-avocat-feta | 2026-07-14 | Dîner mardi, fait maison |

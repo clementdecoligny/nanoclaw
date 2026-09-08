@@ -1,7 +1,7 @@
 # Plan semaine — 4 → 11 septembre 2026
 
-_Mis à jour : 2026-09-03 (retour vacances — confirmation Clément)_
-_Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier jeudi 10 sept. Branca : jour TBD. Menus école septembre non disponibles._
+_Mis à jour : 2026-09-08_
+_Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arrivé mardi 08/09 (en avance). Branca : jour TBD. Menus école septembre non disponibles._
 
 ---
 
@@ -33,12 +33,12 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier jeu
 | Déjeuner | Soupe (congélo) + restes pollo chipotle + lentilles |
 | Dîner | Soupe (congélo) + arroz con alubias y tomate (conserves) |
 
-## Mardi 8 septembre
+## Mardi 8 septembre ✅
 
 | | |
 |---|---|
-| Déjeuner | Soupe (congélo) + riz + feijão verde (congélo) + restes poulet chipotle |
-| Dîner | Soupe (congélo) + robalo ao forno (ail, citron, herbes) + riz + alcachofas (congélo) |
+| Déjeuner | Soupe (congélo) + salade pois chiches feta (2 boîtes pois chiches + concombre + tomates cerises + avocats + feta) |
+| Dîner | Soupe (congélo) + bocal asperges + ½ salade + 2 œufs à la coque |
 
 ## Mercredi 9 septembre *(Lola bureau)*
 
@@ -65,9 +65,10 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier jeu
 
 ## Stock critique
 
-- Soupe : plusieurs tupperwares congélo ✅
-- Robalo fresco : livraison Continente ven 4 — cuire mar 8 au plus tard
+- Soupe : plusieurs tupperwares congélo ✅ + batch sopa cenoura e pêra rocha Branca 08/09
+- Robalo fresco : non reçu — pas dans le plan
 - Feijoada angolana : 1–2 tupperwares congélo — vérifier composition (canard/poulet ou porc ?)
-- Pâtes : épuisées — réappro Continente ven 4, disponibles à partir de sam
-- Panados de frango : épuisés — à refaire (batch Branca ?)
-- Branca : jour TBD — carte batch à générer une fois confirmé
+- Pâtes : réapprovisionnées ✅
+- Panados de frango : 0 — recommandés, date livraison TBC
+- Branca : jour TBD — batch soupe aujourd'hui 08/09 confirmé
+- Pollo chipotle (congélo) : pas de deadline urgente — décongeler quand utile

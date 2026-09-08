@@ -59,6 +59,8 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | salade-betteraves.md | Salade de Betteraves | veg / salad | low | full_dish | Vinaigrette moutardée. Variante feta. 3 jours frigo. |
 | salade-pois-chiches-feta.md | Salade de Pois Chiches Feta | legumes / salad | very low | full_dish | Assemblage méditerranéen 5 min. Variantes : avocat, thon. |
 | baba-ganoush-tomates-roties.md | Baba Ganoush aux Tomates Rôties | veg / dip | low | full_dish | Aubergine brûlée + tahini + tomates cerises rôties. 3–4 jours frigo. |
+| creme-fenouil-coco.md | Crème de Fenouil à la Leite de Coco | soup / veg | very low | ⭐⭐⭐ | Fenouil + PDT + céleri + leite de coco. Doux, veloutée, congèle bien. |
+| soupe-carotte-gingembre-coco.md | Soupe Carotte-Gingembre-Coco | soup / veg | very low | ⭐⭐⭐ | 5-6 carottes + gingembre frais + leite de coco. Congèle parfaitement. |
 
 ---
 
