@@ -1,17 +1,55 @@
 ---
 name: add-strava
-description: Add Strava as an MCP tool (activities, stats, routes, training zones) using the official Strava MCP endpoint. OAuth tokens are managed host-side and injected per request by a local proxy — no raw credentials reach the container, and tokens never go stale mid-session.
+description: Add Strava as an MCP tool (activities, heart-rate zone analysis, streams) served by a local MCP server over the Strava REST API. OAuth tokens are managed host-side and resolved per request — no raw credentials reach the container, and tokens never go stale mid-session.
 ---
 
-# Add Strava (Official MCP Endpoint)
+# Add Strava (Local MCP Server over the REST API)
 
-This skill wires the official Strava MCP endpoint (`https://mcp.strava.com/mcp`) into selected agent groups using HTTP transport. Unlike stdio-based MCP servers, this is a remote endpoint — the container connects directly to Strava's hosted MCP service.
+This skill wires Strava into selected agent groups as an MCP tool. The host runs a
+local MCP server (`src/strava-mcp.ts`, default port 10260) that speaks the MCP
+protocol to the container and satisfies each tool call from the Strava REST API
+(`https://www.strava.com/api/v3`).
 
-Authentication uses Strava's standard OAuth 2.0 flow. A one-time script obtains tokens, then the host-side `strava-token.ts` module auto-refreshes them before expiry.
+Authentication uses Strava's standard OAuth 2.0 flow. A one-time script obtains
+tokens, then the host-side `strava-token.ts` module auto-refreshes them before expiry.
 
-Containers do **not** hold a Strava token. `materializeContainerJson` rewrites any MCP server marked `Bearer {{strava}}` to point at a host-side proxy (`src/strava-proxy.ts`, default port 10260) and strips the Authorization header. The proxy resolves a fresh access token on **every request** and injects it before forwarding to `https://mcp.strava.com/mcp`.
+Containers do **not** hold a Strava token. `materializeContainerJson` rewrites any MCP
+server marked `Bearer {{strava}}` to point at the local server and strips the
+Authorization header. The server resolves a fresh access token on **every request**.
 
-**Why this pattern:** Strava access tokens expire after 6 hours, but `container.json` is only materialized at spawn time. Injecting the token there froze it for the container's lifetime — any session running longer than 6h started getting 401s, which `mcp.strava.com` reports by advertising its own OAuth flow. Users saw a "reconnect Strava" link built on Strava's `client_id` that could never work, and the only fix was restarting the container. Resolving per request removes the expiry window entirely, and upholds v2's invariant that raw credentials never reach a container.
+## Why not `mcp.strava.com`?
+
+Strava operates a hosted MCP endpoint, and this skill originally proxied to it. That
+path is **closed to self-registered API applications** and is not usable here:
+
+- `mcp.strava.com/mcp` trusts a dedicated issuer, `https://www.strava.com/mcp-issuer`,
+  separate from the normal Strava OAuth server that issues our tokens.
+- With **no** token it answers `401 unauthorized`; with a **valid** token from a
+  self-registered app it answers `403 {"error":"forbidden","detail":"application not
+  authorized"}`. The credential is fine — the *client* is refused.
+- The issuer exposes a `registration_endpoint`, but dynamic client registration is
+  rejected with `invalid_client_metadata`, so there is no self-service way in.
+- Strava's [MCP Connector help article](https://support.strava.com/en-us/articles/15401531-strava-mcp-connector)
+  describes access via official AI clients ("We're launching with Anthropic (Claude)"),
+  not via personal API applications.
+
+The same token works perfectly against `api.strava.com`, so the local server serves the
+identical tool surface from REST. **A Strava subscription is required for the hosted MCP
+but not for this path** — the REST API is available to any Strava API application.
+
+If Strava later opens the MCP endpoint to self-registered clients, this can revert to a
+pass-through proxy; nothing about the container config would need to change.
+
+## Tools provided
+
+| Tool | What it returns |
+|------|-----------------|
+| `list_activities` | Recent activities (`per_page`, or `days` window): distance, moving/elapsed time, elevation, avg/max HR |
+| `get_activity_performance` | Full analysis of one activity: **time + % in each HR zone**, aerobic decoupling, first/second-half HR drift, laps, description, calories, suffer score |
+| `get_activity_streams` | Raw streams (heartrate, time, distance, altitude, velocity_smooth, cadence), downsampled via `max_points` |
+
+Heart-rate zones default to `DEFAULT_HR_ZONES` in `src/strava-mcp.ts`. Adjust them there
+if the athlete's lactate-test zones differ.
 
 **Dependency:** This skill requires remote MCP type support (`McpServerRemoteConfig` in `src/container-config.ts`). If the types aren't present, apply the remote MCP types PR first.
 
@@ -92,7 +130,7 @@ ncl groups config add-mcp-server \
   --headers '{"Authorization": "Bearer {{strava}}"}'
 ```
 
-The `Bearer {{strava}}` marker tells `resolveRemoteMcpTokens` in `src/container-config.ts` to repoint this server at the host proxy and drop the header. The token itself is injected per request by the proxy, so it stays valid no matter how long the container runs.
+The `Bearer {{strava}}` marker tells `resolveRemoteMcpTokens` in `src/container-config.ts` to repoint this server at the local MCP server and drop the header. The URL above is only a marker — the container is rewritten to `http://host.docker.internal:10260/` and never reaches `mcp.strava.com`. The token is resolved per request host-side, so it stays valid no matter how long the container runs.
 
 ### Restart the group
 
@@ -106,7 +144,7 @@ ncl groups restart --id <group-id> --message "Strava MCP added — you now have 
 pnpm run build
 ```
 
-Restart the host so the new `strava-token.ts` module is loaded:
+Restart the host so the new `strava-mcp.ts` / `strava-token.ts` modules are loaded:
 
 ```bash
 source setup/lib/install-slug.sh
@@ -132,9 +170,25 @@ tail -100 logs/nanoclaw.log logs/nanoclaw.error.log | grep -iE 'strava|mcp'
 
 Common signals:
 - `Strava token refresh failed` → check that `data/strava-tokens.json` has valid `client_id`, `client_secret`, and `refresh_token`. Re-run the OAuth script if needed.
-- `Strava proxy port already in use` → another process owns the port; Strava MCP will not work until resolved. Note the OneCLI container publishes 10254–10255. Set `STRAVA_PROXY_PORT` in `.env` to a free port and restart.
-- **Agent reports Strava wants an OAuth reconnect** (a `strava.com/oauth/mcp/authorize?...client_id=...` link) → the upstream is rejecting the token. That link is Strava's own client_id and will never work; do not click it. Check for `Strava proxy has no access token` or a refresh failure in the error log.
-- `Strava MCP proxy started` missing from the log → `data/strava-tokens.json` doesn't exist, so the proxy was skipped. Run the OAuth script.
+- `Strava MCP port already in use` → another process owns the port; Strava MCP will not work until resolved. Note the OneCLI container publishes 10254–10255. Set `STRAVA_PROXY_PORT` in `.env` to a free port and restart.
+- `Strava MCP server started` missing from the log → `data/strava-tokens.json` doesn't exist, so the server was skipped. Run the OAuth script.
+- **Agent reports Strava wants an OAuth reconnect** (a `strava.com/oauth/mcp/authorize?...client_id=...` link) → do not click it; that link is built on a client_id that is not ours and can never work. It means something is still pointing at `mcp.strava.com` instead of the local server. Confirm the group's MCP url was rewritten to `host.docker.internal:10260`.
+- **`403 {"error":"forbidden","detail":"application not authorized"}`** → something is reaching `mcp.strava.com` directly. That endpoint is closed to self-registered apps (see "Why not mcp.strava.com?" above). It is *not* a token problem: verify with
+  `curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $TOKEN" https://www.strava.com/api/v3/athlete` — a `200` there means the token is healthy and only the MCP client registration is refused.
+
+### Verify the server directly
+
+```bash
+curl -s -X POST http://127.0.0.1:10260/ -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
+
+Expect the three tool names. Then exercise a real activity:
+
+```bash
+curl -s -X POST http://127.0.0.1:10260/ -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"list_activities","arguments":{"per_page":3}}}'
+```
 - `Bearer {{strava}}` appears literally in `container.json` → `resolveRemoteMcpTokens` didn't run. Ensure `pnpm run build` completed and the group was re-materialized (restart the group).
 - Connection timeout to `host.docker.internal:<port>` from the container → the proxy isn't bound, or bound to `127.0.0.1` instead of `0.0.0.0`. Verify with `ss -ltn | grep <port>`.
 - **HTTP 000 from inside a real agent container, but 200 from an ad-hoc `docker run`** → `NO_PROXY` is missing. OneCLI sets `HTTP_PROXY` in agent containers, which captures host-local requests too and tunnels them into a gateway with no route for them. Check with `docker exec <container> env | grep -i no_proxy`; it must list `host.docker.internal`. Set in `src/container-runner.ts` via `buildNoProxyValue`. Note that ad-hoc `docker run` containers have no `HTTP_PROXY`, so they will not reproduce this — always verify from a real agent container.

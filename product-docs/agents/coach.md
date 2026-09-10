@@ -140,3 +140,12 @@ preferences.
   reports the error rather than failing silently or retrying in a loop.
 - **Strava is the only source of truth for completed activities** — no upload means
   no session, as far as Coach is concerned.
+- **Strava data comes from the REST API, not Strava's hosted MCP** — Strava's hosted
+  MCP endpoint only accepts OAuth clients registered through its own issuer, which
+  ships with official AI-client connectors; a self-registered API application is
+  refused with "application not authorized" even when its token is valid and the
+  account holds a subscription. Coach therefore reads Strava through a local MCP
+  server backed by the REST API. Same tools, same data, and heart-rate zone
+  distribution, aerobic decoupling and HR drift are computed host-side. The practical
+  limit is that Coach only sees what the REST API exposes — activities, streams, laps
+  and descriptions — which covers everything the training analysis uses.

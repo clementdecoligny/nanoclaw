@@ -50,7 +50,7 @@ import './modules/index.js';
 import './cli/commands/index.js';
 import './cli/delivery-action.js';
 import { startCliServer, stopCliServer } from './cli/socket-server.js';
-import { startStravaProxy } from './strava-proxy.js';
+import { startStravaMcpServer } from './strava-mcp.js';
 import { hasStravaTokens } from './strava-token.js';
 
 import type { ChannelAdapter, ChannelSetup } from './channels/adapter.js';
@@ -162,12 +162,15 @@ async function main(): Promise<void> {
   // 7. Start the `ncl` CLI socket server (data/ncl.sock).
   await startCliServer();
 
-  // 8. Strava MCP proxy — only when Strava is actually configured. Injects a
-  // fresh access token per request so long-lived containers don't get stuck
-  // with an expired one.
+  // 8. Strava MCP server — only when Strava is actually configured. Serves the
+  // MCP protocol locally and answers each tool call from the Strava REST API,
+  // resolving a fresh access token per request. (It no longer proxies to
+  // mcp.strava.com: that endpoint only accepts OAuth clients registered with
+  // Strava's MCP issuer and answers ours with 403 "application not
+  // authorized". See src/strava-mcp.ts for the full story.)
   if (hasStravaTokens()) {
     try {
-      stravaProxyServer = await startStravaProxy(STRAVA_PROXY_PORT);
+      stravaProxyServer = await startStravaMcpServer(STRAVA_PROXY_PORT);
     } catch (err) {
       // Non-fatal: everything except Strava MCP still works. Call out port
       // collisions explicitly — a bound-but-foreign listener silently answers
@@ -175,12 +178,12 @@ async function main(): Promise<void> {
       const code = (err as NodeJS.ErrnoException)?.code;
       if (code === 'EADDRINUSE') {
         log.error(
-          'Strava proxy port already in use — another process owns it. ' +
+          'Strava MCP port already in use — another process owns it. ' +
             'Strava MCP will not work until this is resolved. Set STRAVA_PROXY_PORT to a free port.',
           { port: STRAVA_PROXY_PORT },
         );
       } else {
-        log.error('Failed to start Strava proxy', { err, port: STRAVA_PROXY_PORT });
+        log.error('Failed to start Strava MCP server', { err, port: STRAVA_PROXY_PORT });
       }
     }
   }
