@@ -56,7 +56,9 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | pate-a-crepes.md | Pâte à Crêpes | eggs / sweet-savory | low | full_dish | Pâte neutre ~25 crêpes. Repos 1h minimum. Congèle bien. |
 | tarte-feuilletee-tomate-mozza-tomates-sechees-amandes.md | Tarte a Italiana | veg / tart | medium | components | Croûte brisée maison + crème tomates séchées + mozza + roquette. Froide. Livre cookbook. |
 | fajitas-poulet.md | Fajitas au Poulet | chicken / Mexican | low | components | Build-your-own. Kid-approved. 20 min cuisson. |
+| wrap-jambon-fromage-poele.md | Wrap Jambon Fromage Poêlé | poultry / quick | very low | no | Poêlé façon quesadilla, pas froid. Kid-approved. |
 | salade-betteraves.md | Salade de Betteraves | veg / salad | low | full_dish | Vinaigrette moutardée. Variante feta. 3 jours frigo. |
+| salade-ricotta-betteraves-aipo-riz.md | Salade Ricotta Betteraves Aipo Riz | veg / salad | low | components | Assemblage frigo. Riz déjà cuit + betteraves + aipo cru + ricotta. |
 | salade-pois-chiches-feta.md | Salade de Pois Chiches Feta | legumes / salad | very low | full_dish | Assemblage méditerranéen 5 min. Variantes : avocat, thon. |
 | baba-ganoush-tomates-roties.md | Baba Ganoush aux Tomates Rôties | veg / dip | low | full_dish | Aubergine brûlée + tahini + tomates cerises rôties. 3–4 jours frigo. |
 | creme-fenouil-coco.md | Crème de Fenouil à la Leite de Coco | soup / veg | very low | ⭐⭐⭐ | Fenouil + PDT + céleri + leite de coco. Doux, veloutée, congèle bien. |

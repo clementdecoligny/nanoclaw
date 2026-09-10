@@ -74,3 +74,47 @@ Règle : pas de répétition entre déjeuner école et dîner maison (protéine 
 | Mer 29/07 | Creme de Legumes | Creme de Legumes c/Vitela | Empadão de Arroz e Vitela |
 | Jeu 30/07 | Grão c/ Nabiças | Grão c/ nabiças e Pescada | Douradinhos de Peixe c/ Arroz de Ervilhas |
 | Ven 31/07 | Creme de Espinafres | Creme de Espinafres c/Frango | Pernninhas de Frango Estufadas c/ Puré |
+
+---
+
+_Août : vacances Annecy, pas de menu école._
+
+## Semaine 7–11 septembre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 07/09 | Creme de ervilhas | Ervilhas e Vitela | Lasanha de Vitela |
+| Mar 08/09 | Juliana | Legumes c/ Pescada | Bacalhau à Gomes de Sá |
+| Mer 09/09 | Abóbora | Abóbora c/Frango | Frango no Forno c/ Massinha |
+| Jeu 10/09 | Legumes | Legumes e Abrótea | Pescada Cozida c/ legumes, batata e ovo |
+| Ven 11/09 | Agrião | Agrião c/ peru | Carne de Peru à Portuguesa |
+
+## Semaine 14–18 septembre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 14/09 | Cenoura e curgete | Cenoura e curgete c/ Peru | Bife de Peru grelhado c/ arroz de legumes |
+| Mar 15/09 | Creme de Legumes | Creme de Legumes c/Perca | Massinha de Peixe |
+| Mer 16/09 | Agrião | Agrião c/ Vitela | Penne Bolonhesa |
+| Jeu 17/09 | Abóbora | Abóbora c/ pescada | Salada Russa de Salmão e Ovo cozido |
+| Ven 18/09 | Creme de Bróculos | Creme de Bróculos c/Frango | Frango estufado c/ Puré de Batata e Cenoura |
+
+## Semaine 21–25 septembre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 21/09 | Creme de Alface | Creme de Alface e peru | Tirinhas de Peru c/ arroz de ervilhas |
+| Mar 22/09 | Feijão Verde | Feijão Verde e Perca | Esparguete à Bolonhesa (modifié à la main, remplace "Empadão de Perca" barré, confirmé Clément) |
+| Mer 23/09 | Juliana | Juliana e Vitela | Almôndegas c/ Esparguete |
+| Jeu 24/09 | Grão c/Nabiças | Grão c/Nabiças e Abrótea | Lombinhos de Pescada no forno |
+| Ven 25/09 | Espinafres | Espinafres e Frango | Frango Assado c/ Massa tricolor |
+
+## Semaine 28 septembre – 2 octobre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 28/09 | Cenoura | Cenoura c/ Peru | Strogonoff de Peru c/ Arroz |
+| Mar 29/09 | Feijão Verde | Feijão Verde c/Pescada | Bacalhau c/Natas |
+| Mer 30/09 | Creme de Legumes | Creme de Legumes c/Vitela | Macarrão Estufado c/ Vitela |
+| Jeu 01/10 | Grão c/ Nabiças | Grão c/ nabiças e Pescada | Douradinhos de Peixe c/ Arroz de Ervilhas |
+| Ven 02/10 | Creme de Espinafres | Creme de Espinafres c/Frango | Pernninhas de Frango Estufadas c/ Puré |

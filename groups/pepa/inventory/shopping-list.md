@@ -26,7 +26,7 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Leite UHT Meio Gordo Mimosa | ×4 L | - | Lola 18/08 — sempre meio gordo |
 | Sumo Compal manga | ×3 | - | Lola 18/08 |
 | Iogurte Grego Mythos Ligeiro Continente 1kg | ×6 | - | Lola 18/08 — max 6kg frigo |
-| Pimenta preta | ×1 | - | Lola 18/08 |
+| Pimenta preta | ×1 | ⚠️ URGENT | Lola 18/08 — signalé épuisé par Clément 10/09 |
 | Sal de mesa | ×1 | - | Lola 18/08 |
 | Vinagre | ×1 | - | Lola 18/08 |
 | Malagueta (piripiri) | ×1 | - | Lola 18/08 |

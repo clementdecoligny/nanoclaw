@@ -20,7 +20,7 @@ _Last updated: 2026-09-08 (panier 08/09 — arrivé en avance sur le prévu jeu 
 | Graines de lin Continente | 3 × 200g | Livraison 16/04 |
 | Mistura Sementes Pequeno Almoço Bio | 1 sachet | Livraison 16/04 |
 | Couscous | 500g | |
-| Riz basmati | 3 kg + 1 kg | Livraison Continente 16/04 (3kg) + 06/05 (2×500g = 1kg) |
+| Riz basmati | ~3.5 kg | 4kg — 500g batch cuit mer 09/09 |
 | Arroz agulha vaporizado | 1kg | |
 | Arroz Puff Expandido Seara | 150g + 2 paquets | 150g (06/05) + 2 paquets achetés local 04/09 |
 | Purée Mousseline | 1 sachet | 1 utilisé dîner enfants 02/06 |
@@ -92,7 +92,8 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Ponti Pomodori Secchi (tomates séchées à l'huile) | 3 × 280g | Livraison 04/09 |
 | Don Molino Carne de Pimiento Choricero | 1 × 140g | |
 | Tierra Palaciega Pisto con Tomate de los Palacios | 1 bocal | Taille TBC |
-| La Costeña Salsa de Chipotle | 1 × 220g | |
+| La Costeña Salsa de Chipotle | 2 × 220g | +1 × 220g ajouté 10/09 |
+| Mole Almendrado (sauce mexicaine aux amandes, bocal) | 1 × 235g | Ajouté 10/09 |
 
 ### Graines & fruits secs (livraison 16/04)
 
@@ -118,6 +119,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Grão de Bico Cozido Continente | 2 | Livraison 16/04 |
 | Hacendado Alubia Blanca / Feijão Branco | 1 × 295g | |
 | Compá da Horta Feijão Branco (haricots blancs) | 1 × 468g | |
+| La Costeña Frijoles Bayos Refritos (haricots pinto refrits, mexicain) | 1 × 580g | Ajouté 10/09 |
 
 ### Légumes
 
@@ -220,7 +222,8 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 | Concombres | 2 | 2 anciens — 1 utilisé salade midi + 1 panier 08/09 |
 | Oignon rouge | ~½ | 05/09 — ½ utilisé salade midi 08/09 |
 | Betterave cuite Bio 450g | 1 × 450g | Livraison 04/09 — sous vide |
-| Aipo CNT Emb. 500g (céleri) | 1 × 500g | Livraison 04/09 |
+| Betteraves cuites (unités) | 4 | Ajouté 10/09 |
+| Aipo CNT Emb. 500g (céleri) | 2 × 500g | 1 livraison 04/09 + 1 ajouté 10/09 |
 | Pimento Assado em Tiras Bio | 2 × 250g | Livraison 04/09 |
 
 ### 🧺 Légumes & fruits (hors frigo — plan de travail)
@@ -260,7 +263,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Œufs Matinados M/L 1DZ | ~22 | 2 utilisés dîner 08/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~480g | Livraison 04/09 |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
-| Feta DOP Continente 150g | 3 × 150g | 1 utilisée salade pois chiches midi 08/09 |
+| Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
 | Ricotta CNT 250g | 2 × 250g | Livraison 04/09 |
 | Ricotta Finetta Galbani | ? | Acheté 27/07 — à vérifier |
 | Requeijão Ovelha Seia Lagos | ? | Acheté 27/07 — à vérifier |
@@ -272,7 +275,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Ravioli Abobora Ceb.Caram.250g | 1 × 250g | Livraison 04/09 |
 | Gran Ravioli Trufas BR.250g | 0 | ❌ Consommé Lun midi/soir 07/09 (enfants) |
 | Ravioli Bolonhesa Rana 250g | 1 × 250g | Livraison 04/09 |
-| Ravioli Frango Assado Alec.250g | 1 × 250g | Livraison 04/09 |
+| Ravioli Frango Assado Alec.250g | 0 | ❌ Consommé dîner 09/09 |
 | Peito de frango frais Campo Seleccao | ~772g | Livraison 04/09 — à cuire ou congeler aujourd'hui |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Babybel light | 12 | Acheté local 06/07 — à vérifier |
@@ -293,7 +296,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
-| Panados de frango (escalopes panées poulet) | 0 | ❌ Épuisés — recommandés (date livraison TBC) |
+| Panados de frango (escalopes panées poulet) | 1.7 kg | Reçus 10/09 — congélateur |
 | Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
 | Bolognese (maison) | 0 | ❌ Déj 15/07 |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |

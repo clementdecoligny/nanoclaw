@@ -1,7 +1,7 @@
 # Plan semaine — 4 → 11 septembre 2026
 
 _Mis à jour : 2026-09-08_
-_Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arrivé mardi 08/09 (en avance). Branca : jour TBD. Menus école septembre non disponibles._
+_Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arrivé mardi 08/09 (en avance). Branca : jour TBD. Menus école 07/09 → 02/10 reçus et ajoutés à `reference/school-menus.md`._
 
 ---
 
@@ -45,14 +45,14 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arr
 | | |
 |---|---|
 | Déjeuner | Soupe (congélo) + alubias puerros miso |
-| Dîner | Soupe (congélo) + pasta + sauce tomates maison + parmesan |
+| Dîner | Soupe (congélo) + ravioli Frango Assado + riz cuit |
 
 ## Jeudi 10 septembre *(panier de légumes)*
 
 | | |
 |---|---|
-| Déjeuner | Soupe (congélo) + pasta pesto + parmesan |
-| Dîner | Soupe (congélo) + feijoada angolana (congélo) + riz ⚠️ vérifier composition avec Branca avant |
+| Déjeuner | Soupe (congélo) + pad thai poulet (congélo, reste fini) |
+| Dîner | Soupe (congélo) + salade ricotta betteraves aipo riz (frigo, recette écrite) |
 
 ## Vendredi 11 septembre
 
@@ -67,8 +67,8 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arr
 
 - Soupe : plusieurs tupperwares congélo ✅ + batch sopa cenoura e pêra rocha Branca 08/09
 - Robalo fresco : non reçu — pas dans le plan
-- Feijoada angolana : 1–2 tupperwares congélo — vérifier composition (canard/poulet ou porc ?)
+- Feijoada angolana : 1–2 tupperwares congélo — composition toujours non confirmée (canard/poulet ou porc ?), reportée à un autre soir après vérif Branca
 - Pâtes : réapprovisionnées ✅
-- Panados de frango : 0 — recommandés, date livraison TBC
+- Panados de frango : 1.7kg congélo ✅ (reçus 10/09)
 - Branca : jour TBD — batch soupe aujourd'hui 08/09 confirmé
 - Pollo chipotle (congélo) : pas de deadline urgente — décongeler quand utile

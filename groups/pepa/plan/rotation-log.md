@@ -7,8 +7,8 @@
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
 | salade-lentilles-seitan | 2026-09-11 | Déj vendredi (planifié) |
-| feijoada-angolana | 2026-09-10 | Dîner jeudi (planifié) |
-| pasta-pesto | 2026-09-10 | Déj jeudi (planifié) |
+| salade-ricotta-betteraves-aipo-riz | 2026-09-10 | Dîner jeudi (nouvelle recette, swap feijoada reportée) |
+| pad-thai-pollo | 2026-09-10 | Déj jeudi (congélo, reste fini) |
 | pasta-sauce-tomates | 2026-09-09 | Dîner mercredi (planifié) |
 | alubias-puerros-miso | 2026-09-09 | Déj mercredi (planifié) |
 | robalo-ao-forno | 2026-09-08 | Dîner mardi (planifié) |

@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z1 — 1h15 (reprise post-maladie)",
+  "date": "2026-09-10",
+  "description": "Piloter à la FC uniquement. Reprise après angine + 3 jours sans vélo — rester strictement en Z1, couper court si fatigue anormale.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 600,  "hrMin": 90, "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 3300, "hrMin": 90, "hrMax": 106, "note": "Z1 strict"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90, "hrMax": 106, "note": "Z1"}
+  ]
+}
