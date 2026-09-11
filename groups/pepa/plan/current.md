@@ -58,8 +58,8 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arr
 
 | | |
 |---|---|
-| Déjeuner | Soupe (congélo) + salade lentilles + seitan + tomates |
-| Dîner | Soupe (congélo) + à définir selon panier jeudi |
+| Déjeuner | Restes salade ricotta betteraves aipo riz + riz + panados de frango + salade verte (au lieu du plan initial) |
+| Dîner | Dehors (famille) |
 
 ---
 
