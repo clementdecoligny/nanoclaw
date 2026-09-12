@@ -210,7 +210,7 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Tomates cerises | 0 | ❌ Consommées salade midi 08/09 |
+| Tomates cerises | En stock | Correction Clément 12/09 — pas épuisées, stock encore bon |
 | Tomate (grosse) | 3 | 1 ancien 05/09 + 2 panier 08/09 |
 | Salade | ½ | Panier 08/09 — ½ consommée dîner 08/09 |
 | Courgette | 1 | Panier 08/09 |

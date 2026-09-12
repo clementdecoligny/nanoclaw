@@ -63,6 +63,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | baba-ganoush-tomates-roties.md | Baba Ganoush aux Tomates Rôties | veg / dip | low | full_dish | Aubergine brûlée + tahini + tomates cerises rôties. 3–4 jours frigo. |
 | creme-fenouil-coco.md | Crème de Fenouil à la Leite de Coco | soup / veg | very low | ⭐⭐⭐ | Fenouil + PDT + céleri + leite de coco. Doux, veloutée, congèle bien. |
 | soupe-carotte-gingembre-coco.md | Soupe Carotte-Gingembre-Coco | soup / veg | very low | ⭐⭐⭐ | 5-6 carottes + gingembre frais + leite de coco. Congèle parfaitement. |
+| pasta-ricotta-tomates-cerises.md | Pasta con Ricota y Tomates Cherry | pasta / veg | low | no | Assemblage rapide 15 min. 2 adultes. Ricota + tomates cherry sautées + ail + parmesano. |
 
 ---
 

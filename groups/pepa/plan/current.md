@@ -69,6 +69,52 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arr
 - Robalo fresco : non reçu — pas dans le plan
 - Feijoada angolana : 1–2 tupperwares congélo — composition toujours non confirmée (canard/poulet ou porc ?), reportée à un autre soir après vérif Branca
 - Pâtes : réapprovisionnées ✅
-- Panados de frango : 1.7kg congélo ✅ (reçus 10/09)
+- Panados de frango : ~1.2kg congélo (entamé déj ven 11/09)
 - Branca : jour TBD — batch soupe aujourd'hui 08/09 confirmé
 - Pollo chipotle (congélo) : pas de deadline urgente — décongeler quand utile
+
+---
+
+# Plan semaine — 12 → 15 septembre 2026
+
+_Mis à jour : 2026-09-12_
+_Contexte : panier reçu ven 11/09 (petite salade, roquette, 3 poivrons jaunes, 7 oignons, fruits). Proposé à Clément 11/09, pas d'objection reçue — plan adopté par défaut. Lola au bureau lundi 14/09._
+
+## Samedi 12 septembre *(batch)*
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + salade de betteraves (vinaigrette moutardée, feta) + salades vertes/roquette (2 salades + reste d'hier + panier, à finir) + pommes de terre sautées (restes d'hier, à finir) |
+| Dîner | Soupe (congélo) + garniture fajitas (peito de frango frais 772g + poivron vert + 1-2 poivrons jaunes + oignons, portion du jour) + riz basmati + courgette sautée — reste de la garniture au congélo |
+| Dessert | Figues (panier) + mascarpone (ouvert, à finir) |
+
+## Dimanche 13 septembre
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + ensalada lentejas pimientos feta caramelizada (batch) |
+| Dîner | Soupe (congélo) + tortilla española (pommes de terre + œufs) + baba ganoush aux tomates rôties (Clément, les 3 aubergines) |
+
+## Lundi 14 septembre *(Lola bureau)*
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + restes ensalada lentilles pimientos + pain (Clément) |
+| Dîner | Soupe (congélo) + frittata courgette parmesan + salade (panier) + pain |
+
+## Mardi 15 septembre
+
+| | |
+|---|---|
+| Déjeuner | Spaghetti ragù bolognese (nouvelle fournée) |
+| Dîner | Soupe (congélo) + mezze (hummus, œufs durs, pain, salade panier) |
+
+## Batch samedi 12/09
+
+- Soupe carotte-poire (nouvelle fournée, utilise poires panier) → stock congélo
+- Lentilles en grande quantité → base dimanche + lundi
+- Garniture fajitas (peito de frango frais + poivrons + oignons) → dîner ce soir + réserve congél (idée Clément)
+- Baba ganoush aux tomates rôties (Clément, les 3 aubergines) → dîner dimanche
+- Ensalada lentejas pimientos feta : garniture = poivron jaune restant + pimentos assados en bocal déjà ouverts (à finir)
+- Hummus (pois chiches déjà cuits + tahini) → mardi + en-cas
+- Ragù bolognese → mardi midi + réserve congél

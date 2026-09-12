@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z1/Z2 — 2h45",
+  "date": "2026-09-12",
+  "description": "Piloter à la FC uniquement. Palier 3 de la remontée progressive post-maladie, pas de sous-seuil (gardé pour lundi).",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 8100, "hrMin": 107, "hrMax": 128, "note": "Z2"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
