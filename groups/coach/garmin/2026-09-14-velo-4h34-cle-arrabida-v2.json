@@ -1,0 +1,16 @@
+{
+  "sport": "cycling",
+  "name": "Vélo 4h34 — Séance clé Arrábida, sous-seuil hors montée",
+  "date": "2026-09-14",
+  "description": "Boucle Arrábida (90,9 km / ~940 m D+). Setup course complet : vélo race + sacoches + poids race. Sous-seuil placé sur le plat avant et après la montée (~km 35-60), PAS pendant la montée. Sur la montée : Z2 cible mais Z3 accepté, plafond 145 bpm, rotation assis/danseuse sur tout segment >10 min, pas de bloc Z3 continu >10 min.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min échauffement"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 107, "hrMax": 128, "note": "Z2 — 20 min, plat avant le sous-seuil"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Sous-seuil 1 — plat avant la montée"},
+    {"type": "recovery", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — récup 10 min avant la montée"},
+    {"type": "interval", "durationSec": 8640, "hrMin": 107, "hrMax": 128, "note": "Z2 cible — inclut la montée Arrábida, Z3 accepté en montée, plafond 145, rotation assis/danseuse"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 132, "hrMax": 140, "note": "Sous-seuil 2 — plat de retour après la montée"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 107, "hrMax": 128, "note": "Z2 — 20 min, plat avant retour au calme"},
+    {"type": "cooldown", "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min retour au calme"}
+  ]
+}

@@ -212,15 +212,18 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 |---|---|---|
 | Tomates cerises | En stock | Correction Clément 12/09 — pas épuisées, stock encore bon |
 | Tomate (grosse) | 3 | 1 ancien 05/09 + 2 panier 08/09 |
-| Salade | ½ | Panier 08/09 — ½ consommée dîner 08/09 |
+| Salade | 1½ | ½ Panier 08/09 (reste) + 1 Panier 11/09 |
 | Courgette | 1 | Panier 08/09 |
 | Poivron vert | 1 | Panier 08/09 |
+| Poivron jaune | 3 | Panier 11/09 |
+| Roquette | 1 sac | Panier 11/09 |
 | Coentros (coriandre fraîche) | 50g | 05/09 |
 | Carottes | 6 | 1 ancien 05/09 + 5 panier 08/09 |
 | Aubergines | 3 | 05/09 |
 | Fenouil | 0 | ❌ Consommé (confirmé 08/09) |
 | Concombres | 2 | 2 anciens — 1 utilisé salade midi + 1 panier 08/09 |
 | Oignon rouge | ~½ | 05/09 — ½ utilisé salade midi 08/09 |
+| Oignon (jaune, panier) | 7 | Panier 11/09 |
 | Betterave cuite Bio 450g | 1 × 450g | Livraison 04/09 — sous vide |
 | Betteraves cuites (unités) | 4 | Ajouté 10/09 |
 | Aipo CNT Emb. 500g (céleri) | 2 × 500g | 1 livraison 04/09 + 1 ajouté 10/09 |
@@ -243,10 +246,11 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 | Citrons verts (Lima) | ~200g | Livraison 04/09 (2-3 pièces) |
 | Citron jaune | 1 | Panier 08/09 |
 | Bananes | 2 | Panier 08/09 |
-| Poires | 2 | Panier 08/09 — utiliser vite (soupe Branca aujourd'hui) |
+| Poires | 9 | 2 Panier 08/09 (utiliser vite, soupe Branca) + 7 Panier 11/09 |
 | Oranges | 2 | Panier 08/09 |
 | Prunes | 2 | Panier 08/09 |
-| Pommes | 0 | |
+| Pommes | 4 | Panier 11/09 |
+| Figues | 8 | Panier 11/09 |
 
 ---
 
@@ -259,7 +263,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Lait UHT M/G Mimosa 1L | 45 × 1L | 15 anciens (29/05) + 30 livraison 04/09 (5 packs × 6L) |
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | 6 × 1kg | Livraison 04/09 |
+| Greek yogurt — Mythos Ligiero Continente 1kg | ~3.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé |
 | Œufs Matinados M/L 1DZ | ~22 | 2 utilisés dîner 08/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~480g | Livraison 04/09 |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
@@ -276,7 +280,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Gran Ravioli Trufas BR.250g | 0 | ❌ Consommé Lun midi/soir 07/09 (enfants) |
 | Ravioli Bolonhesa Rana 250g | 1 × 250g | Livraison 04/09 |
 | Ravioli Frango Assado Alec.250g | 0 | ❌ Consommé dîner 09/09 |
-| Peito de frango frais Campo Seleccao | ~772g | Livraison 04/09 — à cuire ou congeler aujourd'hui |
+| Peito de frango frais Campo Seleccao | 0 | ❌ Livraison 04/09, jamais cuit — jeté 13/09 (9 jours au frigo, périmé) |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Babybel light | 12 | Acheté local 06/07 — à vérifier |
 | Pão de Forma sem Côdea Bimbo | 0 | Probablement consommé |

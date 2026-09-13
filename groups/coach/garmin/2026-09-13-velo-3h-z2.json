@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 3h — dernier palier avant séance clé",
+  "date": "2026-09-13",
+  "description": "Dernier palier de la remontée post-maladie avant la séance clé de lundi. Z2 strict, pas d'intensité ajoutée, pas de sous-seuil (gardé pour lundi). D+ selon terrain.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min échauffement"},
+    {"type": "interval", "durationSec": 8400, "hrMin": 107, "hrMax": 128, "note": "Z2 strict — D+ selon terrain, aucune intensité ajoutée"},
+    {"type": "cooldown", "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min retour au calme"}
+  ]
+}

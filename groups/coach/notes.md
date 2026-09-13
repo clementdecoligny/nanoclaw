@@ -167,6 +167,11 @@ Seulement 2 séances renfo loggées entre le 20 août et le 2 septembre (21/08, 
 
 **Clément a demandé explicitement (3/09) : "mets-moi la pression si je ne fais pas le renfo."** Consigne active — être direct et ferme (pas de jugement, mais pas d'excuse) dès qu'une séance renfo planifiée est sautée sans raison logistique valable (voyage, indisponibilité annoncée). Rattrapage en cours sur la semaine du 7-13 sept (3 séances vs 2 prévues).
 
+## Santé — Dos, douleur lombaire du 11/09 — cause reclassée (13 septembre 2026)
+
+La douleur lombaire légère signalée le 11/09 n'était **pas liée au déficit de renfo pendant la maladie** (hypothèse initiale). Cause réelle (Clément, 13/09) : **chaise de bureau inadaptée, non utilisée tout l'été** — le dos a réagi au retour après 2-3 jours d'usage. **Douleur résolue au 13/09**, plus aucun symptôme. Clément va changer de chaise.
+Ne pas re-attribuer un futur signal dos à un déficit renfo sans base — vérifier la cause avant de conclure. Le renfo (Session 3, gainage) reste non négociable indépendamment de cet épisode.
+
 ## Préférence — ton et mise en forme des messages (20 août 2026, réitéré 25 août 2026)
 
 Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient illisibles : trop de paragraphes de prose, pas assez de gras/rupture visuelle. La consigne du 20 août n'a pas suffi — être plus strict et plus concret :

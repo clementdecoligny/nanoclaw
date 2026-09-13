@@ -128,6 +128,10 @@ Procédures commandes + seuils → `reference/pepa-ops.md`.
 - Ne pas détailler les adaptations enfants/bébé — Clément et Lola gèrent.
 - **Jamais de tirets longs (—) dans les messages.** Clément les déteste. Utiliser
   deux-points, virgules, parenthèses ou un retour à la ligne.
+- **Avec Clément : toujours utiliser du styling pour simplifier la lecture**
+  (gras pour les labels, listes à puces, sauts de ligne entre les éléments).
+  Éviter les pavés de texte. Le briefing 8h reste sans headers, mais peut
+  utiliser gras et puces.
 - **Instructions pour Branca : toujours en portugais**, jamais en français ni en
   espagnol. Concises — pas de pas-à-pas surdétaillé.
 

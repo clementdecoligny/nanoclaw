@@ -80,26 +80,27 @@ _Contexte : Retour vendredi 4 sept au soir. Lola au bureau lun + mer. Panier arr
 _Mis à jour : 2026-09-12_
 _Contexte : panier reçu ven 11/09 (petite salade, roquette, 3 poivrons jaunes, 7 oignons, fruits). Proposé à Clément 11/09, pas d'objection reçue — plan adopté par défaut. Lola au bureau lundi 14/09._
 
-## Samedi 12 septembre *(batch)*
+## Samedi 12 septembre *(batch annulé)*
 
 | | |
 |---|---|
 | Déjeuner | Soupe (congélo) + salade de betteraves (vinaigrette moutardée, feta) + salades vertes/roquette (2 salades + reste d'hier + panier, à finir) + pommes de terre sautées (restes d'hier, à finir) |
-| Dîner | Soupe (congélo) + garniture fajitas (peito de frango frais 772g + poivron vert + 1-2 poivrons jaunes + oignons, portion du jour) + riz basmati + courgette sautée — reste de la garniture au congélo |
-| Dessert | Figues (panier) + mascarpone (ouvert, à finir) |
+| Dîner | Dehors (famille) — batch fajitas/lentilles/baba ganoush non fait |
 
 ## Dimanche 13 septembre
 
+_Batch samedi annulé (dîner dehors) → replanifié aujourd'hui. Poulet frais du 04/09 jeté (périmé, jamais cuit) — nouveau poulet acheté ce matin._
+
 | | |
 |---|---|
-| Déjeuner | Soupe (congélo) + ensalada lentejas pimientos feta caramelizada (batch) |
-| Dîner | Soupe (congélo) + tortilla española (pommes de terre + œufs) + baba ganoush aux tomates rôties (Clément, les 3 aubergines) |
+| Déjeuner | Soupe (congélo) + fajitas au poulet (poulet frais neuf + poivron vert + 3 poivrons jaunes + oignons panier) — voir `recipes/fajitas-poulet.md` |
+| Dîner | Soupe (congélo) + tortilla española (pommes de terre + œufs) + reste garniture fajitas (congélo) ou baba ganoush si fait (les 3 aubergines) |
 
 ## Lundi 14 septembre *(Lola bureau)*
 
 | | |
 |---|---|
-| Déjeuner | Soupe (congélo) + restes ensalada lentilles pimientos + pain (Clément) |
+| Déjeuner | Soupe (congélo) + reste garniture fajitas (congélo) + riz ou wraps + pain (Clément) |
 | Dîner | Soupe (congélo) + frittata courgette parmesan + salade (panier) + pain |
 
 ## Mardi 15 septembre
@@ -109,12 +110,11 @@ _Contexte : panier reçu ven 11/09 (petite salade, roquette, 3 poivrons jaunes, 
 | Déjeuner | Spaghetti ragù bolognese (nouvelle fournée) |
 | Dîner | Soupe (congélo) + mezze (hummus, œufs durs, pain, salade panier) |
 
-## Batch samedi 12/09
+## Batch dimanche 13/09 (reporté du samedi, annulé)
 
-- Soupe carotte-poire (nouvelle fournée, utilise poires panier) → stock congélo
-- Lentilles en grande quantité → base dimanche + lundi
-- Garniture fajitas (peito de frango frais + poivrons + oignons) → dîner ce soir + réserve congél (idée Clément)
-- Baba ganoush aux tomates rôties (Clément, les 3 aubergines) → dîner dimanche
-- Ensalada lentejas pimientos feta : garniture = poivron jaune restant + pimentos assados en bocal déjà ouverts (à finir)
+- Garniture fajitas (poulet frais neuf + poivron vert + 3 poivrons jaunes + oignons) → déj aujourd'hui + réserve congél (idée Clément)
+- Lentilles en grande quantité → reportées, pas de date fixée
+- Baba ganoush aux tomates rôties (les 3 aubergines) → si fait aujourd'hui, dîner dimanche ou lundi
+- Soupe carotte-poire (utilise poires panier, stock élargi à 9 poires) → stock congélo
 - Hummus (pois chiches déjà cuits + tahini) → mardi + en-cas
 - Ragù bolognese → mardi midi + réserve congél

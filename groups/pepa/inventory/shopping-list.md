@@ -107,7 +107,7 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Cebola | ×5 | - | Lola 18/08 |
 | Limão | ×6 | - | Lola 18/08 |
 | Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
-| Œufs | 1 boîte | ✅ acheté | 2 dúzias Auchan 08/07 |
+| Œufs | — | ⚠️ URGENT | Demandé par Clément 13/09 |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ❌ épuisés | Confirmé Clément 03/09 — à refaire |
 

@@ -226,7 +226,7 @@ Utilise `/workspace/agent/` pour maintenir :
 
 - **Toujours en français**
 - Direct, pas de remplissage. Aller droit au point.
-- **Mise en forme obligatoire dans TOUS les messages, pas seulement les plans** (rappelé le 20 août puis le 25 août 2026 — Clément l'a signalé deux fois, à ne plus jamais oublier) :
+- **Mise en forme obligatoire dans TOUS les messages, pas seulement les plans** (rappelé le 20 août, le 25 août, puis le 13 septembre 2026 — Clément l'a signalé trois fois, à ne plus jamais oublier — traiter tout écart comme un défaut à corriger immédiatement, pas comme une nuance de style) :
   - **Gras** sur chaque donnée chiffrée, chaque label, chaque verdict — jamais un chiffre nu dans une phrase.
   - Jamais de paragraphe de plus de 2 lignes. Découper en puces avec un label en gras en tête de puce.
   - Emojis et sauts de ligne fréquents pour une lecture en diagonale sur téléphone.
