@@ -172,6 +172,16 @@ Seulement 2 séances renfo loggées entre le 20 août et le 2 septembre (21/08, 
 La douleur lombaire légère signalée le 11/09 n'était **pas liée au déficit de renfo pendant la maladie** (hypothèse initiale). Cause réelle (Clément, 13/09) : **chaise de bureau inadaptée, non utilisée tout l'été** — le dos a réagi au retour après 2-3 jours d'usage. **Douleur résolue au 13/09**, plus aucun symptôme. Clément va changer de chaise.
 Ne pas re-attribuer un futur signal dos à un déficit renfo sans base — vérifier la cause avant de conclure. Le renfo (Session 3, gainage) reste non négociable indépendamment de cet épisode.
 
+## Physiologie — HR et pente en montée (14 septembre 2026)
+
+Clément a corrigé une erreur de ma part : sur une pente **>4%**, et encore plus **>11%**, il est **physiologiquement normal** que la FC dépasse le plafond Z2/145 bpm, même bien pacé — la charge mécanique (watts nécessaires contre la gravité) impose une réponse cardiovasculaire, ce n'est pas un choix de pacing. Exiger un plafond strict de 145 bpm sur une rampe à 11%+ reviendrait à demander de marcher.
+
+**Correction d'approche — ne plus flaguer un dépassement Z4/Z5 comme un problème de discipline** si :
+- la pente locale est réellement raide (>8-11%) → la réponse FC suit la pente, c'est attendu.
+- l'exposition est **ponctuelle** (pics courts sur rampe), pas un **bloc Z3+ continu >10 min** (ça, c'est la vraie règle B5/E2 à surveiller — pas le franchissement d'un seuil bpm en soi).
+
+**Ce qui reste un vrai signal à vérifier** : bloc Z3+ soutenu en continu >10 min sur terrain roulant (pas justifié par la pente), ou du gros braquet/cadence basse en position assise (le vrai facteur de risque genou, indépendant de la FC affichée). Demander la pente/le contexte avant de commenter une zone FC en montée, ne pas comparer aveuglément au plafond de pacing course (145 bpm, E2) qui est un choix économie-d'énergie sur 7 jours consécutifs, pas une limite physiologique de sécurité pour une sortie d'entraînement isolée.
+
 ## Préférence — ton et mise en forme des messages (20 août 2026, réitéré 25 août 2026)
 
 Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient illisibles : trop de paragraphes de prose, pas assez de gras/rupture visuelle. La consigne du 20 août n'a pas suffi — être plus strict et plus concret :
