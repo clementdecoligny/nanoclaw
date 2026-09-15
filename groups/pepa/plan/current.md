@@ -107,7 +107,7 @@ _Batch samedi annulé (dîner dehors) → replanifié aujourd'hui. Poulet frais 
 
 | | |
 |---|---|
-| Déjeuner | Spaghetti ragù bolognese (nouvelle fournée) |
+| Déjeuner | ✅ Bolognaise du congélo (stock non tracé trouvé) au lieu de la nouvelle fournée prévue |
 | Dîner | Soupe (congélo) + mezze (hummus, œufs durs, pain, salade panier) |
 
 ## Batch dimanche 13/09 (reporté du samedi, annulé)

@@ -27,6 +27,7 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Sumo Compal manga | ×3 | - | Lola 18/08 |
 | Iogurte Grego Mythos Ligeiro Continente 1kg | ×6 | - | Lola 18/08 — max 6kg frigo |
 | Pimenta preta | ×1 | ⚠️ URGENT | Lola 18/08 — signalé épuisé par Clément 10/09 |
+| Éponge (vaisselle) | ×1 | ⚠️ URGENT | Demandé par Clément 15/09 |
 | Sal de mesa | ×1 | - | Lola 18/08 |
 | Vinagre | ×1 | - | Lola 18/08 |
 | Malagueta (piripiri) | ×1 | - | Lola 18/08 |
