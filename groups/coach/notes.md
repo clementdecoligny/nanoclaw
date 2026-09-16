@@ -182,6 +182,16 @@ Clément a corrigé une erreur de ma part : sur une pente **>4%**, et encore plu
 
 **Ce qui reste un vrai signal à vérifier** : bloc Z3+ soutenu en continu >10 min sur terrain roulant (pas justifié par la pente), ou du gros braquet/cadence basse en position assise (le vrai facteur de risque genou, indépendant de la FC affichée). Demander la pente/le contexte avant de commenter une zone FC en montée, ne pas comparer aveuglément au plafond de pacing course (145 bpm, E2) qui est un choix économie-d'énergie sur 7 jours consécutifs, pas une limite physiologique de sécurité pour une sortie d'entraînement isolée.
 
+## Renfo S2 — suivi de charge (démarré 16 septembre 2026)
+
+Première charge loggée : **16/09** — one-leg deadlift **4 kg**, Bulgarian split squat et one-leg squat **au poids du corps** (pas encore chargés). Seule 1 séance restante avant la fin du cycle de progression (mercredi était la dernière charge normale avant l'affûtage complet). Si pas de progression sur les prochaines séances loggées → signaler comme prévu par la règle (3 semaines sans progression = finding).
+
+## Process — Renfo Session 1, toujours le protocole complet (16 septembre 2026)
+
+J'avais dérivé vers une version simplifiée de Session 1 dans les plans hebdo récents (pont fessier générique, wall sit, proprio pied basique) au lieu du **protocole genou classique réel** établi par le kiné post-Marseille–Naples 2025 (voir "Santé — Genoux" plus haut, 7 exercices : contralateral plank, SL bridge 45°, SL bridge 20°, side plank + leg raise, SL mid thigh pull isométrique, half-kneeling cable lift, single leg stance + knee drive). Clément l'a remarqué (16/09) en demandant où étaient passés ces exercices précis.
+
+**Toujours utiliser le protocole réel des 7 exercices (+ pieds + étirements) pour Session 1, jamais une version simplifiée inventée** — même en affûtage/semaine de course où le volume baisse : la persona précise explicitement que Session 1 reste "inchangé" à travers les phases. Si une version allégée est un jour justifiée, le dire explicitement et pourquoi, pas la substituer silencieusement.
+
 ## Préférence — ton et mise en forme des messages (20 août 2026, réitéré 25 août 2026)
 
 Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient illisibles : trop de paragraphes de prose, pas assez de gras/rupture visuelle. La consigne du 20 août n'a pas suffi — être plus strict et plus concret :

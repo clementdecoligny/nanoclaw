@@ -108,7 +108,7 @@ _Batch samedi annulé (dîner dehors) → replanifié aujourd'hui. Poulet frais 
 | | |
 |---|---|
 | Déjeuner | ✅ Bolognaise du congélo (stock non tracé trouvé) au lieu de la nouvelle fournée prévue |
-| Dîner | Soupe (congélo) + mezze (hummus, œufs durs, pain, salade panier) |
+| Dîner | ✅ Dehors (famille) — mezze prévu non fait, hummus jamais préparé |
 
 ## Batch dimanche 13/09 (reporté du samedi, annulé)
 
@@ -116,5 +116,6 @@ _Batch samedi annulé (dîner dehors) → replanifié aujourd'hui. Poulet frais 
 - Lentilles en grande quantité → reportées, pas de date fixée
 - Baba ganoush aux tomates rôties (les 3 aubergines) → si fait aujourd'hui, dîner dimanche ou lundi
 - Soupe carotte-poire (utilise poires panier, stock élargi à 9 poires) → stock congélo
-- Hummus (pois chiches déjà cuits + tahini) → mardi + en-cas
+- Hummus (pois chiches déjà cuits + tahini) → ❌ jamais préparé
 - Ragù bolognese → mardi midi + réserve congél
+- Baba ganoush aux tomates rôties → ❌ fini (fait dimanche soir, consommé avant mercredi)

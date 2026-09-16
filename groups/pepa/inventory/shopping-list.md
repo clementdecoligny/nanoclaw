@@ -28,6 +28,8 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Iogurte Grego Mythos Ligeiro Continente 1kg | ×6 | - | Lola 18/08 — max 6kg frigo |
 | Pimenta preta | ×1 | ⚠️ URGENT | Lola 18/08 — signalé épuisé par Clément 10/09 |
 | Éponge (vaisselle) | ×1 | ⚠️ URGENT | Demandé par Clément 15/09 |
+| Peito de frango (filets) | ×2 kg | - | Demandé par Clément 16/09 |
+| Yaourt protéiné | ×? | - | Demandé par Clément 16/09 — pas de marque/format précisé, choix libre |
 | Sal de mesa | ×1 | - | Lola 18/08 |
 | Vinagre | ×1 | - | Lola 18/08 |
 | Malagueta (piripiri) | ×1 | - | Lola 18/08 |
@@ -109,6 +111,7 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Limão | ×6 | - | Lola 18/08 |
 | Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
 | Œufs | — | ⚠️ URGENT | Demandé par Clément 13/09 |
+| Légumes pour soupe | — | - | Demandé par Clément 16/09 (local, pas Continente) |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ❌ épuisés | Confirmé Clément 03/09 — à refaire |
 

@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h30",
+  "date": "2026-09-16",
+  "description": "Piloter à la FC uniquement. Décompression après la séance clé de lundi, dernière charge normale avant le début de l'affûtage.",
+  "steps": [
+    {"type": "warmup",  "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min échauffement"},
+    {"type": "interval", "durationSec": 3600, "hrMin": 107, "hrMax": 128, "note": "Z2 — 1h"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 15 min retour au calme"}
+  ]
+}
