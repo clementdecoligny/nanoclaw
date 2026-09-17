@@ -110,6 +110,22 @@ _Batch samedi annulé (dîner dehors) → replanifié aujourd'hui. Poulet frais 
 | Déjeuner | ✅ Bolognaise du congélo (stock non tracé trouvé) au lieu de la nouvelle fournée prévue |
 | Dîner | ✅ Dehors (famille) — mezze prévu non fait, hummus jamais préparé |
 
+## Mercredi 16 septembre *(Lola bureau)*
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + salade lentilles + atum ao natural + feta + concombre + graines de courge |
+| Dîner | ✅ Restes salade lentilles + céleri (fini) + restes bolognaise — au lieu des panados de frango prévus (toujours au congélo, non entamés) |
+
+## Jeudi 17 septembre
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + ravioli Abóbora e Cebola Caramelizada (frigo, 250g) + salade (frigo) + parmesan |
+| Dîner | ✅ Soupe (congélo) + dernier poisson congélo (barritas de pescado) + riz + tomates cerises, au lieu des panados de frango |
+
+_Note : tortilla española prévue initialement au dîner, annulée : plus de pommes de terre ni d'œufs (signalé par Clément 17/09, pantry corrigé). Panados de frango (1.7kg) toujours au congélo, non entamés, reportés à un autre soir._
+
 ## Batch dimanche 13/09 (reporté du samedi, annulé)
 
 - Garniture fajitas (poulet frais neuf + poivron vert + 3 poivrons jaunes + oignons) → déj aujourd'hui + réserve congél (idée Clément)

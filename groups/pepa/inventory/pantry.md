@@ -226,7 +226,7 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 | Oignon (jaune, panier) | 7 | Panier 11/09 |
 | Betterave cuite Bio 450g | 1 × 450g | Livraison 04/09 — sous vide |
 | Betteraves cuites (unités) | 4 | Ajouté 10/09 |
-| Aipo CNT Emb. 500g (céleri) | 2 × 500g | 1 livraison 04/09 + 1 ajouté 10/09 |
+| Aipo CNT Emb. 500g (céleri) | 0 | ❌ Fini dîner 16/09 |
 | Pimento Assado em Tiras Bio | 2 × 250g | Livraison 04/09 |
 
 ### 🧺 Légumes & fruits (hors frigo — plan de travail)
@@ -234,7 +234,7 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 | Item | Quantité | Notes |
 |---|---|---|
 | Avocats | 0 | ❌ Consommés salade pois chiches midi 08/09 |
-| Pommes de terre | 4 | Panier 08/09 |
+| Pommes de terre | 0 | ❌ Signalé épuisé par Clément 17/09 (contredit stock théorique 4) |
 | Ail | 4 têtes | 3 anciens + 1 panier 08/09 |
 | Gingembre frais | 0 | |
 
@@ -264,7 +264,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | ~3.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé |
-| Œufs Matinados M/L 1DZ | ~22 | 2 utilisés dîner 08/09 |
+| Œufs Matinados M/L 1DZ | 0 | ❌ Signalé épuisé par Clément 17/09 (contredit stock théorique ~22) |
 | Fiambre Perna Ext CNT (jambon cuit) | ~480g | Livraison 04/09 |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
 | Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
@@ -298,11 +298,12 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
+| Peito de frango filets | 1,2 kg | Acheté et congelé par Clément 17/09 |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Panados de frango (escalopes panées poulet) | 1.7 kg | Reçus 10/09 — congélateur |
 | Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
-| Bolognese (maison) | 0 | ❌ Consommée déj 15/09 (congélo, stock non tracé depuis 15/07) |
+| Bolognese (maison) | 0 | ❌ Restes finis dîner 16/09 (congélo, stock non tracé depuis 15/07) |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
 | Pains de burger | 0 | ❌ Consommés |
 
@@ -325,7 +326,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Barritas de pescado (bâtonnets de poisson) | 1 boîte | Confirmé 08/09 — 1 poisson consommé Lun soir |
+| Barritas de pescado (bâtonnets de poisson) | 0 | ❌ Dernier reste, prévu dîner 17/09 (riz + tomates cerises) |
 | Gula del Norte | 0 | ❌ Utilisé dîner 08/07 |
 | Robalo Grande Fresco | 0 | ❌ Consommé (confirmé 27/06) |
 | Dourada Média Fresca | 0 | ❌ Consommée (confirmé 27/06) |

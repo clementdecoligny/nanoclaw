@@ -26,9 +26,9 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Leite UHT Meio Gordo Mimosa | ×4 L | - | Lola 18/08 — sempre meio gordo |
 | Sumo Compal manga | ×3 | - | Lola 18/08 |
 | Iogurte Grego Mythos Ligeiro Continente 1kg | ×6 | - | Lola 18/08 — max 6kg frigo |
-| Pimenta preta | ×1 | ⚠️ URGENT | Lola 18/08 — signalé épuisé par Clément 10/09 |
+| Pimenta preta | — | ✅ acheté | Signalé déjà acheté par Clément 17/09 — retiré |
 | Éponge (vaisselle) | ×1 | ⚠️ URGENT | Demandé par Clément 15/09 |
-| Peito de frango (filets) | ×2 kg | - | Demandé par Clément 16/09 |
+| Peito de frango (filets) | ×0,8 kg | - | Demandé ×2kg le 16/09, 1,2kg déjà acheté par Clément 17/09 : reste 0,8kg |
 | Yaourt protéiné | ×? | - | Demandé par Clément 16/09 — pas de marque/format précisé, choix libre |
 | Sal de mesa | ×1 | - | Lola 18/08 |
 | Vinagre | ×1 | - | Lola 18/08 |
@@ -49,7 +49,7 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Œufs frais | ×2 dúzias | ⚠️ URGENT | Épuisés 27/07 |
 | Baies de goji | ×1 | - | Ajouté 09/07 — Continente Bio (pid:6625958) |
 | Flocos de aveia integral grossos | ×4 | - | Ajouté 07/07 |
-| Yaourt grec Mythos Ligiero Continente 1kg | ×6 | ⚠️ URGENT | Épuisé 27/07 — max 6kg frigo |
+| Yaourt grec Mythos Ligiero Continente 1kg | — | - | Reste 2,5kg (17/09, Clément) — pas urgent, à recommander quand stock bas |
 | Pão de Forma sem Côdea Bimbo | ×2 | - | Ajouté 09/07 (pid:6246547) |
 | Tomate seco (bote) | ×3 | - | Mis à jour 09/07 |
 | Pimentos assados em azeite (bocal) | ×2 | - | Mis à jour 09/07 |
@@ -104,13 +104,13 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Pêra | ×5 | - | Lola 18/08 |
 | Laranja | ×5 | - | Lola 18/08 |
 | Uvas | ×1 cacho | - | Lola 18/08 |
-| Batatas | 1,5 kg | - | Lola 18/08 |
+| Batatas | 1,5 kg | ⚠️ URGENT | Signalé épuisé par Clément 17/09 |
 | Pimento verde | ×1 | - | Lola 18/08 |
 | Alho | ×2 cabeças | - | Lola 18/08 |
 | Cebola | ×5 | - | Lola 18/08 |
 | Limão | ×6 | - | Lola 18/08 |
 | Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
-| Œufs | — | ⚠️ URGENT | Demandé par Clément 13/09 |
+| Œufs | — | ⚠️ URGENT | Demandé par Clément 13/09, confirmé épuisé 17/09 |
 | Légumes pour soupe | — | - | Demandé par Clément 16/09 (local, pas Continente) |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ❌ épuisés | Confirmé Clément 03/09 — à refaire |

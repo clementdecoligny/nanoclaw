@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo 3h15 — Dress rehearsal, setup course complet",
+  "date": "2026-09-18",
+  "description": "Dernier test avant la course. Setup course complet (vélo race, sacoches, poids race) du début à la fin. D+ modéré ~300-500m, idéalement une montée de 10-15min pour tester la rotation assis/danseuse chargé. Rotation assis/danseuse sur toute montée >10 min.",
+  "steps": [
+    {"type": "warmup",  "durationSec": 1200,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min échauffement"},
+    {"type": "interval", "durationSec": 9300, "hrMin": 107, "hrMax": 128, "note": "Z2 — 2h35, D+ modéré, setup course complet"},
+    {"type": "cooldown", "durationSec": 1200,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — 20 min retour au calme"}
+  ]
+}
