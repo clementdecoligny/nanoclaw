@@ -206,18 +206,22 @@ _Mis à jour 2026-09-05 (livraison Continente 04/09 — items juillet à vérifi
 
 ### 🥦 Légumes (frigo — tiroir)
 
-_Mis à jour 2026-09-08 (panier 08/09)_
+_Mis à jour 2026-09-18 (panier 18/09)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Tomates cerises | En stock | Correction Clément 12/09 — pas épuisées, stock encore bon |
+| Tomates cerises | En stock + 250g panier 18/09 | Correction Clément 12/09 — pas épuisées, stock encore bon |
 | Tomate (grosse) | 3 | 1 ancien 05/09 + 2 panier 08/09 |
-| Salade | 1½ | ½ Panier 08/09 (reste) + 1 Panier 11/09 |
-| Courgette | 1 | Panier 08/09 |
+| Salade | 1 + 1 petite | ½ Panier 08/09 (reste) + 1 Panier 11/09 + 1 petite panier 18/09 ; ½ salade verte utilisée déj 18/09 |
+| Courgette | 1 | Panier 08/09 — insuffisant pour soupe légumes classique, 2 à acheter |
 | Poivron vert | 1 | Panier 08/09 |
 | Poivron jaune | 3 | Panier 11/09 |
+| Poivrons (panier 18/09) | 2 | Couleur non précisée |
 | Roquette | 1 sac | Panier 11/09 |
 | Coentros (coriandre fraîche) | 50g | 05/09 |
+| Persil frais | — | Panier 18/09 |
+| Couve (feuille verte à caldo verde) | — | Panier 18/09 — quantité non précisée |
+| Patates douces | 9 petites | Panier 18/09 |
 | Carottes | 6 | 1 ancien 05/09 + 5 panier 08/09 |
 | Aubergines | 3 | 05/09 |
 | Fenouil | 0 | ❌ Consommé (confirmé 08/09) |
@@ -250,7 +254,8 @@ _Mis à jour 2026-09-08 (panier 08/09)_
 | Oranges | 2 | Panier 08/09 |
 | Prunes | 2 | Panier 08/09 |
 | Pommes | 4 | Panier 11/09 |
-| Figues | 8 | Panier 11/09 |
+| Figues | 8 + 10 | Panier 11/09 + panier 18/09 |
+| Poires (nouvelles) | 13 | Panier 18/09 — s'ajoutent au stock existant, total élevé à écouler |
 
 ---
 
@@ -264,7 +269,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | ~3.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé |
-| Œufs Matinados M/L 1DZ | 0 | ❌ Signalé épuisé par Clément 17/09 (contredit stock théorique ~22) |
+| Œufs Matinados M/L 1DZ | 12 | Achetés par Clément 17/09 (après signalement stock épuisé) |
 | Fiambre Perna Ext CNT (jambon cuit) | ~480g | Livraison 04/09 |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
 | Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
@@ -301,7 +306,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango filets | 1,2 kg | Acheté et congelé par Clément 17/09 |
 | Carne picada (bœuf haché) | 1 boîte | Confirmé 27/06 |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
-| Panados de frango (escalopes panées poulet) | 1.7 kg | Reçus 10/09 — congélateur |
+| Panados de frango (escalopes panées poulet) | 1.7 kg | Reçus 10/09 — congélateur — entamés déj 18/09 (riz + demi salade verte), quantité exacte restante non précisée |
 | Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
 | Bolognese (maison) | 0 | ❌ Restes finis dîner 16/09 (congélo, stock non tracé depuis 15/07) |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |

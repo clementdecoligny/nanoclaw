@@ -110,7 +110,8 @@ _Last updated: 2026-08-18 (demande Lola — retour vacances ~30/08)_
 | Cebola | ×5 | - | Lola 18/08 |
 | Limão | ×6 | - | Lola 18/08 |
 | Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
-| Œufs | — | ⚠️ URGENT | Demandé par Clément 13/09, confirmé épuisé 17/09 |
+| Œufs | — | ✅ acheté | 12 achetés par Clément 17/09 — retiré |
+| Courgettes | ×2 | ⚠️ URGENT | Pour soupe légumes classique retenue ce soir (stock : 1, recette demande 3) |
 | Légumes pour soupe | — | - | Demandé par Clément 16/09 (local, pas Continente) |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
 | Panados de frango | — | ❌ épuisés | Confirmé Clément 03/09 — à refaire |
