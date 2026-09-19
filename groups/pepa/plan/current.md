@@ -126,6 +126,22 @@ _Batch samedi annulé (dîner dehors) → replanifié aujourd'hui. Poulet frais 
 
 _Note : tortilla española prévue initialement au dîner, annulée : plus de pommes de terre ni d'œufs (signalé par Clément 17/09, pantry corrigé). Panados de frango (1.7kg) toujours au congélo, non entamés, reportés à un autre soir._
 
+## Samedi 19 septembre
+
+| | |
+|---|---|
+| Déjeuner | Dehors (famille) — plan atum/patates douces non suivi |
+| Dîner | Poulet rôti entier découpé (acheté, déjà cuit) : enfants + baby-sitter. Adultes dehors. Panados de frango toujours au congélo, non entamés ce soir |
+
+_Correction 19/09 : poulet proposé aux deux repas par erreur ce matin, remplacé par atum au déjeuner (signalé par Clément) — puis déjeuner finalement pris dehors et dîner changé pour poulet rôti acheté._
+
+## Dimanche 20 septembre *(plage)*
+
+| | |
+|---|---|
+| Déjeuner | Salade de pâtes poulet carottes râpées (`recipes/salade-pates-poulet-carottes.md`) : restes poulet rôti + carottes râpées + concombre + poivron rouge + raisins secs |
+| Dîner | À définir |
+
 ## Batch dimanche 13/09 (reporté du samedi, annulé)
 
 - Garniture fajitas (poulet frais neuf + poivron vert + 3 poivrons jaunes + oignons) → déj aujourd'hui + réserve congél (idée Clément)

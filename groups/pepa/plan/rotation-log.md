@@ -6,6 +6,8 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| gateau-pommes-poires-chocolat | 2026-09-19 | Fait samedi après-midi, rescue fruits très mûrs |
+| salade-pates-poulet-carottes | 2026-09-20 | Déj dimanche (plage), restes poulet rôti |
 | salade-lentilles-seitan | 2026-09-11 | Déj vendredi (planifié) |
 | salade-ricotta-betteraves-aipo-riz | 2026-09-10 | Dîner jeudi (nouvelle recette, swap feijoada reportée) |
 | pad-thai-pollo | 2026-09-10 | Déj jeudi (congélo, reste fini) |

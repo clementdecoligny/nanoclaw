@@ -65,6 +65,8 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | soupe-carotte-gingembre-coco.md | Soupe Carotte-Gingembre-Coco | soup / veg | very low | ⭐⭐⭐ | 5-6 carottes + gingembre frais + leite de coco. Congèle parfaitement. |
 | pasta-ricotta-tomates-cerises.md | Pasta con Ricota y Tomates Cherry | pasta / veg | low | no | Assemblage rapide 15 min. 2 adultes. Ricota + tomates cherry sautées + ail + parmesano. |
 | caldo-verde-patate-douce.md | Caldo Verde (patate douce) | soup / veg | low | ⭐⭐⭐ | Couve + patate douce (panier), sans chouriço. Congèle bien. |
+| salade-pates-poulet-carottes.md | Salade de Pâtes Poulet Carottes Râpées | chicken / pasta salad | low | full_dish | Restes poulet rôti + carottes râpées + raisins secs. Pour la plage. |
+| gateau-pommes-poires-chocolat.md | Gâteau Moelleux Pommes-Poires-Chocolat | dessert | medium | full_dish | Rescue fruits très mûrs. Congèle en tranches. |
 
 ---
 

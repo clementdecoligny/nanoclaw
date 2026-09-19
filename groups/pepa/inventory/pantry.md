@@ -202,60 +202,32 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 
 ## Fruit Bowl & Légumes frais
 
-_Mis à jour 2026-09-05 (livraison Continente 04/09 — items juillet à vérifier, famille absente depuis fin juillet)_
-
-### 🥦 Légumes (frigo — tiroir)
-
-_Mis à jour 2026-09-18 (panier 18/09)_
+_Inventaire remplacé intégralement le 2026-09-19 (liste exacte donnée par Clément après achats) — tout ce qui précède est obsolète._
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Tomates cerises | En stock + 250g panier 18/09 | Correction Clément 12/09 — pas épuisées, stock encore bon |
-| Tomate (grosse) | 3 | 1 ancien 05/09 + 2 panier 08/09 |
-| Salade | 1 + 1 petite | ½ Panier 08/09 (reste) + 1 Panier 11/09 + 1 petite panier 18/09 ; ½ salade verte utilisée déj 18/09 |
-| Courgette | 1 | Panier 08/09 — insuffisant pour soupe légumes classique, 2 à acheter |
-| Poivron vert | 1 | Panier 08/09 |
-| Poivron jaune | 3 | Panier 11/09 |
-| Poivrons (panier 18/09) | 2 | Couleur non précisée |
-| Roquette | 1 sac | Panier 11/09 |
-| Coentros (coriandre fraîche) | 50g | 05/09 |
-| Persil frais | — | Panier 18/09 |
-| Couve (feuille verte à caldo verde) | — | Panier 18/09 — quantité non précisée |
-| Patates douces | 9 petites | Panier 18/09 |
-| Carottes | 6 | 1 ancien 05/09 + 5 panier 08/09 |
-| Aubergines | 3 | 05/09 |
-| Fenouil | 0 | ❌ Consommé (confirmé 08/09) |
-| Concombres | 2 | 2 anciens — 1 utilisé salade midi + 1 panier 08/09 |
-| Oignon rouge | ~½ | 05/09 — ½ utilisé salade midi 08/09 |
-| Oignon (jaune, panier) | 7 | Panier 11/09 |
-| Betterave cuite Bio 450g | 1 × 450g | Livraison 04/09 — sous vide |
-| Betteraves cuites (unités) | 4 | Ajouté 10/09 |
-| Aipo CNT Emb. 500g (céleri) | 0 | ❌ Fini dîner 16/09 |
-| Pimento Assado em Tiras Bio | 2 × 250g | Livraison 04/09 |
-
-### 🧺 Légumes & fruits (hors frigo — plan de travail)
-
-| Item | Quantité | Notes |
-|---|---|---|
-| Avocats | 0 | ❌ Consommés salade pois chiches midi 08/09 |
-| Pommes de terre | 0 | ❌ Signalé épuisé par Clément 17/09 (contredit stock théorique 4) |
-| Ail | 4 têtes | 3 anciens + 1 panier 08/09 |
-| Gingembre frais | 0 | |
-
-### 🍊 Fruits (corbeille + frigo)
-
-| Item | Quantité | Notes |
-|---|---|---|
-| Clémentines/mandarines | 0 | Consommées |
-| Citrons verts (Lima) | ~200g | Livraison 04/09 (2-3 pièces) |
-| Citron jaune | 1 | Panier 08/09 |
-| Bananes | 2 | Panier 08/09 |
-| Poires | 9 | 2 Panier 08/09 (utiliser vite, soupe Branca) + 7 Panier 11/09 |
-| Oranges | 2 | Panier 08/09 |
-| Prunes | 2 | Panier 08/09 |
-| Pommes | 4 | Panier 11/09 |
-| Figues | 8 + 10 | Panier 11/09 + panier 18/09 |
-| Poires (nouvelles) | 13 | Panier 18/09 — s'ajoutent au stock existant, total élevé à écouler |
+| Pommes normales | 10 | Très mûres — urgent |
+| Poires bio | 14 | Très mûres — urgent |
+| Patates douces bio (petites) | 10 | |
+| Patates douces normales | 7 | |
+| Pommes de terre normales | 6 | |
+| Oignons bio (petits) | 4 | |
+| Oignons normaux | 2 | |
+| Têtes d'ail | 2 | |
+| Oignons rouges | 2 | |
+| Concombre | 1 | |
+| Carottes | 2 | |
+| Bananes | 3 | Bien mûres |
+| Citrons verts | 2 | |
+| Chou (petit) | 1 | |
+| Navet (gros) | 1 | |
+| Poivrons rouges | 2 | |
+| Poivron jaune | 1 | |
+| Poivron vert | 1 | |
+| Tomates | 2 | |
+| Tomates cerises | 250 g | |
+| Figues | 300 g | |
+| Persil | 1 bouquet | |
 
 ---
 
