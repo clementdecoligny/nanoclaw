@@ -10,7 +10,6 @@ okf_version: "0.1"
 
 ## Map
 
-## Map
-
 - [Memory system definition](system/definition.md) - how this memory works, and yours to improve
+- [Préférences & techniques](preferences/index.md) - techniques de cuisine et préférences famille (ex: décongélation)
 
