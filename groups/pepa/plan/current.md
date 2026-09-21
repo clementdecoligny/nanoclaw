@@ -142,6 +142,21 @@ _Correction 19/09 : poulet proposé aux deux repas par erreur ce matin, remplac�
 | Déjeuner | Salade de pâtes poulet carottes râpées (`recipes/salade-pates-poulet-carottes.md`) : restes poulet rôti + carottes râpées + concombre + poivron rouge + raisins secs |
 | Dîner | À définir |
 
+## Lundi 21 septembre *(Lola exceptionnellement à la maison ce midi — pas mardi ni mercredi cette semaine)*
+
+_Début plan nutrition course Clément (João Barbosa strict) — voir `memory/family/nutrition-mode-clement.md`._
+
+| | |
+|---|---|
+| Déjeuner | Lola + Clément : soupe (congélo, sans pomme de terre) + reste salade de pâtes poulet carottes (plage) + fruit |
+| Dîner | Soupe (congélo, sans pomme de terre) + panados de frango (congélo, décongélation minute au micro-ondes) + patates douces rôties + salade (concombre, tomates, poivron) + fruit |
+
+_École lundi : Tirinhas de Peru + arroz de ervilhas → pas de répétition avec le dîner (panados de frango, pas de riz)._
+
+## Mardi 22 + Mercredi 23 septembre — Lola au bureau (exception cette semaine)
+
+_Confirmé par Clément 21/09 : Lola au bureau mardi et mercredi cette semaine (pas lundi comme d'habitude). Déjeuner Clément seul ces deux jours._
+
 ## Batch dimanche 13/09 (reporté du samedi, annulé)
 
 - Garniture fajitas (poulet frais neuf + poivron vert + 3 poivrons jaunes + oignons) → déj aujourd'hui + réserve congél (idée Clément)

@@ -241,7 +241,10 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | ~3.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé |
-| Œufs Matinados M/L 1DZ | 12 | Achetés par Clément 17/09 (après signalement stock épuisé) |
+| Œufs Matinados M/L 1DZ | 18 | 12 (17/09) + 6 achetés par Clément 21/09 |
+| Yaourts protéiques | 4 | Achetés par Clément 21/09 — 1/jour lun→ven prévu (mode nutrition course), mais 4 unités seulement pour 5 jours |
+| Jus d'orange | 1 bouteille | Acheté par Clément 21/09 |
+| Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~480g | Livraison 04/09 |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
 | Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
@@ -259,7 +262,7 @@ _Last updated: 2026-09-05 (livraison Continente 04/09)_
 | Ravioli Frango Assado Alec.250g | 0 | ❌ Consommé dîner 09/09 |
 | Peito de frango frais Campo Seleccao | 0 | ❌ Livraison 04/09, jamais cuit — jeté 13/09 (9 jours au frigo, périmé) |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
-| Babybel light | 12 | Acheté local 06/07 — à vérifier |
+| Babybel light | 24 | 12 (06/07, à vérifier) + 12 achetés par Clément 21/09 |
 | Pão de Forma sem Côdea Bimbo | 0 | Probablement consommé |
 | Pão de Forma S/Codea CNT 450gr | 2 | Livraison 04/09 |
 

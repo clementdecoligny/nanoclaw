@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h",
+  "date": "2026-09-21",
+  "description": "Semaine de course — activation, pas de charge. Piloter à la FC uniquement.",
+  "steps": [
+    {"type": "warmup",  "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 2400, "hrMin": 107, "hrMax": 128, "note": "Z2"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
