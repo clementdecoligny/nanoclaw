@@ -1,0 +1,18 @@
+{
+  "sport": "cycling",
+  "name": "Vélo — 3x5min montée + Z2 (test timer nutrition) — 1h30",
+  "date": "2026-09-22",
+  "description": "Dernier rappel neuromusculaire montée avant le départ. Plafond 145 bpm sur les efforts, rotation assis/danseuse. Bloc Z2 découpé en 20min + pause 15s pour tester le timer nutrition — cible FC réelle conservée, alerte hors-zone désactivée côté Garmin donc pas besoin de plage large.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 300,  "hrMin": 129, "hrMax": 145, "note": "Effort montée course, plafond 145"},
+    {"type": "recovery", "durationSec": 180,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 300,  "hrMin": 129, "hrMax": 145, "note": "Effort montée course, plafond 145"},
+    {"type": "recovery", "durationSec": 180,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 300,  "hrMin": 129, "hrMax": 145, "note": "Effort montée course, plafond 145"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 107, "hrMax": 128, "note": "Z2 — bloc test 20min"},
+    {"type": "recovery", "durationSec": 15,   "hrMin": 107, "hrMax": 128, "note": "Ping nutrition — boire/manger"},
+    {"type": "interval", "durationSec": 825,  "hrMin": 107, "hrMax": 128, "note": "Z2 — fin du bloc"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}

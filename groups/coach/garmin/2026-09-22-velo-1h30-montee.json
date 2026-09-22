@@ -1,0 +1,16 @@
+{
+  "sport": "cycling",
+  "name": "Vélo — 3x5min montée + Z2 — 1h30",
+  "date": "2026-09-22",
+  "description": "Dernier rappel neuromusculaire montée avant le départ. Plafond 145 bpm, rotation assis/danseuse sur les efforts.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 1200, "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 300,  "hrMin": 129, "hrMax": 145, "note": "Effort montée course, plafond 145"},
+    {"type": "recovery", "durationSec": 180,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 300,  "hrMin": 129, "hrMax": 145, "note": "Effort montée course, plafond 145"},
+    {"type": "recovery", "durationSec": 180,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 300,  "hrMin": 129, "hrMax": 145, "note": "Effort montée course, plafond 145"},
+    {"type": "interval", "durationSec": 2040, "hrMin": 107, "hrMax": 128, "note": "Z2"},
+    {"type": "cooldown", "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
