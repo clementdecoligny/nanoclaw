@@ -50,7 +50,7 @@ _Last updated: 2026-09-08 (panier 08/09 — arrivé en avance sur le prévu jeu 
 | Item | Quantité | Notes |
 |---|---|---|
 | Chips Lays Gourmet (grands paquets) | 4 | |
-| Tortillas de blé | 2 × 8 (16) | Ajouté 05/09 |
+| Tortillas de blé | 2 × 8 (16) | Anciens paquets (05/09) finis — remplacés par 2×8 achetés par Clément 23/09 |
 | Caju Torrado Sem Sal CNT 175g | 1 × 175g | Livraison 04/09 |
 | Pinhão Nacional Os Originais | 1 sachet | Livraison 04/09 (taille TBC) |
 | Sementes de Abobo Bio 200g | 1 × 200g | Livraison 04/09 — graines de courge |
