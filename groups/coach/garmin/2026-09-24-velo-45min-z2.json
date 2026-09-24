@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z1/Z2 — 45min",
+  "date": "2026-09-24",
+  "description": "Dernier vrai stimulus vélo avant le voyage. Piloter à la FC uniquement.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 1200, "hrMin": 107, "hrMax": 128, "note": "Z2"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}
