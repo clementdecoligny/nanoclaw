@@ -3,3 +3,4 @@
 2026-09-23 17:00 — Message envoyé à Clément (dernier jour du Plan de Base suave, 23/09) : collation 17h = 1 yaourt maigre ou Babybel light + 1 fruit. À partir de demain (24/09), passage au Plan Recarga (goûter pain + confiture + jus de fruit).
 2026-09-24 17:00 — Message envoyé à Clément : premier jour du Plan Recarga (24/09), goûter 17h = pain (~120g) + confiture/marmelade/miel + jus de fruit.
 2026-09-25 17:01 — Your organization has disabled Claude subscription access for Claude Code · Use an Anthropic API key instead, or ask your admin to enable access
+2026-09-26 17:00 — Message envoyé à Clément : dernier jour du Plan Recarga (26/09), goûter 17h = pain + confiture/miel + jus de fruit. Départ prévu demain matin (27/09) pour la course ; plus de rappel après cette date jusqu'au retour.

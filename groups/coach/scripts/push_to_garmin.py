@@ -62,9 +62,62 @@ ALLOWED_STEP_TYPES = {"warmup", "interval", "recovery", "cooldown"}
 REQUIRED_STEP_FIELDS = ("type", "durationSec", "hrMin", "hrMax")
 MAX_PLAUSIBLE_BPM = 230
 
+# Garmin rejects a workout with more than 50 top-level steps as "not
+# compatible" with the device (confirmed for Edge computers). A "repeat" step
+# — N iterations of a small block — counts as ONE top-level step regardless
+# of how many iterations it runs, so long unrolled sequences (e.g. a nutrition
+# reminder every 20 min for 10h) must use it instead of flat repetition.
+MAX_TOP_LEVEL_STEPS = 50
+
 
 class SessionError(ValueError):
     """Raised when the session JSON is malformed or physiologically implausible."""
+
+
+def _validate_step(step: dict[str, Any], label: str, *, allow_repeat: bool) -> None:
+    """Validate one step. A 'repeat' step (only one level deep) wraps a small
+    block of leaf steps run for N iterations — nested repeats are not supported."""
+    if not isinstance(step, dict):
+        raise SessionError(f"{label} is not an object")
+
+    if step.get("type") == "repeat":
+        if not allow_repeat:
+            raise SessionError(f"{label}: nested 'repeat' steps are not supported")
+        iterations = step.get("iterations")
+        if not isinstance(iterations, int) or iterations <= 0:
+            raise SessionError(f"{label} iterations must be a positive int, got {iterations!r}")
+        inner = step.get("steps")
+        if not isinstance(inner, list) or len(inner) == 0:
+            raise SessionError(f"{label} 'repeat' needs a non-empty 'steps' list")
+        for j, child in enumerate(inner):
+            _validate_step(child, f"{label}.steps[{j}]", allow_repeat=False)
+        return
+
+    for field in REQUIRED_STEP_FIELDS:
+        if field not in step:
+            raise SessionError(f"{label} missing required field {field!r}")
+
+    stype = step["type"]
+    if stype not in ALLOWED_STEP_TYPES:
+        raise SessionError(
+            f"{label} has unknown type {stype!r}; "
+            f"allowed: {sorted(ALLOWED_STEP_TYPES)} (or 'repeat')"
+        )
+
+    dur = step["durationSec"]
+    if not isinstance(dur, (int, float)) or dur <= 0:
+        raise SessionError(f"{label} durationSec must be > 0, got {dur!r}")
+
+    hr_min, hr_max = step["hrMin"], step["hrMax"]
+    for hlabel, v in (("hrMin", hr_min), ("hrMax", hr_max)):
+        if not isinstance(v, (int, float)):
+            raise SessionError(f"{label} {hlabel} must be a number, got {v!r}")
+        if v <= 0 or v > MAX_PLAUSIBLE_BPM:
+            raise SessionError(
+                f"{label} {hlabel}={v} out of plausible bpm range (1..{MAX_PLAUSIBLE_BPM})"
+            )
+    if hr_min >= hr_max:
+        raise SessionError(f"{label} inverted HR range: hrMin={hr_min} >= hrMax={hr_max}")
 
 
 # --------------------------------------------------------------------------- #
@@ -86,36 +139,15 @@ def validate_session(session: dict[str, Any]) -> None:
         # empty steps == rest day or nothing to push
         raise SessionError("no steps to push (rest day or empty session)")
 
+    if len(steps) > MAX_TOP_LEVEL_STEPS:
+        raise SessionError(
+            f"session has {len(steps)} top-level steps; Garmin devices reject "
+            f"workouts over {MAX_TOP_LEVEL_STEPS}. Wrap repetition in a "
+            f"'repeat' step (iterations + steps) instead of unrolling it"
+        )
+
     for i, step in enumerate(steps):
-        if not isinstance(step, dict):
-            raise SessionError(f"step {i} is not an object")
-        for field in REQUIRED_STEP_FIELDS:
-            if field not in step:
-                raise SessionError(f"step {i} missing required field {field!r}")
-
-        stype = step["type"]
-        if stype not in ALLOWED_STEP_TYPES:
-            raise SessionError(
-                f"step {i} has unknown type {stype!r}; "
-                f"allowed: {sorted(ALLOWED_STEP_TYPES)}"
-            )
-
-        dur = step["durationSec"]
-        if not isinstance(dur, (int, float)) or dur <= 0:
-            raise SessionError(f"step {i} durationSec must be > 0, got {dur!r}")
-
-        hr_min, hr_max = step["hrMin"], step["hrMax"]
-        for label, v in (("hrMin", hr_min), ("hrMax", hr_max)):
-            if not isinstance(v, (int, float)):
-                raise SessionError(f"step {i} {label} must be a number, got {v!r}")
-            if v <= 0 or v > MAX_PLAUSIBLE_BPM:
-                raise SessionError(
-                    f"step {i} {label}={v} out of plausible bpm range (1..{MAX_PLAUSIBLE_BPM})"
-                )
-        if hr_min >= hr_max:
-            raise SessionError(
-                f"step {i} inverted HR range: hrMin={hr_min} >= hrMax={hr_max}"
-            )
+        _validate_step(step, f"step {i}", allow_repeat=True)
 
     date = session.get("date")
     if not isinstance(date, str):
@@ -154,34 +186,80 @@ def _hr_target() -> dict[str, Any]:
     }
 
 
+_CONDITION_ITERATIONS = {
+    "conditionTypeId": 7,
+    "conditionTypeKey": "iterations",
+    "displayOrder": 7,
+    "displayable": False,
+}
+
+
+def _build_leaf_step(step: dict[str, Any], order: int) -> dict[str, Any]:
+    type_id, type_key, disp = _STEP_TYPE_META[step["type"]]
+    return {
+        "type": "ExecutableStepDTO",
+        "stepOrder": order,
+        "stepType": {
+            "stepTypeId": type_id,
+            "stepTypeKey": type_key,
+            "displayOrder": disp,
+        },
+        "endCondition": dict(_CONDITION_TIME),
+        "endConditionValue": float(step["durationSec"]),
+        "targetType": _hr_target(),
+        # bpm min/max — extra fields on the step (ExecutableStep allows extra)
+        "targetValueOne": float(step["hrMin"]),
+        "targetValueTwo": float(step["hrMax"]),
+        "description": step.get("note"),
+    }
+
+
 def build_workout_steps(session: dict[str, Any]) -> list[dict[str, Any]]:
-    """Map validated session steps to Garmin executable-step dicts, each with a
-    custom HR bpm-range target. Order preserved; stepOrder is 1-based.
+    """Map validated session steps to Garmin step dicts (leaf steps and/or
+    repeat groups), each leaf carrying a custom HR bpm-range target. Order
+    preserved; stepOrder is 1-based and shared across the whole tree.
 
     Assumes `session` is already validated (callers validate at the entry
     point). Kept side-effect-free so it can be reused without re-validating."""
     out: list[dict[str, Any]] = []
-    for idx, step in enumerate(session["steps"], start=1):
-        type_id, type_key, disp = _STEP_TYPE_META[step["type"]]
-        out.append(
-            {
-                "type": "ExecutableStepDTO",
-                "stepOrder": idx,
+    order = 0
+
+    def build(step: dict[str, Any]) -> dict[str, Any]:
+        nonlocal order
+        order += 1
+        this_order = order
+        if step["type"] == "repeat":
+            children = [build(child) for child in step["steps"]]
+            return {
+                "type": "RepeatGroupDTO",
+                "stepOrder": this_order,
                 "stepType": {
-                    "stepTypeId": type_id,
-                    "stepTypeKey": type_key,
-                    "displayOrder": disp,
+                    "stepTypeId": 6,
+                    "stepTypeKey": "repeat",
+                    "displayOrder": 6,
                 },
-                "endCondition": dict(_CONDITION_TIME),
-                "endConditionValue": float(step["durationSec"]),
-                "targetType": _hr_target(),
-                # bpm min/max — extra fields on the step (ExecutableStep allows extra)
-                "targetValueOne": float(step["hrMin"]),
-                "targetValueTwo": float(step["hrMax"]),
-                "description": step.get("note"),
+                "numberOfIterations": step["iterations"],
+                "workoutSteps": children,
+                "endCondition": dict(_CONDITION_ITERATIONS),
+                "endConditionValue": float(step["iterations"]),
             }
-        )
+        return _build_leaf_step(step, this_order)
+
+    for step in session["steps"]:
+        out.append(build(step))
     return out
+
+
+def _total_duration_secs(steps: list[dict[str, Any]]) -> int:
+    """Recursively sum session-shaped (not yet built) steps' durations,
+    multiplying repeat blocks by their iteration count."""
+    total = 0
+    for step in steps:
+        if step["type"] == "repeat":
+            total += step["iterations"] * _total_duration_secs(step["steps"])
+        else:
+            total += step["durationSec"]
+    return total
 
 
 def build_cycling_workout(session: dict[str, Any]):
@@ -194,12 +272,17 @@ def build_cycling_workout(session: dict[str, Any]):
         CyclingWorkout,
         WorkoutSegment,
         ExecutableStep,
+        RepeatGroup,
     )
 
     validate_session(session)
     raw_steps = build_workout_steps(session)
-    steps = [ExecutableStep(**s) for s in raw_steps]
-    total = int(sum(s["endConditionValue"] for s in raw_steps))
+
+    def to_model(s: dict[str, Any]):
+        return RepeatGroup(**s) if s["type"] == "RepeatGroupDTO" else ExecutableStep(**s)
+
+    steps = [to_model(s) for s in raw_steps]
+    total = _total_duration_secs(session["steps"])
     return CyclingWorkout(
         workoutName=session.get("name", "Séance vélo"),
         estimatedDurationInSecs=total,

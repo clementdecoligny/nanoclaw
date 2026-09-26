@@ -1,0 +1,28 @@
+{
+  "sport": "cycling",
+  "name": "Rappel repas/hydratation - Jour 3",
+  "date": "2026-09-29",
+  "description": "Rappel automatique toutes les 20 min pour boire/manger. FC libre dans la plage, piloter selon plafond du jour.",
+  "steps": [
+    {
+      "type": "repeat",
+      "iterations": 30,
+      "steps": [
+        {
+          "type": "interval",
+          "durationSec": 1200,
+          "hrMin": 70,
+          "hrMax": 120,
+          "note": "Rouler libre, FC 70-120"
+        },
+        {
+          "type": "recovery",
+          "durationSec": 15,
+          "hrMin": 70,
+          "hrMax": 106,
+          "note": "ALERTE : bois et mange maintenant"
+        }
+      ]
+    }
+  ]
+}

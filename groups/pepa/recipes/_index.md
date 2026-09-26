@@ -22,6 +22,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | pure-hinojo-eneldo-salmon-slaw.md | Puré hinojo eneldo salmón slaw | fish | low | ⭐⭐ | |
 | salade-riz-thon-oeufs-durs.md | Salade de riz thon œufs durs | fish / salad | very low | ⭐⭐ | Good make-ahead lunch. |
 | salade-pates-thon-mayo.md | Salade de pâtes thon mayo maison | fish / pasta salad | very low | ⭐⭐ | Farfalle + thon naturel + mayo maison. Estivale, un peu riche — pas trop souvent. ❤️ Clément |
+| penne-al-tonno.md | Penne al Tonno (recette originale italienne) | fish / pasta | low | no | Sauce tomate ail persil, pas de feta ni olives. Demandé par Clément 26/09. |
 | ensalada-lentejas-pimientos-feta-caramelizada.md | Ensalada lentejas pimientos feta caramelizada | lentils / veg | low | ⭐⭐⭐ | Lentils + sauce ahead. Feta at moment. |
 | alubias-puerros-miso.md | Alubias puerros miso | legumes / veg | very low | ⭐⭐ | |
 | arroz-alubias-tomate.md | Arroz con alubias y tomate | legumes / rice | low | ⭐⭐ | |

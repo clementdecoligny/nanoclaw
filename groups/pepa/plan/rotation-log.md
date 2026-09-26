@@ -6,6 +6,7 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| penne-al-tonno | 2026-09-26 | Clément seul à Marseille, pas un repas maison — ne compte pas pour la rotation famille |
 | panados-de-frango | 2026-09-21 | Dîner lundi (planifié), congélo depuis 1.7kg non entamés |
 | gateau-pommes-poires-chocolat | 2026-09-19 | Fait samedi après-midi, rescue fruits très mûrs |
 | salade-pates-poulet-carottes | 2026-09-20 | Déj dimanche (plage), restes poulet rôti |
