@@ -1,0 +1,1 @@
+2026-09-27 00:06 — Cleanup done: cancelled the six recurring João Barbosa nutrition reminder tasks (joao-petit-dej, joao-collation-matin, joao-dejeuner, joao-collation-aprem, joao-diner, joao-avant-dodo). Only this cleanup task itself remains listed, as expected (it's a one-shot that's now completing). No message sent, per instructions.
