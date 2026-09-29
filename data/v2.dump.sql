@@ -111,7 +111,7 @@ CREATE TABLE sessions (
 INSERT INTO sessions VALUES('sess-1777719703226-kwys2a','ag-1777719573229-tnlcij','mg-1777718761518-kgb1yu',NULL,NULL,'active','running','2026-06-06T17:41:08.096Z','2026-05-02T11:01:43.226Z');
 INSERT INTO sessions VALUES('sess-1777727966855-m1yevu','ag-1777719573236-pywwsu','mg-1777719573249-8cqrcc',NULL,NULL,'active','stopped','2026-09-28T08:30:19.874Z','2026-05-02T13:19:26.855Z');
 INSERT INTO sessions VALUES('sess-1777727969808-h4w4hv','ag-1777719573240-ynm5lh','mg-1777719573250-r1ny4z',NULL,NULL,'active','stopped','2026-09-28T05:21:42.861Z','2026-05-02T13:19:29.808Z');
-INSERT INTO sessions VALUES('sess-1777917826702-flz8jg','ag-1777719573229-tnlcij','mg-1777719573251-oiqgzh',NULL,NULL,'active','stopped','2026-09-28T07:00:07.706Z','2026-05-04T18:03:46.702Z');
+INSERT INTO sessions VALUES('sess-1777917826702-flz8jg','ag-1777719573229-tnlcij','mg-1777719573251-oiqgzh',NULL,NULL,'active','stopped','2026-09-29T07:00:10.574Z','2026-05-04T18:03:46.702Z');
 INSERT INTO sessions VALUES('sess-1778063434775-8u3zq1','ag-1777719573236-pywwsu','mg-1778063434755-qrm1gk',NULL,NULL,'active','stopped','2026-05-14T07:02:29.388Z','2026-05-06T10:30:34.775Z');
 INSERT INTO sessions VALUES('sess-1778063439242-ipppx1','ag-1777719573240-ynm5lh','mg-1778063439239-sl59lc',NULL,NULL,'active','stopped','2026-09-27T17:00:45.668Z','2026-05-06T10:30:39.242Z');
 INSERT INTO sessions VALUES('sess-1778063443710-u8l0rb','ag-1777719573229-tnlcij','mg-1778063443707-dl7upj',NULL,NULL,'active','stopped','2026-05-14T08:32:47.136Z','2026-05-06T10:30:43.710Z');
@@ -130,7 +130,7 @@ INSERT INTO sessions VALUES('sess-1790002680859-2b5hyl','ag-1777719573229-tnlcij
 INSERT INTO sessions VALUES('sess-1790002689929-9it8jt','ag-1777719573229-tnlcij',NULL,'system:tasks:joao-avant-dodo-79d2',NULL,'closed','stopped','2026-09-26T21:30:54.061Z','2026-09-21T14:58:09.929Z');
 INSERT INTO sessions VALUES('sess-1790002696861-yv65b5','ag-1777719573229-tnlcij',NULL,'system:tasks:joao-ceia-samedi-a903',NULL,'closed','stopped','2026-09-26T22:00:19.628Z','2026-09-21T14:58:16.861Z');
 INSERT INTO sessions VALUES('sess-1790002703572-ylc673','ag-1777719573229-tnlcij',NULL,'system:tasks:joao-cleanup-a228',NULL,'closed','stopped','2026-09-26T23:05:45.784Z','2026-09-21T14:58:23.572Z');
-INSERT INTO sessions VALUES('sess-1790573100078-1d5nhc','ag-1777719573240-ynm5lh',NULL,'system:tasks:rappel-paie-branca-c3cc',NULL,'active','stopped','2026-09-28T08:00:55.272Z','2026-09-28T05:25:00.078Z');
+INSERT INTO sessions VALUES('sess-1790573100078-1d5nhc','ag-1777719573240-ynm5lh',NULL,'system:tasks:rappel-paie-branca-c3cc',NULL,'active','stopped','2026-09-29T08:00:03.687Z','2026-09-28T05:25:00.078Z');
 CREATE TABLE pending_questions (
         question_id    TEXT PRIMARY KEY,
         session_id     TEXT NOT NULL REFERENCES sessions(id),
