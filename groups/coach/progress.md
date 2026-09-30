@@ -164,4 +164,5 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 ## Log genou — Marseille–Naples 2026 (course, 27 sept–3 oct)
 
 - **28 sept (réveil, matin du Jour 2)** : **0/10** douleur, genou droit très légèrement plus chaud que le gauche au toucher sur la rotule. Pas de trigger G1 (seuil = douleur ≥3/10, pas la chaleur seule). Même pattern que le 30-31 août (chaleur asymétrique sans douleur, résorbée en discipline Z2). Contexte : lendemain du Jour 1 de course — premier vrai test de charge cumulée sur genou depuis l'affûtage. À surveiller sur les prochains réveils, surtout si la chaleur s'accentue ou si une douleur apparaît.
+- **30 sept (réveil, matin du Jour 4)** : **0/10** douleur, toujours genou droit un peu plus chaud que le gauche au toucher. Pas de trigger G1. 3e réveil consécutif avec le même pattern (chaleur asymétrique, zéro douleur) — stable, pas d'aggravation malgré le J2 "remontada" (233 km, Z4+Z5 11,9%) qui aurait pu faire basculer. Bon signe de tolérance.
 
