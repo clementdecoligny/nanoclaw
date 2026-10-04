@@ -18,7 +18,7 @@ _Dernière mise à jour : 5 juillet 2026_
 | Mai 24 2026 | Paris–Marseille "Almost Finisher" (Ventoux) | 205 km | 2896m | 10h16 |
 | 2 juil 2026 | **Feu vert ostéo — fin Phase 1 anticipée** (2 sem early) | — | — | — |
 | 5 juil 2026 | Premier run depuis PM2026 — 6.7km, D+87m, 5:39/km, genou 0/10 | — | — | — |
-| **Sep 27 2026** | **Marseille–Naples 2026** 🎯 | 1300 km | ~17 950m | — |
+| Sep 27 – Oct 3 2026 | **Marseille–Naples 2026** ✅ TERMINÉ, zéro douleur genou | 1496 km (1300 planifié) | 16 716m (17 950 planifié) | 71h30 sur 7 jours |
 
 ## Volumes mensuels estimés (temps de mouvement, tous sports)
 
@@ -111,6 +111,23 @@ _Dernière mise à jour : 5 juillet 2026_
 | Jour 7 | 43% | **57%** | 0.78 | Sprint final, trop fort |
 
 **Bilan** : Clément a sur-pacé M-N 2025, surtout J1, J5 et J7. Corrélation directe avec l'inflammation du genou.
+
+### M-N 2026 (analyse pacing par jour) — résultat final
+
+| Jour | Distance | D+ | FC moy | % Z1+Z2 | % >145bpm | Contexte |
+|------|----------|----|--------|---------|-----------|----------|
+| J1 | 183 km | 2031m | 113.5 | 86.0% | 2.6% | Route modifiée, compagne blessée au genou (60km), rythme ralenti |
+| J2 | 233 km | 2866m | 121.5 | 72.6% | 11.9% | Séparation, remontada solo, Col de la Lombarde (2h30) |
+| J3 | 236 km | 1986m | 119.8 | 77.6% | 5.8% | Sprint final pour CP1 (14h00 pile), FC max 178 |
+| J4 | 277 km | 3271m | 118.8 | 76.9% | 3.6% | Cinque Terre au lever du jour, plus longue journée (13h26) |
+| J5 | 205 km | 2171m | 115.8 | 82.6% | 1.9% | Strade Bianche + gravier, journée la mieux pacée |
+| J6 | 213 km | 2508m | 117.9 | 76.9% | 5.5% | CP2 passé, montées de l'après-midi |
+| J7 | 148 km | 1883m | 119.6 | 74.7% | 8.8% | Vésuve + ligne d'arrivée 🏁 |
+| **Moyenne** | **213 km/j** | **2388m/j** | **118.1** | **78.2%** | **5.7%** | — |
+
+**Comparaison directe avec 2025** : **78.2%** du temps en Z1+Z2 cette année contre **55.7%** en 2025. FC moyenne quotidienne **118 bpm** (cible ≤120), contre une dérive progressive vers l'intensité en 2025 (IF 0.73→0.78 J1→J7). **Résultat : zéro douleur de genou sur les 7 jours**, contre une inflammation dès J2 l'an dernier. C'est la validation la plus nette à ce jour du modèle de pacing (E2) et de la discipline FC construite toute la saison.
+
+Les dépassements du seuil **>145bpm** (J2, J3, J7) sont tous associés à des efforts tactiques ponctuels (remontada, sprint contre le cut-off, montée finale du Vésuve) — pas à un sur-rythme soutenu sur le plat, qui était le mécanisme déclencheur en 2025.
 
 ### Porto-Lisboa (avr 2026) — le modèle à reproduire
 - **82% du temps en Z1+Z2** — IF = 0.60
