@@ -1,6 +1,6 @@
 # Pantry / Fridge / Freezer Inventory
 
-_Last updated: 2026-09-25 (livraison Continente 24/09)_
+_Last updated: 2026-10-05 (update stock frais + œufs, via Clément — trou d'info 26/09→04/10 non comblé pour le reste)_
 
 ---
 
@@ -210,37 +210,27 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 
 ## Fruit Bowl & Légumes frais
 
-_Inventaire remplacé intégralement le 2026-09-19 (liste exacte donnée par Clément après achats) — tout ce qui précède est obsolète._
+_Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné par Clément) — tout ce qui précède est obsolète._
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Pommes normales | 10 | Très mûres — urgent |
-| Poires bio | 14 | Très mûres — urgent |
-| Patates douces bio (petites) | 10 | |
-| Patates douces normales | 7 | |
-| Pommes de terre normales | 6 | |
-| Oignons bio (petits) | 4 | |
-| Oignons normaux | 2 | |
-| Têtes d'ail | 2 | |
+| Pommes bio (petites) | ~15 | |
+| Pommes normales | 6 | |
+| Poires | 5 | |
+| Oignons | 7 | |
+| Patates douces (grosses) | 2 | |
 | Oignons rouges | 2 | |
-| Concombre | 1 | |
-| Carottes | 2 | |
-| Bananes | 3 | Bien mûres |
-| Citrons verts | 2 | |
-| Chou (petit) | 1 | |
-| Navet (gros) | 1 | |
-| Poivrons rouges | 2 | |
-| Poivron jaune | 1 | |
-| Poivron vert | 1 | |
-| Tomates | 2 | |
-| Tomates cerises | 250 g | Reste du panier — 250g livrés 24/09 déjà consommés dîner 24/09 |
-| Figues | 300 g | |
-| Persil | 1 bouquet | |
-| Citron | 1 | Livraison Continente 24/09 |
-| Citron vert (lime) | 1 | Livraison Continente 24/09, distinct des 2 citrons verts existants |
-| Ail sec | ~250g | Livraison Continente 24/09 |
-| Avocat Hass | 500g | Livraison Continente 24/09 |
-| Aipo (céleri branche) | 1 | Livraison Continente 24/09 |
+| Têtes d'ail | 3-4 | |
+| Piments rouges | — | Qté non précisée |
+| Aipo (céleri branche) | 500 g | |
+| Mâche | — | Qté non précisée |
+| Tomates cerises | — | Qté non précisée |
+| Citrons verts | 6 | |
+| Citron jaune | 1 | |
+| Kiwi | 1 | |
+| Orange | 1 | |
+| Chou | — | Pour caldo verde, qté non précisée |
+| Ingrédients caldo verde (hors chou) | — | Détail/qté non précisés |
 
 ---
 
@@ -253,9 +243,9 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Lait UHT M/G Mimosa 1L | 75 × 1L | 15 anciens (29/05) + 30 livraison 04/09 (5 packs × 6L) + 30 livraison 24/09 (5 packs × 6L) |
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | ~6.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé + 3×1kg livraison 24/09 |
-| Œufs Matinados M/L 1DZ | 30 | 12 (17/09) + 6 achetés par Clément 21/09 + 12 livraison 24/09 |
-| Ovos Solo Classe M/L CNT 18un | 18 | Livraison 24/09 |
+| Greek yogurt — Mythos Ligiero Continente 1kg | ~6.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé + 3×1kg livraison 24/09 — non reconfirmé depuis |
+| Yaourt nature (non grec) | 3 kg | Confirmé par Clément 05/10, distinct du yaourt grec Mythos ci-dessus |
+| Œufs (tous types confondus) | ~20 | Correction Clément 05/10 ("au moins une vingtaine") — remplace le décompte théorique précédent (48), non tenu à jour pendant le trou 26/09→04/10 |
 | Yaourts protéiques | 4 | Achetés par Clément 21/09 — 1/jour lun→ven prévu (mode nutrition course), mais 4 unités seulement pour 5 jours |
 | Jus d'orange | 1 bouteille | Acheté par Clément 21/09 |
 | Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
@@ -263,13 +253,14 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 |
 | Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
 | Burrata di Bufala CNT Seleção | 1 | 2 livrées 24/09, 1 consommée dîner 24/09 |
-| Ricotta CNT 250g | 3 × 250g | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 |
+| Ricotta CNT 250g | 3 × 250g | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 — confirmée toujours en stock par Clément 05/10, quantité exacte non revérifiée |
 | Ricotta Finetta Galbani | ? | Acheté 27/07 — à vérifier |
 | Requeijão Ovelha Seia Lagos | ? | Acheté 27/07 — à vérifier |
 | Queijo Parmigiano Reggiano DOP Continente | 2 | 1 ancien + 1 livraison 29/05 |
 | QJ Parmigiano 24m Galbani 150g | 1 × 150g | Livraison Continente 06/05 |
 | Queijo Parmigiano Reggiano 150g | 1 × 150g | Livraison 24/09 |
-| Queijo Gorgonzola Dolce DOP 200g | 1 × 200g | Livraison 24/09 |
+| Queijo Gorgonzola Dolce DOP 200g | 1 × 200g | Livraison 24/09 — confirmé toujours en stock par Clément 05/10 |
+| Pâtes fraîches (achetées, non consommées) | ? | Signalé par Clément 05/10 — type et quantité non précisés |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Tofu Biológico Seara 250g | 1 × 250g | Livraison 04/09 |
