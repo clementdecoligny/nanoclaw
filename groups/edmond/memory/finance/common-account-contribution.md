@@ -29,5 +29,8 @@ Le complément de l'un est ajusté pour que la somme tombe pile sur 4 500 €.
 
 - Ces virements perso → commun sont catégorisés **COMUN** (sans sous-catégorie) :
   ce n'est pas une vraie dépense, l'argent reste dans le foyer.
+- **Transferts ponctuels** perso → commun « pour mettre du cash » (renflouer le
+  commun, hors contribution mensuelle) : même traitement — *mouvement interne*,
+  ni dépense ni revenu, à neutraliser. (Confirmé par Clément le 6 oct. 2026.)
 - L'IRS remboursé (joint) et autres revenus « joint » ne comptent PAS dans la
   base de répartition — seuls les revenus personnels de Clément et Lola.

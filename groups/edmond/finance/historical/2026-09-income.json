@@ -1,0 +1,10 @@
+{
+  "year": 2026,
+  "month": 9,
+  "entries": [
+    {"date": "2026-09-25", "who": "Clément", "type": "SALARY", "value": 4445.44},
+    {"date": "2026-09-25", "who": "Clément", "type": "FOOD", "value": 224.40},
+    {"date": "2026-09-25", "who": "Lola", "type": "SALARY", "value": 2229.94},
+    {"date": "2026-09-25", "who": "Lola", "type": "FOOD", "value": 275.86}
+  ]
+}

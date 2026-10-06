@@ -6,44 +6,26 @@ Comptes : personnel `45507717811` / commun `45545535104` (auto-détectés par le
 
 ## Notes de contexte importantes
 
-### ⚠️ À IDENTIFIER lors de l'import du relevé de SEPTEMBRE 2026 — commande HSN
+### ⚠️ À IDENTIFIER lors de l'import du relevé d'OCTOBRE 2026 — remboursement HelloAsso (HOLIDAY)
 
-Le 3 septembre 2026, Clément a passé une commande *MB WAY* de *113,75 €* sur
-*hsnstore.pt* (HSN = marque de nutrition sportive : protéines, compléments).
-Commande #300643301. Quand un débit MB WAY de ~113,75 € apparaîtra sur le relevé
-(perso ou commun), c'est ça : compléments sportifs. Catégorie proposée à
-confirmer avec Clément (HEALTH ou LEISURE). Retirer cette note une fois la ligne
-identifiée et catégorisée.
+En septembre, une dépense *HELLO ASSO BEGLES* de *50 €* a été payée depuis le
+*compte commun* mais relève du *perso* de Clément. Il l'a neutralisée en *COMUN*
+côté commun (sept.) et a fait un *virement de 50 € perso → commun* qui
+*apparaîtra en octobre*. Ce virement correspond à une dépense *HOLIDAY*.
+→ Quand le +50 € perso→commun arrive en octobre : c'est le remboursement de ce
+HelloAsso, à traiter en lien avec HOLIDAY (pas un simple mouvement interne neutre).
+Retirer cette note une fois la ligne d'octobre identifiée.
 
-### ⚠️ À IDENTIFIER lors de l'import du relevé de SEPTEMBRE 2026 — remboursement Lola (vacances)
+### ⚠️ RENT octobre 2026 — déjà payé en septembre
 
-Un *transfer / virement de 234,90 €* apparaîtra en septembre : c'est *Lola qui se
-rembourse* de dépenses de vacances qu'elle a réglées depuis son *compte perso*
-(non suivi dans nos exports ActivoBank). Ce n'est donc PAS une nouvelle dépense
-en plus des vacances déjà comptées — ce sont ces dépenses-là qui arrivent sur les
-comptes suivis via ce virement. À catégoriser en *HOLIDAY* (label voyage à
-confirmer, type "Sevilla/Espagne sept. 2026"), pas en virement interne neutre,
-car les dépenses sous-jacentes n'ont jamais été comptées ailleurs.
-
-Détail fourni par Clément (somme = 234,90 €, vérifiée) :
-• Comida papis Vila Real : 29,00 €
-• Babysitting Séville — lundi 11-13h : 17,50 €
-• Babysitting Séville — mardi 11h30-13h30 : 16,00 €
-• Babysitting Séville — mercredi 11-13h : 16,00 €
-• Babysitting Séville — jeudi 19-23h : 32,00 €
-• Coloniales (épicerie/produits) : 44,40 €
-• Booking hôtel : 80,00 €
-
-Retirer cette note une fois la ligne identifiée et catégorisée.
-
-Cas inverse (compte *commun*) — dépenses réglées *pour la mère de Lola*, à
-*ne pas compter comme dépenses de la famille* (elles seront/sont remboursées par
-la mère → crédits attendus sur le commun) :
-• 20,00 € (à préciser)
-• 78,10 € train *CP* (Comboios de Portugal = chemins de fer portugais)
-→ total 98,10 €. À neutraliser (catégorie INCOME / REIMBURSEMENT ou virement
-interne, à confirmer avec Clément selon que le remboursement apparaît ou non).
-Direction exacte (crédit entrant à venir vs. déjà reçu) à confirmer avec Clément.
+Loyer mensuel normal = *1 228,67 €*. Le relevé de *septembre* contient *2 loyers* :
+• *Septembre* : −1 228,67 € (TRF Ana Filomena Macedo, 03/09) — normal.
+• *Octobre, payé d'avance* : −626,69 € (TRF Ana Filomena, 28/09) + −601,98 €
+  (*PAGSERV WORTEN*, avance de frais maison pour la propriétaire, 24/09) =
+  *1 228,67 €*. Les deux lignes sont classées *RENT* (c'est voulu).
+→ Le loyer d'*octobre est donc déjà réglé en septembre*. Ne pas s'attendre à
+une ligne RENT en octobre (ou la rapprocher de ce prépaiement).
+Retirer cette note une fois octobre enregistré.
 
 ### Escola No Chiado — paiements hors ActivoBank
 

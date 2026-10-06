@@ -294,5 +294,97 @@
   "IMPOSTO DO SELO": {
     "category": "MISC",
     "sub_category": "MISC"
+  },
+  "MEDIS REEMBOLSO  26258B1010708218": {
+    "category": "HEALTH",
+    "sub_category": "MEDIS REIMBURSMENT"
+  },
+  "COMPRA 1714 ANTHROPIC CLAUDE SUB ANTHROPIC.COMC": {
+    "category": "LEISURE",
+    "sub_category": "TECH"
+  },
+  "COMPRA 1714 BOLT.EUO2609261742 Tallinn EE": {
+    "category": "MOBILITY",
+    "sub_category": "BOLT"
+  },
+  "COMPRA 6059 NUVEI CARCAVELOS": {
+    "category": "HEALTH",
+    "sub_category": "SUPPLEMENTS"
+  },
+  "COMPRA 6059 SAO BENTO MARKET LISBOA": {
+    "category": "GROCERIES",
+    "sub_category": "SUPER"
+  },
+  "MEDIS-PAG SERVICOS 26248B1010548354": {
+    "category": "HEALTH",
+    "sub_category": "MEDIS REIMBURSMENT"
+  },
+  "COMPRA 6059 ADYEN 92300 LEVALLOIS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 6059 WWW.AMAZON NF1D78ND4 LUXEMBOURG": {
+    "category": "BIKE",
+    "sub_category": "GEAR"
+  },
+  "COMPRA 6059 WWW.AMAZON NF2YG0PT4 LUXEMBOURG": {
+    "category": "BIKE",
+    "sub_category": "GEAR"
+  },
+  "COMPRA 6059 DESERTUS SAINT-ESTEBEN": {
+    "category": "LEISURE",
+    "sub_category": "BIKE"
+  },
+  "COMPRA 6059 Revolut 5620 Dublin": {
+    "category": "GIFT",
+    "sub_category": "LISBORA"
+  },
+  "COMPRA 6059 Vinted Vilnius": {
+    "category": "BIKE",
+    "sub_category": "CLOTHES"
+  },
+  "COMPRA 1714 STANCER MICHES ET BAGUE CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 1714 MARCHE U 9235211 13MARS CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 1714 GIFI MAG MARSEI 4953135 CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "MISC"
+  },
+  "COMPRA 1714 LE PAIN DU SOLEIL les a CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 1714 Hotel at Booking.com Amsterdam NL": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 1714 HOTEL GRIL CANNES FR    CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 1714 MCDONALD S LA BOCCA CAN CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 1714 SC BOULANG AURELIA FREJ CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 1714 TERRAZZA ROCBARON FR    CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
+  },
+  "COMPRA 1714 Hotel at Booking.com Dublin IE": {
+    "category": "HOLIDAY",
+    "sub_category": "HOTELS"
+  },
+  "COMPRA 1714 LE CAFE DE LA PL ST SAU CONTACTLESS": {
+    "category": "HOLIDAY",
+    "sub_category": "FOOD"
   }
 }
