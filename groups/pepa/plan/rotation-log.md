@@ -6,8 +6,10 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| croque-monsieur | 2026-10-06 | Dîner mardi, avec soupe + dernier reste panados-de-frango |
+| panados-de-frango | 2026-10-06 | Dîner mardi (dernier reste, stock à 0 désormais, nouvelle livraison attendue cette semaine) |
+| pasta-ricotta-tomates-cerises | 2026-10-05 | Dîner lundi (planifié, produits frais panier) |
 | penne-al-tonno | 2026-09-26 | Clément seul à Marseille, pas un repas maison — ne compte pas pour la rotation famille |
-| panados-de-frango | 2026-09-21 | Dîner lundi (planifié), congélo depuis 1.7kg non entamés |
 | gateau-pommes-poires-chocolat | 2026-09-19 | Fait samedi après-midi, rescue fruits très mûrs |
 | salade-pates-poulet-carottes | 2026-09-20 | Déj dimanche (plage), restes poulet rôti |
 | salade-lentilles-seitan | 2026-09-11 | Déj vendredi (planifié) |

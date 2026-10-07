@@ -249,8 +249,8 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Yaourts protéiques | 4 | Achetés par Clément 21/09 — 1/jour lun→ven prévu (mode nutrition course), mais 4 unités seulement pour 5 jours |
 | Jus d'orange | 1 bouteille | Acheté par Clément 21/09 |
 | Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
-| Fiambre Perna Ext CNT (jambon cuit) | ~898g | ~480g (04/09) + 418g livraison 24/09 |
-| Emmental Ralado Président | 1 sachet | Livraison 04/09 |
+| Fiambre Perna Ext CNT (jambon cuit) | ~898g | ~480g (04/09) + 418g livraison 24/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
+| Emmental Ralado Président | 1 sachet | Livraison 04/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
 | Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
 | Burrata di Bufala CNT Seleção | 1 | 2 livrées 24/09, 1 consommée dîner 24/09 |
 | Ricotta CNT 250g | 3 × 250g | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 — confirmée toujours en stock par Clément 05/10, quantité exacte non revérifiée |
@@ -290,7 +290,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango filets | 1,2 kg | Acheté et congelé par Clément 17/09 |
 | Carne picada (bœuf haché) | 1 boîte + 400g frais | Boîte confirmée 27/06 + 400g Angus frais (Talho) livraison 24/09, à congeler ou utiliser rapidement |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
-| Panados de frango (escalopes panées poulet) | 1.7 kg | Reçus 10/09 — congélateur — entamés déj 18/09 (riz + demi salade verte), quantité exacte restante non précisée |
+| Panados de frango (escalopes panées poulet) | 4 kg | Racheté 07/10 (confirmé par Lola) — entamé dîner 07/10 (enfants + baby-sitter, riz + panados) |
 | Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
 | Bolognese (maison) | 0 | ❌ Restes finis dîner 16/09 (congélo, stock non tracé depuis 15/07) |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |

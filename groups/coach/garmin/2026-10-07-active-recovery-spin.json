@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z1 — Active Recovery 60 min",
+  "date": "2026-10-07",
+  "description": "Récupération active post Marseille-Naples. Jambes qui tournent, aucune pression sur le genou.",
+  "steps": [
+    {"type": "warmup", "durationSec": 600, "hrMin": 90, "hrMax": 106, "note": "Z1, montée en douceur, cadence libre"},
+    {"type": "interval", "durationSec": 2400, "hrMin": 90, "hrMax": 106, "note": "Z1 strict, cadence >95rpm, jambes légères, zéro effort"},
+    {"type": "cooldown", "durationSec": 600, "hrMin": 90, "hrMax": 106, "note": "Z1 facile, relâché"}
+  ]
+}
