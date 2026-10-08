@@ -124,7 +124,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Grão de Bico Cozido Continente | 2 | Livraison 16/04 |
 | Hacendado Alubia Blanca / Feijão Branco | 1 × 295g | |
 | Compá da Horta Feijão Branco (haricots blancs) | 1 × 468g | |
-| La Costeña Frijoles Bayos Refritos (haricots pinto refrits, mexicain) | 1 × 580g | Ajouté 10/09 |
+| Frijoles Bayos Refritos (Carey, haricots pinto refrits, mexicain) | ½ boîte (580g) | Entamée déj 08/10 (pollo chipotle rapide) — à finir dans les prochains jours |
 
 ### Légumes
 
