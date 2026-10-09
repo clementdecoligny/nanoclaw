@@ -1,0 +1,17 @@
+{
+  "sport": "cycling",
+  "name": "Vélo — Réveil neuromusculaire 45 min",
+  "date": "2026-10-09",
+  "description": "Décalé du samedi 10 au vendredi 9 (indisponibilité samedi). 4 accélérations courtes avant la Rampa de dimanche.",
+  "steps": [
+    {"type": "warmup", "durationSec": 1800, "hrMin": 90, "hrMax": 106, "note": "Z1 facile, 30 min"},
+    {"type": "interval", "durationSec": 15, "hrMin": 110, "hrMax": 150, "note": "Accélération 1/4, assis, cadence haute, effort modéré (pas à fond)"},
+    {"type": "recovery", "durationSec": 120, "hrMin": 90, "hrMax": 106, "note": "Récup complète Z1"},
+    {"type": "interval", "durationSec": 15, "hrMin": 110, "hrMax": 150, "note": "Accélération 2/4"},
+    {"type": "recovery", "durationSec": 120, "hrMin": 90, "hrMax": 106, "note": "Récup complète Z1"},
+    {"type": "interval", "durationSec": 15, "hrMin": 110, "hrMax": 150, "note": "Accélération 3/4"},
+    {"type": "recovery", "durationSec": 120, "hrMin": 90, "hrMax": 106, "note": "Récup complète Z1"},
+    {"type": "interval", "durationSec": 15, "hrMin": 110, "hrMax": 150, "note": "Accélération 4/4"},
+    {"type": "cooldown", "durationSec": 600, "hrMin": 90, "hrMax": 106, "note": "Z1 retour au calme, 10 min"}
+  ]
+}

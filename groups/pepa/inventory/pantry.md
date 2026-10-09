@@ -1,6 +1,8 @@
 # Pantry / Fridge / Freezer Inventory
 
-_Last updated: 2026-10-05 (update stock frais + œufs, via Clément — trou d'info 26/09→04/10 non comblé pour le reste)_
+_Last updated: 2026-10-09 (sync manuel facture Continente 09/10 — script sync-delivery en échec, voir note ci-dessous)_
+
+> ⚠️ `sync-delivery` (script continente/index.ts) échoue avec `getAuthToken is not a function` — sync fait manuellement depuis la facture PDF. À signaler côté technique.
 
 ---
 
@@ -20,7 +22,7 @@ _Last updated: 2026-10-05 (update stock frais + œufs, via Clément — trou d'i
 | Graines de lin Continente | 3 × 200g | Livraison 16/04 |
 | Mistura Sementes Pequeno Almoço Bio | 1 sachet | Livraison 16/04 |
 | Couscous | 500g | |
-| Riz basmati | ~4.5 kg | 4kg — 500g batch cuit mer 09/09 + 2×500g livraison 24/09 |
+| Riz basmati | ~5.5 kg | +1kg (2×500g) livraison 09/10 |
 | Arroz agulha vaporizado | 1kg | |
 | Arroz Puff Expandido Seara | 150g + 2 paquets | 150g (06/05) + 2 paquets achetés local 04/09 |
 | Purée Mousseline | 1 sachet | 1 utilisé dîner enfants 02/06 |
@@ -35,7 +37,7 @@ _Last updated: 2026-10-05 (update stock frais + œufs, via Clément — trou d'i
 | De Cecco Rigatoni | 500g | |
 | Rummo Spaghetti n°3 | 2 × 500g | |
 | La Molisana Spaghetti 500g | 3 × 500g | 2×500g Livraison 04/09 + 1×500g Livraison 24/09 |
-| La Molisana Gemelli n°80 | 11 × 500g | 4 anciens + 2×500g (06/05) + 3×500g Livraison 04/09 + 2×500g Livraison 24/09 |
+| La Molisana Gemelli n°80 | 13 × 500g | 4 anciens + 2×500g (06/05) + 3×500g Livraison 04/09 + 2×500g Livraison 24/09 + 2×500g livraison 09/10 |
 | La Molisana Linguine 500g | 1 × 500g | Livraison Continente 06/05 |
 | La Molisana Fusilli 500g | 3 × 500g | 1×500g (06/05) + 2×500g Livraison 04/09 |
 | Rummo Paccheri Rigati n°150 | 2 × 500g | +1 livraison 29/05 |
@@ -137,6 +139,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Pimento Assado em Tiras Bio 250g | 2 × 250g | Livraison 24/09 |
 | Auchan Cogumelos Inteiros (champignons entiers) | 1 × 355g | |
 | El Peregrino Espárragos Blancos (petites asperges blanches, petit bocal) | 1 × 185g (108g égoutté) | |
+| Beterraba Cozida 450g-PT-BIO | 1 × 450g | Livraison 09/10 |
 
 ### Protéines végétales
 
@@ -148,7 +151,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Atum ao Natural Tritão 270g | 2 × 270g | Livraison 04/09 |
+| Atum ao Natural Tritão 270g | 1 × 270g | Livraison 04/09 — 1×270g utilisé dîner ensalada mediterránea 09/10 |
 
 ---
 
@@ -240,20 +243,21 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 
 | Item | Quantity | Notes |
 |---|---|---|
-| Lait UHT M/G Mimosa 1L | 75 × 1L | 15 anciens (29/05) + 30 livraison 04/09 (5 packs × 6L) + 30 livraison 24/09 (5 packs × 6L) |
+| Lait UHT M/G Mimosa 1L | 93 × 1L | 15 anciens (29/05) + 30 livraison 04/09 (5 packs × 6L) + 30 livraison 24/09 (5 packs × 6L) + 18 livraison 09/10 (3 packs × 6L) |
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | ~6.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé + 3×1kg livraison 24/09 — non reconfirmé depuis |
+| Greek yogurt — Mythos Ligiero Continente 1kg | ~11.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé + 3×1kg livraison 24/09 + 5×1kg livraison 09/10 — non reconfirmé depuis. ⚠️ Dépasse la règle "max 6×1kg" (place frigo) |
 | Yaourt nature (non grec) | 3 kg | Confirmé par Clément 05/10, distinct du yaourt grec Mythos ci-dessus |
-| Œufs (tous types confondus) | ~20 | Correction Clément 05/10 ("au moins une vingtaine") — remplace le décompte théorique précédent (48), non tenu à jour pendant le trou 26/09→04/10 |
+| Œufs (tous types confondus) | ~56 | Correction Clément 05/10 ("au moins une vingtaine" = ~20) + 36 (3 douzaines) livraison 09/10 |
 | Yaourts protéiques | 4 | Achetés par Clément 21/09 — 1/jour lun→ven prévu (mode nutrition course), mais 4 unités seulement pour 5 jours |
 | Jus d'orange | 1 bouteille | Acheté par Clément 21/09 |
 | Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~898g | ~480g (04/09) + 418g livraison 24/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
-| Feta DOP Continente 150g | 5 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 |
+| Feta DOP Continente 150g | 8 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 + 3×150g livraison 09/10 |
 | Burrata di Bufala CNT Seleção | 1 | 2 livrées 24/09, 1 consommée dîner 24/09 |
-| Ricotta CNT 250g | 3 × 250g | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 — confirmée toujours en stock par Clément 05/10, quantité exacte non revérifiée |
+| Ricotta CNT 250g | 5 × 250g | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 + 2×250g livraison 09/10 — confirmée toujours en stock par Clément 05/10, quantité exacte non revérifiée |
+| Mozzarela Granarolo 125g | 1 × 125g | Livraison 09/10 — 1×125g utilisé dîner ensalada mediterránea 09/10 |
 | Ricotta Finetta Galbani | ? | Acheté 27/07 — à vérifier |
 | Requeijão Ovelha Seia Lagos | ? | Acheté 27/07 — à vérifier |
 | Queijo Parmigiano Reggiano DOP Continente | 2 | 1 ancien + 1 livraison 29/05 |
@@ -264,7 +268,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Tofu Biológico Seara 250g | 1 × 250g | Livraison 04/09 |
-| Ravioli Abobora Ceb.Caram.250g | 3 × 250g | 1×250g Livraison 04/09 + 2×250g Livraison 24/09 |
+| Ravioli Abobora Ceb.Caram.250g | 4 × 250g | 1×250g Livraison 04/09 + 2×250g Livraison 24/09 + 1×250g Livraison 09/10 |
 | Gran Ravioli Trufas BR.250g | 0 | ❌ Consommé Lun midi/soir 07/09 (enfants) |
 | Ravioli Ricotta Espinafres 250g | 1 × 250g | Livraison 24/09 |
 | Ravioli Bolonhesa Rana 250g | 2 × 250g | 1×250g Livraison 04/09 + 1×250g Livraison 24/09 |
@@ -274,6 +278,9 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Babybel light | 24 | 12 (06/07, à vérifier) + 12 achetés par Clément 21/09 |
 | Pão de Forma sem Côdea Bimbo | 0 | Probablement consommé |
 | Pão de Forma S/Codea CNT 450gr | 2 | Livraison 04/09 |
+| Pão Rolls Bimbo 240g | 1 | Livraison 09/10 |
+| Girasoli Pesto CNT Seleção 250g | 1 × 250g | Livraison 09/10 |
+| Girasoli Capra & Miele 250g | 1 × 250g | Livraison 09/10 |
 
 ---
 
@@ -288,6 +295,8 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Peito de frango filets | 1,2 kg | Acheté et congelé par Clément 17/09 |
+| Bife frango extrafino (filets fins) | 2 tuppers (~501g) | Livraison 09/10, divisé en 2 tuppers congélo par Lola |
+| Strogonoff/tiras de frango | 2 tuppers (~516g) | Livraison 09/10, divisé en 2 tuppers congélo par Lola |
 | Carne picada (bœuf haché) | 1 boîte + 400g frais | Boîte confirmée 27/06 + 400g Angus frais (Talho) livraison 24/09, à congeler ou utiliser rapidement |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Panados de frango (escalopes panées poulet) | 4 kg | Racheté 07/10 (confirmé par Lola) — entamé dîner 07/10 (enfants + baby-sitter, riz + panados) |
@@ -317,8 +326,8 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Barritas de pescado (bâtonnets de poisson) | 0 | ❌ Dernier reste, prévu dîner 17/09 (riz + tomates cerises) |
 | Gula del Norte | 0 | ❌ Utilisé dîner 08/07 |
-| Robalo Grande Fresco | 0 | ❌ Consommé (confirmé 27/06) |
-| Dourada Média Fresca | 0 | ❌ Consommée (confirmé 27/06) |
+| Robalo Grande (+600g) | ~664g | Livraison 09/10, congelé par Lola |
+| Dourada Média (200-600g) | ~552g | Livraison 09/10, congelée par Lola |
 
 ### Divers
 
@@ -339,13 +348,16 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Leite NAN 2 800g | 5 × 800g | Livraison 06/05 |
 | Leite em Pó Optipro 2 +6M NAN | 2 × boîte | Livraison 29/05 |
-| Saqueta Fruta Banana e Morango +8M Continente | 19 | 9 anciens (29/05) + 10 livraison 04/09 |
+| Saqueta Fruta Banana e Morango +8M Continente | 27 | 9 anciens (29/05) + 10 livraison 04/09 + 8 livraison 09/10 |
 | Saqueta Fruta Multifrutos +8M Continente | 8 | Livraison 29/05 |
 | Snack Ervilha QJ Bio CNT do Beb | 2 | Livraison 04/09 |
 | Refeição Legumes e Pescada Hero Solo | 4 | Livraison 29/05 |
 | Refeição Batata, Abóbora e Peru +6M Nestlé | 3 | Livraison 29/05 |
 | Refeição Ervilha, Batata e Frango +6M Gerber | 4 | Livraison 29/05 |
-| Refeição Jardineira com Vitela +6M Hero Baby | 2 | Livraison 29/05 |
+| Refeição Jardineira com Vitela +6M Hero Baby | 4 | 2 Livraison 29/05 + 2 livraison 09/10 |
 | Refeição Legumes e Vitela +6M Gerber | 3 | Livraison 29/05 |
+| Refeição Nestlé Legumes e Vitela 190g | 2 | Livraison 09/10 |
+| Refeição Nestlé Batata, Abóbora e Peru 190g | 2 | Livraison 09/10 |
+| Saqueta Nestlé Banana Lar Bol | 3 | Livraison 09/10 |
 | Soupe bébé (poulet + poisson + poireau + carotte + pomme de terre + courgette, sans sel) | Plusieurs tupperwares | Pour bébé uniquement. Nombre exact TBC. |
 | Purée verte (ancienne fournée) | Plusieurs contenants | Contenu TBC |

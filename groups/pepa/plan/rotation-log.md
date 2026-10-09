@@ -6,6 +6,7 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| ensalada-pasta-clasica-mediterranea | 2026-10-09 | Dîner vendredi (Recette A, `ensaladas-pasta-guia-y-recetas.md`) : fusilli + mozzarella + thon + olives |
 | croque-monsieur | 2026-10-06 | Dîner mardi, avec soupe + dernier reste panados-de-frango |
 | panados-de-frango | 2026-10-06 | Dîner mardi (dernier reste, stock à 0 désormais, nouvelle livraison attendue cette semaine) |
 | pasta-ricotta-tomates-cerises | 2026-10-05 | Dîner lundi (planifié, produits frais panier) |

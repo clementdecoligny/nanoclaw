@@ -63,7 +63,7 @@ _Last updated: 2026-10-08 (commande Continente passée, 20/21 articles ajoutés 
 | Piñones | ×1 | ✅ commandé 08/10 | Non inclus dans commande 21/06 |
 | Aceitunas Kalamata | ×1 | ✅ commandé 08/10 | Non inclus dans commande 21/06 |
 | Miso blanco | ×1 | - | Non dispo Continente |
-| Remolacha cocida (bote) | ×1 | ✅ commandé 08/10 | Non inclus dans commande 21/06 |
+| Remolacha cocida (bote) | — | ✅ reçu 09/10 | Beterraba Cozida 450g livrée — retiré |
 | Za'atar | ×1 | - | Non dispo Continente |
 | Sumac | ×1 | - | Non dispo Continente |
 | Copos de guindilla seca | ×1 | - | Non dispo Continente |
