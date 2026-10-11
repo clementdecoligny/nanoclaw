@@ -1,0 +1,17 @@
+{
+  "sport": "cycling",
+  "name": "Échauffement — Rampa do Vale de Santo António",
+  "date": "2026-10-11",
+  "description": "Échauffement pour effort explosif 500m/16%. Piloter aux sensations, les bpm ci-dessous sont indicatifs (HR retardée sur les efforts courts).",
+  "steps": [
+    {"type": "warmup", "durationSec": 900, "hrMin": 95, "hrMax": 128, "note": "Z1→Z2 progressif, 15 min"},
+    {"type": "interval", "durationSec": 30, "hrMin": 130, "hrMax": 160, "note": "Effort soutenu 1/3, proche intensité course"},
+    {"type": "recovery", "durationSec": 120, "hrMin": 90, "hrMax": 106, "note": "Récup Z1"},
+    {"type": "interval", "durationSec": 30, "hrMin": 130, "hrMax": 160, "note": "Effort soutenu 2/3"},
+    {"type": "recovery", "durationSec": 120, "hrMin": 90, "hrMax": 106, "note": "Récup Z1"},
+    {"type": "interval", "durationSec": 30, "hrMin": 130, "hrMax": 160, "note": "Effort soutenu 3/3"},
+    {"type": "recovery", "durationSec": 240, "hrMin": 90, "hrMax": 106, "note": "Relâché, transition avant le pic final"},
+    {"type": "interval", "durationSec": 15, "hrMin": 150, "hrMax": 185, "note": "Effort quasi-maximal, ~5 min avant le départ"},
+    {"type": "recovery", "durationSec": 300, "hrMin": 70, "hrMax": 110, "note": "Repos complet avant la ligne, laisser la FC redescendre"}
+  ]
+}
