@@ -171,6 +171,26 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 
 **Tendance récente :** relance depuis W25. 3 semaines consécutives avec renfo. C'est la fenêtre de changement — tenir jusqu'à M-N.
 
+## Jalons intermédiaires
+
+- **11 oct 2026 — Subida da Rampa do Vale de Santo António (sprint explosif, 500m/16%)** : 2min02s, **8 secondes plus rapide qu'en 2025**. FC max 178, 89% du temps en Z5 (attendu pour un effort de ce type). Réalisé 8 jours après l'arrivée de Marseille–Naples 2026 — amélioration malgré sortie d'un ultra, pas une contradiction avec la philosophie aérobie (capacité anaérobie et endurance se construisent sur des voies différentes).
+
+## Debrief complet Marseille–Naples 2026 (post-course, 12 oct)
+
+**Ressenti général** : s'est senti **meilleur qu'en 2025** malgré **+200 km** et **+2000m D+**, et malgré avoir roulé **seul presque toute la semaine**. Particulièrement fort en montée (a doublé beaucoup de monde). Confirmation que le travail d'entraînement a payé.
+
+**Naproxen (AINS)** : pris **matin et soir à partir du J4**, en prévention (pas de lésion/douleur spécifique au départ), pour les muscles et les genoux. A bien fonctionné — pas de douleur genou invalidante sur le reste de la course. *(Décision médicamenteuse de Clément, hors périmètre coaching — pas de prescription de ma part.)*
+
+**Genou pendant la course** : légère sensation (tiraillement, pas de chaleur) dans les montées difficiles à partir du **J4/J5** — jugé normal après ce volume, aucun trigger G1 (jamais besoin de ralentir, glacer, ou s'arrêter).
+
+**Genou gauche post-course** : à l'arrêt du Naproxen, douleur apparue, stable à **2/10**, toujours présente au 12/10 (J+9). Pattern habituel chez lui (épisodes post-effort déjà vus en 2025/2026), pas d'inquiétude particulière de Clément.
+
+## Log cheville — nouveau (12 oct 2026)
+
+**Événement** : J4 de M-N, après **260 km** faits (il restait **20 km** dans l'étape), coup de pédale dans le vide (jambe droite) → léger choc à la **malléole externe** (cheville droite).
+**Évolution** : douleur constante **2/10** depuis, légèrement **gonflée**, **rougeur** localisée (disque ~**2cm** de diamètre) sur la malléole. **Pas de douleur au pédalage ni en flexion** — douleur uniquement en **rotation** de la cheville.
+**Statut** : inédit pour Clément — pas d'antécédent de ce type. Pas encore vu de médecin. **Décision à prendre : avis médical avant tout protocole kiné**, vu trauma + gonflement + rougeur persistant >1 semaine.
+
 ## Log genou — épisodes (août 2026)
 
 - **18 août (Col de la Forclaz, Annecy)** : 2/10 pendant les 2 premiers km de la montée (8km à 11% de pente moyenne), résolu à 0/10 pour le reste de la montée. Position : alterné assis/danseuse mais majoritairement assis vu l'inclinaison forte. 0/10 au réveil le 19 août. Pas de déclenchement G1 (jamais ≥3/10). Séance précédente : J2 du bloc consécutif (mardi, après lundi 2h30 sous-seuil).

@@ -21,6 +21,7 @@ _Last updated: 2026-10-09 (sync manuel facture Continente 09/10 — script sync-
 | Graines de tournesol bio Continente | 5 × 200g | Livraison 16/04 |
 | Graines de lin Continente | 3 × 200g | Livraison 16/04 |
 | Mistura Sementes Pequeno Almoço Bio | 1 sachet | Livraison 16/04 |
+| Farine T45 ou T55 | 2 kg | Achetée 12/10 par Clément (en plus de la manitoba 00 déjà en stock) |
 | Couscous | 500g | |
 | Riz basmati | ~5.5 kg | +1kg (2×500g) livraison 09/10 |
 | Arroz agulha vaporizado | 1kg | |
@@ -226,7 +227,7 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Têtes d'ail | 3-4 | |
 | Piments rouges | — | Qté non précisée |
 | Aipo (céleri branche) | 500 g | |
-| Mâche | — | Qté non précisée |
+| Mâche | 0 | ❌ Finie déj lundi 12/10 |
 | Tomates cerises | — | Qté non précisée |
 | Citrons verts | 6 | |
 | Citron jaune | 1 | |
@@ -234,6 +235,9 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Orange | 1 | |
 | Chou | — | Pour caldo verde, qté non précisée |
 | Ingrédients caldo verde (hors chou) | — | Détail/qté non précisés |
+| Banane | 0,766 kg | Achat local 12/10 |
+| Avocat Hass | 0,468 kg | Achat local 12/10 — pour crêpes salées (saumon fumé avocat) |
+| Poireau coupé (alho francês cortado) | 1 sachet | Achat local 12/10 — pour crêpes salées (poireaux lardons béchamel) |
 
 ---
 
@@ -271,7 +275,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Ravioli Abobora Ceb.Caram.250g | 4 × 250g | 1×250g Livraison 04/09 + 2×250g Livraison 24/09 + 1×250g Livraison 09/10 |
 | Gran Ravioli Trufas BR.250g | 0 | ❌ Consommé Lun midi/soir 07/09 (enfants) |
 | Ravioli Ricotta Espinafres 250g | 1 × 250g | Livraison 24/09 |
-| Ravioli Bolonhesa Rana 250g | 2 × 250g | 1×250g Livraison 04/09 + 1×250g Livraison 24/09 |
+| Ravioli Bolonhesa Rana 250g | 0 | ❌ Les 2×250g terminés déj lundi 12/10 |
 | Ravioli Frango Assado Alec.250g | 0 | ❌ Consommé dîner 09/09 |
 | Peito de frango frais Campo Seleccao | 0 | ❌ Livraison 04/09, jamais cuit — jeté 13/09 (9 jours au frigo, périmé) |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
@@ -281,6 +285,11 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Pão Rolls Bimbo 240g | 1 | Livraison 09/10 |
 | Girasoli Pesto CNT Seleção 250g | 1 × 250g | Livraison 09/10 |
 | Girasoli Capra & Miele 250g | 1 × 250g | Livraison 09/10 |
+| Salmão fumado | 2 paquets | Achat local 12/10 — pour crêpes salées (saumon fumé avocat) |
+| Fiambre da Perna Ext (sliced) | +2 paquets | Achat local 12/10, s'ajoute au stock existant |
+| Queijo Mini Mozzarella Auchan | 2 | Achat local 12/10 |
+| Queijo em Fatias 2×200g | 1 pack | Achat local 12/10 |
+| Nutella 350g | 1 | Achat local 12/10 |
 
 ---
 

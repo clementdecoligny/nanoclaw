@@ -73,6 +73,7 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | tostadas-frijoles-aguacate-rapido.md | Tostadas Frijoles et Aguacate (express) | veg / Mexican | very low | no | 10 min. Sans poulet, option la plus rapide. |
 | brocolis-rotis-parmesan.md | Brocolis rôtis au parmesan | veg / side | low | components | Technique choux de Bruxelles adaptée. Four chaud, cuisson courte, kid-approved. |
 | patates-douces-roties-sauce-tahini-citron.md | Patates Douces Rôties Sauce Tahini-Citron | veg / side | low | no | 35 min. Four 220°C, sauce tahini-citron-ail. Demandé par Clément 09/10. |
+| compote-pommes-gingembre.md | Compote Pommes-Gingembre | vegetarian | low | components | Rescue surplus pommes. Granola du matin ou dessert enfants. Congèle bien. Demandé par Clément 12/10. |
 
 ---
 
