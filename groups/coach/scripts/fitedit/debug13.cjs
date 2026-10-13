@@ -1,0 +1,10 @@
+const fs = require('fs');
+const { Decoder, Stream } = require('@garmin/fitsdk');
+const buf = fs.readFileSync(process.argv[2]);
+const stream = Stream.fromBuffer(buf);
+const decoder = new Decoder(stream);
+const ordered = [];
+decoder.read({ mesgListener: (mesgNum, mesg) => ordered.push({ mesgNum, mesg }) });
+const target = ordered.filter(o => o.mesgNum === 13);
+console.log('count mesgNum13:', target.length);
+console.log(JSON.stringify(target.slice(0,3), null, 2));

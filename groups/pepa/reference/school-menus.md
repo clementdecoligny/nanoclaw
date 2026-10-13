@@ -118,3 +118,33 @@ _Août : vacances Annecy, pas de menu école._
 | Mer 30/09 | Creme de Legumes | Creme de Legumes c/Vitela | Macarrão Estufado c/ Vitela |
 | Jeu 01/10 | Grão c/ Nabiças | Grão c/ nabiças e Pescada | Douradinhos de Peixe c/ Arroz de Ervilhas |
 | Ven 02/10 | Creme de Espinafres | Creme de Espinafres c/Frango | Pernninhas de Frango Estufadas c/ Puré |
+
+## Semaine 12–16 octobre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 12/10 | Creme de ervilhas | Ervilhas e Vitela | Esparguete à Bolonhesa |
+| Mar 13/10 | Juliana | Legumes c/ Pescada | Salada de Pescada c/ batata, cenoura e ovo |
+| Mer 14/10 | Abóbora | Abóbora c/Frango | Perninha de frango no forno c/ Puré de Batata Doce |
+| Jeu 15/10 | Legumes | Legumes e Abrótea | Filetes no Forno c/ Limão c/ batata Assada |
+| Ven 16/10 | Agrião | Agrião c/ peru | Carne de Peru à Portuguesa |
+
+## Semaine 19–23 octobre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 19/10 | Cenoura e curgete | Cenoura e curgete c/ Peru | Carne de porco assada à padeiro |
+| Mar 20/10 | Creme de Legumes | Creme de Legumes c/Perca | Dourada no forno c/ batata cozida e Brócolos |
+| Mer 21/10 | Agrião | Agrião c/ Vitela | Lasanha de Vitela |
+| Jeu 22/10 | Abóbora | Abóbora c/ pescada | Lombinhos de Pescada c/ batata e Ovo |
+| Ven 23/10 | Creme de Bróculos | Creme de Bróculos c/Frango | Jardineira de frango |
+
+## Semaine 26–30 octobre 2026
+
+| Jour | Sopa | Bebés | Prato |
+|------|------|-------|-------|
+| Lun 26/10 | Creme de Alface | Creme de Alface e peru | Tirinhas de Peru c/ arroz de ervilhas |
+| Mar 27/10 | Feijão Verde | Feijão Verde e Perca | Bacalhau cremoso c/ espinafres (berçário : Lombinho de pescada cozido c/ batata e ovo) |
+| Mer 28/10 | Juliana | Juliana e Vitela | Almôndegas c/ Esparguete |
+| Jeu 29/10 | Grão c/Nabiças | Grão c/Nabiças e Abrótea | Douradinhos de Peixe c/ Arroz xau-xau (berçário : Arroz de Peixe Simples) |
+| Ven 30/10 | Espinafres | Espinafres e Frango | Frango Assado c/ Massa tricolor |

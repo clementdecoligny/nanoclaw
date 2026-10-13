@@ -1,0 +1,16 @@
+{
+  "name": "fitedit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@garmin/fitsdk": "^21.218.0",
+    "fit-tool": "^1.1.28"
+  }
+}

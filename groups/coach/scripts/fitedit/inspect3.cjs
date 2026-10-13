@@ -1,0 +1,23 @@
+const fs = require('fs');
+const { Decoder, Stream } = require('@garmin/fitsdk');
+const buf = fs.readFileSync(process.argv[2]);
+const stream = Stream.fromBuffer(buf);
+const decoder = new Decoder(stream);
+const { messages } = decoder.read();
+
+console.log('--- timestampCorrelationMesgs ---');
+console.log(JSON.stringify(messages.timestampCorrelationMesgs, null, 2));
+console.log('--- fileIdMesgs ---');
+console.log(JSON.stringify(messages.fileIdMesgs, null, 2));
+console.log('--- first few eventMesgs ---');
+console.log(JSON.stringify(messages.eventMesgs.slice(0,3), null, 2));
+console.log('--- first deviceInfoMesgs ---');
+console.log(JSON.stringify(messages.deviceInfoMesgs[0], null, 2));
+console.log('--- first climbProMesgs ---');
+console.log(JSON.stringify(messages.climbProMesgs[0], null, 2));
+console.log('--- first lapMesgs ---');
+console.log(JSON.stringify(messages.lapMesgs[0], null, 2));
+console.log('--- first splitMesgs ---');
+console.log(JSON.stringify(messages.splitMesgs[0], null, 2));
+console.log('--- first batteryMesgs ---');
+console.log(JSON.stringify(messages.batteryMesgs[0], null, 2));

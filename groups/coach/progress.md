@@ -189,7 +189,11 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 
 **Événement** : J4 de M-N, après **260 km** faits (il restait **20 km** dans l'étape), coup de pédale dans le vide (jambe droite) → léger choc à la **malléole externe** (cheville droite).
 **Évolution** : douleur constante **2/10** depuis, légèrement **gonflée**, **rougeur** localisée (disque ~**2cm** de diamètre) sur la malléole. **Pas de douleur au pédalage ni en flexion** — douleur uniquement en **rotation** de la cheville.
-**Statut** : inédit pour Clément — pas d'antécédent de ce type. Pas encore vu de médecin. **Décision à prendre : avis médical avant tout protocole kiné**, vu trauma + gonflement + rougeur persistant >1 semaine.
+**Statut** : inédit pour Clément — pas d'antécédent de ce type.
+- **13/10** : vu un médecin — diagnostic probable **ligament de la cheville** (cohérent avec le tableau : choc direct, douleur en rotation mais pas en flexion/pédalage).
+- **Suite programmée** : **RX + échographie vendredi 16/10**, puis **orthopédiste**. RDV pris en parallèle avec son **kiné-ostéo**.
+- Plan d'entraînement ajusté en attendant : vélo maintenu (pédalage non douloureux), course à pied suspendue, travail unipodal jambe droite retiré du renfo Session 2, exercice d'équilibre de Session 1 fait avec appui.
+- **13/10 soir** : douleur augmentée après le vélo du jour (fait tranquille, 61min Z1/Z2), même pattern qu'après la sortie de dimanche 11/10 ("rampa"). Progression défavorable malgré charge basse et pédalage non douloureux pendant l'effort. **Vélo mis en pause** jusqu'à l'imagerie du 16/10 — le critère "pédalage non douloureux" ne suffit plus à garantir l'absence d'aggravation.
 
 ## Log genou — épisodes (août 2026)
 
