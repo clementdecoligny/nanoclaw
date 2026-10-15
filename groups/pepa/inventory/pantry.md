@@ -283,7 +283,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Pão de Forma sem Côdea Bimbo | 0 | Probablement consommé |
 | Pão de Forma S/Codea CNT 450gr | 2 | Livraison 04/09 |
 | Pão Rolls Bimbo 240g | 1 | Livraison 09/10 |
-| Girasoli Pesto CNT Seleção 250g | 1 × 250g | Livraison 09/10 |
+| Girasoli Pesto CNT Seleção 250g | 0 | ❌ Livraison 09/10 — suggéré déj mer 14/10, plan suivi par défaut |
 | Girasoli Capra & Miele 250g | 1 × 250g | Livraison 09/10 |
 | Salmão fumado | 2 paquets | Achat local 12/10 — pour crêpes salées (saumon fumé avocat) |
 | Fiambre da Perna Ext (sliced) | +2 paquets | Achat local 12/10, s'ajoute au stock existant |
@@ -335,7 +335,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Barritas de pescado (bâtonnets de poisson) | 0 | ❌ Dernier reste, prévu dîner 17/09 (riz + tomates cerises) |
 | Gula del Norte | 0 | ❌ Utilisé dîner 08/07 |
-| Robalo Grande (+600g) | ~664g | Livraison 09/10, congelé par Lola |
+| Robalo Grande (+600g) | 0 | ❌ Livraison 09/10, congelé par Lola — suggéré dîner mer 14/10, plan suivi par défaut |
 | Dourada Média (200-600g) | ~552g | Livraison 09/10, congelée par Lola |
 
 ### Divers

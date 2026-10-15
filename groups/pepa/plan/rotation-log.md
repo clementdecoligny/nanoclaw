@@ -6,6 +6,8 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| robalo-ao-forno | 2026-10-14 | Dîner mercredi (suggéré, plan suivi par défaut, pas de correction signalée) : robalo congélo + riz + salade aipo tomates cerises |
+| girasoli-pesto | 2026-10-14 | Déj mercredi (Clément seul, Lola bureau) : girasoli pesto frigo + soupe + salade aipo tomates cerises |
 | ravioli-bolonhesa | 2026-10-12 | Déj lundi : ravioli Rana frigo à la bolognaise + soupe + reste salade verte (finie) |
 | ensalada-pasta-clasica-mediterranea | 2026-10-09 | Dîner vendredi (Recette A, `ensaladas-pasta-guia-y-recetas.md`) : fusilli + mozzarella + thon + olives |
 | croque-monsieur | 2026-10-06 | Dîner mardi, avec soupe + dernier reste panados-de-frango |
