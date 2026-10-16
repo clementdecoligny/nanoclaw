@@ -197,6 +197,7 @@ Voir section dédiée dans l'analyse du 15 juin 2026.
 - **14/10** : diagnostic confirmé — **entorse légère, étirement léger du ligament**. Plan de récupération structuré mis en place → voir `/workspace/agent/plan-recuperation-cheville.md` (phases, exercices détaillés, tests récurrents).
 - **14/10, bilan kiné-ostéo** : confirmation par échographie — petite entorse légère, zéro douleur en mouvement, douleur uniquement à la palpation d'un point précis du ligament. Traitement **EPI** réalisé. Consigne : **repos 14-15/10**, reprise **16/10 auto-régulée par la douleur**, renfo habituel (dont pieds) maintenu sans interruption. **EPI de contrôle ~21/10.** Protocole kiné prime désormais sur le plan coach.
 - **14/10, 15h31, trajet vélo commute non prévu** (50min, 99% Z1, FC moy 87) : zéro douleur pendant/après ("nickel"). Bon signal — même un pédalage non planifié reste sans douleur.
+- **16/10, 1h30 vélo "Ankle check"** (90min, 35,2km, D+77m, 0% Z3+) : **zéro douleur pendant**. Premier vrai test de volume (1h30) depuis l'EPI. À surveiller : le pattern des 11/10 et 13/10 montrait une douleur apparaissant dans les heures suivant l'effort, pas pendant — donc le verdict réel se joue ce soir/demain matin, pas à chaud.
 
 ## Log genou — épisodes (août 2026)
 

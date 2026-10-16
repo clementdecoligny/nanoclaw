@@ -94,9 +94,12 @@ Suivi détaillé dans `/workspace/agent/sleep.md`.
 
 Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 
+**Natation — créneau piscine (16 octobre 2026)** : la natation n'est possible que le **jeudi** (accès piscine). Ne jamais la placer un autre jour de la semaine.
+
 ## Contraintes temporaires (à purger après expiration)
 
 - ~~20–30 août 2026 : vacances en famille~~ — **expirée, purgée le 26/08** (semaine du 31 août planifiée en aperçu ; retour à la disponibilité pleine par défaut du macro-plan pour le 20 août–27 sept).
+- **Semaine du 12–18 octobre 2026** : samedi 17 et dimanche 18 — pas de créneau sport, enfants toute la journée (signalé 16/10). Traité comme ponctuel cette semaine — à redemander la semaine suivante, pas à reconduire automatiquement.
 
 ## Comportement / Observations
 

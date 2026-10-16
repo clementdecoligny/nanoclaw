@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — reprise auto-régulée (cheville) — 1h30",
+  "date": "2026-10-16",
+  "description": "Terrain plat, assis. Auto-régulation stricte par la douleur (consigne kiné) : au moindre signal sur la cheville droite, tu arrêtes/raccourcis.",
+  "steps": [
+    {"type": "warmup", "durationSec": 900, "hrMin": 90, "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 3900, "hrMin": 107, "hrMax": 128, "note": "Z2 plat, assis"},
+    {"type": "cooldown", "durationSec": 600, "hrMin": 90, "hrMax": 106, "note": "Z1"}
+  ]
+}

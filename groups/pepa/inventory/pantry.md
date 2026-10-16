@@ -137,7 +137,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Continente Ervilhas Cozidas (petits pois) | 1 × 420g | |
 | La Legua Guindilla Extra en Vinagre | 1 × 110g (net) | Piments basques au vinaigre |
 | Judía Verde Cortada en trozos medianos Extra Gourmet | 1 × 660g (360g égoutté) | Haricots verts |
-| Pimento Assado em Tiras Bio 250g | 2 × 250g | Livraison 24/09 |
+| Pimento Assado em Tiras Bio 250g | 1 × 250g | Livraison 24/09 — 1×250g utilisé dîner tartines 15/10 |
 | Auchan Cogumelos Inteiros (champignons entiers) | 1 × 355g | |
 | El Peregrino Espárragos Blancos (petites asperges blanches, petit bocal) | 1 × 185g (108g égoutté) | |
 | Beterraba Cozida 450g-PT-BIO | 1 × 450g | Livraison 09/10 |
@@ -152,7 +152,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Atum ao Natural Tritão 270g | 1 × 270g | Livraison 04/09 — 1×270g utilisé dîner ensalada mediterránea 09/10 |
+| Atum ao Natural Tritão 270g | 0 | ❌ Utilisé dîner tartines pimientos/ricotta/feta/atum 15/10 |
 
 ---
 
@@ -222,13 +222,16 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Pommes normales | 6 | |
 | Poires | 5 | |
 | Oignons | 7 | |
-| Patates douces (grosses) | 2 | |
+| Patates douces (grosses) | 4 | 2 anciennes + 2 panier 16/10 |
 | Oignons rouges | 2 | |
 | Têtes d'ail | 3-4 | |
 | Piments rouges | — | Qté non précisée |
 | Aipo (céleri branche) | 500 g | |
 | Mâche | 0 | ❌ Finie déj lundi 12/10 |
-| Tomates cerises | — | Qté non précisée |
+| Tomates cerises | 300g | Panier 16/10 |
+| Chayottes (chuchu) | 2 | Panier 16/10 — prévu soupe batch |
+| Salades vertes | 2 | Panier 16/10 |
+| Aubergines | 5 | 3 déjà en stock + 2 panier 16/10 — urgence signalée par Clément, prévu batch aujourd'hui |
 | Citrons verts | 6 | |
 | Citron jaune | 1 | |
 | Kiwi | 1 | |
@@ -236,7 +239,7 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Chou | — | Pour caldo verde, qté non précisée |
 | Ingrédients caldo verde (hors chou) | — | Détail/qté non précisés |
 | Banane | 0,766 kg | Achat local 12/10 |
-| Avocat Hass | 0,468 kg | Achat local 12/10 — pour crêpes salées (saumon fumé avocat) |
+| Avocat Hass | ~0,3 kg | Achat local 12/10 — partiellement utilisé dîner tartines 15/10 |
 | Poireau coupé (alho francês cortado) | 1 sachet | Achat local 12/10 — pour crêpes salées (poireaux lardons béchamel) |
 
 ---
@@ -258,9 +261,9 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~898g | ~480g (04/09) + 418g livraison 24/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
-| Feta DOP Continente 150g | 8 × 150g | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 + 3×150g livraison 09/10 |
+| Feta DOP Continente 150g | 7 × 150g (1 entamée) | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 + 3×150g livraison 09/10 — 1 paquet entamé (~75g) dîner tartines 15/10 |
 | Burrata di Bufala CNT Seleção | 1 | 2 livrées 24/09, 1 consommée dîner 24/09 |
-| Ricotta CNT 250g | 5 × 250g | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 + 2×250g livraison 09/10 — confirmée toujours en stock par Clément 05/10, quantité exacte non revérifiée |
+| Ricotta CNT 250g | 4 × 250g (1 entamée) | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 + 2×250g livraison 09/10 — ~125g utilisé dîner tartines 15/10 |
 | Mozzarela Granarolo 125g | 1 × 125g | Livraison 09/10 — 1×125g utilisé dîner ensalada mediterránea 09/10 |
 | Ricotta Finetta Galbani | ? | Acheté 27/07 — à vérifier |
 | Requeijão Ovelha Seia Lagos | ? | Acheté 27/07 — à vérifier |

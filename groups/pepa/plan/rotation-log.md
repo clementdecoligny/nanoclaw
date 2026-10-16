@@ -6,6 +6,7 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| tartines-pimientos-ricotta-feta-atum | 2026-10-15 | Dîner jeudi : adapté en tartines (pimientos en lamelles, pas de rouleaux) + confit rapide pimientos + avocat. Demandé par Clément, aliments frais à écouler. Bife de frango prévu non fait. |
 | robalo-ao-forno | 2026-10-14 | Dîner mercredi (suggéré, plan suivi par défaut, pas de correction signalée) : robalo congélo + riz + salade aipo tomates cerises |
 | girasoli-pesto | 2026-10-14 | Déj mercredi (Clément seul, Lola bureau) : girasoli pesto frigo + soupe + salade aipo tomates cerises |
 | ravioli-bolonhesa | 2026-10-12 | Déj lundi : ravioli Rana frigo à la bolognaise + soupe + reste salade verte (finie) |

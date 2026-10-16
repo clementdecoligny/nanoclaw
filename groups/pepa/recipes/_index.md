@@ -74,7 +74,8 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | brocolis-rotis-parmesan.md | Brocolis rôtis au parmesan | veg / side | low | components | Technique choux de Bruxelles adaptée. Four chaud, cuisson courte, kid-approved. |
 | patates-douces-roties-sauce-tahini-citron.md | Patates Douces Rôties Sauce Tahini-Citron | veg / side | low | no | 35 min. Four 220°C, sauce tahini-citron-ail. Demandé par Clément 09/10. |
 | compote-pommes-gingembre.md | Compote Pommes-Gingembre | vegetarian | low | components | Rescue surplus pommes. Granola du matin ou dessert enfants. Congèle bien. Demandé par Clément 12/10. |
-| rouleaux-pimientos-ricotta-feta-atum.md | Rouleaux Pimientos Ricotta Feta Atún | fish / starter-dinner | very low | no | Sans cuisson, 10 min. Pimientos assados + farce ricotta/feta/thon. Demandé par Clément 15/10 (aliments frais à écouler). |
+| rouleaux-pimientos-ricotta-feta-atum.md | Rouleaux Pimientos Ricotta Feta Atún | fish / starter-dinner | very low | no | Sans cuisson, 10 min. Pimientos assados + farce ricotta/feta/thon. Demandé par Clément 15/10 (aliments frais à écouler). Adapté en tartines le 15/10 (pimientos en lamelles, pas entiers). |
+| sopa-chuchu.md | Crème de Chuchu (Chayote) | soup / veg | low | full_dish | 35 min. Chuchu + oignon + ail + caldo legumes. Goût doux, texture lisse. Congèle bien. Panier 16/10. |
 
 ---
 
