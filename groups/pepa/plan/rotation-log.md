@@ -6,6 +6,13 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| salade-pois-chiches-feta | 2026-10-18 | Déj picnic dimanche : préparée samedi soir, 3 salades pour l'excursion |
+| salade-lentilles-saumon-avocat-feta | 2026-10-18 | Déj picnic dimanche : préparée samedi soir (sauf avocat), 3 salades pour l'excursion |
+| salade-betteraves | 2026-10-18 | Déj picnic dimanche (variante feta) : préparée samedi soir, 3 salades pour l'excursion |
+| salade-riz-thon-oeufs-durs | 2026-10-17 | Déj picnic samedi (excursion) : riz + thon + œufs durs, avec baba ganoush + pain + crudités |
+| pasta-alla-norma | 2026-10-16 | Dîner vendredi (plan suivi par défaut, pas de correction signalée) : batch 2 aubergines frites + sauce tomate + ricotta/parmesan |
+| baba-ganoush-tomates-roties | 2026-10-16 | Batch vendredi (3 aubergines + 300g tomates cerises panier), au four 250°C. Prévu déj picnic samedi + dip prochains jours |
+| sopa-chuchu | 2026-10-16 | Batch vendredi (nouvelle recette, chayottes panier + achetées en plus). Fournée congélo |
 | tartines-pimientos-ricotta-feta-atum | 2026-10-15 | Dîner jeudi : adapté en tartines (pimientos en lamelles, pas de rouleaux) + confit rapide pimientos + avocat. Demandé par Clément, aliments frais à écouler. Bife de frango prévu non fait. |
 | robalo-ao-forno | 2026-10-14 | Dîner mercredi (suggéré, plan suivi par défaut, pas de correction signalée) : robalo congélo + riz + salade aipo tomates cerises |
 | girasoli-pesto | 2026-10-14 | Déj mercredi (Clément seul, Lola bureau) : girasoli pesto frigo + soupe + salade aipo tomates cerises |

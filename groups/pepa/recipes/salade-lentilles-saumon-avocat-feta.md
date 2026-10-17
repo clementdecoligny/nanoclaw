@@ -77,5 +77,5 @@
 ## Notes
 - Sans avocat : se conserve 2–3 jours au frigo sans problème
 - Avec avocat : à manger le jour même
-- Variante : remplacer saumon fumé par saumon frais grillé
+- Variante : remplacer saumon fumé par saumon frais grillé, ou sans poisson (lentilles + avocat + feta + poivron suffisent, légumineuse = protéine) si pas de saumon en stock (fait le 18/10, thon réservé à la salade pois chiches)
 - Câpres : on a un pot en stock (petit bocal non identifié 108g — à confirmer)

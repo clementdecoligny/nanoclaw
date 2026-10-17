@@ -55,7 +55,7 @@ _Last updated: 2026-10-09 (sync manuel facture Continente 09/10 — script sync-
 | Chips Lays Gourmet (grands paquets) | 4 | |
 | Tortillas de blé | 2 × 8 (16) | Anciens paquets (05/09) finis — remplacés par 2×8 achetés par Clément 23/09 |
 | Tortitas Milho Bicentury 130g | 2 × 130g | Livraison 24/09 |
-| Prepara Panquecas Pangudi 200g | 2 × 200g | Livraison 24/09 |
+| Prepara Panquecas Pangudi 200g | 1 × 200g | Livraison 24/09 — 1 bouteille finie déj picnic 17/10 |
 | Caju Torrado Sem Sal CNT 175g | 1 × 175g | Livraison 04/09 |
 | Pinhão Nacional Os Originais | 1 sachet | Livraison 04/09 (taille TBC) |
 | Sementes de Abobo Bio 200g | 1 × 200g | Livraison 04/09 — graines de courge |
@@ -228,12 +228,14 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Piments rouges | — | Qté non précisée |
 | Aipo (céleri branche) | 500 g | |
 | Mâche | 0 | ❌ Finie déj lundi 12/10 |
-| Tomates cerises | 300g | Panier 16/10 |
-| Chayottes (chuchu) | 2 | Panier 16/10 — prévu soupe batch |
-| Salades vertes | 2 | Panier 16/10 |
-| Aubergines | 5 | 3 déjà en stock + 2 panier 16/10 — urgence signalée par Clément, prévu batch aujourd'hui |
+| Tomates cerises | 0 | ❌ Panier 16/10, utilisées batch baba ganoush (tomates rôties) 16/10, finies déj picnic 17/10 |
+| Chayottes (chuchu) | 0 | ❌ Panier 16/10 + achat complément, cuisinées batch sopa-chuchu 16/10 (congélo) |
+| Salades vertes | 0 | ❌ Finies déj picnic samedi 17/10 |
+| Aubergines | 0 | ❌ Les 5 utilisées batch 16/10 (2 → pasta alla norma, 3 → baba ganoush) |
+| Thon en boîte (atum) | ? | Clément signalé en achetant local 16/10, qté non confirmée — besoin pour salade riz thon picnic samedi |
+| Basilic frais | ? | Clément signalé en achetant local 16/10, qté non confirmée — utilisé pasta alla norma 16/10 |
 | Citrons verts | 6 | |
-| Citron jaune | 1 | |
+| Citron jaune | 1 + achat 16/10 (qté TBC) | 1 utilisé baba ganoush 16/10 — Clément signalé en acheter 2-3 de plus |
 | Kiwi | 1 | |
 | Orange | 1 | |
 | Chou | — | Pour caldo verde, qté non précisée |
@@ -293,6 +295,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Queijo Mini Mozzarella Auchan | 2 | Achat local 12/10 |
 | Queijo em Fatias 2×200g | 1 pack | Achat local 12/10 |
 | Nutella 350g | 1 | Achat local 12/10 |
+| Baba Ganoush aux Tomates Rôties | 0 | ❌ Fini déj picnic samedi 17/10 |
 
 ---
 
@@ -323,6 +326,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Feijoada angolana (Branca) | 1–2 tupperwares | Confirmé 27/06 (qté exacte TBC) |
 | Soupe / caldo | plusieurs tupperwares | ✅ Confirmé 12/07 par Clément — sopa supermarchée utilisée 27/07 |
+| Crème de Chuchu (sopa-chuchu) | Nouvelle fournée (qté TBC) | Batch 16/10, congélo |
 | Edamame | 2 sachets | Confirmé 27/06 |
 | Feijão verde (haricots verts surgelés) | 1 sachet | Confirmé 27/06 |
 | Alcachofas troceadas (artichauts) | 1 sachet | Confirmé 27/06 |

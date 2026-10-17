@@ -1,3 +1,40 @@
+# Plan semaine — 16 → 19 octobre 2026
+
+_Mis à jour : 2026-10-17_
+_Contexte : panier reçu ven 16/10 (2 chayottes, 2 salades vertes, 300g tomates cerises, 2 aubergines, 2 patates douces). Urgence aubergines (5 au total avec stock existant) → batch fait vendredi._
+
+## Vendredi 16 octobre
+
+| | |
+|---|---|
+| Déjeuner | Dehors (famille) |
+| Dîner | ✅ Pasta alla Norma (2 aubergines frites, batch) + soupe |
+
+**Batch vendredi** : 5 aubergines (2 → pasta alla norma dîner vendredi, 3 → baba ganoush + tomates rôties, dip picnic/prochains jours) + Crème de Chuchu (chayottes panier + achat complément, fournée congélo).
+
+## Samedi 17 octobre *(pique-nique excursion)*
+
+| | |
+|---|---|
+| Déjeuner | Baba Ganoush + pain + crudités (salade verte, aipo) + salade riz thon œufs durs (picnic, sans soupe) |
+| Dîner | Dehors (famille) |
+
+## Dimanche 18 octobre *(pique-nique, annoncé par Clément samedi 22h45)*
+
+| | |
+|---|---|
+| Déjeuner | Picnic, sans soupe : salade pois chiches feta + salade lentilles saumon avocat feta + salade betteraves (feta). Préparées samedi soir, avocat ajouté dimanche sur place. |
+| Dîner | Dourada (congélo) + patates douces rôties sauce tahini-citron (panier) + soupe (maintenu, sauf dîner dehors signalé) |
+
+## Lundi 19 octobre *(Lola bureau)*
+
+| | |
+|---|---|
+| Déjeuner | Clément seul : Girasoli Capra & Miele (frigo) + soupe |
+| Dîner | Pollo al Mole Almendrado con Arroz + soupe (école lundi = porc, pas de répétition) |
+
+---
+
 # Plan semaine — 4 → 11 septembre 2026
 
 _Mis à jour : 2026-09-08_
