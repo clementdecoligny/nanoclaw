@@ -23,7 +23,7 @@ _Contexte : panier reçu ven 16/10 (2 chayottes, 2 salades vertes, 300g tomates 
 
 | | |
 |---|---|
-| Déjeuner | Picnic, sans soupe : salade pois chiches feta + salade lentilles saumon avocat feta + salade betteraves (feta). Préparées samedi soir, avocat ajouté dimanche sur place. |
+| Déjeuner | ✅ Picnic, sans soupe : seulement salade pois chiches feta (faite). Salade lentilles saumon avocat feta + salade betteraves (feta) non faites, reportées (signalé par Clément 18/10 9h23). Betteraves (bocal) et lentilles (Ferbar 380g) toujours en stock, non entamés. |
 | Dîner | Dourada (congélo) + patates douces rôties sauce tahini-citron (panier) + soupe (maintenu, sauf dîner dehors signalé) |
 
 ## Lundi 19 octobre *(Lola bureau)*

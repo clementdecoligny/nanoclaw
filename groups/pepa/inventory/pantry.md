@@ -146,7 +146,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Seitan | 2 × 250g | |
+| Seitan | 1 × 250g | 1×250g utilisé dîner dimanche 18/10 (sauté sésame-teriyaki) |
 
 ### Poissons (conserves)
 
@@ -276,7 +276,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Pâtes fraîches (achetées, non consommées) | ? | Signalé par Clément 05/10 — type et quantité non précisés |
 | Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
-| Tofu Biológico Seara 250g | 1 × 250g | Livraison 04/09 |
+| Tofu Biológico Seara 250g | 0 | ❌ Périmé depuis 31/07/2026 (signalé par Clément 18/10), jeté — ne pas utiliser |
 | Ravioli Abobora Ceb.Caram.250g | 4 × 250g | 1×250g Livraison 04/09 + 2×250g Livraison 24/09 + 1×250g Livraison 09/10 |
 | Gran Ravioli Trufas BR.250g | 0 | ❌ Consommé Lun midi/soir 07/09 (enfants) |
 | Ravioli Ricotta Espinafres 250g | 1 × 250g | Livraison 24/09 |

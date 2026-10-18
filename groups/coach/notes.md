@@ -203,3 +203,7 @@ Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient i
 - Emojis (🎯💪⚠️✅ etc.) et sauts de ligne fréquents — viser une lecture en diagonale sur téléphone, pas un rapport à lire linéairement.
 - Garder le contenu analytique (chiffres, comparaison au plan) mais l'envelopper dans un ton engagé — reconnaître l'effort avant de décortiquer les données.
 - Avant d'envoyer un retour `/done` ou tout message structuré : relire et vérifier qu'aucun bloc de texte ne dépasse 2 lignes sans rupture (puce, saut de ligne, gras).
+
+## Préférence — pas de pédagogie non sollicitée sur les métriques (18 octobre 2026)
+
+Clément a qualifié une explication détaillée de la dérive aérobie (découpage FC/vitesse, seuils de durée minimum) de **"trop expert", "ça ne m'intéresse pas", "du bruit"**. Contrairement à l'instruction générale "toujours expliquer le pourquoi", ne pas développer une explication technique en profondeur par défaut — rester sur le verdict actionnable (fait / pas fait, bon signe / signal à surveiller). Développer la mécanique seulement si Clément pose explicitement la question. Dérive aérobie : retirée des comptes-rendus `/done` depuis le 18/10 (sorties courtes de reconditionnement cheville, pas de signal fiable) — à reprendre quand les sorties repassent au-dessus de 2h ou qu'un nouvel objectif structuré existe.

@@ -59,6 +59,7 @@ _Last updated: 2026-10-12 (nettoyage : retrait des items confirmés en stock par
 | Anacardos sin sal | ×1 | ✅ commandé 08/10 | Ajouté comme Caju Torrado sem Sal |
 | Amendoim sem casca | ×1 | - | Non dispo Continente |
 | Levadura nutricional | ×1 | - | Non dispo Continente |
+| Sauce teriyaki | ×1 | - | Stock bas (~100ml), signalé par Clément 18/10 après dîner seitan sésame-teriyaki |
 
 ---
 

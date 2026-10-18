@@ -76,6 +76,8 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | compote-pommes-gingembre.md | Compote Pommes-Gingembre | vegetarian | low | components | Rescue surplus pommes. Granola du matin ou dessert enfants. Congèle bien. Demandé par Clément 12/10. |
 | rouleaux-pimientos-ricotta-feta-atum.md | Rouleaux Pimientos Ricotta Feta Atún | fish / starter-dinner | very low | no | Sans cuisson, 10 min. Pimientos assados + farce ricotta/feta/thon. Demandé par Clément 15/10 (aliments frais à écouler). Adapté en tartines le 15/10 (pimientos en lamelles, pas entiers). |
 | sopa-chuchu.md | Crème de Chuchu (Chayote) | soup / veg | low | full_dish | 35 min. Chuchu + oignon + ail + caldo legumes. Goût doux, texture lisse. Congèle bien. Panier 16/10. |
+| tofu-poele-sesame-teriyaki-riz-edamame.md | Tofu Poêlé Sésame-Teriyaki, Riz, Edamame | veg / Asian | low | no | 20 min. Tofu + edamame + riz, sauce teriyaki/soja/sésame. Léger, pas testé. Demandé 18/10. |
+| seitan-saute-sesame-teriyaki-riz-edamame.md | Seitan Sauté Sésame-Teriyaki, Riz, Edamame | veg / Asian | low | no | 15 min. Variante tofu → seitan (tofu périmé 18/10). Edamame + riz, sauce teriyaki/soja/sésame. |
 
 ---
 

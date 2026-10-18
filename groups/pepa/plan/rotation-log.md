@@ -6,9 +6,7 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
-| salade-pois-chiches-feta | 2026-10-18 | Déj picnic dimanche : préparée samedi soir, 3 salades pour l'excursion |
-| salade-lentilles-saumon-avocat-feta | 2026-10-18 | Déj picnic dimanche : préparée samedi soir (sauf avocat), 3 salades pour l'excursion |
-| salade-betteraves | 2026-10-18 | Déj picnic dimanche (variante feta) : préparée samedi soir, 3 salades pour l'excursion |
+| salade-pois-chiches-feta | 2026-10-18 | Déj picnic dimanche : seule salade faite (les 2 autres annulées, signalé par Clément 18/10 9h23) |
 | salade-riz-thon-oeufs-durs | 2026-10-17 | Déj picnic samedi (excursion) : riz + thon + œufs durs, avec baba ganoush + pain + crudités |
 | pasta-alla-norma | 2026-10-16 | Dîner vendredi (plan suivi par défaut, pas de correction signalée) : batch 2 aubergines frites + sauce tomate + ricotta/parmesan |
 | baba-ganoush-tomates-roties | 2026-10-16 | Batch vendredi (3 aubergines + 300g tomates cerises panier), au four 250°C. Prévu déj picnic samedi + dip prochains jours |
