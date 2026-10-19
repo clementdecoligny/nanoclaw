@@ -24,14 +24,20 @@ _Contexte : panier reçu ven 16/10 (2 chayottes, 2 salades vertes, 300g tomates 
 | | |
 |---|---|
 | Déjeuner | ✅ Picnic, sans soupe : seulement salade pois chiches feta (faite). Salade lentilles saumon avocat feta + salade betteraves (feta) non faites, reportées (signalé par Clément 18/10 9h23). Betteraves (bocal) et lentilles (Ferbar 380g) toujours en stock, non entamés. |
-| Dîner | Dourada (congélo) + patates douces rôties sauce tahini-citron (panier) + soupe (maintenu, sauf dîner dehors signalé) |
+| Dîner | ✅ Changé en dernière minute (burgers au restau au déjeuner → plus léger demandé) : seitan sauté sésame-teriyaki + riz + edamame + soupe (`recipes/seitan-saute-sesame-teriyaki-riz-edamame.md`). Dourada et patates douces non utilisées, reportées. Tofu prévu initialement périmé depuis 31/07, jeté. |
 
 ## Lundi 19 octobre *(Lola bureau)*
 
 | | |
 |---|---|
 | Déjeuner | Clément seul : Girasoli Capra & Miele (frigo) + soupe |
-| Dîner | Pollo al Mole Almendrado con Arroz + soupe (école lundi = porc, pas de répétition) |
+| Dîner | ❌ Dehors (famille, signalé 19/10 8h19). Pollo al Mole Almendrado reporté à un autre soir. |
+
+## Mardi 20 octobre
+
+| | |
+|---|---|
+| Dîner | Dehors (famille, signalé 19/10 8h19) |
 
 ---
 

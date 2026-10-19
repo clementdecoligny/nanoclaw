@@ -78,6 +78,8 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | sopa-chuchu.md | Crème de Chuchu (Chayote) | soup / veg | low | full_dish | 35 min. Chuchu + oignon + ail + caldo legumes. Goût doux, texture lisse. Congèle bien. Panier 16/10. |
 | tofu-poele-sesame-teriyaki-riz-edamame.md | Tofu Poêlé Sésame-Teriyaki, Riz, Edamame | veg / Asian | low | no | 20 min. Tofu + edamame + riz, sauce teriyaki/soja/sésame. Léger, pas testé. Demandé 18/10. |
 | seitan-saute-sesame-teriyaki-riz-edamame.md | Seitan Sauté Sésame-Teriyaki, Riz, Edamame | veg / Asian | low | no | 15 min. Variante tofu → seitan (tofu périmé 18/10). Edamame + riz, sauce teriyaki/soja/sésame. |
+| gateau-chocolat-leger-aere.md | Gâteau au Chocolat Léger et Aéré | dessert | medium | ⭐⭐ | 40 min. Blancs montés, pas un moelleux dense. Kid-approved. Demandé 19/10. |
+| hummus-classique.md | Hummus Classique | veg / dip | very low | ⭐⭐⭐ | 10 min. Pois chiches cuits + tahini + ail + citron + cumin. 4-5 jours frigo. Demandé 19/10 (500g pois chiches). |
 
 ---
 
