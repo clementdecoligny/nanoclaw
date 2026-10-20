@@ -31,6 +31,7 @@ nav:
     - Alain — Executive Assistant: agents/alain.md
     - Edmond — Finance: agents/edmond.md
     - Coach — Cycling: agents/coach.md
+    - Lenny — Job Search PM: agents/lenny.md
 
 markdown_extensions:
   - admonition

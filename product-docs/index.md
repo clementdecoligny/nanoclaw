@@ -14,6 +14,7 @@ Instead of one general-purpose assistant that knows a little about everything, N
 | [Alain](agents/alain.md) | AlainLisboaBot | Personal executive assistant — inbox, schedule, admin follow-ups |
 | [Edmond](agents/edmond.md) | DantesLisboaBot | Personal finance — expense tracking, salary management, investments |
 | [Coach](agents/coach.md) | Coach | Ultra-endurance cycling — periodization, HR-based training plans, activity review, Garmin push |
+| [Lenny](agents/lenny.md) | Lenny | Job search project manager — call capture into the tracker sheet, daily and weekly ritual prompts, morning first-action nudge |
 
 ## How it works
 

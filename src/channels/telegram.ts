@@ -339,3 +339,12 @@ registerChannelAdapter('telegram_coach', {
     return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_COACH, 'telegram_coach');
   },
 });
+
+// Lenny bot — Job Move 2027 project-manager agent.
+registerChannelAdapter('telegram_lenny', {
+  factory: () => {
+    const env = readEnvFile(['TELEGRAM_BOT_TOKEN_LENNY']);
+    if (!env.TELEGRAM_BOT_TOKEN_LENNY) return null;
+    return createTelegramChannelAdapter(env.TELEGRAM_BOT_TOKEN_LENNY, 'telegram_lenny');
+  },
+});
