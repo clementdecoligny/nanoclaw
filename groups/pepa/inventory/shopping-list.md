@@ -60,6 +60,8 @@ _Last updated: 2026-10-12 (nettoyage : retrait des items confirmés en stock par
 | Amendoim sem casca | ×1 | - | Non dispo Continente |
 | Levadura nutricional | ×1 | - | Non dispo Continente |
 | Sauce teriyaki | ×1 | - | Stock bas (~100ml), signalé par Clément 18/10 après dîner seitan sésame-teriyaki |
+| Feijão Branco (haricots blancs, boîte) | ×1 | - | Pour minestrone batch 4L 20/10 — stock actuel (1×468g) insuffisant pour les 600g nécessaires |
+| Tomilho (thym séché) | ×1 | - | Pas en stock — besoin pour minestrone batch 4L 20/10 |
 
 ---
 
@@ -100,5 +102,10 @@ _Last updated: 2026-10-12 (nettoyage : retrait des items confirmés en stock par
 | Pão de abóbora | ×5 pães | - | Lola 18/08 — padaria local |
 | Œufs | — | ✅ acheté | 12 achetés par Clément 17/09 — retiré |
 | Lixívia (eau de javel) | ×1 | ✅ acheté | Acheté 29/06 |
+| Cenoura | ×5 | - | Pour minestrone batch 4L 20/10 — pas de carottes en stock frais |
+| Courgette | ×3 | - | Pour minestrone batch 4L 20/10 — pas en stock frais |
+| Pimento (rouge ou vert) | ×2 | - | Pour minestrone batch 4L 20/10 — pas en stock frais |
+| Tomate (frais) | ×6 | - | Pour minestrone batch 4L 20/10 — ou remplacer par conserve si pas dispo |
+| Manjericão (basilic frais) | ×1 bouquet | - | Pour minestrone batch 4L 20/10 — stock actuel qté incertaine |
 
 ---

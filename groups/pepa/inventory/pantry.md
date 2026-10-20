@@ -226,7 +226,7 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Oignons rouges | 2 | |
 | Têtes d'ail | 3-4 | |
 | Piments rouges | — | Qté non précisée |
-| Aipo (céleri branche) | 500 g | |
+| Aipo (céleri branche) | 0 | ❌ Pas disponible (signalé par Clément 20/10, stock 500g précédent inexact) |
 | Mâche | 0 | ❌ Finie déj lundi 12/10 |
 | Tomates cerises | 0 | ❌ Panier 16/10, utilisées batch baba ganoush (tomates rôties) 16/10, finies déj picnic 17/10 |
 | Chayottes (chuchu) | 0 | ❌ Panier 16/10 + achat complément, cuisinées batch sopa-chuchu 16/10 (congélo) |
