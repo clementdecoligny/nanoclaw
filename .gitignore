@@ -22,11 +22,11 @@ groups/*/.heartbeat-bootstrapped
 groups/*/HEARTBEAT.md
 groups/*/attachments/
 groups/alain/git-branch-hygiene.json
-# Second brain (docs/features/second-brain.md). Alain's holds full clinical
-# detail for the family by explicit decision. scripts/backup-db.sh runs
-# `git add groups/` and pushes to origin nightly — these entries are the only
-# thing keeping medical records off the remote. Do not remove without reading
-# the spec.
+# Private per-group knowledge files. scripts/backup-db.sh runs `git add groups/`
+# and pushes to origin nightly — these entries are the only thing keeping such
+# files off the remote. The second-brain feature that created them was removed
+# on 2026-10-20, but the rails stay: any group with skills:"all" could write
+# here again, and groups/alain/wiki/ still holds clinical detail on disk.
 #
 # Globbed, not per-group: the wiki skill is mounted into every group with
 # skills:"all" (all of them), so any group can grow a wiki/. A per-group entry

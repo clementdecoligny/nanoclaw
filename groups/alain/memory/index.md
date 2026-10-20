@@ -20,7 +20,6 @@ Calendrier partagé famille : clementdecoligny@gmail.com (Clément reader, Lola 
 
 ## Règles de travail (standing instructions)
 
-- **Répertoire dans chaque passe** : toute ingestion agenda ou Gmail doit aussi mettre à jour wiki/personnes.md avec les contacts nouveaux.
 - **Montants de factures** : ne pas extraire ni signaler — Clément gère ça avec Edmond.
 - **Edmond** : outil ou personne que Clément utilise pour le suivi des factures. Identité exacte inconnue.
 
