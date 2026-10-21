@@ -83,6 +83,8 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 | 31 | Phase to-do block | Rows 17–31 only (tables below it are protected); `first-empty` scans that window; full block → error, owner drops/merges or asks for a structural session |
 | 32 | To-do due date | Owner's date (basis `Owner`) or the phase exit date (basis `Default`); never invented |
 | 33 | To-do challenge | Agent decides phase/outcome/duplicate itself; one-line echo + OK before every write; asks only on ambiguity or no matching outcome |
+| 34 | Sheet is the only record | Every job-search fact goes to a sheet tab; memory = agent bookkeeping only. No home → agent asks the owner, never parks it in memory |
+| 35 | Resources | No Resources tab: a resource becomes a phase to-do ("Try/Use X for …") with links in F Notes, or a link on an existing to-do |
 
 ## Sheet contract
 
@@ -136,7 +138,7 @@ Rules enforced inside `write`: two known spreadsheet IDs only; tab + column whit
 - `src/channels/telegram.ts` — register `telegram_lenny` (+ `TELEGRAM_BOT_TOKEN_LENNY` in `.env`).
 - `groups/lenny/instructions.prepend.md` — standing rules (brief §3, decisions above).
 - `container/skills/job-sheet/` (`lib.ts`, `lib.test.ts`, `sheet.ts`, `SKILL.md`).
-- `groups/lenny/memory/` — durable notes (row refs, last pivot statuses, first action).
+- `groups/lenny/memory/` — agent bookkeeping only (row refs, last pivot statuses, nudge flags); no job-search facts.
 - `product-docs/agents/lenny.md` — new page.
 - Host: `~/job-move-2027/charter.md`, `RUNBOOK.md`.
 

@@ -41,6 +41,10 @@ owner's product career thinking. The agent never claims to be him.
   sheet's own rules. Formula columns, structure and settings are never touched.
 - Other agents are blocked from the Sheets API at the credential gateway.
 - The charter is mounted read-only.
+- The sheet is the only record: calls, contacts, to-dos, resources, pay data and
+  learnings all go there. Lenny's memory holds only his own bookkeeping (row
+  references, last statuses). Anything with no place on the sheet is raised with
+  the owner, never kept in memory instead.
 - Lenny never decides a pivot, never writes the owner's core material (career
   positioning, pitches, interview answers) unless asked, and never invents data.
 
@@ -51,3 +55,5 @@ owner's product career thinking. The agent never claims to be him.
   with a warning so the owner can add it.
 - No holiday pause or quiet hours.
 - Each phase holds at most 15 to-dos; more needs a manual sheet change.
+- No separate resources list: a tool or link is saved as a to-do ("Try X for …")
+  in the phase it helps, with the link in its notes.
