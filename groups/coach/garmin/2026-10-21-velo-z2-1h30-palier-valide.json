@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h30 (palier validé, pas de progression)",
+  "date": "2026-10-21",
+  "description": "Reprise cheville. Consolidation du palier de lundi 19/10 — pas de nouvelle progression. Stop au moindre signal.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — échauffement"},
+    {"type": "interval", "durationSec": 3900, "hrMin": 107, "hrMax": 128, "note": "Z2 — terrain plat, assis"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1 — retour au calme"}
+  ]
+}

@@ -44,7 +44,7 @@ _Contexte : panier reçu ven 16/10 (2 chayottes, 2 salades vertes, 300g tomates 
 
 | | |
 |---|---|
-| Déjeuner | Clément seul : minestrone (nouveau batch) en plat complet + pain/parmesan |
+| Déjeuner | ✅ Changé : restes (Clément seul), pas de soupe (signalé 21/10 14h23). Minestrone (batch) toujours intact, reporté. |
 | Dîner | Pollo al Mole Almendrado + riz + avocat (`recipes/pollo-mole-almendrado-arroz.md`) — bife frango extrafino congélo (501g, 2 tuppers) + bocal Mole Almendrado (235g, en stock). Reporté de lundi puis mardi. Soupe en entrée (minestrone ou congélo). |
 
 _École mercredi : Agrião / Lasanha de Vitela → pas de répétition avec le dîner (poulet, pas de pâtes)._
