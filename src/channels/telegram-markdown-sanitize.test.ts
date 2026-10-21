@@ -1,78 +1,53 @@
 import { describe, it, expect } from 'vitest';
-import { sanitizeTelegramLegacyMarkdown } from './telegram-markdown-sanitize.js';
+import { createTelegramAdapter } from '@chat-adapter/telegram';
+import { prepareTelegramMarkdown, telegramOutboundText } from './telegram-markdown-sanitize.js';
 
-describe('sanitizeTelegramLegacyMarkdown', () => {
-  it('downgrades CommonMark **bold** to legacy *bold*', () => {
-    expect(sanitizeTelegramLegacyMarkdown('**Host path**')).toBe('*Host path*');
+// What the bridge actually hands Telegram: our transform, then the adapter's
+// CommonMark → MarkdownV2 converter.
+const converter = (createTelegramAdapter({ botToken: '1:test', mode: 'polling' }) as any).formatConverter;
+const sent = (agentText: string): string => converter.renderPostable({ markdown: telegramOutboundText(agentText) });
+
+describe('Telegram outbound formatting (end to end)', () => {
+  it('**bold** arrives as MarkdownV2 bold, not italic', () => {
+    expect(sent('**Countdown:** 31 Oct')).toBe('*Countdown:* 31 Oct');
   });
 
-  it('downgrades CommonMark __bold__ to legacy _italic_', () => {
-    expect(sanitizeTelegramLegacyMarkdown('__label__')).toBe('_label_');
+  it('*italic* arrives as MarkdownV2 italic', () => {
+    expect(sent('an *aside*')).toBe('an _aside_');
   });
 
-  it('leaves balanced legacy *bold* and _italic_ alone', () => {
-    expect(sanitizeTelegramLegacyMarkdown('a *b* c _d_ e')).toBe('a *b* c _d_ e');
+  it('bold inside bullets stays bold', () => {
+    expect(sent('- **Due:** nothing\n- **First action:** call')).toBe('• *Due:* nothing\n• *First action:* call');
   });
 
-  it('preserves inline code spans untouched', () => {
-    const input = 'see `file_name.py` and `**not bold**` here';
-    expect(sanitizeTelegramLegacyMarkdown(input)).toBe(input);
+  it('underscores in plain words are escaped, not italic', () => {
+    expect(sent('file_name here')).toBe('file\\_name here');
   });
 
-  it('preserves fenced code blocks untouched', () => {
-    const input = '```\nfoo_bar **baz**\n```';
-    expect(sanitizeTelegramLegacyMarkdown(input)).toBe(input);
+  it('internal tags are stripped', () => {
+    expect(sent('<internal>note to self</internal>Hello')).toBe('Hello');
+  });
+});
+
+describe('prepareTelegramMarkdown', () => {
+  it('leaves CommonMark emphasis for the adapter to convert', () => {
+    expect(prepareTelegramMarkdown('**a** and *b*')).toBe('**a** and *b*');
   });
 
-  it('strips formatting chars on odd delimiter count (unbalanced *)', () => {
-    expect(sanitizeTelegramLegacyMarkdown('a * b *c*')).toBe('a  b c');
+  it('replaces dash/plus list bullets with •', () => {
+    expect(prepareTelegramMarkdown('- one\n+ two')).toBe('• one\n• two');
   });
 
-  it('strips formatting chars on odd delimiter count (unbalanced _)', () => {
-    expect(sanitizeTelegramLegacyMarkdown('file_name has _one italic_')).toBe('filename has one italic');
+  it('preserves indentation of nested bullets', () => {
+    expect(prepareTelegramMarkdown('  - nested')).toBe('  • nested');
   });
 
-  it('strips brackets when unbalanced', () => {
-    expect(sanitizeTelegramLegacyMarkdown('see [docs here')).toBe('see docs here');
-  });
-
-  it('leaves matched brackets (e.g. links) alone when counts balance', () => {
-    const input = 'see [docs](https://example.com) for more';
-    expect(sanitizeTelegramLegacyMarkdown(input)).toBe(input);
-  });
-
-  it('fixes the real failing message', () => {
-    const input =
-      'Sure! What do you want to mount, and where should it appear inside the container?\n\n' +
-      '- **Host path** (on your machine): e.g. `~/projects/webapp`\n' +
-      '- **Container path**: e.g. `workspace/webapp`\n' +
-      '- **Read-only or read-write?**';
-    const out = sanitizeTelegramLegacyMarkdown(input);
-    expect(out).not.toContain('**');
-    expect(out).toContain('*Host path*');
-    expect(out).toContain('`~/projects/webapp`');
-    expect((out.match(/\*/g) ?? []).length % 2).toBe(0);
+  it('leaves code blocks and spans untouched', () => {
+    const input = '```\n- not a bullet **x**\n```\nand `- y`';
+    expect(prepareTelegramMarkdown(input)).toBe(input);
   });
 
   it('is a no-op on empty string', () => {
-    expect(sanitizeTelegramLegacyMarkdown('')).toBe('');
-  });
-
-  it('replaces dash list bullets with • so the adapter does not re-emit `*` markers', () => {
-    expect(sanitizeTelegramLegacyMarkdown('- one\n- two')).toBe('• one\n• two');
-  });
-
-  it('preserves indented list structure', () => {
-    expect(sanitizeTelegramLegacyMarkdown('  - nested')).toBe('  • nested');
-  });
-
-  it('flattens Markdown horizontal rules (---, ***, ___)', () => {
-    const input = 'before\n---\n***\n___\nafter';
-    expect(sanitizeTelegramLegacyMarkdown(input)).toBe('before\n⎯⎯⎯\n⎯⎯⎯\n⎯⎯⎯\nafter');
-  });
-
-  it('leaves horizontal rules inside code blocks alone', () => {
-    const input = '```\n---\n```';
-    expect(sanitizeTelegramLegacyMarkdown(input)).toBe(input);
+    expect(prepareTelegramMarkdown('')).toBe('');
   });
 });

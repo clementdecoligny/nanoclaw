@@ -16,8 +16,7 @@ import { createMessagingGroup, getMessagingGroupByPlatform, updateMessagingGroup
 import { grantRole, hasAnyOwner } from '../modules/permissions/db/user-roles.js';
 import { upsertUser } from '../modules/permissions/db/users.js';
 import { createChatSdkBridge, type ReplyContext } from './chat-sdk-bridge.js';
-import { parseTextStyles, stripInternalTags } from '../text-styles.js';
-import { sanitizeTelegramLegacyMarkdown } from './telegram-markdown-sanitize.js';
+import { telegramOutboundText } from './telegram-markdown-sanitize.js';
 import { registerChannelAdapter } from './channel-registry.js';
 import type { ChannelAdapter, ChannelSetup, InboundMessage } from './adapter.js';
 import { tryConsume } from './telegram-pairing.js';
@@ -240,8 +239,7 @@ function createTelegramChannelAdapter(token: string, channelName: string = 'tele
     concurrency: 'concurrent',
     extractReplyContext,
     supportsThreads: false,
-    transformOutboundText: (text) =>
-      sanitizeTelegramLegacyMarkdown(parseTextStyles(stripInternalTags(text), 'telegram')),
+    transformOutboundText: telegramOutboundText,
     maxTextLength: 4000,
   });
   const botUsernamePromise = fetchBotUsername(token);
