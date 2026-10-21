@@ -10,6 +10,9 @@ import {
   validateWrite,
   rowWindow,
   PHASE_TABS,
+  keyColumn,
+  planTodoOrder,
+  checkTodoHeader,
   type Rule,
 } from './lib';
 
@@ -182,7 +185,7 @@ describe('validateWrite', () => {
 
 describe('phase to-do blocks', () => {
   const ok = (r: { errors: string[] }) => expect(r.errors).toEqual([]);
-  const status: Record<string, Rule> = { D: { kind: 'list', values: ['Not started', 'In progress', 'Done', 'Dropped'] } };
+  const status: Record<string, Rule> = { E: { kind: 'list', values: ['Not started', 'In progress', 'Done', 'Dropped'] } };
 
   test('all five phase tabs are writable', () => {
     expect(PHASE_TABS).toEqual(['1 Set up', '2 Listening tour', '3 Build pipeline', '4 Interview', '5 Close']);
@@ -193,35 +196,98 @@ describe('phase to-do blocks', () => {
     expect(rowWindow('Daily log')).toEqual({ first: 2, last: 500 });
   });
 
+  test('key column is B (Task) on phase tabs, A elsewhere', () => {
+    expect(keyColumn('3 Build pipeline')).toBe('B');
+    expect(keyColumn('Contacts')).toBe('A');
+  });
+
   test('firstEmptyRow inside a window (keyCol[0] is the window start)', () => {
     expect(firstEmptyRow(['a', 'b'], 17, 31)).toBe(19);
     expect(() => firstEmptyRow(Array(15).fill('x'), 17, 31)).toThrow(/17 and 31/);
   });
 
-  test('new to-do: A–F with real due date and exact status', () => {
+  test('new to-do: B–G with real due date and exact status', () => {
     ok(validateWrite('2 Listening tour', { kind: 'first-empty' }, {
-      A: 'Ask Ana for intro to Bob', B: '2026-11-05', C: 'Owner', D: 'Not started', E: 'Contacts', F: '',
+      B: 'Ask Ana for intro to Bob', C: '2026-11-05', D: 'Owner', E: 'Not started', F: 'Contacts', G: '',
     }, status));
   });
 
-  test('sort key G (formula) is never writable', () => {
-    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { A: 'x', G: '1' }, status);
-    expect(r.errors.join()).toMatch(/column G/);
+  test('first-empty needs the task (B)', () => {
+    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { C: '2026-11-05' }, status);
+    expect(r.errors.join()).toMatch(/column B/);
   });
 
-  test('due date must be YYYY-MM-DD', () => {
-    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { A: 'x', B: '5 Nov' }, status);
+  test('index A is set only through move/sort, never by write', () => {
+    const r = validateWrite('1 Set up', { kind: 'row', row: 19 }, { A: 2 }, status);
+    expect(r.errors.join()).toMatch(/column A/);
+  });
+
+  test('sort key H (formula) is never writable', () => {
+    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { B: 'x', H: '1' }, status);
+    expect(r.errors.join()).toMatch(/column H/);
+  });
+
+  test('due date (C) must be YYYY-MM-DD', () => {
+    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { B: 'x', C: '5 Nov' }, status);
     expect(r.errors.join()).toMatch(/date/i);
   });
 
-  test('status must match the dropdown', () => {
-    const r = validateWrite('1 Set up', { kind: 'row', row: 19 }, { D: 'done' }, status);
-    expect(r.errors.join()).toMatch(/column D/);
-    ok(validateWrite('1 Set up', { kind: 'row', row: 19 }, { D: 'Done' }, status));
+  test('status (E) must match the dropdown', () => {
+    const r = validateWrite('1 Set up', { kind: 'row', row: 19 }, { E: 'done' }, status);
+    expect(r.errors.join()).toMatch(/column E/);
+    ok(validateWrite('1 Set up', { kind: 'row', row: 19 }, { E: 'Done' }, status));
   });
 
   test('row:N outside 17–31 refused (protects gate checklist and tables)', () => {
-    expect(validateWrite('1 Set up', { kind: 'row', row: 9 }, { D: 'Done' }, status).errors.join()).toMatch(/17–31/);
-    expect(validateWrite('1 Set up', { kind: 'row', row: 35 }, { A: 'x' }, status).errors.join()).toMatch(/17–31/);
+    expect(validateWrite('1 Set up', { kind: 'row', row: 9 }, { E: 'Done' }, status).errors.join()).toMatch(/17–31/);
+    expect(validateWrite('1 Set up', { kind: 'row', row: 35 }, { B: 'x' }, status).errors.join()).toMatch(/17–31/);
+  });
+});
+
+describe('checkTodoHeader', () => {
+  test('accepts the # layout', () => {
+    expect(checkTodoHeader('1 Set up', ['#', 'Task', 'Due', 'Due basis', 'Status', 'Register', 'Notes', 'Sort key'])).toBeNull();
+  });
+  test('refuses the old layout (task in A) so nothing lands in the wrong column', () => {
+    expect(checkTodoHeader('1 Set up', ['Task', 'Due', 'Due basis', 'Status', 'Register', 'Notes', 'Sort key'])).toMatch(/# column is missing/);
+  });
+});
+
+describe('planTodoOrder', () => {
+  const slot = (row: number, index: unknown, task: unknown = `t${row}`) => ({ row, index, task });
+  const idx = (plan: { from: number; index: number }[]) => plan.map((p) => [p.from, p.index]);
+
+  test('orders by index, ties by current row, renumbers 1…n', () => {
+    const plan = planTodoOrder([slot(17, 3), slot(18, 1), slot(19, 1), slot(20, 7)], 17);
+    expect(idx(plan)).toEqual([[18, 1], [19, 2], [17, 3], [20, 4]]);
+    expect(plan.map((p) => p.to)).toEqual([17, 18, 19, 20]);
+  });
+
+  test('missing or non-numeric index goes to the end, in row order', () => {
+    const plan = planTodoOrder([slot(17, ''), slot(18, 2), slot(19, 'abc'), slot(20, '1')], 17);
+    expect(idx(plan)).toEqual([[20, 1], [18, 2], [17, 3], [19, 4]]);
+  });
+
+  test('empty slots (no task) are left out, even with a stale index', () => {
+    const plan = planTodoOrder([slot(17, 1), slot(18, 2, ''), slot(19, 3)], 17);
+    expect(idx(plan)).toEqual([[17, 1], [19, 2]]);
+  });
+
+  test('move a to-do to a position; others shift', () => {
+    const slots = [slot(17, 1), slot(18, 2), slot(19, 3), slot(20, 4)];
+    const plan = planTodoOrder(slots, 17, { row: 20, to: 2 });
+    expect(idx(plan)).toEqual([[17, 1], [20, 2], [18, 3], [19, 4]]);
+    expect(plan.find((p) => p.from === 20)?.to).toBe(18);
+  });
+
+  test('move down and past the end clamps to last', () => {
+    const slots = [slot(17, 1), slot(18, 2), slot(19, 3)];
+    expect(idx(planTodoOrder(slots, 17, { row: 17, to: 99 }))).toEqual([[18, 1], [19, 2], [17, 3]]);
+  });
+
+  test('move to a non-positive position or an empty row is refused', () => {
+    const slots = [slot(17, 1), slot(18, 2, '')];
+    expect(() => planTodoOrder(slots, 17, { row: 17, to: 0 })).toThrow(/position/);
+    expect(() => planTodoOrder(slots, 17, { row: 18, to: 1 })).toThrow(/no to-do/i);
   });
 });

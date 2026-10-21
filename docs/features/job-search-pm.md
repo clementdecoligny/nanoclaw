@@ -84,7 +84,8 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 | 32 | To-do due date | Owner's date (basis `Owner`) or the phase exit date (basis `Default`); never invented |
 | 33 | To-do challenge | Agent decides phase/outcome/duplicate itself; one-line echo + OK before every write; asks only on ambiguity or no matching outcome |
 | 34 | Sheet is the only record | Every job-search fact goes to a sheet tab; memory = agent bookkeeping only. No home → agent asks the owner, never parks it in memory |
-| 35 | Resources | No Resources tab: a resource becomes a phase to-do ("Try/Use X for …") with links in F Notes, or a link on an existing to-do |
+| 35 | Resources | No Resources tab: a resource becomes a phase to-do ("Try/Use X for …") with links in G Notes, or a link on an existing to-do |
+| 36 | To-do order (#) | Column A "#" on each phase to-do block (added 2026-10-21). Tool keeps # = 1…n and sorts the rows by it after every phase-tab write/move/sort; Done/Dropped keep their #; new to-do goes last. Lenny reorders on request (`move`, echo + OK) and runs `sort` before each morning nudge to apply hand edits. Dashboard next to-dos follow # (sort key H = # + row/10000, open only). Tool refuses phase tabs whose row 16 isn't the # header. Migration: `scripts/job-sheet/add-todo-index.ts <test\|live>` (idempotent), run on live at go-live |
 
 ## Sheet contract
 
@@ -99,7 +100,7 @@ Writable columns (everything else refused):
 | Learning log | A | A–D |
 | Weekly review | row where A = Monday of the week | C (override), D–H |
 | Daily log (new) | A | A–D (Date, Done, Learned, Tomorrow's first action) |
-| `1 Set up` … `5 Close` | A, rows 17–31 only | A–F (Task, Due, Due basis, Status, Register, Notes); G sort key never |
+| `1 Set up` … `5 Close` | B, rows 17–31 only | B–G (Task, Due, Due basis, Status, Register, Notes); A # only via `move`/`sort`; H sort key never |
 
 Reads: Dashboard ranges per brief §4; Settings dropdown lists row 39+.
 

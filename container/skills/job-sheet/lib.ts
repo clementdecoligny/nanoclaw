@@ -33,16 +33,32 @@ type TabSpec = {
   rowKeys: RowKey['kind'][];
   /** Rows this tab may be written in (default 2–500). */
   rows?: { first: number; last: number };
+  /** Column that marks a row as used (default A). */
+  keyCol?: string;
 };
 
-/** Phase tabs: only the TO-DOS block (rows 17–31, A–F). G is the sort-key formula. */
+/**
+ * Phase tabs: only the TO-DOS block, rows 17–31. A # (index: set by move/sort only),
+ * B Task (key), C Due, D Due basis, E Status, F Register, G Notes. H is the sort-key formula.
+ */
 export const PHASE_TABS = ['1 Set up', '2 Listening tour', '3 Build pipeline', '4 Interview', '5 Close'];
 const TODO_SPEC: TabSpec = {
-  writable: ['A', 'B', 'C', 'D', 'E', 'F'],
-  dates: ['B'],
+  writable: ['B', 'C', 'D', 'E', 'F', 'G'],
+  dates: ['C'],
   rowKeys: ['first-empty', 'row'],
   rows: { first: 17, last: 31 },
+  keyCol: 'B',
 };
+export const isPhaseTab = (tab: string) => PHASE_TABS.includes(tab);
+/** Row 16 header the column map above assumes. */
+export const TODO_HEADER = ['#', 'Task', 'Due', 'Due basis', 'Status', 'Register', 'Notes'];
+
+export function checkTodoHeader(tab: string, header: unknown[]): string | null {
+  const got = TODO_HEADER.map((_, i) => String(header[i] ?? '').trim());
+  return got.every((v, i) => v === TODO_HEADER[i])
+    ? null
+    : `${tab} row 16 is "${got.join(' | ')}", expected "${TODO_HEADER.join(' | ')}": the # column is missing; needs a Claude Code session`;
+}
 
 export const TABS: Record<string, TabSpec> = {
   Conversations: {
@@ -71,6 +87,10 @@ export const TABS: Record<string, TabSpec> = {
 
 export function rowWindow(tab: string): { first: number; last: number } {
   return TABS[tab]?.rows ?? { first: FIRST_ROW, last: LAST_ROW };
+}
+
+export function keyColumn(tab: string): string {
+  return TABS[tab]?.keyCol ?? 'A';
 }
 
 const isBlank = (v: unknown) => v === undefined || v === null || String(v).trim() === '';
@@ -150,8 +170,9 @@ export function validateWrite(
   }
   const cols = Object.keys(cells);
   if (cols.length === 0) errors.push('No cells to write');
-  if (key.kind === 'first-empty' && isBlank(cells.A)) {
-    errors.push('first-empty needs a value in key column A');
+  const keyCol = spec.keyCol ?? 'A';
+  if (key.kind === 'first-empty' && isBlank(cells[keyCol])) {
+    errors.push(`first-empty needs a value in key column ${keyCol}`);
   }
 
   for (const col of cols) {
@@ -184,4 +205,34 @@ export function validateWrite(
     }
   }
   return { errors, warnings };
+}
+
+export type TodoSlot = { row: number; index: unknown; task: unknown };
+export type TodoMove = { from: number; to: number; index: number };
+
+/**
+ * Final order of a phase to-do block. Used slots (task not blank) sort by index,
+ * ties and missing indices by current row (missing last); `move` then puts one
+ * to-do at a 1-based position. Returns each to-do's current row, new row and new index 1…n.
+ */
+export function planTodoOrder(
+  slots: TodoSlot[],
+  first: number,
+  move?: { row: number; to: number },
+): TodoMove[] {
+  const num = (v: unknown) => {
+    const n = typeof v === 'number' ? v : /^\s*\d+(\.\d+)?\s*$/.test(String(v ?? '')) ? Number(v) : NaN;
+    return Number.isFinite(n) ? n : Infinity;
+  };
+  const used = slots
+    .filter((s) => !isBlank(s.task))
+    .sort((a, b) => num(a.index) - num(b.index) || a.row - b.row);
+  if (move) {
+    if (!Number.isInteger(move.to) || move.to < 1) throw new Error(`Bad position ${move.to}: use 1 or more`);
+    const at = used.findIndex((s) => s.row === move.row);
+    if (at < 0) throw new Error(`Row ${move.row} has no to-do`);
+    const [moved] = used.splice(at, 1);
+    used.splice(Math.min(move.to, used.length + 1) - 1, 0, moved);
+  }
+  return used.map((s, i) => ({ from: s.row, to: first + i, index: i + 1 }));
 }

@@ -14,7 +14,7 @@ CMF, JSC and Mnookin are Clément's own terms from the charter and sheet: use th
 - **Sheet**: only through the `job-sheet` skill (`bun /app/skills/job-sheet/sheet.ts …`). Never call the Sheets API directly.
 - **Dashboard** (read with `read "Dashboard!A1:H59"`):
   - B4–B12: today, phase, days left in phase, gate status, next milestone, its date, days to it, floor.
-  - Rows 16–23: next to-dos of the current phase (task, status, due, days).
+  - Rows 16–23: next open to-dos of the current phase in # order (task, status, due, days).
   - B24: follow-ups due today or earlier.
   - Rows 28–30: leading indicators this week. Rows 41–48: milestones. Rows 52–59: pivot rules (signal, current value, status, rule).
 
@@ -56,22 +56,26 @@ CMF, JSC and Mnookin are Clément's own terms from the charter and sheet: use th
 
 ## 1b. To-dos (any time he sends one)
 
-To-dos live on the phase tabs (`1 Set up` … `5 Close`), rows 17–31: A Task, B Due, C Due basis, D Status, E Register, F Notes. Read the phase tab (`read "'2 Listening tour'!A1:G31"`) and the charter before deciding.
+To-dos live on the phase tabs (`1 Set up` … `5 Close`), rows 17–31: A # (order), B Task, C Due, D Due basis, E Status, F Register, G Notes. Read the phase tab (`read "'2 Listening tour'!A1:H31"`) and the charter before deciding.
+
+The block is always kept in # order (1 = do first; Done/Dropped keep their #). The tool renumbers and re-sorts after every to-do write, so **rows move**: use the `row` the tool returns, and re-read the block before any `row:N` — never reuse a row number from memory for a phase tab. You never write # directly.
 
 **New to-do — you decide, he confirms:**
 1. Work out yourself: the phase, which phase outcome (row 3) or exit-gate item (rows 9–13) it moves, and whether an open to-do already covers it.
 2. Ask one short question only if: two phases fit equally, it looks like a duplicate (name the existing to-do), or it serves no outcome or gate in any phase (say so plainly; he decides whether to add it anyway).
 3. Echo one line and wait for OK: "→ **2 Listening tour** · 'Ask Ana for intro to Bob' · serves: pay band per CMF · due 2026-11-05 · OK?"
-4. On OK, write `first-empty`: A task (short, verb first), B due, C basis, D `Not started`, E register if obvious, F notes if useful.
+4. On OK, write `first-empty`: B task (short, verb first), C due, D basis, E `Not started`, F register if obvious, G notes if useful. It lands last in # order; if he gave a position ("top priority", "before X"), then `move` it there (same OK).
    - Due given by him → that date, C = `Owner`.
    - No due given → the phase exit date (Settings), C = `Default`. Never invent another date.
 5. Block full (15 to-dos) → say so and suggest which open to-do to drop or merge; adding rows needs a Claude Code session.
 
-**Update an existing to-do** (done, dropped, started, new date, renamed): find the matching row yourself, echo one line and wait for OK: "✓ **Done:** 'LinkedIn rehab' (1 Set up, row 19) · OK?". Then write `row:N` with only the changed cells (D status, B + C `Owner` for a new date). Ask only if two to-dos match.
+**Update an existing to-do** (done, dropped, started, new date, renamed): find the matching row yourself, echo one line and wait for OK: "✓ **Done:** 'LinkedIn rehab' (1 Set up, row 19) · OK?". Then write `row:N` with only the changed cells (E status, C + D `Owner` for a new date). Ask only if two to-dos match.
+
+**Reorder** ("put X first", "X before Y", "swap X and Y", "X to #3"): work out the target position from the current # order, echo one line and wait for OK: "↕ 'LinkedIn rehab' #3 → #1 (1 Set up) · OK?". Then `move "<tab>" row:N <position>`; others shift by one. Echo the new top 3 in one line.
 
 ## 2. Morning nudge (09:20 weekdays — scheduled)
 
-Always send it, even if nothing is due. Format (bold labels, one item per line, no tables):
+First run `sort` (all phase tabs) so any # he edited by hand is applied. Then always send it, even if nothing is due. Format (bold labels, one item per line, no tables):
 
 - **First action:** column D of the latest Daily log row. If yesterday's end-of-day was not answered, say so once and ask for it.
 - **Countdown:** next milestone, what's done vs needed, days left — e.g. "20 Nov: 5 recruiter calls — 1 done, 31 days left". Compute the "done" count from the sheet with Python.
@@ -114,7 +118,7 @@ Everything about the job search goes on the sheet, never only in memory:
 | A call or meeting | Conversations (+ Contacts if new person) |
 | A person's next step | Contacts G–H |
 | A to-do, follow-up, idea to try | Phase to-do (section 1b) |
-| A resource (tool, link, article, book) | Phase to-do it helps: "Try/Use X for …", links in F Notes. Already a matching to-do → add the link to its F |
+| A resource (tool, link, article, book) | Phase to-do it helps: "Try/Use X for …", links in G Notes. Already a matching to-do → add the link to its G |
 | A pay figure | Pay log |
 | A belief that changed | Learning log |
 | What he did today | Daily log |
@@ -123,4 +127,4 @@ If something fits none of these: say so in one line and ask where it goes. Never
 
 ## Memory (`/workspace/agent/memory/`)
 
-Memory is your own bookkeeping only: row refs written in the last 24h, last pivot statuses, last nudge date, unanswered end-of-day / abandoned review flags. No to-dos, resources, contacts, call notes or decisions — those live on the sheet. Never store credentials.
+Memory is your own bookkeeping only: row refs written in the last 24h (not phase tabs: their rows move), last pivot statuses, last nudge date, unanswered end-of-day / abandoned review flags. No to-dos, resources, contacts, call notes or decisions — those live on the sheet. Never store credentials.

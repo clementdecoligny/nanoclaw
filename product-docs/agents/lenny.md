@@ -30,7 +30,7 @@ owner's product career thinking. The agent never claims to be him.
 | Morning nudge | 09:20 weekdays, always | First action (from yesterday's log), milestone countdown, due items, pivot-rule changes; Mondays: proposes the week's outcome goal |
 | End-of-day prompt | 17:30 weekdays | Done / learned / tomorrow's first action → Daily log tab; proposes a Learning log line when a belief changed |
 | Friday review | Fridays 12:00 | The charter's five questions one at a time, pre-filled from the week's data → Weekly review row |
-| To-dos | Any time a to-do or status change is sent | Picks the phase and the outcome it serves, flags duplicates or to-dos that serve no outcome, echoes one line, writes to the phase's to-do list on OK; marks to-dos done, dropped or rescheduled the same way |
+| To-dos | Any time a to-do or status change is sent | Picks the phase and the outcome it serves, flags duplicates or to-dos that serve no outcome, echoes one line, writes to the phase's to-do list on OK; marks to-dos done, dropped or rescheduled the same way; reorders them on request ("put X first") |
 | Adversarial review | On request | Three strongest reasons the plan might be wrong, with evidence; pivot-rule status; everyone met so far |
 
 ## Guardrails
@@ -55,5 +55,8 @@ owner's product career thinking. The agent never claims to be him.
   with a warning so the owner can add it.
 - No holiday pause or quiet hours.
 - Each phase holds at most 15 to-dos; more needs a manual sheet change.
+- Each phase's to-do list is kept in priority order by a "#" column. A hand edit
+  to "#" in the sheet is applied at the next write or the next morning nudge,
+  not instantly.
 - No separate resources list: a tool or link is saved as a to-do ("Try X for …")
   in the phase it helps, with the link in its notes.
