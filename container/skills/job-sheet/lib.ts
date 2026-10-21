@@ -31,6 +31,17 @@ type TabSpec = {
   /** Range-dropdown columns where a non-matching value is an error (else a warning). */
   strictRanges?: string[];
   rowKeys: RowKey['kind'][];
+  /** Rows this tab may be written in (default 2–500). */
+  rows?: { first: number; last: number };
+};
+
+/** Phase tabs: only the TO-DOS block (rows 17–31, A–F). G is the sort-key formula. */
+export const PHASE_TABS = ['1 Set up', '2 Listening tour', '3 Build pipeline', '4 Interview', '5 Close'];
+const TODO_SPEC: TabSpec = {
+  writable: ['A', 'B', 'C', 'D', 'E', 'F'],
+  dates: ['B'],
+  rowKeys: ['first-empty', 'row'],
+  rows: { first: 17, last: 31 },
 };
 
 export const TABS: Record<string, TabSpec> = {
@@ -55,16 +66,21 @@ export const TABS: Record<string, TabSpec> = {
   'Learning log': { writable: ['A', 'B', 'C', 'D'], dates: ['A'], rowKeys: ['first-empty', 'row'] },
   'Daily log': { writable: ['A', 'B', 'C', 'D'], dates: ['A'], rowKeys: ['first-empty', 'row'] },
   'Weekly review': { writable: ['C', 'D', 'E', 'F', 'G', 'H'], rowKeys: ['week'] },
+  ...Object.fromEntries(PHASE_TABS.map((t) => [t, TODO_SPEC])),
 };
+
+export function rowWindow(tab: string): { first: number; last: number } {
+  return TABS[tab]?.rows ?? { first: FIRST_ROW, last: LAST_ROW };
+}
 
 const isBlank = (v: unknown) => v === undefined || v === null || String(v).trim() === '';
 
-/** keyCol[0] is row 2. Returns the first blank row in 2–500. */
-export function firstEmptyRow(keyCol: unknown[]): number {
-  for (let row = FIRST_ROW; row <= LAST_ROW; row++) {
-    if (isBlank(keyCol[row - FIRST_ROW])) return row;
+/** keyCol[0] is row `first`. Returns the first blank row in first–last. */
+export function firstEmptyRow(keyCol: unknown[], first = FIRST_ROW, last = LAST_ROW): number {
+  for (let row = first; row <= last; row++) {
+    if (isBlank(keyCol[row - first])) return row;
   }
-  throw new Error(`No empty row between ${FIRST_ROW} and ${LAST_ROW}`);
+  throw new Error(`No empty row between ${first} and ${last}`);
 }
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
@@ -127,6 +143,10 @@ export function validateWrite(
 
   if (!spec.rowKeys.includes(key.kind)) {
     errors.push(`Row key ${key.kind} not allowed on ${tab} (allowed: ${spec.rowKeys.join(', ')})`);
+  }
+  const win = rowWindow(tab);
+  if (key.kind === 'row' && (key.row < win.first || key.row > win.last)) {
+    errors.push(`Row ${key.row} outside ${tab}'s writable rows ${win.first}–${win.last}`);
   }
   const cols = Object.keys(cells);
   if (cols.length === 0) errors.push('No cells to write');

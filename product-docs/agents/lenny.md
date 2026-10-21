@@ -30,13 +30,14 @@ owner's product career thinking. The agent never claims to be him.
 | Morning nudge | 09:20 weekdays, always | First action (from yesterday's log), milestone countdown, due items, pivot-rule changes; Mondays: proposes the week's outcome goal |
 | End-of-day prompt | 17:30 weekdays | Done / learned / tomorrow's first action → Daily log tab; proposes a Learning log line when a belief changed |
 | Friday review | Fridays 12:00 | The charter's five questions one at a time, pre-filled from the week's data → Weekly review row |
+| To-dos | Any time a to-do or status change is sent | Picks the phase and the outcome it serves, flags duplicates or to-dos that serve no outcome, echoes one line, writes to the phase's to-do list on OK; marks to-dos done, dropped or rescheduled the same way |
 | Adversarial review | On request | Three strongest reasons the plan might be wrong, with evidence; pivot-rule status; everyone met so far |
 
 ## Guardrails
 
 - Writes go through one tool that is hard-wired to one spreadsheet (a test copy
   until the owner approves the switch to live). It only writes whitelisted input
-  columns, into the first empty row, with dropdown values checked against the
+  columns, into the first empty row (on phase tabs: only the to-do block), with dropdown values checked against the
   sheet's own rules. Formula columns, structure and settings are never touched.
 - Other agents are blocked from the Sheets API at the credential gateway.
 - The charter is mounted read-only.
@@ -49,3 +50,4 @@ owner's product career thinking. The agent never claims to be him.
 - Company rows can't be created by the agent — an unknown company is written
   with a warning so the owner can add it.
 - No holiday pause or quiet hours.
+- Each phase holds at most 15 to-dos; more needs a manual sheet change.

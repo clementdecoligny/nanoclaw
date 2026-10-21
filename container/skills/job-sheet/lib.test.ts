@@ -8,6 +8,8 @@ import {
   mondayOf,
   findWeekRow,
   validateWrite,
+  rowWindow,
+  PHASE_TABS,
   type Rule,
 } from './lib';
 
@@ -175,5 +177,51 @@ describe('validateWrite', () => {
     ok(validateWrite('Companies', { kind: 'row', row: 4 }, { G: 120000 }, {}));
     expect(validateWrite('Companies', { kind: 'first-empty' }, { G: 120000 }, {}).errors.length).toBeGreaterThan(0);
     expect(validateWrite('Companies', { kind: 'row', row: 4 }, { B: '1' }, {}).errors.join()).toMatch(/column B/);
+  });
+});
+
+describe('phase to-do blocks', () => {
+  const ok = (r: { errors: string[] }) => expect(r.errors).toEqual([]);
+  const status: Record<string, Rule> = { D: { kind: 'list', values: ['Not started', 'In progress', 'Done', 'Dropped'] } };
+
+  test('all five phase tabs are writable', () => {
+    expect(PHASE_TABS).toEqual(['1 Set up', '2 Listening tour', '3 Build pipeline', '4 Interview', '5 Close']);
+  });
+
+  test('to-do window is rows 17–31; other tabs keep 2–500', () => {
+    expect(rowWindow('2 Listening tour')).toEqual({ first: 17, last: 31 });
+    expect(rowWindow('Daily log')).toEqual({ first: 2, last: 500 });
+  });
+
+  test('firstEmptyRow inside a window (keyCol[0] is the window start)', () => {
+    expect(firstEmptyRow(['a', 'b'], 17, 31)).toBe(19);
+    expect(() => firstEmptyRow(Array(15).fill('x'), 17, 31)).toThrow(/17 and 31/);
+  });
+
+  test('new to-do: A–F with real due date and exact status', () => {
+    ok(validateWrite('2 Listening tour', { kind: 'first-empty' }, {
+      A: 'Ask Ana for intro to Bob', B: '2026-11-05', C: 'Owner', D: 'Not started', E: 'Contacts', F: '',
+    }, status));
+  });
+
+  test('sort key G (formula) is never writable', () => {
+    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { A: 'x', G: '1' }, status);
+    expect(r.errors.join()).toMatch(/column G/);
+  });
+
+  test('due date must be YYYY-MM-DD', () => {
+    const r = validateWrite('1 Set up', { kind: 'first-empty' }, { A: 'x', B: '5 Nov' }, status);
+    expect(r.errors.join()).toMatch(/date/i);
+  });
+
+  test('status must match the dropdown', () => {
+    const r = validateWrite('1 Set up', { kind: 'row', row: 19 }, { D: 'done' }, status);
+    expect(r.errors.join()).toMatch(/column D/);
+    ok(validateWrite('1 Set up', { kind: 'row', row: 19 }, { D: 'Done' }, status));
+  });
+
+  test('row:N outside 17–31 refused (protects gate checklist and tables)', () => {
+    expect(validateWrite('1 Set up', { kind: 'row', row: 9 }, { D: 'Done' }, status).errors.join()).toMatch(/17–31/);
+    expect(validateWrite('1 Set up', { kind: 'row', row: 35 }, { A: 'x' }, status).errors.join()).toMatch(/17–31/);
   });
 });

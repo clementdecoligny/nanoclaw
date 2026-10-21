@@ -1,6 +1,6 @@
 ---
 name: job-sheet
-description: Read and write the Job Move 2027 Google Sheet (Conversations, Contacts, Pay log, Daily log, Learning log, Weekly review, Companies band). Use for every sheet read or write — never call the Sheets API directly.
+description: Read and write the Job Move 2027 Google Sheet (Conversations, Contacts, Pay log, Daily log, Learning log, Weekly review, Companies band, phase to-dos). Use for every sheet read or write — never call the Sheets API directly.
 ---
 
 # Job sheet tool
@@ -20,7 +20,7 @@ Every command prints one JSON object. `"ok": false` means nothing was written �
 
 | Key | Use |
 |---|---|
-| `first-empty` | New record. Needs a value in column A. Never append. |
+| `first-empty` | New record. Needs a value in column A. Never append. On phase tabs: first free to-do slot in rows 17–31. |
 | `row:N` | Correct an existing record (row must already have column A). |
 | `week:YYYY-MM-DD` | Weekly review only — any date in the week; resolves to its Monday row. |
 
@@ -35,6 +35,7 @@ Every command prints one JSON object. `"ok": false` means nothing was written �
 | Learning log | A Date, B I believed, C I learned, D I changed | first-empty, row |
 | Daily log | A Date, B Done, C Learned, D Tomorrow's first action | first-empty, row |
 | Weekly review | C Outcome goal override, D–H Q1–Q5 | week |
+| `1 Set up` … `5 Close` (phase tabs) | To-do block only, rows 17–31: A Task, B Due, C Due basis, D Status, E Register, F Notes (G sort key is a formula) | first-empty, row (17–31 only) |
 
 ## Value rules (enforced)
 
@@ -43,4 +44,5 @@ Every command prints one JSON object. `"ok": false` means nothing was written �
 - Dropdowns must match exactly — run `rules` if unsure.
 - Conversations B must be an exact name from Contacts column A: create the contact first.
 - Unknown company in Contacts B / Pay log D is written with a warning: relay it to the owner.
+- Phase to-do Status (D): `Not started` · `In progress` · `Done` · `Dropped`. A full block (15 to-dos) returns an error: adding rows is a structural change.
 - `""` clears a cell. Text may not start with `=`.

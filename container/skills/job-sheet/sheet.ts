@@ -10,13 +10,12 @@
 
 import {
   TABS,
-  FIRST_ROW,
-  LAST_ROW,
   resolveSpreadsheetId,
   parseRowKey,
   firstEmptyRow,
   findWeekRow,
   validateWrite,
+  rowWindow,
   type Cells,
   type Rule,
 } from './lib';
@@ -39,7 +38,8 @@ async function getValues(range: string, render = 'FORMATTED_VALUE'): Promise<unk
 }
 
 async function column(tab: string, col: string, render = 'FORMATTED_VALUE'): Promise<unknown[]> {
-  const rows = await getValues(`${q(tab)}!${col}${FIRST_ROW}:${col}${LAST_ROW}`, render);
+  const { first, last } = rowWindow(tab);
+  const rows = await getValues(`${q(tab)}!${col}${first}:${col}${last}`, render);
   return rows.map((r) => r[0]);
 }
 
@@ -67,7 +67,10 @@ async function rulesFor(tab: string, row: number): Promise<Record<string, Rule>>
 
 async function resolveRow(tab: string, keyArg: string): Promise<number> {
   const key = parseRowKey(keyArg);
-  if (key.kind === 'first-empty') return firstEmptyRow(await column(tab, 'A'));
+  if (key.kind === 'first-empty') {
+    const { first, last } = rowWindow(tab);
+    return firstEmptyRow(await column(tab, 'A'), first, last);
+  }
   if (key.kind === 'week') return findWeekRow(await column(tab, 'A', 'UNFORMATTED_VALUE'), key.date);
   // row:N edits an existing record only — never an empty row.
   const existing = await getValues(`${q(tab)}!A${key.row}`);
@@ -108,7 +111,7 @@ async function main() {
   BASE = `https://sheets.googleapis.com/v4/spreadsheets/${resolveSpreadsheetId(process.env.JOB_SHEET_TARGET)}`;
   const [cmd, a, b, c] = process.argv.slice(2);
   if (cmd === 'read' && a) return out({ ok: true, range: a, values: await getValues(a) });
-  if (cmd === 'rules' && a) return out({ ok: true, tab: a, rules: await rulesFor(a, Number(b ?? FIRST_ROW)) });
+  if (cmd === 'rules' && a) return out({ ok: true, tab: a, rules: await rulesFor(a, Number(b ?? rowWindow(a).first)) });
   if (cmd === 'write' && a && b && c) return write(a, b, c);
   fail(['Usage: read <range> | rules <tab> [row] | write <tab> <first-empty|row:N|week:YYYY-MM-DD> <json>']);
 }

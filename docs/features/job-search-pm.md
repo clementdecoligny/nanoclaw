@@ -33,6 +33,7 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 3. **End-of-day prompt** (weekdays 17:30): done / learned / tomorrow's first action → new **Daily log** tab. If "learned" contradicts an earlier belief, propose a Learning log line; write after confirmation.
 4. **Friday review** (Fridays 12:00): Q1–Q5 one message at a time, Q1–Q2 pre-filled from Daily log rows of the week + Weekly review auto columns → Weekly review D–H. Propose a Learning log line from Q3.
 5. **Adversarial review on demand**: three strongest reasons the current CMF/plan might be wrong, drawn from logged conversations; pivot-rule status with evidence; list of everyone met (for the JSC email draft). Never sends anything.
+6. **To-dos any time** (added 2026-10-21): owner sends a to-do or a status change; the agent picks the phase, the outcome/gate it serves and checks duplicates itself, echoes one line, writes on OK to the phase tab's to-do block. Asks only when two phases fit, a duplicate is likely, or it serves no outcome (owner decides).
 
 ## Non-goals (v1)
 
@@ -79,6 +80,9 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 | 28 | OneCLI Sheets scope is Drive-wide | Tool hard-codes the spreadsheet ID; any other ID is refused |
 | 29 | Sheets API failure / OneCLI down | Agent says the write failed and keeps the parsed row in chat to retry; never partially reports success |
 | 30 | Data in product docs | Roles only — no names, salary figures, family details |
+| 31 | Phase to-do block | Rows 17–31 only (tables below it are protected); `first-empty` scans that window; full block → error, owner drops/merges or asks for a structural session |
+| 32 | To-do due date | Owner's date (basis `Owner`) or the phase exit date (basis `Default`); never invented |
+| 33 | To-do challenge | Agent decides phase/outcome/duplicate itself; one-line echo + OK before every write; asks only on ambiguity or no matching outcome |
 
 ## Sheet contract
 
@@ -93,6 +97,7 @@ Writable columns (everything else refused):
 | Learning log | A | A–D |
 | Weekly review | row where A = Monday of the week | C (override), D–H |
 | Daily log (new) | A | A–D (Date, Done, Learned, Tomorrow's first action) |
+| `1 Set up` … `5 Close` | A, rows 17–31 only | A–F (Task, Due, Due basis, Status, Register, Notes); G sort key never |
 
 Reads: Dashboard ranges per brief §4; Settings dropdown lists row 39+.
 
