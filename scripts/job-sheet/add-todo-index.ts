@@ -120,6 +120,43 @@ for (const s of after.sheets) {
     }
   });
 }
+// Status colours. Sheets applies only the first matching rule per cell, so:
+// Done fill joins the existing Done rule (grey strikethrough) on the whole row;
+// Not started / In progress colour the Status cell (E) only, after the overdue
+// row rule so an overdue row stays red.
+const GREEN = { red: 0.7764706, green: 0.9372549, blue: 0.80784315 };
+const STATUS_CELL = [
+  { formula: `=$E${FIRST}="Not started"`, color: { red: 0.9372549, green: 0.9372549, blue: 0.9372549 } },
+  { formula: `=$E${FIRST}="In progress"`, color: { red: 1, green: 0.9490196, blue: 0.8 } },
+];
+for (const s of after.sheets) {
+  if (!PHASE_TABS.includes(s.properties.title)) continue;
+  const sheetId = s.properties.sheetId;
+  const rules: any[] = s.conditionalFormats ?? [];
+  const formulaOf = (r: any) => r.booleanRule?.condition?.values?.[0]?.userEnteredValue;
+  const doneAt = rules.findIndex((r) => formulaOf(r) === `=$E${FIRST}="Done"` && r.ranges[0].startRowIndex === FIRST - 1);
+  if (doneAt < 0) throw new Error(`${s.properties.title}: Done colour rule not found`);
+  const done = rules[doneAt];
+  requests.push({
+    updateConditionalFormatRule: {
+      index: doneAt,
+      sheetId,
+      rule: { ...done, booleanRule: { ...done.booleanRule, format: { ...done.booleanRule.format, backgroundColor: GREEN } } },
+    },
+  });
+  STATUS_CELL.forEach(({ formula, color }, i) => {
+    if (rules.some((r) => formulaOf(r) === formula)) return;
+    requests.push({
+      addConditionalFormatRule: {
+        index: doneAt + 1 + i,
+        rule: {
+          ranges: [{ sheetId, startRowIndex: FIRST - 1, endRowIndex: LAST, startColumnIndex: 4, endColumnIndex: 5 }],
+          booleanRule: { condition: { type: 'CUSTOM_FORMULA', values: [{ userEnteredValue: formula }] }, format: { backgroundColor: color } },
+        },
+      },
+    });
+  });
+}
 if (requests.length) await batch(requests);
 console.log(`tidy-up requests sent: ${requests.length}`);
 

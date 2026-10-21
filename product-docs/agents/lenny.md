@@ -55,7 +55,8 @@ owner's product career thinking. The agent never claims to be him.
   with a warning so the owner can add it.
 - No holiday pause or quiet hours.
 - Each phase holds at most 15 to-dos; more needs a manual sheet change.
-- Each phase's to-do list is kept in priority order by a "#" column. A hand edit
+- Each phase's to-do list is colour-coded by status (grey not started, yellow in
+  progress, green done, red overdue) and kept in priority order by a "#" column. A hand edit
   to "#" in the sheet is applied at the next write or the next morning nudge,
   not instantly.
 - No separate resources list: a tool or link is saved as a to-do ("Try X for …")
