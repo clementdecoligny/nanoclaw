@@ -87,6 +87,7 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 | 35 | Resources | No Resources tab: a resource becomes a phase to-do ("Try/Use X for …") with links in G Notes, or a link on an existing to-do |
 | 36 | To-do order (#) | Column A "#" on each phase to-do block (added 2026-10-21). Tool keeps # = 1…n and sorts the rows by it after every phase-tab write/move/sort; Done/Dropped keep their #; new to-do goes last. Lenny reorders on request (`move`, echo + OK) and runs `sort` before each morning nudge to apply hand edits. Dashboard next to-dos follow # (sort key H = # + row/10000, open only). Tool refuses phase tabs whose row 16 isn't the # header. Migration: `scripts/job-sheet/add-todo-index.ts <test\|live>` (idempotent), run on live at go-live |
 | 37 | To-do status colours | Status cell: Not started light grey, In progress light yellow; Done = whole row light green (plus existing grey strikethrough). Overdue red row rule stays first so it wins. Same script, idempotent |
+| 38 | Set up phase v2 (2026-10-22) | Owner's new outcome + gate: ≥3 calibration calls booked, company list v0 (~30, 6 h timebox), profile and resume live; council and CMF tests left the gate (council stays as Set up to-dos). Booked = Contacts G "Calibration call*" + held Recruiter/Product leader/Hiring manager conversations; Lenny replaces that next action once the call is logged. Company list = Companies rows ≥30. Applied by `scripts/job-sheet/set-up-phase-v2.ts <test\|live>` |
 
 ## Sheet contract
 

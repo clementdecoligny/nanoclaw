@@ -26,7 +26,7 @@ owner's product career thinking. The agent never claims to be him.
 
 | Workflow | When | What happens |
 |---|---|---|
-| Capture | Any voice note or message about a call | Conversations, Contacts and Pay log rows written; one-line echo per row; thank-you draft in chat |
+| Capture | Any voice note or message about a call | Conversations, Contacts and Pay log rows written; one-line echo per row; thank-you draft in chat. A booked call is noted as the contact's next action, so the phase gate can count it |
 | Morning nudge | 09:20 weekdays, always | First action (from yesterday's log), milestone countdown, due items, pivot-rule changes; Mondays: proposes the week's outcome goal |
 | End-of-day prompt | 17:30 weekdays | Done / learned / tomorrow's first action → Daily log tab; proposes a Learning log line when a belief changed |
 | Friday review | Fridays 12:00 | The charter's five questions one at a time, pre-filled from the week's data → Weekly review row |
