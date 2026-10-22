@@ -1,1 +1,2 @@
 2026-10-21 17:31 — End-of-day prompt sent, and I've flagged 21 Oct as awaiting an answer in memory for tomorrow's nudge check.
+2026-10-22 17:32 — Sent the end-of-day prompt. I also noticed the Daily log already had a row for 22/10 ("Rien fait — très mal dormi + kiné a pris toute la matinée") that I never wrote — flagged it to Clément so we don't end up with a duplicate row, and logged it in memory as unconfirmed pending his reply.

@@ -6,6 +6,8 @@
 
 | Recette | Dernière date | Notes |
 |---------|--------------|-------|
+| poulet-pesto-quinoa | 2026-10-22 | Dîner jeudi : poulet + pesto + quinoa + reste patates douces au four (changé en dernière minute, remplace panados de frango + riz suggéré). Nouvelle recette, pas encore écrite dans `recipes/` |
+| salade-betteraves | 2026-10-22 | Déj jeudi : variante feta, servie en entrée + riz froid (sans tomates cerises, finies) |
 | salade-pois-chiches-feta | 2026-10-18 | Déj picnic dimanche : seule salade faite (les 2 autres annulées, signalé par Clément 18/10 9h23) |
 | salade-riz-thon-oeufs-durs | 2026-10-17 | Déj picnic samedi (excursion) : riz + thon + œufs durs, avec baba ganoush + pain + crudités |
 | pasta-alla-norma | 2026-10-16 | Dîner vendredi (plan suivi par défaut, pas de correction signalée) : batch 2 aubergines frites + sauce tomate + ricotta/parmesan |

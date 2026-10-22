@@ -107,5 +107,6 @@ _Last updated: 2026-10-12 (nettoyage : retrait des items confirmés en stock par
 | Pimento (rouge ou vert) | ×2 | - | Pour minestrone batch 4L 20/10 — pas en stock frais |
 | Tomate (frais) | ×6 | - | Pour minestrone batch 4L 20/10 — ou remplacer par conserve si pas dispo |
 | Manjericão (basilic frais) | ×1 bouquet | - | Pour minestrone batch 4L 20/10 — stock actuel qté incertaine |
+| Tomate cereja | ×1 barquette | - | Finies depuis panier 16/10, signalé par Clément 22/10 |
 
 ---

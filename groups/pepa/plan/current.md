@@ -49,6 +49,15 @@ _Contexte : panier reçu ven 16/10 (2 chayottes, 2 salades vertes, 300g tomates 
 
 _École mercredi : Agrião / Lasanha de Vitela → pas de répétition avec le dîner (poulet, pas de pâtes)._
 
+## Jeudi 22 octobre
+
+| | |
+|---|---|
+| Déjeuner | ✅ Salade de betteraves (bocal, variante feta) + riz froid, sans tomates cerises (finies) |
+| Dîner | ✅ Changé : poulet pesto quinoa + reste de patates douces au four (au lieu de panados de frango + riz suggéré le matin ; panados toujours au congélo, non entamés) |
+
+_École jeudi : Abóbora / Lombinhos de Pescada c/ batata e Ovo → pas de répétition avec le dîner (poulet pesto, pas de poisson ni pdt classique) ✓._
+
 ---
 
 # Plan semaine — 4 → 11 septembre 2026

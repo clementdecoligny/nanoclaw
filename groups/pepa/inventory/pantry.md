@@ -274,7 +274,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Queijo Parmigiano Reggiano 150g | 1 × 150g | Livraison 24/09 |
 | Queijo Gorgonzola Dolce DOP 200g | 1 × 200g | Livraison 24/09 — confirmé toujours en stock par Clément 05/10 |
 | Pâtes fraîches (achetées, non consommées) | ? | Signalé par Clément 05/10 — type et quantité non précisés |
-| Barilla Pesto Genovese (bocal) | 1 | Store-bought. Quick pasta nights. |
+| Barilla Pesto Genovese (bocal) | 1 (entamé) | Store-bought. Utilisé dîner poulet pesto quinoa 22/10 — quantité restante non précisée |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Tofu Biológico Seara 250g | 0 | ❌ Périmé depuis 31/07/2026 (signalé par Clément 18/10), jeté — ne pas utiliser |
 | Ravioli Abobora Ceb.Caram.250g | 4 × 250g | 1×250g Livraison 04/09 + 2×250g Livraison 24/09 + 1×250g Livraison 09/10 |
@@ -290,7 +290,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Pão Rolls Bimbo 240g | 1 | Livraison 09/10 |
 | Girasoli Pesto CNT Seleção 250g | 0 | ❌ Livraison 09/10 — suggéré déj mer 14/10, plan suivi par défaut |
 | Girasoli Capra & Miele 250g | 1 × 250g | Livraison 09/10 |
-| Salmão fumado | 2 paquets | Achat local 12/10 — pour crêpes salées (saumon fumé avocat) |
+| Salmão fumado | 0 | ❌ Plus de stock (signalé par Clément 22/10) |
 | Fiambre da Perna Ext (sliced) | +2 paquets | Achat local 12/10, s'ajoute au stock existant |
 | Queijo Mini Mozzarella Auchan | 2 | Achat local 12/10 |
 | Queijo em Fatias 2×200g | 1 pack | Achat local 12/10 |
@@ -309,7 +309,8 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 |---|---|---|
 | Peito de frango (blanc de poulet) | 1 boîte | Congelé 06/06 |
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
-| Peito de frango filets | 1,2 kg | Acheté et congelé par Clément 17/09 |
+| Peito de frango filets | 1,2 kg (entamé probable) | Acheté et congelé par Clément 17/09 — probablement utilisé dîner poulet pesto quinoa 22/10, quantité non précisée |
+| Quinoa cuit | 1 tupper (frigo) | Reste du dîner poulet pesto quinoa 22/10 — assez pour 2 repas supplémentaires (confirmé par Clément) |
 | Bife frango extrafino (filets fins) | 2 tuppers (~501g) | Livraison 09/10, divisé en 2 tuppers congélo par Lola |
 | Strogonoff/tiras de frango | 2 tuppers (~516g) | Livraison 09/10, divisé en 2 tuppers congélo par Lola |
 | Carne picada (bœuf haché) | 1 boîte + 400g frais | Boîte confirmée 27/06 + 400g Angus frais (Talho) livraison 24/09, à congeler ou utiliser rapidement |

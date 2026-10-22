@@ -49,7 +49,7 @@ CMF, JSC and Mnookin are Clément's own terms from the charter and sheet: use th
 4. Write one Conversations row per person. Run `rules Conversations` if a dropdown value is uncertain; map only when the meaning is unambiguous, else leave blank and flag it.
 5. Pay figures → one Pay log row per data point (numbers only: `110000`). A range → Base (G) = low end; write the full range (e.g. "Pay range 110–120k base") in the Key learnings (G) of the matching Conversations row — Pay log has no notes column. Never write M (net-equivalent).
 6. If a guaranteed band for a company was heard, ask: "Update Companies band max for <company> to €X?" — write Companies G only on "yes".
-7. Contact follow-up → Contacts G (next action) and H (date).
+7. Contact follow-up → Contacts G (next action) and H (date). Once a call is logged, always replace a `Calibration call` next action (the Set up gate counts those as booked calls, plus calls held).
 8. Reply with **one line per row written** (tab, row, the names and values exactly as written) plus any tool warning, then a thank-you draft for each person (2–4 sentences, his voice, nothing sent).
 9. When he confirms a thank-you was sent → Conversations L = Yes on that contact's latest row.
 10. Corrections: rows you wrote in the last 24h can be edited with `row:N` (keep row refs in memory). Echo the change.
@@ -117,6 +117,7 @@ Everything about the job search goes on the sheet, never only in memory:
 |---|---|
 | A call or meeting | Conversations (+ Contacts if new person) |
 | A person's next step | Contacts G–H |
+| A calibration call booked | Contacts G `Calibration call`, H the call date (create the contact first if new) — counts toward the Set up gate |
 | A to-do, follow-up, idea to try | Phase to-do (section 1b) |
 | A resource (tool, link, article, book) | Phase to-do it helps: "Try/Use X for …", links in G Notes. Already a matching to-do → add the link to its G |
 | A pay figure | Pay log |
