@@ -140,7 +140,7 @@ _Inventaire au 2026-04-12 — mis à jour 04/09_
 | Pimento Assado em Tiras Bio 250g | 1 × 250g | Livraison 24/09 — 1×250g utilisé dîner tartines 15/10 |
 | Auchan Cogumelos Inteiros (champignons entiers) | 1 × 355g | |
 | El Peregrino Espárragos Blancos (petites asperges blanches, petit bocal) | 1 × 185g (108g égoutté) | |
-| Beterraba Cozida 450g-PT-BIO | 1 × 450g | Livraison 09/10 |
+| Beterraba Cozida 450g-PT-BIO | 0 | ❌ Finies : salade betteraves feta déj jeu 22/10 + salade quinoa betterave déj ven 23/10 |
 
 ### Protéines végétales
 
