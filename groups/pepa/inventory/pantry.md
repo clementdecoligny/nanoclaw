@@ -222,27 +222,30 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Pommes normales | 6 | |
 | Poires | 5 | |
 | Oignons | 7 | |
-| Patates douces (grosses) | 4 | 2 anciennes + 2 panier 16/10 |
+| Patates douces (grosses, stock précédent) | ~3 | 2 anciennes + 2 panier 16/10, 1 utilisée dîner poulet pesto quinoa jeu 22/10 (reste au four) |
 | Oignons rouges | 2 | |
 | Têtes d'ail | 3-4 | |
 | Piments rouges | — | Qté non précisée |
 | Aipo (céleri branche) | 0 | ❌ Pas disponible (signalé par Clément 20/10, stock 500g précédent inexact) |
 | Mâche | 0 | ❌ Finie déj lundi 12/10 |
-| Tomates cerises | 0 | ❌ Panier 16/10, utilisées batch baba ganoush (tomates rôties) 16/10, finies déj picnic 17/10 |
+| Tomates cerises | ~350g | Panier 23/10 (500g) — partiellement utilisées dîner dourada ven 23/10 |
 | Chayottes (chuchu) | 0 | ❌ Panier 16/10 + achat complément, cuisinées batch sopa-chuchu 16/10 (congélo) |
-| Salades vertes | 0 | ❌ Finies déj picnic samedi 17/10 |
+| Salades vertes | ~3 | Panier 23/10 (5) — 2 utilisées dîner dourada ven 23/10 |
 | Aubergines | 0 | ❌ Les 5 utilisées batch 16/10 (2 → pasta alla norma, 3 → baba ganoush) |
 | Thon en boîte (atum) | ? | Clément signalé en achetant local 16/10, qté non confirmée — besoin pour salade riz thon picnic samedi |
 | Basilic frais | ? | Clément signalé en achetant local 16/10, qté non confirmée — utilisé pasta alla norma 16/10 |
 | Citrons verts | 6 | |
-| Citron jaune | 1 + achat 16/10 (qté TBC) | 1 utilisé baba ganoush 16/10 — Clément signalé en acheter 2-3 de plus |
+| Citron jaune | 0 | ❌ Plus de stock (signalé par Lola 23/10 soir) |
 | Kiwi | 1 | |
 | Orange | 1 | |
 | Chou | — | Pour caldo verde, qté non précisée |
 | Ingrédients caldo verde (hors chou) | — | Détail/qté non précisés |
 | Banane | 0,766 kg | Achat local 12/10 |
-| Avocat Hass | ~0,3 kg | Achat local 12/10 — partiellement utilisé dîner tartines 15/10 |
-| Poireau coupé (alho francês cortado) | 1 sachet | Achat local 12/10 — pour crêpes salées (poireaux lardons béchamel) |
+| Avocat Hass | 0 | ❌ Plus de stock (signalé par Lola 23/10 soir) |
+| Avocats (panier, pas mûrs) | 2 | Panier 23/10 — à surveiller pour maturité |
+| Persil frais (panier) | 1 bouquet | Panier 23/10 — utilisé dîner dourada (vinaigrette) + salade riz picnic sam 24/10 |
+| Patates douces (panier) | 2 grosses | Panier 23/10 — 1 utilisée dîner dourada ven 23/10 |
+| Poireau coupé (alho francês cortado) | 1 sachet | Achat local 12/10 — à utiliser prochain repas (12 jours, vieillissant) |
 
 ---
 

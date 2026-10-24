@@ -58,6 +58,20 @@ _École mercredi : Agrião / Lasanha de Vitela → pas de répétition avec le d
 
 _École jeudi : Abóbora / Lombinhos de Pescada c/ batata e Ovo → pas de répétition avec le dîner (poulet pesto, pas de poisson ni pdt classique) ✓._
 
+## Vendredi 23 octobre *(panier reçu : 5 salades vertes, 2 avocats pas mûrs, 2 grosses patates douces, 500g tomates cerises, bouquet persil)*
+
+| | |
+|---|---|
+| Déjeuner | ✅ Changé : salade de quinoa (tupper) + betterave (bocal, fini) + feta, sans avocat (plus de stock) — vinaigrette citron |
+| Dîner | ✅ Dourada au four + patates douces (panier) rôties + salade verte + tomates cerises, vinaigrette persil-citron |
+
+## Samedi 24 octobre *(pique-nique excursion)*
+
+| | |
+|---|---|
+| Déjeuner | Salade de riz, thon, œufs durs + tomates cherry (panier) + persil (panier) + feta + olives noires + graines de courge + guindillas + panados de frango troceados. Sauce tahini-vinaigre (pas de citron/avocat en stock). Picnic, sans soupe. |
+| Dîner | À confirmer (excursion) — si à la maison : haricots blancs sautés, poireau, œuf poêlé (nouvelle recette, poireau à utiliser avant qu'il tourne) + soupe |
+
 ---
 
 # Plan semaine — 4 → 11 septembre 2026
