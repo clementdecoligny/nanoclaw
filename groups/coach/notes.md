@@ -110,6 +110,10 @@ Voir CLAUDE.local.md pour les disponibilités hebdomadaires types.
 - La maladie peut être un facteur déstabilisant sur la préparation
 - **Ne plus mentionner "setup course" dans les plans/retours** (16 août 2026 — la règle B8 reste active, il sait que ça s'applique, ne pas le répéter)
 
+## Santé — Cheville droite (entorse légère, ligament)
+
+Suivi détaillé dans `/workspace/agent/plan-recuperation-cheville.md`. **Clearance complète du kiné le 22/10** (confirmée par Clément le 25/10) : entraînement normal, auto-régulation totale par la douleur, vélo **et course à pied** (reprise testée le 25/10). Plus de paliers imposés — seule règle : douleur = stop.
+
 ## Santé — Pieds / Hallux valgus
 
 **Symptôme** : douleur/pincement le long du bord interne du gros orteil → forme une longue ampoule linéaire. Aggravé par la course fréquente. Palliatifs : bandes de protection + vaseline (aide partiellement).
@@ -203,6 +207,10 @@ Clément a signalé **deux fois** que mes retours (`/done` notamment) étaient i
 - Emojis (🎯💪⚠️✅ etc.) et sauts de ligne fréquents — viser une lecture en diagonale sur téléphone, pas un rapport à lire linéairement.
 - Garder le contenu analytique (chiffres, comparaison au plan) mais l'envelopper dans un ton engagé — reconnaître l'effort avant de décortiquer les données.
 - Avant d'envoyer un retour `/done` ou tout message structuré : relire et vérifier qu'aucun bloc de texte ne dépasse 2 lignes sans rupture (puce, saut de ligne, gras).
+
+## Préférence — ne pas demander ce que Strava peut déjà confirmer (25 octobre 2026)
+
+Clément a corrigé (25/10) : ne plus demander "as-tu fait telle séance renfo/vélo" quand c'est une activité qui serait loggée sur Strava — **si elle n'y est pas, c'est qu'elle n'a pas été faite.** Vérifier Strava avant de poser la question. Les questions de check-in doivent se limiter à ce que Strava ne capte pas : douleur, sommeil, charge travail/famille, contexte d'une séance manquée/écourtée, etc. Ne pas redemander la confirmation d'une complétion déjà visible (ou absente) dans les activités.
 
 ## Préférence — pas de pédagogie non sollicitée sur les métriques (18 octobre 2026)
 

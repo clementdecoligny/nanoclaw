@@ -1,7 +1,7 @@
 # Plan de récupération — entorse cheville droite (ligament, légère)
 
-**Dernière mise à jour** : 14 octobre 2026 (après bilan kiné-ostéo)
-**Statut** : diagnostic et protocole de reprise confirmés par le kiné — **son protocole prime sur tout ce qui suit**, ce fichier ne fait que le documenter et ajouter un suivi chiffré en complément.
+**Dernière mise à jour** : 25 octobre 2026 (après contrôle kiné/EPI du 22/10)
+**Statut** : **clearance complète**. Le kiné a validé le contrôle du 22/10 : entraînement normal, **auto-régulation totale par la douleur** — « si j'ai mal, j'arrête » — appliqué désormais au vélo **ET à la course à pied** (suspendue depuis le 12/10, reprise testée le 25/10 par un footing tranquille). Les phases 1-3 ci-dessous décrivaient une progression par paliers pendant la période d'inflammation active ; elles sont **dépassées** depuis cette clearance — ne plus s'en servir pour cadrer les séances. Seule règle active : douleur = stop, sinon entraînement normal. Les tests hebdo (section plus bas) restent utiles comme suivi, plus comme porte d'entrée vers une phase.
 
 ## Bilan kiné-ostéo (14 octobre)
 
