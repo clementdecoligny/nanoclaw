@@ -1,4 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from 'bun:test';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
 
 import { closeSessionDb, getInboundDb, initTestSessionDb } from './mailbox/sqlite/connection.js';
 import { getUndeliveredMessages } from './db/messages-out.js';
@@ -40,7 +43,14 @@ class LegacyProvider implements AgentProvider {
   }
 }
 
+// Passthrough commands dispatch natively only when a command file backs them,
+// so the agent cwd carries one for /mycmd.
+let cwd: string;
+
 beforeEach(() => {
+  cwd = fs.mkdtempSync(path.join(os.tmpdir(), 'legacy-flags-'));
+  fs.mkdirSync(path.join(cwd, '.claude', 'commands'), { recursive: true });
+  fs.writeFileSync(path.join(cwd, '.claude', 'commands', 'mycmd.md'), 'Say hello.\n');
   initTestSessionDb();
   getInboundDb()
     .prepare(
@@ -58,11 +68,12 @@ beforeEach(() => {
 
 afterEach(() => {
   closeSessionDb();
+  fs.rmSync(cwd, { recursive: true, force: true });
 });
 
 async function runUntilReply(provider: LegacyProvider): Promise<void> {
   const controller = new AbortController();
-  const loop = runPollLoop({ provider, providerName: 'legacy', cwd: '/tmp', signal: controller.signal }).catch(
+  const loop = runPollLoop({ provider, providerName: 'legacy', cwd, signal: controller.signal }).catch(
     () => {},
   );
   const start = Date.now();
