@@ -37,6 +37,7 @@
     "pino": "9.6.0",
     "qrcode": "1.5.4",
     "spectrum-ts": "11.0.0",
+    "tsx": "4.21.0",
     "vercel": "52.2.1",
     "wechat-ilink-client": "0.1.0",
     "ws": "8.21.3"
@@ -236,6 +237,12 @@
       "version": "11.0.0",
       "sources": [
         ".claude/skills/add-imessage/SKILL.md nc:dep when:backend=hosted"
+      ]
+    },
+    "tsx": {
+      "version": "4.21.0",
+      "sources": [
+        "container/cli-tools.json"
       ]
     },
     "vercel": {

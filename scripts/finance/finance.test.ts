@@ -6,6 +6,7 @@
  */
 
 import { execSync } from 'child_process';
+import { existsSync } from 'fs';
 import path from 'path';
 import { describe, expect, it } from 'vitest';
 
@@ -35,7 +36,8 @@ function runPytest(pattern: string): { passed: number; failed: number; output: s
   }
 }
 
-describe('finance Python scripts', () => {
+// The finance venv lives only on the host install; CI runners don't have it.
+describe.skipIf(!existsSync(PYTHON))('finance Python scripts', () => {
   it('salary.py — all tests pass', { timeout: 30000 }, () => {
     const result = runPytest('test_salary.py');
     expect(result.failed, result.output).toBe(0);
