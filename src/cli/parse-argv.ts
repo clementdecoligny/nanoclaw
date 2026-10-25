@@ -5,6 +5,9 @@ export type ParsedArgv = {
   stdinJson: boolean;
 };
 
+/** Flags that may be repeated to pass several values. */
+const MULTI_VALUE_FLAGS = new Set(['var']);
+
 export function parseArgv(argv: string[]): ParsedArgv {
   const positional: string[] = [];
   const args: Record<string, unknown> = {};
@@ -26,11 +29,10 @@ export function parseArgv(argv: string[]): ParsedArgv {
       const next = argv[i + 1];
       if (next === undefined || next.startsWith('--')) {
         args[key] = true;
-      } else if (key in args) {
-        // Repeated flag (e.g. `--var A=1 --var B=2`): accumulate instead of
-        // overwriting. Keeping only the last occurrence loses data — for
-        // `config set-env` that means a credential the caller believes was
-        // stored. A flag passed once still arrives as a plain string.
+      } else if (MULTI_VALUE_FLAGS.has(key) && key in args) {
+        // `--var A=1 --var B=2` (config set-env): keep every value. Any other
+        // repeated flag resolves to its last value, which the scope guard
+        // relies on. A flag passed once still arrives as a plain string.
         const prev = args[key];
         args[key] = Array.isArray(prev) ? [...prev, next] : [prev as string, next];
         i++;

@@ -10,7 +10,13 @@ import * as fs from 'fs';
 // Mock fs — matcher reads files via fs.readFileSync
 // ---------------------------------------------------------------------------
 
-vi.mock('fs');
+// Only readFileSync is stubbed: the shared test setup loads config, which reads
+// .env through the real fs.
+vi.mock('fs', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('fs')>();
+  return { ...actual, readFileSync: vi.fn(actual.readFileSync) };
+});
+const realFs = await vi.importActual<typeof import('fs')>('fs');
 
 const mockReadFileSync = vi.mocked(fs.readFileSync);
 
@@ -51,19 +57,15 @@ const SHOPPING_MD = `# Shopping List
 // Helpers
 // ---------------------------------------------------------------------------
 
-import {
-  parsePreferredProducts,
-  parseShoppingList,
-  parseNotOnContinenteAliases,
-  matchItems,
-} from './matcher.js';
+import { parsePreferredProducts, parseShoppingList, parseNotOnContinenteAliases, matchItems } from './matcher.js';
 
 function setupFileMocks(preferred = PREFERRED_MD, shopping = SHOPPING_MD) {
-  mockReadFileSync.mockImplementation((filePath: unknown) => {
+  mockReadFileSync.mockImplementation((...args: unknown[]) => {
+    const filePath = args[0];
     const p = filePath as string;
     if (p.includes('preferred-products')) return preferred;
     if (p.includes('shopping-list')) return shopping;
-    throw new Error(`Unexpected readFileSync call: ${p}`);
+    return (realFs.readFileSync as (...a: unknown[]) => unknown)(...args);
   });
 }
 

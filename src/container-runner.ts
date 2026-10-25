@@ -1350,17 +1350,6 @@ export async function buildMounts(
       scope,
     });
   }
-  // Gmail MCP OAuth tokens — write access is required for token refresh.
-  const gmailMcpDir = path.join(os.homedir(), '.gmail-mcp');
-  if (fs.existsSync(gmailMcpDir)) {
-    mounts.push({
-      hostPath: gmailMcpDir,
-      containerPath: '/home/node/.gmail-mcp',
-      readonly: false,
-      mountClass: 'allowlisted-extra',
-      scope,
-    });
-  }
 
   // Additional mounts from container config — already vetted by the allowlist.
   if (containerConfig.additionalMounts && containerConfig.additionalMounts.length > 0) {
