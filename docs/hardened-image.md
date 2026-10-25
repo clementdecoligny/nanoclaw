@@ -18,7 +18,8 @@ Isolation already keeps a misbehaving agent away from your machine; this is the 
 the reason it exists: the software the agent *uses* is worth patching too. Chromium alone is tens
 of millions of lines you did not write and do not track.
 
-Fetching ours needs no configuration — the image reference ships in `versions.json` and the
+Fetching ours needs no configuration — the image for each release is listed in
+`agent-images.json` (see [Which image a release gets](#which-image-a-release-gets)) and the
 account service is built in. Sign in and setup does the rest. It needs a free NanoClaw account;
 see [With a NanoClaw account](#with-a-nanoclaw-account) for what that involves and what it
 records.
@@ -59,7 +60,7 @@ allowlist, and per-group resource limits all do more here than any image can.
 
 | | Pull | Build |
 |---|---|---|
-| `install_packages` | Works, as a derived image | Works |
+| `install_packages` (apt and npm only) | Works, as a derived image | Works |
 | Non-Claude providers | Only if the publisher baked the CLI, or you add it | Work |
 | Custom `Dockerfile` edits | Replaced on the next refresh | Yours |
 | `INSTALL_CJK_FONTS` | Whatever the publisher baked — or `fonts-noto-cjk` via `install_packages` | Your choice |
@@ -70,6 +71,12 @@ prints what to run instead, so a skill that rebuilds can't silently replace the 
 `install_packages` is the exception, and it works because it never rebuilds the base — it builds
 a small image `FROM` the one you pulled and adds your layers, then pins that group to it. The
 vendor's bytes are still underneath, unmodified.
+
+It reaches apt and npm packages only (`packages_apt` and `packages_npm`). A `Dockerfile` that
+installs by any other means — `pip`, a `curl | sh` vendor installer, a language toolchain fetched
+in a `RUN` — has no equivalent here, so those additions are lost on the switch and cannot be put
+back through the derived image. Check what your `Dockerfile` adds before opting in; if anything
+it installs falls outside apt and npm, local builds are the path that keeps it.
 
 What that costs is the vendor's claim over that one group. Their scan covered the base, not
 whatever you added on top, so a derived image labels itself `derived` rather than inheriting
@@ -83,7 +90,7 @@ All optional, all read from `.env` or the environment.
 | Variable | What it does |
 |---|---|
 | `NANOCLAW_HARDENED_IMAGE` | `true` makes this install pull instead of build. The sign-in sets it for you. |
-| `NANOCLAW_AGENT_IMAGE_REF` | The image to pull, ideally `repo@sha256:…`. Overrides the `agent-image` pin in `versions.json`. |
+| `NANOCLAW_AGENT_IMAGE_REF` | The image to pull, ideally `repo@sha256:…`. Overrides the release's image and the `agent-image` pin in `versions.json`. |
 | `NANOCLAW_REGISTRY_API` | Base URL of the account service. Defaults to ours; set it only to point at a different one. |
 | `NANOCLAW_REGISTRY_ENROLL_CODE` | Redeem an enrolment code without a browser. For CI. |
 | `NANOCLAW_REGISTRY_TOKEN` | Adopt an existing account token directly. |
@@ -92,6 +99,21 @@ All optional, all read from `.env` or the environment.
 If you point this at your own registry you need none of these beyond
 `NANOCLAW_HARDENED_IMAGE` and a reference: authentication is whatever
 `docker login` already holds, and there is no account involved.
+
+## Which image a release gets
+
+The hardened image is built from each release after it ships, so it can't be inside the release
+itself. Instead, `agent-images.json` on `main` lists each release's image once it is built,
+verified and signed.
+
+A pull takes the image for the newest release in the install's history that has one, read from
+the official remote's `main` (`upstream`, or `origin` when it is `nanocoai/nanoclaw`). Until a
+new release's image is listed, it takes the previous release's image, which may warn about a
+lockfile mismatch; `--refresh` (below) moves the install onto the new one once it's listed.
+With no listed release at all, the pull falls back to the `agent-image` pin in `versions.json`.
+`NANOCLAW_AGENT_IMAGE_REF` overrides all of this. A fork that pointed the `versions.json` pin at
+its own mirror should move that reference to `NANOCLAW_AGENT_IMAGE_REF`, since the list comes
+first.
 
 ## Architecture
 
@@ -216,7 +238,7 @@ account-takeover bugs happen — and there is no way to merge them today. Pick o
 |---|---|
 | `./container/build.sh` exits 3 | Pinned install. `pull` to refresh, `build` to force local. |
 | Setup never offers the pull option | The option needs a Claude install and an `agent-image` pin in `versions.json`. Existing installs can follow [the migration above](#existing-installs-switch-to-the-hardened-image). |
-| Pull fails: lockfile mismatch | The image was built against a different `container/agent-runner/bun.lock`. Refresh the pin or build locally. |
+| Pull warns: lockfile mismatch | The image was built against a different `container/agent-runner/bun.lock`, usually because this release has no image listed yet, or this install follows `main`. The pull proceeds. If the agent then dies on a missing module, run `./container/build.sh build`. |
 | Pull fails: architecture mismatch | The reference names one architecture and it isn't this daemon's. Use a multi-arch index, or the reference for this architecture. |
 | "No agent-image reference for linux/…" | The pin is per-platform and has no entry for this machine. Build locally, or set `NANOCLAW_AGENT_IMAGE_REF`. |
 | Pull fails: auth | `--status` shows whether the credential helper is wired; `--force` re-runs sign-in. |

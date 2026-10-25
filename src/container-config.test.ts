@@ -1,159 +1,269 @@
+/**
+ * Group-timezone resolution (agent-level timezone feature).
+ *
+ * The chain is: valid per-group override → install-global TIMEZONE. An
+ * invalid stored value (hand-edited DB — the ncl write path validates) must
+ * fall back to the global timezone, not silently become UTC, and must never
+ * be materialized into container.json.
+ */
 import fs from 'fs';
-import os from 'os';
 import path from 'path';
-import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-// Hoisted so the vi.mock factories below (which vitest lifts to the top of the
-// file) can close over these without hitting the TDZ.
-const h = vi.hoisted(() => {
-  const nodeFs = require('fs') as typeof import('fs');
-  const nodeOs = require('os') as typeof import('os');
-  const nodePath = require('path') as typeof import('path');
-  return {
-    tmpGroups: nodeFs.mkdtempSync(nodePath.join(nodeOs.tmpdir(), 'nc-groups-')),
-    dbState: { row: null as ContainerConfigRow | null },
-    group: { id: 'ag-x', name: 'Coach', folder: 'coach' } as AgentGroup,
-  };
-});
+import { TIMEZONE } from './config.js';
+import {
+  CONTAINER_PLUGINS_DIR,
+  configFromDb,
+  parseMcpServerConfig,
+  resolveGroupTimezone,
+  sanitizeStoredMcpServers,
+  validateMcpServerName,
+} from './container-config.js';
+import { createAgentGroup } from './db/agent-groups.js';
+import { closeDb, initTestDb } from './db/connection.js';
+import { ensureContainerConfig, getContainerConfig, updateContainerConfigScalars } from './db/container-configs.js';
+import { runMigrations } from './db/migrations/index.js';
+import type { AgentGroup } from './types.js';
 
-vi.mock('./config.js', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('./config.js')>()),
-  GROUPS_DIR: h.tmpGroups,
-  STRAVA_PROXY_PORT: 10255,
-}));
+const GROUP: AgentGroup = {
+  id: 'ag-tz',
+  name: 'tz',
+  folder: 'tz',
+  agent_provider: null,
+  created_at: new Date().toISOString(),
+};
 
-vi.mock('./db/container-configs.js', () => ({
-  getContainerConfig: vi.fn(() => h.dbState.row),
-}));
-vi.mock('./db/agent-groups.js', () => ({
-  getAgentGroup: vi.fn(() => h.group),
-}));
-
-import { configFromDb, materializeContainerJson } from './container-config.js';
-import { buildPackageDockerfile } from './container-runner.js';
-import type { AgentGroup, ContainerConfigRow } from './types.js';
-
-function row(overrides: Partial<ContainerConfigRow> = {}): ContainerConfigRow {
-  return {
-    agent_group_id: 'ag-x',
-    provider: null,
-    model: null,
-    effort: null,
-    image_tag: null,
-    assistant_name: null,
-    max_messages_per_prompt: null,
-    skills: '"all"',
-    mcp_servers: '{}',
-    packages_apt: '[]',
-    packages_npm: '[]',
-    packages_pip: '[]',
-    additional_mounts: '[]',
-    cli_scope: 'group',
-    timezone: null,
-    env: '{}',
-    updated_at: '2026-07-14T00:00:00.000Z',
-    ...overrides,
-  };
-}
-
-const { tmpGroups, dbState, group } = h;
-
-describe('configFromDb — pip packages', () => {
-  it('surfaces packages.pip from the DB row', () => {
-    const cfg = configFromDb(row({ packages_pip: '["garminconnect==0.3.6"]' }), group);
-    expect(cfg.packages.pip).toEqual(['garminconnect==0.3.6']);
+describe('resolveGroupTimezone', () => {
+  beforeEach(async () => {
+    await runMigrations(await initTestDb());
+    await createAgentGroup(GROUP);
+    await ensureContainerConfig(GROUP.id);
+  });
+  afterEach(async () => {
+    await closeDb();
   });
 
-  it('defaults pip to empty array when column is []', () => {
-    const cfg = configFromDb(row(), group);
-    expect(cfg.packages.pip).toEqual([]);
+  it('returns the install-global timezone when no override is set', async () => {
+    expect(await resolveGroupTimezone(GROUP.id)).toBe(TIMEZONE);
+    expect(await resolveGroupTimezone('ag-no-such-group')).toBe(TIMEZONE);
+  });
+
+  it('returns a valid override, and falls back to global on an invalid stored value', async () => {
+    await updateContainerConfigScalars(GROUP.id, { timezone: 'Asia/Tokyo' });
+    expect(await resolveGroupTimezone(GROUP.id)).toBe('Asia/Tokyo');
+
+    await updateContainerConfigScalars(GROUP.id, { timezone: 'Not/AZone' });
+    expect(await resolveGroupTimezone(GROUP.id)).toBe(TIMEZONE);
+  });
+
+  it('configFromDb ships a valid timezone to the container and drops an invalid one', async () => {
+    await updateContainerConfigScalars(GROUP.id, { timezone: 'Asia/Tokyo' });
+    expect(configFromDb((await getContainerConfig(GROUP.id))!, GROUP).timezone).toBe('Asia/Tokyo');
+
+    await updateContainerConfigScalars(GROUP.id, { timezone: 'Not/AZone' });
+    expect(configFromDb((await getContainerConfig(GROUP.id))!, GROUP).timezone).toBeUndefined();
+  });
+
+  // The composer widens a corrupt selection to 'all' rather than dropping
+  // skills. This reading used to be a bare cast, so a row that is not JSON
+  // threw here first and the tolerance never applied: every spawn failed, and
+  // `wakeContainer`'s transient-retry contract left the group dark.
+  it('configFromDb widens a corrupt skill selection instead of throwing', async () => {
+    const row = (await getContainerConfig(GROUP.id))!;
+    expect(configFromDb(row, GROUP).skills).toBe('all');
+    expect(configFromDb({ ...row, skills: '["welcome"]' }, GROUP).skills).toEqual(['welcome']);
+    expect(configFromDb({ ...row, skills: '{not json' }, GROUP).skills).toBe('all');
+    expect(configFromDb({ ...row, skills: 'null' }, GROUP).skills).toBe('all');
+  });
+
+  it('configFromDb ships a declared runtime tier and refuses an unknown one', async () => {
+    // The trunk schema carries no runtime_tier column, so the row surfaces it
+    // only where a deployment's migration added it — modeled here by spreading
+    // onto the fetched row. Absent stays absent (the composer's default); an
+    // invalid value fails closed rather than composing at the default tier.
+    const row = (await getContainerConfig(GROUP.id))!;
+    expect(configFromDb(row, GROUP).runtimeTier).toBeUndefined();
+    expect(configFromDb({ ...row, runtime_tier: 'container' }, GROUP).runtimeTier).toBe('container');
+    expect(configFromDb({ ...row, runtime_tier: 'vm' }, GROUP).runtimeTier).toBe('vm');
+    expect(() => configFromDb({ ...row, runtime_tier: 'hypervisor' }, GROUP)).toThrow(
+      /invalid runtime_tier "hypervisor"/,
+    );
+    expect(configFromDb({ ...row, runtime_tier: null }, GROUP).runtimeTier).toBeUndefined();
   });
 });
 
-describe('materializeContainerJson — Strava proxy rewrite', () => {
-  const stravaMcp = JSON.stringify({
-    strava: {
+describe('parseMcpServerConfig', () => {
+  it('preserves stdio config and accepts HTTPS Streamable HTTP config', () => {
+    expect(parseMcpServerConfig({ command: 'pnpm', args: ['dlx', 'server'], env: { TOKEN: 'stub' } })).toEqual({
+      command: 'pnpm',
+      args: ['dlx', 'server'],
+      env: { TOKEN: 'stub' },
+    });
+    expect(parseMcpServerConfig({ url: 'https://mcp.example.com/mcp' })).toEqual({
       type: 'http',
-      url: 'https://mcp.strava.com/mcp',
-      headers: { Authorization: 'Bearer {{strava}}' },
+      url: 'https://mcp.example.com/mcp',
+    });
+    // Non-secret query params (e.g. Datadog toolset selection) are legitimate endpoint config.
+    expect(parseMcpServerConfig({ url: 'https://mcp.datadoghq.com/v1/mcp?toolsets=apm,llmobs' })).toEqual({
+      type: 'http',
+      url: 'https://mcp.datadoghq.com/v1/mcp?toolsets=apm,llmobs',
+    });
+    // Credential keys match as whole words: `author` is not `auth`.
+    expect(parseMcpServerConfig({ url: 'https://mcp.example.com/mcp?author=jane' })).toEqual({
+      type: 'http',
+      url: 'https://mcp.example.com/mcp?author=jane',
+    });
+    // Plain HTTP is allowed only for loopback and the container->host gateway.
+    for (const url of [
+      'http://localhost:8080/mcp',
+      'http://127.0.0.1:9000/mcp',
+      'http://[::1]:9000/mcp',
+      'http://host.docker.internal:8080/mcp',
+    ]) {
+      expect(parseMcpServerConfig({ url })).toEqual({ type: 'http', url });
+    }
+  });
+
+  it.each([
+    [{}, /exactly one/],
+    [{ command: 'server', url: 'https://mcp.example.com/mcp' }, /exactly one/],
+    [{ url: 'http://mcp.example.com/mcp' }, /HTTPS/],
+    // The loopback exception is an exact-hostname match, not a suffix match.
+    [{ url: 'http://localhost.evil.com/mcp' }, /HTTPS/],
+    [{ url: 'https://token@mcp.example.com/mcp' }, /credentials/],
+    [{ url: 'https://mcp.example.com/mcp?api_key=secret' }, /looks like a credential/],
+    [{ url: 'https://mcp.example.com/mcp?authorization=x' }, /looks like a credential/],
+    // camelCase keys are normalized before the word-boundary match.
+    [{ url: 'https://mcp.example.com/mcp?authToken=x' }, /looks like a credential/],
+    [{ url: 'https://mcp.example.com/mcp?privateKey=x' }, /looks like a credential/],
+    [{ url: 'https://mcp.example.com/mcp#secret' }, /fragments/],
+    [{ url: 'https://mcp.example.com/mcp', env: {} }, /only valid with command/],
+    // Env keys reach codex's TOML writer as table keys — charset is allowlisted.
+    [{ command: 'server', env: { 'BAD KEY': 'v' } }, /valid environment variable name/],
+    [{ command: 'server', env: { 'X]\n[mcp_servers.evil]': 'v' } }, /valid environment variable name/],
+  ])('rejects invalid transport config %#', (input, message) => {
+    expect(() => parseMcpServerConfig(input)).toThrow(message);
+  });
+
+  it('honors a declared type and maps streamable-http onto the internal http', () => {
+    expect(parseMcpServerConfig({ type: 'stdio', command: 'server' })).toEqual({
+      command: 'server',
+      args: [],
+      env: {},
+    });
+    expect(parseMcpServerConfig({ type: 'streamable-http', url: 'https://mcp.example.com/mcp' })).toEqual({
+      type: 'http',
+      url: 'https://mcp.example.com/mcp',
+    });
+  });
+
+  it.each([
+    [{ type: 'sse', url: 'https://mcp.example.com/mcp' }, /unsupported transport "sse"/],
+    [{ type: 'websocket', url: 'https://mcp.example.com/mcp' }, /type must be/],
+    [{ type: 'stdio', url: 'https://mcp.example.com/mcp' }, /requires command/],
+    [{ type: 'http', command: 'server' }, /requires url/],
+  ])('rejects a mismatched or unsupported declared type %#', (input, message) => {
+    expect(() => parseMcpServerConfig(input)).toThrow(message);
+  });
+
+  it('accepts headers on http entries and rejects them on stdio entries', () => {
+    expect(parseMcpServerConfig({ url: 'https://mcp.example.com/mcp', headers: { 'X-Client': 'nanoclaw' } })).toEqual({
+      type: 'http',
+      url: 'https://mcp.example.com/mcp',
+      headers: { 'X-Client': 'nanoclaw' },
+    });
+    expect(() => parseMcpServerConfig({ command: 'server', headers: { A: 'b' } })).toThrow(/only valid with url/);
+    expect(() => parseMcpServerConfig({ url: 'https://mcp.example.com/mcp', headers: { A: 1 } })).toThrow(
+      /string values/,
+    );
+  });
+
+  it.each(['./sub', '${PLUGIN_ROOT}', '${PLUGIN_ROOT}/srv', '${PLUGIN_DATA}', '${PLUGIN_DATA}/cache'])(
+    'accepts the fixed cwd form %s',
+    (cwd) => {
+      expect(parseMcpServerConfig({ command: 'server', cwd })).toMatchObject({ cwd });
     },
-  });
+  );
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function written(): any {
-    const p = path.join(tmpGroups, group.folder, 'container.json');
-    return JSON.parse(fs.readFileSync(p, 'utf8'));
-  }
-
-  beforeEach(() => {
-    dbState.row = row({ mcp_servers: stravaMcp });
-  });
-
-  afterEach(() => {
-    fs.rmSync(path.join(tmpGroups, group.folder), { recursive: true, force: true });
-  });
-
-  it('repoints the Strava MCP url at the host proxy', async () => {
-    const cfg = await materializeContainerJson('ag-x');
-    expect(cfg.mcpServers.strava).toMatchObject({
-      url: 'http://host.docker.internal:10255/',
-    });
-  });
-
-  it('drops the Authorization header so no token reaches the container', async () => {
-    await materializeContainerJson('ag-x');
-    const mcp = written().mcpServers.strava;
-    expect(mcp.headers).toEqual({});
-  });
-
-  it('never writes a Strava bearer token to container.json on disk', async () => {
-    await materializeContainerJson('ag-x');
-    const raw = fs.readFileSync(path.join(tmpGroups, group.folder, 'container.json'), 'utf8');
-    expect(raw).not.toContain('{{strava}}');
-    expect(raw).not.toMatch(/Bearer [0-9a-f]{20,}/);
-  });
-
-  it('leaves unrelated remote MCP servers untouched', async () => {
-    dbState.row = row({
-      mcp_servers: JSON.stringify({
-        other: {
-          type: 'http',
-          url: 'https://example.com/mcp',
-          headers: { Authorization: 'Bearer static-key' },
-        },
-      }),
-    });
-
-    const cfg = await materializeContainerJson('ag-x');
-    expect(cfg.mcpServers.other).toMatchObject({
-      url: 'https://example.com/mcp',
-      headers: { Authorization: 'Bearer static-key' },
-    });
+  it.each([
+    ['sub', /cwd must be/],
+    ['/abs', /cwd must be/],
+    ['../up', /cwd must be/],
+    ['./a/../b', /escapes the plugin root/],
+    ['${PLUGIN_ROOT}/../up', /escapes the plugin root/],
+    ['${PLUGIN_DATA}/a/${PLUGIN_ROOT}', /escapes the plugin root/],
+    ['${PLUGIN_DATA}//x', /escapes the plugin root/],
+    ['./a//b', /escapes the plugin root/],
+    [7, /cwd must be/],
+  ])('rejects cwd %s', (cwd, message) => {
+    expect(() => parseMcpServerConfig({ command: 'server', cwd })).toThrow(message);
   });
 });
 
-describe('buildPackageDockerfile — pip channel', () => {
-  it('installs pip packages into the /opt/wpenv venv', () => {
-    const df = buildPackageDockerfile({ apt: [], npm: [], pip: ['garminconnect==0.3.6'] });
-    expect(df).toContain('/opt/wpenv/bin/pip install');
-    expect(df).toContain('garminconnect==0.3.6');
+describe('sanitizeStoredMcpServers', () => {
+  it('keeps valid entries, preserves a well-formed pluginRoot, and drops the rest', () => {
+    const sanitized = sanitizeStoredMcpServers(
+      {
+        good: { command: 'server', args: [], env: {}, pluginRoot: `${CONTAINER_PLUGINS_DIR}/sdr` },
+        remote: { type: 'http', url: 'https://mcp.example.com/mcp' },
+        badRoot: { command: 'server', pluginRoot: '/etc' },
+        broken: { url: 'http://insecure.example.com' },
+        notAnObject: 42,
+        'bad.name': { command: 'server' },
+      },
+      'test-group',
+    );
+    expect(Object.keys(sanitized).sort()).toEqual(['badRoot', 'good', 'remote']);
+    expect(sanitized.good).toMatchObject({ pluginRoot: `${CONTAINER_PLUGINS_DIR}/sdr` });
+    expect(sanitized.badRoot).not.toHaveProperty('pluginRoot');
   });
 
-  it('emits no pip line when there are no pip packages', () => {
-    const df = buildPackageDockerfile({ apt: ['jq'], npm: [], pip: [] });
-    expect(df).not.toContain('/opt/wpenv/bin/pip');
-    expect(df).toContain('jq');
+  it('strips cwd from entries without plugin provenance, keeps it with', () => {
+    const sanitized = sanitizeStoredMcpServers(
+      {
+        planted: { command: 'server', cwd: '${PLUGIN_DATA}/x' },
+        plugin: { command: 'server', cwd: '${PLUGIN_DATA}/x', pluginRoot: `${CONTAINER_PLUGINS_DIR}/sdr` },
+      },
+      'test-group',
+    );
+    expect(sanitized.planted).not.toHaveProperty('cwd');
+    expect(sanitized.plugin).toMatchObject({ cwd: '${PLUGIN_DATA}/x' });
   });
 
-  it('combines apt, npm, and pip in one Dockerfile', () => {
-    const df = buildPackageDockerfile({ apt: ['jq'], npm: ['cowsay'], pip: ['garminconnect==0.3.6'] });
-    expect(df).toContain('apt-get install -y jq');
-    expect(df).toContain('pnpm install -g cowsay');
-    expect(df).toContain('/opt/wpenv/bin/pip install');
-    expect(df).toMatch(/USER node/);
+  it('returns empty on a non-object blob', () => {
+    expect(sanitizeStoredMcpServers('garbage', 'test-group')).toEqual({});
   });
+});
 
-  it('throws when there are no packages at all', () => {
-    expect(() => buildPackageDockerfile({ apt: [], npm: [], pip: [] })).toThrow();
+describe('validateMcpServerName', () => {
+  it('accepts bare-key-safe names and rejects structural or oversized ones', () => {
+    expect(() => validateMcpServerName('brave-search_2')).not.toThrow();
+    // __proto__ matches the regex but would set the record's prototype
+    // instead of an own key on assignment — rejected by name.
+    for (const name of ['', 'docs]\n[mcp_servers.evil]', 'a b', 'a.b', '"quoted"', 'x'.repeat(65), '__proto__']) {
+      expect(() => validateMcpServerName(name)).toThrow(/1-64 characters/);
+    }
+  });
+});
+
+/**
+ * The container cannot import host modules, so the MCP validation constants
+ * are duplicated in container/agent-runner/src/mcp-tools/self-mod.ts. Pin
+ * the copies byte-identical so drift fails a test instead of shipping.
+ */
+describe('host/container validation parity', () => {
+  it('keeps the duplicated regex literals identical', () => {
+    const read = (p: string): string => fs.readFileSync(path.join(process.cwd(), p), 'utf-8');
+    const host = read('src/container-config.ts');
+    const container = read('container/agent-runner/src/mcp-tools/self-mod.ts');
+    for (const name of ['SECRET_QUERY_KEY_RE', 'CAMEL_SPLIT_RE', 'MCP_SERVER_NAME_RE', 'ENV_KEY_RE']) {
+      const literal = (src: string): string | undefined =>
+        src
+          .match(new RegExp(`const ${name} =\\s*([^;]+);`))?.[1]
+          .replace(/\s+/g, ' ')
+          .trim();
+      expect(literal(host), name).toBeDefined();
+      expect(literal(container), name).toBe(literal(host));
+    }
   });
 });

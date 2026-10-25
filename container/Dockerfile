@@ -1,4 +1,10 @@
-# syntax=docker/dockerfile:1.7
+# syntax=docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e
+# The BuildKit frontend above is pinned by digest, so a build fetches it by
+# content address and never asks Docker Hub to resolve the `1.7` tag first. The
+# tag lookup is the HEAD request that returned 500 and took two registry-skills
+# legs down on 2026-09-07 with the code untouched. Resolved with
+# `crane digest docker/dockerfile:1.7` (docker buildx imagetools inspect agrees).
+# Bump the tag and digest together.
 # NanoClaw Agent Container
 # Runs Claude Agent SDK in isolated Linux VM with browser automation.
 #
@@ -10,7 +16,8 @@
 # bind mount at runtime (see src/container-runner.ts). Source-only changes
 # never require an image rebuild.
 
-FROM node:22-slim
+# Pinned by digest so a rebuild cannot reuse a cached older base; bump tag and digest together.
+FROM node:22.23.4-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
 
 # ---- Build-time arguments ----------------------------------------------------
 # CJK fonts add ~200MB. Opt in only if you render Chinese/Japanese/Korean text.
@@ -21,12 +28,14 @@ ARG INSTALL_CJK_FONTS=false
 # all users. The global Node CLIs (claude-code, agent-browser, tsx) are
 # pinned in cli-tools.json so a skill can add one with a json-merge; Bun (the
 # runtime) is pinned here because it installs from a different source.
-ARG BUN_VERSION=1.3.12
+ARG BUN_VERSION=1.4.0
 ARG GMAIL_MCP_VERSION=1.1.11
 
 # ---- System dependencies -----------------------------------------------------
 # tini: correct PID 1 / signal forwarding so outbound.db writes finalize on
 # SIGTERM instead of being orphaned by the shell entrypoint.
+# poppler-utils: Claude Code's Read tool shells out to pdftoppm to open a PDF;
+# without it every PDF a user sends comes back as an error.
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update && apt-get install -y --no-install-recommends \
@@ -35,6 +44,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
         fonts-noto-color-emoji \
         libgbm1 \
         libnss3 \
+        libnss3-tools \
         libatk-bridge2.0-0 \
         libgtk-3-0 \
         libx11-xcb1 \
@@ -49,6 +59,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
         ca-certificates \
         curl \
         git \
+        poppler-utils \
         tini \
         unzip \
     && if [ "$INSTALL_CJK_FONTS" = "true" ]; then \
@@ -125,7 +136,7 @@ ENV PATH="$PNPM_HOME:$PATH"
 # silently skips claude-code's native-binary postinstall and agent-browser's
 # bin chmod — the agent then crashes at runtime with "native binary not
 # installed". Keep this in lockstep with package.json's `packageManager`.
-ARG PNPM_VERSION=10.33.0
+ARG PNPM_VERSION=10.34.5
 RUN corepack enable && corepack prepare pnpm@${PNPM_VERSION} --activate
 
 # Global Node CLIs the agent invokes at runtime live in cli-tools.json so a

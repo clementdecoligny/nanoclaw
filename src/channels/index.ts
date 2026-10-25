@@ -15,8 +15,8 @@ import './discord.js';
 // slack
 // import './slack.js';
 
-// telegram
-import './telegram.js';
+// telegram — this install uses its own adapter, registered from ./local.ts
+// (see telegram-local.ts for why).
 
 // github
 // import './github.js';

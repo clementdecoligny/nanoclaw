@@ -14,7 +14,7 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 
-import { initTestSessionDb, closeSessionDb, getInboundDb } from './db/connection.js';
+import { initTestSessionDb, closeSessionDb, getInboundDb } from './mailbox/sqlite/connection.js';
 import { getPendingMessages, type MessageInRow } from './db/messages-in.js';
 import { formatMessages, stripInternalTags, stripLegacyTaskContract, isRunnerCommand } from './formatter.js';
 import { TIMEZONE, formatLocalTime } from './timezone.js';
@@ -45,6 +45,11 @@ afterEach(() => {
   closeSessionDb();
 });
 
+// Production always assigns seq (the host writer); a NULL seq makes both the
+// query's ORDER BY and getPendingMessages' final sort ties, so multi-row
+// ordering becomes whatever SQLite returns — the source of a long flake.
+let nextSeq = 1;
+
 function insertMessage(
   id: string,
   kind: string,
@@ -54,10 +59,10 @@ function insertMessage(
   const timestamp = opts?.timestamp ?? new Date().toISOString();
   getInboundDb()
     .prepare(
-      `INSERT INTO messages_in (id, kind, timestamp, status, process_after, content)
-       VALUES (?, ?, ?, 'pending', ?, ?)`,
+      `INSERT INTO messages_in (id, kind, timestamp, status, process_after, content, seq)
+       VALUES (?, ?, ?, 'pending', ?, ?, ?)`,
     )
-    .run(id, kind, timestamp, opts?.processAfter ?? null, JSON.stringify(content));
+    .run(id, kind, timestamp, opts?.processAfter ?? null, JSON.stringify(content), nextSeq++);
 }
 
 describe('context timezone header', () => {
@@ -124,27 +129,27 @@ describe('isRunnerCommand — native dispatch gated on command file existence', 
   it('treats an unknown /command as NOT a runner command (so it is interpreted as text)', () => {
     // Regression for the silent-/weekly bug: /weekly has no command file, so it
     // must NOT be dispatched natively to the SDK (which drops it silently).
-    expect(isRunnerCommand(commandMsg('/weekly'), { cwd: tmp, home: tmp })).toBe(false);
+    expect(isRunnerCommand(commandMsg('/weekly'), 'claude', { cwd: tmp, home: tmp })).toBe(false);
   });
 
   it('treats a /command WITH a matching command file as a runner command', () => {
     writeCommandFile('weekly');
-    expect(isRunnerCommand(commandMsg('/weekly'), { cwd: tmp, home: tmp })).toBe(true);
+    expect(isRunnerCommand(commandMsg('/weekly'), 'claude', { cwd: tmp, home: tmp })).toBe(true);
   });
 
   it('matches the command name case-insensitively and ignores arguments', () => {
     writeCommandFile('weekly');
-    expect(isRunnerCommand(commandMsg('/WEEKLY some args'), { cwd: tmp, home: tmp })).toBe(true);
+    expect(isRunnerCommand(commandMsg('/WEEKLY some args'), 'claude', { cwd: tmp, home: tmp })).toBe(true);
   });
 
   it('still treats admin commands as runner commands without any file', () => {
     // /clear and other admin commands are handled by the runner/host directly,
     // not via a command file — they must remain runner commands.
-    expect(isRunnerCommand(commandMsg('/clear'), { cwd: tmp, home: tmp })).toBe(true);
+    expect(isRunnerCommand(commandMsg('/clear'), 'claude', { cwd: tmp, home: tmp })).toBe(true);
   });
 
   it('non-slash chat is never a runner command', () => {
-    expect(isRunnerCommand(commandMsg('hello there'), { cwd: tmp, home: tmp })).toBe(false);
+    expect(isRunnerCommand(commandMsg('hello there'), 'claude', { cwd: tmp, home: tmp })).toBe(false);
   });
 });
 
@@ -206,6 +211,46 @@ describe('multi-message chat batches', () => {
     expect(firstIdx).toBeGreaterThan(0);
     expect(secondIdx).toBeGreaterThan(firstIdx);
     expect(thirdIdx).toBeGreaterThan(secondIdx);
+  });
+});
+
+describe('structured chat links', () => {
+  it('preserves a link target hidden by shortened display text', () => {
+    insertMessage('m1', 'chat-sdk', {
+      sender: 'Joel',
+      text: 'read example.com/assets/…/review',
+      links: [{ url: 'https://example.com/assets/a_123/review?x=1&y=2' }],
+    });
+
+    const result = formatMessages(getPendingMessages());
+
+    expect(result).toContain(
+      'read example.com/assets/…/review\n[link: https://example.com/assets/a_123/review?x=1&amp;y=2]',
+    );
+  });
+
+  it('does not repeat a link already present in message text', () => {
+    const url = 'https://example.com/full-path';
+    insertMessage('m1', 'chat-sdk', { sender: 'Joel', text: `read ${url}`, links: [{ url }] });
+
+    const result = formatMessages(getPendingMessages());
+
+    expect(result.match(/https:\/\/example\.com\/full-path/g)).toHaveLength(1);
+  });
+});
+
+describe('staged attachments', () => {
+  it('shows the host-staged path, not one rebuilt from the message id', () => {
+    const folder = '~spaces-AAA-messages-BBB.BBB-ag-1-0123456789abcdef';
+    insertMessage('spaces/AAA/messages/BBB.BBB:ag-1', 'chat-sdk', {
+      sender: 'Joel',
+      text: 'look',
+      attachments: [{ type: 'image', name: 'photo.png', localPath: `inbox/${folder}/photo.png` }],
+    });
+
+    const result = formatMessages(getPendingMessages());
+
+    expect(result).toContain(`[image: photo.png — saved to /workspace/inbox/${folder}/photo.png]`);
   });
 });
 
@@ -330,5 +375,55 @@ describe('stripInternalTags', () => {
     expect(stripInternalTags('<internal>thinking</internal>The answer is 42')).toBe(
       'The answer is 42',
     );
+  });
+});
+
+describe('app_context rendering (Slack agent mode, contract C4)', () => {
+  it('renders a compact single (viewing: …) line inside the message block', () => {
+    insertMessage('m1', 'chat-sdk', {
+      sender: 'Gavriel',
+      text: 'what do you think?',
+      app_context: { entities: [{ type: 'channel', id: 'C0DESIGN' }] },
+    });
+    const result = formatMessages(getPendingMessages());
+    expect(result).toContain('what do you think?\n(viewing: channel C0DESIGN)</message>');
+  });
+
+  it('joins multiple entities in order with commas', () => {
+    insertMessage('m1', 'chat-sdk', {
+      sender: 'Gavriel',
+      text: 'here',
+      app_context: {
+        entities: [
+          { type: 'channel', id: 'C0DESIGN' },
+          { type: 'canvas', id: 'F0CANVAS' },
+        ],
+      },
+    });
+    const result = formatMessages(getPendingMessages());
+    expect(result).toContain('(viewing: channel C0DESIGN, canvas F0CANVAS)');
+  });
+
+  it('renders nothing for absent, empty, or malformed app_context', () => {
+    insertMessage('m1', 'chat-sdk', { sender: 'A', text: 'no context' });
+    insertMessage('m2', 'chat-sdk', { sender: 'A', text: 'empty', app_context: { entities: [] } });
+    insertMessage('m3', 'chat-sdk', { sender: 'A', text: 'malformed', app_context: 'C0DESIGN' });
+    insertMessage('m4', 'chat-sdk', {
+      sender: 'A',
+      text: 'idless',
+      app_context: { entities: [{ type: 'channel' }] },
+    });
+    const result = formatMessages(getPendingMessages());
+    expect(result).not.toContain('(viewing:');
+  });
+
+  it('escapes XML-significant characters in entity values', () => {
+    insertMessage('m1', 'chat-sdk', {
+      sender: 'A',
+      text: 'x',
+      app_context: { entities: [{ type: 'channel', id: 'C1<&>' }] },
+    });
+    const result = formatMessages(getPendingMessages());
+    expect(result).toContain('(viewing: channel C1&lt;&amp;&gt;)');
   });
 });

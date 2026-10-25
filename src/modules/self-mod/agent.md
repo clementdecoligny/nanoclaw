@@ -13,7 +13,10 @@ servers — but only with admin approval.
   pinned version like `garminconnect==0.3.6`). pip packages install into the
   container's `/opt/wpenv` Python venv. Max 20 packages per request.
 
-- `add_mcp_server({ name, command, args?, env? })` — adds a new MCP server
+- `add_mcp_server({ name, command, args?, env? })` or
+  `add_mcp_server({ name, url })` — adds a local stdio or remote
+  Streamable HTTP MCP server (HTTPS, or plain HTTP for
+  localhost / host.docker.internal)
   to your container config and restarts the container so the new server
   is wired up on the next message. No image rebuild is required (bun runs
   TS directly).

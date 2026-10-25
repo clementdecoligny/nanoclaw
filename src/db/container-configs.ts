@@ -11,6 +11,7 @@ const SCALAR_COLUMNS = new Set([
   'max_messages_per_prompt',
   'cli_scope',
   'timezone',
+  'speed',
 ]);
 const JSON_COLUMNS = new Set([
   'skills',
@@ -21,31 +22,28 @@ const JSON_COLUMNS = new Set([
   'additional_mounts',
 ]);
 
-export function getContainerConfig(agentGroupId: string): ContainerConfigRow | undefined {
-  return getDb().prepare('SELECT * FROM container_configs WHERE agent_group_id = ?').get(agentGroupId) as
-    | ContainerConfigRow
-    | undefined;
+export async function getContainerConfig(agentGroupId: string): Promise<ContainerConfigRow | undefined> {
+  return getDb().get<ContainerConfigRow>('SELECT * FROM container_configs WHERE agent_group_id = ?', agentGroupId);
 }
 
-export function getAllContainerConfigs(): ContainerConfigRow[] {
-  return getDb().prepare('SELECT * FROM container_configs').all() as ContainerConfigRow[];
+export async function getAllContainerConfigs(): Promise<ContainerConfigRow[]> {
+  return getDb().all<ContainerConfigRow>('SELECT * FROM container_configs');
 }
 
 /** Insert a new config row. Caller must supply all JSON fields (use defaults for empty). */
-export function createContainerConfig(config: ContainerConfigRow): void {
-  getDb()
-    .prepare(
-      `INSERT INTO container_configs (
+export async function createContainerConfig(config: ContainerConfigRow): Promise<void> {
+  await getDb().run(
+    `INSERT INTO container_configs (
         agent_group_id, provider, model, effort, image_tag, assistant_name,
         max_messages_per_prompt, skills, mcp_servers, packages_apt, packages_npm,
-        packages_pip, additional_mounts, cli_scope, timezone, env, updated_at
+        packages_pip, additional_mounts, cli_scope, timezone, speed, env, updated_at
       ) VALUES (
         @agent_group_id, @provider, @model, @effort, @image_tag, @assistant_name,
         @max_messages_per_prompt, @skills, @mcp_servers, @packages_apt, @packages_npm,
-        @packages_pip, @additional_mounts, @cli_scope, @timezone, @env, @updated_at
+        @packages_pip, @additional_mounts, @cli_scope, @timezone, @speed, @env, @updated_at
       )`,
-    )
-    .run(config);
+    config,
+  );
 }
 
 /**
@@ -58,7 +56,7 @@ export function createContainerConfig(config: ContainerConfigRow): void {
  * `claude` and an absent value that resolves to claude are stored as NULL — the
  * column means "follows the built-in default", matching pre-feature rows.
  */
-export function ensureContainerConfig(agentGroupId: string, provider?: string | null): void {
+export async function ensureContainerConfig(agentGroupId: string, provider?: string | null): Promise<void> {
   // Single chokepoint for the instance default: a fresh row with no explicit
   // provider is stamped with DEFAULT_AGENT_PROVIDER, so every new-group creation
   // path inherits it without each having to remember. INSERT OR IGNORE keeps an
@@ -72,16 +70,18 @@ export function ensureContainerConfig(agentGroupId: string, provider?: string | 
   // column matches what resolution lowercases to.
   const normalized = (provider ?? DEFAULT_AGENT_PROVIDER).toLowerCase();
   const stamped = normalized && normalized !== 'claude' ? normalized : null;
-  getDb()
-    .prepare(
-      `INSERT OR IGNORE INTO container_configs (agent_group_id, provider, updated_at)
-       VALUES (?, ?, ?)`,
-    )
-    .run(agentGroupId, stamped, new Date().toISOString());
+  await getDb().run(
+    `INSERT INTO container_configs (agent_group_id, provider, updated_at)
+       VALUES (?, ?, ?)
+       ON CONFLICT (agent_group_id) DO NOTHING`,
+    agentGroupId,
+    stamped,
+    new Date().toISOString(),
+  );
 }
 
 /** Update scalar fields on a config row. Only touches fields present in `updates`. */
-export function updateContainerConfigScalars(
+export async function updateContainerConfigScalars(
   agentGroupId: string,
   updates: Partial<
     Pick<
@@ -94,9 +94,10 @@ export function updateContainerConfigScalars(
       | 'max_messages_per_prompt'
       | 'cli_scope'
       | 'timezone'
+      | 'speed'
     >
   >,
-): void {
+): Promise<void> {
   const fields: string[] = [];
   const values: Record<string, unknown> = { agent_group_id: agentGroupId };
 
@@ -112,22 +113,23 @@ export function updateContainerConfigScalars(
   fields.push('updated_at = @updated_at');
   values.updated_at = new Date().toISOString();
 
-  getDb()
-    .prepare(`UPDATE container_configs SET ${fields.join(', ')} WHERE agent_group_id = @agent_group_id`)
-    .run(values);
+  await getDb().run(`UPDATE container_configs SET ${fields.join(', ')} WHERE agent_group_id = @agent_group_id`, values);
 }
 
 /** Overwrite a JSON column wholesale. Used for skills, mcp_servers, packages_*, additional_mounts. */
-export function updateContainerConfigJson(
+export async function updateContainerConfigJson(
   agentGroupId: string,
   column: 'skills' | 'mcp_servers' | 'packages_apt' | 'packages_npm' | 'packages_pip' | 'additional_mounts',
   value: unknown,
-): void {
+): Promise<void> {
   if (!JSON_COLUMNS.has(column)) throw new Error(`Invalid JSON column: ${column}`);
   const now = new Date().toISOString();
-  getDb()
-    .prepare(`UPDATE container_configs SET ${column} = ?, updated_at = ? WHERE agent_group_id = ?`)
-    .run(JSON.stringify(value), now, agentGroupId);
+  await getDb().run(
+    `UPDATE container_configs SET ${column} = ?, updated_at = ? WHERE agent_group_id = ?`,
+    JSON.stringify(value),
+    now,
+    agentGroupId,
+  );
 }
 
 /**
@@ -141,8 +143,8 @@ export function updateContainerConfigJson(
  * `-e KEY=VALUE` docker arguments; a name containing `=` or whitespace could
  * smuggle in additional arguments.
  */
-export function setContainerConfigEnv(agentGroupId: string, vars: Record<string, string | null>): void {
-  const row = getContainerConfig(agentGroupId);
+export async function setContainerConfigEnv(agentGroupId: string, vars: Record<string, string | null>): Promise<void> {
+  const row = await getContainerConfig(agentGroupId);
   if (!row) throw new Error(`No container config for group: ${agentGroupId}`);
 
   const merged = JSON.parse(row.env ?? '{}') as Record<string, string>;
@@ -156,11 +158,14 @@ export function setContainerConfigEnv(agentGroupId: string, vars: Record<string,
     else merged[name] = value;
   }
 
-  getDb()
-    .prepare('UPDATE container_configs SET env = ?, updated_at = ? WHERE agent_group_id = ?')
-    .run(JSON.stringify(merged), new Date().toISOString(), agentGroupId);
+  await getDb().run(
+    'UPDATE container_configs SET env = ?, updated_at = ? WHERE agent_group_id = ?',
+    JSON.stringify(merged),
+    new Date().toISOString(),
+    agentGroupId,
+  );
 }
 
-export function deleteContainerConfig(agentGroupId: string): void {
-  getDb().prepare('DELETE FROM container_configs WHERE agent_group_id = ?').run(agentGroupId);
+export async function deleteContainerConfig(agentGroupId: string): Promise<void> {
+  await getDb().run('DELETE FROM container_configs WHERE agent_group_id = ?', agentGroupId);
 }
