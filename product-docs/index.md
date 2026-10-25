@@ -35,6 +35,12 @@ Effort levels run `low` → `medium` → `high` → `xhigh` → `max`. The top t
 
 The choice sticks: it becomes that agent's default for every future conversation until you change it again. The agent restarts immediately, so the next reply already runs on the new setting.
 
+## Scheduled messages
+
+Recurring messages (Pepa's daily briefing and Monday check-in, Edmond's monthly reminders, Coach's Sunday plan, Lenny's daily nudges) each run in their own background session, separate from your conversation with the agent. The agent wakes at the scheduled time, does the work, and posts the result to the chat named in the task. Your chat history is not mixed with routine runs, and a routine does not continue an earlier conversation.
+
+Each message is sent once. If an agent already sent a message during a turn, repeating the same text at the end of that turn is skipped instead of delivered a second time.
+
 ## What this system doesn't do
 
 - It doesn't replace decisions — agents surface, draft, and propose. You confirm.
