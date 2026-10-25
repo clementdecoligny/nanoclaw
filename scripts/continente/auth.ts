@@ -26,6 +26,17 @@ const DW_LOGIN_PATH =
 // In-memory session — survives the process lifetime, not persisted
 let _session: { dwsid: string; expiresAt: number } | null = null;
 
+/**
+ * Raised when Continente rejects the stored credentials outright.
+ *
+ * Distinct from transient/protocol failures: retrying cannot help, and callers
+ * that loop over many items should abort the whole run rather than reporting
+ * one credential problem once per item.
+ */
+export class AuthCredentialsError extends Error {
+  readonly name = 'AuthCredentialsError';
+}
+
 // ---------------------------------------------------------------------------
 // PKCE helpers
 // ---------------------------------------------------------------------------
@@ -112,6 +123,21 @@ async function step2_submitPassword(
 
   if (!res.ok) {
     const body = await res.text();
+
+    // Continente returns a bare error-code array, e.g. [{"Code":"100017"}].
+    // 100017 = invalid credentials. Verified empirically: a deliberately wrong
+    // password on a valid account returns exactly this code, and step1 already
+    // proved the account exists (an unknown address routes to registration and
+    // returns 300001 instead). So this is never a protocol/cookie problem —
+    // the stored password no longer matches the account.
+    if (/"100017"/.test(body)) {
+      throw new AuthCredentialsError(
+        'Continente rejected the password (code 100017). The account exists, but ' +
+          'CONTINENTE_PASSWORD is out of date — it was most likely changed on continente.pt. ' +
+          'Update the stored credential; no code change will fix this.',
+      );
+    }
+
     throw new Error(`[step2] password validation failed: ${res.status} — ${body}`);
   }
 

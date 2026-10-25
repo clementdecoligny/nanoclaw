@@ -15,6 +15,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { parsePreferredProducts, parseShoppingList, matchItems, cachePid } from './matcher.js';
 import { searchProduct, addToCart, getCart } from './client.js';
+import { AuthCredentialsError } from './auth.js';
 import { getLatestOrder } from './orders.js';
 import type { BasketItem, MatchResult } from './types.js';
 
@@ -68,6 +69,12 @@ async function prepare(): Promise<void> {
     try {
       results = await searchProduct(product.continenteName, 5);
     } catch (err) {
+      // Same reasoning as execute(): a credential failure is not a per-item
+      // problem, and reporting it as one hides the actual cause.
+      if (err instanceof AuthCredentialsError) {
+        console.error(`\n❌ ${err.message}`);
+        process.exit(1);
+      }
       needsInput.push({
         name: item.name,
         reason: `Search error: ${(err as Error).message}`,
@@ -170,6 +177,7 @@ async function execute(): Promise<void> {
   console.log(`Adding ${basket.length} items to Continente cart...`);
 
   const errors: string[] = [];
+  let added = 0;
   let lastTotal = 0;
   let lastQtyTotal = 0;
 
@@ -178,8 +186,19 @@ async function execute(): Promise<void> {
       const result = await addToCart(item.pid, item.qty);
       lastTotal = result.grandTotal;
       lastQtyTotal = result.quantityTotal;
+      added++;
       console.log(`  ✅ ${item.continenteName} ×${item.qty}`);
     } catch (err) {
+      // A bad credential fails identically for every item. Abort instead of
+      // retrying it once per line and reporting one root cause as N failures.
+      if (err instanceof AuthCredentialsError) {
+        console.error(`\n❌ ${err.message}`);
+        console.error(
+          `Nothing was added to the cart. The pending basket is kept at ${PENDING_PATH} — ` +
+            `re-run "execute" once the credential is fixed.`,
+        );
+        process.exit(1);
+      }
       const msg = `  ❌ ${item.continenteName} (pid:${item.pid}): ${(err as Error).message}`;
       console.error(msg);
       errors.push(msg);
@@ -193,8 +212,13 @@ async function execute(): Promise<void> {
     console.log(`\n⚠️  ${errors.length} items failed — add manually:\n${errors.join('\n')}`);
   }
 
-  // Clean up
-  fs.unlinkSync(PENDING_PATH);
+  // Keep the pending basket if nothing landed — otherwise a failed run silently
+  // discards the prepared list and forces a full re-prepare.
+  if (added > 0) {
+    fs.unlinkSync(PENDING_PATH);
+  } else {
+    console.log(`\nNo items were added — pending basket kept at ${PENDING_PATH}.`);
+  }
 }
 
 // ---------------------------------------------------------------------------
