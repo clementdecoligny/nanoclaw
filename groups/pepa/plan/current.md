@@ -70,7 +70,16 @@ _École jeudi : Abóbora / Lombinhos de Pescada c/ batata e Ovo → pas de rép�
 | | |
 |---|---|
 | Déjeuner | Salade de riz, thon, œufs durs + tomates cherry (panier) + persil (panier) + feta + olives noires + graines de courge + guindillas + panados de frango troceados. Sauce tahini-vinaigre (pas de citron/avocat en stock). Picnic, sans soupe. |
-| Dîner | À confirmer (excursion) — si à la maison : haricots blancs sautés, poireau, œuf poêlé (nouvelle recette, poireau à utiliser avant qu'il tourne) + soupe |
+| Dîner | ✅ Dehors (famille, signalé 25/10 12h59). Haricots blancs/poireau/œuf reporté : poireau à utiliser avant qu'il tourne, pas une priorité pour ce soir-là. |
+
+_Correction 25/10 13h01 : dîner finalement dehors pour les adultes seulement, dîner enfants à la maison._
+
+## Dimanche 25 octobre
+
+| | |
+|---|---|
+| Déjeuner | ✅ Dehors (famille, signalé 25/10 12h59) |
+| Dîner | À définir : reprendre haricots blancs sautés, poireau, œuf poêlé (nouvelle recette) si le poireau est encore bon |
 
 ---
 

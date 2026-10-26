@@ -319,7 +319,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Carne picada (bœuf haché) | 1 boîte + 400g frais | Boîte confirmée 27/06 + 400g Angus frais (Talho) livraison 24/09, à congeler ou utiliser rapidement |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |
 | Panados de frango (escalopes panées poulet) | 4 kg | Racheté 07/10 (confirmé par Lola) — entamé dîner 07/10 (enfants + baby-sitter, riz + panados) |
-| Dumplings | 0 | ❌ 12 consommés dîner 25/07 — probablement épuisés |
+| Dumplings | reste pour 1 dîner | 20 consommés dîner enfants dim 25/10 (stock retrouvé, correction de l'ancienne note "épuisés" du 25/07). Reste encore pour 1 dîner, signalé par Clément 25/10 20h31 |
 | Bolognese (maison) | 0 | ❌ Restes finis dîner 16/09 (congélo, stock non tracé depuis 15/07) |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
 | Pains de burger | 0 | ❌ Consommés |

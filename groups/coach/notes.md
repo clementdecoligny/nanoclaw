@@ -215,3 +215,6 @@ Clément a corrigé (25/10) : ne plus demander "as-tu fait telle séance renfo/v
 ## Préférence — pas de pédagogie non sollicitée sur les métriques (18 octobre 2026)
 
 Clément a qualifié une explication détaillée de la dérive aérobie (découpage FC/vitesse, seuils de durée minimum) de **"trop expert", "ça ne m'intéresse pas", "du bruit"**. Contrairement à l'instruction générale "toujours expliquer le pourquoi", ne pas développer une explication technique en profondeur par défaut — rester sur le verdict actionnable (fait / pas fait, bon signe / signal à surveiller). Développer la mécanique seulement si Clément pose explicitement la question. Dérive aérobie : retirée des comptes-rendus `/done` depuis le 18/10 (sorties courtes de reconditionnement cheville, pas de signal fiable) — à reprendre quand les sorties repassent au-dessus de 2h ou qu'un nouvel objectif structuré existe.
+
+## Format messages Telegram (25 oct 2026)
+Clément : « Quand tu changes de sujet, saute une ligne, c'est illisible. » → toujours une ligne vide entre deux sujets/blocs, en plus du gras et des puces.
