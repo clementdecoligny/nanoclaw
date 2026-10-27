@@ -5,12 +5,13 @@ description: State for scheduled morning nudge / end-of-day / Friday review runs
 
 # Nudge log
 
-- Last morning nudge sent: 2026-10-23 (Friday).
-- Unanswered end-of-day: 2026-10-23 — prompt sent 17:30, awaiting answer. (22/10 row confirmed real and already filled in: "Rien fait — très mal dormi (enfants) + kiné a pris toute la matinée" / next: "LinkedIn rehab (priorité du jour, reportée)".)
-- Thank-you owed: none — Sebastião Thomaz's row (21/10) now has Conversations L = Yes.
-- Today (23/10) is the first real Friday review — due at 12:00, separate scheduled task. Check Monday 26/10 whether it happened or was abandoned.
-- Next Monday goal prompt due: Monday 2026-10-26 (propose previous week's Q5 once the 23/10 Friday review fills it in).
-- Milestone wording changed: 31/10 milestone is now "3 calibration calls booked; company list v0 done; profile and resume live" (was "4 CMFs tested on 3 people; council running") — sheet-side edit, not something I need to chase.
+- Last morning nudge sent: 2026-10-26 (Monday).
+- Unanswered end-of-day: 2026-10-26 — prompt sent 17:30, awaiting answer. (23/10 row was filled in: done: set up Career-ops; learned: DS/FDE more common than expected; next: rebuild company list around products/funding/interest, not job posts.)
+- Thank-you owed: none — Sebastião Thomaz's row (21/10) has Conversations L = Yes.
+- Friday review for week of 19/10 was abandoned — Weekly review row stayed fully blank (Q1–Q5). Flagged once in today's (26/10) nudge per the charter rule; asked him to set this week's outcome goal directly since there was no Q5 to carry forward.
+- Overdue to-dos as of 26/10 (1 Set up tab, rows re-sorted after running `sort`): LinkedIn rehab (row 17), master resume (row 18), recruiter outreach (row 19) — all due 23/10, 3 days overdue. Flagged in the nudge; re-check overdue duration next run with Python, don't reuse "3d" without recomputing.
+- New to-do appeared on the sheet since last check: "Hold council's first session" (1 Set up, row 23) — Ted (JSC lead) booked it for Thu 29/10 11:00; not overdue, no action needed from me.
+- Milestone wording (31/10) unchanged since 23/10: "3 calibration calls booked; company list v0 done; profile and resume live".
 
 ## Unverified memory files (flagged, not acted on)
 

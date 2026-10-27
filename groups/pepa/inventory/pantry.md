@@ -245,7 +245,7 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Avocats (panier, pas mûrs) | 2 | Panier 23/10 — à surveiller pour maturité |
 | Persil frais (panier) | 1 bouquet | Panier 23/10 — utilisé dîner dourada (vinaigrette) + salade riz picnic sam 24/10 |
 | Patates douces (panier) | 2 grosses | Panier 23/10 — 1 utilisée dîner dourada ven 23/10 |
-| Poireau coupé (alho francês cortado) | 1 sachet | Achat local 12/10 — à utiliser prochain repas (12 jours, vieillissant) |
+| Poireau coupé (alho francês cortado) | 0 | ❌ Mis dans la soupe (signalé par Clément 26/10), pas dans le dîner haricots blancs/œuf prévu |
 
 ---
 

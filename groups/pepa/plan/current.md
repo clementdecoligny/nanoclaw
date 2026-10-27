@@ -79,7 +79,18 @@ _Correction 25/10 13h01 : dîner finalement dehors pour les adultes seulement, d
 | | |
 |---|---|
 | Déjeuner | ✅ Dehors (famille, signalé 25/10 12h59) |
-| Dîner | À définir : reprendre haricots blancs sautés, poireau, œuf poêlé (nouvelle recette) si le poireau est encore bon |
+| Dîner | ✅ Dehors (adultes, signalé 25/10 13h01). Enfants : dumplings à la poêle (20, `recipes/dumplings.md`) ✅ |
+
+## Lundi 26 octobre
+
+_Branca ne vient pas cette semaine ni la semaine prochaine (signalé 26/10 9h17) : pas de session batch Branca avant au moins le 9/11. Batch à faire en autonomie lendemain panier (samedi) si besoin._
+
+| | |
+|---|---|
+| Déjeuner | Clément seul : soupe (congélo) + ravioli ricotta épinards (frigo) + salade verte ou tomates cerises (panier) |
+| Dîner | Soupe (congélo) + haricots blancs sautés, œuf poêlé — **sans poireau** (mis dans la soupe par erreur, signalé 26/10 9h17). Haricots blancs : Hacendado 295g ou Compá da Horta 468g, en stock. Oignon à la place du poireau. |
+
+_École lundi : tirinhas de dinde + riz de petits pois → pas de répétition avec le dîner ✓._
 
 ---
 
