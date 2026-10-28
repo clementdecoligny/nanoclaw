@@ -88,9 +88,25 @@ _Branca ne vient pas cette semaine ni la semaine prochaine (signalé 26/10 9h17)
 | | |
 |---|---|
 | Déjeuner | Clément seul : soupe (congélo) + ravioli ricotta épinards (frigo) + salade verte ou tomates cerises (panier) |
-| Dîner | Soupe (congélo) + haricots blancs sautés, œuf poêlé — **sans poireau** (mis dans la soupe par erreur, signalé 26/10 9h17). Haricots blancs : Hacendado 295g ou Compá da Horta 468g, en stock. Oignon à la place du poireau. |
+| Dîner | ✅ Changé : curry de légumes offert par les voisins (signalé 27/10 16h26), au lieu des haricots blancs/œuf prévus (reportés, toujours en stock : Hacendado 295g + Compá da Horta 468g). |
 
 _École lundi : tirinhas de dinde + riz de petits pois → pas de répétition avec le dîner ✓._
+
+## Mardi 27 octobre
+
+| | |
+|---|---|
+| Déjeuner | ✅ Changé : feijoada angolana (congélo, invités à la maison, signalé 27/10 8h08) au lieu de girasoli capra & miele (reporté). Composition (canard/poulet ou porc ?) jamais confirmée. |
+| Dîner | ✅ Changé : adultes → restes curry de légumes (hier soir) ; enfants → restes feijoada (déj aujourd'hui). Signalé 27/10 16h26. Panados de frango (décongelés ce matin) non utilisés : à cuisiner rapidement (déjà décongelés, ne pas recongeler). Mini reste de feijoada gardé au frigo pour déj demain midi. |
+
+_École mardi : tirinhas de dinde → pas de répétition avec le dîner (curry/feijoada, pas de dinde) ✓._
+
+## Mercredi 28 octobre *(Lola bureau)*
+
+| | |
+|---|---|
+| Déjeuner | Clément seul : mini reste de feijoada (frigo, signalé 27/10 16h26) + soupe |
+| Dîner | À définir — penser aux panados de frango décongelés (dîner mardi non utilisés) si pas déjà cuisinés |
 
 ---
 

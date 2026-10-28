@@ -328,7 +328,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 
 | Item | Quantité | Notes |
 |---|---|---|
-| Feijoada angolana (Branca) | 1–2 tupperwares | Confirmé 27/06 (qté exacte TBC) |
+| Feijoada angolana (Branca) | Mini reste (frigo) | Utilisée déj mar 27/10 (invités) + dîner enfants mar 27/10 (signalé 27/10 16h26) — petit reste gardé au frigo pour déj mer 28/10. Composition (canard/poulet ou porc ?) jamais vérifiée, Branca absente 2 semaines |
 | Soupe / caldo | plusieurs tupperwares | ✅ Confirmé 12/07 par Clément — sopa supermarchée utilisée 27/07 |
 | Crème de Chuchu (sopa-chuchu) | Nouvelle fournée (qté TBC) | Batch 16/10, congélo |
 | Edamame | 2 sachets | Confirmé 27/06 |

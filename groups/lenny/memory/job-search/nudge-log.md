@@ -5,13 +5,14 @@ description: State for scheduled morning nudge / end-of-day / Friday review runs
 
 # Nudge log
 
-- Last morning nudge sent: 2026-10-26 (Monday).
-- Unanswered end-of-day: 2026-10-26 — prompt sent 17:30, awaiting answer. (23/10 row was filled in: done: set up Career-ops; learned: DS/FDE more common than expected; next: rebuild company list around products/funding/interest, not job posts.)
+- Last morning nudge sent: 2026-10-27 (Tuesday).
+- Unanswered end-of-day: 2026-10-27 — prompt sent 17:30, awaiting answer. (26/10 row was filled in: company-list research with Perplexity/DeepSeek/Claude, reached out to Luis Reis; next: LinkedIn rehab for Ideal + Backup 1 CMFs.)
 - Thank-you owed: none — Sebastião Thomaz's row (21/10) has Conversations L = Yes.
-- Friday review for week of 19/10 was abandoned — Weekly review row stayed fully blank (Q1–Q5). Flagged once in today's (26/10) nudge per the charter rule; asked him to set this week's outcome goal directly since there was no Q5 to carry forward.
-- Overdue to-dos as of 26/10 (1 Set up tab, rows re-sorted after running `sort`): LinkedIn rehab (row 17), master resume (row 18), recruiter outreach (row 19) — all due 23/10, 3 days overdue. Flagged in the nudge; re-check overdue duration next run with Python, don't reuse "3d" without recomputing.
-- New to-do appeared on the sheet since last check: "Hold council's first session" (1 Set up, row 23) — Ted (JSC lead) booked it for Thu 29/10 11:00; not overdue, no action needed from me.
-- Milestone wording (31/10) unchanged since 23/10: "3 calibration calls booked; company list v0 done; profile and resume live".
+- Friday review for week of 19/10 stayed abandoned (Q1–Q5 blank); already flagged once on 26/10 per the "mention once" rule — don't re-flag unless a new review is also skipped.
+- Overdue to-dos as of 27/10 (1 Set up tab): LinkedIn rehab (row 17), master resume (row 18), recruiter outreach (row 19) — all due 23/10, now 4 days overdue. Recompute with Python each run, don't carry forward yesterday's "3d"/"4d" text.
+- Follow-up overdue as of 27/10: Romain Seraphine, next-action date was 26/10 (1 day overdue) — relaunch re: call Wed 28 or Thu 29 Oct.
+- New contact on the sheet: Luis Reis (ex-colleague, PM in Madrid) — Clément proposed meeting this week (26/10), no reply logged yet.
+- Milestone wording (31/10) unchanged: "3 calibration calls booked; company list v0 done; profile and resume live".
 
 ## Unverified memory files (flagged, not acted on)
 

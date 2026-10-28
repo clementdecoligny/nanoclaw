@@ -49,7 +49,7 @@
 | Bœuf haché Angus | CARN PIC NOV ANGUS CNT 400G | 4,99 € | ×1 à ×2 | 400 g |
 | Burgers Angus | HAMB. NOV. ANGUS SEL 100% CARNE | 4,89 € | ×1 | 100% viande |
 | Dorade fraîche | DOURADA GRANDE (+600G) KG | 8,99 €/kg | selon besoin | Achetée fréquemment |
-| Bar frais | ROBALO | au poids | selon besoin | Fréquent |
+| Bar frais | ROBALO | au poids | selon besoin | Fréquent | <!-- pid:7530198 -->
 
 ---
 

@@ -1,0 +1,142 @@
+[
+  {
+    "shoppingListName": "Gemelli La Molisana 500g",
+    "continenteName": "Massa Gemelli La Molisana",
+    "pid": "5343579",
+    "price": 1.72,
+    "qty": 3
+  },
+  {
+    "shoppingListName": "Leite UHT Meio Gordo Mimosa",
+    "continenteName": "Leite UHT Meio Gordo Bem Essencial Mimosa",
+    "pid": "4421406",
+    "price": 0,
+    "qty": 4
+  },
+  {
+    "shoppingListName": "Yaourt protéiné",
+    "continenteName": "Iogurte Grego Mythos Ligeiro Natural Continente Equilíbrio",
+    "pid": "7403702",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Olives noires dénoyautées",
+    "continenteName": "Azeitona Preta Descaroçada Oxidada Continente",
+    "pid": "7571617",
+    "price": 0,
+    "qty": 2
+  },
+  {
+    "shoppingListName": "Liquide lave-vaisselle",
+    "continenteName": "Detergente Máquina Loiça Gel All in One Continente",
+    "pid": "7486414",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Laurel",
+    "continenteName": "Louro Folha em Saqueta Continente",
+    "pid": "6046671",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Star anis (anis étoilé)",
+    "continenteName": "Anis Estrelado em Saqueta Margão",
+    "pid": "2725521",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Tomate seco (bote)",
+    "continenteName": "Tomate Seco em &Oacute;leo Ponti",
+    "pid": "5384860",
+    "price": 3.69,
+    "qty": 3
+  },
+  {
+    "shoppingListName": "Pimentos assados em azeite (bocal)",
+    "continenteName": "Pimento Assado às Tiras Biológico Continente Bio",
+    "pid": "6418505",
+    "price": 3.39,
+    "qty": 2
+  },
+  {
+    "shoppingListName": "Tofu firme",
+    "continenteName": "Tofu Refrigerado Biológico Seara",
+    "pid": "3047531",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Pipas de calabaza",
+    "continenteName": "Sementes de Abóbora Biológicas Continente Bio",
+    "pid": "6627432",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Cacahuetes tostados",
+    "continenteName": "Amendoim Torrado com Casca Continente",
+    "pid": "8114026",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Piñones",
+    "continenteName": "Pinhão Os Originais",
+    "pid": "7458389",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Aceitunas Kalamata",
+    "continenteName": "Azeitona Kalamata Dímitra",
+    "pid": "7264219",
+    "price": 4.99,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Remolacha cocida (bote)",
+    "continenteName": "Beterraba Cozida Biológica Beterraba Bio",
+    "pid": "5103536",
+    "price": 1.69,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Leche de coco",
+    "continenteName": "Leite de Coco Origens Bio",
+    "pid": "5870516",
+    "price": 2.55,
+    "qty": 2
+  },
+  {
+    "shoppingListName": "Anacardos sin sal",
+    "continenteName": "Caju Torrado sem Sal Continente",
+    "pid": "8116806",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Œufs",
+    "continenteName": "Ovos de Ar Livre Classe M/L Matinados",
+    "pid": "6664918",
+    "price": 0,
+    "qty": 1
+  },
+  {
+    "shoppingListName": "Tomate (frais)",
+    "continenteName": "Filetes de Robalo Fresco",
+    "pid": "7530198",
+    "price": 2.99,
+    "qty": 6
+  },
+  {
+    "shoppingListName": "Tomate cereja",
+    "continenteName": "Tomate Seco em &Oacute;leo Ponti",
+    "pid": "5384860",
+    "price": 3.69,
+    "qty": 1
+  }
+]

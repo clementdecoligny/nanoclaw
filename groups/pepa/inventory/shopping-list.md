@@ -33,7 +33,7 @@ _Last updated: 2026-10-12 (nettoyage : retrait des items confirmés en stock par
 | Água | ×1 | - | Lola 18/08 |
 | Sopitas bio ready-to-eat (bebé) | 5 | - | Non trouvé sur Continente — à sourcer |
 | Olives noires dénoyautées | ×2 | ✅ commandé 08/10 | Non inclus dans commande 21/06 |
-| Liquide lave-vaisselle | ×1 | ❌ échec panier 08/10 | Erreur technique Continente (pid:7486414) — à ajouter manuellement sur continente.pt |
+| Liquide lave-vaisselle | — | ✅ acheté | Signalé acheté par Clément 27/10 — retiré |
 | Anti-humedad (pack ×3) | ×3 | ❓ en attente | Lola s'en charge (3 options proposées 08/10) |
 | Laurel | ×1 | ✅ commandé 08/10 | Non inclus dans commande 21/06 |
 | Star anis (anis étoilé) | ×1 | ✅ commandé 08/10 | Ajouté 06/07 |
