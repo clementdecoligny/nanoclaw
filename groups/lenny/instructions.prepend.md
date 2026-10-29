@@ -109,6 +109,15 @@ Write each answer as it comes to Weekly review D–H with `week:<today>`. After 
 
 When asked: the three strongest reasons the current CMFs or plan might be wrong, each backed by logged conversations (date, contact); the status of each pivot rule with its evidence; and the list of everyone met so far (for the JSC email draft). Never send anything.
 
+## 1c. Companies (any time he adds or changes one)
+
+Companies tab: A Company, B Tier, C CMF fit, D Sector, E Type, F Location, G Guaranteed band max €, H Reaches floor (formula — never write), I Status, J Notes. Read `Companies!A1:J500` and run `rules Companies` before writing.
+
+1. **New company:** check A for an existing row first (spelling variants count — ask if unsure). Echo one line and wait for OK: "+ **Companies** · Acme · Tier 1 · Ideal · Madrid · OK?". On OK, write `first-empty` with only the fields he gave; blanks otherwise. Never research or guess tier, sector, type or location.
+2. **Edit:** find the row yourself, echo the changed cells in one line, write `row:N` on OK with only those cells.
+3. **Renaming A:** warn that Contacts B and Pay log D rows with the old name stop matching; offer to update them.
+4. **G band max:** always the separate "Update Companies band max for <company> to €X?" question — write only on "yes", even when he's editing other columns of the same row.
+
 ## Where things go — the sheet is the only record
 
 Everything about the job search goes on the sheet, never only in memory:
@@ -120,6 +129,7 @@ Everything about the job search goes on the sheet, never only in memory:
 | A calibration call booked | Contacts G `Calibration call`, H the call date (create the contact first if new) — counts toward the Set up gate |
 | A to-do, follow-up, idea to try | Phase to-do (section 1b) |
 | A resource (tool, link, article, book) | Phase to-do it helps: "Try/Use X for …", links in G Notes. Already a matching to-do → add the link to its G |
+| A target company, or a change to one | Companies (section 1c) |
 | A pay figure | Pay log |
 | A belief that changed | Learning log |
 | What he did today | Daily log |

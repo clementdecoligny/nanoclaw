@@ -1,6 +1,6 @@
 ---
 name: job-sheet
-description: Read and write the Job Move 2027 Google Sheet (Conversations, Contacts, Pay log, Daily log, Learning log, Weekly review, Companies band, phase to-dos). Use for every sheet read or write — never call the Sheets API directly.
+description: Read and write the Job Move 2027 Google Sheet (Conversations, Contacts, Pay log, Daily log, Learning log, Weekly review, Companies, phase to-dos). Use for every sheet read or write — never call the Sheets API directly.
 ---
 
 # Job sheet tool
@@ -33,7 +33,7 @@ Every command prints one JSON object. `"ok": false` means nothing was written �
 | Conversations | A Date, B Contact, D Type, E CMF, F Verdict, G Learnings, H–J JSC Q1–Q3, K Follow-up, L Thank-you sent | first-empty, row |
 | Contacts | A Name, B Company, C Type, D Warm/Cold, E Source, G Next action, H Next action date | first-empty, row |
 | Pay log | A Date, B Source, C Role, D Company, E CMF, F Contract, G Base €, H Fixed allowances €, J Bonus €, K Equity, L Day rate € | first-empty, row |
-| Companies | G Guaranteed band max € — only after the owner says yes | row |
+| Companies | A Company, B Tier, C CMF fit, D Sector, E Type, F Location, G Guaranteed band max € (only after the owner says yes), I Status, J Notes. H is a formula — never | first-empty, row |
 | Learning log | A Date, B I believed, C I learned, D I changed | first-empty, row |
 | Daily log | A Date, B Done, C Learned, D Tomorrow's first action | first-empty, row |
 | Weekly review | C Outcome goal override, D–H Q1–Q5 | week |

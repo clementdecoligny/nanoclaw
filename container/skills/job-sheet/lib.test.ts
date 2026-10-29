@@ -176,10 +176,20 @@ describe('validateWrite', () => {
     expect(validateWrite('Daily log', { kind: 'week', date: '2026-10-23' }, { B: 'x' }, {}).errors.length).toBeGreaterThan(0);
   });
 
-  test('Companies: G only, existing row only', () => {
+  test('Companies: add and edit A–G, I, J; H (formula) never', () => {
     ok(validateWrite('Companies', { kind: 'row', row: 4 }, { G: 120000 }, {}));
-    expect(validateWrite('Companies', { kind: 'first-empty' }, { G: 120000 }, {}).errors.length).toBeGreaterThan(0);
-    expect(validateWrite('Companies', { kind: 'row', row: 4 }, { B: '1' }, {}).errors.join()).toMatch(/column B/);
+    ok(validateWrite('Companies', { kind: 'row', row: 4 }, { B: '1', I: 'Researching', J: 'Met CPO' }, {}));
+    ok(
+      validateWrite(
+        'Companies',
+        { kind: 'first-empty' },
+        { A: 'Acme', B: '1', C: 'Ideal', D: 'AI', E: 'Scale-up', F: 'Madrid', J: 'x' },
+        {},
+      ),
+    );
+    expect(validateWrite('Companies', { kind: 'first-empty' }, { G: 120000 }, {}).errors.join()).toMatch(/key column A/);
+    expect(validateWrite('Companies', { kind: 'row', row: 4 }, { H: 'Yes' }, {}).errors.join()).toMatch(/column H/);
+    expect(validateWrite('Companies', { kind: 'row', row: 4 }, { G: '120k' }, {}).errors.join()).toMatch(/G/);
   });
 });
 

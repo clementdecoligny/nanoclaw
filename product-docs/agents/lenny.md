@@ -30,6 +30,7 @@ owner's product career thinking. The agent never claims to be him.
 | Morning nudge | 09:20 weekdays, always | First action (from yesterday's log), milestone countdown, due items, pivot-rule changes; Mondays: proposes the week's outcome goal |
 | End-of-day prompt | 17:30 weekdays | Done / learned / tomorrow's first action → Daily log tab; proposes a Learning log line when a belief changed |
 | Friday review | Fridays 12:00 | The charter's five questions one at a time, pre-filled from the week's data → Weekly review row |
+| Companies | Any time a company is named or changed | Adds a target company or edits its tier, fit, sector, type, location, status or notes — checks for duplicates, echoes one line, writes on OK. The pay band is only written after a separate yes |
 | To-dos | Any time a to-do or status change is sent | Picks the phase and the outcome it serves, flags duplicates or to-dos that serve no outcome, echoes one line, writes to the phase's to-do list on OK; marks to-dos done, dropped or rescheduled the same way; reorders them on request ("put X first") |
 | Adversarial review | On request | Three strongest reasons the plan might be wrong, with evidence; pivot-rule status; everyone met so far |
 
@@ -51,8 +52,9 @@ owner's product career thinking. The agent never claims to be him.
 ## Current limitations
 
 - Outreach capture is not in v1 (planned when warm asks start).
-- Company rows can't be created by the agent — an unknown company is written
-  with a warning so the owner can add it.
+- Lenny doesn't research companies: it only records the fields the owner
+  gives. A company named in a contact or pay row that isn't on the list is
+  written with a warning, and Lenny offers to add it.
 - No holiday pause or quiet hours.
 - Each phase holds at most 15 to-dos; more needs a manual sheet change.
 - Each phase's to-do list is colour-coded by status (grey not started, yellow in

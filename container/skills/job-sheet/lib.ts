@@ -78,7 +78,12 @@ export const TABS: Record<string, TabSpec> = {
     numbers: ['G', 'H', 'J', 'L'],
     rowKeys: ['first-empty', 'row'],
   },
-  Companies: { writable: ['G'], numbers: ['G'], rowKeys: ['row'] },
+  // H "Reaches floor (auto)" is a formula — never writable.
+  Companies: {
+    writable: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'I', 'J'],
+    numbers: ['G'],
+    rowKeys: ['first-empty', 'row'],
+  },
   'Learning log': { writable: ['A', 'B', 'C', 'D'], dates: ['A'], rowKeys: ['first-empty', 'row'] },
   'Daily log': { writable: ['A', 'B', 'C', 'D'], dates: ['A'], rowKeys: ['first-empty', 'row'] },
   'Weekly review': { writable: ['C', 'D', 'E', 'F', 'G', 'H'], rowKeys: ['week'] },

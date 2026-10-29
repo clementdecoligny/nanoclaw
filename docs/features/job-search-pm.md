@@ -37,7 +37,7 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 
 ## Non-goals (v1)
 
-- Outreach capture (add ~14 Dec when warm asks start), Companies tab writes except the confirmed band update (#7).
+- Outreach capture (add ~14 Dec when warm asks start).
 - Scheduled monthly pack, separate alert feature, holiday pauses, daily message cap, quiet hours.
 - Changing the charter's daily rhythm.
 - Gmail drafts, sending anything to anyone but the owner.
@@ -88,6 +88,7 @@ A dedicated Telegram agent group (`lenny`, own bot) with one narrow sheet tool. 
 | 36 | To-do order (#) | Column A "#" on each phase to-do block (added 2026-10-21). Tool keeps # = 1…n and sorts the rows by it after every phase-tab write/move/sort; Done/Dropped keep their #; new to-do goes last. Lenny reorders on request (`move`, echo + OK) and runs `sort` before each morning nudge to apply hand edits. Dashboard next to-dos follow # (sort key H = # + row/10000, open only). Tool refuses phase tabs whose row 16 isn't the # header. Migration: `scripts/job-sheet/add-todo-index.ts <test\|live>` (idempotent), run on live at go-live |
 | 37 | To-do status colours | Status cell: Not started light grey, In progress light yellow; Done = whole row light green (plus existing grey strikethrough). Overdue red row rule stays first so it wins. Same script, idempotent |
 | 38 | Set up phase v2 (2026-10-22) | Owner's new outcome + gate: ≥3 calibration calls booked, company list v0 (~30, 6 h timebox), profile and resume live; council and CMF tests left the gate (council stays as Set up to-dos). Booked = Contacts G "Calibration call*" + held Recruiter/Product leader/Hiring manager conversations; Lenny replaces that next action once the call is logged. Company list = Companies rows ≥30. Applied by `scripts/job-sheet/set-up-phase-v2.ts <test\|live>` |
+| 39 | Companies edits (2026-10-29) | Lenny adds and edits Companies rows: A–G, I, J writable, `first-empty` + `row`. Echo + OK before each write; no research or guessed fields; H formula never. G band max keeps its own yes/no confirmation (#7) |
 
 ## Sheet contract
 
@@ -98,7 +99,7 @@ Writable columns (everything else refused):
 | Conversations | A | A, B, D–L |
 | Contacts | A | A–E, G, H |
 | Pay log | A | A–H, J–L (M never) |
-| Companies | A | G only, on confirmation |
+| Companies | A | A–G, I, J (G only on confirmation; H formula never) |
 | Learning log | A | A–D |
 | Weekly review | row where A = Monday of the week | C (override), D–H |
 | Daily log (new) | A | A–D (Date, Done, Learned, Tomorrow's first action) |
@@ -134,7 +135,7 @@ sheet write <tab> <first-empty|row:N|week:YYYY-MM-DD> '{"A":"2026-11-03","B":"�
                                          → JSON { target, ok, tab, row, written, warnings } | { ok:false, errors }
 ```
 
-Rules enforced inside `write`: two known spreadsheet IDs only; tab + column whitelist; allowed row keys per tab (Companies `row` only, Weekly review `week` only); first-empty needs column A; `row:N` only on rows that already have column A; dropdown validation from the cell's own rule; real ISO dates; plain numbers in money columns; no leading `=`.
+Rules enforced inside `write`: two known spreadsheet IDs only; tab + column whitelist; allowed row keys per tab (Weekly review `week` only); first-empty needs column A; `row:N` only on rows that already have column A; dropdown validation from the cell's own rule; real ISO dates; plain numbers in money columns; no leading `=`.
 
 ## Affected files
 
