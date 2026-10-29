@@ -105,8 +105,8 @@ _École mardi : tirinhas de dinde → pas de répétition avec le dîner (curry/
 
 | | |
 |---|---|
-| Déjeuner | Clément seul : mini reste de feijoada (frigo, signalé 27/10 16h26) + soupe |
-| Dîner | À définir — penser aux panados de frango décongelés (dîner mardi non utilisés) si pas déjà cuisinés |
+| Déjeuner | ✅ Clément seul : mini reste de feijoada (frigo, signalé 27/10 16h26) + soupe |
+| Dîner | ✅ Retour au plan initial (signalé 28/10 18h34) : soupe (congélo) + panados de frango (congélo, décongélation minute au micro-ondes juste avant cuisson) + riz basmati + salade verte ou tomates cerises. Curry thaï (recette écrite entre-temps) reporté à une prochaine fois. |
 
 ---
 

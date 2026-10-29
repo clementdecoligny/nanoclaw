@@ -80,6 +80,8 @@ One line per recipe. Pepa reads this file for planning — opens individual file
 | seitan-saute-sesame-teriyaki-riz-edamame.md | Seitan Sauté Sésame-Teriyaki, Riz, Edamame | veg / Asian | low | no | 15 min. Variante tofu → seitan (tofu périmé 18/10). Edamame + riz, sauce teriyaki/soja/sésame. |
 | gateau-chocolat-leger-aere.md | Gâteau au Chocolat Léger et Aéré | dessert | medium | ⭐⭐ | 40 min. Blancs montés, pas un moelleux dense. Kid-approved. Demandé 19/10. |
 | hummus-classique.md | Hummus Classique | veg / dip | very low | ⭐⭐⭐ | 10 min. Pois chiches cuits + tahini + ail + citron + cumin. 4-5 jours frigo. Demandé 19/10 (500g pois chiches). |
+| curry-thai-poulet-coco-vermicelles.md | Curry Thaï de Poulet, Lait de Coco, Vermicelles de Riz | chicken / Asian | low | no | 25 min. Tiras de frango + lait de coco + vermicelles de riz + fish sauce. Nouvelle recette, demandée 28/10. |
+| guacamole-sans-tomates.md | Guacamole (sans tomates) | veg / dip | very low | no | 10 min. Avocat + citron vert + oignon + coriandre, sans tomates. Nouvelle recette, demandée 28/10 pour 2 avocats mûrs. |
 
 ---
 

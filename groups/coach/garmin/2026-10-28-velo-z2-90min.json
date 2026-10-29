@@ -1,0 +1,11 @@
+{
+  "sport": "cycling",
+  "name": "Vélo Z2 — 1h30",
+  "date": "2026-10-28",
+  "description": "Piloter à la FC uniquement. Plat, assis, cadence 85+ rpm. Cuisse gauche > 2/10 ou douleur qui monte : retour Z1 / rentrer.",
+  "steps": [
+    {"type": "warmup",   "durationSec": 900,  "hrMin": 90,  "hrMax": 106, "note": "Z1"},
+    {"type": "interval", "durationSec": 3900, "hrMin": 107, "hrMax": 128, "note": "Z2 plat, assis, cadence haute"},
+    {"type": "cooldown", "durationSec": 600,  "hrMin": 90,  "hrMax": 106, "note": "Z1"}
+  ]
+}

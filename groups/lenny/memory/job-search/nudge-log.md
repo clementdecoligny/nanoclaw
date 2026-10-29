@@ -5,8 +5,9 @@ description: State for scheduled morning nudge / end-of-day / Friday review runs
 
 # Nudge log
 
-- Last morning nudge sent: 2026-10-27 (Tuesday).
-- Unanswered end-of-day: 2026-10-27 — prompt sent 17:30, awaiting answer. (26/10 row was filled in: company-list research with Perplexity/DeepSeek/Claude, reached out to Luis Reis; next: LinkedIn rehab for Ideal + Backup 1 CMFs.)
+- Last morning nudge sent: 2026-10-28 (Wednesday) — degraded: job-sheet tool returned 401 (invalid Sheets credentials) on every tab, confirmed not transient (retried once). Sent a short message flagging the outage + last-known state from 27/10 instead of the usual sections. Re-check next run whether the sheet is back; if still down, escalate more pointedly rather than repeating the same note.
+- Last successful full nudge: 2026-10-27 (Tuesday).
+- Unanswered end-of-day: 2026-10-28 — prompt sent 17:30, awaiting answer. (27/10 row was filled in: Claude certifications self-assessed 7/10 both, first LinkedIn rehab pass; next: finish LinkedIn rehab incl. tb.lx bullets + open-to-work setting. Sheet access confirmed back to normal — the 28/10 morning 401 outage did not recur.)
 - Thank-you owed: none — Sebastião Thomaz's row (21/10) has Conversations L = Yes.
 - Friday review for week of 19/10 stayed abandoned (Q1–Q5 blank); already flagged once on 26/10 per the "mention once" rule — don't re-flag unless a new review is also skipped.
 - Overdue to-dos as of 27/10 (1 Set up tab): LinkedIn rehab (row 17), master resume (row 18), recruiter outreach (row 19) — all due 23/10, now 4 days overdue. Recompute with Python each run, don't carry forward yesterday's "3d"/"4d" text.

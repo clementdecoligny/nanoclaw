@@ -242,7 +242,7 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Ingrédients caldo verde (hors chou) | — | Détail/qté non précisés |
 | Banane | 0,766 kg | Achat local 12/10 |
 | Avocat Hass | 0 | ❌ Plus de stock (signalé par Lola 23/10 soir) |
-| Avocats (panier, pas mûrs) | 2 | Panier 23/10 — à surveiller pour maturité |
+| Avocats (panier, pas mûrs) | 0 | ❌ Les 2 mûris, utilisés guacamole dîner mer 28/10 (signalé 28/10 19h39) |
 | Persil frais (panier) | 1 bouquet | Panier 23/10 — utilisé dîner dourada (vinaigrette) + salade riz picnic sam 24/10 |
 | Patates douces (panier) | 2 grosses | Panier 23/10 — 1 utilisée dîner dourada ven 23/10 |
 | Poireau coupé (alho francês cortado) | 0 | ❌ Mis dans la soupe (signalé par Clément 26/10), pas dans le dîner haricots blancs/œuf prévu |
