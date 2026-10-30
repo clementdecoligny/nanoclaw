@@ -106,7 +106,16 @@ _École mardi : tirinhas de dinde → pas de répétition avec le dîner (curry/
 | | |
 |---|---|
 | Déjeuner | ✅ Clément seul : mini reste de feijoada (frigo, signalé 27/10 16h26) + soupe |
-| Dîner | ✅ Retour au plan initial (signalé 28/10 18h34) : soupe (congélo) + panados de frango (congélo, décongélation minute au micro-ondes juste avant cuisson) + riz basmati + salade verte ou tomates cerises. Curry thaï (recette écrite entre-temps) reporté à une prochaine fois. |
+| Dîner | ✅ Retour au plan initial (signalé 28/10 18h34) : soupe (congélo) + panados de frango (congélo, décongélation minute au micro-ondes juste avant cuisson) + riz basmati + salade verte ou tomates cerises. Curry thaï (recette écrite entre-temps) reporté à une prochaine fois. Guacamole sans tomates (nouvelle recette) en entrée/accompagnement, 2 avocats mûrs utilisés, stock avocat à 0. |
+
+## Jeudi 29 octobre
+
+| | |
+|---|---|
+| Déjeuner | Soupe (congélo) + ravioli abóbora e cebola caramelizada (frigo) + salade verte ou tomates cerises |
+| Dîner | ✅ Changé (invités à la maison, signalé 29/10 8h20) : carrillada y arroz + salade verte + gâteau au chocolat (`recipes/gateau-chocolat-leger-aere.md`), au lieu de pollo al mole almendrado. Carrillada = porc ou bœuf : **exception ponctuelle confirmée par Clément 29/10 8h44** ("une fois n'est pas coutume") à la règle habituelle pas de viande rouge/porc au dîner. Ne pas reconduire par défaut. Bife frango extrafino toujours au congélo (pas décongelé, signalé 29/10 8h45) : à sortir pour un prochain dîner. Enfants : ✅ changé (signalé 29/10 18h40) oeufs à la coque et pâtes au lieu des 3 options kid-friendly proposées (panados/dumplings/wrap), 5 œufs achetés/utilisés. ⚠️ Pâtes déjà au déjeuner (ravioli abóbora) : répète la règle "pas de pasta à déjeuner ET dîner le même jour", signalé pour info. |
+
+_École jeudi : douradinhos de peixe + riz → pas de répétition avec le dîner (carrillada, pas de poisson) ✓._
 
 ---
 

@@ -34,3 +34,6 @@ Le complément de l'un est ajusté pour que la somme tombe pile sur 4 500 €.
   ni dépense ni revenu, à neutraliser. (Confirmé par Clément le 6 oct. 2026.)
 - L'IRS remboursé (joint) et autres revenus « joint » ne comptent PAS dans la
   base de répartition — seuls les revenus personnels de Clément et Lola.
+- **Format de réponse (29 oct. 2026) :** quand Clément envoie les salaires du
+  mois, renvoyer *seulement* les versements au commun de chacun, prêt à
+  copier-coller à Lola. Rien d'autre (détail dans `finance/context-w1-depenses.md`, Step 0).

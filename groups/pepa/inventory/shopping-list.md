@@ -110,3 +110,11 @@ _Last updated: 2026-10-12 (nettoyage : retrait des items confirmés en stock par
 | Tomate cereja | ×1 barquette | - | Finies depuis panier 16/10, signalé par Clément 22/10 |
 
 ---
+
+## 📦 Prochaine commande Continente (ajouts récents)
+
+| Item | Qty | Statut | Notes |
+|---|---|---|---|
+| Chocolat (dessert/pâtisserie) | ×2 | - | Plus de stock, signalé par Clément 29/10 (message vocal) |
+
+---

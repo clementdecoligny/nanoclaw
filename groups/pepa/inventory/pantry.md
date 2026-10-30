@@ -260,7 +260,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
 | Greek yogurt — Mythos Ligiero Continente 1kg | ~11.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé + 3×1kg livraison 24/09 + 5×1kg livraison 09/10 — non reconfirmé depuis. ⚠️ Dépasse la règle "max 6×1kg" (place frigo) |
 | Yaourt nature (non grec) | 3 kg | Confirmé par Clément 05/10, distinct du yaourt grec Mythos ci-dessus |
-| Œufs (tous types confondus) | ~56 | Correction Clément 05/10 ("au moins une vingtaine" = ~20) + 36 (3 douzaines) livraison 09/10 |
+| Œufs (tous types confondus) | 5 | Correction Clément 29/10 18h40 : achat complément + utilisés dîner oeufs à la coque, il reste 5 (remplace l'ancien décompte ~56, jamais revérifié depuis) |
 | Yaourts protéiques | 4 | Achetés par Clément 21/09 — 1/jour lun→ven prévu (mode nutrition course), mais 4 unités seulement pour 5 jours |
 | Jus d'orange | 1 bouteille | Acheté par Clément 21/09 |
 | Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
@@ -314,7 +314,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Peito de frango (blanc de poulet) | ~250g | Congelé 08/07 (acheté local 06/07) |
 | Peito de frango filets | 1,2 kg (entamé probable) | Acheté et congelé par Clément 17/09 — probablement utilisé dîner poulet pesto quinoa 22/10, quantité non précisée |
 | Quinoa cuit | 1 tupper (frigo) | Reste du dîner poulet pesto quinoa 22/10 — assez pour 2 repas supplémentaires (confirmé par Clément) |
-| Bife frango extrafino (filets fins) | 2 tuppers (~501g) | Livraison 09/10, divisé en 2 tuppers congélo par Lola |
+| Bife frango extrafino (filets fins) | 2 tuppers (~501g) | Livraison 09/10, toujours au congélo (signalé par Clément 29/10 8h45 : pas décongelé, contrairement au briefing du matin). Dîner mole almendrado reporté (carrillada avec invités ce soir) : à décongeler pour un prochain dîner |
 | Strogonoff/tiras de frango | 2 tuppers (~516g) | Livraison 09/10, divisé en 2 tuppers congélo par Lola |
 | Carne picada (bœuf haché) | 1 boîte + 400g frais | Boîte confirmée 27/06 + 400g Angus frais (Talho) livraison 24/09, à congeler ou utiliser rapidement |
 | Steaks (petits) | 0 | ❌ Finis Lun midi 07/09 |

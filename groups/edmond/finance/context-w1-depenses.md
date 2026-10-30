@@ -44,6 +44,8 @@ Types valides : SALARY, FOOD, EDUCATION, LICENCA, BONUS, HOLIDAY, IRS. Who : Cl�
 
 Collecte : salaire + FOOD pour chaque personne. Toujours demander le subsidio de alimentação explicitement, même si l'utilisateur dit "ok" tôt. Rejeter les montants négatifs. Avertir les doublons (même Type/date/Who).
 
+*Préférence Clément (29 oct. 2026) :* quand il envoie les salaires du mois, répondre UNIQUEMENT avec les versements au compte commun de chacun (message court, prêt à copier-coller à Lola). Pas de récap des revenus, pas d'envoi du xlsx, pas de demande de confirmation : générer et enregistrer le xlsx + JSON dans `historical/` en silence. Si une info manque (ex. carte repas), la demander quand même.
+
 Construire `/tmp/income.json` → exécuter `income_writer.py --input /tmp/income.json --output /tmp/YYYY-MM-revenus.xlsx` → envoyer xlsx + résumé chat → attendre confirmation ("ok" / "confirme" / "c'est bon" / "parfait" / "enregistre") → copier vers `/workspace/agent/finance/historical/YYYY-MM-revenus.xlsx`.
 
 ---

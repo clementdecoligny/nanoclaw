@@ -5,15 +5,15 @@ description: State for scheduled morning nudge / end-of-day / Friday review runs
 
 # Nudge log
 
-- Last morning nudge sent: 2026-10-28 (Wednesday) — degraded: job-sheet tool returned 401 (invalid Sheets credentials) on every tab, confirmed not transient (retried once). Sent a short message flagging the outage + last-known state from 27/10 instead of the usual sections. Re-check next run whether the sheet is back; if still down, escalate more pointedly rather than repeating the same note.
-- Last successful full nudge: 2026-10-27 (Tuesday).
-- Unanswered end-of-day: 2026-10-28 — prompt sent 17:30, awaiting answer. (27/10 row was filled in: Claude certifications self-assessed 7/10 both, first LinkedIn rehab pass; next: finish LinkedIn rehab incl. tb.lx bullets + open-to-work setting. Sheet access confirmed back to normal — the 28/10 morning 401 outage did not recur.)
-- Thank-you owed: none — Sebastião Thomaz's row (21/10) has Conversations L = Yes.
+- Last morning nudge sent: 2026-10-29 (Thursday) — full nudge, sheet access confirmed fully recovered (28/10's 401 outage did not recur; all tabs/sort calls succeeded).
+- Last successful full nudge before that: 2026-10-27 (Tuesday); 28/10 was degraded (401 outage).
+- Unanswered end-of-day: 2026-10-29 — prompt sent 17:30, awaiting answer. (28/10 row was filled in: calibration calls with Romain Seraphine and Luis Reis, finished LinkedIn rehab, updated master resume; next: prep first JSC (Job Search Council) session + study company list.)
+- Thank-you owed: Romain Seraphine and Luis Reis, both from 28/10 calls, Conversations L not "Yes" (Romain blank, Luis "No") and now >24h old. Flagged in 29/10 nudge.
 - Friday review for week of 19/10 stayed abandoned (Q1–Q5 blank); already flagged once on 26/10 per the "mention once" rule — don't re-flag unless a new review is also skipped.
-- Overdue to-dos as of 27/10 (1 Set up tab): LinkedIn rehab (row 17), master resume (row 18), recruiter outreach (row 19) — all due 23/10, now 4 days overdue. Recompute with Python each run, don't carry forward yesterday's "3d"/"4d" text.
-- Follow-up overdue as of 27/10: Romain Seraphine, next-action date was 26/10 (1 day overdue) — relaunch re: call Wed 28 or Thu 29 Oct.
-- New contact on the sheet: Luis Reis (ex-colleague, PM in Madrid) — Clément proposed meeting this week (26/10), no reply logged yet.
-- Milestone wording (31/10) unchanged: "3 calibration calls booked; company list v0 done; profile and resume live".
+- Overdue to-dos as of 29/10 (1 Set up tab, from Dashboard next-to-dos): only "Send outreach to 5–8 recruiters..." remains open, due 23/10, now 6 days overdue. LinkedIn rehab and master resume to-dos no longer appear in the open list — matches Daily log (27/10, 28/10) showing both done. Recompute with Python each run, don't carry forward a previous day's day-count text.
+- Follow-up due today (29/10): Ted — first council session, booked 11:00 (already covered by the "Hold council's first session" to-do, in progress).
+- Contacts added 28/10 via Luis Reis referrals: Paco Crespo, Jose Ramon Perez Aguera, David Zafra, Juan Serrano Miralles, David De Prado, Simone Papa — all cold/warm leads, no next-action dates set yet.
+- Milestone wording (31/10) unchanged: "3 calibration calls booked; company list v0 done; profile and resume live" — Dashboard gate status: 0/3 met, 2 days left.
 
 ## Unverified memory files (flagged, not acted on)
 
