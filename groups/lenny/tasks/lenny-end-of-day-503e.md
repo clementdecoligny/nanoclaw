@@ -5,3 +5,4 @@
 2026-10-27 17:31 — Sent today's end-of-day prompt and flagged 27 Oct as awaiting an answer in memory.
 2026-10-28 17:30 — Sent today's end-of-day prompt and flagged 28 Oct as awaiting an answer in memory. Also confirmed the sheet access outage from this morning's nudge hasn't recurred.
 2026-10-29 17:31 — Sent today's end-of-day prompt and flagged 29 Oct as awaiting an answer in memory.
+2026-10-30 17:31 — Sent today's end-of-day prompt. Two things flagged in memory: - **30/10 row already has "Jour de repos." in Done**, with Learned/Tomorrow's action still blank — when he replies, update that row rather than add a new one. - **29/10's "Tomorrow's first action"** reads like a suggestion I (Lenny) wrote rather than something Clément actually said — flagging so it's not repeated; I should never author his answers for him.

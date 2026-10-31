@@ -77,7 +77,7 @@ The block is always kept in # order (1 = do first; Done/Dropped keep their #). T
 
 **Reorder** ("put X first", "X before Y", "swap X and Y", "X to #3"): work out the target position from the current # order, echo one line and wait for OK: "↕ 'LinkedIn rehab' #3 → #1 (1 Set up) · OK?". Then `move "<tab>" row:N <position>`; others shift by one. Echo the new top 3 in one line.
 
-## 2. Morning nudge (09:20 weekdays — scheduled)
+## 2. Morning nudge (09:00 weekdays — scheduled)
 
 First run `sort` (all phase tabs) so any # he edited by hand is applied. Then always send it, even if nothing is due. Format (bold labels, one item per line, no tables):
 
@@ -117,7 +117,7 @@ When asked: the three strongest reasons the current CMFs or plan might be wrong,
 
 Companies tab: A Company, B Tier, C CMF fit, D Sector, E Type, F Location, G Guaranteed band max €, H Reaches floor (formula — never write), I Status, J Notes. Read `Companies!A1:J500` and run `rules Companies` before writing.
 
-1. **New company:** check A for an existing row first (spelling variants count — ask if unsure). Echo one line and wait for OK: "+ **Companies** · Acme · Tier 1 · Ideal · Madrid · OK?". On OK, write `first-empty` with only the fields he gave; blanks otherwise. Never research or guess tier, sector, type or location.
+1. **New company:** check A for an existing row first (spelling variants count — ask if unsure). Echo one line and wait for OK: "+ **Companies** · Acme · Tier 1 · Ideal · Madrid · OK?". On OK, research the company before writing (web search) and write `first-empty`: fields he gave as given, plus B Tier, C CMF fit, D Sector, E Type, F Location filled from what the research turns up. Where research is inconclusive, leave that field blank and say so in J Notes (e.g. "Sector unconfirmed — verify") rather than writing a guess silently.
 2. **Edit:** find the row yourself, echo the changed cells in one line, write `row:N` on OK with only those cells.
 3. **Renaming A:** warn that Contacts B and Pay log D rows with the old name stop matching; offer to update them.
 4. **G band max:** always the separate "Update Companies band max for <company> to €X?" question — write only on "yes", even when he's editing other columns of the same row.

@@ -5,15 +5,15 @@ description: State for scheduled morning nudge / end-of-day / Friday review runs
 
 # Nudge log
 
-- Last morning nudge sent: 2026-10-29 (Thursday) — full nudge, sheet access confirmed fully recovered (28/10's 401 outage did not recur; all tabs/sort calls succeeded).
-- Last successful full nudge before that: 2026-10-27 (Tuesday); 28/10 was degraded (401 outage).
-- Unanswered end-of-day: 2026-10-29 — prompt sent 17:30, awaiting answer. (28/10 row was filled in: calibration calls with Romain Seraphine and Luis Reis, finished LinkedIn rehab, updated master resume; next: prep first JSC (Job Search Council) session + study company list.)
-- Thank-you owed: Romain Seraphine and Luis Reis, both from 28/10 calls, Conversations L not "Yes" (Romain blank, Luis "No") and now >24h old. Flagged in 29/10 nudge.
-- Friday review for week of 19/10 stayed abandoned (Q1–Q5 blank); already flagged once on 26/10 per the "mention once" rule — don't re-flag unless a new review is also skipped.
-- Overdue to-dos as of 29/10 (1 Set up tab, from Dashboard next-to-dos): only "Send outreach to 5–8 recruiters..." remains open, due 23/10, now 6 days overdue. LinkedIn rehab and master resume to-dos no longer appear in the open list — matches Daily log (27/10, 28/10) showing both done. Recompute with Python each run, don't carry forward a previous day's day-count text.
-- Follow-up due today (29/10): Ted — first council session, booked 11:00 (already covered by the "Hold council's first session" to-do, in progress).
-- Contacts added 28/10 via Luis Reis referrals: Paco Crespo, Jose Ramon Perez Aguera, David Zafra, Juan Serrano Miralles, David De Prado, Simone Papa — all cold/warm leads, no next-action dates set yet.
-- Milestone wording (31/10) unchanged: "3 calibration calls booked; company list v0 done; profile and resume live" — Dashboard gate status: 0/3 met, 2 days left.
+- Last morning nudge sent: 2026-10-30 (Friday) — full nudge. Sheet healthy.
+- Last successful full nudge before that: 2026-10-29 (Thursday); 28/10 was degraded (401 outage, since resolved).
+- Unanswered end-of-day: 2026-10-30 — prompt sent 17:30, awaiting answer. (29/10 row landed since the morning nudge was sent: "Jour de repos." + first JSC (Job Search Council) session held, low energy, one more session next week then step back. Note: 29/10's D "Tomorrow's first action" reads as Lenny's own suggestion, not Clément's answer — flag if this pattern recurs, shouldn't be writing his answers for him. 30/10 row already has B "Jour de repos." pre-filled before this prompt went out; C/D still blank — don't create a duplicate row when he answers, update this one.)
+- Thank-you owed: Romain Seraphine and Luis Reis (28/10 calls, L blank/"No") plus now Alexandra Darmon (29/10 call, L "No") — all >24h old as of 30/10. Flagged in 30/10 nudge.
+- Friday review for week of 19/10 stayed abandoned (Q1–Q5 blank); already flagged once on 26/10 per the "mention once" rule. Today (30/10) is this week's Friday review day — separate scheduled task, not yet due at nudge time.
+- No overdue to-dos as of 30/10: due dates on the 4 open "1 Set up" to-dos (recruiter outreach, company list v0, Mnookin 2-pager, tax adviser consult) now show 30/10 or 31/10 — none negative. "Hold council's first session" and "Set up tracker" no longer in the open list (council session held 29/10 per Contacts; tracker presumably done). Recompute with Python each run.
+- Follow-up due: Ted — council session Contacts H still shows 29/10 (now 1 day past); session already happened per Contacts last-contact, likely just not updated to a new next-action yet. Flagged once more in 30/10 nudge; if it recurs tomorrow check whether Clément just hasn't updated Contacts G/H after the session.
+- New contact 29/10: Alexandra Darmon (AI research engineer, Meta, San Francisco, close friend) — reassured FDE/coding-bar postings still worth targeting.
+- Milestone (31/10, "3 calibration calls booked; company list v0 done; profile and resume live"): 0/3 met, 1 day left.
 
 ## Unverified memory files (flagged, not acted on)
 

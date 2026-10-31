@@ -1,6 +1,6 @@
 # Pantry / Fridge / Freezer Inventory
 
-_Last updated: 2026-10-09 (sync manuel facture Continente 09/10 — script sync-delivery en échec, voir note ci-dessous)_
+_Last updated: 2026-10-30 (sync manuel facture Continente Bom Dia 30/10, achat en magasin Lola — script sync-delivery en échec, voir note ci-dessous)_
 
 > ⚠️ `sync-delivery` (script continente/index.ts) échoue avec `getAuthToken is not a function` — sync fait manuellement depuis la facture PDF. À signaler côté technique.
 
@@ -23,7 +23,7 @@ _Last updated: 2026-10-09 (sync manuel facture Continente 09/10 — script sync-
 | Mistura Sementes Pequeno Almoço Bio | 1 sachet | Livraison 16/04 |
 | Farine T45 ou T55 | 2 kg | Achetée 12/10 par Clément (en plus de la manitoba 00 déjà en stock) |
 | Couscous | 500g | |
-| Riz basmati | ~5.5 kg | +1kg (2×500g) livraison 09/10 |
+| Riz basmati | ~7.5 kg | +1kg (2×500g) livraison 09/10 + 2kg (2×500g Cacarola + 1kg Brajma Cigala) achat 30/10 |
 | Arroz agulha vaporizado | 1kg | |
 | Arroz Puff Expandido Seara | 150g + 2 paquets | 150g (06/05) + 2 paquets achetés local 04/09 |
 | Purée Mousseline | 1 sachet | 1 utilisé dîner enfants 02/06 |
@@ -54,6 +54,9 @@ _Last updated: 2026-10-09 (sync manuel facture Continente 09/10 — script sync-
 |---|---|---|
 | Chips Lays Gourmet (grands paquets) | 4 | |
 | Tortillas de blé | 2 × 8 (16) | Anciens paquets (05/09) finis — remplacés par 2×8 achetés par Clément 23/09 |
+| Tortilhas Trigo Fajita CNT 320g | 2 | Achat 30/10 |
+| Tortinacho Hummus e Oregãos 60g | 2 | Achat 30/10 |
+| Tortinacho Arroz e Quinoa 60g | 1 | Achat 30/10 |
 | Tortitas Milho Bicentury 130g | 2 × 130g | Livraison 24/09 |
 | Prepara Panquecas Pangudi 200g | 1 × 200g | Livraison 24/09 — 1 bouteille finie déj picnic 17/10 |
 | Caju Torrado Sem Sal CNT 175g | 1 × 175g | Livraison 04/09 |
@@ -226,7 +229,7 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Oignons rouges | 2 | |
 | Têtes d'ail | 3-4 | |
 | Piments rouges | — | Qté non précisée |
-| Aipo (céleri branche) | 0 | ❌ Pas disponible (signalé par Clément 20/10, stock 500g précédent inexact) |
+| Aipo (céleri branche) | 500g | Racheté 30/10 (Aipo CNT emb 500gr), stock était à 0 (signalé par Clément 20/10) |
 | Mâche | 0 | ❌ Finie déj lundi 12/10 |
 | Tomates cerises | ~350g | Panier 23/10 (500g) — partiellement utilisées dîner dourada ven 23/10 |
 | Chayottes (chuchu) | 0 | ❌ Panier 16/10 + achat complément, cuisinées batch sopa-chuchu 16/10 (congélo) |
@@ -236,12 +239,16 @@ _Inventaire remplacé intégralement le 2026-10-05 (update stock frais donné pa
 | Basilic frais | ? | Clément signalé en achetant local 16/10, qté non confirmée — utilisé pasta alla norma 16/10 |
 | Citrons verts | 6 | |
 | Citron jaune | 0 | ❌ Plus de stock (signalé par Lola 23/10 soir) |
+| Lima (citron vert) | ~0.195kg | Achat 30/10 |
+| Tomate cacho (grappe) | ~0.135kg | Achat 30/10 |
+| Oignon rouge | +1 (petit, ~0.085kg) | Achat 30/10, s'ajoute aux 2 oignons rouges déjà en stock |
+| Castanha Martainha (châtaignes) 1kg | 1 kg | Achat 30/10, saison |
 | Kiwi | 1 | |
 | Orange | 1 | |
 | Chou | — | Pour caldo verde, qté non précisée |
 | Ingrédients caldo verde (hors chou) | — | Détail/qté non précisés |
 | Banane | 0,766 kg | Achat local 12/10 |
-| Avocat Hass | 0 | ❌ Plus de stock (signalé par Lola 23/10 soir) |
+| Avocat Hass | ~0.415kg (2-3 unités) | Racheté 30/10, stock était à 0 (signalé par Lola 23/10 soir) |
 | Avocats (panier, pas mûrs) | 0 | ❌ Les 2 mûris, utilisés guacamole dîner mer 28/10 (signalé 28/10 19h39) |
 | Persil frais (panier) | 1 bouquet | Panier 23/10 — utilisé dîner dourada (vinaigrette) + salade riz picnic sam 24/10 |
 | Patates douces (panier) | 2 grosses | Panier 23/10 — 1 utilisée dîner dourada ven 23/10 |
@@ -258,17 +265,22 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Lait UHT M/G Mimosa 1L | 93 × 1L | 15 anciens (29/05) + 30 livraison 04/09 (5 packs × 6L) + 30 livraison 24/09 (5 packs × 6L) + 18 livraison 09/10 (3 packs × 6L) |
 | Manteiga S/Sal Primor 250g | 1 × 250g | Livraison 04/09 |
 | Manteiga Magra Président 2×250g | 1 pack (2×250g) | Livraison 04/09 |
-| Greek yogurt — Mythos Ligiero Continente 1kg | ~11.5kg | Livraison 04/09 (6kg) — correction Clément 13/09, ~2.5kg consommé + 3×1kg livraison 24/09 + 5×1kg livraison 09/10 — non reconfirmé depuis. ⚠️ Dépasse la règle "max 6×1kg" (place frigo) |
+| Greek yogurt — Mythos Ligiero Continente 1kg | ~11.5kg + 4kg neufs | Non reconfirmé depuis le 13/09 + 4×1kg achat 30/10. ⚠️ Dépasse largement la règle "max 6×1kg" (place frigo) — à consommer en priorité, ne pas recommander avant d'avoir vérifié le stock réel |
 | Yaourt nature (non grec) | 3 kg | Confirmé par Clément 05/10, distinct du yaourt grec Mythos ci-dessus |
-| Œufs (tous types confondus) | 5 | Correction Clément 29/10 18h40 : achat complément + utilisés dîner oeufs à la coque, il reste 5 (remplace l'ancien décompte ~56, jamais revérifié depuis) |
+| Œufs (tous types confondus) | 5 + 2 boîtes neuves | Correction Clément 29/10 18h40 : il restait 5. + 2 boîtes Ovos M/L Biológicos Matinados (achat 30/10, taille non précisée, probablement 6 ou 10/boîte) |
 | Yaourts protéiques | 4 | Achetés par Clément 21/09 — 1/jour lun→ven prévu (mode nutrition course), mais 4 unités seulement pour 5 jours |
 | Jus d'orange | 1 bouteille | Acheté par Clément 21/09 |
 | Jus d'ananas | 1 bouteille | Acheté par Clément 21/09 |
 | Fiambre Perna Ext CNT (jambon cuit) | ~898g | ~480g (04/09) + 418g livraison 24/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
 | Emmental Ralado Président | 1 sachet | Livraison 04/09 — entamé dîner 06/10 (croque-monsieur), quantité exacte non revérifiée |
-| Feta DOP Continente 150g | 7 × 150g (1 entamée) | 3 anciens (1 utilisée salade pois chiches midi 08/09) + 2 ajoutées 10/09 + 3×150g livraison 09/10 — 1 paquet entamé (~75g) dîner tartines 15/10 |
+| Feta DOP 150g (Omiros) | 3 × 150g | Stock précédent tombé à 0 (signalé par Clément 30/10 8h02, ancien décompte au 09/10 non fiable) — 3×150g rachetées (achat 30/10) |
 | Burrata di Bufala CNT Seleção | 1 | 2 livrées 24/09, 1 consommée dîner 24/09 |
-| Ricotta CNT 250g | 4 × 250g (1 entamée) | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 + 2×250g livraison 09/10 — ~125g utilisé dîner tartines 15/10 |
+| Ricotta CNT 250g | 5 × 250g (1 entamée) | 2×250g Livraison 04/09 + 1×250g Livraison 24/09 + 2×250g livraison 09/10 — ~125g utilisé dîner tartines 15/10 — +1×250g achat 30/10 |
+| QJ Flamengo T.Nost tranches 200g | 3 × 200g | Achat 30/10 |
+| Queijinho de Ovelha Seia Amanteigado | 1 | Achat 30/10 |
+| Burrata de Vaca CNT 200g | 1 × 200g | Achat 30/10 (distinct de la Burrata di Bufala ci-dessous) |
+| QJ Parmigiano Ralado DOP Seleção | 2 | Achat 30/10, râpé (distinct des blocs Parmigiano ci-dessus) |
+| QJ Mozzarella Continente 125g | 1 × 125g | Achat 30/10 (distinct du Mozzarela Granarolo ci-dessous) |
 | Mozzarela Granarolo 125g | 1 × 125g | Livraison 09/10 — 1×125g utilisé dîner ensalada mediterránea 09/10 |
 | Ricotta Finetta Galbani | ? | Acheté 27/07 — à vérifier |
 | Requeijão Ovelha Seia Lagos | ? | Acheté 27/07 — à vérifier |
@@ -277,7 +289,7 @@ _Last updated: 2026-09-25 (livraison Continente 24/09)_
 | Queijo Parmigiano Reggiano 150g | 1 × 150g | Livraison 24/09 |
 | Queijo Gorgonzola Dolce DOP 200g | 1 × 200g | Livraison 24/09 — confirmé toujours en stock par Clément 05/10 |
 | Pâtes fraîches (achetées, non consommées) | ? | Signalé par Clément 05/10 — type et quantité non précisés |
-| Barilla Pesto Genovese (bocal) | 1 (entamé) | Store-bought. Utilisé dîner poulet pesto quinoa 22/10 — quantité restante non précisée |
+| Barilla Pesto Genovese (bocal) | 1 (entamé) + 1 neuf | Store-bought. Utilisé dîner poulet pesto quinoa 22/10 — quantité restante non précisée. +1 bocal neuf (190g) achat 30/10 |
 | Boquerones en vinagre | 3 × 100g + 1 × 330g | Apéritif invités uniquement ❤️ — 1×100g utilisé apéro 18/05 |
 | Tofu Biológico Seara 250g | 0 | ❌ Périmé depuis 31/07/2026 (signalé par Clément 18/10), jeté — ne pas utiliser |
 | Ravioli Abobora Ceb.Caram.250g | 4 × 250g | 1×250g Livraison 04/09 + 2×250g Livraison 24/09 + 1×250g Livraison 09/10 |
@@ -322,6 +334,7 @@ _Mis à jour : 2026-06-27 (inventaire complet Lola)_
 | Dumplings | reste pour 1 dîner | 20 consommés dîner enfants dim 25/10 (stock retrouvé, correction de l'ancienne note "épuisés" du 25/07). Reste encore pour 1 dîner, signalé par Clément 25/10 20h31 |
 | Bolognese (maison) | 0 | ❌ Restes finis dîner 16/09 (congélo, stock non tracé depuis 15/07) |
 | Solomillo de cerdo (filet mignon de porc) | 0 | ❌ Consommé |
+| Almôndegas de Bovino CNT 400g | 1 × 400g | Achat 30/10. Bœuf (viande rouge) : déjeuner ou dîner adultes/enfants hors Clément, jamais dîner Clément (règle pas de viande rouge/porc au dîner) |
 | Pains de burger | 0 | ❌ Consommés |
 
 ### Légumes & plats
